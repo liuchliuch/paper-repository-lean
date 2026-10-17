@@ -1,0 +1,198 @@
+import Paper23.CertificateCocycle.Leaves24
+import Paper23.CertificateCocycle.Leaves25
+set_option maxRecDepth 100000
+set_option maxHeartbeats 0
+namespace Paper23.CertificateChecks
+open Cubical CertificateData
+attribute [local irreducible] codeChain
+noncomputable def cocycleNode1_192Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_192Part0@@
+noncomputable def cocycleNode1_192Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_192Part1@@
+noncomputable def cocycleNode1_192Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_192Part2@@
+noncomputable def cocycleNode1_192 : List (ℕ × ℤ) := cocycleNode1_192Part0 ++ cocycleNode1_192Part1 ++ cocycleNode1_192Part2
+noncomputable def cocycleSource1_192 : RawChain := codeChain (treeEntries phiCut384) + codeChain (treeEntries phiCut385)
+theorem cocycleNode1_192_check : modularMerge cocycleLeaf384 cocycleLeaf385 = cocycleNode1_192 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode1_192_chain : reduceChain (codeChain cocycleNode1_192) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource1_192)) := by
+  rw [← cocycleNode1_192_check, modularMerge_sound, cocycleLeaf384_chain, cocycleLeaf385_chain]
+  simp only [cocycleSource1_192,map_add]
+noncomputable def cocycleNode1_193Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_193Part0@@
+noncomputable def cocycleNode1_193Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_193Part1@@
+noncomputable def cocycleNode1_193Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_193Part2@@
+noncomputable def cocycleNode1_193Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_193Part3@@
+noncomputable def cocycleNode1_193Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_193Part4@@
+noncomputable def cocycleNode1_193 : List (ℕ × ℤ) := cocycleNode1_193Part0 ++ cocycleNode1_193Part1 ++ cocycleNode1_193Part2 ++ cocycleNode1_193Part3 ++ cocycleNode1_193Part4
+noncomputable def cocycleSource1_193 : RawChain := codeChain (treeEntries phiCut386) + codeChain (treeEntries phiCut387)
+theorem cocycleNode1_193_check : modularMerge cocycleLeaf386 cocycleLeaf387 = cocycleNode1_193 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode1_193_chain : reduceChain (codeChain cocycleNode1_193) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource1_193)) := by
+  rw [← cocycleNode1_193_check, modularMerge_sound, cocycleLeaf386_chain, cocycleLeaf387_chain]
+  simp only [cocycleSource1_193,map_add]
+noncomputable def cocycleNode1_194Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_194Part0@@
+noncomputable def cocycleNode1_194Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_194Part1@@
+noncomputable def cocycleNode1_194Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_194Part2@@
+noncomputable def cocycleNode1_194Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_194Part3@@
+noncomputable def cocycleNode1_194 : List (ℕ × ℤ) := cocycleNode1_194Part0 ++ cocycleNode1_194Part1 ++ cocycleNode1_194Part2 ++ cocycleNode1_194Part3
+noncomputable def cocycleSource1_194 : RawChain := codeChain (treeEntries phiCut388) + codeChain (treeEntries phiCut389)
+theorem cocycleNode1_194_check : modularMerge cocycleLeaf388 cocycleLeaf389 = cocycleNode1_194 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode1_194_chain : reduceChain (codeChain cocycleNode1_194) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource1_194)) := by
+  rw [← cocycleNode1_194_check, modularMerge_sound, cocycleLeaf388_chain, cocycleLeaf389_chain]
+  simp only [cocycleSource1_194,map_add]
+noncomputable def cocycleNode1_195Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_195Part0@@
+noncomputable def cocycleNode1_195Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_195Part1@@
+noncomputable def cocycleNode1_195Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_195Part2@@
+noncomputable def cocycleNode1_195 : List (ℕ × ℤ) := cocycleNode1_195Part0 ++ cocycleNode1_195Part1 ++ cocycleNode1_195Part2
+noncomputable def cocycleSource1_195 : RawChain := codeChain (treeEntries phiCut390) + codeChain (treeEntries phiCut391)
+theorem cocycleNode1_195_check : modularMerge cocycleLeaf390 cocycleLeaf391 = cocycleNode1_195 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode1_195_chain : reduceChain (codeChain cocycleNode1_195) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource1_195)) := by
+  rw [← cocycleNode1_195_check, modularMerge_sound, cocycleLeaf390_chain, cocycleLeaf391_chain]
+  simp only [cocycleSource1_195,map_add]
+noncomputable def cocycleNode1_196Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_196Part0@@
+noncomputable def cocycleNode1_196Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_196Part1@@
+noncomputable def cocycleNode1_196Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_196Part2@@
+noncomputable def cocycleNode1_196 : List (ℕ × ℤ) := cocycleNode1_196Part0 ++ cocycleNode1_196Part1 ++ cocycleNode1_196Part2
+noncomputable def cocycleSource1_196 : RawChain := codeChain (treeEntries phiCut392) + codeChain (treeEntries phiCut393)
+theorem cocycleNode1_196_check : modularMerge cocycleLeaf392 cocycleLeaf393 = cocycleNode1_196 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode1_196_chain : reduceChain (codeChain cocycleNode1_196) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource1_196)) := by
+  rw [← cocycleNode1_196_check, modularMerge_sound, cocycleLeaf392_chain, cocycleLeaf393_chain]
+  simp only [cocycleSource1_196,map_add]
+noncomputable def cocycleNode1_197Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_197Part0@@
+noncomputable def cocycleNode1_197Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_197Part1@@
+noncomputable def cocycleNode1_197Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_197Part2@@
+noncomputable def cocycleNode1_197Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_197Part3@@
+noncomputable def cocycleNode1_197 : List (ℕ × ℤ) := cocycleNode1_197Part0 ++ cocycleNode1_197Part1 ++ cocycleNode1_197Part2 ++ cocycleNode1_197Part3
+noncomputable def cocycleSource1_197 : RawChain := codeChain (treeEntries phiCut394) + codeChain (treeEntries phiCut395)
+theorem cocycleNode1_197_check : modularMerge cocycleLeaf394 cocycleLeaf395 = cocycleNode1_197 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode1_197_chain : reduceChain (codeChain cocycleNode1_197) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource1_197)) := by
+  rw [← cocycleNode1_197_check, modularMerge_sound, cocycleLeaf394_chain, cocycleLeaf395_chain]
+  simp only [cocycleSource1_197,map_add]
+noncomputable def cocycleNode1_198Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_198Part0@@
+noncomputable def cocycleNode1_198Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_198Part1@@
+noncomputable def cocycleNode1_198Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_198Part2@@
+noncomputable def cocycleNode1_198Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_198Part3@@
+noncomputable def cocycleNode1_198 : List (ℕ × ℤ) := cocycleNode1_198Part0 ++ cocycleNode1_198Part1 ++ cocycleNode1_198Part2 ++ cocycleNode1_198Part3
+noncomputable def cocycleSource1_198 : RawChain := codeChain (treeEntries phiCut396) + codeChain (treeEntries phiCut397)
+theorem cocycleNode1_198_check : modularMerge cocycleLeaf396 cocycleLeaf397 = cocycleNode1_198 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode1_198_chain : reduceChain (codeChain cocycleNode1_198) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource1_198)) := by
+  rw [← cocycleNode1_198_check, modularMerge_sound, cocycleLeaf396_chain, cocycleLeaf397_chain]
+  simp only [cocycleSource1_198,map_add]
+noncomputable def cocycleNode1_199Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_199Part0@@
+noncomputable def cocycleNode1_199Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_199Part1@@
+noncomputable def cocycleNode1_199Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_199Part2@@
+noncomputable def cocycleNode1_199Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_199Part3@@
+noncomputable def cocycleNode1_199 : List (ℕ × ℤ) := cocycleNode1_199Part0 ++ cocycleNode1_199Part1 ++ cocycleNode1_199Part2 ++ cocycleNode1_199Part3
+noncomputable def cocycleSource1_199 : RawChain := codeChain (treeEntries phiCut398) + codeChain (treeEntries phiCut399)
+theorem cocycleNode1_199_check : modularMerge cocycleLeaf398 cocycleLeaf399 = cocycleNode1_199 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode1_199_chain : reduceChain (codeChain cocycleNode1_199) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource1_199)) := by
+  rw [← cocycleNode1_199_check, modularMerge_sound, cocycleLeaf398_chain, cocycleLeaf399_chain]
+  simp only [cocycleSource1_199,map_add]
+noncomputable def cocycleNode1_200Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_200Part0@@
+noncomputable def cocycleNode1_200Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_200Part1@@
+noncomputable def cocycleNode1_200Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_200Part2@@
+noncomputable def cocycleNode1_200Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_200Part3@@
+noncomputable def cocycleNode1_200Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_200Part4@@
+noncomputable def cocycleNode1_200 : List (ℕ × ℤ) := cocycleNode1_200Part0 ++ cocycleNode1_200Part1 ++ cocycleNode1_200Part2 ++ cocycleNode1_200Part3 ++ cocycleNode1_200Part4
+noncomputable def cocycleSource1_200 : RawChain := codeChain (treeEntries phiCut400) + codeChain (treeEntries phiCut401)
+theorem cocycleNode1_200_check : modularMerge cocycleLeaf400 cocycleLeaf401 = cocycleNode1_200 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode1_200_chain : reduceChain (codeChain cocycleNode1_200) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource1_200)) := by
+  rw [← cocycleNode1_200_check, modularMerge_sound, cocycleLeaf400_chain, cocycleLeaf401_chain]
+  simp only [cocycleSource1_200,map_add]
+noncomputable def cocycleNode1_201Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_201Part0@@
+noncomputable def cocycleNode1_201Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_201Part1@@
+noncomputable def cocycleNode1_201Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_201Part2@@
+noncomputable def cocycleNode1_201 : List (ℕ × ℤ) := cocycleNode1_201Part0 ++ cocycleNode1_201Part1 ++ cocycleNode1_201Part2
+noncomputable def cocycleSource1_201 : RawChain := codeChain (treeEntries phiCut402) + codeChain (treeEntries phiCut403)
+theorem cocycleNode1_201_check : modularMerge cocycleLeaf402 cocycleLeaf403 = cocycleNode1_201 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode1_201_chain : reduceChain (codeChain cocycleNode1_201) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource1_201)) := by
+  rw [← cocycleNode1_201_check, modularMerge_sound, cocycleLeaf402_chain, cocycleLeaf403_chain]
+  simp only [cocycleSource1_201,map_add]
+noncomputable def cocycleNode1_202Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_202Part0@@
+noncomputable def cocycleNode1_202Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_202Part1@@
+noncomputable def cocycleNode1_202Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_202Part2@@
+noncomputable def cocycleNode1_202Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_202Part3@@
+noncomputable def cocycleNode1_202Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_202Part4@@
+noncomputable def cocycleNode1_202 : List (ℕ × ℤ) := cocycleNode1_202Part0 ++ cocycleNode1_202Part1 ++ cocycleNode1_202Part2 ++ cocycleNode1_202Part3 ++ cocycleNode1_202Part4
+noncomputable def cocycleSource1_202 : RawChain := codeChain (treeEntries phiCut404) + codeChain (treeEntries phiCut405)
+theorem cocycleNode1_202_check : modularMerge cocycleLeaf404 cocycleLeaf405 = cocycleNode1_202 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode1_202_chain : reduceChain (codeChain cocycleNode1_202) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource1_202)) := by
+  rw [← cocycleNode1_202_check, modularMerge_sound, cocycleLeaf404_chain, cocycleLeaf405_chain]
+  simp only [cocycleSource1_202,map_add]
+noncomputable def cocycleNode1_203Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_203Part0@@
+noncomputable def cocycleNode1_203Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_203Part1@@
+noncomputable def cocycleNode1_203Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_203Part2@@
+noncomputable def cocycleNode1_203 : List (ℕ × ℤ) := cocycleNode1_203Part0 ++ cocycleNode1_203Part1 ++ cocycleNode1_203Part2
+noncomputable def cocycleSource1_203 : RawChain := codeChain (treeEntries phiCut406) + codeChain (treeEntries phiCut407)
+theorem cocycleNode1_203_check : modularMerge cocycleLeaf406 cocycleLeaf407 = cocycleNode1_203 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode1_203_chain : reduceChain (codeChain cocycleNode1_203) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource1_203)) := by
+  rw [← cocycleNode1_203_check, modularMerge_sound, cocycleLeaf406_chain, cocycleLeaf407_chain]
+  simp only [cocycleSource1_203,map_add]
+noncomputable def cocycleNode1_204Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_204Part0@@
+noncomputable def cocycleNode1_204Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_204Part1@@
+noncomputable def cocycleNode1_204Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_204Part2@@
+noncomputable def cocycleNode1_204 : List (ℕ × ℤ) := cocycleNode1_204Part0 ++ cocycleNode1_204Part1 ++ cocycleNode1_204Part2
+noncomputable def cocycleSource1_204 : RawChain := codeChain (treeEntries phiCut408) + codeChain (treeEntries phiCut409)
+theorem cocycleNode1_204_check : modularMerge cocycleLeaf408 cocycleLeaf409 = cocycleNode1_204 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode1_204_chain : reduceChain (codeChain cocycleNode1_204) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource1_204)) := by
+  rw [← cocycleNode1_204_check, modularMerge_sound, cocycleLeaf408_chain, cocycleLeaf409_chain]
+  simp only [cocycleSource1_204,map_add]
+noncomputable def cocycleNode1_205Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_205Part0@@
+noncomputable def cocycleNode1_205Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_205Part1@@
+noncomputable def cocycleNode1_205Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_205Part2@@
+noncomputable def cocycleNode1_205Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_205Part3@@
+noncomputable def cocycleNode1_205Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_205Part4@@
+noncomputable def cocycleNode1_205 : List (ℕ × ℤ) := cocycleNode1_205Part0 ++ cocycleNode1_205Part1 ++ cocycleNode1_205Part2 ++ cocycleNode1_205Part3 ++ cocycleNode1_205Part4
+noncomputable def cocycleSource1_205 : RawChain := codeChain (treeEntries phiCut410) + codeChain (treeEntries phiCut411)
+theorem cocycleNode1_205_check : modularMerge cocycleLeaf410 cocycleLeaf411 = cocycleNode1_205 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode1_205_chain : reduceChain (codeChain cocycleNode1_205) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource1_205)) := by
+  rw [← cocycleNode1_205_check, modularMerge_sound, cocycleLeaf410_chain, cocycleLeaf411_chain]
+  simp only [cocycleSource1_205,map_add]
+noncomputable def cocycleNode1_206Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_206Part0@@
+noncomputable def cocycleNode1_206Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_206Part1@@
+noncomputable def cocycleNode1_206Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_206Part2@@
+noncomputable def cocycleNode1_206Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_206Part3@@
+noncomputable def cocycleNode1_206 : List (ℕ × ℤ) := cocycleNode1_206Part0 ++ cocycleNode1_206Part1 ++ cocycleNode1_206Part2 ++ cocycleNode1_206Part3
+noncomputable def cocycleSource1_206 : RawChain := codeChain (treeEntries phiCut412) + codeChain (treeEntries phiCut413)
+theorem cocycleNode1_206_check : modularMerge cocycleLeaf412 cocycleLeaf413 = cocycleNode1_206 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode1_206_chain : reduceChain (codeChain cocycleNode1_206) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource1_206)) := by
+  rw [← cocycleNode1_206_check, modularMerge_sound, cocycleLeaf412_chain, cocycleLeaf413_chain]
+  simp only [cocycleSource1_206,map_add]
+noncomputable def cocycleNode1_207Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_207Part0@@
+noncomputable def cocycleNode1_207Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_207Part1@@
+noncomputable def cocycleNode1_207Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_207Part2@@
+noncomputable def cocycleNode1_207Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode1_207Part3@@
+noncomputable def cocycleNode1_207 : List (ℕ × ℤ) := cocycleNode1_207Part0 ++ cocycleNode1_207Part1 ++ cocycleNode1_207Part2 ++ cocycleNode1_207Part3
+noncomputable def cocycleSource1_207 : RawChain := codeChain (treeEntries phiCut414) + codeChain (treeEntries phiCut415)
+theorem cocycleNode1_207_check : modularMerge cocycleLeaf414 cocycleLeaf415 = cocycleNode1_207 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode1_207_chain : reduceChain (codeChain cocycleNode1_207) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource1_207)) := by
+  rw [← cocycleNode1_207_check, modularMerge_sound, cocycleLeaf414_chain, cocycleLeaf415_chain]
+  simp only [cocycleSource1_207,map_add]
+end Paper23.CertificateChecks

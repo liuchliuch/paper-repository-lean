@@ -1,0 +1,75 @@
+{
+  "paper_id": "16",
+  "title": "Counter-Free Higher-Dimensional Automata for First-Order Interval-Pomset Languages",
+  "source_url": "https://liuchliuch.github.io/repository/counter-free-higher-dimensional-automata-for-first-order-interval-pomset-languages/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "CounterFreeHDA"
+  ],
+  "build_targets": [
+    "CounterFreeHDA"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "67 fixed explicit contracts: all nonexempt numbered statements, actual recognizing functor, effective finite tables, uniform and interface-specific stability, and genuine eight-cell/residual/deletion-profile Appendix."
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/comparator-extra-premise.json",
+      "expected_rejection": "type",
+      "scope": "Actual gluing-power stable-survival theorem.",
+      "rejection_detail": "Additional premise changes Verification.lemma_4_1_actual"
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/comparator-illegal-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Actual gluing-power stable-survival theorem.",
+      "rejection_detail": "Verification.illegalSurvival is outside the permitted axioms"
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1.1",
+      "declaration": "CounterFreeHDA.Cubical.theorem_1_1_fromFunctor",
+      "scope": "A finite aperiodic recognizing functor with arbitrary object map, together with downward closure and bounded width, yields a finite counter-free HDA recognizing exactly the same language."
+    },
+    {
+      "source_result": "Effective realization",
+      "declaration": "CounterFreeHDA.Cubical.FinitePomsetRecognizer.effective_realization",
+      "scope": "A finite-table realization with bijective cell-array decoding and explicit face restrictions."
+    },
+    {
+      "source_result": "Interface-specific refinement (S4.p16)",
+      "declaration": "CounterFreeHDA.Cubical.FinitePomsetRecognizer.interface_uniform_bound",
+      "scope": "The same constructed HDA stabilizes for every n>=2r+h at interface size r, including n>=h when r=0, without an internal-width<=r hypothesis."
+    },
+    {
+      "source_result": "Corollary 1.2 new direction",
+      "declaration": "CounterFreeHDA.Cubical.corollary_1_2_new_direction",
+      "scope": "The new realization implication from aperiodic recognizability to counter-free HDA recognizability; the other external characterization directions are not proved here."
+    },
+    {
+      "source_result": "Appendix exact language and residual/profile calculations",
+      "declaration": "CounterFreeHDA.Appendix.Compare.actual_language_equality",
+      "scope": "The original eight-cell HDA and its completion recognize the same language; the Appendix also establishes exponent-three counter-freeness, residual classification and deletion-profile calculations."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "dependency_pins": {
+    "mathlib": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "plausible": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+    "LeanSearchClient": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+    "importGraph": "d768126816be17600904726ca7976b185786e6b9",
+    "proofwidgets": "556caed0eadb7901e068131d1be208dd907d07a2",
+    "aesop": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+    "Qq": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+    "batteries": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+    "Cli": "91c18fa62838ad0ab7384c03c9684d99d306e1da"
+  },
+  "primary_comparator": "main"
+}

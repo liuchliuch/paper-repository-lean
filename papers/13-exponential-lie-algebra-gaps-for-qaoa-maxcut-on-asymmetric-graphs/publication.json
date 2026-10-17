@@ -1,0 +1,70 @@
+{
+  "paper_id": "13",
+  "title": "Exponential Lie-algebra gaps for QAOA-MaxCut on asymmetric graphs",
+  "source_url": "https://liuchliuch.github.io/repository/exponential-lie-algebra-gaps-for-qaoa-maxcut-on-asymmetric-graphs/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper13"
+  ],
+  "build_targets": [
+    "Paper13"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "comparator/config.json",
+      "expected_rejection": null,
+      "scope": "24 fixed explicit contracts covering all five numbered results, actual Lie algebras and dimensions, graph rigidity, invariant sectors, ported amplification, classification reconstruction, asymptotics, and Appendix A correction/counterexample."
+    },
+    {
+      "id": "negative-premise",
+      "config": "comparator/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Small independent harness control with fixed True target; it tests Comparator type sensitivity, not paper coverage.",
+      "rejection_detail": "Extra False premise changes ComparatorControls.target"
+    },
+    {
+      "id": "negative-axiom",
+      "config": "comparator/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Small independent harness control with fixed True target; it tests the axiom policy, not paper coverage.",
+      "rejection_detail": "forbidden_axiom is outside the permitted axioms"
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1",
+      "declaration": "Paper13.theorem1_actual",
+      "scope": "For k >= 7, the constructed connected rigid graph has 7k vertices, 9k-1 edges, maximum degree five and the stated exponential natural/standard Lie-algebra dimension ratio; the ratio diverges."
+    },
+    {
+      "source_result": "Corollary 2",
+      "declaration": "Paper13.corollary2_actual",
+      "scope": "The positive-parity irreducible-component and additive-deficit bounds, with normalized deficit tending to one."
+    },
+    {
+      "source_result": "Proposition 5",
+      "declaration": "Paper13.proposition5_actual",
+      "scope": "PortedGadget projector hypotheses imply the assembly dimension bounds; divergence also requires eventual connected, nonbipartite, rigid and noncycle assembly graphs."
+    },
+    {
+      "source_result": "Appendix A correction",
+      "declaration": "Paper13.corrected_certificate_identity",
+      "scope": "The corrected identity is 64P = I + printedCertificate + piSwap(1,6)*piSwap(3,5); the printed certificate has a nonzero commutator with the cost operator."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "dependency_pins": {
+    "mathlib": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "plausible": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+    "LeanSearchClient": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+    "importGraph": "d768126816be17600904726ca7976b185786e6b9",
+    "proofwidgets": "556caed0eadb7901e068131d1be208dd907d07a2",
+    "aesop": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+    "Qq": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+    "batteries": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+    "Cli": "91c18fa62838ad0ab7384c03c9684d99d306e1da"
+  },
+  "primary_comparator": "main"
+}

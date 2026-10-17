@@ -1,0 +1,70 @@
+{
+  "paper_id": "09",
+  "title": "The Griffiths exponent of random-field Ising dynamics at strong Gaussian disorder",
+  "source_url": "https://liuchliuch.github.io/repository/the-griffiths-exponent-of-random-field-ising-dynamics-at-strong-gaussian-disorder/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper09"
+  ],
+  "build_targets": [
+    "Paper09"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "31 fixed explicit contracts covering numbered theorem engines, actual RFIM Theorem 1.3, both actual Gaussian probability propositions, and the general iid lower bound; the Corollary 1.4 contract is only the exponent identity."
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Actual general iid lower-bound endpoint.",
+      "rejection_detail": "Added False premise changes the general iid lower-bound type"
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Actual general iid lower-bound endpoint.",
+      "rejection_detail": "The proof depends on forbidden_axiom"
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1.3",
+      "declaration": "Paper09.RFIM.theorem_1_3",
+      "scope": "For d >= 2 and beta,sigma > 0, SurfaceSlowPureBoxes and StrongGaussianDisorder imply simultaneous relaxation/mixing-time bounds and both truncated double-log limits in probability."
+    },
+    {
+      "source_result": "Proposition 2.1",
+      "declaration": "Paper09.RFIM.proposition_2_1",
+      "scope": "For d >= 2 and beta > 0, SurfaceSlowPureBoxes gives the Gaussian lower bound at every fixed positive variance."
+    },
+    {
+      "source_result": "General iid extension (S2.p14)",
+      "declaration": "Paper09.RFIM.proposition_2_1_iid",
+      "scope": "The lower bound for iid real fields with polynomial small-ball probability, both shell-tail probabilities positive at the stated threshold, and the surface-slow pure-box input."
+    },
+    {
+      "source_result": "Corollary 1.4 auxiliary identity",
+      "declaration": "Paper09.aExp_two",
+      "scope": "The dimension-two exponent identity (2-1)/2 = 1/2 only; the unconditional low-temperature corollary requires an external Ising gap theorem."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "dependency_pins": {
+    "mathlib": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "plausible": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+    "LeanSearchClient": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+    "importGraph": "d768126816be17600904726ca7976b185786e6b9",
+    "proofwidgets": "556caed0eadb7901e068131d1be208dd907d07a2",
+    "aesop": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+    "Qq": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+    "batteries": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+    "Cli": "91c18fa62838ad0ab7384c03c9684d99d306e1da"
+  },
+  "primary_comparator": "main"
+}

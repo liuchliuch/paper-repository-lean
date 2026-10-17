@@ -1,0 +1,34 @@
+# {{TITLE}}
+
+Lean formalization of [the paper]({{SOURCE_URL}}). Entry point: `{{NAMESPACE}}.lean`.
+
+## Results
+
+Add the implemented source results and exact public Lean declarations here and in publication.json. This template contains no claimed paper result.
+
+## Build
+
+From this directory:
+
+```sh
+python3 ../../scripts/verify.py --paper {{ID}} --check build
+```
+
+## Assumptions
+
+Document external theorems, their hypotheses and use sites in [EXTERNAL_DEPENDENCIES.md](EXTERNAL_DEPENDENCIES.md).
+
+## Verification
+
+Add independent fixed statement specifications and genuine negative controls, then run:
+
+```sh
+python3 ../../scripts/verify.py --paper {{ID}} --check static
+python3 ../../scripts/verify.py --paper {{ID}} --check comparator --local
+```
+
+See [verification](../../docs/verification.md) for prerequisites and the meaning of each check.
+
+## References
+
+- [Source paper]({{SOURCE_URL}}).

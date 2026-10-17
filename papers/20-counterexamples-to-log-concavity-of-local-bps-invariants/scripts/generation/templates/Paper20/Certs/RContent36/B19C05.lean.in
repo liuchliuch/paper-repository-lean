@@ -1,0 +1,21 @@
+import Paper20.Certs.RContent36.B19C04
+set_option maxHeartbeats 0
+set_option maxRecDepth 200000
+namespace Paper20.Cert.RContent36.Tree
+open Paper20.RContent36
+open Paper20.HilbertJobs (Job parts children)
+
+def j_19 : Job := ⟨[19], 19, 17, 36⟩
+
+def v_19 : State := @@GENERATED_RHS:v_19@@
+
+theorem correct_19 : Correct j_19 v_19 := by
+  have hc : children j_19 = [j_19_17, j_19_16, j_19_15, j_19_14, j_19_13, j_19_12, j_19_11, j_19_10, j_19_9, j_19_8, j_19_7, j_19_6, j_19_5, j_19_4, j_19_3, j_19_2, j_19_1] := by decide +kernel
+  have hv : List.Forall₂ Correct (children j_19) [v_19_17, v_19_16, v_19_15, v_19_14, v_19_13, v_19_12, v_19_11, v_19_10, v_19_9, v_19_8, v_19_7, v_19_6, v_19_5, v_19_4, v_19_3, v_19_2, v_19_1] := by
+    rw [hc]
+    exact (List.Forall₂.cons correct_19_17 (List.Forall₂.cons correct_19_16 (List.Forall₂.cons correct_19_15 (List.Forall₂.cons correct_19_14 (List.Forall₂.cons correct_19_13 (List.Forall₂.cons correct_19_12 (List.Forall₂.cons correct_19_11 (List.Forall₂.cons correct_19_10 (List.Forall₂.cons correct_19_9 (List.Forall₂.cons correct_19_8 (List.Forall₂.cons correct_19_7 (List.Forall₂.cons correct_19_6 (List.Forall₂.cons correct_19_5 (List.Forall₂.cons correct_19_4 (List.Forall₂.cons correct_19_3 (List.Forall₂.cons correct_19_2 (List.Forall₂.cons correct_19_1 List.Forall₂.nil)))))))))))))))))
+  have hp := correct_children j_19 (by decide) (by decide) [v_19_17, v_19_16, v_19_15, v_19_14, v_19_13, v_19_12, v_19_11, v_19_10, v_19_9, v_19_8, v_19_7, v_19_6, v_19_5, v_19_4, v_19_3, v_19_2, v_19_1] hv
+  have he : combine [v_19_17, v_19_16, v_19_15, v_19_14, v_19_13, v_19_12, v_19_11, v_19_10, v_19_9, v_19_8, v_19_7, v_19_6, v_19_5, v_19_4, v_19_3, v_19_2, v_19_1] = v_19 := by decide +kernel
+  rwa [he] at hp
+
+end Paper20.Cert.RContent36.Tree

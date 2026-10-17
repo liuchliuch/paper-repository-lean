@@ -1,0 +1,70 @@
+{
+  "paper_id": "03",
+  "title": "Exact semidegree extraction from minimum outdegree",
+  "source_url": "https://liuchliuch.github.io/repository/exact-semidegree-extraction-from-minimum-outdegree/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "SemidegreeExt"
+  ],
+  "build_targets": [
+    "SemidegreeExt",
+    "Verification.Solution",
+    "Verification.Challenge",
+    "Verification.Audit"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "Twenty-four fixed explicit paper-facing contracts covering main theorem, dense limit, supplemental graph claims and metered construction."
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "The exact main graph-minimum contract is weakened by an additional False hypothesis. Rejection detail: extra False premise on P03Contract.theorem_1_1."
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "The fixed main theorem statement is intentionally proved through an unauthorized axiom. Rejection detail: illegal axiom in main theorem proof."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Proposition 2.1",
+      "declaration": "SemidegreeExt.prop_2_1",
+      "scope": "Doubled integer inequality for loopless nonempty finite digraphs with feasible minimum outdegree."
+    },
+    {
+      "source_result": "Lemma 3.1",
+      "declaration": "SemidegreeExt.nested_placement",
+      "scope": "Unit-capacity pair placement with row demands and column capacities, including d = 0."
+    },
+    {
+      "source_result": "Theorem 1.1",
+      "declaration": "SemidegreeExt.theorem_1_1",
+      "scope": "For 0 < n and d < n, the graph minimum equals the least integer threshold C, with the radical/ceiling formula and a constant-outdegree extremal witness."
+    },
+    {
+      "source_result": "Corollary 1.2",
+      "declaration": "SemidegreeExt.corollary_1_2",
+      "scope": "For 0 < alpha < 1, the finite identity, dense limit, and original liminf equal 1 − sqrt(1 − alpha²)."
+    },
+    {
+      "source_result": "Subdigraph and degeneracy consequences",
+      "declaration": "SemidegreeExt.q_le_iff_all_subdigraphs",
+      "scope": "Vertex-and-arc-deleted subdigraphs, induced extraction equivalence, degeneracy characterization, monotonicity, strict comparisons, and endpoint expansions."
+    },
+    {
+      "source_result": "Algorithmic construction claim",
+      "declaration": "SemidegreeExt.ConstructionAlgorithm.fullSolve_polynomial_time",
+      "scope": "Returned adjacency list has metered primitive work at most 2048*n⁸, with looplessness, exact outdegree, optimal q, and no duplicate arcs; the bound concerns the explicit operation model."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "primary_comparator": "main"
+}

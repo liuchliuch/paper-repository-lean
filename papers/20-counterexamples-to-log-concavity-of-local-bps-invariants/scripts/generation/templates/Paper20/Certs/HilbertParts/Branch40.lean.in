@@ -1,0 +1,14 @@
+import Paper20.HilbertJobsProof
+
+set_option maxHeartbeats 0
+set_option maxRecDepth 200000
+namespace Paper20.Cert.HilbertParts.Tree
+open Paper20.HilbertJobs
+
+def j_40 : Job := ⟨[40], 40, 3, 43⟩
+
+def v_40 : List ℕ := List.replicate 904 0
+
+theorem correct_40 : value j_40 = v_40 := by decide
+
+end Paper20.Cert.HilbertParts.Tree

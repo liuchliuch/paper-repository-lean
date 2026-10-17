@@ -1,0 +1,20 @@
+import Paper23.Bounding.Level10Part004
+import Paper23.Bounding.Level12Part000
+import Paper23.BoundingBucketSupport
+import Paper23.CertificateChecks
+set_option maxRecDepth 1000000
+set_option maxHeartbeats 0
+set_option Elab.async false
+namespace Paper23.Bounding
+open Cubical CertificateData CertificateChecks
+attribute [local irreducible] codeChain bucketChain
+noncomputable def boundingNode13_0 : BucketVector := []
+noncomputable def boundingSource13_0 : RawChain := boundingSource12_0 + boundingSource10_4
+noncomputable def boundingTarget13_0 : RawChain := boundingTarget12_0 + (0 : RawChain)
+theorem boundingNode13_0_check : mergeBuckets boundingNode12_0 boundingNode10_4 = boundingNode13_0 := by
+  exact eq_of_beq (by decide +kernel)
+theorem boundingNode13_0_chain : bucketChain boundingNode13_0 = boundary boundingSource13_0 + (-6 : ℤ) • boundingTarget13_0 := by
+  simpa only [boundingSource13_0, boundingTarget13_0, add_zero] using (bucket_node_sound boundingNode12_0 boundingNode10_4 boundingNode13_0
+    (boundingSource12_0) (boundingSource10_4) (boundingTarget12_0) ((0 : RawChain)) boundingNode12_0_chain boundingNode10_4_chain boundingNode13_0_check)
+theorem boundingNode13_0_mem : boundingSource13_0 ∈ Chains 3 := (Chains 3).add_mem boundingNode12_0_mem boundingNode10_4_mem
+end Paper23.Bounding

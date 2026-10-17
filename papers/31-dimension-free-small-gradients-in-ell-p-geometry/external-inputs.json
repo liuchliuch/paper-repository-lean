@@ -1,0 +1,126 @@
+{
+  "policy": "Precisely disclosed ordinary theorem arguments, permitted by resumed human authorization; no custom production axioms. External theory implementations are not supplied.",
+  "known_inputs": [
+    {
+      "id": "scalar-clarkson",
+      "lean": "P31.ScalarWeightedClarkson",
+      "file": "P31/PowerGeometry.lean",
+      "source": "[3] Clarkson, Uniformly convex spaces (1936), doi:10.1090/S0002-9947-1936-1501880-4; scalar weighted consequence (2.9)",
+      "input": "Exact real-p scalar weighted Clarkson inequality for p>=2.",
+      "own": "Coordinate summation, normalization a_p=2^(p-2), Frechet derivative, dual norm, radial geometry, all continuation steps."
+    },
+    {
+      "id": "complementary-composite",
+      "lean": [
+        "P31.ExternalComplementaryComposite",
+        "P31.ExternalCompositeFamily",
+        "P31.Schatten.ExternalMatrixComposite",
+        "P31.Schatten.ExternalMatrixCompositeFamily"
+      ],
+      "file": [
+        "P31/ExternalComposite.lean",
+        "P31/SchattenUpperBound.lean"
+      ],
+      "source": "[6] Diakonikolas--Guzman, Mathematical Programming 208 (2024), Theorem 2; arXiv:2101.11041v2 Theorem 2.1, nonlogarithmic branch.",
+      "url": "https://arxiv.org/html/2101.11041v2",
+      "input": "Objective-error and integer query bound only, with q_src=p, lambda=mu, psi=H, phi=normalized shifted atom, eta=mu*delta^p/p. Source constants and fixed normalization absorbed in C(p,kappa). Constructor takes only known H, center, scales, exact prox; no f, gradient or minimizer. One common C before all dimensions.",
+      "own": "Raw source power substitution; ceil cost; objective-gap-to-distance contraction; constructed minima and prox; adaptive history/warm-start induction; transport, path, stationarity, calibration, actual cumulative executed queries and all zero/easy branches."
+    },
+    {
+      "id": "raw-spectral-theory",
+      "lean": "P31.Schatten.SpectralInput",
+      "file": "P31/Schatten.lean",
+      "source": "Finite real rectangular compact SVD; standard Schatten norm, trace Holder and differential facts; Clarkson--McCarthy midpoint [2] Ball--Carlen--Lieb (1994), doi:10.1007/BF01231769.",
+      "input": "Genuine compact SVD pins the sorted nonnegative singular list and raw powerGradient to actual matrices; raw norm laws/continuity/topological comparison, midpoint inequality, raw supporting derivative and raw dual norm identity.",
+      "own": "Trace pairing equality; Bregman lower bound (5.5); normalized atom a_p^S=2^(2p-3), Jensen modulus/radial/gradient bounds; generic compact/coercive matrix prox and objective minima; Hilbert p=2 formula; actual continuation."
+    },
+    {
+      "id": "diagonal-spectral-facts",
+      "lean": "P31.DiagonalLowerBound.DiagonalNormInput",
+      "file": "P31/DiagonalLowerBound.lean",
+      "source": "Standard Schatten theory: rectangular diagonal norm equals finite lp norm and diagonal extraction is contractive.",
+      "input": "Only the exact diagonal norm identity and extraction contractivity, on the supplied genuine SVD Schatten realization.",
+      "own": "Literal embedding/extraction continuous linear maps, trace adjoint, derivative, Holder/radius transfer, exact one-query adaptive simulation, conditional lower transfer and sharp flat diagonal witness."
+    },
+    {
+      "id": "gaussian-facts",
+      "lean": "P31.QuadraticMetric.GaussianInput",
+      "file": "P31/QuadraticMetric.lean",
+      "source": "Standard finite-dimensional Gaussian covariance, Gaussian absolute moments, integrability and probability Jensen.",
+      "input": "Actual probability measures and Bochner integrals; covariance trace identity; coordinate p-moment identity; Jensen moment comparison; positivity of actual standard Gaussian moment.",
+      "own": "Gaussian trace bound <= gamma_p L_A, its combination with SDP, positive diagonal perturbation and final norm bound."
+    },
+    {
+      "id": "sdp-duality-attainment",
+      "lean": "P31.QuadraticMetric.SDPInput",
+      "file": "P31/QuadraticMetric.lean",
+      "source": "Standard finite-dimensional conic/semidefinite strong duality and attainment for the strictly feasible diagonal-majorant problem (7.12).",
+      "input": "Unspecified attained optimum of actual Diag(w)-A PSD problem, and dual-support principle on actual PSD X and lp_(p/2)(diag X). No numerical optimum/majorant bound.",
+      "own": "Numerical trace majorant, existence with norm <=gamma_p L_A; addition of gamma_p L_A*d^(-1/s_p) I; positivity and norm <=2 gamma_p L_A."
+    },
+    {
+      "id": "finite-norm-facts",
+      "lean": [
+        "P31.QuadraticMetric.OperatorNormInput",
+        "P31.QuadraticMetric.LpDualityInput"
+      ],
+      "file": "P31/QuadraticMetric.lean",
+      "source": "Standard finite-dimensional operator supremum boundedness/homogeneity and finite lp/lq norm duality.",
+      "input": "Facts about actual sSup operatorNorm and universal bounded pairings; no PSD quadratic-sup equality or diagonal-majorant conclusion.",
+      "own": "PSD Cauchy-Schwarz from quadratic discriminant, actual operatorNorm=quadraticSup, D-smoothness, primal/dual Hilbert conversions, zero operator case."
+    },
+    {
+      "id": "hilbert-small-gradient",
+      "lean": [
+        "P31.HilbertDiagnostics.EuclideanRateInput",
+        "P31.QuadraticMetric.HilbertRateInput",
+        "P31.QuadraticMetric.HilbertUniformRateInput",
+        "P31.QuadraticMetric.HilbertQueryInput"
+      ],
+      "file": [
+        "P31/HilbertDiagnostics.lean",
+        "P31/QuadraticMetric.lean",
+        "P31/QuadraticProgram.lean"
+      ],
+      "source": "[14] Kim--Park--Ozdaglar--Diakonikolas--Ryu, arXiv:2311.17296v2, Section 4.1 Corollary 3, p_src=2, with Section 3.4 Corollary 2. Uniform numeric-constant N-query normalization of the source 2N statement.",
+      "url": "https://arxiv.org/html/2311.17296v2",
+      "input": "Only supplied Euclidean/Hilbert dual gradient norm <= C_H*radius/N^2 and true executed query count. Constructor receives only known metric/scales/initial/N. Fixed same numeric C_H before dimension.",
+      "own": "Finite support smoothness/radius/target conversions, d^(1-2/p), actual main-accuracy cost inversion, query-program choice and (7.9) envelope; own diagonal construction/smoothness/conversions yield (7.11)."
+    },
+    {
+      "id": "historical-objective-benchmark",
+      "lean": "Explicit hobjective and hdescent arguments of P31.objective_plus_descent_rate",
+      "file": "P31/LiteratureComparisons.lean",
+      "source": "[4] dAspremont--Guzman--Jaggi, Optimal affine-invariant smooth minimization algorithms, SIAM J Optim 28 (2018), doi:10.1137/17M1116842; standard smooth steepest-descent decrease.",
+      "input": "External objective budget f(x0)-fstar <= C L R^2/N^(1+2/p), and standard per-step decrease ||grad||_q^2 <=2L(f_j-f_(j+1)). These algorithms are not reconstructed.",
+      "own": "Exact telescoping/best-iterate conversion to sqrt(2C) L R/N^((p+1)/p), inverse exponent p/(p+1) and continuation gain N^(-1/p)."
+    },
+    {
+      "id": "historical-one-shot-and-hasd",
+      "lean": "No production axiom or full-rate premise introduced; exact own comparisons in AdditionalClaims and Schedule.",
+      "file": [
+        "P31/AdditionalClaims.lean",
+        "P31/Schedule.lean",
+        "P31/NormComparison.lean"
+      ],
+      "source": "[6] Theorem 3 unsimplified one-shot branch; [1] Bai--Bullins, Faster acceleration for steepest descent, COLT 2025 Corollary 9.",
+      "input": "Only cited historical rate/algorithm claims. No claim these external algorithms have been formalized. HASD requires a uniform prefix parameter and Euclidean radius.",
+      "own": "Exact gamma-beta identity/equality corner; every actual nonzero-gradient prefix has G_t>=1, coordinate-supported witnesses have exactly G_t=1 in arbitrary dimension, sharp Euclidean radius conversion. No dimension-growing prefix benefit inferred."
+    }
+  ],
+  "original_source_conditional_premise": {
+    "lean": "P31.LowerBound.SimultaneousHardFamily",
+    "source": "Original Assumption 6.1",
+    "status": "original conditional assumption, not an established external theorem",
+    "input": "Simultaneous normalized objective hard family for each actual query protocol, with original constants and dimension conditions; no gradient lower-bound conclusion."
+  },
+  "not_externalized": [
+    "the main vector or matrix continuation theorem",
+    "regularized minimizer/prox existence",
+    "transport/contraction/path/stationarity",
+    "checkpoint construction and query accounting",
+    "localization/rescaling/appended-output query/minimax combination",
+    "Gaussian-to-numerical-majorant and positive perturbation",
+    "finite support/envelope and actual main-family bridge"
+  ]
+}

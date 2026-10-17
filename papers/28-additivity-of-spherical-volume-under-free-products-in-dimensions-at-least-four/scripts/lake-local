@@ -1,0 +1,5 @@
+#!/bin/sh
+# Portable per-paper Lake entry point.
+set -eu
+project=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+exec python3 "$project/../../scripts/lake.py" --project "$project" -- "$@"

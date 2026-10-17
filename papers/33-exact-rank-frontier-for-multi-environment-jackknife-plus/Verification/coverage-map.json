@@ -1,0 +1,929 @@
+{
+  "paper_id": 33,
+  "target_count": 67,
+  "source_block_count": 23,
+  "proof_result_count": 20,
+  "status": "verification_deferred_by_user",
+  "targets": [
+    {
+      "key": "s3_exact_failure",
+      "module": "MainResults",
+      "production": "MEJF.MainResults.exact_failure_law",
+      "anchors": [
+        "S2.Thmtheorem1",
+        "S3.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s3_finite_validity",
+      "module": "MainResults",
+      "production": "MEJF.MainResults.finite_validity_criterion",
+      "anchors": [
+        "S2.Thmtheorem1",
+        "S3.Thmtheorem2"
+      ]
+    },
+    {
+      "key": "s3_zero_floor",
+      "module": "MainResults",
+      "production": "MEJF.MainResults.zero_floor_impossible",
+      "anchors": [
+        "S3.Thmtheorem2"
+      ]
+    },
+    {
+      "key": "s3_complete_phase",
+      "module": "MainResults",
+      "production": "MEJF.MainResults.complete_failure_iff",
+      "anchors": [
+        "S3.Thmtheorem6",
+        "S3.Thmtheorem5"
+      ]
+    },
+    {
+      "key": "s3_one_outer",
+      "module": "MainResults",
+      "production": "MEJF.MainResults.one_outer",
+      "anchors": [
+        "S3.Thmtheorem5"
+      ]
+    },
+    {
+      "key": "s3_one_inner",
+      "module": "RankFrontier",
+      "production": "MEJF.RankFrontier.failureRate_low_inner",
+      "anchors": [
+        "S3.Thmtheorem5"
+      ]
+    },
+    {
+      "key": "s3_zero_rank_axes",
+      "module": "ExtendedRule",
+      "production": "MEJF.ExtendedRule.gamma_zero",
+      "anchors": [
+        "S3.Thmtheorem5",
+        "S3.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s3_pareto_card",
+      "module": "ActualPareto",
+      "production": "MEJF.ActualPareto.ranks_card",
+      "anchors": [
+        "S3.Thmtheorem3"
+      ]
+    },
+    {
+      "key": "s3_inner_ceil",
+      "module": "RankFrontier",
+      "production": "MEJF.RankFrontier.innerTop_eq_real_ceil",
+      "anchors": [
+        "S3.Thmtheorem3"
+      ]
+    },
+    {
+      "key": "s3_outer_enumeration",
+      "module": "RankFrontier",
+      "production": "MEJF.RankFrontier.pareto_iff_outer",
+      "anchors": [
+        "S3.Thmtheorem3"
+      ]
+    },
+    {
+      "key": "s3_inner_enumeration",
+      "module": "RankFrontier",
+      "production": "MEJF.RankFrontier.pareto_iff_inner",
+      "anchors": [
+        "S3.Thmtheorem3"
+      ]
+    },
+    {
+      "key": "s3_linear_enumeration",
+      "module": "RankAlgorithm",
+      "production": "MEJF.RankAlgorithm.enumerate_correct",
+      "anchors": [
+        "S3.Thmtheorem3"
+      ]
+    },
+    {
+      "key": "s3_linear_cost",
+      "module": "RankAlgorithm",
+      "production": "MEJF.RankAlgorithm.enumerate_ops_le",
+      "anchors": [
+        "S3.Thmtheorem3"
+      ]
+    },
+    {
+      "key": "s3_actual_asymptotic",
+      "module": "ActualAsymptotic",
+      "production": "MEJF.ActualAsymptotic.gamma_asymptotic_min",
+      "anchors": [
+        "S3.Thmtheorem4"
+      ]
+    },
+    {
+      "key": "s3_limiting_budget",
+      "module": "ActualAsymptotic",
+      "production": "MEJF.ActualAsymptotic.limiting_validity_iff",
+      "anchors": [
+        "S3.Thmtheorem4"
+      ]
+    },
+    {
+      "key": "s3_limiting_complete",
+      "module": "ActualAsymptotic",
+      "production": "MEJF.ActualAsymptotic.limiting_complete_failure_iff",
+      "anchors": [
+        "S3.Thmtheorem6"
+      ]
+    },
+    {
+      "key": "s3_limiting_pareto",
+      "module": "LimitingFrontier",
+      "production": "MEJF.LimitingFrontier.pareto_iff",
+      "anchors": [
+        "S3.Thmtheorem4"
+      ]
+    },
+    {
+      "key": "s7_factor_two_asymptotic",
+      "module": "LimitingFrontier",
+      "production": "MEJF.LimitingFrontier.factor_two_invalid",
+      "anchors": [
+        "S7.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s4_actual_nonempty",
+      "module": "DeterministicUpper",
+      "production": "MEJF.DeterministicUpper.learner_aggregate_nonempty",
+      "anchors": [
+        "S4.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s4_actual_degree",
+      "module": "DeterministicUpper",
+      "production": "MEJF.DeterministicUpper.learner_failure_forces_high_outdegree",
+      "anchors": [
+        "S4.Thmtheorem2"
+      ]
+    },
+    {
+      "key": "s4_oriented_count",
+      "module": "GraphBound",
+      "production": "MEJF.GraphBound.highVertices_card_le",
+      "anchors": [
+        "S4.Thmtheorem3"
+      ]
+    },
+    {
+      "key": "s5_extremal_graph",
+      "module": "ExtremalGraph",
+      "production": "MEJF.ExtremalGraph.exists_extremal_oriented_graph",
+      "anchors": [
+        "S5.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s5_incidence_realization",
+      "module": "Incidence",
+      "production": "MEJF.Incidence.realize_frontier",
+      "anchors": [
+        "S5.Thmtheorem2"
+      ]
+    },
+    {
+      "key": "s5_quantitative_tie_removal",
+      "module": "TieFreeSharpness",
+      "production": "MEJF.TieFreeSharpness.exists_quantitative_tieFree_model",
+      "anchors": [
+        "S5.Thmtheorem3"
+      ]
+    },
+    {
+      "key": "s5_tie_free_attainment",
+      "module": "TieFreeSharpness",
+      "production": "MEJF.TieFreeSharpness.exists_tieFree_attaining_model",
+      "anchors": [
+        "S5.Thmtheorem3",
+        "S3.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s6_heterogeneous_sup",
+      "module": "HeterogeneousProbability",
+      "production": "MEJF.HeterogeneousProbability.gamma_eq",
+      "anchors": [
+        "S6.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s6_heterogeneous_attainment",
+      "module": "HeterogeneousProbability",
+      "production": "MEJF.HeterogeneousProbability.exists_attaining_model",
+      "anchors": [
+        "S6.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s6_conditional_sizes",
+      "module": "HeterogeneousProbability",
+      "production": "MEJF.HeterogeneousProbability.conditional_failure_le",
+      "anchors": [
+        "S6.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s6_random_size_expectation",
+      "module": "HeterogeneousProbability",
+      "production": "MEJF.HeterogeneousProbability.failure_probability_le_expectation",
+      "anchors": [
+        "S6.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s6_hall_sorted_cell",
+      "module": "HeterogeneousFrontier",
+      "production": "MEJF.HeterogeneousFrontier.supported_card_iff_sortedCell",
+      "anchors": [
+        "S6.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s6_true_max_support",
+      "module": "HeterogeneousFrontier",
+      "production": "MEJF.HeterogeneousFrontier.maximumSupported_eq_sStar",
+      "anchors": [
+        "S6.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s6_quadratic_algorithm",
+      "module": "HeterogeneousAlgorithm",
+      "production": "MEJF.HeterogeneousAlgorithm.computeAfterSorting_correct",
+      "anchors": [
+        "S6.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s6_quadratic_cost",
+      "module": "HeterogeneousAlgorithm",
+      "production": "MEJF.HeterogeneousAlgorithm.computeAfterSorting_ops_le",
+      "anchors": [
+        "S6.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s6_published_sort_composition",
+      "module": "HeterogeneousSortingInput",
+      "production": "MEJF.HeterogeneousSortingInput.computeWithSorter_correct",
+      "anchors": [
+        "S6.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s6_sort_and_scan_cost",
+      "module": "HeterogeneousSortingInput",
+      "production": "MEJF.HeterogeneousSortingInput.computeWithSorter_uniform_bound",
+      "anchors": [
+        "S6.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s6_heterogeneous_tie_free_law",
+      "module": "HeterogeneousTieFreeLaw",
+      "production": "MEJF.HeterogeneousTieFree.source_exists_tieFree_minimax_law",
+      "anchors": [
+        "S6.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s6_asymmetric_sup",
+      "module": "Asymmetric",
+      "production": "MEJF.Asymmetric.gamma_eq",
+      "anchors": [
+        "S6.Thmtheorem2"
+      ]
+    },
+    {
+      "key": "s6_asymmetric_symmetric_value",
+      "module": "Asymmetric",
+      "production": "MEJF.Asymmetric.gamma_eq_symmetric",
+      "anchors": [
+        "S6.Thmtheorem2"
+      ]
+    },
+    {
+      "key": "s6_symmetric_containment",
+      "module": "Asymmetric",
+      "production": "MEJF.Asymmetric.symmetric_max_interval_subset",
+      "anchors": [
+        "S6.Thmtheorem2"
+      ]
+    },
+    {
+      "key": "s6_random_rank_sup",
+      "module": "RandomizedProbability",
+      "production": "MEJF.RandomizedProbability.finiteRankGammaPi_eq",
+      "anchors": [
+        "S6.Thmtheorem3"
+      ]
+    },
+    {
+      "key": "s6_random_rank_attainment",
+      "module": "RandomizedProbability",
+      "production": "MEJF.RandomizedProbability.exists_attaining_model",
+      "anchors": [
+        "S6.Thmtheorem3"
+      ]
+    },
+    {
+      "key": "s6_random_rank_tie_free",
+      "module": "RandomizedTieFree",
+      "production": "MEJF.RandomizedTieFree.exists_tieFree_attaining_law",
+      "anchors": [
+        "S6.Thmtheorem3"
+      ]
+    },
+    {
+      "key": "s6_landau_dp",
+      "module": "RankDP",
+      "production": "MEJF.RankDP.dp_computes_gamma",
+      "anchors": [
+        "S6.Thmtheorem3"
+      ]
+    },
+    {
+      "key": "s6_dp_quartic_cost",
+      "module": "RankDP",
+      "production": "MEJF.RankDP.complete_program_cost",
+      "anchors": [
+        "S6.Thmtheorem3"
+      ]
+    },
+    {
+      "key": "s6_nonconvexification",
+      "module": "RandomizedProbability",
+      "production": "MEJF.RandomizedProbability.nonconvexification_actual",
+      "anchors": [
+        "S6.Thmtheorem4"
+      ]
+    },
+    {
+      "key": "s6_expanded_probability",
+      "module": "StabilityProbability",
+      "production": "MEJF.StabilityProbability.expanded_failure_probability_le",
+      "anchors": [
+        "S6.Thmtheorem5"
+      ]
+    },
+    {
+      "key": "s6_expanded_full_sup",
+      "module": "StabilityExtended",
+      "production": "MEJF.StabilityExtended.gamma_eq",
+      "anchors": [
+        "S6.Thmtheorem5"
+      ]
+    },
+    {
+      "key": "s6_stable_maximal_pair",
+      "module": "StabilityFrontier",
+      "production": "MEJF.StabilityFrontier.maximal_valid_pair_iff",
+      "anchors": [
+        "S6.Thmtheorem5"
+      ]
+    },
+    {
+      "key": "s6_stable_asymptotic_rectangle",
+      "module": "StabilityAsymptotic",
+      "production": "MEJF.StabilityAsymptotic.actual_limiting_rectangle",
+      "anchors": [
+        "S6.Thmtheorem5"
+      ]
+    },
+    {
+      "key": "s6_unexpanded_stable_sup",
+      "module": "Scaling",
+      "production": "MEJF.Scaling.stableUnexpandedGamma_eq",
+      "anchors": [
+        "S6.Thmtheorem6"
+      ]
+    },
+    {
+      "key": "s6_swap_upper",
+      "module": "SwapSharpness",
+      "production": "MEJF.SwapRobustness.source_failure_probability_le",
+      "anchors": [
+        "S6.Thmtheorem7"
+      ]
+    },
+    {
+      "key": "s6_swap_attainment",
+      "module": "SwapSharpness",
+      "production": "MEJF.SwapRobustness.source_swap_sharpness",
+      "anchors": [
+        "S6.Thmtheorem7"
+      ]
+    },
+    {
+      "key": "s7_factor_two_failure",
+      "module": "MainResults",
+      "production": "MEJF.MainResults.ordinary_factor_two_failure",
+      "anchors": [
+        "S7.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s7_full_efficiency",
+      "module": "EfficiencyCompletion",
+      "production": "MEJF.EfficiencyCompletion.proposition_7_2",
+      "anchors": [
+        "S2.Thmtheorem1",
+        "S7.Thmtheorem2"
+      ]
+    },
+    {
+      "key": "s7_every_noiseless_realization",
+      "module": "EfficiencyCompletion",
+      "production": "MEJF.EfficiencyCompletion.noiseless_every_permutation",
+      "anchors": [
+        "S7.Thmtheorem2"
+      ]
+    },
+    {
+      "key": "s7_every_supported_noise",
+      "module": "EfficiencyCompletion",
+      "production": "MEJF.EfficiencyCompletion.noisy_every_supported_sample",
+      "anchors": [
+        "S7.Thmtheorem2"
+      ]
+    },
+    {
+      "key": "s7_strict_containment",
+      "module": "Efficiency",
+      "production": "MEJF.Efficiency.strict_containment",
+      "anchors": [
+        "S7.Thmtheorem3"
+      ]
+    },
+    {
+      "key": "s6_all_covariates_containment",
+      "module": "AsymmetricFrontier",
+      "production": "MEJF.AsymmetricFrontier.symmetric_interval_subset",
+      "anchors": [
+        "S6.Thmtheorem2"
+      ]
+    },
+    {
+      "key": "s6_asymmetric_pareto_symmetric",
+      "module": "AsymmetricFrontier",
+      "production": "MEJF.AsymmetricFrontier.outer_pareto_symmetric",
+      "anchors": [
+        "S6.Thmtheorem2"
+      ]
+    },
+    {
+      "key": "s3_floor_cells",
+      "module": "RankCells",
+      "production": "MEJF.RankCells.shifted_rank_cell",
+      "anchors": [
+        "S3.Thmtheorem3"
+      ]
+    },
+    {
+      "key": "s3_pathwise_monotonicity",
+      "module": "RankCells",
+      "production": "MEJF.RankCells.intervalAt_antitone",
+      "anchors": [
+        "S3.Thmtheorem3"
+      ]
+    },
+    {
+      "key": "s3_pathwise_cell_constancy",
+      "module": "RankCells",
+      "production": "MEJF.RankCells.interval_constant_on_cell",
+      "anchors": [
+        "S3.Thmtheorem3"
+      ]
+    },
+    {
+      "key": "s7_factor_two_continuous_levels",
+      "module": "RankCells",
+      "production": "MEJF.RankCells.ordinary_factor_two_at_levels",
+      "anchors": [
+        "S7.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s2_coherent_seed_minimax",
+      "module": "CoherentSeed",
+      "production": "MEJF.CoherentSeed.randomizedGamma_eq_finiteRankGamma",
+      "anchors": [
+        "S2.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s2_coherent_seed_joint_measurable",
+      "module": "CoherentSeed",
+      "production": "MEJF.CoherentSeed.measurableSet_failure",
+      "anchors": [
+        "S2.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s2_ae_admissible_seed_bound",
+      "module": "CoherentSeed",
+      "production": "MEJF.CoherentSeed.ae_admissible_failure_probability_le",
+      "anchors": [
+        "S2.Thmtheorem1"
+      ]
+    },
+    {
+      "key": "s2_ae_admissible_seed_minimax",
+      "module": "CoherentSeed",
+      "production": "MEJF.CoherentSeed.aeAdmissibleGamma_eq_finiteRankGamma",
+      "anchors": [
+        "S2.Thmtheorem1"
+      ]
+    }
+  ],
+  "source_coverage": [
+    {
+      "source_anchor": "S2.Thmtheorem1",
+      "source_label": "Problem 2.1 (Two-level rank correction addressed here).",
+      "source_fragment_sha256": "5e9be3de2d4ed42c31e3264ad59965fae495a9753541b8e637dd23e3a6061f52",
+      "checked_names": [
+        "Paper33.Checked.s3_exact_failure",
+        "Paper33.Checked.s3_finite_validity",
+        "Paper33.Checked.s7_full_efficiency",
+        "Paper33.Checked.s2_coherent_seed_minimax",
+        "Paper33.Checked.s2_coherent_seed_joint_measurable",
+        "Paper33.Checked.s2_ae_admissible_seed_bound",
+        "Paper33.Checked.s2_ae_admissible_seed_minimax"
+      ],
+      "production_declarations": [
+        "MEJF.MainResults.exact_failure_law",
+        "MEJF.MainResults.finite_validity_criterion",
+        "MEJF.EfficiencyCompletion.proposition_7_2",
+        "MEJF.CoherentSeed.randomizedGamma_eq_finiteRankGamma",
+        "MEJF.CoherentSeed.measurableSet_failure",
+        "MEJF.CoherentSeed.ae_admissible_failure_probability_le",
+        "MEJF.CoherentSeed.aeAdmissibleGamma_eq_finiteRankGamma"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S3.Thmtheorem1",
+      "source_label": "Theorem 3.1 (Exact worst-case failure law).",
+      "source_fragment_sha256": "be7ce018ea594170189352b78d2bae6d29255d601178b8ef2cc3079d08621aed",
+      "checked_names": [
+        "Paper33.Checked.s3_exact_failure",
+        "Paper33.Checked.s3_zero_rank_axes",
+        "Paper33.Checked.s5_tie_free_attainment"
+      ],
+      "production_declarations": [
+        "MEJF.MainResults.exact_failure_law",
+        "MEJF.ExtendedRule.gamma_zero",
+        "MEJF.TieFreeSharpness.exists_tieFree_attaining_model"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S3.Thmtheorem2",
+      "source_label": "Corollary 3.2 (Finite-sample validity criterion).",
+      "source_fragment_sha256": "5b846f7bce8a1b762a02a6202e2ff335fbca3752de924ed2e4315a138dd9d3f1",
+      "checked_names": [
+        "Paper33.Checked.s3_finite_validity",
+        "Paper33.Checked.s3_zero_floor"
+      ],
+      "production_declarations": [
+        "MEJF.MainResults.finite_validity_criterion",
+        "MEJF.MainResults.zero_floor_impossible"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S3.Thmtheorem3",
+      "source_label": "Corollary 3.3 (Size and enumeration of the Pareto antichain).",
+      "source_fragment_sha256": "027f651b63e2c114836e62af91d21a315d60c8fc2f67c9f1587f90979bb97a67",
+      "checked_names": [
+        "Paper33.Checked.s3_pareto_card",
+        "Paper33.Checked.s3_inner_ceil",
+        "Paper33.Checked.s3_outer_enumeration",
+        "Paper33.Checked.s3_inner_enumeration",
+        "Paper33.Checked.s3_linear_enumeration",
+        "Paper33.Checked.s3_linear_cost",
+        "Paper33.Checked.s3_floor_cells",
+        "Paper33.Checked.s3_pathwise_monotonicity",
+        "Paper33.Checked.s3_pathwise_cell_constancy"
+      ],
+      "production_declarations": [
+        "MEJF.ActualPareto.ranks_card",
+        "MEJF.RankFrontier.innerTop_eq_real_ceil",
+        "MEJF.RankFrontier.pareto_iff_outer",
+        "MEJF.RankFrontier.pareto_iff_inner",
+        "MEJF.RankAlgorithm.enumerate_correct",
+        "MEJF.RankAlgorithm.enumerate_ops_le",
+        "MEJF.RankCells.shifted_rank_cell",
+        "MEJF.RankCells.intervalAt_antitone",
+        "MEJF.RankCells.interval_constant_on_cell"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S3.Thmtheorem4",
+      "source_label": "Corollary 3.4 (Asymptotic frontier).",
+      "source_fragment_sha256": "d0f933e3e7d4fc7c1eb504c7162d1029211fe05fe87e2533da0fc6ceaf58af2a",
+      "checked_names": [
+        "Paper33.Checked.s3_actual_asymptotic",
+        "Paper33.Checked.s3_limiting_budget",
+        "Paper33.Checked.s3_limiting_pareto"
+      ],
+      "production_declarations": [
+        "MEJF.ActualAsymptotic.gamma_asymptotic_min",
+        "MEJF.ActualAsymptotic.limiting_validity_iff",
+        "MEJF.LimitingFrontier.pareto_iff"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S3.Thmtheorem5",
+      "source_label": "Remark 3.5 (Three boundary checks).",
+      "source_fragment_sha256": "5f27ca79a09899bd69c436350fbb08b263e8525ab092925efcafddb66897c838",
+      "checked_names": [
+        "Paper33.Checked.s3_complete_phase",
+        "Paper33.Checked.s3_one_outer",
+        "Paper33.Checked.s3_one_inner",
+        "Paper33.Checked.s3_zero_rank_axes"
+      ],
+      "production_declarations": [
+        "MEJF.MainResults.complete_failure_iff",
+        "MEJF.MainResults.one_outer",
+        "MEJF.RankFrontier.failureRate_low_inner",
+        "MEJF.ExtendedRule.gamma_zero"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S3.Thmtheorem6",
+      "source_label": "Corollary 3.6 (Complete-failure phase).",
+      "source_fragment_sha256": "e9d0eb29565dd6b1650f8c16b648e26f0d8dc2c80005468e7b71ff8925d9b550",
+      "checked_names": [
+        "Paper33.Checked.s3_complete_phase",
+        "Paper33.Checked.s3_limiting_complete"
+      ],
+      "production_declarations": [
+        "MEJF.MainResults.complete_failure_iff",
+        "MEJF.ActualAsymptotic.limiting_complete_failure_iff"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S4.Thmtheorem1",
+      "source_label": "Lemma 4.1 (Aggregate interval is nonempty in the nontrivial regime).",
+      "source_fragment_sha256": "8469390f2f1ebf6e86cd8295b8fc6c23a3ab8f9da73c6ae8c7fee8a69f765c9c",
+      "checked_names": [
+        "Paper33.Checked.s4_actual_nonempty"
+      ],
+      "production_declarations": [
+        "MEJF.DeterministicUpper.learner_aggregate_nonempty"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S4.Thmtheorem2",
+      "source_label": "Lemma 4.2 (Failure forces high outdegree).",
+      "source_fragment_sha256": "fef2007d18e50884071b1d3d565894f1ce613c09bbfdd93351c0b7900b8ad201",
+      "checked_names": [
+        "Paper33.Checked.s4_actual_degree"
+      ],
+      "production_declarations": [
+        "MEJF.DeterministicUpper.learner_failure_forces_high_outdegree"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S4.Thmtheorem3",
+      "source_label": "Lemma 4.3 (Sharp oriented-graph count).",
+      "source_fragment_sha256": "6e9fed2f3bafec2012b67fa64a2e70694a04794c04b5784054ec76d0fdb85fc5",
+      "checked_names": [
+        "Paper33.Checked.s4_oriented_count"
+      ],
+      "production_declarations": [
+        "MEJF.GraphBound.highVertices_card_le"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S5.Thmtheorem1",
+      "source_label": "Lemma 5.1 (Extremal oriented graph).",
+      "source_fragment_sha256": "051e8d3c43c471529fe9115d41df75346cd65e20b1051039673612245d55d0f1",
+      "checked_names": [
+        "Paper33.Checked.s5_extremal_graph"
+      ],
+      "production_declarations": [
+        "MEJF.ExtremalGraph.exists_extremal_oriented_graph"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S5.Thmtheorem2",
+      "source_label": "Lemma 5.2 (Incidence realization).",
+      "source_fragment_sha256": "f7b62762d04e25f6d6c20291fb574743753d2f1c2921f53ea5d574962f475420",
+      "checked_names": [
+        "Paper33.Checked.s5_incidence_realization"
+      ],
+      "production_declarations": [
+        "MEJF.Incidence.realize_frontier"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S5.Thmtheorem3",
+      "source_label": "Proposition 5.3 (Quantitative removal of ties).",
+      "source_fragment_sha256": "6bb53627c86fd15b6e5510248afecb11a1261e2af5569de99e1362f66dbe6cfc",
+      "checked_names": [
+        "Paper33.Checked.s5_quantitative_tie_removal",
+        "Paper33.Checked.s5_tie_free_attainment"
+      ],
+      "production_declarations": [
+        "MEJF.TieFreeSharpness.exists_quantitative_tieFree_model",
+        "MEJF.TieFreeSharpness.exists_tieFree_attaining_model"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S6.Thmtheorem1",
+      "source_label": "Theorem 6.1 (Exact heterogeneous-size frontier).",
+      "source_fragment_sha256": "492d7d9a756ef1492494f245f1186e1f19f94f4ccc2b5a26d52a766a0a1a3ad5",
+      "checked_names": [
+        "Paper33.Checked.s6_heterogeneous_sup",
+        "Paper33.Checked.s6_heterogeneous_attainment",
+        "Paper33.Checked.s6_conditional_sizes",
+        "Paper33.Checked.s6_random_size_expectation",
+        "Paper33.Checked.s6_hall_sorted_cell",
+        "Paper33.Checked.s6_true_max_support",
+        "Paper33.Checked.s6_quadratic_algorithm",
+        "Paper33.Checked.s6_quadratic_cost",
+        "Paper33.Checked.s6_published_sort_composition",
+        "Paper33.Checked.s6_sort_and_scan_cost",
+        "Paper33.Checked.s6_heterogeneous_tie_free_law"
+      ],
+      "production_declarations": [
+        "MEJF.HeterogeneousProbability.gamma_eq",
+        "MEJF.HeterogeneousProbability.exists_attaining_model",
+        "MEJF.HeterogeneousProbability.conditional_failure_le",
+        "MEJF.HeterogeneousProbability.failure_probability_le_expectation",
+        "MEJF.HeterogeneousFrontier.supported_card_iff_sortedCell",
+        "MEJF.HeterogeneousFrontier.maximumSupported_eq_sStar",
+        "MEJF.HeterogeneousAlgorithm.computeAfterSorting_correct",
+        "MEJF.HeterogeneousAlgorithm.computeAfterSorting_ops_le",
+        "MEJF.HeterogeneousSortingInput.computeWithSorter_correct",
+        "MEJF.HeterogeneousSortingInput.computeWithSorter_uniform_bound",
+        "MEJF.HeterogeneousTieFree.source_exists_tieFree_minimax_law"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S6.Thmtheorem2",
+      "source_label": "Theorem 6.2 (Exact asymmetric-rank law).",
+      "source_fragment_sha256": "7f5afe08f98bc5a9228c3464d03f3be3cc649385f78188b18059d01ce1d6a023",
+      "checked_names": [
+        "Paper33.Checked.s6_asymmetric_sup",
+        "Paper33.Checked.s6_asymmetric_symmetric_value",
+        "Paper33.Checked.s6_symmetric_containment",
+        "Paper33.Checked.s6_all_covariates_containment",
+        "Paper33.Checked.s6_asymmetric_pareto_symmetric"
+      ],
+      "production_declarations": [
+        "MEJF.Asymmetric.gamma_eq",
+        "MEJF.Asymmetric.gamma_eq_symmetric",
+        "MEJF.Asymmetric.symmetric_max_interval_subset",
+        "MEJF.AsymmetricFrontier.symmetric_interval_subset",
+        "MEJF.AsymmetricFrontier.outer_pareto_symmetric"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S6.Thmtheorem3",
+      "source_label": "Theorem 6.3 (Exact randomized-rank law).",
+      "source_fragment_sha256": "dc31c12338db7e4f48e16f408bd61f31960200687f6d9b3d7aac4fd4d695e0d0",
+      "checked_names": [
+        "Paper33.Checked.s6_random_rank_sup",
+        "Paper33.Checked.s6_random_rank_attainment",
+        "Paper33.Checked.s6_random_rank_tie_free",
+        "Paper33.Checked.s6_landau_dp",
+        "Paper33.Checked.s6_dp_quartic_cost"
+      ],
+      "production_declarations": [
+        "MEJF.RandomizedProbability.finiteRankGammaPi_eq",
+        "MEJF.RandomizedProbability.exists_attaining_model",
+        "MEJF.RandomizedTieFree.exists_tieFree_attaining_law",
+        "MEJF.RankDP.dp_computes_gamma",
+        "MEJF.RankDP.complete_program_cost"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S6.Thmtheorem4",
+      "source_label": "Proposition 6.4 (Randomization is not convexification).",
+      "source_fragment_sha256": "7a6d9cc413ff14f3e1e55b856632d65bbb628375c8f1d4bbb93f890ecb526bd7",
+      "checked_names": [
+        "Paper33.Checked.s6_nonconvexification"
+      ],
+      "production_declarations": [
+        "MEJF.RandomizedProbability.nonconvexification_actual"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S6.Thmtheorem5",
+      "source_label": "Theorem 6.5 (Exact frontier for the  $2\\varepsilon$ -expanded rule).",
+      "source_fragment_sha256": "e95aa18f79e2e4cf86e5074cdb1b866ac9afe0600ff5e4a908ec971406688bb9",
+      "checked_names": [
+        "Paper33.Checked.s6_expanded_probability",
+        "Paper33.Checked.s6_expanded_full_sup",
+        "Paper33.Checked.s6_stable_maximal_pair",
+        "Paper33.Checked.s6_stable_asymptotic_rectangle"
+      ],
+      "production_declarations": [
+        "MEJF.StabilityProbability.expanded_failure_probability_le",
+        "MEJF.StabilityExtended.gamma_eq",
+        "MEJF.StabilityFrontier.maximal_valid_pair_iff",
+        "MEJF.StabilityAsymptotic.actual_limiting_rectangle"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S6.Thmtheorem6",
+      "source_label": "Remark 6.6 (Endpoint inflation is essential).",
+      "source_fragment_sha256": "c5721d7c14633cab6c0afc9455651fe56a9d0600abca3a8ec59b145db5587212",
+      "checked_names": [
+        "Paper33.Checked.s6_unexpanded_stable_sup"
+      ],
+      "production_declarations": [
+        "MEJF.Scaling.stableUnexpandedGamma_eq"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S6.Thmtheorem7",
+      "source_label": "Corollary 6.7 (Sharp block-swap degradation).",
+      "source_fragment_sha256": "f5998b989dfd8fe72b967fa87943bd01a87b633833e1616d9d70f2d32bf7b837",
+      "checked_names": [
+        "Paper33.Checked.s6_swap_upper",
+        "Paper33.Checked.s6_swap_attainment"
+      ],
+      "production_declarations": [
+        "MEJF.SwapRobustness.source_failure_probability_le",
+        "MEJF.SwapRobustness.source_swap_sharpness"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S7.Thmtheorem1",
+      "source_label": "Proposition 7.1 (Failure of the ordinary factor-two correction).",
+      "source_fragment_sha256": "740a65e08a4cba468db01c6308136f976c5e59be6c716ed19b31decd49b713b8",
+      "checked_names": [
+        "Paper33.Checked.s7_factor_two_asymptotic",
+        "Paper33.Checked.s7_factor_two_failure",
+        "Paper33.Checked.s7_factor_two_continuous_levels"
+      ],
+      "production_declarations": [
+        "MEJF.LimitingFrontier.factor_two_invalid",
+        "MEJF.MainResults.ordinary_factor_two_failure",
+        "MEJF.RankCells.ordinary_factor_two_at_levels"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S7.Thmtheorem2",
+      "source_label": "Proposition 7.2 (Atomless pathwise length separation).",
+      "source_fragment_sha256": "b9de7472ab5bb7b2f688985fc86f41e0c7273ebd57b56fcb9914d5223cfd8003",
+      "checked_names": [
+        "Paper33.Checked.s7_full_efficiency",
+        "Paper33.Checked.s7_every_noiseless_realization",
+        "Paper33.Checked.s7_every_supported_noise"
+      ],
+      "production_declarations": [
+        "MEJF.EfficiencyCompletion.proposition_7_2",
+        "MEJF.EfficiencyCompletion.noiseless_every_permutation",
+        "MEJF.EfficiencyCompletion.noisy_every_supported_sample"
+      ],
+      "status": "verification_deferred_by_user"
+    },
+    {
+      "source_anchor": "S7.Thmtheorem3",
+      "source_label": "Proposition 7.3 (A sufficient condition for strict containment).",
+      "source_fragment_sha256": "dd6eb949822437242be0a3392b34cf3ed053f628b7e27a9a5be545864a4507c6",
+      "checked_names": [
+        "Paper33.Checked.s7_strict_containment"
+      ],
+      "production_declarations": [
+        "MEJF.Efficiency.strict_containment"
+      ],
+      "status": "verification_deferred_by_user"
+    }
+  ]
+}

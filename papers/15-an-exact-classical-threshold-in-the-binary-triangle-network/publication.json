@@ -1,0 +1,102 @@
+{
+  "paper_id": "15",
+  "title": "An exact classical threshold in the binary triangle network",
+  "source_url": "https://liuchliuch.github.io/repository/an-exact-classical-threshold-in-the-binary-triangle-network/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper15"
+  ],
+  "build_targets": [
+    "Paper15"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "25 explicit fixed contracts including the full arbitrary-measurable-model theorem, all eight output probabilities in Corollary2, finite gap, barycentres, reduction, calculus and exact attainment; historical complete positive replay remains deferred."
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "25-target suite with deliberate type mismatch.",
+      "rejection_detail": "An extra False premise changes P15Contract.lemma_7"
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "25-target suite with deliberate illegal proof dependency.",
+      "rejection_detail": "P15Contract.illegalProof is outside the permitted axioms"
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1",
+      "declaration": "Paper15.theorem1_sharp_bound",
+      "scope": "Every measurable independent-source TriangleModel with stochastic binary responses and M1=M3=0 satisfies M2<=tStar; exact attainment is included without finite-source or deterministic-response assumptions."
+    },
+    {
+      "source_result": "Corollary 2",
+      "declaration": "Paper15.corollary2_iff",
+      "scope": "For 0<=t<=1, the actual eight-outcome p_t distribution is triangle local exactly when t<=tStar."
+    },
+    {
+      "source_result": "Lemma 3",
+      "declaration": "Paper15.lemma3_bounded_measurable",
+      "scope": "A bounded measurable finite-dimensional map has a barycentre represented by at most d+1 sampled values from any prescribed full-measure set, without a finite-range assumption."
+    },
+    {
+      "source_result": "Lemma 4",
+      "declaration": "Paper15.lemma4_general_reduction",
+      "scope": "One deterministic ternary maximum dominates all measurable stochastic triangle models."
+    },
+    {
+      "source_result": "Lemma 5",
+      "declaration": "Paper15.lemma5_certified_gap",
+      "scope": "Every nonexceptional ternary response table satisfies the 9/25 gap for all simplex laws, including zero source probabilities."
+    },
+    {
+      "source_result": "Lemmas 6–7",
+      "declaration": "Paper15.lemma7_stationary",
+      "scope": "For positive x_i,y_i with x_i+y_i<1, constrained stationarity forces all three x_i to agree and all three y_i to agree; the supporting moment-gradient regularity is established."
+    }
+  ],
+  "preparation": [
+    "python3 ../../scripts/prepare.py --paper 15",
+    "python3 ../../scripts/prepare.py --paper 15 --execute",
+    "python3 ../../scripts/prepare.py --paper 15 --check"
+  ],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "dependency_pins": {
+    "mathlib": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "plausible": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+    "LeanSearchClient": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+    "importGraph": "d768126816be17600904726ca7976b185786e6b9",
+    "proofwidgets": "556caed0eadb7901e068131d1be208dd907d07a2",
+    "aesop": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+    "Qq": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+    "batteries": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+    "Cli": "91c18fa62838ad0ab7384c03c9684d99d306e1da"
+  },
+  "certificate_assets": {
+    "Paper15/CertificateData/forest.bin": {
+      "bytes": 16051533,
+      "sha256": "f8e844135af7190b642ae8a2b9cac7a7cd89f12b6a9d043c1e70fb8cc3c12710",
+      "role": "Untrusted elaboration input reconstructed as ordinary kernel-checked data and proofs"
+    },
+    "Paper15/CertificateData/representatives.bin": {
+      "bytes": 247488,
+      "sha256": "eeaa18a7a9d2e35cfee298f234b4a11aa4f45864369cc7c46ff8d103f9c16270",
+      "role": "Untrusted elaboration input reconstructed as ordinary kernel-checked data and proofs"
+    },
+    "Paper15/CertificateData/neighbours.bin": {
+      "bytes": 10270752,
+      "sha256": "aeee5462860aff77593b6314080e67d6d0f446ac00be6d4eb9ef27882b4bd33c",
+      "role": "Untrusted elaboration input reconstructed as ordinary kernel-checked data and proofs"
+    }
+  },
+  "generated_artifacts": "generated-artifacts.json",
+  "primary_comparator": "main"
+}

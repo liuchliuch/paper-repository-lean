@@ -1,0 +1,5 @@
+#!/bin/sh
+# Keep official Comparator child builds in the selected paper's Lake wrapper.
+set -eu
+[ -x ./scripts/lake-local ] || { echo "Missing paper scripts/lake-local" >&2; exit 2; }
+exec ./scripts/lake-local "$@"

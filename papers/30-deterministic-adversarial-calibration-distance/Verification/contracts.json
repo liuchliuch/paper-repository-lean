@@ -1,0 +1,338 @@
+{
+  "contract_count": 55,
+  "contract_policy": "Literal independent mathematical types, expressed using definitions; never theorem-type aliases or automatic type extraction.",
+  "contracts": [
+    {
+      "comparison_name": "P30.Challenge.witness_comparison",
+      "source": "S4.Thmtheorem1 / (4.1)",
+      "proof_term": "CalibrationDistance.witness_comparison hp hy f hL hB hlip hbound",
+      "semantic_scope": "Arbitrary admissible constants; real outcomes in [0,1] strengthen binary outcomes."
+    },
+    {
+      "comparison_name": "P30.Challenge.witness_comparison_least_constants",
+      "source": "S4.Thmtheorem1 / (4.1)",
+      "proof_term": "CalibrationDistance.witness_comparison hp hy f hL.1.1 hB.1.1 hL.1.2 hB.1.2",
+      "semantic_scope": "Uses literal least admissible constants. Does not construct those least constants from the source Lipschitz hypothesis or identify a library supnorm object."
+    },
+    {
+      "comparison_name": "P30.Challenge.total_residual_witness",
+      "source": "S4.Thmtheorem1 / (4.2)",
+      "proof_term": "CalibrationDistance.total_residual_le_calDist hp hy",
+      "semantic_scope": "Actual unbinned calibrated-distance lower witness."
+    },
+    {
+      "comparison_name": "P30.Challenge.linear_witness",
+      "source": "S4.Thmtheorem1 / (4.3)",
+      "proof_term": "CalibrationDistance.linear_witness_le_calDist hp hy",
+      "semantic_scope": "Exact source constant 2/3."
+    },
+    {
+      "comparison_name": "P30.Challenge.smooth_comparison",
+      "source": "S4 / (4.5)",
+      "proof_term": "CalibrationDistance.smoothCalibrationError_le_two_calDist hp hy",
+      "semantic_scope": "Own witness-based comparison for the actual smooth witness supremum."
+    },
+    {
+      "comparison_name": "P30.Challenge.proxy_distance_comparison",
+      "source": "S6.Thmtheorem2 / (6.7)",
+      "proof_term": "CalibrationDistance.proxy_comparison p u hy",
+      "semantic_scope": "All real forecast vectors, so includes the source unit-interval forecasts."
+    },
+    {
+      "comparison_name": "P30.Challenge.proxy_ece_comparison",
+      "source": "S6.Thmtheorem2 / (6.8)",
+      "proof_term": "CalibrationDistance.calDist_le_l1_add_ece p u hy",
+      "semantic_scope": "Actual ECE comparator with merging empirical-mean bins."
+    },
+    {
+      "comparison_name": "P30.Challenge.block_subadditivity",
+      "source": "S7.Thmtheorem1 / (7.1)",
+      "proof_term": "CalibrationDistance.calDist_partition_le label p hy",
+      "semantic_scope": "Arbitrary finite partitions strengthen nonempty consecutive blocks."
+    },
+    {
+      "comparison_name": "P30.Challenge.shifted_bias_invariant",
+      "source": "S6.Thmtheorem1 / (6.6)",
+      "proof_term": "CalibrationDistance.shifted_bias_invariant hm y t j hj",
+      "semantic_scope": "The actual recursively generated grid trajectory."
+    },
+    {
+      "comparison_name": "P30.Challenge.recursive_bias_identity",
+      "source": "S6 / (6.1)-(6.4)",
+      "proof_term": "CalibrationDistance.gridRun_bias_sum hm y t k",
+      "semantic_scope": "Links the stored certified bias to actual proxy residuals."
+    },
+    {
+      "comparison_name": "P30.Challenge.grid_nonanticipation",
+      "source": "S6 / (6.1)-(6.4)",
+      "proof_term": "CalibrationDistance.gridForecast_nonanticipating hm y z t h",
+      "semantic_scope": "Current forecast depends only on strict past outcomes."
+    },
+    {
+      "comparison_name": "P30.Challenge.finite_horizon_pathwise",
+      "source": "S6.Thmtheorem3 / (6.9)",
+      "proof_term": "CalibrationDistance.fixed_grid_pathwise_bound hm y T",
+      "semantic_scope": "Actual causal midpoint construction, every prefix and binary path."
+    },
+    {
+      "comparison_name": "P30.Challenge.exact_grid_optimizer",
+      "source": "S6.Thmtheorem4; S2 / (2.9)",
+      "proof_term": "CalibrationDistance.optimalGrid_minimizes T n hT hn",
+      "semantic_scope": "Explicit source ceil formula minimizes over every positive integer."
+    },
+    {
+      "comparison_name": "P30.Challenge.rounding_error_interval",
+      "source": "S6.Thmtheorem4 / (6.10)",
+      "proof_term": "CalibrationDistance.gridRoundingError_bounds T",
+      "semantic_scope": "Exact ceil-sqrt error interval."
+    },
+    {
+      "comparison_name": "P30.Challenge.rounded_grid_identity",
+      "source": "S6.Thmtheorem4 / (6.10)",
+      "proof_term": "CalibrationDistance.ceilSqrtGrid_objective_identity T hT",
+      "semantic_scope": "Exact quadratic rounding correction."
+    },
+    {
+      "comparison_name": "P30.Challenge.optimal_value_le_rounded_grid",
+      "source": "S6.Thmtheorem4 / (6.10)",
+      "proof_term": "CalibrationDistance.optimalValue_le_gridObjective T (ceilSqrtGrid T) hT (CalibrationDistance.ceilSqrtGrid_pos T hT)",
+      "semantic_scope": "The optimized grid objective is at most the rounded-grid objective."
+    },
+    {
+      "comparison_name": "P30.Challenge.rounded_grid_strict_sqrt",
+      "source": "S6.Thmtheorem4 / (6.10)",
+      "proof_term": "CalibrationDistance.ceilSqrtGrid_objective_lt_sqrt T hT",
+      "semantic_scope": "Strict bound, including T=1."
+    },
+    {
+      "comparison_name": "P30.Challenge.optimized_strict_sqrt",
+      "source": "S2.Thmtheorem1; S6.Thmtheorem4",
+      "proof_term": "CalibrationDistance.optimalValue_lt_sqrt T hT",
+      "semantic_scope": "The optimized grid objective; complete minimax and lower-bound statements are checked by separate contracts in this same final suite."
+    },
+    {
+      "comparison_name": "P30.Challenge.finite_calibrated_set",
+      "source": "S2.1 / calibrated set finiteness",
+      "proof_term": "CalibrationDistance.calibratedSet_finite y",
+      "semantic_scope": "Literal calibrated constraint; arbitrary real outcome vector."
+    },
+    {
+      "comparison_name": "P30.Challenge.distance_attained",
+      "source": "S2.1 / (2.2)",
+      "proof_term": "CalibrationDistance.calDist_attained p hy",
+      "semantic_scope": "Attainment by an actual perfectly calibrated comparator."
+    },
+    {
+      "comparison_name": "P30.Challenge.one_round_distance",
+      "source": "S5.2 / one-round case",
+      "proof_term": "CalibrationDistance.calDist_one p y hy",
+      "semantic_scope": "Literal single-round calibrated optimization."
+    },
+    {
+      "comparison_name": "P30.Challenge.one_round_deterministic_lower",
+      "source": "S2.Thmtheorem1; S5.2 / T=1 deterministic part",
+      "proof_term": "CalibrationDistance.deterministic_one_round_lower F",
+      "semantic_scope": "Actual nonanticipating strategy and one fixed outcome string."
+    },
+    {
+      "comparison_name": "P30.Challenge.deterministic_minimax_one",
+      "source": "S2.Thmtheorem1 / T=1 deterministic part",
+      "proof_term": "CalibrationDistance.deterministicMinimax_one",
+      "semantic_scope": "Genuine infimum/supremum deterministic value; the randomized one-round equality is included in the separate both_minimax_one contract."
+    },
+    {
+      "comparison_name": "P30.Challenge.quantifier_order_example",
+      "source": "S2.Thmtheorem3 / Remark 2.3",
+      "proof_term": "CalibrationDistance.quantifier_order_strict_example",
+      "semantic_scope": "A real one-round CalDist counterexample to exchanging expectation and supremum; does not settle randomized-oblivious minimax."
+    },
+    {
+      "comparison_name": "P30.Challenge.anytime_pathwise",
+      "source": "S2.Thmtheorem2 / (2.10)",
+      "proof_term": "CalibrationDistance.anytime_pathwise_bound y T hT",
+      "semantic_scope": "Actual dyadic-restart stream; includes the truncated final epoch."
+    },
+    {
+      "comparison_name": "P30.Challenge.horizon_free_forecaster",
+      "source": "S2.Thmtheorem2 / (2.10)",
+      "proof_term": "CalibrationDistance.horizon_free_guarantee",
+      "semantic_scope": "One horizon-independent deterministic forecaster, every infinite outcome path, every positive prefix."
+    },
+    {
+      "comparison_name": "P30.Challenge.anytime_nonanticipation",
+      "source": "S2.Thmtheorem2; S7 / restart construction",
+      "proof_term": "CalibrationDistance.anytimePrediction_causal h",
+      "semantic_scope": "The single infinite stream uses only the strict past, with no terminal horizon parameter."
+    },
+    {
+      "comparison_name": "P30.Challenge.anytime_forecaster_path",
+      "source": "S2.Thmtheorem2; S7 / restart construction",
+      "proof_term": "CalibrationDistance.anytimeForecaster_path y t",
+      "semantic_scope": "Connects the causal finite-history rule to the actual infinite path."
+    },
+    {
+      "comparison_name": "P30.Challenge.allocated_grid_size_arithmetic",
+      "source": "S2.Thmtheorem2; Appendix B.2 / allocation arithmetic",
+      "proof_term": "CalibrationDistance.all_allocated_grid_sizes_lt T hT",
+      "semantic_scope": "Arithmetic allocation bound, including the next epoch; does not certify word-RAM complexity."
+    },
+    {
+      "comparison_name": "P30.Challenge.allocated_grid_node_arithmetic",
+      "source": "S2.Thmtheorem2; Appendix B.2 / endpoint-inclusive allocation arithmetic",
+      "proof_term": "CalibrationDistance.all_allocated_grid_nodes_lt T hT",
+      "semantic_scope": "Arithmetic node-count bound; does not certify an executed memory model or word-RAM complexity."
+    },
+    {
+      "comparison_name": "P30.Challenge.source_witness_interval",
+      "source": "S4.Thmtheorem1 / (4.1)",
+      "proof_term": "CalibrationDistance.witness_comparison_interval hp hy f hf",
+      "semantic_scope": "Literal interval-domain f with genuine best constants; no extra IsLeast hypothesis."
+    },
+    {
+      "comparison_name": "P30.Challenge.randomized_simultaneous_lower",
+      "source": "S5.Thmtheorem1 / (5.1)",
+      "proof_term": "CalibrationDistance.randomized_simultaneous_lower T hT K",
+      "semantic_scope": "Every Borel public-history behavioral kernel, true expected CalDist and a deterministic Borel past-only adversary; no energy, moment or tape hypotheses."
+    },
+    {
+      "comparison_name": "P30.Challenge.deterministic_oblivious_lower",
+      "source": "S5.Thmtheorem2 / (5.18)",
+      "proof_term": "CalibrationDistance.deterministic_oblivious_lower T hT F",
+      "semantic_scope": "One fixed string after the rule and before play; exact constant."
+    },
+    {
+      "comparison_name": "P30.Challenge.whole_minimax_rate",
+      "source": "S2.Thmtheorem1 / (2.7)-(2.9)",
+      "proof_term": "CalibrationDistance.square_root_minimax_rate T hT",
+      "semantic_scope": "Both real minimax values, both lower constants, strict upper and explicit integer optimizer."
+    },
+    {
+      "comparison_name": "P30.Challenge.both_minimax_one",
+      "source": "S2.Thmtheorem1 / T=1",
+      "proof_term": "CalibrationDistance.minimax_one",
+      "semantic_scope": "Exact boundary equality in both protocols."
+    },
+    {
+      "comparison_name": "P30.Challenge.normalized_rates",
+      "source": "S2.SS3.p3",
+      "proof_term": "CalibrationDistance.normalized_minimax_bounds T hT",
+      "semantic_scope": "Pointwise normalized bounds stronger than the stated Theta exponent."
+    },
+    {
+      "comparison_name": "P30.Challenge.true_uniform_tape_marginal",
+      "source": "S5.SS1.SSS0.Px2 / removing adversary randomization",
+      "proof_term": "CalibrationDistance.Protocol.uniformTapeJointLaw_snd K q hq T",
+      "semantic_scope": "Actual independent continuous uniform tape mixture; the marginal equality is proved."
+    },
+    {
+      "comparison_name": "P30.Challenge.fixed_grid_implementation",
+      "source": "S6.Thmtheorem5 / Appendix B.1",
+      "proof_term": "CalibrationDistance.fixed_grid_exact_implementation hm y t",
+      "semantic_scope": "Executable cached binary tree, exact simulation and explicit record-RAM time/space/width. Constant-size record operations and arithmetic on fitting words have constant model cost; this is not a Lean compiler or GC execution-time claim."
+    },
+    {
+      "comparison_name": "P30.Challenge.stored_word_bound",
+      "source": "S6.Thmtheorem5 / Appendix B.1",
+      "proof_term": "CalibrationDistance.gridTree_stored_words hm y t i hi",
+      "semantic_scope": "Stored keys, numerators and addresses fit logarithmic words uniformly in t."
+    },
+    {
+      "comparison_name": "P30.Challenge.linear_initialization",
+      "source": "S6.Thmtheorem5 / Appendix B.1",
+      "proof_term": "CalibrationDistance.grid_initialization_linear m",
+      "semantic_scope": "Actual recursive bulk builder and its linear record-allocation counter."
+    },
+    {
+      "comparison_name": "P30.Challenge.forecast_rational_pair",
+      "source": "S6.Thmtheorem5 / Appendix B.1",
+      "proof_term": "CalibrationDistance.gridForecastPair_correct hm y t",
+      "semantic_scope": "Exact unreduced numerator/denominator representation with no hidden gcd cost."
+    },
+    {
+      "comparison_name": "P30.Challenge.executable_next_parameter",
+      "source": "Appendix B.2",
+      "proof_term": "CalibrationDistance.nextGridParameter_correct L hL",
+      "semantic_scope": "Bounded integer search implements the mathematical ceil/sqrt parameter."
+    },
+    {
+      "comparison_name": "P30.Challenge.background_initialization_budget",
+      "source": "Appendix B.2",
+      "proof_term": "CalibrationDistance.nextInitializationWork_budget L hL",
+      "semantic_scope": "Counts integer parameter search plus actual cached-tree bulk-builder records."
+    },
+    {
+      "comparison_name": "P30.Challenge.background_initialization_deadline",
+      "source": "Appendix B.2",
+      "proof_term": "CalibrationDistance.initializationProgress_complete L hL",
+      "semantic_scope": "Constant-quota progress completes the initialization work by the next boundary."
+    },
+    {
+      "comparison_name": "P30.Challenge.all_tree_arena_memory",
+      "source": "S2.Thmtheorem2 / Appendix B.2",
+      "proof_term": "CalibrationDistance.all_allocated_tree_records_lt T hT",
+      "semantic_scope": "Includes all retired, current and prepared cached-tree arenas."
+    },
+    {
+      "comparison_name": "P30.Challenge.horizon_free_implementation",
+      "source": "S2.Thmtheorem2 / Appendix B.2",
+      "proof_term": "CalibrationDistance.horizon_free_exact_implementation y T hT",
+      "semantic_scope": "Same infinite run: prefix loss, logarithmic current work, all-arenas square-root memory, and background initialization deadline. Record-RAM abstraction with constant-cost pause/resume and root activation model operations."
+    },
+    {
+      "comparison_name": "P30.Challenge.oakes_finite_ece",
+      "source": "S3.SS0.SSS0.Px1.p1",
+      "proof_term": "CalibrationDistance.oakes_finite_calculation hp",
+      "semantic_scope": "The explicitly claimed own finite ECE calculation is fully proved."
+    },
+    {
+      "comparison_name": "P30.Challenge.oakes_fixed_string",
+      "source": "S3.SS0.SSS0.Px1.p1",
+      "proof_term": "CalibrationDistance.deterministic_exists_ece_ge_half F",
+      "semantic_scope": "Real causal opposite-outcome recursion and its fixed output string."
+    },
+    {
+      "comparison_name": "P30.Challenge.randomized_oblivious_inclusion",
+      "source": "S2.Thmtheorem3 / Remark 2.3",
+      "proof_term": "CalibrationDistance.randObliviousMinimax_le_adaptive T",
+      "semantic_scope": "The actual fixed-string behavioral-law minimax; no unproved square-root lower bound."
+    },
+    {
+      "comparison_name": "P30.Challenge.actual_prepared_tree_ready",
+      "source": "Appendix B.2",
+      "proof_term": "CalibrationDistance.next_epoch_ready L hL",
+      "semantic_scope": "A real suspended integer-search/tree-build program returns the correct tree after L fixed-quota rounds."
+    },
+    {
+      "comparison_name": "P30.Challenge.arena_addresses_fit_word",
+      "source": "S2.Thmtheorem2 / Appendix B.2",
+      "proof_term": "CalibrationDistance.anytime_arena_address_width T hT",
+      "semantic_scope": "Even the combined retired/current/prepared arena addresses fit O(log(T+1)) bits."
+    },
+    {
+      "comparison_name": "P30.Challenge.full_runtime_forecaster",
+      "source": "S2.Thmtheorem2 / Appendix B.2",
+      "proof_term": "CalibrationDistance.horizon_free_runtime_guarantee",
+      "semantic_scope": "Single causal horizon-free forecaster linked to the executable rational tree implementation, all-prefix loss/time/space/address bounds and actual initialization completion. Source unit-cost record/word-RAM model; compiler and GC runtimes are not asserted."
+    },
+    {
+      "comparison_name": "P30.Challenge.source_upper_is_actual_minimum",
+      "source": "S2 / (2.6)",
+      "proof_term": "CalibrationDistance.sourceUpperValue_minimum T hT",
+      "semantic_scope": "The explicit optimizer is proved to realize the minimum of the original positive-grid domain."
+    },
+    {
+      "comparison_name": "P30.Challenge.literal_source_minimax_values",
+      "source": "S2.Thmtheorem1 / (2.7)-(2.8)",
+      "proof_term": "CalibrationDistance.source_minimax_rate T hT",
+      "semantic_scope": "U_T is independently defined from its original positive-grid infimum, not from a target bound."
+    },
+    {
+      "comparison_name": "P30.Challenge.preparation_linear_in_next_grid",
+      "source": "Appendix B.2",
+      "proof_term": "CalibrationDistance.nextEpochInitializationJob_work_linear L hL",
+      "semantic_scope": "The actual suspended search/bulk-builder work is linear in the next grid size, so it is O(sqrt L), with completion already proved at each boundary."
+    }
+  ],
+  "validation": "Prepared source; actual results are recorded by Audit comparator receipts.",
+  "paper_accepted": false
+}

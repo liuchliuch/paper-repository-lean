@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Paper project metadata",
+  "type": "object",
+  "required": [
+    "paper_id",
+    "title",
+    "source_url",
+    "lean_toolchain",
+    "production_roots",
+    "build_targets",
+    "comparators",
+    "main_results",
+    "external_dependencies",
+    "primary_comparator"
+  ],
+  "properties": {
+    "paper_id": {
+      "type": "string",
+      "pattern": "^[0-9]{2,}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "lean_toolchain": {
+      "type": "string",
+      "pattern": "^leanprover/lean4:"
+    },
+    "production_roots": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "build_targets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^[A-Za-z_][A-Za-z0-9_'.]*$"
+      }
+    },
+    "comparators": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "scope"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 1
+          },
+          "config": {
+            "type": "string"
+          },
+          "planned_config": {
+            "type": "string"
+          },
+          "expected_rejection": {
+            "enum": [
+              null,
+              "type",
+              "axiom",
+              "missing"
+            ]
+          },
+          "availability": {
+            "enum": [
+              "available",
+              "pending_materialization",
+              "diagnostic_only"
+            ]
+          },
+          "reviewed_manifest": {
+            "type": "string"
+          },
+          "review_command": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "main_results": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "source_result",
+          "declaration",
+          "scope"
+        ],
+        "properties": {
+          "source_result": {
+            "type": "string"
+          },
+          "declaration": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "external_dependencies": {
+      "const": "EXTERNAL_DEPENDENCIES.md"
+    },
+    "generated_artifacts": {
+      "const": "generated-artifacts.json"
+    },
+    "preparation": {
+      "type": "array"
+    },
+    "primary_comparator": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": true
+}

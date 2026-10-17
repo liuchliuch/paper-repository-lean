@@ -1,0 +1,126 @@
+{
+  "paper_id": "35",
+  "title": "Sharp Rank Laws for Maxout Switch Density",
+  "source_url": "https://liuchliuch.github.io/repository/rank-linear-knot-density-for-maxout/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper35"
+  ],
+  "build_targets": [
+    "Paper35"
+  ],
+  "comparators": [
+    {
+      "id": "subset",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "Historical early 27-target proved subset only; does not certify the final 106-name delivery scope."
+    },
+    {
+      "id": "subset-negative-added-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Early subset with an added False premise."
+    },
+    {
+      "id": "subset-negative-illegal-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Early subset using a forbidden False axiom."
+    },
+    {
+      "id": "full",
+      "expected_rejection": null,
+      "scope": "Generated fixed literal contracts for the final 106-name source inventory; external proposition definitions are classified separately.",
+      "requires_preparation": true,
+      "reviewed_manifest": "Verification/full-contracts-manifest.json",
+      "review_command": [
+        "python3",
+        "scripts/prepare-full-contracts.py",
+        "check-reviewed",
+        "{reviewed_sha256}"
+      ],
+      "status": "not_materialized",
+      "planned_config": "Verification/FullDelivery/positive.json",
+      "availability": "pending_materialization",
+      "available": false,
+      "preparation": "full-contracts"
+    },
+    {
+      "id": "full-negative-added-premise",
+      "expected_rejection": "type",
+      "scope": "Generated fixed literal contracts for the final 106-name source inventory; external proposition definitions are classified separately.",
+      "requires_preparation": true,
+      "reviewed_manifest": "Verification/full-contracts-manifest.json",
+      "review_command": [
+        "python3",
+        "scripts/prepare-full-contracts.py",
+        "check-reviewed",
+        "{reviewed_sha256}"
+      ],
+      "status": "not_materialized",
+      "planned_config": "Verification/FullDelivery/negative-premise.json",
+      "availability": "pending_materialization",
+      "available": false,
+      "preparation": "full-contracts"
+    },
+    {
+      "id": "full-negative-illegal-axiom",
+      "expected_rejection": "axiom",
+      "scope": "Generated fixed literal contracts for the final 106-name source inventory; external proposition definitions are classified separately.",
+      "requires_preparation": true,
+      "reviewed_manifest": "Verification/full-contracts-manifest.json",
+      "review_command": [
+        "python3",
+        "scripts/prepare-full-contracts.py",
+        "check-reviewed",
+        "{reviewed_sha256}"
+      ],
+      "status": "not_materialized",
+      "planned_config": "Verification/FullDelivery/negative-axiom.json",
+      "availability": "pending_materialization",
+      "available": false,
+      "preparation": "full-contracts"
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 2.3",
+      "declaration": "Paper35.SourceTheorems.theorem_2_3_spectral",
+      "scope": "Bound on the strict Maxout switch count through tilted covariance under conditional-density, iid and moment hypotheses and explicit classical measure-theoretic inputs."
+    },
+    {
+      "source_result": "Corollary 2.5",
+      "declaration": "Paper35.SourceSupremum.universal_rank_linear_coefficient_iff",
+      "scope": "Sharp universal rank-linear coefficient over the admissible class, with a positive-length shrinking-segment family attaining the limiting bound."
+    },
+    {
+      "source_result": "Theorem 2.8 and Gaussian extensions",
+      "declaration": "Paper35.GaussianLift.jointlyGaussian_spherical_length",
+      "scope": "Jointly Gaussian switch counts are determined by spherical length, conditional on the classical Gaussian, Crofton and absolutely-continuous-curve interfaces."
+    },
+    {
+      "source_result": "Network result",
+      "declaration": "Paper35.DeepModel.Network.source_network_switch_bound_original",
+      "scope": "Switch and length propagation through independent layers, using selected-winner moments and explicit classical Gaussian/calculus inputs."
+    }
+  ],
+  "preparation": [
+    {
+      "id": "full-contracts",
+      "status": "not_run",
+      "command": "python3 scripts/prepare-full-contracts.py prepare",
+      "outputs": [
+        "Verification/full-contract-types.json",
+        "Verification/FullDelivery/",
+        "Verification/full-contracts-manifest.json"
+      ],
+      "review_required": "Independently compare every generated literal type with the source anchors and external-inputs.json. Preserve hypotheses and quantifiers. The manifest SHA256 is usable only after this semantic review.",
+      "review_command": "python3 scripts/prepare-full-contracts.py check-reviewed REVIEWED_SHA256",
+      "reviewed_manifest": "Verification/full-contracts-manifest.json",
+      "frozen_inputs": "Verification/preparation-inputs.json"
+    }
+  ],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "primary_comparator": "full"
+}

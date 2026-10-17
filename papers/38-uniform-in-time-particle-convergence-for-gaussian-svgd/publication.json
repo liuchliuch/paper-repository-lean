@@ -1,0 +1,131 @@
+{
+  "paper_id": "38",
+  "title": "Uniform-in-Time Particle Convergence for Projected Gaussian SVGD",
+  "source_url": "https://liuchliuch.github.io/repository/uniform-in-time-particle-convergence-for-gaussian-svgd/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper38"
+  ],
+  "build_targets": [
+    "Paper38"
+  ],
+  "comparators": [
+    {
+      "id": "components",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "19 retained independent fixed component contracts only: mobility, covariance rank/span, transport, moment closure and examples; not a whole-paper source-relative check."
+    },
+    {
+      "id": "components-negative-added-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Covariance-rank component contract with an added premise."
+    },
+    {
+      "id": "components-negative-illegal-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Covariance-rank component contract proved using a fresh forbidden axiom."
+    },
+    {
+      "id": "main",
+      "expected_rejection": null,
+      "scope": "17 source-facing contracts with explicit analytic/statistical/empirical-law parameters, plus 19 retained component contracts (36 total).",
+      "availability": "pending_materialization",
+      "available": false,
+      "planned_config": "Verification/source-comparator.json",
+      "preparation": "source-contracts",
+      "reviewed_manifest": "Verification/source-contracts-manifest.json",
+      "review_command": [
+        "python3",
+        "scripts/prepare-source-certificates.py",
+        "check-reviewed",
+        "{reviewed_sha256}"
+      ]
+    },
+    {
+      "id": "negative-added-premise",
+      "expected_rejection": "type",
+      "scope": "17 source-facing contracts with explicit analytic/statistical/empirical-law parameters, plus 19 retained component contracts (36 total).",
+      "availability": "pending_materialization",
+      "available": false,
+      "planned_config": "Verification/source-negative-premise.json",
+      "preparation": "source-contracts",
+      "reviewed_manifest": "Verification/source-contracts-manifest.json",
+      "review_command": [
+        "python3",
+        "scripts/prepare-source-certificates.py",
+        "check-reviewed",
+        "{reviewed_sha256}"
+      ]
+    },
+    {
+      "id": "negative-illegal-axiom",
+      "expected_rejection": "axiom",
+      "scope": "17 source-facing contracts with explicit analytic/statistical/empirical-law parameters, plus 19 retained component contracts (36 total).",
+      "availability": "pending_materialization",
+      "available": false,
+      "planned_config": "Verification/source-negative-axiom.json",
+      "preparation": "source-contracts",
+      "reviewed_manifest": "Verification/source-contracts-manifest.json",
+      "review_command": [
+        "python3",
+        "scripts/prepare-source-certificates.py",
+        "check-reviewed",
+        "{reviewed_sha256}"
+      ]
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 2.1",
+      "declaration": "Paper38.Main.theorem21",
+      "scope": "Deterministic projected Gaussian flow and uniform-in-time particle comparison under the analytic baseline family over all dimensions."
+    },
+    {
+      "source_result": "Theorem 2.2 / Corollary 2.5",
+      "declaration": "Paper38.Main.theorem22",
+      "scope": "Expected uniform-in-time rate under analytic baselines and statistical baselines for positive dimensions, with constants independent of sample size and time."
+    },
+    {
+      "source_result": "Theorem 2.4",
+      "declaration": "Paper38.Main.theorem24",
+      "scope": "High-probability trajectory and standardized-shape rates under analytic baselines and raw Gaussian statistical concentration inputs."
+    },
+    {
+      "source_result": "Proposition 2.3",
+      "declaration": "Paper38.Main.proposition23",
+      "scope": "Sharp raw empirical lower rate from Gaussian matching in positive dimensions."
+    },
+    {
+      "source_result": "Proposition 2.6 / Corollary 2.7",
+      "declaration": "Paper38.Main.corollary27",
+      "scope": "Non-Gaussian initialization and its spectral obstruction under analytic baselines, raw iid strong laws on arbitrary measurable spaces and quadratic-transport separation; no Gaussian statistical baseline is required."
+    }
+  ],
+  "preparation": [
+    {
+      "id": "source-contracts",
+      "status": "not_run",
+      "command": "python3 scripts/prepare-source-certificates.py prepare",
+      "outputs": [
+        "Verification/SourceStatements.lean",
+        "Verification/SourceChallenge.lean",
+        "Verification/SourceSolution.lean",
+        "Verification/SourceNegativePremise.lean",
+        "Verification/SourceNegativeAxiom.lean",
+        "Verification/source-comparator.json",
+        "Verification/source-negative-premise.json",
+        "Verification/source-negative-axiom.json",
+        "Verification/source-contracts-manifest.json"
+      ],
+      "review_required": "Review fixed source-relative hypotheses and quantifiers against Specification, GeometrySpecification, SourceAffine, SourceSamplingLemmas and the exact named external interfaces before using the printed hash.",
+      "reviewed_manifest": "Verification/source-contracts-manifest.json",
+      "review_command": "python3 scripts/prepare-source-certificates.py check-reviewed REVIEWED_SHA256",
+      "frozen_inputs": "Verification/preparation-inputs.json"
+    }
+  ],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "primary_comparator": "main"
+}

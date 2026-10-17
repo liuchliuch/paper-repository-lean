@@ -1,0 +1,93 @@
+{
+  "paper_id": "22",
+  "policy": {
+    "rule": "Published external results remain precise explicit parameters; no proof of the external exponent is claimed.",
+    "status": "independently_accepted_relative_boundary"
+  },
+  "principal_external_inputs": [
+    {
+      "id": "OTB-meta-converse-exponent-Eq23",
+      "lean_interface": "Paper22.ExternalMetaConverseLimit",
+      "interface_file": "Paper22/Reliability.lean",
+      "interface_field": "limit_eq",
+      "source_authors": [
+        "Aadil Oufkir",
+        "Marco Tomamichel",
+        "Mario Berta"
+      ],
+      "source_title": "Error exponent of activated non-signaling assisted classical-quantum channel coding",
+      "source_version": "arXiv:2410.01084v2 (2024-10-07), cited as [4] in P22",
+      "source_url": "https://arxiv.org/html/2410.01084v2",
+      "source_locations": [
+        "Theorem 4.1",
+        "Proposition 4.2 (achievability)",
+        "Proposition 4.3 (converse)",
+        "Eqs. (32)-(35), especially (34) for MC identification"
+      ],
+      "p22_locations": [
+        "S3.p1",
+        "S3.p3",
+        "S3.E23"
+      ],
+      "published_hypotheses": "Finite classical-quantum channel with finite-dimensional density outputs; the nontrivial exponent regime is C0(W)<r<C(W). The propositions give matching asymptotic bounds and hence an ordinary limit. The source uses natural logarithms.",
+      "exact_specialized_input": "For every n,d : Nat, every actual CQChannel W n d with FullRank W, and every real r with 0<r<holevoCapacity W: Tendsto (fun k : Nat => -(1/(k:Real))*log2(epsMC(tensorPowerFamily W k)(2^((k:Real)*r)))) atTop (nhds(spherePacking W r)).",
+      "all_quantifiers_explicit": true,
+      "unit_conversion": "Take the published natural-log rate to be r*log(2), so exp(k*r*log(2))=2^(k*r). Divide the natural-log exponent and capacity units by log(2); the Petz divergences and sphere-packing formula become the project's base-two quantities, exactly P22 Eq23.",
+      "applicability_checks": [
+        "Actual CQChannel consists of PSD trace-one complex matrices; tensorPowerFamily is the genuine iterated Kronecker channel with explicit finite-index relabeling.",
+        "Full rank is the project's actual positive definiteness, not an abstract error-sequence hypothesis.",
+        "P22 internally proves orderAlphaCapacity_tendsto_zero and orderAlphaCapacityExtended_tendsto_zero for full-rank outputs, giving C0(W)=0 and the published admissible rate interval 0<r<C(W).",
+        "The source SDP uses Lambda_x=M*q_x*T_x and p_x=M*q_x; the project uses S_x=q_x*T_x. Dividing the source normalization by M gives sum S_x<=I/M and S_x<=q_x I. ProgramsSDP proves the actual q,T <-> q,S substitution and identical error objective.",
+        "Full-rank block errors at every real L>1 are proved positive internally, including the original-lambda lower bound; total Real.log at zero does not affect the relevant tail.",
+        "The source ordinary MC limit is the input; exact ceil message counts, +6 slack, arbitrary rate sequences, NS/ANS transfer, and EReal zero-error semantics are all internally proved."
+      ],
+      "used_by": [
+        "Paper22.metaConverse_sequence_extension",
+        "Paper22.theorem_2_reliability",
+        "Paper22.theorem_2_reliability_source",
+        "Paper22.theorem_2_reliability_source_of_meta",
+        "Paper22.Paper.theorem_2_reliability"
+      ],
+      "missing_formalization": "A closed Lean proof constructing ExternalMetaConverseLimit. This is a disclosed published external theorem, retained as a parameter. Internal partial reproofs of testing, SDP duality, moments and capacity optimization remain compiled but are not substituted for this limit.",
+      "implementation_mode": "explicit_universally_quantified_proposition_parameter",
+      "sorry_or_axiom_introduced": false,
+      "dependency_closure_note": "The final theorem has a hypothesis, not a sorryAx/custom axiom dependency. The production proof closure is audited under the standard three axioms only."
+    }
+  ],
+  "background_citations_not_used_by_principal_proofs": [
+    {
+      "id": "standard-alpha-endpoint-and-general-capacity-background",
+      "source": "Cheng, Hsieh, Tomamichel, Quantum Sphere-Packing Bounds with Polynomial Prefactors, arXiv:1704.05703v2, Proposition 2(f),(h), Eqs. (11)-(14), discussion after Eq. (14), Appendix D",
+      "source_url": "https://arxiv.org/pdf/1704.05703v2",
+      "p22_location": "S1.p7 and the general possibly-singular channel maximum/endpoint notation in Eq5",
+      "hypotheses": "A finite nonempty classical input alphabet and finite-dimensional density outputs; the order parameter approaches one from below for the endpoint assertion, and 0<alpha<1 for the general capacity optimization assertions.",
+      "disclosed_unformalized_properties": [
+        "Standard continuity of the order-alpha/Augustin capacity at alpha=1 with Holevo endpoint",
+        "General possibly-singular-channel extended-real optimization attainment beyond the full-rank case"
+      ],
+      "internal_scope": "The endpoint value is explicitly defined, not claimed continuous by that definition. Holevo attainment, full-rank order-alpha outer attainment, and full-rank moment-capacity identification are internally proved.",
+      "formal_input_used": false,
+      "principal_use_sites": [],
+      "status": "disclosed_standard_background_not_a_principal_input"
+    }
+  ],
+  "discharged_external_input": {
+    "id": "one-bit-activation-Eq26",
+    "source": "Wang, Fang, Tomamichel Lemma 3/Eq11; OTB Eqs31-32",
+    "status": "proved_internally",
+    "exact_statement": "For every actual finite CQChannel V and integer m>=1, epsNS(V.tensor noiselessBit)(2*m)=epsMC V m.",
+    "lean_proofs": [
+      "Paper22.activation_identity",
+      "Paper22.activationIdentity_proved"
+    ],
+    "final_contract_has_activation_input": false
+  },
+  "final_contract": {
+    "original_conclusion": "Paper22.PaperStatements.theorem_2_reliability_original",
+    "verified_relative_contract": "Paper22.PaperStatements.theorem_2_reliability",
+    "solution": "Paper22.Paper.theorem_2_reliability",
+    "meaning": "ExternalMetaConverseLimit -> original conclusion, with no extAct parameter.",
+    "unconditional_original_kernel_proof_claimed": false
+  },
+  "own_unproved_required_steps": []
+}

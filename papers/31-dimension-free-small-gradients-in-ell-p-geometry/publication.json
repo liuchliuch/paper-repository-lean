@@ -1,0 +1,214 @@
+{
+  "paper_id": "31",
+  "title": "Dimension-Free Gradient-Norm Minimization in ℓₚ and Schatten-p Spaces",
+  "source_url": "https://liuchliuch.github.io/repository/dimension-free-small-gradients-in-ell-p-geometry/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper31"
+  ],
+  "build_targets": [
+    "Paper31"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "comparator/positive.json",
+      "expected_rejection": null,
+      "scope": "753 frozen explicit public theorem types, including every mapped theorem endpoint; generated before release and not regenerated. Type inventory is not an independent semantic proof of whole-paper correspondence."
+    },
+    {
+      "id": "negative-premise",
+      "config": "comparator/added-premise.json",
+      "expected_rejection": "type",
+      "scope": "Real extra-premise mutation at target001, with the remaining fixed targets preserved."
+    },
+    {
+      "id": "negative-axiom",
+      "config": "comparator/illegal-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Real unauthorized-False-axiom mutation at target001, with the remaining fixed targets preserved."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Definition 1.1 (Deterministic exact-real query model).",
+      "declaration": "P31.OracleModel.Protocol",
+      "related_declarations": [
+        "P31.OracleModel.Protocol",
+        "P31.QueryProgram.Program",
+        "P31.QueryProgram.Program.calls_eq_length",
+        "P31.LowerBound.protocolProgram_run"
+      ],
+      "scope": "Deterministic exact-real query protocols count every executed oracle invocation, including repeated queries.",
+      "comparator_target": null
+    },
+    {
+      "source_result": "Theorem 1.2 (Exact-real gradient-query upper bound).",
+      "declaration": "P31.vector_upper_bound_uniform_constant",
+      "related_declarations": [
+        "P31.vectorGradientMethod_guarantee",
+        "P31.vector_upper_bound_uniform_constant",
+        "P31.Schedule.total_query_budget_le"
+      ],
+      "scope": "The actual vector program achieves the dual-gradient target; one constant precedes dimension, scales and accuracy, including zero-query/easy cases.",
+      "comparator_target": "OfficialP31.target748"
+    },
+    {
+      "source_result": "Corollary 1.3 (Conditional minimax comparison).",
+      "declaration": "P31.LowerBound.corollary1_3_from_composite",
+      "related_declarations": [
+        "P31.LowerBound.conditional_protocol_lower_bound",
+        "P31.LowerBound.corollary1_3",
+        "P31.LowerBound.corollary1_3_from_composite"
+      ],
+      "scope": "Conditional minimax comparison under the original simultaneous normalized hard-family Assumption 6.1, with actual oracle rescaling and appended output query.",
+      "comparator_target": "OfficialP31.target138"
+    },
+    {
+      "source_result": "Corollary 1.4 (Schatten- $p$  upper bound).",
+      "declaration": "P31.Schatten.matrix_upper_bound_uniform_constant",
+      "related_declarations": [
+        "P31.Schatten.matrixGradientMethod_guarantee",
+        "P31.Schatten.matrix_upper_bound_uniform_constant"
+      ],
+      "scope": "The rectangular Schatten analogue uses actual matrices, compact-SVD-pinned singular values, trace gradients and executed query counts.",
+      "comparator_target": "OfficialP31.target404"
+    },
+    {
+      "source_result": "Lemma 2.1 (Normalized shifted-power atom).",
+      "declaration": "P31.dualityMap_norm",
+      "related_declarations": [
+        "P31.dualityMap_norm",
+        "P31.powerAtom_hasFDerivAt",
+        "P31.powerAtom_sublevel_iff",
+        "P31.powerAtom_jensen_of_scalar_clarkson"
+      ],
+      "scope": "The coordinate duality map has the exact lp/lq norm identity for the stated exponent range; companion results give the shifted-power atom derivative and normalized growth from scalar Clarkson.",
+      "comparator_target": "OfficialP31.target560"
+    },
+    {
+      "source_result": "Lemma 2.2 (Complementary-composite contraction).",
+      "declaration": "P31.composite_raw_power_substitution",
+      "related_declarations": [
+        "P31.composite_raw_power_substitution",
+        "P31.composite_source_term_bound",
+        "P31.externalComposite_contraction",
+        "P31.lemma2_2"
+      ],
+      "scope": "The source complementary-composite parameters have the exact required power identities after substituting the normalized shifted atom; the objective-error/query guarantee remains an explicit external input.",
+      "comparator_target": "OfficialP31.target523"
+    },
+    {
+      "source_result": "Lemma 4.1 (Minimizer transport and stage contraction).",
+      "declaration": "P31.stagewise_transport_and_contraction",
+      "related_declarations": [
+        "P31.stagewise_transport_and_contraction",
+        "P31.AccumulationData.generated_stage_certificates",
+        "P31.AccumulationData.outputProgram_accuracy_and_complexity"
+      ],
+      "scope": "Regularized-minimizer transport, valid warm starts, stage contraction and the continuation path bound.",
+      "comparator_target": "OfficialP31.target713"
+    },
+    {
+      "source_result": "Lemma 4.2 (Path bound).",
+      "declaration": "P31.path_bound",
+      "related_declarations": [
+        "P31.path_bound",
+        "P31.vector_path_bound",
+        "P31.Schatten.SpectralInput.outer_accuracy"
+      ],
+      "scope": "Regularized-minimizer transport, valid warm starts, stage contraction and the continuation path bound.",
+      "comparator_target": "OfficialP31.target650"
+    },
+    {
+      "source_result": "Remark 5.1 (Why the dual norm is the dimension-free target).",
+      "declaration": "P31.lpNorm_antitone_exponent",
+      "related_declarations": [
+        "P31.lpNorm_antitone_exponent",
+        "P31.stronger_target_no_dimension_free_conversion",
+        "P31.vector_weaker_target"
+      ],
+      "scope": "Finite lp norms decrease with exponent; weaker gradient targets retain the main query bound and stronger targets have the sharp dimension-loss witnesses.",
+      "comparator_target": "OfficialP31.target600"
+    },
+    {
+      "source_result": "Corollary 5.2 (Accuracy-oblivious checkpoints).",
+      "declaration": "P31.accuracy_oblivious_checkpoints",
+      "related_declarations": [
+        "P31.accuracy_oblivious_checkpoints",
+        "P31.corollary5_2"
+      ],
+      "scope": "A wrapper independent of target accuracy composes actual programs with geometric cumulative query cost and a zero-scale branch.",
+      "comparator_target": "OfficialP31.target506"
+    },
+    {
+      "source_result": "Remark 5.3 (Other Schatten gradient targets).",
+      "declaration": "P31.Schatten.matrix_weaker_target",
+      "related_declarations": [
+        "P31.Schatten.matrix_weaker_target",
+        "P31.Schatten.matrix_stronger_target",
+        "P31.DiagonalLowerBound.rectangular_diagonal_sharp_factor"
+      ],
+      "scope": "Every weaker Schatten gradient target has the same actual-program query bound; stronger targets use the sharp factor based on min(m,n).",
+      "comparator_target": "OfficialP31.target405"
+    },
+    {
+      "source_result": "Assumption 6.1 (Simultaneous normalized hard-family interface).",
+      "declaration": "P31.LowerBound.NormalizedHardInstance",
+      "related_declarations": [
+        "P31.LowerBound.NormalizedHardInstance",
+        "P31.LowerBound.QueriedObjectiveHard",
+        "P31.LowerBound.SimultaneousHardFamily"
+      ],
+      "scope": "A normalized analytic instance carrying the original hard-family objective and query conditions. SimultaneousHardFamily is the additional original Assumption 6.1, not an established external theorem.",
+      "comparator_target": null
+    },
+    {
+      "source_result": "Lemma 6.2 (Localization in the hard family).",
+      "declaration": "P31.lemma6_2",
+      "related_declarations": [
+        "P31.lemma6_2",
+        "P31.vector_lemma6_2",
+        "P31.normalized_hard_family_reduction"
+      ],
+      "scope": "Objective-to-gradient localization for the hard family, with genuine Frechet derivatives and normalized rescaling.",
+      "comparator_target": "OfficialP31.target596"
+    },
+    {
+      "source_result": "Proposition 7.1 (A supplied diagonal metric for quadratics).",
+      "declaration": "P31.QuadraticMetric.actual_query_proposition71",
+      "related_declarations": [
+        "P31.QuadraticMetric.trace_bound",
+        "P31.QuadraticMetric.exists_positive_majorant",
+        "P31.QuadraticMetric.quadratic_hilbert_smooth",
+        "P31.QuadraticMetric.proposition71",
+        "P31.QuadraticMetric.operatorNorm_eq_quadraticSup",
+        "P31.QuadraticMetric.actual_query_proposition71"
+      ],
+      "scope": "For actual PSD quadratics, the constructed positive diagonal majorant and Hilbert routine give the source target; the zero operator uses no query.",
+      "comparator_target": "OfficialP31.target199"
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "dependency_pins": {
+    "mathlib": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "plausible": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+    "LeanSearchClient": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+    "importGraph": "d768126816be17600904726ca7976b185786e6b9",
+    "proofwidgets": "556caed0eadb7901e068131d1be208dd907d07a2",
+    "aesop": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+    "Qq": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+    "batteries": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+    "Cli": "91c18fa62838ad0ab7384c03c9684d99d306e1da"
+  },
+  "original_conditional_premise": {
+    "lean": "P31.LowerBound.SimultaneousHardFamily",
+    "source": "Original Assumption 6.1",
+    "status": "original conditional assumption, not an established external theorem",
+    "input": "Simultaneous normalized objective hard family for each actual query protocol, with original constants and dimension conditions; no gradient lower-bound conclusion."
+  },
+  "external_input_groups": 10,
+  "generated_artifacts": "generated-artifacts.json",
+  "primary_comparator": "main"
+}

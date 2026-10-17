@@ -1,0 +1,16 @@
+import Paper23.CertificateCocycle.Level8_00
+set_option maxRecDepth 100000
+set_option maxHeartbeats 0
+namespace Paper23.CertificateChecks
+open Cubical CertificateData
+attribute [local irreducible] codeChain
+set_option Elab.async false
+noncomputable def cocycleNode9_0 : BucketVector := []
+noncomputable def cocycleSource9_0 : RawChain := cocycleSource8_0 + cocycleSource8_1
+theorem cocycleNode9_0_check : modularMergeBuckets cocycleNode8_0 cocycleNode8_1 = cocycleNode9_0 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode9_0_chain : reduceChain (bucketChain cocycleNode9_0) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource9_0)) := by
+  rw [← cocycleNode9_0_check, modularMergeBuckets_sound, cocycleNode8_0_chain, cocycleNode8_1_chain]
+  simp only [cocycleSource9_0,map_add]
+end Paper23.CertificateChecks

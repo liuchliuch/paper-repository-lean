@@ -1,0 +1,61 @@
+{
+  "paper_id": "19",
+  "title": "Highness for isomorphism at Scott rank omega_1^CK",
+  "source_url": "https://liuchliuch.github.io/repository/highness-for-isomorphism-at-scott-rank-omega-1-ck/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper19",
+    "Verification.Solution",
+    "Verification.Audit"
+  ],
+  "build_targets": [
+    "Paper19",
+    "Verification"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "Twenty-one contracts for Theorem 1 and Lemmas 2–6, full uniform constructor and conversions, and the set-theoretic injection-path auxiliary."
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Added premise in the full Theorem 1 contract."
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Illegal-axiom use in the full Theorem 1 contract."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1",
+      "declaration": "Paper19.theorem_1",
+      "scope": "Uniformly construct computable ℕ-domain structures in a fixed finite language from every computable input tree, including empty trees, with all finite-tuple orbit definitions and bidirectional path/isomorphism conversions."
+    },
+    {
+      "source_result": "Uniform construction",
+      "declaration": "Paper19.uniform_construction_all_inputs",
+      "scope": "Fixed oracle programs construct the structures and convert solutions uniformly, with no extendibility oracle or ordinal bound supplied as input."
+    },
+    {
+      "source_result": "Lemmas 2–6",
+      "declaration": "Paper19.Challenge.lemma_5_uniform",
+      "scope": "This endpoint states the uniform path/isomorphism conversion of Lemma 5; the local rank and group-classification lemmas belong to the surrounding construction."
+    },
+    {
+      "source_result": "Corollary 7 auxiliary",
+      "declaration": "Paper19.Challenge.cor7_injection_tree",
+      "scope": "An injection-tree path is equivalent to an atomic isomorphism; this auxiliary does not establish the full degree-theoretic Corollary 7."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "source_html_sha256": "7a6ef32dafaab72357167b6b85867ece8b1a450ae1b638c4afe549079977e0e7",
+  "primary_comparator": "main"
+}

@@ -1,0 +1,9 @@
+# External dependencies and scope
+
+Mathlib is pinned to `f897ebcf72cd16f89ab4577d0c826cd14afaafc7`; Lean is 4.24.0. Production permits only `propext`, `Classical.choice`, and `Quot.sound`. No external result is assumed to replace the main construction or its local rank analysis.
+
+The source Scott-rank upper bound is expressed through its S 1. p 4 sufficient criterion: parameter-free computable infinitary definitions of every finite-tuple orbit. No general formal omega_1^CK object or complete Scott-rank library is claimed. `ComputablyPresented` is a finite recursive syntax of ordinary constructors and a computable well-founded-relation rank schema, expanded to actual infinitary formulas; it provides no arbitrary countable-conjunction constructor or oracle atomic predicates. The schema is chosen nonuniformly per fixed level, as allowed by the source.
+
+Two approved secondary exemptions remain unproved: Corollary 7 needs effective Scott analysis, tagged-sum boundary padding, exact-rank examples of Knight–Millar and the general Scott upper bound; both paragraphs of the Exact-rank Remark need hyperarithmetical isomorphism bounds, effective transfinite recursion on computable ordinal notations and rank-test evaluation/least-child closure. These are distinct from the proved injection-path auxiliary. References include Franklin–Rossegger–Turetsky, Structural complexity vs. computational complexity (arXiv:2606.15196v1), and Knight–Millar, Computable structures of rank omega_1^CK (doi:10.1142/S 0219061310000912).
+
+The shared release tooling installs the pinned official Comparator. Comparator challenge modules may contain specification placeholders; these are isolated from production proofs. Negative controls intentionally contain an added premise or an illegal axiom and are verification fixtures. No new axioms or proof placeholders were introduced by release curation.

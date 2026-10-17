@@ -1,0 +1,121 @@
+{
+  "paper_id": "20",
+  "title": "Counterexamples to log-concavity of local BPS invariants",
+  "source_url": "https://liuchliuch.github.io/repository/counterexamples-to-log-concavity-of-local-bps-invariants/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper20",
+    "Verification.Audit"
+  ],
+  "build_targets": [
+    "Paper20",
+    "Verification.Audit"
+  ],
+  "comparators": [
+    {
+      "id": "relative",
+      "config": "Verification/relative-comparator.json",
+      "expected_rejection": null,
+      "scope": "Twenty-two fixed exact relative contracts including actual and geometric counterexamples, same Q, actual return counts, original expansion, HOMFLY sign and normalized ruling.",
+      "availability": "available"
+    },
+    {
+      "id": "supporting",
+      "config": "Verification/supporting-comparator.json",
+      "expected_rejection": null,
+      "scope": "Fifteen historically checked supporting computational/series/walk contracts; not whole-paper coverage.",
+      "availability": "available"
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/relative-negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Real added premise against the22-target relative contract.",
+      "availability": "available"
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/relative-negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Real illegal axiom against the22-target relative contract.",
+      "availability": "available"
+    },
+    {
+      "id": "supporting-negative-premise",
+      "config": "Verification/supporting-negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Added premise in the supporting scope.",
+      "availability": "available"
+    },
+    {
+      "id": "supporting-negative-axiom",
+      "config": "Verification/supporting-negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Illegal axiom in the supporting scope.",
+      "availability": "available"
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1.1",
+      "declaration": "Paper20.Counterexample43.theorem1_1",
+      "scope": "Exact executable rank-43 BPS coefficients, the strict quantitative log-concavity inequality, and positivity through every required coefficient."
+    },
+    {
+      "source_result": "Theorem 1.2",
+      "declaration": "Paper20.Counterexample36.theorem1_2",
+      "scope": "For every integer k ≥ 10, failure of log-concavity at indices 20/21/22 and all-coefficient positivity, relative to MathasInputs."
+    },
+    {
+      "source_result": "Proposition 3.1",
+      "declaration": "P20Relative.prop_3_1",
+      "scope": "The same constructed polynomial Q has the stated degree bound, evaluation at k(k+1) and values at zero, relative to MathasInputs."
+    },
+    {
+      "source_result": "Proposition 3.2",
+      "declaration": "P20Relative.prop_3_2",
+      "scope": "The leading coefficient equals the cardinal of genuine transposition returns divided by the factorial, relative to MathasInputs."
+    },
+    {
+      "source_result": "Geometric interpretation",
+      "declaration": "P20Relative.geometric_program",
+      "scope": "Signed integer BPS extraction from the supplied geometric Euler data agrees with the executable coefficients, relative to GeometricInputs and MathasInputs."
+    },
+    {
+      "source_result": "Normalized ruling",
+      "declaration": "P20Relative.ruling_polynomial_unique",
+      "scope": "Faithful evaluation determines the unique normalized ruling polynomial, relative to the supplied geometric data, GeometricInputs and MathasInputs."
+    }
+  ],
+  "preparation": [
+    {
+      "kind": "generated_certificate_check_sources",
+      "manifest": "generated-artifacts.json",
+      "plan_command": [
+        "python3",
+        "../../scripts/prepare.py",
+        "--paper",
+        "20"
+      ],
+      "execute_command": [
+        "python3",
+        "../../scripts/prepare.py",
+        "--paper",
+        "20",
+        "--execute"
+      ],
+      "check_command": [
+        "python3",
+        "../../scripts/prepare.py",
+        "--paper",
+        "20",
+        "--check"
+      ],
+      "generation_status": "not_run"
+    }
+  ],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "source_html_sha256": "da46a25cea45e5852ca55f57cad9470e94915460497bbf2d923a1d52fca82566",
+  "generated_artifacts": "generated-artifacts.json",
+  "primary_comparator": "relative"
+}

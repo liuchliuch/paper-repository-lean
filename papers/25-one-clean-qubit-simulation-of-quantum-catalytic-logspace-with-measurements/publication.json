@@ -1,0 +1,101 @@
+{
+  "paper_id": "25",
+  "title": "One-Clean-Qubit Simulation of Quantum Catalytic Logspace with Measurements",
+  "source_url": "https://liuchliuch.github.io/repository/one-clean-qubit-simulation-of-quantum-catalytic-logspace-with-measurements/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper25"
+  ],
+  "build_targets": [
+    "Paper25"
+  ],
+  "comparators": [
+    {
+      "id": "full",
+      "config": "Verification/full-comparator.json",
+      "expected_rejection": null,
+      "scope": "All 13 fixed operational contracts, including the complete uniform native bounded-error and exact simulations."
+    },
+    {
+      "id": "full-negative-premise",
+      "config": "Verification/full-negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Adds a premise to the final uniform simulation contract."
+    },
+    {
+      "id": "full-negative-axiom",
+      "config": "Verification/full-negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Uses an unauthorized False axiom in the final uniform simulation."
+    },
+    {
+      "id": "supporting",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "Earlier 22 scalar, matrix, restoration, readout and certificate contracts; supporting scope only."
+    },
+    {
+      "id": "supporting-negative-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Earlier added-premise negative control."
+    },
+    {
+      "id": "supporting-negative-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Earlier illegal-axiom negative control."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1",
+      "declaration": "Paper25.CompleteSimulation.theorem1",
+      "scope": "Polynomial-size deterministic-logspace-uniform simulation by the constructed one-clean-qubit circuit family, with a common inverse-polynomial signed Born bias."
+    },
+    {
+      "source_result": "Exact-class corollary",
+      "declaration": "Paper25.CompleteSimulation.theorem1_exact",
+      "scope": "The same circuit construction for exact source acceptance; the stated effective-gate convention is retained."
+    },
+    {
+      "source_result": "Lemma 2",
+      "declaration": "Paper25.lemma_2_semantic_restoration",
+      "scope": "Complete positivity and restoration of every catalyst density operator imply one product output state for every operator, with reference-system preservation."
+    },
+    {
+      "source_result": "Lemma 3",
+      "declaration": "Paper25.KrausChannel.liouville_frob_bound_card",
+      "scope": "The squared Frobenius norm of the actual Kraus-channel Liouville matrix is at most the square of its dimension."
+    },
+    {
+      "source_result": "Lemma 4",
+      "declaration": "Paper25.lemma_4",
+      "scope": "For invertible finite complex A and lambda > 0, the nuclear norm of the regularized-inverse error is at most lambda/2 times the squared Frobenius norm of A inverse."
+    },
+    {
+      "source_result": "Lemma 5",
+      "declaration": "Paper25.coherentWalkFilter_error",
+      "scope": "The concrete coherent filter has the stated compression error, given a unitary eigenbasis and the explicit precision bound."
+    },
+    {
+      "source_result": "Lemma 6",
+      "declaration": "Paper25.OneCleanQubit.ancillary_block_readout",
+      "scope": "One-clean-probe density evolution gives the trace/Born readout identity used by the simulator."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "dependency_pins": {
+    "mathlib": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "plausible": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+    "LeanSearchClient": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+    "importGraph": "d768126816be17600904726ca7976b185786e6b9",
+    "proofwidgets": "556caed0eadb7901e068131d1be208dd907d07a2",
+    "aesop": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+    "Qq": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+    "batteries": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+    "Cli": "91c18fa62838ad0ab7384c03c9684d99d306e1da"
+  },
+  "primary_comparator": "full"
+}

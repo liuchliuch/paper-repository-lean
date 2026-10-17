@@ -1,0 +1,165 @@
+{
+  "paper_id": "27",
+  "title": "At most two smooth holomorphic fibrations over hyperbolic curves",
+  "source_url": "https://liuchliuch.github.io/repository/at-most-two-smooth-holomorphic-fibrations-over-hyperbolic-curves/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper27"
+  ],
+  "build_targets": [
+    "Paper27"
+  ],
+  "comparators": [
+    {
+      "id": "paper",
+      "config": "Verification/comparator-paper.json",
+      "expected_rejection": null,
+      "scope": "18 explicit final actual-geometry contracts, including main at-most-two/class theorem, Kodaira consequence, component obstructions and sharpness. All retain named universal inputs."
+    },
+    {
+      "id": "paper-negative-premise",
+      "config": "Verification/comparator-paper-extra-premise.json",
+      "expected_rejection": "type",
+      "scope": "Genuine added-premise rejection control for the paper scope."
+    },
+    {
+      "id": "paper-negative-axiom",
+      "config": "Verification/comparator-paper-illegal-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Genuine forbidden-axiom rejection control for the paper scope."
+    },
+    {
+      "id": "relative",
+      "config": "Verification/comparator-relative.json",
+      "expected_rejection": null,
+      "scope": "Eight intermediate geometric contracts relative to general inputs; supporting scope."
+    },
+    {
+      "id": "relative-negative-premise",
+      "config": "Verification/comparator-relative-extra-premise.json",
+      "expected_rejection": "type",
+      "scope": "Genuine added-premise rejection control for the relative scope."
+    },
+    {
+      "id": "relative-negative-axiom",
+      "config": "Verification/comparator-relative-illegal-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Genuine forbidden-axiom rejection control for the relative scope."
+    },
+    {
+      "id": "supporting",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "19 historical arithmetic, Laurent, jets, splitting and cover-group contracts; supporting scope only."
+    },
+    {
+      "id": "supporting-negative-premise",
+      "config": "Verification/comparator-extra-premise.json",
+      "expected_rejection": "type",
+      "scope": "Genuine added-premise rejection control for the supporting scope."
+    },
+    {
+      "id": "supporting-negative-axiom",
+      "config": "Verification/comparator-illegal-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Genuine forbidden-axiom rejection control for the supporting scope."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1.1.",
+      "declaration": "Paper27.Geometry.ClassicalInputs.at_most_two",
+      "scope": "A compact complex surface admits at most two smooth connected-fibre holomorphic fibrations over curves of genus at least two, up to base biholomorphism, under the stated universal classical inputs."
+    },
+    {
+      "source_result": "Corollary 1.2.",
+      "declaration": "Paper27.Geometry.at_most_two_kodaira",
+      "scope": "Non-isotriviality is witnessed by two actual compact fibre curves with no biholomorphism; Kodaira base hyperbolicity is a separate input to the corollary."
+    },
+    {
+      "source_result": "Lemma 2.1.",
+      "declaration": "Paper27.Geometry.FibreGeometry.finitePair_pairSurjective",
+      "scope": "Two inequivalent smooth fibrations give a finite surjective map to the product of their bases."
+    },
+    {
+      "source_result": "Lemma 2.2.",
+      "declaration": "Paper27.Geometry.LineBundleDegreeTheory.connection_degree_zero",
+      "scope": "The classical zero-degree consequence of a holomorphic connection is an explicit general input."
+    },
+    {
+      "source_result": "Lemma 2.3.",
+      "declaration": "Paper27.Geometry.CurveBranchInputs.curve_metric_rigidity",
+      "scope": "Equal derivative ramification divisors give equal pullback metrics and local isometry graphs, including ramified centres."
+    },
+    {
+      "source_result": "Proposition 2.4.",
+      "declaration": "Paper27.Geometry.ClassicalInputs.ramification_geometry",
+      "scope": "Critical components carry cyclic normal charts, unramified restrictions, Jacobian order n−1 and negative normal-cocycle degree."
+    },
+    {
+      "source_result": "Remark 2.5 (Checking both projections).",
+      "declaration": "Paper27.hasFDerivAt_localSecondProjection",
+      "scope": "The local second projection has the stated derivative and rank criterion; the Zaal application obtains a nonsubmersion from raw construction data without assuming connected second fibres or assigning total degree to a component."
+    },
+    {
+      "source_result": "Lemma 3.1.",
+      "declaration": "Paper27.Geometry.intrinsic_ramification_component_dichotomy",
+      "scope": "A third fibration is disjoint from a critical component or shares its tangency, supporting the common-index construction."
+    },
+    {
+      "source_result": "Lemma 3.2.",
+      "declaration": "Paper27.Geometry.ActualDisjointObstruction.impossible",
+      "scope": "The disjoint and common-tangency cases contradict negative normal degree, using actual splittings and cyclic averaging."
+    },
+    {
+      "source_result": "Lemma 3.3.",
+      "declaration": "Paper27.Geometry.ClassicalInputs.common_tangency_impossible_by_averaging",
+      "scope": "The disjoint and common-tangency cases contradict negative normal degree, using actual splittings and cyclic averaging."
+    },
+    {
+      "source_result": "Lemma 3.4.",
+      "declaration": "Paper27.Geometry.unramified_pair_fibration_equivalent",
+      "scope": "Every hyperbolic third fibration of a finite unramified product cover factors through one projection; it need not be smooth."
+    },
+    {
+      "source_result": "Unnumbered averaging construction",
+      "declaration": "Paper27.Geometry.PuncturedSplittingSections.NeighbourhoodAction.representation",
+      "scope": "Pushforward of actual punctured bundle sections defines the cyclic representation used for averaging, principal-part cancellation and holomorphic extension, under generic analytic/bundle inputs."
+    },
+    {
+      "source_result": "Appendix A coordinate and connection obstruction",
+      "declaration": "Paper27.Geometry.RetractionCoordinateGerms.NormalAtlas.common_tangency_impossible_of_three_pair_atlases",
+      "scope": "Three pair normal atlases with orders at least two on a hyperbolic curve force compatible Taylor coefficients and a tangent holomorphic connection, contradicting its degree under the stated degree-theory inputs."
+    },
+    {
+      "source_result": "Sharpness: product projections",
+      "declaration": "Paper27.Geometry.Curve.product_has_two",
+      "scope": "The two projections of a product of hyperbolic compact curves are smooth connected-fibre fibrations and inequivalent by base biholomorphism."
+    },
+    {
+      "source_result": "Sharpness: double Kodaira examples",
+      "declaration": "Paper27.Geometry.double_kodaira_attains_bound",
+      "scope": "Given the published double-Kodaira existence input and base hyperbolicity, the at-most-two bound is attained by two inequivalent Kodaira fibrations."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "dependency_pins": {
+    "mathlib": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "plausible": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+    "LeanSearchClient": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+    "importGraph": "d768126816be17600904726ca7976b185786e6b9",
+    "proofwidgets": "556caed0eadb7901e068131d1be208dd907d07a2",
+    "aesop": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+    "Qq": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+    "batteries": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+    "Cli": "91c18fa62838ad0ab7384c03c9684d99d306e1da"
+  },
+  "scope_limitations": [
+    "Actual mfderiv critical support and cyclic-chart transverse Jacobian orders represent ramification; no separate global divisor/intersection-pairing API is implemented.",
+    "Self-intersection is represented by the honest-frame normal quotient cocycle degree, with classical interpretation explicitly disclosed.",
+    "48 disclosed universal interfaces have no supplied Lean instances; derived support interfaces are distinguished in the registry.",
+    "Final 88-module aggregate and 18 paper-scope contracts were uncompiled at delivery."
+  ],
+  "primary_comparator": "paper"
+}

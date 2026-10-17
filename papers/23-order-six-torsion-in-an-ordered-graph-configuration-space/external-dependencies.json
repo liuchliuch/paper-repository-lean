@@ -1,0 +1,137 @@
+{
+  "paper": "P23 Order-six torsion in an ordered graph configuration space",
+  "policy": "Published external results are precise explicit parameters; own graph hypotheses and concrete certificate identities remain internal proof obligations.",
+  "status": "explicit_parameters_only; no axioms and no sorry introduced",
+  "dependencies": [
+    {
+      "id": "E-PS-H2",
+      "name": "Prue–Scrimshaw stable equivalence, specialized H2 consequence",
+      "primary_sources": [
+        {
+          "authors": "Paul Prue and Travis Scrimshaw",
+          "title": "Abrams’s stable equivalence for graph braid groups",
+          "publication": "Topology and its Applications 178 (2014), 136–145",
+          "theorem": "Theorem 3.2 (Stable Equivalence)",
+          "doi": "https://doi.org/10.1016/j.topol.2014.09.009",
+          "verified_text": "https://arxiv.org/html/0909.5511v2"
+        },
+        {
+          "author": "Allen Hatcher",
+          "title": "Algebraic Topology",
+          "theorem": "Theorem 2.10 and Corollary 2.11, p.111",
+          "url": "https://pi.math.cornell.edu/~hatcher/AT/AT..pdf"
+        }
+      ],
+      "original_quantifiers": {
+        "n": "Every integer n > 1.",
+        "graph": "Every finite connected graph G, viewed as a one-dimensional CW complex. The introductory stable-equivalence statement additionally assumes at least n vertices; the application satisfies this stronger version.",
+        "condition_A": "For every pair of distinct vertices u,v with degrees unequal to 2, every edge path from u to v has at least n−1 edges.",
+        "condition_B": "For every vertex v, every homotopically essential edge path from v to itself has at least n+1 edges.",
+        "conclusion": "The ordered configuration space C^n(G) deformation retracts onto the ordered discretized subspace D^n(G).",
+        "homology_invariance": "For every pair of spaces X,Y, every homotopy equivalence f:X→Y and every degree q, the induced integral singular-homology map f_* is an isomorphism."
+      },
+      "specialization": {
+        "n": 4,
+        "graph": "Paper23.subdividedGraph, with 32 vertices and 39 edges; its actual quotient realization is used.",
+        "source": "Paper23.DiscretizedSourceSpace = subdividedGraph.DiscretizedConfiguration 4",
+        "target": "Paper23.OrderedConfiguration 4 subdividedGraph.Realization",
+        "map": "Paper23.ExternalTopology.discretizedInclusionMap; inclusionHomologyMorphism is the pinned mathlib singularHomologyFunctor map of this exact inclusion; inclusionHomologyMap is its additive homomorphism.",
+        "input": "Paper23.ExternalTopology.PrueScrimshawH2Input = GraphGirth.FourParticleConditions → Function.Bijective inclusionHomologyMap",
+        "proved_graph_conditions": [
+          "GraphGirth.connected",
+          "GraphGirth.degree_eq_incidence",
+          "GraphGirth.degree_ne_two_iff",
+          "GraphGirth.special_walk_length (all walks between distinct special vertices have length at least 3)",
+          "GraphGirth.cycle_length_ge_six",
+          "GraphGirth.egirth_eq_six",
+          "GraphGirth.girth_eq_six",
+          "GraphGirth.fourParticleConditions (includes 4 ≤ card Vertex)"
+        ],
+        "condition_B_encoding": "The Lean sufficient condition is that every conventional SimpleGraph cycle has length at least 5, proved via the stronger girth-six theorem. The standard one-dimensional-CW interpretation/reduction of edge loops converts this to the original non-nullhomotopic closed-path condition. That standard topological interpretation is part of this disclosed specialization, not an additional graph computation assumed from the external input."
+      },
+      "missing_formalization": [
+        "Prue–Scrimshaw deformation retraction theorem for these actual ordered topological subspaces",
+        "Singular-homology homotopy invariance for the pinned mathlib singularHomologyFunctor",
+        "Standard graph edge-loop/cycle interpretation used to express source condition B through conventional girth"
+      ],
+      "use_sites": [
+        "ExternalTopology.discretizationHomologyEquiv",
+        "ExternalTopology.comparison",
+        "ExternalTopology.main_of_certificate"
+      ],
+      "does_not_supply": [
+        "The concrete graph’s finite conditions",
+        "Any cycle, bounding chain, detecting cocycle, certificate identity, or order-six conclusion"
+      ]
+    },
+    {
+      "id": "E-CUBICAL-CW-H2",
+      "name": "Oriented ordered cubical CW-chain identification and cellular-to-singular comparison",
+      "primary_sources": [
+        {
+          "author": "Allen Hatcher",
+          "title": "Algebraic Topology",
+          "theorem": "Theorem 2.35, p.139; cellular boundary discussion immediately following",
+          "url": "https://pi.math.cornell.edu/~hatcher/AT/AT..pdf"
+        },
+        {
+          "authors": "Paul Prue and Travis Scrimshaw",
+          "title": "Abrams’s stable equivalence for graph braid groups",
+          "location": "Introduction: ordered D^n(G) has the cubical CW subcomplex structure; proof of Lemma 2.2 describes labelled disjoint product cells",
+          "url": "https://arxiv.org/html/0909.5511v2"
+        }
+      ],
+      "original_quantifiers": {
+        "cellular_comparison": "For every CW complex X and every degree q, its integral cellular homology is naturally isomorphic to its integral singular homology.",
+        "cubical_specialization": "For a finite regular cubical subcomplex with an orientation on each cube, the free abelian oriented-cell chain groups with the incidence face differential are the cellular chain groups. Changing cube orientations by signs gives a chain-isomorphic complex."
+      },
+      "specialization": {
+        "space": "The actual ordered subspace Paper23.DiscretizedSourceSpace, consisting of four labelled graph-cell coordinates with pairwise disjoint closures.",
+        "chain_source": "Paper23.orderedCubicalComplex on Cubical.Chains 3, Cubical.Chains 2, Cubical.Chains 1; these are supported free integer chains on valid labelled cubes, with Cubical.differential and the increasing-moving-edge orientation.",
+        "source_homology": "Paper23.DiscreteH₂, the actual cycles/boundaries quotient of orderedCubicalComplex.",
+        "target_homology": "Paper23.IntegralHomology 2 DiscretizedSourceSpace, using pinned mathlib singular homology.",
+        "input": "Paper23.ExternalTopology.OrderedCubicalComparisonInput = DiscreteH₂ ≃+ DiscreteSingularH₂",
+        "already_proved_support": [
+          "Cubical boundary formula and differential_squared",
+          "SourceTopology.sourceCell_closedCarrier_disjoint_iff",
+          "The actual source-cell and topological-subspace definitions"
+        ],
+        "explicitly_included_external_adapter": "Construction of the regular cubical CW structure on this topological D4, identification of its cellular chain groups and attaching incidence signs with this concrete free ordered-cube model, and the resulting comparison to pinned mathlib singular homology. The supporting combinatorial definitions do not claim that this CW-chain adapter has been constructed in Lean."
+      },
+      "missing_formalization": [
+        "CW structure/characteristic maps and cellular-chain adapter for this actual finite cubical subcomplex",
+        "A general cellular/singular comparison theorem integrated with the pinned mathlib singular-homology definition"
+      ],
+      "use_sites": [
+        "ExternalTopology.comparison",
+        "ExternalTopology.certificate_consequence",
+        "ExternalTopology.main_of_certificate"
+      ],
+      "does_not_supply": [
+        "The paper’s concrete certificate",
+        "The four unreduced-chain certificate identities",
+        "Any direct torsion or main-theorem conclusion"
+      ]
+    }
+  ],
+  "proved_separately": [
+    "Explicit subdivision homeomorphism and induced ordered-configuration/singular-homology isomorphism in Paper23.Subdivision",
+    "Algebraic exact order-six argument in Paper23.CertificateAlgebra",
+    "Explicit homeomorphism from the eight-vertex fifteen-edge simple graph presentation to the original graph, and induced ordered-configuration/singular-homology equivalences, in Paper23.SimplePresentation"
+  ],
+  "acceptance_label": "Any main theorem using these inputs is relative to these registered external dependencies, not an unconditional all-foundations Lean theorem.",
+  "verified_sources_on": "2026-10-16",
+  "production_integration": {
+    "module": "Paper23.MainResult",
+    "main_theorem": "Paper23.main_result",
+    "inputs_only": [
+      "E-PS-H2",
+      "E-CUBICAL-CW-H2"
+    ],
+    "additional_certificate_or_torsion_premise": false,
+    "concrete_cubical_conclusion": "Unconditional Paper23.discrete_result",
+    "original_source_conclusion": "Paper23.main_result ps cw",
+    "simple_presentation_conclusion": "Paper23.simple_presentation_result ps cw",
+    "build_epoch": "Recorded actual build predates the final explicit-recursor cleanup; current integrated verification_deferred_by_user. External input types and MainResult source unchanged."
+  }
+}

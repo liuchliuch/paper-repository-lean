@@ -1,0 +1,75 @@
+{
+  "paper_id": "14",
+  "title": "Strong mixing of the Boca-Cobeli-Zaharescu map",
+  "source_url": "https://liuchliuch.github.io/repository/strong-mixing-bcz-map/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper14"
+  ],
+  "build_targets": [
+    "Paper14"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "94 fixed explicit contracts covering all five numbered conclusions, actual BCZ ergodicity, full Appendix A, real/complex L2 correlations and finite observation blocks."
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Full94-target contract with a deliberate inverse-map type mismatch.",
+      "rejection_detail": "Added premise changes P14Contract.b_inverse_left"
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Full94-target contract with a deliberate illegal proof dependency.",
+      "rejection_detail": "P14Contract.illegalProof is outside the permitted axioms"
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1",
+      "declaration": "Paper14.Theorem1",
+      "scope": "Strong mixing of the BCZ map, including real/complex L2 correlation limits and finite observation-block mixing, with no rate claimed."
+    },
+    {
+      "source_result": "Lemma 2",
+      "declaration": "Paper14.Lemma2",
+      "scope": "Self-induction, first-return conjugacy, measure transfer and accumulated roof-time scaling for the BCZ system."
+    },
+    {
+      "source_result": "Proposition 3",
+      "declaration": "Paper14.Proposition3",
+      "scope": "Product ergodicity and weak mixing of the BCZ system, with its ergodicity established internally."
+    },
+    {
+      "source_result": "Theorem 4",
+      "declaration": "Paper14.Theorem4",
+      "scope": "The general mixing criterion under the excess-return hypotheses, retaining the order of choosing alpha before eventual n."
+    },
+    {
+      "source_result": "Lemma 5",
+      "declaration": "Paper14.Lemma5",
+      "scope": "The primitive-point void-probability bound, including finite-prime sieve moments and residual probability estimates with the stated parameter order."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "dependency_pins": {
+    "mathlib": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "plausible": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+    "LeanSearchClient": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+    "importGraph": "d768126816be17600904726ca7976b185786e6b9",
+    "proofwidgets": "556caed0eadb7901e068131d1be208dd907d07a2",
+    "aesop": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+    "Qq": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+    "batteries": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+    "Cli": "91c18fa62838ad0ab7384c03c9684d99d306e1da"
+  },
+  "primary_comparator": "main"
+}

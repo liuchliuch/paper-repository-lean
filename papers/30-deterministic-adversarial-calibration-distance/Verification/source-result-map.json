@@ -1,0 +1,426 @@
+{
+  "paper_id": "30",
+  "source_inventory": {
+    "paper_id": "30",
+    "source_url": "https://liuchliuch.github.io/repository/deterministic-adversarial-calibration-distance/",
+    "html_sha256": "897730e6909aa1eb2702b95dbff2d709bc1f1c026ab3605a1ceb79f3e95fc269",
+    "note": "Independent source inventory; generated proofs have not been accepted. Unnumbered substantive claims require additional review.",
+    "block_count": 12,
+    "proof_result_count": 11,
+    "results": [
+      {
+        "anchor": "S2.Thmtheorem1",
+        "kind": "theorem",
+        "label": "Theorem 2.1 (Square-root minimax rate).",
+        "statement": "[S2.Thmtheorem1] Theorem 2.1 (Square-root minimax rate).\n [S2.Thmtheorem1.p1] \nFor every integer  $T\\geq 2$ ,\n [S2.EGx1] \n $\\displaystyle\\frac{1}{4320}\\sqrt{T}$  $\\displaystyle\\leq V_{T}^{\\mathrm{rand,ad}}\\leq U_{T}<\\sqrt{T},$ (2.7)\n\n $\\displaystyle\\frac{1}{1200}\\sqrt{T}$  $\\displaystyle\\leq V_{T}^{\\mathrm{det,obl}}\\leq U_{T}<\\sqrt{T}.$ (2.8)\n\nAn integer minimizer in (2.6) is\n [S2.E9] \n $m_{T}^{*}=\\left\\lceil\\frac{\\sqrt{4T+1}-1}{2}\\right\\rceil.$ (2.9)\n\nFor  $T=1$ , both minimax values equal  $1/2$ .",
+        "fragment_sha256": "bb64b829c3db5d6c1d9b2a71244add988e6aac8eecdb44e042e258d611a226a6"
+      },
+      {
+        "anchor": "S2.Thmtheorem2",
+        "kind": "corollary",
+        "label": "Corollary 2.2 (Horizon-free guarantee).",
+        "statement": "[S2.Thmtheorem2] Corollary 2.2 (Horizon-free guarantee).\n [S2.Thmtheorem2.p1] \nThere is a single deterministic forecaster, independent of the terminal horizon, such that for every infinite outcome sequence and every prefix  $T\\geq 1$ ,\n [S2.E10] \n $\\operatorname{CalDist}(p_{1:T},y_{1:T})<(2+\\sqrt{2})\\sqrt{T}.$ (2.10)\n\nIn the word-RAM model of Proposition 6.5, with word size  $\\Omega(\\log(T+1))$ , it uses  $O(\\log(T+1))$  time per round and  $O(\\sqrt{T})$  memory at time  $T$ .",
+        "fragment_sha256": "387a1b28e8ba66bf6e0c54771e97d90628e12369bef132a5056ef2968f6abdd7"
+      },
+      {
+        "anchor": "S2.Thmtheorem3",
+        "kind": "remark",
+        "label": "Remark 2.3 (The remaining quantifier order).",
+        "statement": "[S2.Thmtheorem3] Remark 2.3 (The remaining quantifier order).\n [S2.Thmtheorem3.p1] \nFor a randomized forecaster against a fixed string, define\n [S2.Ex6] \n $V_{T}^{\\mathrm{rand,obl}}:=\\inf_{K}\\sup_{y\\in\\{0,1\\}^{T}}\\mathbb{E}\\!\\left[\\operatorname{CalDist}(P^{K}(y),y)\\right].$ \n\nFix jointly Borel sampling maps that realize the kernels by inverse transforms, and let  $W=(W_{1},\\ldots,W_{T})$  have independent  $\\operatorname{Unif}[0,1]$  coordinates. For each fixed  $w$ , let  $F^{w}$  be the resulting deterministic rule and set  $L(w,y):=\\operatorname{CalDist}(p^{F^{w}}(y),y)$ . The deterministic result bounds  $\\mathbb{E}_{W}[\\sup_{y}L(W,y)]$ . The displayed value instead requires control of  $\\sup_{y}\\mathbb{E}_{W}[L(W,y)]$ , and these two operations cannot be exchanged in this direction. Conversely, the adversary for (2.7) depends on past realized forecasts and is not a fixed string. Thus  $V_{T}^{\\mathrm{rand,obl}}$  remains open.",
+        "fragment_sha256": "a737a3e7b7ad446957b8d714131156c2b50189b0ac77de9f2e613cd395e09fd8"
+      },
+      {
+        "anchor": "S4.Thmtheorem1",
+        "kind": "lemma",
+        "label": "Lemma 4.1 (Witness comparison).",
+        "statement": "[S4.Thmtheorem1] Lemma 4.1 (Witness comparison).\n [S4.Thmtheorem1.p1] \nFor every integer  $T\\geq 1$ ,  $p\\in[0,1]^{T}$ ,  $y\\in\\{0,1\\}^{T}$ , and Lipschitz  $f:[0,1]\\to\\mathbb{R}$ , let  $L:=\\operatorname{Lip}(f)$  be its least Lipschitz constant and  $B:=\\left\\lVert f\\right\\rVert_{\\infty}$ . Then\n [S4.E1] \n $\\left\\lvert\\sum_{t=1}^{T}f(p_{t})(y_{t}-p_{t})\\right\\rvert\\leq(L+B)\\operatorname{CalDist}(p,y).$ (4.1)\n\nConsequently,\n [S4.EGx2] \n $\\displaystyle\\operatorname{CalDist}(p,y)$  $\\displaystyle\\geq\\left\\lvert\\sum_{t=1}^{T}(y_{t}-p_{t})\\right\\rvert,$ (4.2)\n\n $\\displaystyle\\operatorname{CalDist}(p,y)$  $\\displaystyle\\geq\\frac{2}{3}\\left\\lvert\\sum_{t=1}^{T}(1/2-p_{t})(y_{t}-p_{t})\\right\\rvert.$ (4.3)",
+        "fragment_sha256": "f2a7f2e8b9e31588555dd69969269143b3f9a73417881581d568279234c48493"
+      },
+      {
+        "anchor": "S5.Thmtheorem1",
+        "kind": "theorem",
+        "label": "Theorem 5.1 (Randomized simultaneous lower bound).",
+        "statement": "[S5.Thmtheorem1] Theorem 5.1 (Randomized simultaneous lower bound).\n [S5.Thmtheorem1.p1] \nFor every integer  $T\\geq 2$  and every Borel behavioral-kernel forecaster  $K$  defined in Section 2, there is a Borel-measurable deterministic past-adaptive adversary  $A$  that does not observe the current forecast and satisfies\n [S5.E1] \n $\\mathbb{E}^{K,A}\\operatorname{CalDist}(P,Y)\\geq\\frac{1}{4320}\\sqrt{T}.$ (5.1)",
+        "fragment_sha256": "2483dee92be6e288d5e251e53f3a3615a20eeb3ad006e1c175af38edf8e095ec"
+      },
+      {
+        "anchor": "S5.Thmtheorem2",
+        "kind": "theorem",
+        "label": "Theorem 5.2 (Deterministic oblivious lower bound).",
+        "statement": "[S5.Thmtheorem2] Theorem 5.2 (Deterministic oblivious lower bound).\n [S5.Thmtheorem2.p1] \nFor every integer  $T\\geq 2$  and deterministic nonanticipating forecaster  $F$ , there is a fixed string  $y\\in\\{0,1\\}^{T}$  such that\n [S5.E18] \n $\\operatorname{CalDist}\\bigl(p^{F}(y),y\\bigr)\\geq\\frac{1}{1200}\\sqrt{T}.$ (5.18)",
+        "fragment_sha256": "8658b0a20a468cecb641bd56ab3ad5c9509a90f1551f192353fa798736220be9"
+      },
+      {
+        "anchor": "S6.Thmtheorem1",
+        "kind": "lemma",
+        "label": "Lemma 6.1 (Shifted-bias invariant).",
+        "statement": "[S6.Thmtheorem1] Lemma 6.1 (Shifted-bias invariant).\n [S6.Thmtheorem1.p1] \nUnder the construction (6.1)–(6.4), for every  $t\\in\\{0,\\ldots,T\\}$  and  $j\\in\\{0,\\ldots,m\\}$ ,\n [S6.E6] \n $x_{j}-1\\leq\\beta_{t,j}\\leq x_{j},\\qquad\\text{equivalently}\\qquad-\\frac{1}{2}\\leq b_{t,j}\\leq\\frac{1}{2}.$ (6.6)",
+        "fragment_sha256": "97f0ed47c72a4ba962f135561402d6a66ec42b69d0edf8cfcb4deaac2d0b2617"
+      },
+      {
+        "anchor": "S6.Thmtheorem2",
+        "kind": "lemma",
+        "label": "Lemma 6.2 (Proxy comparison).",
+        "statement": "[S6.Thmtheorem2] Lemma 6.2 (Proxy comparison).\n [S6.Thmtheorem2.p1] \nFor every integer  $T\\geq 1$ ,  $u,p\\in[0,1]^{T}$ , and  $y\\in\\{0,1\\}^{T}$ ,\n [S6.EGx8] \n $\\displaystyle\\left\\lvert\\operatorname{CalDist}(p,y)-\\operatorname{CalDist}(u,y)\\right\\rvert$  $\\displaystyle\\leq\\sum_{t=1}^{T}\\left\\lvert p_{t}-u_{t}\\right\\rvert,$ (6.7)\n\n $\\displaystyle\\operatorname{CalDist}(p,y)$  $\\displaystyle\\leq\\sum_{t=1}^{T}\\left\\lvert p_{t}-u_{t}\\right\\rvert+\\operatorname{ECE}(u,y).$ (6.8)",
+        "fragment_sha256": "eac8aed126d92b43755e002e899901ae200e573ca42b537c78532cc442c16236"
+      },
+      {
+        "anchor": "S6.Thmtheorem3",
+        "kind": "proposition",
+        "label": "Proposition 6.3 (Finite-horizon pathwise bound).",
+        "statement": "[S6.Thmtheorem3] Proposition 6.3 (Finite-horizon pathwise bound).\n [S6.Thmtheorem3.p1] \nFor every integer  $T\\geq 1$  and  $m\\in\\mathbb{Z}_{\\geq 1}$ , the construction (6.1)–(6.4) satisfies, on every outcome sequence,\n [S6.E9] \n $\\operatorname{CalDist}(p,y)\\leq g_{T}(m)=\\frac{T}{2m}+\\frac{m-1}{2}.$ (6.9)",
+        "fragment_sha256": "c614586be16883420fb51699cd8a8b02822f6dd86094d984b7d45478899f7221"
+      },
+      {
+        "anchor": "S6.Thmtheorem4",
+        "kind": "corollary",
+        "label": "Corollary 6.4 (Exact grid optimization).",
+        "statement": "[S6.Thmtheorem4] Corollary 6.4 (Exact grid optimization).\n [S6.Thmtheorem4.p1] \nFor every integer  $T\\geq 1$ , the integer  $m_{T}^{*}$  in (2.9) minimizes  $g_{T}$ . Let  $\\bar{m}:=\\lceil\\sqrt{T}\\rceil$  and  $\\delta:=\\bar{m}-\\sqrt{T}\\in[0,1)$ . Then\n [S6.E10] \n $U_{T}\\leq g_{T}(\\bar{m})=\\sqrt{T}-\\frac{1}{2}+\\frac{\\delta^{2}}{2\\bar{m}}<\\sqrt{T}.$ (6.10)",
+        "fragment_sha256": "20441a3bccc0c9e7c164793982ae1f8ef94e818989ceee2447d5f15fa9771111"
+      },
+      {
+        "anchor": "S6.Thmtheorem5",
+        "kind": "proposition",
+        "label": "Proposition 6.5 (Efficient exact implementation).",
+        "statement": "[S6.Thmtheorem5] Proposition 6.5 (Efficient exact implementation).\n [S6.Thmtheorem5.p1] \nFor a fixed  $m\\geq 1$ , the algorithm in (6.1)–(6.4) admits  $O(m)$  initialization time and memory, followed by  $O(\\log(m+1))$  worst-case time per round. Its forecasts are represented exactly as rationals. All stored integers have  $O(\\log(m+1))$  bits, so these bounds hold in a word-RAM with word size  $\\Omega(\\log(m+1))$ .",
+        "fragment_sha256": "7f3224e2c27a283a02923b0b2a9e02dc5f7eeb9367ca0b50016d5ea89b3bc097"
+      },
+      {
+        "anchor": "S7.Thmtheorem1",
+        "kind": "lemma",
+        "label": "Lemma 7.1 (Block subadditivity).",
+        "statement": "[S7.Thmtheorem1] Lemma 7.1 (Block subadditivity).\n [S7.Thmtheorem1.p1] \nFor every integer  $T\\geq 1$ ,  $p\\in[0,1]^{T}$ , and  $y\\in\\{0,1\\}^{T}$ , let  $I_{1},\\ldots,I_{K}$  be a partition of  $\\{1,\\ldots,T\\}$  into nonempty consecutive blocks. Then\n [S7.E1] \n $\\operatorname{CalDist}(p,y)\\leq\\sum_{k=1}^{K}\\operatorname{CalDist}(p_{I_{k}},y_{I_{k}}).$ (7.1)",
+        "fragment_sha256": "bc65fd835eebef5c506ed474085a28337cb621484fd2bc902a80157c5bef319a"
+      }
+    ]
+  },
+  "results": [
+    {
+      "anchor": "S2.Thmtheorem1",
+      "label": "Theorem 2.1 (Square-root minimax rate).",
+      "source_fragment_sha256": "bb64b829c3db5d6c1d9b2a71244add988e6aac8eecdb44e042e258d611a226a6",
+      "status": "implemented_light_checked",
+      "files": [
+        "CalibrationDistance/Main.lean",
+        "CalibrationDistance/Source.lean",
+        "CalibrationDistance/BehavioralUpper.lean",
+        "CalibrationDistance/Optimization.lean"
+      ],
+      "declarations": [
+        "CalibrationDistance.square_root_minimax_rate",
+        "CalibrationDistance.source_minimax_rate",
+        "CalibrationDistance.minimax_one",
+        "CalibrationDistance.normalized_minimax_bounds",
+        "CalibrationDistance.sourceUpperValue_minimum"
+      ],
+      "scope": "Both actual minimax protocols, exact lower constants, literal positive-grid upper minimum, explicit ceil optimizer and T=1.",
+      "official_comparator_status": "deferred_by_latest_user_instruction"
+    },
+    {
+      "anchor": "S2.Thmtheorem2",
+      "label": "Corollary 2.2 (Horizon-free guarantee).",
+      "source_fragment_sha256": "387a1b28e8ba66bf6e0c54771e97d90628e12369bef132a5056ef2968f6abdd7",
+      "status": "implemented_light_checked",
+      "files": [
+        "CalibrationDistance/Anytime.lean",
+        "CalibrationDistance/AnytimeImplementation.lean",
+        "CalibrationDistance/Initialization.lean",
+        "CalibrationDistance/InitializationBounds.lean",
+        "CalibrationDistance/Runtime.lean"
+      ],
+      "declarations": [
+        "CalibrationDistance.horizon_free_guarantee",
+        "CalibrationDistance.horizon_free_runtime_guarantee",
+        "CalibrationDistance.next_epoch_ready",
+        "CalibrationDistance.nextEpochInitializationJob_work_linear"
+      ],
+      "scope": "One causal infinite forecaster for every path/prefix, original strict constant, exact rational tree implementation and record/word-RAM resource semantics.",
+      "official_comparator_status": "deferred_by_latest_user_instruction"
+    },
+    {
+      "anchor": "S2.Thmtheorem3",
+      "label": "Remark 2.3 (The remaining quantifier order).",
+      "source_fragment_sha256": "a737a3e7b7ad446957b8d714131156c2b50189b0ac77de9f2e613cd395e09fd8",
+      "status": "definitions_and_quantifier_obstruction_formalized_open_question_preserved",
+      "files": [
+        "CalibrationDistance/Oblivious.lean",
+        "CalibrationDistance/Deterministic.lean"
+      ],
+      "declarations": [
+        "CalibrationDistance.randObliviousMinimax",
+        "CalibrationDistance.randObliviousMinimax_le_adaptive",
+        "CalibrationDistance.quantifier_order_strict_example"
+      ],
+      "scope": "Actual fixed-string randomized value and strict CalDist counterexample to swapping sup/expectation. The open lower-bound question remains open.",
+      "official_comparator_status": "deferred_by_latest_user_instruction"
+    },
+    {
+      "anchor": "S4.Thmtheorem1",
+      "label": "Lemma 4.1 (Witness comparison).",
+      "source_fragment_sha256": "f2a7f2e8b9e31588555dd69969269143b3f9a73417881581d568279234c48493",
+      "status": "implemented_light_checked",
+      "files": [
+        "CalibrationDistance/Core.lean",
+        "CalibrationDistance/WitnessConstants.lean",
+        "CalibrationDistance/WitnessDomain.lean"
+      ],
+      "declarations": [
+        "CalibrationDistance.witness_comparison_interval",
+        "CalibrationDistance.leastLip_isLeast",
+        "CalibrationDistance.intervalSupNorm_eq",
+        "CalibrationDistance.total_residual_le_calDist",
+        "CalibrationDistance.linear_witness_le_calDist"
+      ],
+      "scope": "Literal [0,1]-domain Lipschitz witness with genuine least constant/supremum norm derived from its Lipschitz hypothesis; exact 4.2/4.3.",
+      "official_comparator_status": "deferred_by_latest_user_instruction"
+    },
+    {
+      "anchor": "S5.Thmtheorem1",
+      "label": "Theorem 5.1 (Randomized simultaneous lower bound).",
+      "source_fragment_sha256": "2483dee92be6e288d5e251e53f3a3615a20eeb3ad006e1c175af38edf8e095ec",
+      "status": "implemented_light_checked",
+      "files": [
+        "CalibrationDistance/Protocol.lean",
+        "CalibrationDistance/ProtocolUniform.lean",
+        "CalibrationDistance/ProtocolStep.lean",
+        "CalibrationDistance/ProtocolTape.lean",
+        "CalibrationDistance/LowerProcess.lean",
+        "CalibrationDistance/LowerProcessMoments.lean",
+        "CalibrationDistance/LowerProcessBounds.lean",
+        "CalibrationDistance/LowerFinal.lean",
+        "CalibrationDistance/LowerTape.lean",
+        "CalibrationDistance/Main.lean"
+      ],
+      "declarations": [
+        "CalibrationDistance.Protocol.randomized_auxiliary_lower",
+        "CalibrationDistance.Protocol.uniformTapeJointLaw_snd",
+        "CalibrationDistance.Protocol.exists_deterministic_adversary_ge_auxiliary",
+        "CalibrationDistance.randomized_simultaneous_lower"
+      ],
+      "scope": "Arbitrary continuous Borel behavioral kernels; actual simultaneous product law, genuine moments/drift and independent uniform tape mixture; deterministic past-only adversary.",
+      "official_comparator_status": "deferred_by_latest_user_instruction"
+    },
+    {
+      "anchor": "S5.Thmtheorem2",
+      "label": "Theorem 5.2 (Deterministic oblivious lower bound).",
+      "source_fragment_sha256": "8658b0a20a468cecb641bd56ab3ad5c9509a90f1551f192353fa798736220be9",
+      "status": "implemented_light_checked",
+      "files": [
+        "CalibrationDistance/DeterministicProtocol.lean",
+        "CalibrationDistance/LowerProcessDeterministic.lean",
+        "CalibrationDistance/LowerFinal.lean",
+        "CalibrationDistance/Main.lean"
+      ],
+      "declarations": [
+        "CalibrationDistance.Protocol.deterministic_auxiliary_lower",
+        "CalibrationDistance.Protocol.deterministic_zetaTotal_fourth_moment",
+        "CalibrationDistance.Protocol.exists_string_of_integral_calDist_le",
+        "CalibrationDistance.deterministic_oblivious_lower"
+      ],
+      "scope": "Exact deterministic Dirac injection, zero forecast innovation, improved threshold/moments and 1/1200 constant, then one fixed binary string.",
+      "official_comparator_status": "deferred_by_latest_user_instruction"
+    },
+    {
+      "anchor": "S6.Thmtheorem1",
+      "label": "Lemma 6.1 (Shifted-bias invariant).",
+      "source_fragment_sha256": "97f0ed47c72a4ba962f135561402d6a66ec42b69d0edf8cfcb4deaac2d0b2617",
+      "status": "implemented_light_checked",
+      "files": [
+        "CalibrationDistance/Grid.lean"
+      ],
+      "declarations": [
+        "CalibrationDistance.gridRun_bias_sum",
+        "CalibrationDistance.shifted_bias_invariant",
+        "CalibrationDistance.gridRun_nonanticipating"
+      ],
+      "scope": "Actual initial state/minimum nonnegative shifted-bias choice and single-coordinate recursion; invariant and historical residual-sum link.",
+      "official_comparator_status": "deferred_by_latest_user_instruction"
+    },
+    {
+      "anchor": "S6.Thmtheorem2",
+      "label": "Lemma 6.2 (Proxy comparison).",
+      "source_fragment_sha256": "eac8aed126d92b43755e002e899901ae200e573ca42b537c78532cc442c16236",
+      "status": "implemented_light_checked",
+      "files": [
+        "CalibrationDistance/Core.lean"
+      ],
+      "declarations": [
+        "CalibrationDistance.proxy_comparison",
+        "CalibrationDistance.meanComparator_calibrated",
+        "CalibrationDistance.l1Dist_meanComparator",
+        "CalibrationDistance.calDist_le_l1_add_ece"
+      ],
+      "scope": "True distance stability and explicit calibrated bin-mean comparator, including merged bins.",
+      "official_comparator_status": "deferred_by_latest_user_instruction"
+    },
+    {
+      "anchor": "S6.Thmtheorem3",
+      "label": "Proposition 6.3 (Finite-horizon pathwise bound).",
+      "source_fragment_sha256": "c614586be16883420fb51699cd8a8b02822f6dd86094d984b7d45478899f7221",
+      "status": "implemented_light_checked",
+      "files": [
+        "CalibrationDistance/Grid.lean",
+        "CalibrationDistance/GridStrategy.lean"
+      ],
+      "declarations": [
+        "CalibrationDistance.fixed_grid_pathwise_bound",
+        "CalibrationDistance.fixedGridForecaster_loss_bound"
+      ],
+      "scope": "The actual causal midpoint construction on every binary path and every (including truncated) prefix.",
+      "official_comparator_status": "deferred_by_latest_user_instruction"
+    },
+    {
+      "anchor": "S6.Thmtheorem4",
+      "label": "Corollary 6.4 (Exact grid optimization).",
+      "source_fragment_sha256": "20441a3bccc0c9e7c164793982ae1f8ef94e818989ceee2447d5f15fa9771111",
+      "status": "implemented_light_checked",
+      "files": [
+        "CalibrationDistance/Optimization.lean",
+        "CalibrationDistance/Source.lean"
+      ],
+      "declarations": [
+        "CalibrationDistance.optimalGrid_minimizes",
+        "CalibrationDistance.ceilSqrtGrid_objective_identity",
+        "CalibrationDistance.optimalValue_lt_sqrt",
+        "CalibrationDistance.optimalGrid_successor_tie",
+        "CalibrationDistance.optimalGrid_unique",
+        "CalibrationDistance.sourceUpperValue_eq"
+      ],
+      "scope": "Exact source ceil optimizer over positive integers, quadratic rounding identity, strict upper, tie and uniqueness cases.",
+      "official_comparator_status": "deferred_by_latest_user_instruction"
+    },
+    {
+      "anchor": "S6.Thmtheorem5",
+      "label": "Proposition 6.5 (Efficient exact implementation).",
+      "source_fragment_sha256": "7f3224e2c27a283a02923b0b2a9e02dc5f7eeb9367ca0b50016d5ea89b3bc097",
+      "status": "implemented_light_checked",
+      "files": [
+        "CalibrationDistance/Grid.lean",
+        "CalibrationDistance/GridTree.lean",
+        "CalibrationDistance/Implementation.lean",
+        "CalibrationDistance/Initialization.lean"
+      ],
+      "declarations": [
+        "CalibrationDistance.boundedIntegerRun_correct",
+        "CalibrationDistance.gridTreeForecast_correct",
+        "CalibrationDistance.fixed_grid_exact_implementation",
+        "CalibrationDistance.grid_initialization_linear",
+        "CalibrationDistance.gridTree_stored_words",
+        "CalibrationDistance.gridForecastPair_correct"
+      ],
+      "scope": "Same algorithm via independent executable integer/cached-tree implementation; exact linear record initialization/space, logarithmic visits/word width, rational numerator/denominator representation.",
+      "official_comparator_status": "deferred_by_latest_user_instruction"
+    },
+    {
+      "anchor": "S7.Thmtheorem1",
+      "label": "Lemma 7.1 (Block subadditivity).",
+      "source_fragment_sha256": "bc65fd835eebef5c506ed474085a28337cb621484fd2bc902a80157c5bef319a",
+      "status": "implemented_light_checked",
+      "files": [
+        "CalibrationDistance/Core.lean"
+      ],
+      "declarations": [
+        "CalibrationDistance.calDist_partition_le",
+        "CalibrationDistance.calibrated_paste",
+        "CalibrationDistance.calDist_equiv"
+      ],
+      "scope": "Arbitrary finite partitions strengthen the nonempty consecutive-block statement; literal calibrated comparators are pasted.",
+      "official_comparator_status": "deferred_by_latest_user_instruction"
+    }
+  ],
+  "additional_own_claims": [
+    {
+      "source": "S2.SS1 / (2.1)-(2.3)",
+      "files": [
+        "CalibrationDistance/Core.lean",
+        "CalibrationDistance/Finite.lean"
+      ],
+      "declarations": [
+        "calibratedSet_finite",
+        "calDist_attained",
+        "calDist_le_card"
+      ],
+      "scope": "True finite calibrated set, attained infimum and bounded real loss."
+    },
+    {
+      "source": "S2.SS2 / actual Borel protocol and unique finite law",
+      "files": [
+        "CalibrationDistance/Protocol.lean",
+        "CalibrationDistance/ProtocolLoss.lean"
+      ],
+      "declarations": [
+        "law",
+        "law_unique",
+        "historyBorelSpace",
+        "measurable_pathLoss",
+        "integrable_pathLoss"
+      ],
+      "scope": "Finite public-history kernel products, no current forecast in adversary input, actual Borel bounded CalDist."
+    },
+    {
+      "source": "S2.SS3.p3",
+      "files": [
+        "CalibrationDistance/Main.lean"
+      ],
+      "declarations": [
+        "normalized_minimax_bounds"
+      ],
+      "scope": "Pointwise normalized 1/sqrtT upper/lower constants."
+    },
+    {
+      "source": "S3.SS0.SSS0.Px1.p1",
+      "files": [
+        "CalibrationDistance/OakesCalculation.lean"
+      ],
+      "declarations": [
+        "oakes_finite_calculation",
+        "deterministic_exists_ece_ge_half"
+      ],
+      "scope": "Own finite ECE opposite-outcome identity and T/2 lower, including causal fixed-string realization."
+    },
+    {
+      "source": "S4 / (4.4)-(4.5)",
+      "files": [
+        "CalibrationDistance/Core.lean"
+      ],
+      "declarations": [
+        "smoothCalibrationError_le_two_calDist"
+      ],
+      "scope": "Actual smooth-witness supremum comparison, proved from own witness inequality."
+    },
+    {
+      "source": "Appendix A.1-A.3",
+      "files": [
+        "CalibrationDistance/Lower.lean",
+        "CalibrationDistance/LowerScale.lean",
+        "CalibrationDistance/Moments.lean",
+        "CalibrationDistance/MomentsTails.lean",
+        "CalibrationDistance/MomentsStep.lean",
+        "CalibrationDistance/Cumulative.lean",
+        "CalibrationDistance/CumulativeSecond.lean",
+        "CalibrationDistance/LowerFinal.lean"
+      ],
+      "scope": "Actual Hoeffding/product mgf iteration, exact tail integration and fourth moments, cubic interpolation, Holder/Jensen drift, logarithmic exponent and exact constants."
+    },
+    {
+      "source": "Appendix B.1-B.2",
+      "files": [
+        "CalibrationDistance/GridTree.lean",
+        "CalibrationDistance/Implementation.lean",
+        "CalibrationDistance/Initialization.lean",
+        "CalibrationDistance/InitializationBounds.lean",
+        "CalibrationDistance/AnytimeImplementation.lean",
+        "CalibrationDistance/Runtime.lean"
+      ],
+      "scope": "Independent cached-tree simulation, exact integer/rational representation, fixed footprint, actual suspended next-tree preparation, deadline and all-arena counts."
+    }
+  ],
+  "model_boundaries": {
+    "finite_horizon_encoding": "Behavioral strategies are encoded on all n; each T law reads only its first T transitions. A finite-horizon family may extend by an arbitrary constant probability kernel after T, without restricting any source strategy. Strategies at each T can depend on T.",
+    "word_ram": "Source unit-cost word arithmetic/record access and continuation/root-handle model. Formal exact quantities are record visits, word widths, actual suspended-job work/deadline and arena footprints. No compiler/GC wall-clock theorem is asserted.",
+    "implementation_variant": "Cached complete binary trees implement the same grid choices and forecasts; no unformalized balanced-tree complexity theorem is assumed.",
+    "randomized_oblivious": "No square-root randomized-oblivious lower bound is claimed."
+  },
+  "external_unformalized_math_inputs": [],
+  "own_math_gaps": []
+}

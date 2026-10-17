@@ -1,0 +1,174 @@
+import Paper20.Certs.RContent36.B17C02
+set_option maxHeartbeats 0
+set_option maxRecDepth 200000
+namespace Paper20.Cert.RContent36.Tree
+open Paper20.RContent36
+open Paper20.HilbertJobs (Job parts children)
+
+def j_17_7_4_3 : Job := ⟨[17, 7, 4, 3], 3, 5, 33⟩
+
+def v_17_7_4_3 : State := @@GENERATED_RHS:v_17_7_4_3@@
+
+theorem correct_17_7_4_3 : Correct j_17_7_4_3 v_17_7_4_3 := correct_leaf j_17_7_4_3 v_17_7_4_3 (by decide +kernel)
+
+def j_17_7_4_2 : Job := ⟨[17, 7, 4, 2], 2, 6, 33⟩
+
+def v_17_7_4_2 : State := @@GENERATED_RHS:v_17_7_4_2@@
+
+theorem correct_17_7_4_2 : Correct j_17_7_4_2 v_17_7_4_2 := correct_leaf j_17_7_4_2 v_17_7_4_2 (by decide +kernel)
+
+def j_17_7_4_1 : Job := ⟨[17, 7, 4, 1], 1, 7, 33⟩
+
+def v_17_7_4_1 : State := @@GENERATED_RHS:v_17_7_4_1@@
+
+theorem correct_17_7_4_1 : Correct j_17_7_4_1 v_17_7_4_1 := correct_leaf j_17_7_4_1 v_17_7_4_1 (by decide +kernel)
+
+def j_17_7_4 : Job := ⟨[17, 7, 4], 4, 8, 34⟩
+
+def v_17_7_4 : State := @@GENERATED_RHS:v_17_7_4@@
+
+theorem correct_17_7_4 : Correct j_17_7_4 v_17_7_4 := by
+  have hc : children j_17_7_4 = [j_17_7_4_4, j_17_7_4_3, j_17_7_4_2, j_17_7_4_1] := by decide +kernel
+  have hv : List.Forall₂ Correct (children j_17_7_4) [v_17_7_4_4, v_17_7_4_3, v_17_7_4_2, v_17_7_4_1] := by
+    rw [hc]
+    exact (List.Forall₂.cons correct_17_7_4_4 (List.Forall₂.cons correct_17_7_4_3 (List.Forall₂.cons correct_17_7_4_2 (List.Forall₂.cons correct_17_7_4_1 List.Forall₂.nil))))
+  have hp := correct_children j_17_7_4 (by decide) (by decide) [v_17_7_4_4, v_17_7_4_3, v_17_7_4_2, v_17_7_4_1] hv
+  have he : combine [v_17_7_4_4, v_17_7_4_3, v_17_7_4_2, v_17_7_4_1] = v_17_7_4 := by decide +kernel
+  rwa [he] at hp
+
+def j_17_7_3_3 : Job := ⟨[17, 7, 3, 3], 3, 6, 33⟩
+
+def v_17_7_3_3 : State := @@GENERATED_RHS:v_17_7_3_3@@
+
+theorem correct_17_7_3_3 : Correct j_17_7_3_3 v_17_7_3_3 := correct_leaf j_17_7_3_3 v_17_7_3_3 (by decide +kernel)
+
+def j_17_7_3_2 : Job := ⟨[17, 7, 3, 2], 2, 7, 33⟩
+
+def v_17_7_3_2 : State := @@GENERATED_RHS:v_17_7_3_2@@
+
+theorem correct_17_7_3_2 : Correct j_17_7_3_2 v_17_7_3_2 := correct_leaf j_17_7_3_2 v_17_7_3_2 (by decide +kernel)
+
+def j_17_7_3_1 : Job := ⟨[17, 7, 3, 1], 1, 8, 33⟩
+
+def v_17_7_3_1 : State := @@GENERATED_RHS:v_17_7_3_1@@
+
+theorem correct_17_7_3_1 : Correct j_17_7_3_1 v_17_7_3_1 := correct_leaf j_17_7_3_1 v_17_7_3_1 (by decide +kernel)
+
+def j_17_7_3 : Job := ⟨[17, 7, 3], 3, 9, 34⟩
+
+def v_17_7_3 : State := @@GENERATED_RHS:v_17_7_3@@
+
+theorem correct_17_7_3 : Correct j_17_7_3 v_17_7_3 := by
+  have hc : children j_17_7_3 = [j_17_7_3_3, j_17_7_3_2, j_17_7_3_1] := by decide +kernel
+  have hv : List.Forall₂ Correct (children j_17_7_3) [v_17_7_3_3, v_17_7_3_2, v_17_7_3_1] := by
+    rw [hc]
+    exact (List.Forall₂.cons correct_17_7_3_3 (List.Forall₂.cons correct_17_7_3_2 (List.Forall₂.cons correct_17_7_3_1 List.Forall₂.nil)))
+  have hp := correct_children j_17_7_3 (by decide) (by decide) [v_17_7_3_3, v_17_7_3_2, v_17_7_3_1] hv
+  have he : combine [v_17_7_3_3, v_17_7_3_2, v_17_7_3_1] = v_17_7_3 := by decide +kernel
+  rwa [he] at hp
+
+def j_17_7_2 : Job := ⟨[17, 7, 2], 2, 10, 34⟩
+
+def v_17_7_2 : State := @@GENERATED_RHS:v_17_7_2@@
+
+theorem correct_17_7_2 : Correct j_17_7_2 v_17_7_2 := correct_leaf j_17_7_2 v_17_7_2 (by decide +kernel)
+
+def j_17_7_1 : Job := ⟨[17, 7, 1], 1, 11, 34⟩
+
+def v_17_7_1 : State := @@GENERATED_RHS:v_17_7_1@@
+
+theorem correct_17_7_1 : Correct j_17_7_1 v_17_7_1 := correct_leaf j_17_7_1 v_17_7_1 (by decide +kernel)
+
+def j_17_7 : Job := ⟨[17, 7], 7, 12, 35⟩
+
+def v_17_7 : State := @@GENERATED_RHS:v_17_7@@
+
+theorem correct_17_7 : Correct j_17_7 v_17_7 := by
+  have hc : children j_17_7 = [j_17_7_7, j_17_7_6, j_17_7_5, j_17_7_4, j_17_7_3, j_17_7_2, j_17_7_1] := by decide +kernel
+  have hv : List.Forall₂ Correct (children j_17_7) [v_17_7_7, v_17_7_6, v_17_7_5, v_17_7_4, v_17_7_3, v_17_7_2, v_17_7_1] := by
+    rw [hc]
+    exact (List.Forall₂.cons correct_17_7_7 (List.Forall₂.cons correct_17_7_6 (List.Forall₂.cons correct_17_7_5 (List.Forall₂.cons correct_17_7_4 (List.Forall₂.cons correct_17_7_3 (List.Forall₂.cons correct_17_7_2 (List.Forall₂.cons correct_17_7_1 List.Forall₂.nil)))))))
+  have hp := correct_children j_17_7 (by decide) (by decide) [v_17_7_7, v_17_7_6, v_17_7_5, v_17_7_4, v_17_7_3, v_17_7_2, v_17_7_1] hv
+  have he : combine [v_17_7_7, v_17_7_6, v_17_7_5, v_17_7_4, v_17_7_3, v_17_7_2, v_17_7_1] = v_17_7 := by decide +kernel
+  rwa [he] at hp
+
+def j_17_6_6_6 : Job := ⟨[17, 6, 6, 6], 6, 1, 33⟩
+
+def v_17_6_6_6 : State := @@GENERATED_RHS:v_17_6_6_6@@
+
+theorem correct_17_6_6_6 : Correct j_17_6_6_6 v_17_6_6_6 := correct_leaf j_17_6_6_6 v_17_6_6_6 (by decide +kernel)
+
+def j_17_6_6_5 : Job := ⟨[17, 6, 6, 5], 5, 2, 33⟩
+
+def v_17_6_6_5 : State := @@GENERATED_RHS:v_17_6_6_5@@
+
+theorem correct_17_6_6_5 : Correct j_17_6_6_5 v_17_6_6_5 := correct_leaf j_17_6_6_5 v_17_6_6_5 (by decide +kernel)
+
+def j_17_6_6_4 : Job := ⟨[17, 6, 6, 4], 4, 3, 33⟩
+
+def v_17_6_6_4 : State := @@GENERATED_RHS:v_17_6_6_4@@
+
+theorem correct_17_6_6_4 : Correct j_17_6_6_4 v_17_6_6_4 := correct_leaf j_17_6_6_4 v_17_6_6_4 (by decide +kernel)
+
+def j_17_6_6_3 : Job := ⟨[17, 6, 6, 3], 3, 4, 33⟩
+
+def v_17_6_6_3 : State := @@GENERATED_RHS:v_17_6_6_3@@
+
+theorem correct_17_6_6_3 : Correct j_17_6_6_3 v_17_6_6_3 := correct_leaf j_17_6_6_3 v_17_6_6_3 (by decide +kernel)
+
+def j_17_6_6_2 : Job := ⟨[17, 6, 6, 2], 2, 5, 33⟩
+
+def v_17_6_6_2 : State := @@GENERATED_RHS:v_17_6_6_2@@
+
+theorem correct_17_6_6_2 : Correct j_17_6_6_2 v_17_6_6_2 := correct_leaf j_17_6_6_2 v_17_6_6_2 (by decide +kernel)
+
+def j_17_6_6_1 : Job := ⟨[17, 6, 6, 1], 1, 6, 33⟩
+
+def v_17_6_6_1 : State := @@GENERATED_RHS:v_17_6_6_1@@
+
+theorem correct_17_6_6_1 : Correct j_17_6_6_1 v_17_6_6_1 := correct_leaf j_17_6_6_1 v_17_6_6_1 (by decide +kernel)
+
+def j_17_6_6 : Job := ⟨[17, 6, 6], 6, 7, 34⟩
+
+def v_17_6_6 : State := @@GENERATED_RHS:v_17_6_6@@
+
+theorem correct_17_6_6 : Correct j_17_6_6 v_17_6_6 := by
+  have hc : children j_17_6_6 = [j_17_6_6_6, j_17_6_6_5, j_17_6_6_4, j_17_6_6_3, j_17_6_6_2, j_17_6_6_1] := by decide +kernel
+  have hv : List.Forall₂ Correct (children j_17_6_6) [v_17_6_6_6, v_17_6_6_5, v_17_6_6_4, v_17_6_6_3, v_17_6_6_2, v_17_6_6_1] := by
+    rw [hc]
+    exact (List.Forall₂.cons correct_17_6_6_6 (List.Forall₂.cons correct_17_6_6_5 (List.Forall₂.cons correct_17_6_6_4 (List.Forall₂.cons correct_17_6_6_3 (List.Forall₂.cons correct_17_6_6_2 (List.Forall₂.cons correct_17_6_6_1 List.Forall₂.nil))))))
+  have hp := correct_children j_17_6_6 (by decide) (by decide) [v_17_6_6_6, v_17_6_6_5, v_17_6_6_4, v_17_6_6_3, v_17_6_6_2, v_17_6_6_1] hv
+  have he : combine [v_17_6_6_6, v_17_6_6_5, v_17_6_6_4, v_17_6_6_3, v_17_6_6_2, v_17_6_6_1] = v_17_6_6 := by decide +kernel
+  rwa [he] at hp
+
+def j_17_6_5_5 : Job := ⟨[17, 6, 5, 5], 5, 3, 33⟩
+
+def v_17_6_5_5 : State := @@GENERATED_RHS:v_17_6_5_5@@
+
+theorem correct_17_6_5_5 : Correct j_17_6_5_5 v_17_6_5_5 := correct_leaf j_17_6_5_5 v_17_6_5_5 (by decide +kernel)
+
+def j_17_6_5_4 : Job := ⟨[17, 6, 5, 4], 4, 4, 33⟩
+
+def v_17_6_5_4 : State := @@GENERATED_RHS:v_17_6_5_4@@
+
+theorem correct_17_6_5_4 : Correct j_17_6_5_4 v_17_6_5_4 := correct_leaf j_17_6_5_4 v_17_6_5_4 (by decide +kernel)
+
+def j_17_6_5_3 : Job := ⟨[17, 6, 5, 3], 3, 5, 33⟩
+
+def v_17_6_5_3 : State := @@GENERATED_RHS:v_17_6_5_3@@
+
+theorem correct_17_6_5_3 : Correct j_17_6_5_3 v_17_6_5_3 := correct_leaf j_17_6_5_3 v_17_6_5_3 (by decide +kernel)
+
+def j_17_6_5_2 : Job := ⟨[17, 6, 5, 2], 2, 6, 33⟩
+
+def v_17_6_5_2 : State := @@GENERATED_RHS:v_17_6_5_2@@
+
+theorem correct_17_6_5_2 : Correct j_17_6_5_2 v_17_6_5_2 := correct_leaf j_17_6_5_2 v_17_6_5_2 (by decide +kernel)
+
+def j_17_6_5_1 : Job := ⟨[17, 6, 5, 1], 1, 7, 33⟩
+
+def v_17_6_5_1 : State := @@GENERATED_RHS:v_17_6_5_1@@
+
+theorem correct_17_6_5_1 : Correct j_17_6_5_1 v_17_6_5_1 := correct_leaf j_17_6_5_1 v_17_6_5_1 (by decide +kernel)
+
+end Paper20.Cert.RContent36.Tree

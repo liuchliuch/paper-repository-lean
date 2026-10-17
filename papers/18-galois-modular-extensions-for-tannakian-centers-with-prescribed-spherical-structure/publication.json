@@ -1,0 +1,106 @@
+{
+  "paper_id": "18",
+  "title": "Galois-modular extensions for Tannakian centers with prescribed spherical structure",
+  "source_url": "https://liuchliuch.github.io/repository/galois-modular-extensions-for-tannakian-centers-with-prescribed-spherical-structure/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper18",
+    "Verification.FinalAxiomAudit"
+  ],
+  "build_targets": [
+    "Paper18",
+    "Verification.FinalAxiomAudit"
+  ],
+  "comparators": [
+    {
+      "id": "relative-full",
+      "config": "Verification/comparator-relative-full.json",
+      "expected_rejection": null,
+      "scope": "Eleven accepted targets: four exact external-input-relative theorems, original Lemma 2.1 and Appendix B, four actual-category integrality assertions, and literal JF Proposition 2.4."
+    },
+    {
+      "id": "core",
+      "config": "Verification/comparator-core.json",
+      "expected_rejection": null,
+      "scope": "Four algebraic core contracts only; not the complete actual-category theorem."
+    },
+    {
+      "id": "category",
+      "config": "Verification/comparator-category.json",
+      "expected_rejection": null,
+      "scope": "Four actual-category dominant-functor, FP dimension and equivariant-integrality contracts."
+    },
+    {
+      "id": "conditional",
+      "config": "Verification/comparator-conditional.json",
+      "expected_rejection": null,
+      "scope": "Twelve supplementary numerical and cochain reduction contracts; retains its explicit conditional scope."
+    },
+    {
+      "id": "johnson-freyd24",
+      "config": "Verification/comparator-johnson-freyd24.json",
+      "expected_rejection": null,
+      "scope": "Internally proved literal JF Proposition 2.4 positivity refinement."
+    },
+    {
+      "id": "original-proved",
+      "config": "Verification/comparator-original-proved.json",
+      "expected_rejection": null,
+      "scope": "Original unconditional Lemma 2.1 and actual pointed Appendix B only."
+    },
+    {
+      "id": "unconditional-probe",
+      "config": "Verification/comparator-original-unconditional-probe.json",
+      "expected_rejection": "type",
+      "scope": "Expected statement mismatch: candidates retain JF/ENO inputs against the original unconditional existence contracts."
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/negative-premise-relative-full.json",
+      "expected_rejection": "type",
+      "scope": "Real added-premise control against the accepted relative contract."
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/negative-axiom-relative-full.json",
+      "expected_rejection": "axiom",
+      "scope": "Real illegal-axiom control against the accepted relative contract."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1.1",
+      "declaration": "Paper18.Category.CategoricalTheorem11.exists_modularExtension",
+      "scope": "A modular fusion category and fully faithful braided spherical embedding preserving the prescribed source structure, with integral centralizer, relative to the explicit JF23 and ENO realization inputs."
+    },
+    {
+      "source_result": "Lemma A.1",
+      "declaration": "P18Relative.lemmaA_1",
+      "scope": "ENO-relative existence of a minimal extension and universal classification retaining every specified boundary comparison."
+    },
+    {
+      "source_result": "Proposition 2.2",
+      "declaration": "P18Relative.proposition2_2",
+      "scope": "ENO-relative minimal-extension existence and prescribed spherical enhancement for every minimal extension with the negative-dimensional C₂ generator."
+    },
+    {
+      "source_result": "Lemma 2.1",
+      "declaration": "P18Original.lemma2_1",
+      "scope": "Existence and uniqueness of the actual invertible object, with its inverse-twist constraint."
+    },
+    {
+      "source_result": "Lemma 3.1",
+      "declaration": "P18Category.equivariant",
+      "scope": "Integrality equivalence for the actual equivariant category; dominant-functor and Frobenius–Perron dimension assertions are also provided."
+    },
+    {
+      "source_result": "Appendix B",
+      "declaration": "P18Original.appendixB",
+      "scope": "The actual pointed obstruction, quantified over every spherical structure on the fixed ambient category."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "source_html_sha256": "0b6b96a8228b94a4a4a176a292cf8128471c7437edc11d2316aa129a98cae3f6",
+  "primary_comparator": "relative-full"
+}

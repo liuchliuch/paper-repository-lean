@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.0",
+  "scope": "Section 7 of paper.txt only: published comparisons and related-work context; no central exemption registry is changed",
+  "checked_on": "2026-10-16",
+  "status": "external_comparison_documented",
+  "own_principal_gap": false,
+  "interpretation": {
+    "candidate": "An accurately scoped published statement that could be an explicit external input to a comparison. This register does not introduce a Lean axiom or a theorem asserting it.",
+    "not_a_core_dependency": "None of these comparisons is used to prove the new norming, LAD, refinement, occupancy, or main recovery theorem in this repository.",
+    "background": "A qualitative related-work citation is not a quantitative theorem input. Its full theorem has not been silently imported.",
+    "parameter_scope": "Degree comparisons fix n, epsilon, rho, approximation factor, and a constant success probability. Constants depending on these parameters are not asserted uniform when they vary.",
+    "validation": "Only the new scalar-arithmetic module received a necessary incremental compilation. Full build, axiom audit, kernel replay, and Comparator verification remain verification_deferred_by_user."
+  },
+  "primary_sources": {
+    "Arora_ESA2024": {
+      "bibliography_reference": 1,
+      "title": "Outlier Robust Multivariate Polynomial Regression",
+      "authors": ["Vipul Arora", "Arnab Bhattacharyya", "Mathews Boban", "Venkatesan Guruswami", "Esty Kelman"],
+      "publication": "ESA 2024, LIPIcs 308, article 12, pages 12:1-12:17",
+      "doi": "10.4230/LIPIcs.ESA.2024.12",
+      "record_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ESA.2024.12",
+      "pdf_url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol308-esa2024/LIPIcs.ESA.2024.12/LIPIcs.ESA.2024.12.pdf",
+      "local_readonly_copy": "work/external-comparisons/ESA2024-Arora.pdf",
+      "pdf_sha256": "f6851acc22dd732bb615ed741aa2ff77ef199b92d40ba90d5b5a2d6bccc42066",
+      "inspection": "Primary PDF text inspected; printed page 12:5 rendered and viewed to disambiguate d*n from d^n in Theorem 1.11."
+    },
+    "Arora_arxiv_v1": {
+      "title": "Outlier Robust Multivariate Polynomial Regression",
+      "version": "arXiv:2403.09465v1, 14 March 2024, 37 pages",
+      "pdf_url": "https://arxiv.org/pdf/2403.09465v1",
+      "local_readonly_copy": "work/external-comparisons/arxiv-2403.09465v1.pdf",
+      "pdf_sha256": "52d5b0455bc2d12b7ef20023de507bc97e2ea37b0381bbe292a2995d74bcdc88",
+      "version_policy": "The v1 identifier is pinned. ESA numbering must not be applied to the arXiv introduction."
+    }
+  },
+  "source_version_correspondence": [
+    {"ESA": "Theorem 1.6", "arxiv_v1": "Theorem 1.4", "topic": "uniform-design lower bound", "ESA_pdf_page_1_based": 4, "arxiv_v1_pdf_page_1_based": 4},
+    {"ESA": "Theorem 1.7", "arxiv_v1": "Theorem 1.5", "topic": "arbitrary-design lower bound with positive outlier probability", "ESA_pdf_page_1_based": 4, "arxiv_v1_pdf_page_1_based": 4},
+    {"ESA": "Remark 1.9", "arxiv_v1": "Remark 1.6", "topic": "open sample-complexity and scale-independent-runtime target", "ESA_pdf_page_1_based": 5, "arxiv_v1_pdf_page_1_based": 4},
+    {"ESA": "Theorem 1.11", "arxiv_v1": "Theorem 1.8", "topic": "piecewise-constant sup-norm approximation", "ESA_pdf_page_1_based": 5, "arxiv_v1_pdf_page_1_based": 4, "arxiv_v1_proof_pdf_pages_1_based": [16, 17]},
+    {"ESA": "Theorem 1.12", "arxiv_v1": "Theorem 1.9", "topic": "Lebesgue L1 to sup norm", "ESA_pdf_page_1_based": 5, "arxiv_v1_pdf_page_1_based": 5},
+    {"ESA": "Theorem 3.1", "arxiv_v1": "Theorem 3.1", "topic": "optimal-degree scheme with additive eta", "ESA_pdf_page_1_based": 12, "arxiv_v1_pdf_page_1_based": 11},
+    {"ESA": "Theorem 5.1", "arxiv_v1": "Theorem 6.1", "topic": "scale-independent scheme with larger sample exponent", "ESA_pdf_page_1_based": 15, "arxiv_v1_pdf_page_1_based": 25},
+    {"ESA": "Theorem 5.2", "arxiv_v1": "Theorem 6.4", "topic": "deterministic fine-grid guarantee", "ESA_pdf_page_1_based": 15, "arxiv_v1_pdf_page_1_based": 26}
+  ],
+  "shared_statistical_model": {
+    "source_location": "ESA printed page 12:2, Robust Multivariate Polynomial Regression Problem",
+    "domain_and_degree": "n and d are positive integers; p is a real polynomial on [-1,1]^n with each coordinate degree at most d (individual degree, not total degree).",
+    "locations": "M sample locations are independent with a common specified probability law chi on the cube.",
+    "support": "Each sample is marked an outlier independently with probability rho. The clean-design location law is not replaced by an adversary.",
+    "labels": "After all locations are available, an adversary may choose every label; inlier labels must satisfy |y_i-p(x_i)| <= sigma and outlier labels are unrestricted.",
+    "output_and_goal": "Return a polynomial in the same individual-degree class with cube sup-norm error at most C*sigma, uniformly over the unknown polynomial and admissible labels, with the stated success probability.",
+    "noise_scope": "The original problem definition has sigma > 0. The upper-bound theorems explicitly extend to sigma >= 0. The sample lower-bound candidates below use sigma > 0; they do not assert a sigma=0 lower bound.",
+    "dimension_scope": "The paper emphasizes constant n > 1, and the S7 rate comparison fixes n. The displayed lower-bound constants are c(C) and c(C,rho), respectively; no extra n-dependence is inserted into those displayed constants."
+  },
+  "quantitative_comparison_candidates": [
+    {
+      "id": "ESA2024_1_6_uniform_sample_lower",
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": true,
+      "source": "Arora_ESA2024",
+      "locator": "Theorem 1.6, printed 12:4; arXiv v1 Theorem 1.4",
+      "source_use": ["S7.p5"],
+      "quantifiers_and_hypotheses": [
+        "For every fixed approximation factor C > 1 there exists c=c(C)>0.",
+        "Use the shared statistical model with uniform cube locations, sigma>0, and any rho in [0,1].",
+        "The learner must solve the problem for all individual-degree-d targets and all admissible labels with success probability strictly greater than 2/3."
+      ],
+      "statement_paraphrase": "Every such algorithm needs M >= (c*d)^(2*n) samples. The assertion includes rho=0, which means absence of outliers, not absence of bounded inlier noise.",
+      "fixed_parameter_use": "Set C=2+epsilon. For fixed n and epsilon, c^(2*n)>0 is independent of d, so this is a d^(2*n) lower bound. P34's uniform upper bound has that polynomial exponent, with an extra occupancy logarithm.",
+      "not_claimed": ["No joint optimality in n, epsilon, rho, or delta", "No lower bound for noiseless sigma=0 recovery", "No finite-precision runtime lower bound"],
+      "formal_dependency_reason": "The published universal statistical-algorithm lower-bound model is not a Lean dependency in this repository. A replacement broad algorithm predicate would not certify the actual theorem. It is a secondary comparison, so no new axiom or mock model is introduced.",
+      "own_algebra": ["Paper34.SecondaryComparisons.uniform_lower_factor", "Paper34.SecondaryComparisons.fixed_parameter_factor_pos"]
+    },
+    {
+      "id": "ESA2024_1_7_arbitrary_design_sample_lower",
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": true,
+      "source": "Arora_ESA2024",
+      "locator": "Theorem 1.7, printed 12:4; arXiv v1 Theorem 1.5",
+      "source_use": ["S7.p5"],
+      "quantifiers_and_hypotheses": [
+        "For every C>1 and every rho>0 within the probability range of the shared model, there exists c=c(C,rho)>0.",
+        "For each probability law chi on [-1,1]^n, a learner receives iid locations with that law; sigma>0 and the shared adversarial-label model apply.",
+        "The learner must solve the problem uniformly over targets and admissible labels with success probability strictly greater than 2/3."
+      ],
+      "statement_paraphrase": "The necessary sample count is M >= (c*d)^n * log d, for any location law. For the nontrivial S7 application restrict to 0<rho<1/2.",
+      "fixed_parameter_use": "For fixed n, epsilon and positive rho, set C=2+epsilon. The positive factor c^n is independent of d. With constant failure probability this matches the product-Chebyshev upper rate's d^n*log d dependence.",
+      "not_claimed": ["The logarithmic lower bound at rho=0", "A constant uniform as rho approaches 0 or 1/2", "An adaptive-query or adversarial-design lower bound outside the published iid-location problem"],
+      "formal_dependency_reason": "Same published statistical lower-bound model issue as ESA2024_1_6_uniform_sample_lower; the comparison is documented rather than replaced by a formally weaker artificial algorithm class.",
+      "own_algebra": ["Paper34.SecondaryComparisons.distribution_free_lower_factor", "Paper34.SecondaryComparisons.fixed_parameter_factor_pos"]
+    },
+    {
+      "id": "ESA2024_1_11_cellwise_sup_proxy",
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": true,
+      "source": "Arora_ESA2024",
+      "locator": "Theorem 1.11, printed 12:5; arXiv v1 Theorem 1.8 and proof on PDF pages 16-17",
+      "source_use": ["S7.p3", "S7.E1", "S7.p6"],
+      "quantifiers_and_hypotheses": [
+        "There is an absolute constant A such that for every positive n,d, every integer m>=d, and every real individual-degree-at-most-d polynomial q the following holds.",
+        "Use the Cartesian product of Chebyshev-extrema intervals with endpoints cos(pi*j/m). In each cell C_j choose an arbitrary point a_j.",
+        "r is the corresponding well-defined cellwise constant function q(a_j). The printed source assumes r exists and has the specified constant restriction on each cell; a partition boundary convention must be consistent."
+      ],
+      "statement_paraphrase": "||q-r||_infinity <= A*(d*n/m)*||q||_infinity.",
+      "critical_formula_check": {
+        "factor": "d*n/m",
+        "not_factor": "d^n/m",
+        "evidence": "The official PDF rendered on printed page 12:5 has d and n at the same baseline. The arXiv v1 proof also telescopes across n coordinate changes, bounding each change by A*d/m times the global sup norm.",
+        "rendered_evidence_file": "work/external-comparisons/ESA-page5.png",
+        "warning": "PDF search/extraction may join the letters as dn or misleadingly display d^n. The rendered formula and coordinate-sum proof determine the reading."
+      },
+      "own_use": "Unnormalized Lebesgue cube volume is 2^n, so its L1 error is bounded by 2^n times this uniform error. This is the first inequality of S7.E1 after n-only constants are suppressed.",
+      "formal_dependency_reason": "The external source theorem is not imported. P34 already has internally proved actual cell-oscillation estimates from the precisely documented standard trigonometric Bernstein input. The short comparison module only composes numerical inequalities; it does not assume or replace the new multivariate Chebyshev L1 norming theorem.",
+      "own_algebra": ["Paper34.SecondaryComparisons.lebesgue_proxy_composition"]
+    },
+    {
+      "id": "ESA2024_1_12_Lebesgue_L1_to_sup",
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": true,
+      "source": "Arora_ESA2024",
+      "locator": "Theorem 1.12, printed 12:5; norm convention in Definition 2.1, printed 12:11; arXiv v1 Theorem 1.9",
+      "source_use": ["S7.p3", "S7.E1", "S7.p6"],
+      "quantifiers_and_hypotheses": [
+        "There exists a global B>0, independent of n,d,q.",
+        "For every positive integer n, positive integer d and real polynomial q with degree at most d in every coordinate on [-1,1]^n.",
+        "The L1 norm is the integral of |q| against unnormalized n-dimensional Lebesgue measure, as defined in the source; it is not the product-Chebyshev norm."
+      ],
+      "statement_paraphrase": "||q||_infinity <= B^n * d^(2*n) * integral_[-1,1]^n |q(x)| dx.",
+      "degree_zero_note": "Positive d is retained. The bare formula with d=0 would be false for nonzero constants; constant polynomials can instead be viewed in the d=1 class.",
+      "own_use": "Combine with ESA2024_1_11_cellwise_sup_proxy and the cube volume. An n-only coefficient K_n=2^n*A*B^n*n multiplies d^(2*n+1)/m times the Lebesgue L1 norm.",
+      "formal_dependency_reason": "The published Lebesgue Nikolskii inequality is used only to explain the previous algorithm's degree loss. The new main proof uses an internally proved actual Fourier/Chebyshev conversion. No corresponding external Lean axiom is needed or added for this discussion.",
+      "own_algebra": ["Paper34.SecondaryComparisons.lebesgue_proxy_composition", "Paper34.SecondaryComparisons.relative_proxy_of_grid"]
+    },
+    {
+      "id": "ESA2024_3_1_optimal_degree_with_eta",
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": true,
+      "source": "Arora_ESA2024",
+      "locator": "Theorem 3.1, printed 12:12; arXiv v1 Theorem 3.1",
+      "source_use": ["S7.p2"],
+      "quantifiers_and_hypotheses": [
+        "epsilon in (0,1/2], delta in (0,epsilon], sigma>=0, eta>0, and 0<=rho<1/2; n,d positive integers and the shared degree and label model.",
+        "The location law is either product-Chebyshev or the uniform cube law.",
+        "The constants in the displayed O notation may depend on n and rho."
+      ],
+      "statement_paraphrase": "Algorithm 2 returns a polynomial in the same degree class with sup error <=(2+epsilon)*sigma+eta with probability >=1-delta. Sufficient samples are O_(n,rho)((d/epsilon)^n*log(d/delta)) for product-Chebyshev and O_(n,rho)((d/epsilon)^(2*n)*log(d/delta)) for uniform locations.",
+      "runtime_as_printed": "Theorem 3.1 states O(log_(1/epsilon)(||p||_infinity/eta)) LPs, each with (d+1)^n<M variables and M constraints.",
+      "runtime_endpoint_caveat": "The printed logarithm requires the usual saturation at a constant number of calls for small or zero signal. Do not treat the unsaturated display as a nonnegative count for every p. Choosing eta proportional to sigma to eliminate the additive tolerance additionally requires suitable noise-scale information.",
+      "formal_dependency_reason": "The existing algorithm and its correctness are comparison objects, not dependencies of P34's new algorithm. This register records the published statement and its runtime endpoint convention without creating a mock estimator proof."
+    },
+    {
+      "id": "ESA2024_5_1_scale_independent_fine_grid",
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": true,
+      "source": "Arora_ESA2024",
+      "locator": "Theorem 5.1, printed 12:15; arXiv v1 Theorem 6.1",
+      "source_use": ["S7.p2", "S7.p6"],
+      "quantifiers_and_hypotheses": [
+        "epsilon in (0,1/2], delta in (0,epsilon], sigma>=0, and 0<=rho<1/2; positive n,d and the shared model.",
+        "Use the product-Chebyshev or uniform location law; constants may depend on n and rho."
+      ],
+      "statement_paraphrase": "Algorithm 4 gives sup error <=(2+epsilon)*sigma with probability >=1-delta. Samples suffice at O_(n,rho)((d^(2*n+1)/epsilon)^n*log(d/delta)) for product-Chebyshev and O_(n,rho)((d^(2*n+1)/epsilon)^(2*n)*log(d/delta)) for uniform locations. Runtime is polynomial in M and log_epsilon(1-2*rho), without a signal-scale or eta parameter.",
+      "formal_dependency_reason": "This is the published larger-sample baseline, not an input to the new recovery proof. A local registry can document it exactly without encoding all of the previous algorithm as an assumed universal estimator."
+    },
+    {
+      "id": "ESA2024_5_2_fine_grid_sufficient_condition",
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": true,
+      "source": "Arora_ESA2024",
+      "locator": "Theorem 5.2 and following discussion, printed 12:15-12:16; arXiv v1 Theorem 6.4",
+      "source_use": ["S7.p3", "S7.p6"],
+      "quantifiers_and_hypotheses": [
+        "Use 0<epsilon<1/2, 0<alpha<1/2 and sigma>=0. The printed theorem abbreviates the ranges as epsilon,alpha<1/2; positivity is retained from the meaningful accuracy/good-sample setup.",
+        "The finite data set S has bounded inlier noise sigma for some p in the individual-degree-d class, and is alpha-good for the (m,n)-Chebyshev partition.",
+        "Source Definition 2.7 requires at least 1/alpha samples per cell and strictly fewer than an alpha fraction of outliers in each cell.",
+        "For a sufficiently large absolute c>1, m >= (c*d)^(2*n+1)/epsilon."
+      ],
+      "statement_paraphrase": "Algorithm 4 returns a degree-d polynomial with sup error <=(2+epsilon)*sigma after O(n*log_(1/epsilon)d + log_epsilon(1-2*alpha)) iterations.",
+      "necessity_caveat": "This is a sufficient hypothesis for that published initializer and proof. S7's word 'requires' is method-specific: neither this theorem nor the upper inequalities in (7.1) prove that every Lebesgue L1 discretization or every algorithm needs this grid size.",
+      "formal_dependency_reason": "The existing algorithm's sufficient grid condition is documented as an external comparison. The new grid scale is proved within P34 and is not supplied by this candidate."
+    }
+  ],
+  "discussion_and_background": [
+    {
+      "id": "ESA2024_Remark_1_9",
+      "bibliography_reference": 1,
+      "source_use": ["S7.p2"],
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": false,
+      "primary_url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol308-esa2024/LIPIcs.ESA.2024.12/LIPIcs.ESA.2024.12.pdf#page=5",
+      "paraphrase": "The remark asks for a multivariate analogue of combining optimal sample complexity with runtime independent of signal-to-noise ratio, as achieved by KKP in one variable. It points out the sample blowup of the scale-independent algorithm.",
+      "scope": "An open-question statement, not a theorem input. P34 answers it in its expressly stated exact-real LP-oracle model; this does not import a finite-precision guarantee."
+    },
+    {
+      "id": "Arora_Khot_2003",
+      "bibliography_reference": 2,
+      "source_use": ["S7.p6"],
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": false,
+      "primary_url": "https://www.sciencedirect.com/science/article/pii/S0022000003000126",
+      "author_institution_record": "https://collaborate.princeton.edu/en/publications/fitting-algebraic-curves-to-noisy-data/",
+      "paraphrase": "Historical noisy algebraic curve fitting and list/multiple-curve recovery, including mixture-model questions. S7 invokes no numerical theorem from this paper.",
+      "formal_dependency_reason": "Historical attribution only; no lemma is applied."
+    },
+    {
+      "id": "Guruswami_Zuckerman_2016",
+      "bibliography_reference": 9,
+      "source_use": ["S7.p6"],
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": false,
+      "primary_pdf": "https://ieee-focs.org/FOCS-2016-Papers/3933a751.pdf",
+      "author_pdf": "https://people.eecs.berkeley.edu/~venkatg/pubs/papers/robust-regression-focs16.pdf",
+      "paraphrase": "Earlier algorithms for noisy algebraic and trigonometric curve fitting with randomly supported label outliers. S7 asserts no quantitative outlier threshold or error factor from it.",
+      "formal_dependency_reason": "Historical attribution only. Its additional noise/range restrictions are not transferred to or removed from P34 by an assumed theorem."
+    },
+    {
+      "id": "Daltrophe_Dolev_Lotker_2018",
+      "bibliography_reference": 5,
+      "source_use": ["S7.p6"],
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": false,
+      "primary_url": "https://link.springer.com/article/10.1007/s00236-016-0288-8",
+      "paraphrase": "Multidimensional polynomial representation of noisy and Byzantine data, with extensions of error-correcting interpolation and curve-fitting methods.",
+      "publication_note": "Published online November 2016; journal issue is Acta Informatica 55 (2018), pp.213-225, consistent with the source bibliography.",
+      "formal_dependency_reason": "S7 uses this as history, without importing a recovery theorem."
+    },
+    {
+      "id": "Kane_Karmalkar_Price_2017",
+      "bibliography_reference": 11,
+      "source_use": ["S7.p6"],
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": false,
+      "doi": "10.1109/FOCS.2017.43",
+      "primary_author_pdf": "https://www.cs.utexas.edu/~ecprice/papers/robustpoly.pdf",
+      "locators": ["Lemma 2.1, PDF pp.5-6 and Appendix A", "Lemma 1.2, PDF p.2", "Lemma 1.3, PDF p.3", "Algorithm 2, PDF p.9"],
+      "paraphrase": "The one-variable antecedent uses arbitrary Chebyshev-interval representatives, interval-Lebesgue-length-weighted absolute residual minimization, and iterative median correction.",
+      "precision_note": "Its Lemma 2.1 concerns a single univariate degree-d polynomial, m>=d, arbitrary representatives in each Chebyshev interval, and a relative Lebesgue Lq proxy estimate for q>=1. It is not a joint multivariate representative theorem. Its LAD weights are interval lengths, rather than the new product-Chebyshev cell masses.",
+      "formal_dependency_reason": "S7 credits the construction. P34 proves its own actual multivariate norming and estimator arguments instead of importing this univariate theorem as the new result."
+    },
+    {
+      "id": "Klivans_Kothari_Meka_2018",
+      "bibliography_reference": 12,
+      "source_use": ["S7.p7"],
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": false,
+      "primary_pdf": "https://proceedings.mlr.press/v75/klivans18a/klivans18a.pdf",
+      "locator": "Definition 1 and informal Theorem 3, PDF pp.2-3",
+      "paraphrase": "After iid pairs are drawn, an adversary can replace a fraction of complete pairs. Under certifiable hypercontractivity of the covariates (and the theorem's label/bit-complexity conditions), the objective is population squared prediction risk relative to the best linear fit.",
+      "scope": "Population squared loss is not a cube-wide sup guarantee. Merely ordinary hypercontractivity is not substituted for the certifiable assumption of the algorithmic theorem.",
+      "formal_dependency_reason": "Model/loss comparison only; S7 imports none of the numerical risk bounds or SoS guarantees."
+    },
+    {
+      "id": "SEVER_2019",
+      "bibliography_reference": 7,
+      "source_use": ["S7.p7"],
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": false,
+      "primary_pdf": "https://proceedings.mlr.press/v97/diakonikolas19a/diakonikolas19a.pdf",
+      "locators": ["Definitions 2.1-2.3, PDF p.3", "Theorem 2.1, PDF p.4"],
+      "paraphrase": "Strong contamination replaces selected sample objective functions after observation. The general guarantee is an approximate critical point for a population objective, given an approximate empirical critical-point learner and uniform gradient regularity.",
+      "scope_conditions": "Theorem 2.1 uses a good subset of size >=(1-epsilon)N, gradient covariance <=sigma^2 I and good-mean gradient error <=sigma*sqrt(epsilon), uniformly over a closed parameter domain; objective functions are bounded below. This differs from bounded label noise for a fixed polynomial on a cube.",
+      "formal_dependency_reason": "Qualitative setting comparison only. No population critical-point theorem is used to assert P34's uniform recovery."
+    },
+    {
+      "id": "Diakonikolas_Kong_Stewart_2019",
+      "bibliography_reference": 8,
+      "source_use": ["S7.p7"],
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": false,
+      "doi": "10.1137/1.9781611975482.170",
+      "primary_author_pdf": "https://arxiv.org/pdf/1806.00040",
+      "locator": "Problem model and Theorems 1.2-1.3, PDF pp.2-3",
+      "paraphrase": "Gaussian linear regression with adversarial replacement of complete samples, independent Gaussian response noise, and Euclidean coefficient-vector error. Known and unknown covariance have different algorithmic requirements.",
+      "formal_dependency_reason": "Only the distinct data model and loss criterion are compared; no quantitative theorem is imported."
+    },
+    {
+      "id": "Prasad_et_al_2020",
+      "bibliography_reference": 15,
+      "source_use": ["S7.p7"],
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": false,
+      "doi": "10.1111/rssb.12364",
+      "primary_author_pdf": "https://arxiv.org/pdf/1802.06485v2",
+      "locator": "Abstract, problem setup, robust gradient descent theorem and regression applications",
+      "paraphrase": "Robust gradient estimation yields population-risk parameter recovery under contamination or heavy-tailed observations; the general convergence argument assumes appropriate risk curvature and gradient-estimation error control.",
+      "version_note": "The author preprint inspected is April 2018 v2; the bibliography names the 2020 JRSS B journal publication. No theorem numbering is transferred between them.",
+      "formal_dependency_reason": "Background comparison of objectives and corruption models; no population-risk estimate is an input to P34."
+    },
+    {
+      "id": "Runovski_Sickel_1997",
+      "bibliography_reference": 16,
+      "source_use": ["S7.p8"],
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": false,
+      "doi": "10.4171/ZAA/784",
+      "primary_pdf": "https://ems.press/content/serial-article-files/34942",
+      "locator": "Abstract and Section 2, pp.669-673",
+      "paraphrase": "Trigonometric MZ inequalities for nonuniform grids under regularity/perturbation conditions, with interpolation and Besov-space consequences.",
+      "scope": "The cited grid regularity conditions and exponent ranges cannot be dropped to obtain P34's arbitrary joint representatives.",
+      "formal_dependency_reason": "Literature placement only. No background MZ theorem replaces the source's own endpoint L1 tensor argument."
+    },
+    {
+      "id": "Ortega_Cerda_Saludes_2007",
+      "bibliography_reference": 14,
+      "source_use": ["S7.p8"],
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": false,
+      "doi": "10.1016/j.jat.2006.09.001",
+      "primary_author_pdf": "https://diposit.ub.edu/bitstreams/b367070d-d265-4ee2-bcfe-7392119d4bda/download",
+      "locator": "Theorem 13, PDF pp.11-12; Theorem 15, PDF p.17",
+      "paraphrase": "Sampling norm inequalities for triangular node families on the unit circle, with separation and lower-density hypotheses; also stability under sufficiently small perturbations.",
+      "scope": "The density/separation framework concerns node families, not prescribed multivariate Chebyshev product cells with arbitrarily coupled representatives.",
+      "formal_dependency_reason": "Related literature only; no density theorem is a Lean premise."
+    },
+    {
+      "id": "De_Marchi_Kroo_2018",
+      "bibliography_reference": 6,
+      "source_use": ["S7.p8"],
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": false,
+      "doi": "10.1007/s10474-017-0769-4",
+      "primary_author_pdf": "https://www.math.unipd.it/~demarchi/papers/MZ1.pdf",
+      "author_publication_list": "https://www.math.unipd.it/~demarchi/publications.html",
+      "paraphrase": "Multivariate MZ results construct/select sampling nodes with weights on suitable domains. The source cites this for context, without asserting its results for all jointly selected points in prescribed product cells.",
+      "version_note": "Author-hosted draft is dated August 2017; journal citation is Acta Mathematica Hungarica 154(1), 69-89 (2018). The author's publication-list volume text differs, so the source DOI is retained as the publication identifier.",
+      "formal_dependency_reason": "Existence of selected nodes is not an input that proves the new arbitrary-representative conclusion. No theorem is imported."
+    },
+    {
+      "id": "Kosov_2021",
+      "bibliography_reference": 13,
+      "source_use": ["S7.p8"],
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": false,
+      "doi": "10.1016/j.jmaa.2021.125358",
+      "primary_author_pdf": "https://arxiv.org/pdf/2005.01674",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S0022247X21004376",
+      "paraphrase": "Sampling discretization of finite-dimensional Lp subspaces under Nikolskii-type assumptions; probabilistic/chaining methods give sampling results.",
+      "formal_dependency_reason": "Listed sampling-discretization background. S7 invokes no particular cardinality theorem, and no existential sampling set is substituted for arbitrary prescribed-cell representatives."
+    },
+    {
+      "id": "Dai_Kosov_Temlyakov_2023",
+      "bibliography_reference": 4,
+      "source_use": ["S7.p8"],
+      "status": "external_comparison_documented",
+      "published_external_input_candidate": false,
+      "doi": "10.1016/j.jfa.2023.109951",
+      "primary_author_pdf": "https://arxiv.org/pdf/2208.09762v2",
+      "locator": "Abstract, introductory sampling problem and Theorem 1.1, PDF pp.1-3",
+      "paraphrase": "Sampling discretization for finite-dimensional continuous function spaces, including Lp with 1<=p<2 under Nikolskii norm-control assumptions.",
+      "formal_dependency_reason": "Background only; the existence or random construction of good sampling nodes does not provide the prescribed-cell arbitrary-representative theorem."
+    },
+    {
+      "id": "Dai_Kosov_Murasko_2026",
+      "bibliography_reference": 3,
+      "source_use": ["S7.p8"],
+      "status": "preprint_context_documented",
+      "published_external_input_candidate": false,
+      "primary_record": "https://arxiv.org/abs/2606.00347",
+      "primary_pdf": "https://arxiv.org/pdf/2606.00347v1",
+      "paraphrase": "Empirical Lp-moment approximation and sampling discretization for bounded finite-dimensional spaces under norm/embedding assumptions, including random-sampling and sparse-function results.",
+      "publication_note": "The primary arXiv record is v1 dated 29 May 2026 and has no journal reference at inspection. This is documented as the source's cited preprint, not upgraded to an already-published external theorem.",
+      "formal_dependency_reason": "Bibliographic context only. No theorem is used, so no publication exemption or mathematical input is requested."
+    },
+    {
+      "id": "Kaemmerer_2024",
+      "bibliography_reference": 10,
+      "source_use": ["S7.p8"],
+      "status": "preprint_context_documented",
+      "published_external_input_candidate": false,
+      "primary_record": "https://arxiv.org/abs/2406.03281",
+      "primary_pdf": "https://arxiv.org/pdf/2406.03281v1",
+      "paraphrase": "Noiseless unique reconstruction in finite spans of multivariate Chebyshev polynomials using structured nodes from cosine-transformed rank-1 lattices and FFT-based computations.",
+      "publication_note": "The source cites June 2024 v1. Its arXiv record links related DOI 10.1016/j.acha.2025.101761, but that related publication is not silently substituted for the version cited by P34.",
+      "scope": "Unique reconstruction from a structured sampling set is different from robust recovery under arbitrary label outliers and arbitrary joint cell representatives.",
+      "formal_dependency_reason": "Qualitative comparison only; neither the reconstruction algorithm nor a sampling-cardinality theorem is imported."
+    }
+  ],
+  "section7_usage_index": [
+    {"source_id": "S7.p1", "classification": "section roadmap"},
+    {"source_id": "S7.p2", "classification": "published comparison plus P34's own initializer result", "external_ids": ["ESA2024_Remark_1_9", "ESA2024_3_1_optimal_degree_with_eta", "ESA2024_5_1_scale_independent_fine_grid"]},
+    {"source_id": "S7.p3 / S7.E1", "classification": "published inequalities plus internally proved scalar composition", "external_ids": ["ESA2024_1_11_cellwise_sup_proxy", "ESA2024_1_12_Lebesgue_L1_to_sup"], "own_input": "None of P34's new norming conclusions is assumed here."},
+    {"source_id": "S7.E2 / S7.p4", "classification": "P34's own deterministic norming and occupancy comparison", "external_input_candidate": false},
+    {"source_id": "S7.p5", "classification": "fixed-parameter comparison with published statistical lower bounds", "external_ids": ["ESA2024_1_6_uniform_sample_lower", "ESA2024_1_7_arbitrary_design_sample_lower"]},
+    {"source_id": "S7.p6", "classification": "historical context and comparison with the published initializer's sufficient grid condition", "external_ids": ["Arora_Khot_2003", "Guruswami_Zuckerman_2016", "Daltrophe_Dolev_Lotker_2018", "Kane_Karmalkar_Price_2017", "ESA2024_5_2_fine_grid_sufficient_condition"]},
+    {"source_id": "S7.p7", "classification": "qualitative model/loss comparison; no numerical theorem applied", "references": [12, 7, 8, 15]},
+    {"source_id": "S7.p8", "classification": "qualitative approximation/discretization literature; no theorem applied", "references": [16, 14, 6, 13, 4, 3, 10]},
+    {"source_id": "S7.p9", "classification": "P34's stated limitations; no claim of solving unweighted arbitrary-representative Lebesgue L1 norming"},
+    {"source_id": "S7.p10", "classification": "summary of P34's own claims"}
+  ],
+  "scope_findings": [
+    {"id": "S7_E1_verified", "severity": "resolved_formula_ambiguity", "finding": "ESA Theorem 1.11 gives d*n/m. Combined with cube volume and Theorem 1.12 it supports the displayed d^(2*n+1)/m comparison. There is no unsupported switch from d^n/m to d/m."},
+    {"id": "requires_is_method_specific", "severity": "wording_scope", "finding": "An upper bound proves a sufficient grid scale, not universal necessity. Read 'requires' in S7.p3/p6 as describing this published initializer/proof's grid hypothesis. The register and Lean module make this direction explicit."},
+    {"id": "lower_bounds_are_noisy", "severity": "parameter_scope", "finding": "The uniform lower bound holds with rho=0 but still sigma>0. P34's actual sigma=0 recovery is consistent with it."},
+    {"id": "fixed_params_only", "severity": "parameter_scope", "finding": "The d-exponent comparison fixes n,epsilon,rho and a constant success threshold. It supplies no joint optimality claim."},
+    {"id": "preprints_not_promoted", "severity": "publication_scope", "finding": "References [3] and [10] are recorded at their cited arXiv versions and are not treated as published theorem exemptions. Reference [10] has a related journal DOI, explicitly distinguished."}
+  ],
+  "own_formal_comparison": {
+    "file": "Paper34/SecondaryComparisons.lean",
+    "namespace": "Paper34.SecondaryComparisons",
+    "theorems": ["lebesgue_proxy_composition", "relative_proxy_of_grid", "distribution_free_lower_factor", "uniform_lower_factor", "fixed_parameter_factor_pos"],
+    "claims": "Scalar arithmetic only. No statistical algorithm is defined, no published bound is turned into a Lean axiom, and no P34 principal theorem is assumed.",
+    "incremental_compile_command": "./scripts/lake-local env lean -j1 -o .lake/build/lib/lean/Paper34/SecondaryComparisons.olean Paper34/SecondaryComparisons.lean",
+    "incremental_compile_result": "exit 0",
+    "broader_verification": "verification_deferred_by_user"
+  },
+  "central_registry_modified": false,
+  "new_external_lean_axioms": 0
+}

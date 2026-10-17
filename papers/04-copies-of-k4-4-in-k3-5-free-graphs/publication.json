@@ -1,0 +1,80 @@
+{
+  "paper_id": "04",
+  "title": "Copies of K₄,₄ in K₃,₅-free graphs",
+  "source_url": "https://liuchliuch.github.io/repository/copies-of-k4-4-in-k3-5-free-graphs/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "K44K35Free"
+  ],
+  "build_targets": [
+    "K44K35Free",
+    "Verification.Solution",
+    "Verification.Challenge",
+    "Verification.AxiomAudit"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "Fourteen explicit fixed targets covering all ten numbered results, preliminary alteration and distinct-copy injection."
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/comparator-extra-premise.json",
+      "expected_rejection": "type",
+      "scope": "Main graph-existence theorem with an added hypothesis. Rejection detail: added premise on Verification.theorem_1."
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/comparator-illegal-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Main graph-existence statement with an intentionally illegal proof dependency. Rejection detail: unauthorized axiom in Verification.theorem_1."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1",
+      "declaration": "K44K35Free.theorem_1",
+      "scope": "For every sufficiently large n, a bipartite K₃,₅-free graph on n vertices has at least c*n³ unoriented K₄,₄ copies; theorem_1_theta gives the two-sided extremal bound."
+    },
+    {
+      "source_result": "Lemma 2",
+      "declaration": "K44K35Free.lemma_2",
+      "scope": "Unoriented copy count satisfies 8*numK44 ≤ choose(n,3)."
+    },
+    {
+      "source_result": "Lemma 3",
+      "declaration": "K44K35Free.lemma_3_projective",
+      "scope": "Any three distinct cap points have linearly independent homogeneous vectors over a field with the stated nonsquare parameter."
+    },
+    {
+      "source_result": "Proposition 4 and Remark 5",
+      "declaration": "K44K35Free.proposition_4",
+      "scope": "Rank-three plane sections, exact exceptional-family counts and incidences, and the identity-family point-deletion bound."
+    },
+    {
+      "source_result": "Lemma 6",
+      "declaration": "K44K35Free.lemma_6",
+      "scope": "Monic quartic witnesses yield many nonexceptional four-point planes with an explicit positive constant and field-size threshold."
+    },
+    {
+      "source_result": "Lemmas 7–8",
+      "declaration": "K44K35Free.lemma_7",
+      "scope": "Designated copies through an edge inject into a Grassmannian, giving the 6*q⁴ bound; both controlled-plane intersections have size at most two."
+    },
+    {
+      "source_result": "Propositions 9–10",
+      "declaration": "K44K35Free.proposition_10",
+      "scope": "Every valid simultaneous pruning outcome is K₃,₅-free; independent finite choices yield the stated designated-copy survival bound."
+    },
+    {
+      "source_result": "Preliminary alteration and distinct copies",
+      "declaration": "K44K35Free.preliminary_lower_bound",
+      "scope": "Joint pairing selection, preliminary survival, and an injection from distinct surviving designated pairs to graph copies."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "primary_comparator": "main"
+}

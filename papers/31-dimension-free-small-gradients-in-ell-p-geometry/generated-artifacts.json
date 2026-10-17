@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "inputs": [
+    {
+      "path": "scripts/materialize-fixed-contracts.py",
+      "sha256": "e13c6f375963c3c8ad467f0433ae372d05245459fe8bc5c2b1a9e75e86826280"
+    },
+    {
+      "path": "comparator/templates/challenge.lean.in",
+      "sha256": "f6350ceb974209064a4995381db36944a43ab25373870cccd9277a0163547dd8"
+    },
+    {
+      "path": "comparator/templates/fixed-contracts.json",
+      "sha256": "78b564cc5303f5882921345684bd19e1a0e9c76bb36e35dd3924f38e1dd5dcf7"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "comparator/Challenge.lean",
+      "sha256": "f6350ceb974209064a4995381db36944a43ab25373870cccd9277a0163547dd8",
+      "bytes": 2981575,
+      "module": "comparator.Challenge",
+      "imports": [
+        "Paper31"
+      ]
+    },
+    {
+      "path": "comparator/Solution.lean",
+      "sha256": "585b6b4251e390bf4267a48ca2f588d996fa61decefe99abe8cbc645a84a3b6c",
+      "bytes": 3005869,
+      "module": "comparator.Solution",
+      "imports": [
+        "Paper31"
+      ]
+    },
+    {
+      "path": "comparator/AddedPremise.lean",
+      "sha256": "f3cc875500db96e8005f571e734b1a6cb99a3f81ae8dcd5ac2aa1ccc648c3810",
+      "bytes": 3005894,
+      "module": "comparator.AddedPremise",
+      "imports": [
+        "Paper31"
+      ]
+    },
+    {
+      "path": "comparator/IllegalAxiom.lean",
+      "sha256": "55c315705786539c189374e934c935f8bcd9950a6737e4ae1b7ae1fa401463a0",
+      "bytes": 3005878,
+      "module": "comparator.IllegalAxiom",
+      "imports": [
+        "Paper31"
+      ]
+    }
+  ],
+  "commands": [
+    [
+      "python3",
+      "scripts/materialize-fixed-contracts.py",
+      "comparator/templates/fixed-contracts.json"
+    ]
+  ],
+  "generation_status": "text_materialization_checked",
+  "requirements": [
+    "Lightweight deterministic text rendering only; no Lean/exporter/certificate execution.",
+    "All statement types come from the immutable independent .lean.in template and literal line edits. Current production proofs are never read.",
+    "Mathematical build, kernel replay and official Comparator checks remain deferred."
+  ],
+  "scope": "Existing 753 frozen explicit public statement contracts; original conditional assumptions and external inputs are unchanged."
+}

@@ -1,0 +1,62 @@
+{
+  "paper_id": "36",
+  "title": "Anytime Posterior Sampling under Nested CVaR Constraints",
+  "source_url": "https://liuchliuch.github.io/repository/sparse-calibration-for-dynamic-cvar-constraints/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper36"
+  ],
+  "build_targets": [
+    "Paper36"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "413 frozen explicit contracts covering the original 27 source anchors, actual source execution, main bounds, endpoint and supporting claims."
+    },
+    {
+      "id": "negative-added-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Calibration-count contract with a real extra premise."
+    },
+    {
+      "id": "negative-illegal-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Unchanged calibration-count contract depending on a fresh unauthorized axiom."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 4.2",
+      "declaration": "Paper36.SourceTheorems.theorem_4_2",
+      "scope": "Signed Bayesian performance bounds for a finite randomized Markov process with arbitrary prior, exact posterior-copy law, Borel-oracle execution and categorical concentration inputs."
+    },
+    {
+      "source_result": "Anytime calibration",
+      "declaration": "Paper36.SourceTheorems.pathwise_calibration",
+      "scope": "On one common probability-one event, calibration counts obey all-horizon bounds and have sparse asymptotic frequency under strict feasibility."
+    },
+    {
+      "source_result": "Risk bank certificate",
+      "declaration": "Paper36.SourceTheorems.risk_bank_certificate",
+      "scope": "A risk-bank bound for a fixed horizon K and confidence delta under the natural source filtration; it is not a confidence sequence."
+    },
+    {
+      "source_result": "Appendix B and stage-dependent levels",
+      "declaration": "Paper36.SourceTheorems.stage_corollary_B_1",
+      "scope": "Stage-dependent CVaR tail masses and approximate exploitation with certificates at actual calls; the approximation errors enter the performance bounds."
+    },
+    {
+      "source_result": "Planner complexity and lower bound",
+      "declaration": "Paper36.Complexity.rational_planning_encoding_exact",
+      "scope": "Exact rational planning reduction to degree-two existential-real constraints with coefficient and payload bounds; machine complexity-class transfer requires external arithmetic and decision results."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "primary_comparator": "main"
+}

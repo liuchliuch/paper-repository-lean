@@ -1,0 +1,490 @@
+{
+  "paper_id": "31",
+  "source_inventory": {
+    "paper_id": "31",
+    "source_url": "https://liuchliuch.github.io/repository/dimension-free-small-gradients-in-ell-p-geometry/",
+    "html_sha256": "a3344d0f88e4b6d8bd7767ecfdffec03178304480bfe53d91cbef413e71eb05f",
+    "note": "Independent source inventory; generated proofs have not been accepted. Unnumbered substantive claims require additional review.",
+    "block_count": 14,
+    "proof_result_count": 10,
+    "results": [
+      {
+        "anchor": "S1.Thmtheorem1",
+        "kind": "definition",
+        "label": "Definition 1.1 (Deterministic exact-real query model).",
+        "statement": "[S1.Thmtheorem1] Definition 1.1 (Deterministic exact-real query model).\n [S1.Thmtheorem1.p1] \nThe method knows  $x_{0},L,R,p,\\kappa$  and, in the target-accuracy version,  $\\varepsilon$ . After any finite exact transcript, its next query, stopping decision, and output are deterministic single-valued functions of that transcript and the known parameters. Each oracle invocation, including a repeated query, counts once; the output need not be a previously queried point. Exact-real operations involving only the known parameters and the transcript are uncharged. We make no finite-precision, arithmetic, or bit-complexity claim.",
+        "fragment_sha256": "8a1ea73ef819baba75649b2097b136882460276041d1894ff6ee023e076b8d26"
+      },
+      {
+        "anchor": "S1.Thmtheorem2",
+        "kind": "theorem",
+        "label": "Theorem 1.2 (Exact-real gradient-query upper bound).",
+        "statement": "[S1.Thmtheorem2] Theorem 1.2 (Exact-real gradient-query upper bound).\n [S1.Thmtheorem2.p1] \nLet  $d\\geq 1$ ,  $2\\leq p<\\infty$ ,  $1<\\kappa\\leq 2$ ,  $q=p/(p-1)$ ,  $L,R\\geq 0$ ,  $\\varepsilon>0$ , and  $x_{0}\\in\\mathbb{R}^{d}$ . Let  $f:\\mathbb{R}^{d}\\to\\mathbb{R}$  be convex and differentiable, satisfy (1.1), and have a minimizer satisfying (1.2). In the model of Definition 1.1, the accumulative shifted-power regularization method in Section 3 returns  $x$  with  $\\left\\lVert\\nabla f(x)\\right\\rVert_{q}\\leq\\varepsilon$  after at most\n [S1.E5] \n $C_{p,\\kappa}\\!\\left[1+\\left(\\frac{LR^{\\kappa-1}}{\\varepsilon}\\right)^{\\beta}\\right]\\quad\\text{gradient queries},\\qquad\\beta=\\frac{p}{\\kappa p+\\kappa-p}.$ (1.5)\n\nHere  $C_{p,\\kappa}<\\infty$  is independent of  $d,L,R,\\varepsilon$ . If  $\\varepsilon\\geq LR^{\\kappa-1}$ , the method returns  $x_{0}$  without a query. In the nontrivial regime  $0<\\varepsilon<LR^{\\kappa-1}$ , the additive  $1$  can be absorbed into  $C_{p,\\kappa}(LR^{\\kappa-1}/\\varepsilon)^{\\beta}$ .",
+        "fragment_sha256": "242c42b44544e9b96da3cae0e7de2d41dedc7be86ec52b91005472e707ffbd7b"
+      },
+      {
+        "anchor": "S1.Thmtheorem3",
+        "kind": "corollary",
+        "label": "Corollary 1.3 (Conditional minimax comparison).",
+        "statement": "[S1.Thmtheorem3] Corollary 1.3 (Conditional minimax comparison).\n [S1.Thmtheorem3.p1] \nAssume the simultaneous normalized hard-family realization in assumption 6.1. Fix  $2\\leq p<\\infty$ ,  $1<\\kappa\\leq 2$ , and  $L,R>0$ . There are  $c_{p,\\kappa},C_{p,\\kappa}^{\\mathrm{lb}}>0$ , depending only on  $p,\\kappa$ . For  $\\beta=p/(\\kappa p+\\kappa-p)$ , every integer  $d\\geq 1$  and  $\\varepsilon>0$  with  $0<\\varepsilon\\leq c_{p,\\kappa}LR^{\\kappa-1}$ ,  $\\log d\\geq p$ , and\n [S1.Ex1] \n $d\\geq C_{p,\\kappa}^{\\mathrm{lb}}\\left(\\frac{LR^{\\kappa-1}}{\\varepsilon}\\right)^{\\beta}$ \n\nobey the matching relation\n [S1.Ex2] \n $\\operatorname{Comp}^{\\mathrm{det}}_{p,d,\\kappa}(L,R,\\varepsilon)=\\Theta_{p,\\kappa}\\!\\left(\\left(\\frac{LR^{\\kappa-1}}{\\varepsilon}\\right)^{\\beta}\\right).$ \n\nThe upper-bound half is unconditional.",
+        "fragment_sha256": "aaa846ada926d26fc1bfa31f0940b891601621f155d86f219b6fcf3eed9de235"
+      },
+      {
+        "anchor": "S1.Thmtheorem4",
+        "kind": "corollary",
+        "label": "Corollary 1.4 (Schatten- $p$  upper bound).",
+        "statement": "[S1.Thmtheorem4] Corollary 1.4 (Schatten- $p$  upper bound).\n [S1.Thmtheorem4.p1] \nLet  $m,n\\geq 1$ ,  $k=\\min\\{m,n\\}$ ,  $2\\leq p<\\infty$ ,  $1<\\kappa\\leq 2$ ,  $q=p/(p-1)$ ,  $L,R\\geq 0$ , and  $\\varepsilon>0$ . Fix  $X_{0}\\in\\mathbb{R}^{m\\times n}$ . On  $\\mathbb{R}^{m\\times n}$ , define\n [S1.Ex3] \n $\\left\\lVert X\\right\\rVert_{\\mathsf{S}_{p}}=\\left(\\sum_{j=1}^{k}\\sigma_{j}(X)^{p}\\right)^{1/p}$ \n\nand take gradients with respect to the trace pairing. Suppose that a convex differentiable  $f:\\mathbb{R}^{m\\times n}\\to\\mathbb{R}$  satisfies\n [S1.Ex4] \n $\\left\\lVert\\nabla f(X)-\\nabla f(Y)\\right\\rVert_{\\mathsf{S}_{q}}\\leq L\\left\\lVert X-Y\\right\\rVert_{\\mathsf{S}_{p}}^{\\kappa-1}$ \n\nand has a minimizer  $X^{*}$  with  $\\left\\lVert X_{0}-X^{*}\\right\\rVert_{\\mathsf{S}_{p}}\\leq R$ . In the matrix analogue of Definition 1.1, with  $X_{0},L,R,p,\\kappa,\\varepsilon$  known, there is a gradient-query method returning  $X$  with  $\\left\\lVert\\nabla f(X)\\right\\rVert_{\\mathsf{S}_{q}}\\leq\\varepsilon$  within the bound (1.5), independently of  $m,n$ . For  $p>2$ , this statement treats the nonseparable multicenter prox as an exact uncharged map and makes no finite-precision, arithmetic, or bit-complexity claim.",
+        "fragment_sha256": "082d64541f8cf0f2720d31a3ff8ea0cf6db1be70037822f9903fba5b84499487"
+      },
+      {
+        "anchor": "S2.Thmtheorem1",
+        "kind": "lemma",
+        "label": "Lemma 2.1 (Normalized shifted-power atom).",
+        "statement": "[S2.Thmtheorem1] Lemma 2.1 (Normalized shifted-power atom).\n [S2.Thmtheorem1.p1] \nLet  $d\\geq 1$ ,  $2\\leq p<\\infty$ ,  $q=p/(p-1)$ , and  $c\\in\\mathbb{R}^{d}$ . Define\n [S2.E4] \n $a_{p}=2^{p-2},\\qquad\\omega_{c}(x)=\\frac{a_{p}}{p}\\left\\lVert x-c\\right\\rVert_{p}^{p}.$ (2.4)\n\nThen  $\\omega_{c}$  is  $(1,p)$ -uniformly convex in the convention (2.1), and\n [S2.E5] \n $\\nabla\\omega_{c}(x)=a_{p}J_{p}(x-c),\\qquad\\left\\lVert J_{p}(v)\\right\\rVert_{q}=\\left\\lVert v\\right\\rVert_{p}^{p-1}.$ (2.5)\n\nConsequently, every finite sum  $\\sum_{i=1}^{m}b_{i}\\omega_{c_{i}}$  with  $b_{i}>0$  is  $(\\sum_{i=1}^{m}b_{i},p)$ -uniformly convex.",
+        "fragment_sha256": "9f724622c69b7ee498f1cf778f2d03b596273845c061f6bdc7dcf5b936b321d7"
+      },
+      {
+        "anchor": "S2.Thmtheorem2",
+        "kind": "lemma",
+        "label": "Lemma 2.2 (Complementary-composite contraction).",
+        "statement": "[S2.Thmtheorem2] Lemma 2.2 (Complementary-composite contraction).\n [S2.Thmtheorem2.p1] \nLet  $d\\geq 1$ ,  $L>0$ ,  $2\\leq p<\\infty$ ,  $1<\\kappa\\leq 2$ ,  $q=p/(p-1)$ , and  $c\\in\\mathbb{R}^{d}$ . Let  $f:\\mathbb{R}^{d}\\to\\mathbb{R}$  be convex and differentiable and satisfy (1.1). Let  $H$  be a known  $(\\mu,p)$ -uniformly convex function with  $\\mu>0$ . Suppose that, for every  $g\\in\\mathbb{R}^{d}$  and  $A,m>0$ , the internal minimization of  $\\left\\langle g,x\\right\\rangle+AH(x)+m\\omega_{c}(x)$  is available. Let  $z^{*}$  minimize  $F=f+H$ , and suppose  $\\left\\lVert c-z^{*}\\right\\rVert_{p}\\leq D$  for  $D>0$ . Put\n [S2.E6] \n $\\Delta=\\kappa p+\\kappa-p,\\qquad\\beta=\\frac{p}{\\Delta}.$ (2.6)\n\nFor  $0<\\delta\\leq D$ , Generalized AGD+ with its coefficients and budget fixed from these parameters returns a transcript-dependent point  $z$  with  $\\left\\lVert z-z^{*}\\right\\rVert_{p}\\leq\\delta$  using at most\n [S2.E7] \n $C_{p,\\kappa}^{\\mathrm{cc}}\\!\\left[1+\\left(\\frac{L}{\\mu\\delta^{p-\\kappa}}\\right)^{\\beta}\\left(\\frac{D}{\\delta}\\right)^{\\kappa\\beta}\\right]$ (2.7)\n\ngradient queries to  $f$ . The same fixed budget guarantees\n [S2.E8] \n $F(z)-F(z^{*})\\leq\\frac{\\mu}{p}\\delta^{p}.$ (2.8)",
+        "fragment_sha256": "a6d3d3dc2fdce1160d8e8003923eeb05200608961ac72d253378a2274ae3032c"
+      },
+      {
+        "anchor": "S4.Thmtheorem1",
+        "kind": "lemma",
+        "label": "Lemma 4.1 (Minimizer transport and stage contraction).",
+        "statement": "[S4.Thmtheorem1] Lemma 4.1 (Minimizer transport and stage contraction).\n [S4.Thmtheorem1.p1] \nFor every  $s=1,\\ldots,S$ ,\n [S4.E1] \n $\\left\\lVert x_{s}^{*}-x_{s-1}\\right\\rVert_{p}\\leq\\delta_{s-1},\\qquad\\left\\lVert x_{s}-x_{s}^{*}\\right\\rVert_{p}\\leq\\delta_{s}.$ (4.1)",
+        "fragment_sha256": "56928662eda238fc55f3a67baa3e24e384afd010133545b45180b744fa41b32a"
+      },
+      {
+        "anchor": "S4.Thmtheorem2",
+        "kind": "lemma",
+        "label": "Lemma 4.2 (Path bound).",
+        "statement": "[S4.Thmtheorem2] Lemma 4.2 (Path bound).\n [S4.Thmtheorem2.p1] \nFor every  $1\\leq i\\leq S$ ,\n [S4.E2] \n $\\left\\lVert x_{S}^{*}-x_{i-1}\\right\\rVert_{p}\\leq U\\delta_{i-1},\\qquad U=\\frac{\\rho+1}{\\rho-1}=3.$ (4.2)",
+        "fragment_sha256": "7421345229e259a673964046a4c4dbbd7b8490199b9cba1fe1f2de971a5134fb"
+      },
+      {
+        "anchor": "S5.Thmtheorem1",
+        "kind": "remark",
+        "label": "Remark 5.1 (Why the dual norm is the dimension-free target).",
+        "statement": "[S5.Thmtheorem1] Remark 5.1 (Why the dual norm is the dimension-free target).\n [S5.Thmtheorem1.p1] \nFor  $q\\leq s<\\infty$ , norm monotonicity gives  $\\left\\lVert g\\right\\rVert_{s}\\leq\\left\\lVert g\\right\\rVert_{q}$ , so Theorem 1.2 also certifies every such weaker  $\\ell_{s}$  target. No dimension-free conversion is possible in the opposite direction: if  $1\\leq s<q$  and  $g=d^{-1/q}(1,\\ldots,1)$ , then\n [S5.Ex4] \n $\\left\\lVert g\\right\\rVert_{q}=1,\\qquad\\left\\lVert g\\right\\rVert_{s}=d^{1/s-1/q}.$ \n\nThus a stronger  $\\ell_{s}$  target is a different oracle problem.",
+        "fragment_sha256": "40d5ffbd84fe9b54c4776fdc823a6afc9e5af3dc17131de35ef6ea9a8ade51af"
+      },
+      {
+        "anchor": "S5.Thmtheorem2",
+        "kind": "corollary",
+        "label": "Corollary 5.2 (Accuracy-oblivious checkpoints).",
+        "statement": "[S5.Thmtheorem2] Corollary 5.2 (Accuracy-oblivious checkpoints).\n [S5.Thmtheorem2.p1] \nUnder the hypotheses of Theorem 1.2, except for a prescribed target  $\\varepsilon$ , there is a deterministic procedure producing checkpoints  $z_{1},z_{2},\\ldots$ . If  $Q_{j}$  denotes the total number of gradient queries through checkpoint  $j$ , then\n [S5.Ex5] \n $\\left\\lVert\\nabla f(z_{j})\\right\\rVert_{q}\\leq LR^{\\kappa-1}2^{-j},\\qquad Q_{j}\\leq C_{p,\\kappa}2^{j\\beta},$ \n\nwhere  $\\beta=p/(\\kappa p+\\kappa-p)$ . Hence prior knowledge of  $\\varepsilon$  is unnecessary, with no multiplicative logarithmic loss in the final query rate; the wrapper still uses  $L,R,p,\\kappa$ .",
+        "fragment_sha256": "3b6cae755b486db575a9c08b1bd585f8d66b28049417aa6a34abf03472340a14"
+      },
+      {
+        "anchor": "S5.Thmtheorem3",
+        "kind": "remark",
+        "label": "Remark 5.3 (Other Schatten gradient targets).",
+        "statement": "[S5.Thmtheorem3] Remark 5.3 (Other Schatten gradient targets).\n [S5.Thmtheorem3.p1] \nLet  $k=\\min\\{m,n\\}$ . If  $q\\leq s<\\infty$ , then  $\\left\\lVert G\\right\\rVert_{\\mathsf{S}_{s}}\\leq\\left\\lVert G\\right\\rVert_{\\mathsf{S}_{q}}$ , so Corollary 1.4 certifies the  $\\mathsf{S}_{s}$  target without any change. If  $1\\leq s<q$ , the sharp norm conversion is\n [S5.Ex18] \n $\\left\\lVert G\\right\\rVert_{\\mathsf{S}_{s}}\\leq k^{1/s-1/q}\\left\\lVert G\\right\\rVert_{\\mathsf{S}_{q}}.$ \n\nRunning the corollary with dual-norm tolerance  $\\varepsilon k^{-(1/s-1/q)}$  therefore gives the valid bound\n [S5.Ex19] \n $O_{p,\\kappa}\\!\\left[1+\\left(\\frac{LR^{\\kappa-1}k^{1/s-1/q}}{\\varepsilon}\\right)^{p/(\\kappa p+\\kappa-p)}\\right].$ \n\nThe dimensional norm factor cannot be improved. Equality is attained by\n [S5.Ex20] \n $G=k^{-1/q}\\operatorname{Diag}_{m,n}(1,\\ldots,1).$ \n\nThis is a sharpness statement for norm conversion, not a matching oracle lower bound for the stronger  $\\mathsf{S}_{s}$  target.",
+        "fragment_sha256": "b9d30b5959861c1cb004a7f5309d4b34b7ec6e4e952e0b4c3a15b1128080348d"
+      },
+      {
+        "anchor": "S6.Thmtheorem1",
+        "kind": "assumption",
+        "label": "Assumption 6.1 (Simultaneous normalized hard-family interface).",
+        "statement": "[S6.Thmtheorem1] Assumption 6.1 (Simultaneous normalized hard-family interface).\n [S6.Thmtheorem1.p1] \nFix  $2\\leq p<\\infty$ ,  $1<\\kappa\\leq 2$ , and put  $q=p/(p-1)$  and  $\\beta=p/(\\kappa p+\\kappa-p)$ . There are positive constants  $c_{p,\\kappa}^{\\mathrm{obj}},C_{p,\\kappa}^{\\mathrm{obj}},c_{p,\\kappa}^{\\mathrm{qry}}$ , depending only on  $p,\\kappa$ , with the following property. If an integer  $d\\geq 1$  and  $\\zeta$  satisfy\n [S6.Ex1] \n $0<\\zeta\\leq c_{p,\\kappa}^{\\mathrm{obj}},\\qquad\\log d\\geq p,\\qquad d\\geq C_{p,\\kappa}^{\\mathrm{obj}}\\zeta^{-\\beta},$ \n\nthen, for every deterministic local-oracle method starting from the origin, there is a normalized unconstrained  $\\ell_{p}^{d}$  instance  $F$  such that no queried point has objective gap at most  $\\zeta$  before  $c_{p,\\kappa}^{\\mathrm{qry}}\\zeta^{-\\beta}$  calls. The instance satisfies\n [S6.Ex2] \n $\\left\\lVert\\nabla F(x)-\\nabla F(y)\\right\\rVert_{q}\\leq\\left\\lVert x-y\\right\\rVert_{p}^{\\kappa-1}.$ \n\nMoreover, the same instance is realized as  $F=\\mathcal{S}h/\\mu$  for an integer  $M\\geq 1$ , parameters  $\\bar{\\delta},\\mu>0$  and  $\\eta,r_{\\mathrm{h}}\\geq 0$ , and vectors  $z_{1},\\ldots,z_{M}\\in\\mathbb{R}^{d}$  satisfying  $\\left\\lVert z_{i}\\right\\rVert_{q}\\leq 1$ .\n\n [S6.Thmtheorem1.p2] \nAll hypotheses of Lemma 6.2 hold:  $h$  has the form (6.3);  $\\mathcal{S}$  is convexity-preserving and  $r_{\\mathrm{h}}$ -local;  $\\mathcal{S}h$  is differentiable; and  $\\left\\lVert\\mathcal{S}h-h\\right\\rVert_{\\infty}\\leq\\eta$ . These parameters satisfy\n [S6.E2] \n $r_{\\mathrm{h}}\\leq\\frac{\\bar{\\delta}}{8},\\qquad M\\bar{\\delta}\\leq\\mu\\zeta,\\qquad\\eta\\leq\\frac{\\mu\\zeta}{4},\\qquad 4\\mu\\zeta\\leq 1.$ (6.2)\n\nThe queried-point convention above is the one used in the reduction; an arbitrary transcript-measurable output is handled by one appended query.",
+        "fragment_sha256": "8bb3ae2c3d025fff06eed77922bb6aac1d6718f4006cdc2335b92ef3608ab013"
+      },
+      {
+        "anchor": "S6.Thmtheorem2",
+        "kind": "lemma",
+        "label": "Lemma 6.2 (Localization in the hard family).",
+        "statement": "[S6.Thmtheorem2] Lemma 6.2 (Localization in the hard family).\n [S6.Thmtheorem2.p1] \nAdopt the hard-family notation of Diakonikolas and Guzmán [5, Eq. (3)]. In particular, let  $d,M\\geq 1$  be integers,  $2\\leq p<\\infty$ ,  $q=p/(p-1)$ ,  $\\bar{\\delta},\\mu>0$ ,  $\\eta,r_{\\mathrm{h}}\\geq 0$ , and  $z_{1},\\ldots,z_{M}\\in\\mathbb{R}^{d}$  with  $\\left\\lVert z_{i}\\right\\rVert_{q}\\leq 1$ . Let\n [S6.E3] \n $h(x)=\\max\\left\\{\\frac{1}{2}\\max_{1\\leq i\\leq M}\\big(\\left\\langle z_{i},x\\right\\rangle-i\\bar{\\delta}\\big),\\ \\left\\lVert x\\right\\rVert_{p}-C\\right\\},\\qquad C=\\frac{1}{2}\\bigl(3(1+r_{\\mathrm{h}})+M\\bar{\\delta}\\bigr),$ (6.3)\n\nwhere  $r_{\\mathrm{h}}$  is the locality radius. Let  $\\mathcal{S}$  be the convexity-preserving local smoothing used in that construction, assume that  $\\mathcal{S}h$  is differentiable and  $\\left\\lVert\\mathcal{S}h-h\\right\\rVert_{\\infty}\\leq\\eta$ , and set  $F=\\mathcal{S}h/\\mu$ . Then, at every point  $x$  where  $F$  is differentiable,\n [S6.E4] \n $\\bigl(1-\\mu\\left\\lVert\\nabla F(x)\\right\\rVert_{q}\\bigr)\\left\\lVert x\\right\\rVert_{p}\\leq C-\\frac{\\bar{\\delta}}{2}+2\\eta.$ (6.4)",
+        "fragment_sha256": "d9cd52c37034fd6b0cf53d32bca93cafcb44f826fefd6d1d3028acbc04c2a294"
+      },
+      {
+        "anchor": "S7.Thmtheorem1",
+        "kind": "proposition",
+        "label": "Proposition 7.1 (A supplied diagonal metric for quadratics).",
+        "statement": "[S7.Thmtheorem1] Proposition 7.1 (A supplied diagonal metric for quadratics).\n [S7.Thmtheorem1.p1] \nLet  $d,N\\geq 1$ ,  $2\\leq p<\\infty$ ,  $q=p/(p-1)$ ,  $A\\in\\mathbb{R}^{d\\times d}$ ,  $b,x_{0}\\in\\mathbb{R}^{d}$ , and  $R\\geq 0$ , where  $d$  and  $N$  are integers. Suppose  $A\\succeq 0$ . Define\n [S7.Ex4] \n $f(x)=\\frac{1}{2}x^{\\top}Ax-b^{\\top}x,\\qquad L_{A}=\\left\\lVert A\\right\\rVert_{p\\to q}:=\\sup_{\\left\\lVert v\\right\\rVert_{p}\\leq 1}\\left\\lVert Av\\right\\rVert_{q}.$ \n\nSuppose that  $f$  has a minimizer  $x^{*}$  with  $\\left\\lVert x_{0}-x^{*}\\right\\rVert_{p}\\leq R$ . Put\n [S7.Ex5] \n $s_{2}=\\infty,\\qquad s_{p}=\\frac{p}{p-2}\\quad(p>2),\\qquad\\gamma_{p}=\\bigl(\\mathbb{E}\\left\\lvert G\\right\\rvert^{p}\\bigr)^{2/p},\\quad G\\sim\\mathcal{N}(0,1).$ \n\nWe use the endpoint conventions  $1/s_{2}=0$  and  $d^{-1/s_{2}}=1$ . If  $L_{A}=0$ , then  $\\nabla f\\equiv 0$ . If  $L_{A}>0$ , there exists a positive diagonal matrix  $D=\\operatorname{Diag}(w)\\succ 0$  such that\n [S7.E10] \n $D\\succeq A,\\qquad\\left\\lVert w\\right\\rVert_{s_{p}}\\leq 2\\gamma_{p}L_{A}.$ (7.10)\n\nIf  $L_{A}>0$  and this metric is supplied to the algorithm, Hilbert-space mirror-dual concatenation has, after at most  $N$  queries, an output  $x_{N}^{D}$  satisfying\n [S7.E11] \n $\\left\\lVert\\nabla f(x_{N}^{D})\\right\\rVert_{q}=O_{p}\\!\\left(\\frac{L_{A}R}{N^{2}}\\right).$ (7.11)\n\nFor  $L_{A}=0$ , the gradient vanishes identically, so the same estimate holds with output  $x_{0}$  and no queries.",
+        "fragment_sha256": "04204d13c0734f63277e5a8980a51e73244c307380f1f3db38322c3382bce495"
+      }
+    ]
+  },
+  "results": [
+    {
+      "anchor": "S1.Thmtheorem1",
+      "label": "Definition 1.1 (Deterministic exact-real query model).",
+      "source_fragment_sha256": "8a1ea73ef819baba75649b2097b136882460276041d1894ff6ee023e076b8d26",
+      "status": "modelled_and_compiled",
+      "declarations": [
+        "P31.OracleModel.Protocol",
+        "P31.QueryProgram.Program",
+        "P31.QueryProgram.Program.calls_eq_length",
+        "P31.LowerBound.protocolProgram_run"
+      ],
+      "scope_note": "Exact deterministic query tree and transcript protocol; actual repeated calls, arbitrary outputs, and bounded protocol-to-program compiler."
+    },
+    {
+      "anchor": "S1.Thmtheorem2",
+      "label": "Theorem 1.2 (Exact-real gradient-query upper bound).",
+      "source_fragment_sha256": "242c42b44544e9b96da3cae0e7de2d41dedc7be86ec52b91005472e707ffbd7b",
+      "status": "proved_with_disclosed_known_inputs",
+      "declarations": [
+        "P31.vectorGradientMethod_guarantee",
+        "P31.vector_upper_bound_uniform_constant",
+        "P31.Schedule.total_query_budget_le"
+      ],
+      "scope_note": "Actual history-adaptive program and true executed query count. Fixed source C(p,kappa); existential K precedes dimension and L,R,epsilon. Known objective-only complementary-composite theorem and scalar Clarkson are explicit inputs; all outer steps, minima and prox are derived."
+    },
+    {
+      "anchor": "S1.Thmtheorem3",
+      "label": "Corollary 1.3 (Conditional minimax comparison).",
+      "source_fragment_sha256": "aaa846ada926d26fc1bfa31f0940b891601621f155d86f219b6fcf3eed9de235",
+      "status": "proved_under_original_assumption_6_1_and_disclosed_known_inputs",
+      "declarations": [
+        "P31.LowerBound.conditional_protocol_lower_bound",
+        "P31.LowerBound.corollary1_3",
+        "P31.LowerBound.corollary1_3_from_composite"
+      ],
+      "scope_note": "Original simultaneous objective hard-family premise is explicit, not proved as a literature consequence. Own localization, scaling, oracle simulation, output appended query, constants, infimum minimax and actual main upper method are connected."
+    },
+    {
+      "anchor": "S1.Thmtheorem4",
+      "label": "Corollary 1.4 (Schatten- $p$  upper bound).",
+      "source_fragment_sha256": "082d64541f8cf0f2720d31a3ff8ea0cf6db1be70037822f9903fba5b84499487",
+      "status": "proved_with_disclosed_known_inputs",
+      "declarations": [
+        "P31.Schatten.matrixGradientMethod_guarantee",
+        "P31.Schatten.matrix_upper_bound_uniform_constant"
+      ],
+      "scope_note": "Actual rectangular matrices and genuine compact-SVD-anchored singular values. External raw spectral facts and objective-only complementary-composite source; normalized atom, accumulated exact prox/minima, adaptive algorithm, accuracy and query summation proved here."
+    },
+    {
+      "anchor": "S2.Thmtheorem1",
+      "label": "Lemma 2.1 (Normalized shifted-power atom).",
+      "source_fragment_sha256": "9f724622c69b7ee498f1cf778f2d03b596273845c061f6bdc7dcf5b936b321d7",
+      "status": "proved_with_disclosed_known_input",
+      "declarations": [
+        "P31.dualityMap_norm",
+        "P31.powerAtom_hasFDerivAt",
+        "P31.powerAtom_sublevel_iff",
+        "P31.powerAtom_jensen_of_scalar_clarkson"
+      ],
+      "scope_note": "Literal real-p coordinate atom; exact norm and derivative, radial equivalence and normalization. Scalar weighted Clarkson is explicitly disclosed standard input, not an axiom or an own-result exemption."
+    },
+    {
+      "anchor": "S2.Thmtheorem2",
+      "label": "Lemma 2.2 (Complementary-composite contraction).",
+      "source_fragment_sha256": "a6d3d3dc2fdce1160d8e8003923eeb05200608961ac72d253378a2274ae3032c",
+      "status": "proved_with_disclosed_known_input",
+      "declarations": [
+        "P31.composite_raw_power_substitution",
+        "P31.composite_source_term_bound",
+        "P31.externalComposite_contraction",
+        "P31.lemma2_2"
+      ],
+      "scope_note": "Exact raw [6] parameter power substitution, atom radius bound, integer ceiling bound, and distance contraction from own Jensen growth. Only the objective-error/query theorem is external."
+    },
+    {
+      "anchor": "S4.Thmtheorem1",
+      "label": "Lemma 4.1 (Minimizer transport and stage contraction).",
+      "source_fragment_sha256": "56928662eda238fc55f3a67baa3e24e384afd010133545b45180b744fa41b32a",
+      "status": "proved_and_instantiated_on_actual_algorithm",
+      "declarations": [
+        "P31.stagewise_transport_and_contraction",
+        "P31.AccumulationData.generated_stage_certificates",
+        "P31.AccumulationData.outputProgram_accuracy_and_complexity"
+      ],
+      "scope_note": "Own transport/contraction proof; generated stages obtain gap only after their warm-start condition is established; true regularized minima are constructed."
+    },
+    {
+      "anchor": "S4.Thmtheorem2",
+      "label": "Lemma 4.2 (Path bound).",
+      "source_fragment_sha256": "7421345229e259a673964046a4c4dbbd7b8490199b9cba1fe1f2de971a5134fb",
+      "status": "proved_and_instantiated_on_actual_algorithm",
+      "declarations": [
+        "P31.path_bound",
+        "P31.vector_path_bound",
+        "P31.Schatten.SpectralInput.outer_accuracy"
+      ],
+      "scope_note": "Actual norm path and source indexing, including arbitrary rho; applied to vector and matrix outer algorithms."
+    },
+    {
+      "anchor": "S5.Thmtheorem1",
+      "label": "Remark 5.1 (Why the dual norm is the dimension-free target).",
+      "source_fragment_sha256": "40d5ffbd84fe9b54c4776fdc823a6afc9e5af3dc17131de35ef6ea9a8ade51af",
+      "status": "proved_and_connected_to_actual_method",
+      "declarations": [
+        "P31.lpNorm_antitone_exponent",
+        "P31.stronger_target_no_dimension_free_conversion",
+        "P31.vector_weaker_target"
+      ],
+      "scope_note": "Actual weaker-target algorithm certificate with same query bound; sharp flat witnesses prove dimension loss for stronger target conversion."
+    },
+    {
+      "anchor": "S5.Thmtheorem2",
+      "label": "Corollary 5.2 (Accuracy-oblivious checkpoints).",
+      "source_fragment_sha256": "3b6cae755b486db575a9c08b1bd585f8d66b28049417aa6a34abf03472340a14",
+      "status": "proved_and_connected_to_actual_method",
+      "declarations": [
+        "P31.accuracy_oblivious_checkpoints",
+        "P31.corollary5_2"
+      ],
+      "scope_note": "Actual repeated program composition with no epsilon argument in wrapper. Exact cumulative executed queries, geometric restart costs, and zero-scale branch."
+    },
+    {
+      "anchor": "S5.Thmtheorem3",
+      "label": "Remark 5.3 (Other Schatten gradient targets).",
+      "source_fragment_sha256": "b9d30b5959861c1cb004a7f5309d4b34b7ec6e4e952e0b4c3a15b1128080348d",
+      "status": "proved_and_connected_to_actual_method",
+      "declarations": [
+        "P31.Schatten.matrix_weaker_target",
+        "P31.Schatten.matrix_stronger_target",
+        "P31.DiagonalLowerBound.rectangular_diagonal_sharp_factor"
+      ],
+      "scope_note": "Actual stronger/weaker Schatten-target algorithms and query bounds with k=min(m,n), plus sharp diagonal witness."
+    },
+    {
+      "anchor": "S6.Thmtheorem1",
+      "label": "Assumption 6.1 (Simultaneous normalized hard-family interface).",
+      "source_fragment_sha256": "8bb3ae2c3d025fff06eed77922bb6aac1d6718f4006cdc2335b92ef3608ab013",
+      "status": "modelled_as_original_conditional_premise",
+      "declarations": [
+        "P31.LowerBound.NormalizedHardInstance",
+        "P31.LowerBound.QueriedObjectiveHard",
+        "P31.LowerBound.SimultaneousHardFamily"
+      ],
+      "scope_note": "Exact simultaneous normalized analytic/hard-family realization with objective hardness at queries. No terminal-gradient lower bound in premise; no assertion literature independently proves simultaneity."
+    },
+    {
+      "anchor": "S6.Thmtheorem2",
+      "label": "Lemma 6.2 (Localization in the hard family).",
+      "source_fragment_sha256": "d9cd52c37034fd6b0cf53d32bca93cafcb44f826fefd6d1d3028acbc04c2a294",
+      "status": "proved",
+      "declarations": [
+        "P31.lemma6_2",
+        "P31.vector_lemma6_2",
+        "P31.normalized_hard_family_reduction"
+      ],
+      "scope_note": "Actual max/norm hard function and genuine Frechet derivative; localization and normalized reduction."
+    },
+    {
+      "anchor": "S7.Thmtheorem1",
+      "label": "Proposition 7.1 (A supplied diagonal metric for quadratics).",
+      "source_fragment_sha256": "04204d13c0734f63277e5a8980a51e73244c307380f1f3db38322c3382bce495",
+      "status": "proved_with_disclosed_known_inputs",
+      "declarations": [
+        "P31.QuadraticMetric.trace_bound",
+        "P31.QuadraticMetric.exists_positive_majorant",
+        "P31.QuadraticMetric.quadratic_hilbert_smooth",
+        "P31.QuadraticMetric.proposition71",
+        "P31.QuadraticMetric.operatorNorm_eq_quadraticSup",
+        "P31.QuadraticMetric.actual_query_proposition71"
+      ],
+      "scope_note": "Actual PSD matrix, actual operator supremum, standard Gaussian integrals and SDP strong-duality/attainment inputs. Own trace majorant, strictly positive diagonal perturbation, Hilbert smoothness and norm conversions. External Hilbert rate modeled on actual query program; zero branch pure initial point."
+    }
+  ],
+  "unnumbered_substantive_claims": [
+    {
+      "source": "S2.E2",
+      "status": "proved",
+      "declarations": [
+        "P31.lpPowerJensen_support_growth",
+        "P31.lpPowerJensen_add_convex"
+      ]
+    },
+    {
+      "source": "S3.E2--S3.E5; S4.E8--S4.E12",
+      "status": "proved_and_executed_count_connected",
+      "declarations": [
+        "P31.Schedule.sum_alpha",
+        "P31.Schedule.total_query_budget_le",
+        "P31.AccumulationData.historyProgram_calls_le"
+      ]
+    },
+    {
+      "source": "S3.p5",
+      "status": "proved",
+      "declarations": [
+        "P31.regularizedObjective_existsUnique_minimizer",
+        "P31.AccumulationData.exists_exactMinima",
+        "P31.Schatten.SpectralInput.objective_existsUnique"
+      ]
+    },
+    {
+      "source": "S4.E4--S4.E7",
+      "status": "proved_and_actual_stages_supplied",
+      "declarations": [
+        "P31.vector_accumulated_stationarity",
+        "P31.vector_outer_accuracy",
+        "P31.AccumulationData.outputProgram_accuracy_and_complexity"
+      ]
+    },
+    {
+      "source": "S4.E5",
+      "status": "proved_exact_infinite_identity",
+      "declarations": [
+        "P31.Schedule.tsum_balanced_weighted_alpha"
+      ]
+    },
+    {
+      "source": "S5.E1--S5.E2",
+      "status": "proved_exact_known_data_prox",
+      "declarations": [
+        "P31.coordinateEquation_existsUnique_zero",
+        "P31.vectorComposite_existsUnique_minimizer",
+        "P31.accumulatedCompositeProx_minimizes"
+      ]
+    },
+    {
+      "source": "S5.Ex2",
+      "status": "proved_actual_integer_budgets",
+      "declarations": [
+        "P31.Schedule.total_stage_weighted_query_budget_le"
+      ]
+    },
+    {
+      "source": "S5.E3--S5.E4",
+      "status": "proved",
+      "declarations": [
+        "P31.quadratic_history_compression",
+        "P31.hilbertProx_unique_minimizer",
+        "P31.Schatten.SpectralInput.compositeProx_two_eq"
+      ]
+    },
+    {
+      "source": "S5.SS3; S5.E5--S5.E8",
+      "status": "proved_with_standard_raw_spectral_inputs",
+      "declarations": [
+        "P31.Schatten.SpectralInput.raw_bregman_lower",
+        "P31.Schatten.SpectralInput.atom_jensen",
+        "P31.Schatten.SpectralInput.composite_existsUnique"
+      ]
+    },
+    {
+      "source": "S5.SS3 diagonal conditional lower transfer",
+      "status": "proved_under_original_assumption_and_standard_diagonal_norm_inputs",
+      "declarations": [
+        "P31.DiagonalLowerBound.diagonal_conditional_gradient_lower_bound",
+        "P31.DiagonalLowerBound.vectorSimulation_run"
+      ]
+    },
+    {
+      "source": "S6.E5--S6.E7",
+      "status": "proved_and_oracle_simulation_connected",
+      "declarations": [
+        "P31.rescaled_holder_gradient",
+        "P31.LowerBound.normalizedSimulation_run",
+        "P31.LowerBound.conditional_adversary",
+        "P31.LowerBound.conditional_gradient_lower_bound"
+      ]
+    },
+    {
+      "source": "S7.E1--S7.E6",
+      "status": "proved_including_unique_optimizers",
+      "declarations": [
+        "P31.ScheduleFamily.both_ratios_lt_one_iff",
+        "P31.ScheduleFamily.balanced_minimizes_max",
+        "P31.ScheduleFamily.optimalTau_minimizes_leading"
+      ]
+    },
+    {
+      "source": "S7.E7--S7.Ex1",
+      "status": "own_exact_exponent_comparison_proved_external_one_shot_rate_disclosed",
+      "declarations": [
+        "P31.Schedule.gamma_sub_beta",
+        "P31.Schedule.beta_le_gamma",
+        "P31.one_shot_exponent_eq_iff"
+      ]
+    },
+    {
+      "source": "S7.E8--S7.E9",
+      "status": "proved_and_main_algorithm_connected_with_external_euclidean_rate",
+      "declarations": [
+        "P31.HilbertDiagnostics.finite_support_hilbert_rate_all",
+        "P31.smooth_accuracy_family",
+        "P31.smooth_finite_dimension_envelope"
+      ]
+    },
+    {
+      "source": "S7.SS2.p6",
+      "status": "own_objective_plus_descent_conversion_proved_with_external_objective_and_standard_descent_budgets",
+      "declarations": [
+        "P31.objective_plus_descent_rate",
+        "P31.objective_descent_query_exponent",
+        "P31.continuation_decay_gain"
+      ]
+    },
+    {
+      "source": "S7.Ex6--S7.Ex11",
+      "status": "proved_with_standard_duality_inputs",
+      "declarations": [
+        "P31.QuadraticMetric.operatorNorm_eq_quadraticSup",
+        "P31.QuadraticMetric.psd_cauchy_sq",
+        "P31.QuadraticMetric.hilbert_radius_conversion",
+        "P31.QuadraticMetric.hilbert_gradient_conversion"
+      ]
+    },
+    {
+      "source": "S8.p4",
+      "status": "own_prefix_and_dimension_conversion_observations_proved_external_HASD_rate_not_reproved",
+      "declarations": [
+        "P31.prefixGain_ge_one",
+        "P31.coordinate_supported_prefixGain",
+        "P31.lpNorm_dimension_factor_sharp"
+      ]
+    },
+    {
+      "source": "S9.p2",
+      "status": "proved_exact_exponents_and_limit",
+      "declarations": [
+        "P31.query_exponent_inverse",
+        "P31.hilbert_gradient_decay",
+        "P31.smooth_gradient_decay",
+        "P31.gradient_decay_limit"
+      ]
+    }
+  ],
+  "contract_targets": {
+    "P31.QueryProgram.Program.calls_eq_length": "OfficialP31.target262",
+    "P31.LowerBound.protocolProgram_run": "OfficialP31.target150",
+    "P31.vectorGradientMethod_guarantee": "OfficialP31.target727",
+    "P31.vector_upper_bound_uniform_constant": "OfficialP31.target748",
+    "P31.Schedule.total_query_budget_le": "OfficialP31.target466",
+    "P31.LowerBound.conditional_protocol_lower_bound": "OfficialP31.target133",
+    "P31.LowerBound.corollary1_3": "OfficialP31.target137",
+    "P31.LowerBound.corollary1_3_from_composite": "OfficialP31.target138",
+    "P31.Schatten.matrixGradientMethod_guarantee": "OfficialP31.target400",
+    "P31.Schatten.matrix_upper_bound_uniform_constant": "OfficialP31.target404",
+    "P31.dualityMap_norm": "OfficialP31.target560",
+    "P31.powerAtom_hasFDerivAt": "OfficialP31.target656",
+    "P31.powerAtom_sublevel_iff": "OfficialP31.target660",
+    "P31.powerAtom_jensen_of_scalar_clarkson": "OfficialP31.target657",
+    "P31.composite_raw_power_substitution": "OfficialP31.target523",
+    "P31.composite_source_term_bound": "OfficialP31.target524",
+    "P31.externalComposite_contraction": "OfficialP31.target563",
+    "P31.lemma2_2": "OfficialP31.target595",
+    "P31.stagewise_transport_and_contraction": "OfficialP31.target713",
+    "P31.AccumulationData.generated_stage_certificates": "OfficialP31.target003",
+    "P31.AccumulationData.outputProgram_accuracy_and_complexity": "OfficialP31.target023",
+    "P31.path_bound": "OfficialP31.target650",
+    "P31.vector_path_bound": "OfficialP31.target746",
+    "P31.Schatten.SpectralInput.outer_accuracy": "OfficialP31.target371",
+    "P31.lpNorm_antitone_exponent": "OfficialP31.target600",
+    "P31.stronger_target_no_dimension_free_conversion": "OfficialP31.target717",
+    "P31.vector_weaker_target": "OfficialP31.target749",
+    "P31.accuracy_oblivious_checkpoints": "OfficialP31.target506",
+    "P31.corollary5_2": "OfficialP31.target552",
+    "P31.Schatten.matrix_weaker_target": "OfficialP31.target405",
+    "P31.Schatten.matrix_stronger_target": "OfficialP31.target403",
+    "P31.DiagonalLowerBound.rectangular_diagonal_sharp_factor": "OfficialP31.target060",
+    "P31.lemma6_2": "OfficialP31.target596",
+    "P31.vector_lemma6_2": "OfficialP31.target741",
+    "P31.normalized_hard_family_reduction": "OfficialP31.target637",
+    "P31.QuadraticMetric.trace_bound": "OfficialP31.target242",
+    "P31.QuadraticMetric.exists_positive_majorant": "OfficialP31.target206",
+    "P31.QuadraticMetric.quadratic_hilbert_smooth": "OfficialP31.target239",
+    "P31.QuadraticMetric.proposition71": "OfficialP31.target226",
+    "P31.QuadraticMetric.operatorNorm_eq_quadraticSup": "OfficialP31.target221",
+    "P31.QuadraticMetric.actual_query_proposition71": "OfficialP31.target199"
+  },
+  "scope": "Generated fixed public theorem types preserve explicit hypotheses; the inventory alone is not independent source-semantic acceptance. Original Assumption 6.1 is a conditional premise, not a theorem."
+}

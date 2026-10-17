@@ -1,0 +1,227 @@
+import Paper20.RContent36
+set_option maxHeartbeats 0
+set_option maxRecDepth 200000
+namespace Paper20.Cert.RContent36.Tree
+open Paper20.RContent36
+open Paper20.HilbertJobs (Job parts children)
+
+def j_22_14 : Job := ⟨[22, 14], 14, 0, 35⟩
+
+def v_22_14 : State := @@GENERATED_RHS:v_22_14@@
+
+theorem correct_22_14 : Correct j_22_14 v_22_14 := correct_leaf j_22_14 v_22_14 (by decide +kernel)
+
+def j_22_13 : Job := ⟨[22, 13], 13, 1, 35⟩
+
+def v_22_13 : State := @@GENERATED_RHS:v_22_13@@
+
+theorem correct_22_13 : Correct j_22_13 v_22_13 := correct_leaf j_22_13 v_22_13 (by decide +kernel)
+
+def j_22_12 : Job := ⟨[22, 12], 12, 2, 35⟩
+
+def v_22_12 : State := @@GENERATED_RHS:v_22_12@@
+
+theorem correct_22_12 : Correct j_22_12 v_22_12 := correct_leaf j_22_12 v_22_12 (by decide +kernel)
+
+def j_22_11 : Job := ⟨[22, 11], 11, 3, 35⟩
+
+def v_22_11 : State := @@GENERATED_RHS:v_22_11@@
+
+theorem correct_22_11 : Correct j_22_11 v_22_11 := correct_leaf j_22_11 v_22_11 (by decide +kernel)
+
+def j_22_10 : Job := ⟨[22, 10], 10, 4, 35⟩
+
+def v_22_10 : State := @@GENERATED_RHS:v_22_10@@
+
+theorem correct_22_10 : Correct j_22_10 v_22_10 := correct_leaf j_22_10 v_22_10 (by decide +kernel)
+
+def j_22_9 : Job := ⟨[22, 9], 9, 5, 35⟩
+
+def v_22_9 : State := @@GENERATED_RHS:v_22_9@@
+
+theorem correct_22_9 : Correct j_22_9 v_22_9 := correct_leaf j_22_9 v_22_9 (by decide +kernel)
+
+def j_22_8_6 : Job := ⟨[22, 8, 6], 6, 0, 34⟩
+
+def v_22_8_6 : State := @@GENERATED_RHS:v_22_8_6@@
+
+theorem correct_22_8_6 : Correct j_22_8_6 v_22_8_6 := correct_leaf j_22_8_6 v_22_8_6 (by decide +kernel)
+
+def j_22_8_5 : Job := ⟨[22, 8, 5], 5, 1, 34⟩
+
+def v_22_8_5 : State := @@GENERATED_RHS:v_22_8_5@@
+
+theorem correct_22_8_5 : Correct j_22_8_5 v_22_8_5 := correct_leaf j_22_8_5 v_22_8_5 (by decide +kernel)
+
+def j_22_8_4 : Job := ⟨[22, 8, 4], 4, 2, 34⟩
+
+def v_22_8_4 : State := @@GENERATED_RHS:v_22_8_4@@
+
+theorem correct_22_8_4 : Correct j_22_8_4 v_22_8_4 := correct_leaf j_22_8_4 v_22_8_4 (by decide +kernel)
+
+def j_22_8_3 : Job := ⟨[22, 8, 3], 3, 3, 34⟩
+
+def v_22_8_3 : State := @@GENERATED_RHS:v_22_8_3@@
+
+theorem correct_22_8_3 : Correct j_22_8_3 v_22_8_3 := correct_leaf j_22_8_3 v_22_8_3 (by decide +kernel)
+
+def j_22_8_2 : Job := ⟨[22, 8, 2], 2, 4, 34⟩
+
+def v_22_8_2 : State := @@GENERATED_RHS:v_22_8_2@@
+
+theorem correct_22_8_2 : Correct j_22_8_2 v_22_8_2 := correct_leaf j_22_8_2 v_22_8_2 (by decide +kernel)
+
+def j_22_8_1 : Job := ⟨[22, 8, 1], 1, 5, 34⟩
+
+def v_22_8_1 : State := @@GENERATED_RHS:v_22_8_1@@
+
+theorem correct_22_8_1 : Correct j_22_8_1 v_22_8_1 := correct_leaf j_22_8_1 v_22_8_1 (by decide +kernel)
+
+def j_22_8 : Job := ⟨[22, 8], 8, 6, 35⟩
+
+def v_22_8 : State := @@GENERATED_RHS:v_22_8@@
+
+theorem correct_22_8 : Correct j_22_8 v_22_8 := by
+  have hc : children j_22_8 = [j_22_8_6, j_22_8_5, j_22_8_4, j_22_8_3, j_22_8_2, j_22_8_1] := by decide +kernel
+  have hv : List.Forall₂ Correct (children j_22_8) [v_22_8_6, v_22_8_5, v_22_8_4, v_22_8_3, v_22_8_2, v_22_8_1] := by
+    rw [hc]
+    exact (List.Forall₂.cons correct_22_8_6 (List.Forall₂.cons correct_22_8_5 (List.Forall₂.cons correct_22_8_4 (List.Forall₂.cons correct_22_8_3 (List.Forall₂.cons correct_22_8_2 (List.Forall₂.cons correct_22_8_1 List.Forall₂.nil))))))
+  have hp := correct_children j_22_8 (by decide) (by decide) [v_22_8_6, v_22_8_5, v_22_8_4, v_22_8_3, v_22_8_2, v_22_8_1] hv
+  have he : combine [v_22_8_6, v_22_8_5, v_22_8_4, v_22_8_3, v_22_8_2, v_22_8_1] = v_22_8 := by decide +kernel
+  rwa [he] at hp
+
+def j_22_7_7 : Job := ⟨[22, 7, 7], 7, 0, 34⟩
+
+def v_22_7_7 : State := @@GENERATED_RHS:v_22_7_7@@
+
+theorem correct_22_7_7 : Correct j_22_7_7 v_22_7_7 := correct_leaf j_22_7_7 v_22_7_7 (by decide +kernel)
+
+def j_22_7_6 : Job := ⟨[22, 7, 6], 6, 1, 34⟩
+
+def v_22_7_6 : State := @@GENERATED_RHS:v_22_7_6@@
+
+theorem correct_22_7_6 : Correct j_22_7_6 v_22_7_6 := correct_leaf j_22_7_6 v_22_7_6 (by decide +kernel)
+
+def j_22_7_5 : Job := ⟨[22, 7, 5], 5, 2, 34⟩
+
+def v_22_7_5 : State := @@GENERATED_RHS:v_22_7_5@@
+
+theorem correct_22_7_5 : Correct j_22_7_5 v_22_7_5 := correct_leaf j_22_7_5 v_22_7_5 (by decide +kernel)
+
+def j_22_7_4 : Job := ⟨[22, 7, 4], 4, 3, 34⟩
+
+def v_22_7_4 : State := @@GENERATED_RHS:v_22_7_4@@
+
+theorem correct_22_7_4 : Correct j_22_7_4 v_22_7_4 := correct_leaf j_22_7_4 v_22_7_4 (by decide +kernel)
+
+def j_22_7_3 : Job := ⟨[22, 7, 3], 3, 4, 34⟩
+
+def v_22_7_3 : State := @@GENERATED_RHS:v_22_7_3@@
+
+theorem correct_22_7_3 : Correct j_22_7_3 v_22_7_3 := correct_leaf j_22_7_3 v_22_7_3 (by decide +kernel)
+
+def j_22_7_2 : Job := ⟨[22, 7, 2], 2, 5, 34⟩
+
+def v_22_7_2 : State := @@GENERATED_RHS:v_22_7_2@@
+
+theorem correct_22_7_2 : Correct j_22_7_2 v_22_7_2 := correct_leaf j_22_7_2 v_22_7_2 (by decide +kernel)
+
+def j_22_7_1 : Job := ⟨[22, 7, 1], 1, 6, 34⟩
+
+def v_22_7_1 : State := @@GENERATED_RHS:v_22_7_1@@
+
+theorem correct_22_7_1 : Correct j_22_7_1 v_22_7_1 := correct_leaf j_22_7_1 v_22_7_1 (by decide +kernel)
+
+def j_22_7 : Job := ⟨[22, 7], 7, 7, 35⟩
+
+def v_22_7 : State := @@GENERATED_RHS:v_22_7@@
+
+theorem correct_22_7 : Correct j_22_7 v_22_7 := by
+  have hc : children j_22_7 = [j_22_7_7, j_22_7_6, j_22_7_5, j_22_7_4, j_22_7_3, j_22_7_2, j_22_7_1] := by decide +kernel
+  have hv : List.Forall₂ Correct (children j_22_7) [v_22_7_7, v_22_7_6, v_22_7_5, v_22_7_4, v_22_7_3, v_22_7_2, v_22_7_1] := by
+    rw [hc]
+    exact (List.Forall₂.cons correct_22_7_7 (List.Forall₂.cons correct_22_7_6 (List.Forall₂.cons correct_22_7_5 (List.Forall₂.cons correct_22_7_4 (List.Forall₂.cons correct_22_7_3 (List.Forall₂.cons correct_22_7_2 (List.Forall₂.cons correct_22_7_1 List.Forall₂.nil)))))))
+  have hp := correct_children j_22_7 (by decide) (by decide) [v_22_7_7, v_22_7_6, v_22_7_5, v_22_7_4, v_22_7_3, v_22_7_2, v_22_7_1] hv
+  have he : combine [v_22_7_7, v_22_7_6, v_22_7_5, v_22_7_4, v_22_7_3, v_22_7_2, v_22_7_1] = v_22_7 := by decide +kernel
+  rwa [he] at hp
+
+def j_22_6_6 : Job := ⟨[22, 6, 6], 6, 2, 34⟩
+
+def v_22_6_6 : State := @@GENERATED_RHS:v_22_6_6@@
+
+theorem correct_22_6_6 : Correct j_22_6_6 v_22_6_6 := correct_leaf j_22_6_6 v_22_6_6 (by decide +kernel)
+
+def j_22_6_5 : Job := ⟨[22, 6, 5], 5, 3, 34⟩
+
+def v_22_6_5 : State := @@GENERATED_RHS:v_22_6_5@@
+
+theorem correct_22_6_5 : Correct j_22_6_5 v_22_6_5 := correct_leaf j_22_6_5 v_22_6_5 (by decide +kernel)
+
+def j_22_6_4 : Job := ⟨[22, 6, 4], 4, 4, 34⟩
+
+def v_22_6_4 : State := @@GENERATED_RHS:v_22_6_4@@
+
+theorem correct_22_6_4 : Correct j_22_6_4 v_22_6_4 := correct_leaf j_22_6_4 v_22_6_4 (by decide +kernel)
+
+def j_22_6_3 : Job := ⟨[22, 6, 3], 3, 5, 34⟩
+
+def v_22_6_3 : State := @@GENERATED_RHS:v_22_6_3@@
+
+theorem correct_22_6_3 : Correct j_22_6_3 v_22_6_3 := correct_leaf j_22_6_3 v_22_6_3 (by decide +kernel)
+
+def j_22_6_2 : Job := ⟨[22, 6, 2], 2, 6, 34⟩
+
+def v_22_6_2 : State := @@GENERATED_RHS:v_22_6_2@@
+
+theorem correct_22_6_2 : Correct j_22_6_2 v_22_6_2 := correct_leaf j_22_6_2 v_22_6_2 (by decide +kernel)
+
+def j_22_6_1 : Job := ⟨[22, 6, 1], 1, 7, 34⟩
+
+def v_22_6_1 : State := @@GENERATED_RHS:v_22_6_1@@
+
+theorem correct_22_6_1 : Correct j_22_6_1 v_22_6_1 := correct_leaf j_22_6_1 v_22_6_1 (by decide +kernel)
+
+def j_22_6 : Job := ⟨[22, 6], 6, 8, 35⟩
+
+def v_22_6 : State := @@GENERATED_RHS:v_22_6@@
+
+theorem correct_22_6 : Correct j_22_6 v_22_6 := by
+  have hc : children j_22_6 = [j_22_6_6, j_22_6_5, j_22_6_4, j_22_6_3, j_22_6_2, j_22_6_1] := by decide +kernel
+  have hv : List.Forall₂ Correct (children j_22_6) [v_22_6_6, v_22_6_5, v_22_6_4, v_22_6_3, v_22_6_2, v_22_6_1] := by
+    rw [hc]
+    exact (List.Forall₂.cons correct_22_6_6 (List.Forall₂.cons correct_22_6_5 (List.Forall₂.cons correct_22_6_4 (List.Forall₂.cons correct_22_6_3 (List.Forall₂.cons correct_22_6_2 (List.Forall₂.cons correct_22_6_1 List.Forall₂.nil))))))
+  have hp := correct_children j_22_6 (by decide) (by decide) [v_22_6_6, v_22_6_5, v_22_6_4, v_22_6_3, v_22_6_2, v_22_6_1] hv
+  have he : combine [v_22_6_6, v_22_6_5, v_22_6_4, v_22_6_3, v_22_6_2, v_22_6_1] = v_22_6 := by decide +kernel
+  rwa [he] at hp
+
+def j_22_5_5 : Job := ⟨[22, 5, 5], 5, 4, 34⟩
+
+def v_22_5_5 : State := @@GENERATED_RHS:v_22_5_5@@
+
+theorem correct_22_5_5 : Correct j_22_5_5 v_22_5_5 := correct_leaf j_22_5_5 v_22_5_5 (by decide +kernel)
+
+def j_22_5_4 : Job := ⟨[22, 5, 4], 4, 5, 34⟩
+
+def v_22_5_4 : State := @@GENERATED_RHS:v_22_5_4@@
+
+theorem correct_22_5_4 : Correct j_22_5_4 v_22_5_4 := correct_leaf j_22_5_4 v_22_5_4 (by decide +kernel)
+
+def j_22_5_3 : Job := ⟨[22, 5, 3], 3, 6, 34⟩
+
+def v_22_5_3 : State := @@GENERATED_RHS:v_22_5_3@@
+
+theorem correct_22_5_3 : Correct j_22_5_3 v_22_5_3 := correct_leaf j_22_5_3 v_22_5_3 (by decide +kernel)
+
+def j_22_5_2 : Job := ⟨[22, 5, 2], 2, 7, 34⟩
+
+def v_22_5_2 : State := @@GENERATED_RHS:v_22_5_2@@
+
+theorem correct_22_5_2 : Correct j_22_5_2 v_22_5_2 := correct_leaf j_22_5_2 v_22_5_2 (by decide +kernel)
+
+def j_22_5_1 : Job := ⟨[22, 5, 1], 1, 8, 34⟩
+
+def v_22_5_1 : State := @@GENERATED_RHS:v_22_5_1@@
+
+theorem correct_22_5_1 : Correct j_22_5_1 v_22_5_1 := correct_leaf j_22_5_1 v_22_5_1 (by decide +kernel)
+
+end Paper20.Cert.RContent36.Tree

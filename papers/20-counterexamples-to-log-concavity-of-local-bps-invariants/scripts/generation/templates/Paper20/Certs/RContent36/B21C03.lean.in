@@ -1,0 +1,21 @@
+import Paper20.Certs.RContent36.B21C02
+set_option maxHeartbeats 0
+set_option maxRecDepth 200000
+namespace Paper20.Cert.RContent36.Tree
+open Paper20.RContent36
+open Paper20.HilbertJobs (Job parts children)
+
+def j_21 : Job := ⟨[21], 21, 15, 36⟩
+
+def v_21 : State := @@GENERATED_RHS:v_21@@
+
+theorem correct_21 : Correct j_21 v_21 := by
+  have hc : children j_21 = [j_21_15, j_21_14, j_21_13, j_21_12, j_21_11, j_21_10, j_21_9, j_21_8, j_21_7, j_21_6, j_21_5, j_21_4, j_21_3, j_21_2, j_21_1] := by decide +kernel
+  have hv : List.Forall₂ Correct (children j_21) [v_21_15, v_21_14, v_21_13, v_21_12, v_21_11, v_21_10, v_21_9, v_21_8, v_21_7, v_21_6, v_21_5, v_21_4, v_21_3, v_21_2, v_21_1] := by
+    rw [hc]
+    exact (List.Forall₂.cons correct_21_15 (List.Forall₂.cons correct_21_14 (List.Forall₂.cons correct_21_13 (List.Forall₂.cons correct_21_12 (List.Forall₂.cons correct_21_11 (List.Forall₂.cons correct_21_10 (List.Forall₂.cons correct_21_9 (List.Forall₂.cons correct_21_8 (List.Forall₂.cons correct_21_7 (List.Forall₂.cons correct_21_6 (List.Forall₂.cons correct_21_5 (List.Forall₂.cons correct_21_4 (List.Forall₂.cons correct_21_3 (List.Forall₂.cons correct_21_2 (List.Forall₂.cons correct_21_1 List.Forall₂.nil)))))))))))))))
+  have hp := correct_children j_21 (by decide) (by decide) [v_21_15, v_21_14, v_21_13, v_21_12, v_21_11, v_21_10, v_21_9, v_21_8, v_21_7, v_21_6, v_21_5, v_21_4, v_21_3, v_21_2, v_21_1] hv
+  have he : combine [v_21_15, v_21_14, v_21_13, v_21_12, v_21_11, v_21_10, v_21_9, v_21_8, v_21_7, v_21_6, v_21_5, v_21_4, v_21_3, v_21_2, v_21_1] = v_21 := by decide +kernel
+  rwa [he] at hp
+
+end Paper20.Cert.RContent36.Tree

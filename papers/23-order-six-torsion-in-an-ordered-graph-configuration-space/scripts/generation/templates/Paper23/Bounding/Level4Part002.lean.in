@@ -1,0 +1,312 @@
+import Paper23.Bounding.Level3Part002
+import Paper23.BoundingBucketSupport
+import Paper23.CertificateChecks
+set_option maxRecDepth 1000000
+set_option maxHeartbeats 0
+set_option Elab.async false
+namespace Paper23.Bounding
+open Cubical CertificateData CertificateChecks
+attribute [local irreducible] codeChain bucketChain
+noncomputable def boundingNode4_16Part0 : BucketVector := @@GENERATED_RHS:boundingNode4_16Part0@@
+noncomputable def boundingNode4_16Part1 : BucketVector := @@GENERATED_RHS:boundingNode4_16Part1@@
+noncomputable def boundingNode4_16Part2 : BucketVector := @@GENERATED_RHS:boundingNode4_16Part2@@
+noncomputable def boundingNode4_16Part3 : BucketVector := @@GENERATED_RHS:boundingNode4_16Part3@@
+noncomputable def boundingNode4_16Part4 : BucketVector := @@GENERATED_RHS:boundingNode4_16Part4@@
+noncomputable def boundingNode4_16Bucket272Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_16Bucket272Part0@@
+noncomputable def boundingNode4_16Bucket272Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_16Bucket272Part1@@
+noncomputable def boundingNode4_16Bucket272 : List (ℕ × ℤ) := boundingNode4_16Bucket272Part0 ++ boundingNode4_16Bucket272Part1
+noncomputable def boundingNode4_16Bucket273Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_16Bucket273Part0@@
+noncomputable def boundingNode4_16Bucket273Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_16Bucket273Part1@@
+noncomputable def boundingNode4_16Bucket273 : List (ℕ × ℤ) := boundingNode4_16Bucket273Part0 ++ boundingNode4_16Bucket273Part1
+noncomputable def boundingNode4_16Part5 : BucketVector := @@GENERATED_RHS:boundingNode4_16Part5@@
+noncomputable def boundingNode4_16Part6 : BucketVector := @@GENERATED_RHS:boundingNode4_16Part6@@
+noncomputable def boundingNode4_16Part7 : BucketVector := @@GENERATED_RHS:boundingNode4_16Part7@@
+noncomputable def boundingNode4_16Bucket281Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_16Bucket281Part0@@
+noncomputable def boundingNode4_16Bucket281Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_16Bucket281Part1@@
+noncomputable def boundingNode4_16Bucket281 : List (ℕ × ℤ) := boundingNode4_16Bucket281Part0 ++ boundingNode4_16Bucket281Part1
+noncomputable def boundingNode4_16Part8 : BucketVector := @@GENERATED_RHS:boundingNode4_16Part8@@
+noncomputable def boundingNode4_16Part9 : BucketVector := @@GENERATED_RHS:boundingNode4_16Part9@@
+noncomputable def boundingNode4_16Part10 : BucketVector := @@GENERATED_RHS:boundingNode4_16Part10@@
+noncomputable def boundingNode4_16Part11 : BucketVector := @@GENERATED_RHS:boundingNode4_16Part11@@
+noncomputable def boundingNode4_16Bucket316Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_16Bucket316Part0@@
+noncomputable def boundingNode4_16Bucket316Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_16Bucket316Part1@@
+noncomputable def boundingNode4_16Bucket316 : List (ℕ × ℤ) := boundingNode4_16Bucket316Part0 ++ boundingNode4_16Bucket316Part1
+noncomputable def boundingNode4_16Part12 : BucketVector := @@GENERATED_RHS:boundingNode4_16Part12@@
+noncomputable def boundingNode4_16Part13 : BucketVector := @@GENERATED_RHS:boundingNode4_16Part13@@
+noncomputable def boundingNode4_16Part14 : BucketVector := @@GENERATED_RHS:boundingNode4_16Part14@@
+noncomputable def boundingNode4_16Part15 : BucketVector := @@GENERATED_RHS:boundingNode4_16Part15@@
+noncomputable def boundingNode4_16Part16 : BucketVector := @@GENERATED_RHS:boundingNode4_16Part16@@
+noncomputable def boundingNode4_16 : BucketVector := boundingNode4_16Part0 ++ boundingNode4_16Part1 ++ boundingNode4_16Part2 ++ boundingNode4_16Part3 ++ boundingNode4_16Part4 ++ boundingNode4_16Part5 ++ boundingNode4_16Part6 ++ boundingNode4_16Part7 ++ boundingNode4_16Part8 ++ boundingNode4_16Part9 ++ boundingNode4_16Part10 ++ boundingNode4_16Part11 ++ boundingNode4_16Part12 ++ boundingNode4_16Part13 ++ boundingNode4_16Part14 ++ boundingNode4_16Part15 ++ boundingNode4_16Part16
+noncomputable def boundingSource4_16 : RawChain := boundingSource3_32 + boundingSource3_33
+noncomputable def boundingTarget4_16 : RawChain := boundingTarget3_32 + boundingTarget3_33
+theorem boundingNode4_16_check : mergeBuckets (packBuckets boundingNode3_32) (packBuckets boundingNode3_33) = boundingNode4_16 := by
+  exact eq_of_beq (by decide +kernel)
+theorem boundingNode4_16_chain : bucketChain boundingNode4_16 = boundary boundingSource4_16 + (-6 : ℤ) • boundingTarget4_16 := by
+  simpa only [boundingSource4_16, boundingTarget4_16, add_zero] using (bucket_node_sound (packBuckets boundingNode3_32) (packBuckets boundingNode3_33) boundingNode4_16
+    (boundingSource3_32) (boundingSource3_33) (boundingTarget3_32) (boundingTarget3_33) (packed_node_sound boundingNode3_32 (boundingSource3_32) (boundingTarget3_32) boundingNode3_32_chain) (packed_node_sound boundingNode3_33 (boundingSource3_33) (boundingTarget3_33) boundingNode3_33_chain) boundingNode4_16_check)
+theorem boundingNode4_16_mem : boundingSource4_16 ∈ Chains 3 := (Chains 3).add_mem boundingNode3_32_mem boundingNode3_33_mem
+noncomputable def boundingNode4_17Part0 : BucketVector := @@GENERATED_RHS:boundingNode4_17Part0@@
+noncomputable def boundingNode4_17Part1 : BucketVector := @@GENERATED_RHS:boundingNode4_17Part1@@
+noncomputable def boundingNode4_17Part2 : BucketVector := @@GENERATED_RHS:boundingNode4_17Part2@@
+noncomputable def boundingNode4_17Part3 : BucketVector := @@GENERATED_RHS:boundingNode4_17Part3@@
+noncomputable def boundingNode4_17Part4 : BucketVector := @@GENERATED_RHS:boundingNode4_17Part4@@
+noncomputable def boundingNode4_17Part5 : BucketVector := @@GENERATED_RHS:boundingNode4_17Part5@@
+noncomputable def boundingNode4_17Part6 : BucketVector := @@GENERATED_RHS:boundingNode4_17Part6@@
+noncomputable def boundingNode4_17Part7 : BucketVector := @@GENERATED_RHS:boundingNode4_17Part7@@
+noncomputable def boundingNode4_17Bucket317Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_17Bucket317Part0@@
+noncomputable def boundingNode4_17Bucket317Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_17Bucket317Part1@@
+noncomputable def boundingNode4_17Bucket317 : List (ℕ × ℤ) := boundingNode4_17Bucket317Part0 ++ boundingNode4_17Bucket317Part1
+noncomputable def boundingNode4_17Bucket318Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_17Bucket318Part0@@
+noncomputable def boundingNode4_17Bucket318Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_17Bucket318Part1@@
+noncomputable def boundingNode4_17Bucket318 : List (ℕ × ℤ) := boundingNode4_17Bucket318Part0 ++ boundingNode4_17Bucket318Part1
+noncomputable def boundingNode4_17Bucket319Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_17Bucket319Part0@@
+noncomputable def boundingNode4_17Bucket319Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_17Bucket319Part1@@
+noncomputable def boundingNode4_17Bucket319 : List (ℕ × ℤ) := boundingNode4_17Bucket319Part0 ++ boundingNode4_17Bucket319Part1
+noncomputable def boundingNode4_17Bucket320Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_17Bucket320Part0@@
+noncomputable def boundingNode4_17Bucket320Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_17Bucket320Part1@@
+noncomputable def boundingNode4_17Bucket320 : List (ℕ × ℤ) := boundingNode4_17Bucket320Part0 ++ boundingNode4_17Bucket320Part1
+noncomputable def boundingNode4_17Bucket321Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_17Bucket321Part0@@
+noncomputable def boundingNode4_17Bucket321Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_17Bucket321Part1@@
+noncomputable def boundingNode4_17Bucket321 : List (ℕ × ℤ) := boundingNode4_17Bucket321Part0 ++ boundingNode4_17Bucket321Part1
+noncomputable def boundingNode4_17Bucket322Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_17Bucket322Part0@@
+noncomputable def boundingNode4_17Bucket322Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_17Bucket322Part1@@
+noncomputable def boundingNode4_17Bucket322 : List (ℕ × ℤ) := boundingNode4_17Bucket322Part0 ++ boundingNode4_17Bucket322Part1
+noncomputable def boundingNode4_17Bucket323Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_17Bucket323Part0@@
+noncomputable def boundingNode4_17Bucket323Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_17Bucket323Part1@@
+noncomputable def boundingNode4_17Bucket323 : List (ℕ × ℤ) := boundingNode4_17Bucket323Part0 ++ boundingNode4_17Bucket323Part1
+noncomputable def boundingNode4_17Part8 : BucketVector := @@GENERATED_RHS:boundingNode4_17Part8@@
+noncomputable def boundingNode4_17Part9 : BucketVector := @@GENERATED_RHS:boundingNode4_17Part9@@
+noncomputable def boundingNode4_17Part10 : BucketVector := @@GENERATED_RHS:boundingNode4_17Part10@@
+noncomputable def boundingNode4_17Part11 : BucketVector := @@GENERATED_RHS:boundingNode4_17Part11@@
+noncomputable def boundingNode4_17Part12 : BucketVector := @@GENERATED_RHS:boundingNode4_17Part12@@
+noncomputable def boundingNode4_17 : BucketVector := boundingNode4_17Part0 ++ boundingNode4_17Part1 ++ boundingNode4_17Part2 ++ boundingNode4_17Part3 ++ boundingNode4_17Part4 ++ boundingNode4_17Part5 ++ boundingNode4_17Part6 ++ boundingNode4_17Part7 ++ boundingNode4_17Part8 ++ boundingNode4_17Part9 ++ boundingNode4_17Part10 ++ boundingNode4_17Part11 ++ boundingNode4_17Part12
+noncomputable def boundingSource4_17 : RawChain := boundingSource3_34 + boundingSource3_35
+noncomputable def boundingTarget4_17 : RawChain := boundingTarget3_34 + boundingTarget3_35
+theorem boundingNode4_17_check : mergeBuckets (packBuckets boundingNode3_34) (packBuckets boundingNode3_35) = boundingNode4_17 := by
+  exact eq_of_beq (by decide +kernel)
+theorem boundingNode4_17_chain : bucketChain boundingNode4_17 = boundary boundingSource4_17 + (-6 : ℤ) • boundingTarget4_17 := by
+  simpa only [boundingSource4_17, boundingTarget4_17, add_zero] using (bucket_node_sound (packBuckets boundingNode3_34) (packBuckets boundingNode3_35) boundingNode4_17
+    (boundingSource3_34) (boundingSource3_35) (boundingTarget3_34) (boundingTarget3_35) (packed_node_sound boundingNode3_34 (boundingSource3_34) (boundingTarget3_34) boundingNode3_34_chain) (packed_node_sound boundingNode3_35 (boundingSource3_35) (boundingTarget3_35) boundingNode3_35_chain) boundingNode4_17_check)
+theorem boundingNode4_17_mem : boundingSource4_17 ∈ Chains 3 := (Chains 3).add_mem boundingNode3_34_mem boundingNode3_35_mem
+noncomputable def boundingNode4_18Part0 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part0@@
+noncomputable def boundingNode4_18Part1 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part1@@
+noncomputable def boundingNode4_18Part2 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part2@@
+noncomputable def boundingNode4_18Part3 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part3@@
+noncomputable def boundingNode4_18Part4 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part4@@
+noncomputable def boundingNode4_18Part5 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part5@@
+noncomputable def boundingNode4_18Part6 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part6@@
+noncomputable def boundingNode4_18Bucket324Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_18Bucket324Part0@@
+noncomputable def boundingNode4_18Bucket324Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_18Bucket324Part1@@
+noncomputable def boundingNode4_18Bucket324 : List (ℕ × ℤ) := boundingNode4_18Bucket324Part0 ++ boundingNode4_18Bucket324Part1
+noncomputable def boundingNode4_18Part7 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part7@@
+noncomputable def boundingNode4_18Bucket326Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_18Bucket326Part0@@
+noncomputable def boundingNode4_18Bucket326Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_18Bucket326Part1@@
+noncomputable def boundingNode4_18Bucket326 : List (ℕ × ℤ) := boundingNode4_18Bucket326Part0 ++ boundingNode4_18Bucket326Part1
+noncomputable def boundingNode4_18Bucket327Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_18Bucket327Part0@@
+noncomputable def boundingNode4_18Bucket327Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_18Bucket327Part1@@
+noncomputable def boundingNode4_18Bucket327 : List (ℕ × ℤ) := boundingNode4_18Bucket327Part0 ++ boundingNode4_18Bucket327Part1
+noncomputable def boundingNode4_18Part8 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part8@@
+noncomputable def boundingNode4_18Part9 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part9@@
+noncomputable def boundingNode4_18Part10 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part10@@
+noncomputable def boundingNode4_18Part11 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part11@@
+noncomputable def boundingNode4_18Part12 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part12@@
+noncomputable def boundingNode4_18Part13 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part13@@
+noncomputable def boundingNode4_18Part14 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part14@@
+noncomputable def boundingNode4_18Part15 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part15@@
+noncomputable def boundingNode4_18Part16 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part16@@
+noncomputable def boundingNode4_18Part17 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part17@@
+noncomputable def boundingNode4_18Part18 : BucketVector := @@GENERATED_RHS:boundingNode4_18Part18@@
+noncomputable def boundingNode4_18 : BucketVector := boundingNode4_18Part0 ++ boundingNode4_18Part1 ++ boundingNode4_18Part2 ++ boundingNode4_18Part3 ++ boundingNode4_18Part4 ++ boundingNode4_18Part5 ++ boundingNode4_18Part6 ++ boundingNode4_18Part7 ++ boundingNode4_18Part8 ++ boundingNode4_18Part9 ++ boundingNode4_18Part10 ++ boundingNode4_18Part11 ++ boundingNode4_18Part12 ++ boundingNode4_18Part13 ++ boundingNode4_18Part14 ++ boundingNode4_18Part15 ++ boundingNode4_18Part16 ++ boundingNode4_18Part17 ++ boundingNode4_18Part18
+noncomputable def boundingSource4_18 : RawChain := boundingSource3_36 + boundingSource3_37
+noncomputable def boundingTarget4_18 : RawChain := boundingTarget3_36 + boundingTarget3_37
+theorem boundingNode4_18_check : mergeBuckets (packBuckets boundingNode3_36) (packBuckets boundingNode3_37) = boundingNode4_18 := by
+  exact eq_of_beq (by decide +kernel)
+theorem boundingNode4_18_chain : bucketChain boundingNode4_18 = boundary boundingSource4_18 + (-6 : ℤ) • boundingTarget4_18 := by
+  simpa only [boundingSource4_18, boundingTarget4_18, add_zero] using (bucket_node_sound (packBuckets boundingNode3_36) (packBuckets boundingNode3_37) boundingNode4_18
+    (boundingSource3_36) (boundingSource3_37) (boundingTarget3_36) (boundingTarget3_37) (packed_node_sound boundingNode3_36 (boundingSource3_36) (boundingTarget3_36) boundingNode3_36_chain) (packed_node_sound boundingNode3_37 (boundingSource3_37) (boundingTarget3_37) boundingNode3_37_chain) boundingNode4_18_check)
+theorem boundingNode4_18_mem : boundingSource4_18 ∈ Chains 3 := (Chains 3).add_mem boundingNode3_36_mem boundingNode3_37_mem
+noncomputable def boundingNode4_19Part0 : BucketVector := @@GENERATED_RHS:boundingNode4_19Part0@@
+noncomputable def boundingNode4_19Part1 : BucketVector := @@GENERATED_RHS:boundingNode4_19Part1@@
+noncomputable def boundingNode4_19Part2 : BucketVector := @@GENERATED_RHS:boundingNode4_19Part2@@
+noncomputable def boundingNode4_19Part3 : BucketVector := @@GENERATED_RHS:boundingNode4_19Part3@@
+noncomputable def boundingNode4_19Part4 : BucketVector := @@GENERATED_RHS:boundingNode4_19Part4@@
+noncomputable def boundingNode4_19Part5 : BucketVector := @@GENERATED_RHS:boundingNode4_19Part5@@
+noncomputable def boundingNode4_19Part6 : BucketVector := @@GENERATED_RHS:boundingNode4_19Part6@@
+noncomputable def boundingNode4_19Bucket337Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_19Bucket337Part0@@
+noncomputable def boundingNode4_19Bucket337Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_19Bucket337Part1@@
+noncomputable def boundingNode4_19Bucket337 : List (ℕ × ℤ) := boundingNode4_19Bucket337Part0 ++ boundingNode4_19Bucket337Part1
+noncomputable def boundingNode4_19Bucket338Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_19Bucket338Part0@@
+noncomputable def boundingNode4_19Bucket338Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_19Bucket338Part1@@
+noncomputable def boundingNode4_19Bucket338 : List (ℕ × ℤ) := boundingNode4_19Bucket338Part0 ++ boundingNode4_19Bucket338Part1
+noncomputable def boundingNode4_19Bucket339Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_19Bucket339Part0@@
+noncomputable def boundingNode4_19Bucket339Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_19Bucket339Part1@@
+noncomputable def boundingNode4_19Bucket339 : List (ℕ × ℤ) := boundingNode4_19Bucket339Part0 ++ boundingNode4_19Bucket339Part1
+noncomputable def boundingNode4_19Part7 : BucketVector := @@GENERATED_RHS:boundingNode4_19Part7@@
+noncomputable def boundingNode4_19Bucket343Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_19Bucket343Part0@@
+noncomputable def boundingNode4_19Bucket343Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_19Bucket343Part1@@
+noncomputable def boundingNode4_19Bucket343 : List (ℕ × ℤ) := boundingNode4_19Bucket343Part0 ++ boundingNode4_19Bucket343Part1
+noncomputable def boundingNode4_19Part8 : BucketVector := @@GENERATED_RHS:boundingNode4_19Part8@@
+noncomputable def boundingNode4_19Part9 : BucketVector := @@GENERATED_RHS:boundingNode4_19Part9@@
+noncomputable def boundingNode4_19Part10 : BucketVector := @@GENERATED_RHS:boundingNode4_19Part10@@
+noncomputable def boundingNode4_19Part11 : BucketVector := @@GENERATED_RHS:boundingNode4_19Part11@@
+noncomputable def boundingNode4_19Part12 : BucketVector := @@GENERATED_RHS:boundingNode4_19Part12@@
+noncomputable def boundingNode4_19Part13 : BucketVector := @@GENERATED_RHS:boundingNode4_19Part13@@
+noncomputable def boundingNode4_19Part14 : BucketVector := @@GENERATED_RHS:boundingNode4_19Part14@@
+noncomputable def boundingNode4_19 : BucketVector := boundingNode4_19Part0 ++ boundingNode4_19Part1 ++ boundingNode4_19Part2 ++ boundingNode4_19Part3 ++ boundingNode4_19Part4 ++ boundingNode4_19Part5 ++ boundingNode4_19Part6 ++ boundingNode4_19Part7 ++ boundingNode4_19Part8 ++ boundingNode4_19Part9 ++ boundingNode4_19Part10 ++ boundingNode4_19Part11 ++ boundingNode4_19Part12 ++ boundingNode4_19Part13 ++ boundingNode4_19Part14
+noncomputable def boundingSource4_19 : RawChain := boundingSource3_38 + boundingSource3_39
+noncomputable def boundingTarget4_19 : RawChain := boundingTarget3_38 + boundingTarget3_39
+theorem boundingNode4_19_check : mergeBuckets (packBuckets boundingNode3_38) (packBuckets boundingNode3_39) = boundingNode4_19 := by
+  exact eq_of_beq (by decide +kernel)
+theorem boundingNode4_19_chain : bucketChain boundingNode4_19 = boundary boundingSource4_19 + (-6 : ℤ) • boundingTarget4_19 := by
+  simpa only [boundingSource4_19, boundingTarget4_19, add_zero] using (bucket_node_sound (packBuckets boundingNode3_38) (packBuckets boundingNode3_39) boundingNode4_19
+    (boundingSource3_38) (boundingSource3_39) (boundingTarget3_38) (boundingTarget3_39) (packed_node_sound boundingNode3_38 (boundingSource3_38) (boundingTarget3_38) boundingNode3_38_chain) (packed_node_sound boundingNode3_39 (boundingSource3_39) (boundingTarget3_39) boundingNode3_39_chain) boundingNode4_19_check)
+theorem boundingNode4_19_mem : boundingSource4_19 ∈ Chains 3 := (Chains 3).add_mem boundingNode3_38_mem boundingNode3_39_mem
+noncomputable def boundingNode4_20Part0 : BucketVector := @@GENERATED_RHS:boundingNode4_20Part0@@
+noncomputable def boundingNode4_20Part1 : BucketVector := @@GENERATED_RHS:boundingNode4_20Part1@@
+noncomputable def boundingNode4_20Part2 : BucketVector := @@GENERATED_RHS:boundingNode4_20Part2@@
+noncomputable def boundingNode4_20Part3 : BucketVector := @@GENERATED_RHS:boundingNode4_20Part3@@
+noncomputable def boundingNode4_20Part4 : BucketVector := @@GENERATED_RHS:boundingNode4_20Part4@@
+noncomputable def boundingNode4_20Part5 : BucketVector := @@GENERATED_RHS:boundingNode4_20Part5@@
+noncomputable def boundingNode4_20Part6 : BucketVector := @@GENERATED_RHS:boundingNode4_20Part6@@
+noncomputable def boundingNode4_20Part7 : BucketVector := @@GENERATED_RHS:boundingNode4_20Part7@@
+noncomputable def boundingNode4_20Part8 : BucketVector := @@GENERATED_RHS:boundingNode4_20Part8@@
+noncomputable def boundingNode4_20Part9 : BucketVector := @@GENERATED_RHS:boundingNode4_20Part9@@
+noncomputable def boundingNode4_20Part10 : BucketVector := @@GENERATED_RHS:boundingNode4_20Part10@@
+noncomputable def boundingNode4_20Part11 : BucketVector := @@GENERATED_RHS:boundingNode4_20Part11@@
+noncomputable def boundingNode4_20Bucket387Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_20Bucket387Part0@@
+noncomputable def boundingNode4_20Bucket387Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_20Bucket387Part1@@
+noncomputable def boundingNode4_20Bucket387 : List (ℕ × ℤ) := boundingNode4_20Bucket387Part0 ++ boundingNode4_20Bucket387Part1
+noncomputable def boundingNode4_20Bucket388Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_20Bucket388Part0@@
+noncomputable def boundingNode4_20Bucket388Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_20Bucket388Part1@@
+noncomputable def boundingNode4_20Bucket388 : List (ℕ × ℤ) := boundingNode4_20Bucket388Part0 ++ boundingNode4_20Bucket388Part1
+noncomputable def boundingNode4_20Bucket389Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_20Bucket389Part0@@
+noncomputable def boundingNode4_20Bucket389Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_20Bucket389Part1@@
+noncomputable def boundingNode4_20Bucket389 : List (ℕ × ℤ) := boundingNode4_20Bucket389Part0 ++ boundingNode4_20Bucket389Part1
+noncomputable def boundingNode4_20Bucket390Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_20Bucket390Part0@@
+noncomputable def boundingNode4_20Bucket390Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_20Bucket390Part1@@
+noncomputable def boundingNode4_20Bucket390 : List (ℕ × ℤ) := boundingNode4_20Bucket390Part0 ++ boundingNode4_20Bucket390Part1
+noncomputable def boundingNode4_20Part12 : BucketVector := @@GENERATED_RHS:boundingNode4_20Part12@@
+noncomputable def boundingNode4_20Part13 : BucketVector := @@GENERATED_RHS:boundingNode4_20Part13@@
+noncomputable def boundingNode4_20Part14 : BucketVector := @@GENERATED_RHS:boundingNode4_20Part14@@
+noncomputable def boundingNode4_20Part15 : BucketVector := @@GENERATED_RHS:boundingNode4_20Part15@@
+noncomputable def boundingNode4_20Part16 : BucketVector := @@GENERATED_RHS:boundingNode4_20Part16@@
+noncomputable def boundingNode4_20 : BucketVector := boundingNode4_20Part0 ++ boundingNode4_20Part1 ++ boundingNode4_20Part2 ++ boundingNode4_20Part3 ++ boundingNode4_20Part4 ++ boundingNode4_20Part5 ++ boundingNode4_20Part6 ++ boundingNode4_20Part7 ++ boundingNode4_20Part8 ++ boundingNode4_20Part9 ++ boundingNode4_20Part10 ++ boundingNode4_20Part11 ++ boundingNode4_20Part12 ++ boundingNode4_20Part13 ++ boundingNode4_20Part14 ++ boundingNode4_20Part15 ++ boundingNode4_20Part16
+noncomputable def boundingSource4_20 : RawChain := boundingSource3_40 + boundingSource3_41
+noncomputable def boundingTarget4_20 : RawChain := boundingTarget3_40 + boundingTarget3_41
+theorem boundingNode4_20_check : mergeBuckets (packBuckets boundingNode3_40) (packBuckets boundingNode3_41) = boundingNode4_20 := by
+  exact eq_of_beq (by decide +kernel)
+theorem boundingNode4_20_chain : bucketChain boundingNode4_20 = boundary boundingSource4_20 + (-6 : ℤ) • boundingTarget4_20 := by
+  simpa only [boundingSource4_20, boundingTarget4_20, add_zero] using (bucket_node_sound (packBuckets boundingNode3_40) (packBuckets boundingNode3_41) boundingNode4_20
+    (boundingSource3_40) (boundingSource3_41) (boundingTarget3_40) (boundingTarget3_41) (packed_node_sound boundingNode3_40 (boundingSource3_40) (boundingTarget3_40) boundingNode3_40_chain) (packed_node_sound boundingNode3_41 (boundingSource3_41) (boundingTarget3_41) boundingNode3_41_chain) boundingNode4_20_check)
+theorem boundingNode4_20_mem : boundingSource4_20 ∈ Chains 3 := (Chains 3).add_mem boundingNode3_40_mem boundingNode3_41_mem
+noncomputable def boundingNode4_21Part0 : BucketVector := @@GENERATED_RHS:boundingNode4_21Part0@@
+noncomputable def boundingNode4_21Part1 : BucketVector := @@GENERATED_RHS:boundingNode4_21Part1@@
+noncomputable def boundingNode4_21Part2 : BucketVector := @@GENERATED_RHS:boundingNode4_21Part2@@
+noncomputable def boundingNode4_21Part3 : BucketVector := @@GENERATED_RHS:boundingNode4_21Part3@@
+noncomputable def boundingNode4_21Part4 : BucketVector := @@GENERATED_RHS:boundingNode4_21Part4@@
+noncomputable def boundingNode4_21Part5 : BucketVector := @@GENERATED_RHS:boundingNode4_21Part5@@
+noncomputable def boundingNode4_21Part6 : BucketVector := @@GENERATED_RHS:boundingNode4_21Part6@@
+noncomputable def boundingNode4_21Bucket391Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_21Bucket391Part0@@
+noncomputable def boundingNode4_21Bucket391Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_21Bucket391Part1@@
+noncomputable def boundingNode4_21Bucket391 : List (ℕ × ℤ) := boundingNode4_21Bucket391Part0 ++ boundingNode4_21Bucket391Part1
+noncomputable def boundingNode4_21Bucket392Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_21Bucket392Part0@@
+noncomputable def boundingNode4_21Bucket392Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_21Bucket392Part1@@
+noncomputable def boundingNode4_21Bucket392 : List (ℕ × ℤ) := boundingNode4_21Bucket392Part0 ++ boundingNode4_21Bucket392Part1
+noncomputable def boundingNode4_21Bucket393Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_21Bucket393Part0@@
+noncomputable def boundingNode4_21Bucket393Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_21Bucket393Part1@@
+noncomputable def boundingNode4_21Bucket393 : List (ℕ × ℤ) := boundingNode4_21Bucket393Part0 ++ boundingNode4_21Bucket393Part1
+noncomputable def boundingNode4_21Bucket394Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_21Bucket394Part0@@
+noncomputable def boundingNode4_21Bucket394Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_21Bucket394Part1@@
+noncomputable def boundingNode4_21Bucket394 : List (ℕ × ℤ) := boundingNode4_21Bucket394Part0 ++ boundingNode4_21Bucket394Part1
+noncomputable def boundingNode4_21Part7 : BucketVector := @@GENERATED_RHS:boundingNode4_21Part7@@
+noncomputable def boundingNode4_21Bucket395Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_21Bucket395Part0@@
+noncomputable def boundingNode4_21Bucket395Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_21Bucket395Part1@@
+noncomputable def boundingNode4_21Bucket395 : List (ℕ × ℤ) := boundingNode4_21Bucket395Part0 ++ boundingNode4_21Bucket395Part1
+noncomputable def boundingNode4_21Bucket396Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_21Bucket396Part0@@
+noncomputable def boundingNode4_21Bucket396Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_21Bucket396Part1@@
+noncomputable def boundingNode4_21Bucket396 : List (ℕ × ℤ) := boundingNode4_21Bucket396Part0 ++ boundingNode4_21Bucket396Part1
+noncomputable def boundingNode4_21Bucket397Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_21Bucket397Part0@@
+noncomputable def boundingNode4_21Bucket397Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_21Bucket397Part1@@
+noncomputable def boundingNode4_21Bucket397 : List (ℕ × ℤ) := boundingNode4_21Bucket397Part0 ++ boundingNode4_21Bucket397Part1
+noncomputable def boundingNode4_21Part8 : BucketVector := @@GENERATED_RHS:boundingNode4_21Part8@@
+noncomputable def boundingNode4_21Part9 : BucketVector := @@GENERATED_RHS:boundingNode4_21Part9@@
+noncomputable def boundingNode4_21Part10 : BucketVector := @@GENERATED_RHS:boundingNode4_21Part10@@
+noncomputable def boundingNode4_21Part11 : BucketVector := @@GENERATED_RHS:boundingNode4_21Part11@@
+noncomputable def boundingNode4_21 : BucketVector := boundingNode4_21Part0 ++ boundingNode4_21Part1 ++ boundingNode4_21Part2 ++ boundingNode4_21Part3 ++ boundingNode4_21Part4 ++ boundingNode4_21Part5 ++ boundingNode4_21Part6 ++ boundingNode4_21Part7 ++ boundingNode4_21Part8 ++ boundingNode4_21Part9 ++ boundingNode4_21Part10 ++ boundingNode4_21Part11
+noncomputable def boundingSource4_21 : RawChain := boundingSource3_42 + boundingSource3_43
+noncomputable def boundingTarget4_21 : RawChain := boundingTarget3_42 + boundingTarget3_43
+theorem boundingNode4_21_check : mergeBuckets (packBuckets boundingNode3_42) (packBuckets boundingNode3_43) = boundingNode4_21 := by
+  exact eq_of_beq (by decide +kernel)
+theorem boundingNode4_21_chain : bucketChain boundingNode4_21 = boundary boundingSource4_21 + (-6 : ℤ) • boundingTarget4_21 := by
+  simpa only [boundingSource4_21, boundingTarget4_21, add_zero] using (bucket_node_sound (packBuckets boundingNode3_42) (packBuckets boundingNode3_43) boundingNode4_21
+    (boundingSource3_42) (boundingSource3_43) (boundingTarget3_42) (boundingTarget3_43) (packed_node_sound boundingNode3_42 (boundingSource3_42) (boundingTarget3_42) boundingNode3_42_chain) (packed_node_sound boundingNode3_43 (boundingSource3_43) (boundingTarget3_43) boundingNode3_43_chain) boundingNode4_21_check)
+theorem boundingNode4_21_mem : boundingSource4_21 ∈ Chains 3 := (Chains 3).add_mem boundingNode3_42_mem boundingNode3_43_mem
+noncomputable def boundingNode4_22Part0 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part0@@
+noncomputable def boundingNode4_22Part1 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part1@@
+noncomputable def boundingNode4_22Part2 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part2@@
+noncomputable def boundingNode4_22Part3 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part3@@
+noncomputable def boundingNode4_22Part4 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part4@@
+noncomputable def boundingNode4_22Part5 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part5@@
+noncomputable def boundingNode4_22Part6 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part6@@
+noncomputable def boundingNode4_22Part7 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part7@@
+noncomputable def boundingNode4_22Part8 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part8@@
+noncomputable def boundingNode4_22Part9 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part9@@
+noncomputable def boundingNode4_22Part10 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part10@@
+noncomputable def boundingNode4_22Part11 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part11@@
+noncomputable def boundingNode4_22Part12 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part12@@
+noncomputable def boundingNode4_22Part13 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part13@@
+noncomputable def boundingNode4_22Part14 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part14@@
+noncomputable def boundingNode4_22Part15 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part15@@
+noncomputable def boundingNode4_22Bucket408Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_22Bucket408Part0@@
+noncomputable def boundingNode4_22Bucket408Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_22Bucket408Part1@@
+noncomputable def boundingNode4_22Bucket408 : List (ℕ × ℤ) := boundingNode4_22Bucket408Part0 ++ boundingNode4_22Bucket408Part1
+noncomputable def boundingNode4_22Bucket409Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_22Bucket409Part0@@
+noncomputable def boundingNode4_22Bucket409Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode4_22Bucket409Part1@@
+noncomputable def boundingNode4_22Bucket409 : List (ℕ × ℤ) := boundingNode4_22Bucket409Part0 ++ boundingNode4_22Bucket409Part1
+noncomputable def boundingNode4_22Part16 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part16@@
+noncomputable def boundingNode4_22Part17 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part17@@
+noncomputable def boundingNode4_22Part18 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part18@@
+noncomputable def boundingNode4_22Part19 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part19@@
+noncomputable def boundingNode4_22Part20 : BucketVector := @@GENERATED_RHS:boundingNode4_22Part20@@
+noncomputable def boundingNode4_22 : BucketVector := boundingNode4_22Part0 ++ boundingNode4_22Part1 ++ boundingNode4_22Part2 ++ boundingNode4_22Part3 ++ boundingNode4_22Part4 ++ boundingNode4_22Part5 ++ boundingNode4_22Part6 ++ boundingNode4_22Part7 ++ boundingNode4_22Part8 ++ boundingNode4_22Part9 ++ boundingNode4_22Part10 ++ boundingNode4_22Part11 ++ boundingNode4_22Part12 ++ boundingNode4_22Part13 ++ boundingNode4_22Part14 ++ boundingNode4_22Part15 ++ boundingNode4_22Part16 ++ boundingNode4_22Part17 ++ boundingNode4_22Part18 ++ boundingNode4_22Part19 ++ boundingNode4_22Part20
+noncomputable def boundingSource4_22 : RawChain := boundingSource3_44 + boundingSource3_45
+noncomputable def boundingTarget4_22 : RawChain := boundingTarget3_44 + boundingTarget3_45
+theorem boundingNode4_22_check : mergeBuckets (packBuckets boundingNode3_44) (packBuckets boundingNode3_45) = boundingNode4_22 := by
+  exact eq_of_beq (by decide +kernel)
+theorem boundingNode4_22_chain : bucketChain boundingNode4_22 = boundary boundingSource4_22 + (-6 : ℤ) • boundingTarget4_22 := by
+  simpa only [boundingSource4_22, boundingTarget4_22, add_zero] using (bucket_node_sound (packBuckets boundingNode3_44) (packBuckets boundingNode3_45) boundingNode4_22
+    (boundingSource3_44) (boundingSource3_45) (boundingTarget3_44) (boundingTarget3_45) (packed_node_sound boundingNode3_44 (boundingSource3_44) (boundingTarget3_44) boundingNode3_44_chain) (packed_node_sound boundingNode3_45 (boundingSource3_45) (boundingTarget3_45) boundingNode3_45_chain) boundingNode4_22_check)
+theorem boundingNode4_22_mem : boundingSource4_22 ∈ Chains 3 := (Chains 3).add_mem boundingNode3_44_mem boundingNode3_45_mem
+noncomputable def boundingNode4_23Part0 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part0@@
+noncomputable def boundingNode4_23Part1 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part1@@
+noncomputable def boundingNode4_23Part2 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part2@@
+noncomputable def boundingNode4_23Part3 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part3@@
+noncomputable def boundingNode4_23Part4 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part4@@
+noncomputable def boundingNode4_23Part5 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part5@@
+noncomputable def boundingNode4_23Part6 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part6@@
+noncomputable def boundingNode4_23Part7 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part7@@
+noncomputable def boundingNode4_23Part8 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part8@@
+noncomputable def boundingNode4_23Part9 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part9@@
+noncomputable def boundingNode4_23Part10 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part10@@
+noncomputable def boundingNode4_23Part11 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part11@@
+noncomputable def boundingNode4_23Part12 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part12@@
+noncomputable def boundingNode4_23Part13 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part13@@
+noncomputable def boundingNode4_23Part14 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part14@@
+noncomputable def boundingNode4_23Part15 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part15@@
+noncomputable def boundingNode4_23Part16 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part16@@
+noncomputable def boundingNode4_23Part17 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part17@@
+noncomputable def boundingNode4_23Part18 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part18@@
+noncomputable def boundingNode4_23Part19 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part19@@
+noncomputable def boundingNode4_23Part20 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part20@@
+noncomputable def boundingNode4_23Part21 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part21@@
+noncomputable def boundingNode4_23Part22 : BucketVector := @@GENERATED_RHS:boundingNode4_23Part22@@
+noncomputable def boundingNode4_23 : BucketVector := boundingNode4_23Part0 ++ boundingNode4_23Part1 ++ boundingNode4_23Part2 ++ boundingNode4_23Part3 ++ boundingNode4_23Part4 ++ boundingNode4_23Part5 ++ boundingNode4_23Part6 ++ boundingNode4_23Part7 ++ boundingNode4_23Part8 ++ boundingNode4_23Part9 ++ boundingNode4_23Part10 ++ boundingNode4_23Part11 ++ boundingNode4_23Part12 ++ boundingNode4_23Part13 ++ boundingNode4_23Part14 ++ boundingNode4_23Part15 ++ boundingNode4_23Part16 ++ boundingNode4_23Part17 ++ boundingNode4_23Part18 ++ boundingNode4_23Part19 ++ boundingNode4_23Part20 ++ boundingNode4_23Part21 ++ boundingNode4_23Part22
+noncomputable def boundingSource4_23 : RawChain := boundingSource3_46 + boundingSource3_47
+noncomputable def boundingTarget4_23 : RawChain := boundingTarget3_46 + boundingTarget3_47
+theorem boundingNode4_23_check : mergeBuckets (packBuckets boundingNode3_46) (packBuckets boundingNode3_47) = boundingNode4_23 := by
+  exact eq_of_beq (by decide +kernel)
+theorem boundingNode4_23_chain : bucketChain boundingNode4_23 = boundary boundingSource4_23 + (-6 : ℤ) • boundingTarget4_23 := by
+  simpa only [boundingSource4_23, boundingTarget4_23, add_zero] using (bucket_node_sound (packBuckets boundingNode3_46) (packBuckets boundingNode3_47) boundingNode4_23
+    (boundingSource3_46) (boundingSource3_47) (boundingTarget3_46) (boundingTarget3_47) (packed_node_sound boundingNode3_46 (boundingSource3_46) (boundingTarget3_46) boundingNode3_46_chain) (packed_node_sound boundingNode3_47 (boundingSource3_47) (boundingTarget3_47) boundingNode3_47_chain) boundingNode4_23_check)
+theorem boundingNode4_23_mem : boundingSource4_23 ∈ Chains 3 := (Chains 3).add_mem boundingNode3_46_mem boundingNode3_47_mem
+end Paper23.Bounding

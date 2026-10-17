@@ -1,0 +1,454 @@
+{
+  "paper_id": "29",
+  "source_inventory": {
+    "paper_id": "29",
+    "source_url": "https://liuchliuch.github.io/repository/near-linear-label-complexity-for-active-huber-regression/",
+    "html_sha256": "b5a24fd1ac4fb6bb3542ff338df63a496ede1a5c7dc5807f4e8fcfaaeb6569bf",
+    "note": "Independent source inventory; generated proofs have not been accepted. Unnumbered substantive claims require additional review.",
+    "block_count": 16,
+    "proof_result_count": 15,
+    "results": [
+      {
+        "anchor": "S2.Thmtheorem1",
+        "kind": "theorem",
+        "label": "Theorem 2.1 (Nonadaptive upper bound).",
+        "statement": "[S2.Thmtheorem1] Theorem 2.1 (Nonadaptive upper bound).\n [S2.Thmtheorem1.p1] \nLet  $A\\in\\mathbb{R}^{n\\times d}$ , let  $r=\\operatorname{rank}(A)$ , and let  $0<\\varepsilon<1/2$ . There is a randomized algorithm such that the following holds for every fixed  $b\\in\\mathbb{R}^{n}$ . Its queried coordinates are fixed before any label is read and depend only on  $A$ ,  $\\varepsilon$ , and private randomness. It queries at most\n [S2.E3] \n $\\min\\left\\{n,Cr\\left(\\log^{6}(2n)+\\frac{\\log^{4}(2n)}{\\varepsilon^{2}}\\right)\\right\\}$ (2.3)\n\ndistinct coordinates of  $b$  and, with probability at least  $0.99$  over its private randomness, returns  $\\widehat{x}$  satisfying\n [S2.Ex1] \n $F_{b}(\\widehat{x})^{1/2}\\leq(1+\\varepsilon)\\min_{x\\in\\mathbb{R}^{d}}F_{b}(x)^{1/2}.$",
+        "fragment_sha256": "eb7e4dc32e9f9be8b5d27704a5ba536529655c65cfe85fd51e79736cf50010a6"
+      },
+      {
+        "anchor": "S2.Thmtheorem2",
+        "kind": "theorem",
+        "label": "Theorem 2.2 (Matching adaptive lower bound).",
+        "statement": "[S2.Thmtheorem2] Theorem 2.2 (Matching adaptive lower bound).\n [S2.Thmtheorem2.p1] \nThere is an absolute constant  $c>0$  such that the following holds. For all integers  $n,d,r$  with  $1\\leq r\\leq\\min\\{n,d\\}$  and every  $0<\\varepsilon\\leq 1/800$ , there is a fixed matrix  $A\\in\\mathbb{R}^{n\\times d}$  of rank exactly  $r$  such that every adaptive randomized algorithm that, for every fixed  $b\\in\\mathbb{R}^{n}$ , returns  $\\widehat{x}$  satisfying  $F_{b}(\\widehat{x})^{1/2}\\leq(1+\\varepsilon)\\min_{x}F_{b}(x)^{1/2}$  with probability at least  $0.99$  obeys\n [S2.E4] \n $\\sup_{b\\in\\mathbb{R}^{n}}\\mathbb{E}_{\\mathcal{R}}Q(A,b)\\geq c\\min\\left\\{n,\\frac{r}{\\varepsilon^{2}}\\right\\}.$ (2.4)\n\nHere  $Q$  may be a stopping-time query count and  $\\mathcal{R}$  is the algorithm’s private seed. Specifically,  $Q$  counts distinct queried coordinates. Repeated requests are permitted but can be answered from the algorithm’s cache and are not charged twice; set  $Q=\\infty$  on a run that never returns an output.",
+        "fragment_sha256": "747c76fb94e8893169efa7e01616659193c5755a281aa84985a078000893cf8b"
+      },
+      {
+        "anchor": "S2.Thmtheorem3",
+        "kind": "corollary",
+        "label": "Corollary 2.3 (Minimax label complexity).",
+        "statement": "[S2.Thmtheorem3] Corollary 2.3 (Minimax label complexity).\n [S2.Thmtheorem3.p1] \nFix  $0<\\varepsilon\\leq 1/800$  and  $1\\leq r\\leq\\min\\{n,d\\}$ . Let  $\\mathfrak{A}$  range over randomized algorithms that, for every fixed pair  $(A,b)$ , achieve the  $(1+\\varepsilon)$ -approximation to  $F_{b}^{1/2}$  in (2.2) with probability at least  $0.99$ , and define\n [S2.E5] \n $\\mathcal{Q}_{n,d,r}(\\varepsilon):=\\inf_{\\mathfrak{A}}\\ \\sup_{\\begin{subarray}{c}A\\in\\mathbb{R}^{n\\times d}:\\,\\operatorname{rank}(A)=r\\\\ b\\in\\mathbb{R}^{n}\\end{subarray}}\\mathbb{E}_{\\mathcal{R}}Q_{\\mathfrak{A}}(A,b),$ (2.5)\n\nwhere the expectation is over all algorithmic randomness. For absolute constants  $c,C>0$ ,\n [S2.EGx1] \n $\\displaystyle c\\min\\left\\{n,\\frac{r}{\\varepsilon^{2}}\\right\\}$  $\\displaystyle\\leq\\mathcal{Q}_{n,d,r}(\\varepsilon)$ \n\n $\\displaystyle\\leq\\min\\left\\{n,Cr\\left(\\log^{6}(2n)+\\frac{\\log^{4}(2n)}{\\varepsilon^{2}}\\right)\\right\\}.$ (2.6)\n\nThe upper algorithm is nonadaptive, whereas the lower bound holds against adaptive algorithms. Thus the minimax label complexity is  $\\widetilde{\\Theta}(\\min\\{n,r/\\varepsilon^{2}\\})$ .",
+        "fragment_sha256": "b775c572c86eadc01e5ec5b535a2bc279c54e8efd7d0a0cc09a6887d1eb88058"
+      },
+      {
+        "anchor": "S3.Thmtheorem1",
+        "kind": "lemma",
+        "label": "Lemma 3.1 (Huber triangle and increment inequalities).",
+        "statement": "[S3.Thmtheorem1] Lemma 3.1 (Huber triangle and increment inequalities).\n [S3.Thmtheorem1.p1] \nFor every  $s,t\\in\\mathbb{R}$ ,\n [S3.EGx2] \n $\\displaystyle\\psi_{H}(s+t)$  $\\displaystyle\\leq\\psi_{H}(s)+\\psi_{H}(t),$ (3.1)\n\n $\\displaystyle\\left\\lvert\\psi_{H}(s)-\\psi_{H}(t)\\right\\rvert$  $\\displaystyle\\leq\\psi_{H}(s-t),$ (3.2)\n\n $\\displaystyle\\left\\lvert H(s)-H(t)\\right\\rvert$  $\\displaystyle\\leq\\sqrt{H(s-t)}\\bigl(\\sqrt{H(s)}+\\sqrt{H(t)}\\bigr).$ (3.3)\n\nConsequently, for nonnegative weights  $w_{i}$  and vectors  $y,z$  of the same finite dimension,\n [S3.E4] \n $\\left(\\sum_{i}w_{i}H(y_{i}+z_{i})\\right)^{1/2}\\leq\\left(\\sum_{i}w_{i}H(y_{i})\\right)^{1/2}+\\left(\\sum_{i}w_{i}H(z_{i})\\right)^{1/2}.$ (3.4)",
+        "fragment_sha256": "99e9527f916d974094398eea19c7341e2d5b234b4f437f77d652741f9d239b85"
+      },
+      {
+        "anchor": "S3.Thmtheorem2",
+        "kind": "lemma",
+        "label": "Lemma 3.2 (Imported multiscale covering primitive).",
+        "statement": "[S3.Thmtheorem2] Lemma 3.2 (Imported multiscale covering primitive).\n [S3.Thmtheorem2.p1] \nFix  $\\alpha\\geq 1$ , and let  $\\mathcal{I}\\subset\\mathbb{Z}$  be a finite contiguous interval with  $\\left\\lvert\\mathcal{I}\\right\\rvert\\geq 4\\log(2N)$ . Suppose that  $\\{w^{(j)}:j\\in\\mathcal{I}\\}$  is an  $\\alpha$ -approximate Huber weight scheme, meaning that for every  $i$  and  $j\\in\\mathcal{I}$ ,\n [S3.E8] \n $\\frac{2^{j}}{\\alpha}\\leq\\frac{H(v_{i}(w^{(j)}))}{w_{i}^{(j)}v_{i}(w^{(j)})^{2}}\\leq\\alpha 2^{j},$ (3.8)\n\nand  $w_{i}^{(j+1)}\\leq\\alpha w_{i}^{(j)}$  whenever  $j,j+1\\in\\mathcal{I}$ . Put\n [S3.E9] \n $\\lambda_{i}^{(j)}:=w_{i}^{(j)}v_{i}(w^{(j)})^{2},\\qquad\\tau_{i}^{\\mathcal{I}}:=\\max_{j\\in\\mathcal{I}}\\lambda_{i}^{(j)},\\qquad k_{\\mathcal{I}}:=\\max\\mathcal{I}+1.$ (3.9)\n\nDefine the associated deterministic metric by\n [S3.E10] \n $d_{\\tau^{\\mathcal{I}}}(h,k):=\\max_{i\\leq N}\\sqrt{\\frac{H(a_{i}^{\\mathsf{T}}(h-k))}{\\tau_{i}^{\\mathcal{I}}}}.$ (3.10)\n\nThen  $\\sum_{i}\\lambda_{i}^{(j)}=r$ , and for a constant  $C_{\\alpha}$  depending only on  $\\alpha$ ,\n [S3.E11] \n $\\gamma_{2}\\!\\left(K_{2^{k_{\\mathcal{I}}}},d_{\\tau^{\\mathcal{I}}}\\right)\\leq C_{\\alpha}2^{k_{\\mathcal{I}}/2}\\log^{3/2}(2N).$ (3.11)\n\nThere is a universal numerical  $\\alpha_{0}$  for which such a scheme has a deterministic finite construction from  $(A,\\mathcal{I})$  in the exact-real model.",
+        "fragment_sha256": "18c9288e5923a77aa63e6e570f89a1a38df6065fa266db78a75c3a2afbad6443"
+      },
+      {
+        "anchor": "S3.Thmtheorem3",
+        "kind": "lemma",
+        "label": "Lemma 3.3 (Endpoint coverings).",
+        "statement": "[S3.Thmtheorem3] Lemma 3.3 (Endpoint coverings).\n [S3.Thmtheorem3.p1] \nFor  $p\\in\\{1,2\\}$ , the scores in (3.14) have total mass  $r$ . With\n [S3.E15] \n $d_{p}(h,k):=\\max_{i\\leq N}\\frac{\\left\\lvert a_{i}^{\\mathsf{T}}(h-k)\\right\\rvert^{p/2}}{\\sqrt{\\lambda_{i}^{(p)}}},$ (3.15)\n\nthey satisfy, for every  $S>0$ ,\n [S3.E16] \n $\\gamma_{2}\\bigl(\\{h:\\left\\lVert Ah\\right\\rVert_{p}^{p}\\leq S\\},d_{p}\\bigr)\\leq C\\sqrt{S}\\,\\log^{3/2}(2N).$ (3.16)",
+        "fragment_sha256": "69b25db74b9c76fb279d06a895c26a1a47202d8de4b736b29caf178dbb515565"
+      },
+      {
+        "anchor": "S3.Thmtheorem4",
+        "kind": "lemma",
+        "label": "Lemma 3.4 (All-radius label-oblivious Huber scores).",
+        "statement": "[S3.Thmtheorem4] Lemma 3.4 (All-radius label-oblivious Huber scores).\n [S3.Thmtheorem4.p1] \nThere are scores  $\\tau_{i}=\\tau_{i}(A)>0$ , computable from  $A$  alone, such that\n [S3.E17] \n $T:=\\sum_{i=1}^{N}\\tau_{i}\\leq Cr\\log(2N)$ (3.17)\n\nand, for\n [S3.E18] \n $d_{\\tau}(h,k):=\\max_{i\\leq N}\\sqrt{\\frac{H(a_{i}^{\\mathsf{T}}(h-k))}{\\tau_{i}}},$ (3.18)\n\none has, simultaneously for every  $R>0$ ,\n [S3.E19] \n $\\gamma_{2}(K_{R},d_{\\tau})\\leq C\\sqrt{R}\\,\\log^{3/2}(2N).$ (3.19)",
+        "fragment_sha256": "8d8d58a6f86dfffe3f1deefa3a3825870d7fc3cea92594d462765532bde53625"
+      },
+      {
+        "anchor": "S3.Thmtheorem5",
+        "kind": "lemma",
+        "label": "Lemma 3.5 (Unshifted expectation bound).",
+        "statement": "[S3.Thmtheorem5] Lemma 3.5 (Unshifted expectation bound).\n [S3.Thmtheorem5.p1] \nThere is an absolute constant  $C$  such that, whenever\n [S3.E21] \n $\\alpha:=C\\sqrt{\\frac{T\\log^{3}(2N)}{m}}\\leq 1,$ (3.21)\n\nthen, for every  $R>0$ ,\n [S3.E22] \n $\\mathbb{E}\\sup_{h\\in K_{R}}\\left\\lvert\\widehat{\\Phi}(h)-\\Phi(h)\\right\\rvert\\leq 2\\alpha R.$ (3.22)\n\nIn particular,\n [S3.E23] \n $\\mathbb{E}\\sup_{h\\in K_{R}}\\widehat{\\Phi}(h)\\leq 3R.$ (3.23)",
+        "fragment_sha256": "23aebf9740dccd3cf6a4e278d1263a5daa019fabac1e9053d8f537b0e0431150"
+      },
+      {
+        "anchor": "S3.Thmtheorem6",
+        "kind": "lemma",
+        "label": "Lemma 3.6 (Centered affine transfer).",
+        "statement": "[S3.Thmtheorem6] Lemma 3.6 (Centered affine transfer).\n [S3.Thmtheorem6.p1] \nFix  $B\\geq 1$ ,  $0<\\eta,\\delta<1/2$ , and  $z$  with  $R=F_{z}(0)>0$ . There is a constant  $\\overline{C}_{B}=O(B^{2})$ , depending only on  $B$ , such that if\n [S3.E26] \n $m\\geq\\overline{C}_{B}\\frac{T\\log^{3}(2N)}{\\eta^{2}\\delta^{2}},$ (3.26)\n\nthen, with probability at least  $1-\\delta$  over the fresh main sample,\n [S3.E27] \n $\\sup_{h\\in K_{BR}}\\left\\lvert[\\widehat{F}_{z}(h)-\\widehat{F}_{z}(0)]-[F_{z}(h)-F_{z}(0)]\\right\\rvert\\leq\\eta R.$ (3.27)\n\nThe distribution depends on  $A$ , but not on  $z$ .",
+        "fragment_sha256": "bb4a0feea4eb278bdc204800e4fbe0d7bc105c89d7db273e2f9b7273e30d045a"
+      },
+      {
+        "anchor": "S3.Thmtheorem7",
+        "kind": "remark",
+        "label": "Remark 3.7 (Why centering matters).",
+        "statement": "[S3.Thmtheorem7] Remark 3.7 (Why centering matters).\n [S3.Thmtheorem7.p1] \nThe conclusion is additive, localized, and centered. It does not claim that  $\\widehat{F}_{z}$  multiplicatively preserves the full affine objective. An unseen residual may make the common baseline arbitrarily large, but it cannot destroy preservation of the increments needed for optimization.",
+        "fragment_sha256": "995516ded4e7aa91bc89e412e6c8cb7ecddef51fb1a2a7917ab46e028b266db7"
+      },
+      {
+        "anchor": "S3.Thmtheorem8",
+        "kind": "lemma",
+        "label": "Lemma 3.8 (Huber all-scale extension).",
+        "statement": "[S3.Thmtheorem8] Lemma 3.8 (Huber all-scale extension).\n [S3.Thmtheorem8.p1] \nLet  $N>16$ ,  $S_{0}:=8N^{3}$ , and  $\\zeta:=1/16$ . Suppose\n [S3.E28] \n $G(h):=\\sum_{i=1}^{N}\\omega_{i}H(a_{i}^{\\mathsf{T}}h),\\qquad\\omega_{i}\\geq 0,\\qquad\\sum_{i}\\omega_{i}\\leq 2N.$ (3.28)\n\nIf  $\\left\\lvert G(h)-\\Phi(h)\\right\\rvert\\leq\\zeta\\Phi(h)$  whenever  $\\Phi(h)\\in[1/2,S_{0}]$ , then\n [S3.E29] \n $\\left\\lvert G(h)-\\Phi(h)\\right\\rvert\\leq 2\\zeta\\Phi(h)\\qquad\\text{for every }h.$ (3.29)",
+        "fragment_sha256": "3379bf46940cf54b98b41a14e6329e9f4681cbba1a0830a960b6e2296c55f248"
+      },
+      {
+        "anchor": "S3.Thmtheorem9",
+        "kind": "lemma",
+        "label": "Lemma 3.9 (Label-oblivious constant-factor pilot).",
+        "statement": "[S3.Thmtheorem9] Lemma 3.9 (Label-oblivious constant-factor pilot).\n [S3.Thmtheorem9.p1] \nFix  $b\\in\\mathbb{R}^{N}$  and set  $F_{b}(x):=\\sum_{i=1}^{N}H(a_{i}^{\\mathsf{T}}x-b_{i})$ . For independent  $\\mu_{1},\\ldots,\\mu_{m_{0}}\\sim\\pi^{\\rm pil}$ , define\n [S3.EGx5] \n $\\displaystyle\\widetilde{\\Phi}_{0}(h)$  $\\displaystyle:=\\frac{1}{m_{0}}\\sum_{j=1}^{m_{0}}\\frac{H(a_{\\mu_{j}}^{\\mathsf{T}}h)}{\\pi_{\\mu_{j}}^{\\rm pil}},$ (3.33)\n\n $\\displaystyle\\widetilde{F}_{0}(x)$  $\\displaystyle:=\\frac{1}{m_{0}}\\sum_{j=1}^{m_{0}}\\frac{H(a_{\\mu_{j}}^{\\mathsf{T}}x-b_{\\mu_{j}})}{\\pi_{\\mu_{j}}^{\\rm pil}}.$ (3.34)\n\nWith probability at least  $1-\\delta_{0}$ ,\n [S3.E35] \n $(1-\\rho)\\Phi(h)\\leq\\widetilde{\\Phi}_{0}(h)\\leq(1+\\rho)\\Phi(h)\\qquad\\text{for every }h.$ (3.35)\n\nLet  $x_{c}$  be the unique minimum-Euclidean-norm point in  $\\arg\\min\\widetilde{F}_{0}$ , selected using only the pilot indices and labels, and let  $x_{*}\\in\\arg\\min F_{b}$ ,  $F_{*}:=F_{b}(x_{*})$ . Except with total probability  $2\\delta_{0}$ ,\n [S3.E36] \n $R:=F_{b}(x_{c})\\leq C_{0}F_{*},\\qquad C_{0}:=\\left(1+\\frac{2}{\\sqrt{(1-\\rho)\\delta_{0}}}\\right)^{2}.$ (3.36)",
+        "fragment_sha256": "14d7b11eb1be0ae5ba9eb1399b67bb62eba73da59d5c819224e4946602368c16"
+      },
+      {
+        "anchor": "S4.Thmtheorem1",
+        "kind": "lemma",
+        "label": "Lemma 4.1 (Exact scalar majority gap).",
+        "statement": "[S4.Thmtheorem1] Lemma 4.1 (Exact scalar majority gap).\n [S4.Thmtheorem1.p1] \nLet  $N\\geq 1$  and  $0<\\gamma\\leq 1/2$ , and define\n [S4.E1] \n $F_{\\gamma}(t):=N(1/2-\\gamma)H(4t)+N(1/2+\\gamma)H(4(t-1)).$ (4.1)\n\nPut\n [S4.E2] \n $q_{\\gamma}:=\\frac{1/2-\\gamma}{1/2+\\gamma},\\qquad t_{\\gamma}^{*}:=1-\\frac{q_{\\gamma}}{4}.$ (4.2)\n\nThen  $t_{\\gamma}^{*}$  is a global minimizer, and every  $t\\leq 1/2$  satisfies\n [S4.E3] \n $F_{\\gamma}(t)-F_{\\gamma}(t_{\\gamma}^{*})\\geq 2\\gamma N\\frac{1+4\\gamma}{1+2\\gamma}\\geq 2\\gamma N.$ (4.3)\n\nFor a negative empirical majority, the symmetric statement holds with  $t\\mapsto 1-t$ .",
+        "fragment_sha256": "3c112297ed688e3b16c6c08d4f6cc69d10f3c68e7e937ef0b324b9cb6ba4c597"
+      },
+      {
+        "anchor": "S4.Thmtheorem2",
+        "kind": "lemma",
+        "label": "Lemma 4.2 (Binary rate–distortion).",
+        "statement": "[S4.Thmtheorem2] Lemma 4.2 (Binary rate–distortion).\n [S4.Thmtheorem2.p1] \nLet  $S$  be uniform on  $\\{-1,+1\\}^{r}$ , and let  $\\widehat{S}$  be any  $\\{-1,+1\\}^{r}$ -valued estimate jointly distributed with  $S$ . If  $\\mathbb{E}d_{H}(S,\\widehat{S})<0.04r$ , then\n [S4.E5] \n $\\mathrm{I}(S;\\widehat{S})\\geq c_{\\rm RD}r,\\qquad c_{\\rm RD}:=\\log 2-h_{2}^{\\rm nat}(0.04)>0.525.$ (4.5)",
+        "fragment_sha256": "78c43f4a4e3bd07d9d8ef7adc66ea183a40effe4e1114b3451ac59e4672bc4fd"
+      },
+      {
+        "anchor": "S4.Thmtheorem3",
+        "kind": "lemma",
+        "label": "Lemma 4.3 (Finite adaptive-transcript bound).",
+        "statement": "[S4.Thmtheorem3] Lemma 4.3 (Finite adaptive-transcript bound).\n [S4.Thmtheorem3.p1] \nLet  $S$  be any random variable, let  $B=(B_{1},\\ldots,B_{n})$  be a random response vector, and let  $\\mathcal{R}$  be a private seed independent of  $(S,B)$ . Suppose an adaptive algorithm returns almost surely after  $Q$  fresh coordinate queries to  $B$ . For  $t=1,\\ldots,n$ , let  $Z_{t}=\\dagger$  if  $Q<t$ , and otherwise let  $Z_{t}=(J_{t},B_{J_{t}})$  record the  $t$ -th fresh index and response. Put  $\\mathcal{F}_{t-1}:=\\sigma(\\mathcal{R},Z_{1},\\ldots,Z_{t-1})$ . The active indicator and  $J_{t}$  on the active event are  $\\mathcal{F}_{t-1}$ -measurable. For an active history  $h$ , let  $I_{h}$  denote mutual information under the regular conditional law given  $h$ . If  $I_{h}(S;B_{J_{t}(h)})\\leq\\kappa$  for almost every active history, then\n [S4.E6] \n $\\mathrm{I}(S;\\mathcal{R},Z_{1:n})\\leq\\kappa\\,\\mathbb{E}Q.$ (4.6)",
+        "fragment_sha256": "9ee09a2d586079e88d0a0f1f519de94ab1c0e428a2cd2749dcdd8449463d554c"
+      },
+      {
+        "anchor": "S5.Thmtheorem1",
+        "kind": "proposition",
+        "label": "Proposition 5.1 (Simple surrogate minimizers can be polynomially bad).",
+        "statement": "[S5.Thmtheorem1] Proposition 5.1 (Simple surrogate minimizers can be polynomially bad).\n [S5.Thmtheorem1.p1] \nFor all sufficiently large  $N$ , there are one-dimensional instances on which the exact least-squares minimizer has Huber-norm approximation ratio  $\\Theta(N^{1/4})$ , and instances on which the exact  $\\ell_{1}$ -regression minimizer has ratio  $\\Theta(\\sqrt{N})$ .",
+        "fragment_sha256": "181af7c01c8163a233715221a3fdbfc28c27c57c532a823218153931d5f5e973"
+      }
+    ]
+  },
+  "results": [
+    {
+      "label": "Theorem 2.1 (Nonadaptive upper bound).",
+      "anchor": "S2.Thmtheorem1",
+      "required": true,
+      "source_fragment_sha256": "eb7e4dc32e9f9be8b5d27704a5ba536529655c65cfe85fd51e79736cf50010a6",
+      "coverage": "complete_own_derivation_relative_to_disclosed_published_inputs",
+      "proved": false,
+      "formal_names": [
+        "Paper29.ProcessTools.theorem2_1",
+        "Paper29.Checked.theorem21"
+      ],
+      "gaps": [],
+      "own_derivations_complete": true,
+      "dependency_disclosure": [
+        "Known published generic anchored chaining, weighted-radius log stability, finite-scale transition/power covers, exact l1 Lewis normalization existence. No P29-specific score, pilot, transfer, rank lifting or upper guarantee is an input."
+      ],
+      "verification": "Complete exact QueryModel.UpperBoundStatement and independent expanded contract compiled as targeted leaves. Expanded seven-target Comparator, full root build and production audit are deferred and not run.",
+      "final_contract": "comparator/positive-whole.json",
+      "final_verification": "CheckedWhole and contract leaves compiled. Full production build/audit and official sixteen-target Comparator are deferred, not run."
+    },
+    {
+      "label": "Theorem 2.2 (Matching adaptive lower bound).",
+      "anchor": "S2.Thmtheorem2",
+      "required": true,
+      "source_fragment_sha256": "747c76fb94e8893169efa7e01616659193c5755a281aa84985a078000893cf8b",
+      "coverage": "proved_unconditional_lightweight_leaf_only",
+      "proved": true,
+      "formal_names": [
+        "Paper29.QueryModel.theorem2_2",
+        "Paper29.Checked.theorem22"
+      ],
+      "gaps": [],
+      "own_derivations_complete": true,
+      "verification": "Exact arbitrary measurable seed LowerBoundStatement compiled; fixed c=1/1280000. Concentration, actual fresh posterior, finite seed compression, decoding and worst-response averaging derived locally. Final official checks deferred.",
+      "final_contract": "comparator/positive-whole.json",
+      "final_verification": "CheckedWhole and contract leaves compiled. Full production build/audit and official sixteen-target Comparator are deferred, not run."
+    },
+    {
+      "label": "Corollary 2.3 (Minimax label complexity).",
+      "anchor": "S2.Thmtheorem3",
+      "required": true,
+      "source_fragment_sha256": "b775c572c86eadc01e5ec5b535a2bc279c54e8efd7d0a0cc09a6887d1eb88058",
+      "coverage": "complete_own_derivation_relative_to_disclosed_published_inputs",
+      "proved": false,
+      "formal_names": [
+        "Paper29.QueryModel.corollary2_3",
+        "Paper29.Checked.corollary23"
+      ],
+      "gaps": [],
+      "own_derivations_complete": true,
+      "dependency_disclosure": [
+        "Same published upper-bound generic inputs only; actual sequentialization, measurable adaptive correctness and minimax infimum/supremum deductions proved."
+      ],
+      "final_contract": "comparator/positive-whole.json",
+      "final_verification": "CheckedWhole and contract leaves compiled. Full production build/audit and official sixteen-target Comparator are deferred, not run."
+    },
+    {
+      "label": "Lemma 3.1 (Huber triangle and increment inequalities).",
+      "anchor": "S3.Thmtheorem1",
+      "required": true,
+      "source_fragment_sha256": "99e9527f916d974094398eea19c7341e2d5b234b4f437f77d652741f9d239b85",
+      "coverage": "proved",
+      "proved": true,
+      "formal_names": [
+        "Paper29.Checked.lemma31"
+      ],
+      "gaps": [],
+      "verification": "Actual individual Lean check/build passed; unified official checks pending.",
+      "own_derivations_complete": true,
+      "final_contract": "comparator/positive-whole.json",
+      "final_verification": "CheckedWhole and contract leaves compiled. Full production build/audit and official sixteen-target Comparator are deferred, not run."
+    },
+    {
+      "label": "Lemma 3.2 (Imported multiscale covering primitive).",
+      "anchor": "S3.Thmtheorem2",
+      "required": true,
+      "source_fragment_sha256": "18c9288e5923a77aa63e6e570f89a1a38df6065fa266db78a75c3a2afbad6443",
+      "coverage": "complete_own_derivation_relative_to_disclosed_published_inputs",
+      "proved": false,
+      "formal_names": [
+        "Paper29.WeightConstruction.constructed_scheme",
+        "Paper29.ExternalCovering.constructedHuberScheme",
+        "Paper29.Leverage.leverage_sum_of_rank_eq",
+        "Paper29.Checked.lemma32"
+      ],
+      "gaps": [],
+      "own_derivations_complete": true,
+      "dependency_disclosure": [
+        "Imported transition covering estimate is an explicit published theorem input; no production axiom or inhabitant."
+      ],
+      "verification": "Targeted leaf compilation passed; expanded-root build, whole-production axiom audit and new official Comparator checks deferred, not run.",
+      "final_contract": "comparator/positive-whole.json",
+      "final_verification": "CheckedWhole and contract leaves compiled. Full production build/audit and official sixteen-target Comparator are deferred, not run."
+    },
+    {
+      "label": "Lemma 3.3 (Endpoint coverings).",
+      "anchor": "S3.Thmtheorem3",
+      "required": true,
+      "source_fragment_sha256": "69b25db74b9c76fb279d06a895c26a1a47202d8de4b736b29caf178dbb515565",
+      "coverage": "complete_own_derivation_relative_to_disclosed_published_inputs",
+      "proved": false,
+      "formal_names": [
+        "Paper29.Chaining.endpoint_cover_all_radii",
+        "Paper29.Checked.lemma33"
+      ],
+      "gaps": [],
+      "own_derivations_complete": true,
+      "dependency_disclosure": [
+        "Imported power-function covering estimate and known exact Lewis normalization are explicit published inputs."
+      ],
+      "verification": "Targeted leaf compilation passed; expanded-root build, whole-production axiom audit and new official Comparator checks deferred, not run.",
+      "final_contract": "comparator/positive-whole.json",
+      "final_verification": "CheckedWhole and contract leaves compiled. Full production build/audit and official sixteen-target Comparator are deferred, not run."
+    },
+    {
+      "label": "Lemma 3.4 (All-radius label-oblivious Huber scores).",
+      "anchor": "S3.Thmtheorem4",
+      "required": true,
+      "source_fragment_sha256": "8d8d58a6f86dfffe3f1deefa3a3825870d7fc3cea92594d462765532bde53625",
+      "coverage": "complete_own_derivation_relative_to_disclosed_published_inputs",
+      "proved": false,
+      "formal_names": [
+        "Paper29.Chaining.all_radius_scores_statement",
+        "Paper29.Chaining.finiteScores_spec",
+        "Paper29.Checked.lemma34"
+      ],
+      "gaps": [],
+      "own_derivations_complete": true,
+      "dependency_disclosure": [
+        "Published radius stability, finite-scale cover estimates and exact Lewis normalization existence; all-radius assembly and finite endpoint construction proved. Independent target is present in the final Comparator configuration."
+      ],
+      "verification": "Targeted leaf compilation passed; expanded-root build, whole-production axiom audit and new official Comparator checks deferred, not run.",
+      "final_contract": "comparator/positive-whole.json",
+      "final_verification": "CheckedWhole and contract leaves compiled. Full production build/audit and official sixteen-target Comparator are deferred, not run."
+    },
+    {
+      "label": "Lemma 3.5 (Unshifted expectation bound).",
+      "anchor": "S3.Thmtheorem5",
+      "required": true,
+      "source_fragment_sha256": "23aebf9740dccd3cf6a4e278d1263a5daa019fabac1e9053d8f537b0e0431150",
+      "coverage": "complete_own_derivation_relative_to_disclosed_published_inputs",
+      "proved": false,
+      "formal_names": [
+        "Paper29.ProcessTools.unshifted_expectation_bound",
+        "Paper29.Checked.lemma35"
+      ],
+      "gaps": [],
+      "own_derivations_complete": true,
+      "dependency_disclosure": [
+        "General anchored symmetrization/chaining theorem is an explicit published input; score geometry now derived in AllRadius/FiniteScoreConstruction."
+      ],
+      "verification": "Targeted leaf compilation passed; expanded-root build, whole-production axiom audit and new official Comparator checks deferred, not run.",
+      "final_contract": "comparator/positive-whole.json",
+      "final_verification": "CheckedWhole and contract leaves compiled. Full production build/audit and official sixteen-target Comparator are deferred, not run."
+    },
+    {
+      "label": "Lemma 3.6 (Centered affine transfer).",
+      "anchor": "S3.Thmtheorem6",
+      "required": true,
+      "source_fragment_sha256": "bb4a0feea4eb278bdc204800e4fbe0d7bc105c89d7db273e2f9b7273e30d045a",
+      "coverage": "complete_own_derivation_relative_to_disclosed_published_inputs",
+      "proved": false,
+      "formal_names": [
+        "Paper29.ProcessTools.centered_affine_transfer_scores",
+        "Paper29.Checked.lemma36"
+      ],
+      "gaps": [],
+      "own_derivations_complete": true,
+      "dependency_disclosure": [
+        "Uses the same disclosed generic chaining and upstream geometry inputs; actual centered metric, envelope, Jensen, sample-size and probability arguments proved."
+      ],
+      "verification": "Targeted leaf compilation passed; expanded-root build, whole-production axiom audit and new official Comparator checks deferred, not run.",
+      "final_contract": "comparator/positive-whole.json",
+      "final_verification": "CheckedWhole and contract leaves compiled. Full production build/audit and official sixteen-target Comparator are deferred, not run."
+    },
+    {
+      "label": "Remark 3.7 (Why centering matters).",
+      "anchor": "S3.Thmtheorem7",
+      "required": false,
+      "source_fragment_sha256": "995516ded4e7aa91bc89e412e6c8cb7ecddef51fb1a2a7917ab46e028b266db7",
+      "coverage": "proved",
+      "proved": true,
+      "formal_names": [
+        "Paper29.omitted_label_baseline",
+        "Paper29.omitted_label_not_strong_affine"
+      ],
+      "gaps": [],
+      "proved_scope": "Precise proper-subset baseline obstruction for every design, by an omitted label of magnitude2."
+    },
+    {
+      "label": "Lemma 3.8 (Huber all-scale extension).",
+      "anchor": "S3.Thmtheorem8",
+      "required": true,
+      "source_fragment_sha256": "3379bf46940cf54b98b41a14e6329e9f4681cbba1a0830a960b6e2296c55f248",
+      "coverage": "proved",
+      "proved": true,
+      "formal_names": [
+        "Paper29.Checked.lemma38"
+      ],
+      "gaps": [],
+      "verification": "Actual individual Lean check/build passed; unified official checks pending.",
+      "own_derivations_complete": true,
+      "final_contract": "comparator/positive-whole.json",
+      "final_verification": "CheckedWhole and contract leaves compiled. Full production build/audit and official sixteen-target Comparator are deferred, not run."
+    },
+    {
+      "label": "Lemma 3.9 (Label-oblivious constant-factor pilot).",
+      "anchor": "S3.Thmtheorem9",
+      "required": true,
+      "source_fragment_sha256": "14d7b11eb1be0ae5ba9eb1399b67bb62eba73da59d5c819224e4946602368c16",
+      "coverage": "complete_own_derivation_relative_to_disclosed_published_inputs",
+      "proved": false,
+      "formal_names": [
+        "Paper29.ProcessTools.pilot_guarantee",
+        "Paper29.Checked.lemma39"
+      ],
+      "gaps": [],
+      "own_derivations_complete": true,
+      "dependency_disclosure": [
+        "Uses the same disclosed generic chaining and geometry inputs; finite dyadic grid, union bound, all-scale extension, zero-optimum, actual minimum-norm selection and Markov assembly proved."
+      ],
+      "verification": "Targeted leaf compilation passed; expanded-root build, whole-production axiom audit and new official Comparator checks deferred, not run.",
+      "final_contract": "comparator/positive-whole.json",
+      "final_verification": "CheckedWhole and contract leaves compiled. Full production build/audit and official sixteen-target Comparator are deferred, not run."
+    },
+    {
+      "label": "Lemma 4.1 (Exact scalar majority gap).",
+      "anchor": "S4.Thmtheorem1",
+      "required": true,
+      "source_fragment_sha256": "3c112297ed688e3b16c6c08d4f6cc69d10f3c68e7e937ef0b324b9cb6ba4c597",
+      "coverage": "proved",
+      "proved": true,
+      "formal_names": [
+        "Paper29.Checked.lemma41"
+      ],
+      "gaps": [],
+      "verification": "Actual individual Lean check/build passed; unified official checks pending.",
+      "own_derivations_complete": true,
+      "final_contract": "comparator/positive-whole.json",
+      "final_verification": "CheckedWhole and contract leaves compiled. Full production build/audit and official sixteen-target Comparator are deferred, not run."
+    },
+    {
+      "label": "Lemma 4.2 (Binary rate–distortion).",
+      "anchor": "S4.Thmtheorem2",
+      "required": true,
+      "source_fragment_sha256": "78c43f4a4e3bd07d9d8ef7adc66ea183a40effe4e1114b3451ac59e4672bc4fd",
+      "coverage": "proved",
+      "proved": true,
+      "formal_names": [
+        "Paper29.RateDistortion.lemma4_2",
+        "Paper29.Checked.lemma42"
+      ],
+      "gaps": [],
+      "own_derivations_complete": true,
+      "final_contract": "comparator/positive-whole.json",
+      "final_verification": "CheckedWhole and contract leaves compiled. Full production build/audit and official sixteen-target Comparator are deferred, not run."
+    },
+    {
+      "label": "Lemma 4.3 (Finite adaptive-transcript bound).",
+      "anchor": "S4.Thmtheorem3",
+      "required": true,
+      "source_fragment_sha256": "9ee09a2d586079e88d0a0f1f519de94ab1c0e428a2cd2749dcdd8449463d554c",
+      "coverage": "complete_own_derivation_relative_to_disclosed_published_inputs",
+      "proved": false,
+      "formal_names": [
+        "Paper29.GeneralTranscript.lemma4_3",
+        "Paper29.Checked.lemma43",
+        "Paper29.Transcript.finite_adaptive_transcript_bound",
+        "Paper29.GeneralTranscript.queryCount_eq_distinct"
+      ],
+      "gaps": [],
+      "own_derivations_complete": true,
+      "dependency_disclosure": [
+        "General KL/Shannon chain, independence, reversible relabeling, source quantization and data processing are explicit StandardRules arguments from Gray §§5.3/5.5. Source and private seed are arbitrary measurable spaces; responses are standard Borel (including real labels); actual conditional probability kernel/disintegration is a natural stated hypothesis. Own slot integration, arbitrary-source reduction, chain summation and distinct/fresh count identity proved."
+      ],
+      "final_contract": "comparator/positive-whole.json",
+      "final_verification": "CheckedWhole and contract leaves compiled. Full production build/audit and official sixteen-target Comparator are deferred, not run."
+    },
+    {
+      "label": "Proposition 5.1 (Simple surrogate minimizers can be polynomially bad).",
+      "anchor": "S5.Thmtheorem1",
+      "required": true,
+      "source_fragment_sha256": "181af7c01c8163a233715221a3fdbfc28c27c57c532a823218153931d5f5e973",
+      "coverage": "proved",
+      "proved": true,
+      "formal_names": [
+        "Paper29.Checked.proposition51"
+      ],
+      "gaps": [],
+      "verification": "Actual individual Lean check/build passed; unified official checks pending.",
+      "own_derivations_complete": true,
+      "final_contract": "comparator/positive-whole.json",
+      "final_verification": "CheckedWhole and contract leaves compiled. Full production build/audit and official sixteen-target Comparator are deferred, not run."
+    }
+  ],
+  "additional_claims": [
+    {
+      "anchor": "S2.E7",
+      "coverage": "proved",
+      "formal_names": [
+        "Paper29.huberWidth_piecewise",
+        "Paper29.widthObjective_scaling"
+      ],
+      "scope": "Exact width scaling identities; prior targeted compilation passed; final full root verification deferred."
+    },
+    {
+      "anchor": "S3.E12",
+      "coverage": "proved",
+      "formal_names": [
+        "Paper29.huber_scaling"
+      ],
+      "scope": "Exact lower1/upper2 scaling for all lambda>=1 and real residuals."
+    },
+    {
+      "anchor": "A1.SS3.p1",
+      "coverage": "complete_own_instantiation_relative_to_disclosed_generic_convex_inputs",
+      "formal_names": [
+        "Paper29.Attainment.affineHuber_attains",
+        "Paper29.Attainment.exists_unique_minimum_norm",
+        "Paper29.Attainment.minimumNormSelection_observed_labels_only",
+        "Paper29.Attainment.minimumNormSelection_regularization",
+        "Paper29.Checked.appendixA3"
+      ],
+      "gaps": [],
+      "scope": "Actual weighted attainment, minimum-norm uniqueness and observed-label dependence are unconditional. Joint label continuity/nonnegativity/convexity, regularized-minimizer specialization, pointwise limit and Borel selection proved relative to explicitly disclosed generic parametric quadratic argmin and classical convex Tikhonov convergence inputs."
+    }
+  ],
+  "status": "15 required numbered statements plus Appendix A.3 have own derivations; 6 numbered statements require no external mathematical inputs and 9 retain disclosed generic inputs. Remark 3.7 is also retained."
+}

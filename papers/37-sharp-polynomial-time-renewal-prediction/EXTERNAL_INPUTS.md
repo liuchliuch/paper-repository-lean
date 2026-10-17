@@ -1,0 +1,33 @@
+# Explicit classical inputs
+
+The resumed user instruction permits precise explicit inputs for published classical results. It does not permit treating this paper’s new good-event, posterior, risk, dynamic-programming or complexity arguments as external results. Every external dependency below is a proposition supplied as a theorem argument. There is no corresponding production `axiom`, `sorry`, hidden instance, or assumed risk conclusion.
+
+## Equilibrium renewal-cycle finite projections
+
+Lean declaration: `Paper37.EquilibriumCycle.EquilibriumCyclePrinciple` in `Paper37/EquilibriumCycle.lean`.
+
+For every finite type α, every normalized nonnegative finite law P on α, every zero-based gap-label map d : α → ℕ, and every original `Renewal.Law μ` whose mass at t is the P-mass of labels with d(i)=t, the following is required for every horizon n and every binary word w of length n: the phase law with mass P(i)/gapMean(P,d) at each (i,a), 0≤a≤d(i), independently multiplied by n iid past gap labels and passed through the actual deterministic `BackwardRender.render`, assigns exactly `Renewal.blockMass μ w` to w. All these distributions, their normalization, the renderer, and the label-to-mean identities are defined within Lean. Repeated labels, zero-probability labels, periodic laws, and every finite horizon are permitted.
+
+This is the finite-alphabet, lattice finite-projection corollary of the classical size-biased stationary renewal construction. The general result assumes an iid positive gap law with finite positive mean, draws the cycle containing the observation time by length bias, places the observation uniformly in that cycle, and attaches independent iid gaps on both sides. The source paper displays the exact lattice formula P(D=d,A=j)=μ(d)/m for 0≤j<d in F.2.
+
+Published reference: Richard Arratia, Larry Goldstein and Fred Kochman, *Size bias for one and all*, Probability Surveys **16** (2019), 1–61, section 3, printed page 18, DOI [10.1214/13-PS221](https://doi.org/10.1214/13-PS221). The authors describe the stationary construction and refer to Hermann Thorisson, *Coupling, Stationarity, and Regeneration*, Springer (2000), chapter 8, theorem 8.1. [Author-hosted survey PDF](https://dornsife.usc.edu/sergey-lototsky/wp-content/uploads/sites/211/2023/06/SizeBiasing-Survey.pdf). The survey uses continuous uniform placement; replacing it by the uniform lattice phase is the explicitly retained discrete specialization. It is not represented as a proved general infinite-support two-sided-process theorem in this library.
+
+Uses are confined to the exact source word-law transfer for the finite-support lower-bound prior (F.1/F.3 and the cumulative lower bound), and the known-bounded-support estimator in H.1. The following are **proved**, rather than fields of this input: the finite phase/iid distributions, recovery of visible past gaps, expected renewal counts, the ≥1/8 good-event bound, exact two-boundary Bayes likelihood and posterior, arbitrary-private-randomization posterior radius, the explicit F.1 constant and restricted aperiodic standardized hard class, same-prior cumulative square-root lower bound, iid add-one estimation and hazard chain rule, and the original word-risk/endpoint transfer for H.1.
+
+## Results no longer retained as inputs
+
+The partition exponential estimate is proved using finite Euler products. The general stationary-binary compression inequality, original unbounded-countdown regeneration, and cumulative square-root lower rate are also proved. In particular no Hardy–Ramanujan estimate, target prediction risk bound, desired good-event probability, posterior-radius premise, or classical redundancy lower bound is supplied as an external input.
+
+## Generic finite-language binary machine simulation
+
+Lean declaration: `Paper37.BoundedLoopMachine.BoundedLoopSimulationPrinciple` in `Paper37/BoundedLoopMachine.lean`. Its exact statement is `∀ e : BoundedLoop.Expr, Nonempty (BoundedLoopMachine.Compilation e)`. `Expr` is a finite first-order syntax: natural literals and variables, integer arithmetic and comparisons, finite arrays and indexing, lexical binding, bounded tabulation, and bounded folds. Loop bodies are syntax, with no function-valued semantic oracle.
+
+For every such fixed syntax term, `Compilation e` contains an actual Mathlib finite TM2, binary input and output equivalences, finiteness of every internal stack alphabet, a positive program-dependent natural constant C, and an execution certificate for **every finite input list** `xs : List Value`. The input is the concrete `inputEncoding.encode xs`; the exact output is `valueEncoding.encode (runProgram e xs)`. The certified time is
+
+`C * (e.work (inputEnv xs) + (inputEncoding.encode xs).length + e.peak (inputEnv xs) + 1)^9`.
+
+Here `work` follows the actual evaluator, and `peak` is the maximum complete binary representation of the values reached by that evaluator, including array delimiters, loop states and output arrays. Both definitions are fixed before the theorem input. In particular no predictor-specific runtime, intermediate-bit bound, polynomial-time conclusion, horizon, risk, DP, or query semantics is a field of the input.
+
+Published reference: John E. Savage, *Models of Computation* (1998), §8.4.1, theorem 8.4.1, printed pp.331–332, [author-hosted chapter 8](https://cs.brown.edu/people/jsavage/book/pdfs/ModelsOfComputation_Chapter8.pdf). The published theorem gives cubic deterministic Turing simulation of the elementary RAM model. The explicitly retained input above is its finite bounded-loop interpreter specialization, with binary schoolbook multiplication/division and delimited arrays; it is not the literal theorem statement printed in the book. The ninth power is a deliberately loose bound obtained by allowing quadratic bit work for reached operands before the cubic simulation. The complete compiler specialization is supplied as an external theorem parameter and is **not claimed proved in Lean**.
+
+All paper-specific instantiation steps are proved internally: the single fixed ordinary/adaptive programs, exact source output, Pascal and power construction, parsing, DP recurrences, coefficient extraction, fraction sums and mixture-before-ratio, their actual operation counts and dynamic representation bounds, concrete input decoding and length bounds, and transport of these proved bounds into the machine's polynomial time function. The polynomial-time theorems must therefore be read as conditional on this disclosed generic simulation principle. This input does not strengthen the statistical theorems, which do not require it.

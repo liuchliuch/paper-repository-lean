@@ -1,0 +1,16 @@
+import Paper23.CertificateCycle.Level8
+import Paper23.CertificateSparse
+import Paper23.CertificateChecks
+set_option maxRecDepth 100000
+set_option maxHeartbeats 0
+namespace Paper23.CertificateChecks
+open Cubical CertificateData
+attribute [local irreducible] codeChain
+noncomputable def cycleNode9_0 : List (ℕ × ℤ) := []
+noncomputable def cycleSource9_0 : RawChain := cycleSource8_0 + cycleSource8_1
+theorem cycleNode9_0_check : merge cycleNode8_0 cycleNode8_1 = cycleNode9_0 := by
+  exact eq_of_beq (by decide +kernel)
+ theorem cycleNode9_0_chain : codeChain cycleNode9_0 = boundary cycleSource9_0 := by
+  rw [← cycleNode9_0_check, codeChain_merge, cycleNode8_0_chain, cycleNode8_1_chain]
+  exact (map_add boundary _ _).symm
+end Paper23.CertificateChecks

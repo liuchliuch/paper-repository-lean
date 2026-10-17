@@ -1,0 +1,93 @@
+{
+  "paper_id": "28",
+  "title": "Additivity of spherical volume under free products in dimensions at least four",
+  "source_url": "https://liuchliuch.github.io/repository/additivity-of-spherical-volume-under-free-products-in-dimensions-at-least-four/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper28"
+  ],
+  "build_targets": [
+    "Paper28"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "63 independently fixed explicit statements: all eight original conditional result wrappers plus 55 historical supporting targets."
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/comparator-extra-premise.json",
+      "expected_rejection": "type",
+      "scope": "One genuine extra-premise mutation of complementary_sqrt_bound, checked against the fixed original statement."
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/comparator-illegal-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "One genuine unauthorized-False-axiom mutation of complementary_sqrt_bound."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1.1.",
+      "declaration": "Paper28.theorem_1_1",
+      "scope": "Spherical-volume additivity for integer classes of countable free-product groups in every dimension n = k + 4, using current-mass infima."
+    },
+    {
+      "source_result": "Corollary 1.2.",
+      "declaration": "Paper28.corollary_1_2",
+      "scope": "Connected-sum additivity for closed connected oriented topological manifolds in dimension at least four, through their fundamental-group classes."
+    },
+    {
+      "source_result": "Lemma 2.1 (Two norm foldings).",
+      "declaration": "Paper28.lemma_2_1",
+      "scope": "The two norm-folding approximate-tangent Jacobians sum to at most one, mass-almost-everywhere, for n ≥ 4, including zero strata."
+    },
+    {
+      "source_result": "Definition 2.2 (Vertex shadows).",
+      "declaration": "Paper28.sphereVertexShadow",
+      "scope": "The incident-edge vertex shadow on the unit sphere; branch routing agrees with deleted-vertex connectivity independently of endpoint choice."
+    },
+    {
+      "source_result": "Lemma 2.3 (Tree Jacobian bound).",
+      "declaration": "Paper28.lemma_2_3",
+      "scope": "The joint Jacobian bound for all vertex shadows of a finite tree, mass-almost-everywhere, for n ≥ 4."
+    },
+    {
+      "source_result": "Lemma 3.1 (Approximation and fillings).",
+      "declaration": "Paper28.lemma_3_1",
+      "scope": "Positive-degree quotient cycles admit homologous polyhedral approximations with arbitrarily small excess mass and exact prescribed polyhedral fillings."
+    },
+    {
+      "source_result": "Proposition 3.2.",
+      "declaration": "Paper28.proposition_3_2",
+      "scope": "Integer Bass–Serre transfers are well defined, commute with boundary and satisfy the joint mass bound in dimensions at least four."
+    },
+    {
+      "source_result": "Lemma 5.1.",
+      "declaration": "Paper28.lemma_5_1",
+      "scope": "Near-isometric deformation of a compact carrier, fixing the prescribed polyhedral support, with a compact-image Lipschitz homotopy."
+    },
+    {
+      "source_result": "Lemma 5.2.",
+      "declaration": "Paper28.lemma_5_2",
+      "scope": "Sharp mass approximation on finite spherical polyhedra, homologous fillings of vanishing mass, and exact prescribed polyhedral fillings."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "dependency_pins": {
+    "mathlib": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "plausible": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+    "LeanSearchClient": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+    "importGraph": "d768126816be17600904726ca7976b185786e6b9",
+    "proofwidgets": "556caed0eadb7901e068131d1be208dd907d07a2",
+    "aesop": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+    "Qq": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+    "batteries": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+    "Cli": "91c18fa62838ad0ab7384c03c9684d99d306e1da"
+  },
+  "primary_comparator": "main"
+}

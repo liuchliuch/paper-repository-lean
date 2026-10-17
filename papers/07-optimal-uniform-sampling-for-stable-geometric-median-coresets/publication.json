@@ -1,0 +1,103 @@
+{
+  "paper_id": "07",
+  "title": "Optimal uniform sampling for stable geometric median coresets",
+  "source_url": "https://liuchliuch.github.io/repository/optimal-uniform-sampling-for-stable-geometric-median-coresets/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "GeometricMedianCoresets"
+  ],
+  "build_targets": [
+    "GeometricMedianCoresets",
+    "Verification.MainSolution",
+    "Verification.MainChallenge",
+    "Verification.AxiomAudit"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/main-comparator.json",
+      "expected_rejection": null,
+      "scope": "Twenty-four fixed explicit targets covering all main upper/lower sampling statements, literal Theta rates, full variance, extensions, appendix and outlier example."
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/main-negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Main actual uniform-sampling upper theorem weakened by an additional False premise. Rejection detail: added False premise on euclidean_upper."
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/main-negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Main actual uniform-sampling upper theorem intentionally proved through an unauthorized axiom. Rejection detail: illegal proof axiom on euclidean_upper."
+    },
+    {
+      "id": "supporting",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "Eight supporting-only deterministic identities and lower-bound algebra contracts. This suite alone does not certify the probabilistic main theorem or whole-paper scope."
+    },
+    {
+      "id": "supporting-negative-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Supporting cost-difference identity with an extra premise. Rejection detail: added premise on lemma_2_2."
+    },
+    {
+      "id": "supporting-negative-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Supporting cost-difference identity with an unauthorized proof dependency. Rejection detail: illegal axiom on lemma_2_2."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1.2",
+      "declaration": "GeometricMedianCoresets.Euclidean.sample_complexity_theta",
+      "scope": "Least uniform sample threshold is Theta(epsilon⁻²) as epsilon tends to zero from above: 4/5 success above ceil(20/epsilon²) for 0 < epsilon < 1/4, and distinct one-dimensional examples with 2/5 failure below 1/(24200*epsilon²) for 0 < epsilon ≤ 1/100."
+    },
+    {
+      "source_result": "Lemma 2.1",
+      "declaration": "GeometricMedianCoresets.Euclidean.feature_dist_sq",
+      "scope": "Gaussian-product/Lebesgue L2 embedding with exact normalization, almost-everywhere indicator formula, anchoring, and squared-distance identity."
+    },
+    {
+      "source_result": "Lemmas 2.2–2.3",
+      "declaration": "GeometricMedianCoresets.FinitePopulation.variance_identity",
+      "scope": "Cost-difference identity and uniform finite-population variance for n > 1 and 1 ≤ m ≤ n; the anchored bound includes n = 1."
+    },
+    {
+      "source_result": "Proposition 2.4 and Lemma 2.6",
+      "declaration": "GeometricMedianCoresets.Euclidean.prop24",
+      "scope": "Simultaneous relative comparison for all candidate pairs on a 9/10-probability subset event, followed by deterministic stability transfer including zero OPT."
+    },
+    {
+      "source_result": "Remark 2.5",
+      "declaration": "GeometricMedianCoresets.Remark25.outlier_obstruction",
+      "scope": "Repeated-zero/outlier population with exact half missing probability, optimum, and R/m comparison error, ruling out a center-independent fixed-error estimate."
+    },
+    {
+      "source_result": "Corollary 4.1",
+      "declaration": "GeometricMedianCoresets.NegativeTypeMetric.cor41_uniform_stable",
+      "scope": "Uniform-sampling 4/5 guarantee for the stated negative-type metric representation with an attained geometric median."
+    },
+    {
+      "source_result": "Corollary 4.2",
+      "declaration": "GeometricMedianCoresets.L1.sample_complexity_theta",
+      "scope": "Finite-dimensional l1 feature map and attained median, matching upper/lower sample constants, and least-threshold Theta rate."
+    },
+    {
+      "source_result": "Proposition 4.3",
+      "declaration": "GeometricMedianCoresets.prop43_uniform_stable",
+      "scope": "Approximate-reference guarantee under the stated relative-cost and scalar conditions; the nonattainment consequence holds for delta < 1/37."
+    },
+    {
+      "source_result": "Proposition A.1",
+      "declaration": "GeometricMedianCoresets.Euclidean.propA1_comparison",
+      "scope": "Both conclusions with the source constants involving 320*pi follow from the stronger relative-comparison theorem."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "primary_comparator": "main"
+}

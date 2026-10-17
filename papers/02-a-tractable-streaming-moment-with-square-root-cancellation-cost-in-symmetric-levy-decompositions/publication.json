@@ -1,0 +1,80 @@
+{
+  "paper_id": "02",
+  "title": "A tractable streaming moment with square-root cancellation cost in symmetric Lévy decompositions",
+  "source_url": "https://liuchliuch.github.io/repository/a-tractable-streaming-moment-with-square-root-cancellation-cost-in-symmetric-levy-decompositions/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper02"
+  ],
+  "build_targets": [
+    "Paper02",
+    "Verification.Solution",
+    "Verification.Challenge",
+    "Verification.Audit"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "Thirty-seven fixed explicit specification targets including the complete thm11_full, operational streaming, recovery, analytic kernels and approximation bounds. Does not assert the three external consequences."
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Same 37-target suite with complete Theorem 1.1 weakened by an extra premise. Rejection detail: added False premise on Verification.Certificate.thm11_full."
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Same suite with the complete Theorem 1.1 proof intentionally replaced by an unauthorized axiom. Rejection detail: unauthorized_thm11_full axiom."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1.1",
+      "declaration": "Paper02.Main.theorem_1_1",
+      "scope": "Bit-space streaming membership, ENNReal cancellation bounds, all-cutoff upper bound, square-root asymptotics, and failure of the original bivariate polynomial implication."
+    },
+    {
+      "source_result": "Lemma 2.1, Corollary 2.2, Remark 2.3",
+      "declaration": "Paper02.LSym.positive_second_difference_measure",
+      "scope": "Finite positive circle measure and exact mass for the original Lévy cone; dual and normalized-generator conclusions allow arbitrary Lévy measures."
+    },
+    {
+      "source_result": "Lemmas 2.4–2.5",
+      "declaration": "Paper02.RS.exact_pairing",
+      "scope": "Rudin–Shapiro norm/energy identity, exact transitions, and parity-dependent pairing with the endpoint correction."
+    },
+    {
+      "source_result": "Proposition 3.1, Corollary 3.2, Proposition 3.3",
+      "declaration": "Paper02.LowerBound.prop_3_1",
+      "scope": "Cone lower bound, strict all-cutoff consequence, and exact real-even Fourier–Hahn split with the square-root envelope."
+    },
+    {
+      "source_result": "Proposition 3.4 and Lemma A.2",
+      "declaration": "Paper02.StreamingTractability.proposition_3_4",
+      "scope": "Halting one-pass bit-space program for arbitrary integer updates with failure probability at most delta; bounded-weight extension assumes the stated single-weight evaluator."
+    },
+    {
+      "source_result": "Lemma A.1",
+      "declaration": "Paper02.SparseRecoverySpace.summary_and_decoder_quadratic",
+      "scope": "Sparse/dense recovery, checksum probability, and halting decoder workspace. Polynomial Gaussian-elimination runtime is outside the formalized scope."
+    },
+    {
+      "source_result": "Lemma B.1",
+      "declaration": "Paper02.Bernstein.lemma_B1",
+      "scope": "Analytic complete-Bernstein/Pick kernel properties over the stated parameter range."
+    },
+    {
+      "source_result": "Propositions B.2–B.3",
+      "declaration": "Paper02.Bernstein.prop_B2_admissibleSplit",
+      "scope": "Finite-difference identities, approximation, envelopes, and cost constants. Membership requiring the general analytic-to-positive-measure representation theorem remains outside the proved scope."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "primary_comparator": "main"
+}

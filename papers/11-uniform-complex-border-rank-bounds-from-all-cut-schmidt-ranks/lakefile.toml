@@ -1,0 +1,33 @@
+name = "UniformBorderRank"
+version = "0.1.0"
+defaultTargets = ["UniformBorderRank"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "f156f7abd91ac67adb22bf999e5a71ba22e22e41"
+
+[[lean_lib]]
+name = "UniformBorderRank"
+globs = ["UniformBorderRank"]
+moreLeanArgs = ["-DautoImplicit=false"]
+
+[[lean_lib]]
+name = "Paper"
+roots = ["Paper.Statements", "Paper.Proofs"]
+moreLeanArgs = ["-DautoImplicit=false"]
+
+[[lean_lib]]
+name = "PaperChallenge"
+roots = ["Paper.Challenge"]
+moreLeanArgs = ["-DautoImplicit=false"]
+
+[[lean_lib]]
+name = "PaperNegativePremise"
+roots = ["Paper.NegativePremise"]
+moreLeanArgs = ["-DautoImplicit=false"]
+
+[[lean_lib]]
+name = "PaperNegativeAxiom"
+roots = ["Paper.NegativeAxiom"]
+moreLeanArgs = ["-DautoImplicit=false"]

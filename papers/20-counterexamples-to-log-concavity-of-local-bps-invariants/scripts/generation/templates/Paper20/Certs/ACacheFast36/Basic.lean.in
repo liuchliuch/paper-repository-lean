@@ -1,0 +1,10 @@
+import Paper20.IntegerPolynomial
+namespace Paper20.Cert.ACacheFast36
+open Paper20.IntegerPolynomial
+set_option maxHeartbeats 0
+set_option maxRecDepth 200000
+
+def rowCheck (c : ℕ) (row : Array (List ℤ)) : Bool := decide (row.getD 0 []=[1]) &&
+  (List.range 22).all (fun j => decide (row.getD (j+1) [] =
+    mul (row.getD j []) (numeratorFactor ((c:ℤ)^2) (decide (c%2=0)) (j+1))))
+end Paper20.Cert.ACacheFast36

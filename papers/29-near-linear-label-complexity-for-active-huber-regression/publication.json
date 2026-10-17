@@ -1,0 +1,145 @@
+{
+  "paper_id": "29",
+  "title": "Near-Optimal Label Complexity for Active Huber Regression",
+  "source_url": "https://liuchliuch.github.io/repository/near-linear-label-complexity-for-active-huber-regression/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper29"
+  ],
+  "build_targets": [
+    "Paper29"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "comparator/positive-whole.json",
+      "expected_rejection": null,
+      "scope": "16 fixed proposition contracts: all 15 required numbered results and Appendix A.3; explicit external inputs are visible in independently stated Specification/ExpandedSpecification/NumberedContracts."
+    },
+    {
+      "id": "expanded-supporting",
+      "config": "comparator/positive-expanded.json",
+      "expected_rejection": null,
+      "scope": "Seven-target earlier expanded subset; supporting scope only."
+    },
+    {
+      "id": "supporting",
+      "config": "comparator/positive.json",
+      "expected_rejection": null,
+      "scope": "Five original unconditional scalar/information/surrogate contracts; historical official evidence is limited to this scope."
+    },
+    {
+      "id": "negative-premise",
+      "config": "comparator/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Actual added-premise mutation of fixed lemma31; one-target scalar control."
+    },
+    {
+      "id": "negative-axiom",
+      "config": "comparator/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Actual unauthorized-axiom mutation of fixed lemma31; one-target scalar control."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 2.1 (Nonadaptive upper bound).",
+      "declaration": "Paper29.Checked.theorem21",
+      "scope": "A label-oblivious nonadaptive query set achieves 0.99 success for each fixed response, with an absolute constant before designs, ranks and accuracies."
+    },
+    {
+      "source_result": "Theorem 2.2 (Matching adaptive lower bound).",
+      "declaration": "Paper29.Checked.theorem22",
+      "scope": "Adaptive distinct-query lower bound with constant 1/1280000, arbitrary measurable private seed and worst-response expected cost; unsuccessful nonreturn costs infinity."
+    },
+    {
+      "source_result": "Corollary 2.3 (Minimax label complexity).",
+      "declaration": "Paper29.Checked.corollary23",
+      "scope": "Matching minimax bounds through actual sequentialization, preserving answers, correctness and distinct queried-set cost."
+    },
+    {
+      "source_result": "Lemma 3.1 (Huber triangle and increment inequalities).",
+      "declaration": "Paper29.Checked.lemma31",
+      "scope": "Huber triangle and increment inequalities, including their weighted forms."
+    },
+    {
+      "source_result": "Lemma 3.2 (Imported multiscale covering primitive).",
+      "declaration": "Paper29.Checked.lemma32",
+      "scope": "Finite normalized weight construction, endpoint coverings and all-radius label-oblivious Huber scores, under generic covering/Gram-stability inputs."
+    },
+    {
+      "source_result": "Lemma 3.3 (Endpoint coverings).",
+      "declaration": "Paper29.Checked.lemma33",
+      "scope": "Finite normalized weight construction, endpoint coverings and all-radius label-oblivious Huber scores, under generic covering/Gram-stability inputs."
+    },
+    {
+      "source_result": "Lemma 3.4 (All-radius label-oblivious Huber scores).",
+      "declaration": "Paper29.Checked.lemma34",
+      "scope": "Finite normalized weight construction, endpoint coverings and all-radius label-oblivious Huber scores, under generic covering/Gram-stability inputs."
+    },
+    {
+      "source_result": "Lemma 3.5 (Unshifted expectation bound).",
+      "declaration": "Paper29.Checked.lemma35",
+      "scope": "Unshifted expectation and centered affine transfer bounds, with the displayed sampling, geometry and positive-baseline hypotheses."
+    },
+    {
+      "source_result": "Lemma 3.6 (Centered affine transfer).",
+      "declaration": "Paper29.Checked.lemma36",
+      "scope": "Unshifted expectation and centered affine transfer bounds, with the displayed sampling, geometry and positive-baseline hypotheses."
+    },
+    {
+      "source_result": "Remark 3.7 (Why centering matters).",
+      "declaration": "Paper29.omitted_label_baseline",
+      "scope": "The omitted-label baseline example used to show why an uncentered sample cannot satisfy the asserted strong affine guarantee."
+    },
+    {
+      "source_result": "Lemma 3.8 (Huber all-scale extension).",
+      "declaration": "Paper29.Checked.lemma38",
+      "scope": "All-scale extension and a label-oblivious constant-factor pilot, including the zero-optimum case in the upper-bound construction."
+    },
+    {
+      "source_result": "Lemma 3.9 (Label-oblivious constant-factor pilot).",
+      "declaration": "Paper29.Checked.lemma39",
+      "scope": "All-scale extension and a label-oblivious constant-factor pilot, including the zero-optimum case in the upper-bound construction."
+    },
+    {
+      "source_result": "Lemma 4.1 (Exact scalar majority gap).",
+      "declaration": "Paper29.Checked.lemma41",
+      "scope": "Exact scalar majority gap and binary rate–distortion bound."
+    },
+    {
+      "source_result": "Lemma 4.2 (Binary rate–distortion).",
+      "declaration": "Paper29.Checked.lemma42",
+      "scope": "Exact scalar majority gap and binary rate–distortion bound."
+    },
+    {
+      "source_result": "Lemma 4.3 (Finite adaptive-transcript bound).",
+      "declaration": "Paper29.Checked.lemma43",
+      "scope": "Information is at most per-query information times expected distinct queries, for fresh adaptive policies with an actual conditional kernel."
+    },
+    {
+      "source_result": "Proposition 5.1 (Simple surrogate minimizers can be polynomially bad).",
+      "declaration": "Paper29.Checked.proposition51",
+      "scope": "Explicit instances where simple surrogate minimizers have polynomially worse Huber loss."
+    },
+    {
+      "source_result": "Appendix A.3",
+      "declaration": "Paper29.Checked.appendixA3",
+      "scope": "Minimum-norm weighted Huber selection is a Borel limit of measurable unique regularized minimizers, under generic convex-selection inputs."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "dependency_pins": {
+    "mathlib": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "plausible": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+    "LeanSearchClient": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+    "importGraph": "d768126816be17600904726ca7976b185786e6b9",
+    "proofwidgets": "556caed0eadb7901e068131d1be208dd907d07a2",
+    "aesop": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+    "Qq": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+    "batteries": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+    "Cli": "91c18fa62838ad0ab7384c03c9684d99d306e1da"
+  },
+  "primary_comparator": "main"
+}

@@ -1,0 +1,11 @@
+# External dependencies and scope
+
+Mathlib is pinned to `f897ebcf72cd16f89ab4577d0c826cd14afaafc7`; Lean is 4.24.0. Only `propext`, `Classical.choice`, and `Quot.sound` are permitted globally.
+
+The sole principal external input is `Paper22.ExternalMetaConverseLimit`, defined as an explicit universally quantified proposition parameter in `Paper22/Reliability.lean`. It is not supplied by an axiom, sorry or production inhabitant. Source: Oufkir–Tomamichel–Berta, Error exponent of activated non-signaling assisted classical-quantum channel coding, arXiv:2410.01084v2, Theorem 4.1, Propositions 4.2/4.3 and Eqs 32–35. For every actual full-rank finite CQ channel and every 0<r<Holevo capacity it supplies the ordinary meta-converse error-exponent limit at message size 2^(kr), with the project’s base-two sphere-packing exponent.
+
+The published source uses natural logs and rate interval C 0<r<C. The specialization replaces natural-log rate by r·log 2 and divides exponent/capacity units by log 2. Internal full-rank proofs establish C 0=0. `ProgramsSDP` proves the actual SDP change of variables Lambda=MqT and its objective agreement. Positive full-rank error tails, ceil message counts,+6 slack, arbitrary rate sequences, NS/ANS transfer and EReal zero-error semantics are proved internally. The final type is exactly `ExternalMetaConverseLimit → theorem_2_reliability_original`; an unconditional proof of the published exponent is not claimed.
+
+Equation 26, the one-bit activation identity, is proved internally (`activation_identity` and `activationIdentity_proved`) and is not an external premise in the final contract. Legacy two-input transfer variants remain valid supplemental interfaces. General possibly-singular-channel capacity endpoint continuity/attainment is disclosed background, not a principal proof input: full-rank optimization and Holevo attainment needed here are internal. The detailed source, assumptions, unit conversion and uses are also recorded in `external-dependencies.json`.
+
+The shared release tooling installs the pinned official Comparator. Comparator challenge modules may contain specification placeholders; these are isolated from production proofs. Negative controls intentionally contain an added premise or an illegal axiom and are verification fixtures. No new axioms or proof placeholders were introduced by release curation.

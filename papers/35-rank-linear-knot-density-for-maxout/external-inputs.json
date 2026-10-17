@@ -1,0 +1,430 @@
+{
+  "paper_id": "35",
+  "policy": "Published/classical unformalized results may remain precise explicit inputs under the resumed user instruction. All own derivations are required and are not reclassified as external. Inputs are proposition parameters, never custom axiom declarations. This registry is not an axiom audit or a validation certificate.",
+  "inputs": [
+    {
+      "id": "lusin-novikov",
+      "status": "explicit_classical_input",
+      "source": "Kechris, Classical Descriptive Set Theory, GTM 156 (1995), Theorem 18.10, p.123.",
+      "url": "https://pma.caltech.edu/documents/5616/combinatorics20book.pdf",
+      "original_hypotheses_and_quantifiers": "For arbitrary standard Borel X,Y and Borel R⊆X×Y with every vertical section countable, R is the union of countably many disjoint Borel partial-function graphs.",
+      "lean_declarations": [
+        {
+          "name": "LusinNovikovInput",
+          "file": "Paper35/VisibleCrossing.lean",
+          "line": 584,
+          "statement": "def LusinNovikovInput (X Y : Type*) [MeasurableSpace X] [StandardBorelSpace X]\n    [MeasurableSpace Y] [StandardBorelSpace Y] : Prop :=\n  ∀ R : Set (X × Y), MeasurableSet R → (∀ x, {y | (x,y) ∈ R}.Countable) →\n    Nonempty (BorelGraphEnumeration R)"
+        }
+      ],
+      "uses": [
+        "VisibleCrossing actual regular-count measurability and enumeration",
+        "RandomCount actual strict-switch count graph",
+        "DeepExpectations actual network union-count graph",
+        "GaussianCountMeasurability marked counts",
+        "CrossingRegularity triple exclusion"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "analytic-projection-completion",
+      "status": "explicit_classical_input",
+      "source": "Kechris (1995), analytic projection theorem and Theorem 21.10 (Lusin universal measurability).",
+      "url": null,
+      "original_hypotheses_and_quantifiers": "For arbitrary standard Borel X,Y, a Borel relation R⊆X×Y has analytic first projection; for every sigma-finite Borel measure on X this projection is measurable in its completion. The input supplies no null-measure conclusion.",
+      "lean_declarations": [
+        {
+          "name": "BorelProjectionNullMeasurableInput",
+          "file": "Paper35/VisibleCrossing.lean",
+          "line": 762,
+          "statement": "def BorelProjectionNullMeasurableInput (X Y : Type*) [MeasurableSpace X] [StandardBorelSpace X]\n    [MeasurableSpace Y] [StandardBorelSpace Y] : Prop :=\n  ∀ R : Set (X × Y), MeasurableSet R → ∀ μ : Measure X, SigmaFinite μ →\n    NullMeasurableSet (Prod.fst '' R) μ"
+        }
+      ],
+      "uses": [
+        "Own Borel bad-event graph and sections-null/Fubini argument in VisibleCrossing",
+        "ExactCrossing actual full-product almost-sure good parameters"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "classical-spherical-crofton",
+      "status": "explicit_classical_input",
+      "source": "Santaló (1942), Eq.(37), p.716 for ambient dimension 2; Santaló, Integral Geometry and Geometric Probability, 2nd ed. (2004), Eq.(18.36), pp.323–324.",
+      "url": null,
+      "original_hypotheses_and_quantifiers": "For every m≥2, L>0 and absolutely continuous unit-sphere curve ψ on [0,L], isotropic Gaussian hyperplane normals have expected number of transverse interior parameter preimages equal to (1/π)∫||ψ′||. Counts preserve parameter multiplicity, including retracing, and are finite almost surely.",
+      "lean_declarations": [
+        {
+          "name": "ClassicalCroftonLaw",
+          "file": "Paper35/GaussianMarked.lean",
+          "line": 125,
+          "statement": "def ClassicalCroftonLaw : Prop :=\n  ∀ (m : ℕ), 2 ≤ m → ∀ (L : ℝ), 0 < L → ∀ (ψ : ℝ → Source.Space m),\n    AbsolutelyContinuousOnInterval ψ 0 L → (∀ s ∈ Icc 0 L, ‖ψ s‖ = 1) →\n      (∫⁻ D, ((transverseZeros ψ L D).encard : ℝ≥0∞) ∂standardGaussian m) =\n        ENNReal.ofReal (1 / Real.pi) * sphericalLength ψ L ∧\n      ∀ᵐ D ∂standardGaussian m, (transverseZeros ψ L D).Finite"
+        }
+      ],
+      "uses": [
+        "GaussianMarked.marked_pair_crofton",
+        "GaussianUpperEnvelope actual iid upper-envelope law"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "crofton-regularity",
+      "status": "explicit_classical_input",
+      "source": "Same parameterized Crofton theorem, together with its null-image supplements (AC Lusin N, one-dimensional area formula, zero-speed/tangency exclusion), recorded in source Lemma 6.1.",
+      "url": null,
+      "original_hypotheses_and_quantifiers": "For the same arbitrary AC unit-sphere ψ, for almost every Gaussian D, every interior zero of D·ψ occurs at a differentiability point with D·ψ′ nonzero. There is no upper-envelope or visibility statement.",
+      "lean_declarations": [
+        {
+          "name": "ClassicalCroftonRegularityLaw",
+          "file": "Paper35/GaussianSwitches.lean",
+          "line": 129,
+          "statement": "def ClassicalCroftonRegularityLaw : Prop :=\n  ∀ (m : ℕ), 2 ≤ m → ∀ (L : ℝ), 0 < L → ∀ (ψ : ℝ → Source.Space m),\n    AbsolutelyContinuousOnInterval ψ 0 L → (∀ s ∈ Icc 0 L, ‖ψ s‖ = 1) →\n      ∀ᵐ D ∂standardGaussian m, ∀ s ∈ Ioo 0 L, inner ℝ D (ψ s) = 0 →\n        DifferentiableAt ℝ ψ s ∧ inner ℝ D (deriv ψ s) ≠ 0"
+        }
+      ],
+      "uses": [
+        "GaussianSwitches actual pairSwitchSet equals marked transverse zero set",
+        "GaussianUpperEnvelope actual count transport"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "gaussian-unit-projection",
+      "status": "explicit_classical_input",
+      "source": "MIT 18.443, Statistics for Applications (Fall 2006), Lecture 4, p.25, linear transformation of a normal random vector.",
+      "url": "https://ocw.mit.edu/courses/18-443-statistics-for-applications-fall-2006/da928274a46632ce0d35d2012a1c8e74_lecture4.pdf",
+      "original_hypotheses_and_quantifiers": "For every finite vector dimension and unit v, the projection of an isotropic Gaussian vector on v has N(0,1) law.",
+      "lean_declarations": [
+        {
+          "name": "GaussianUnitProjectionLaw",
+          "file": "Paper35/GaussianMarked.lean",
+          "line": 138,
+          "statement": "def GaussianUnitProjectionLaw : Prop :=\n  ∀ (m : ℕ) (v : Source.Space m), ‖v‖ = 1 →\n    (standardGaussian m).map (fun z => inner ℝ z v) = gaussianReal 0 1"
+        }
+      ],
+      "uses": [
+        "Own Gaussian remaining-candidate visibility CDF power and common-pair N(0,1/2) law",
+        "GaussianEndpoints fixed level and endpoint-null events from normal noAtoms"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "gaussian-orthogonal-pair-reconstruction",
+      "status": "explicit_classical_input",
+      "source": "Same MIT Lecture 4, orthogonal transformation of an iid standard normal sample.",
+      "url": "https://ocw.mit.edu/courses/18-443-statistics-for-applications-fall-2006/da928274a46632ce0d35d2012a1c8e74_lecture4.pdf",
+      "original_hypotheses_and_quantifiers": "For all dimensions m and n≥0, independent D,C,Z1,…,Zn~N(0,I_m) map under ((C+D)/√2,(C−D)/√2,Z1,…,Zn) to the full (n+2)-fold iid standard Gaussian law. No curve is quantified in this input.",
+      "lean_declarations": [
+        {
+          "name": "GaussianPairReconstructionLaw",
+          "file": "Paper35/GaussianUpperEnvelope.lean",
+          "line": 70,
+          "statement": "def GaussianPairReconstructionLaw : Prop :=\n  ∀ m n : ℕ, ((standardGaussian m).prod (vectorMarkLaw m n)).map\n    (reconstruction m n) = gaussianIid m (n+2)"
+        }
+      ],
+      "uses": [
+        "Own measurable reconstruction, pair-count law transport and iid pair symmetry in GaussianUpperEnvelope"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "gaussian-max-integral",
+      "status": "explicit_classical_input",
+      "source": "Kabluchko–Zaporozhets, arXiv:1706.08092, Theorem 1.1 Eq.(2), d=1; §1.3 Eq.(8) and subsequent expected-volume/maximum equality.",
+      "url": "https://arxiv.org/pdf/1706.08092",
+      "original_hypotheses_and_quantifiers": "For K≥2 the expected maximum m_K of K iid N(0,1) variables equals K(K−1)∫φ(y)^2 Φ(y)^(K−2)dy. This is a classical Gaussian-polytope identity, without switch counts or c_K.",
+      "lean_declarations": [
+        {
+          "name": "GaussianMaxIntegralLaw",
+          "file": "Paper35/GaussianMarked.lean",
+          "line": 316,
+          "statement": "def GaussianMaxIntegralLaw : Prop :=\n  ∀ K : ℕ, 2 ≤ K →\n    ENNReal.ofReal (Paper35.gaussianMaxMean K) =\n      ENNReal.ofReal ((K : ℝ) * ((K : ℝ) - 1)) *\n        ∫⁻ y, (gaussianPDF 0 1 y) ^ 2 * normalCDF y ^ (K - 2)"
+        }
+      ],
+      "uses": [
+        "Own p_(K−2), choose(K,2), π and sqrtπ cancellation giving the new marked coefficient c_K"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "absolutely-continuous-curve-length",
+      "status": "explicit_classical_input",
+      "source": "Balogh–Fässler–Sobrino, Isometric Embeddings into Heisenberg Groups, Geometriae Dedicata 195 (2018), 163–192; arXiv:1706.02077, p.6, Theorem 2.12 and Example 2.13 Eq.(2.14).",
+      "url": "https://arxiv.org/pdf/1706.02077",
+      "original_hypotheses_and_quantifiers": "Any absolutely continuous metric curve has length equal to the integral of its metric speed; for an arbitrary finite-dimensional normed Euclidean curve the speed is ||ψ′|| almost everywhere. The Lean specialization quantifies every m, L>0 and AC ψ and uses actual eVariationOn.",
+      "lean_declarations": [
+        {
+          "name": "ACCurveLengthLaw",
+          "file": "Paper35/GaussianMarked.lean",
+          "line": 362,
+          "statement": "def ACCurveLengthLaw : Prop :=\n  ∀ (m : ℕ) (L : ℝ), 0 < L → ∀ (ψ : ℝ → Source.Space m),\n    AbsolutelyContinuousOnInterval ψ 0 L →\n      eVariationOn ψ (Icc 0 L) = sphericalLength ψ L"
+        }
+      ],
+      "uses": [
+        "SphericalLength identification with actual parameterized variation",
+        "Own GaussianArc circle/minor-arc length proof and GaussianSegments"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "gaussian-square-root-representation",
+      "status": "explicit_classical_input",
+      "source": "Classical finite-dimensional Gaussian linear-image theorem and uniqueness from all linear projections; MIT 18.443 Lecture 4 (2006), multivariate normal representation and matrix square roots.",
+      "url": "https://ocw.mit.edu/courses/18-443-statistics-for-applications-fall-2006/da928274a46632ce0d35d2012a1c8e74_lecture4.pdf",
+      "original_hypotheses_and_quantifiers": "For all finite m, every probability law whose linear projections are N(v·μ,vᵀΩv), with arbitrary mean μ and PSD Ω, equals the pushforward of an iid isotropic Gaussian by μ+Ω^(1/2)Z. Singular covariance is included; principal square root is actual CFC.sqrt in Lean.",
+      "lean_declarations": [
+        {
+          "name": "GaussianRepresentationLaw",
+          "file": "Paper35/GaussianLift.lean",
+          "line": 140,
+          "statement": "def GaussianRepresentationLaw : Prop :=\n  ∀ (m : ℕ) (g : Model m),\n    g.law = (GaussianMarked.standardGaussian m).map\n      (fun z => g.mean + rootMap g.covariance z)"
+        }
+      ],
+      "uses": [
+        "Own iid product-map law, affine source-score identity, mean removal, nonvanishing normalization, and Theorem 2.8 transport",
+        "GaussianIndependent arbitrary independent weight/bias law transport"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "gaussian-affine-score-law",
+      "status": "explicit_classical_input",
+      "source": "MIT 6.436J/15.085J, Fundamentals of Probability (Fall 2018), Lectures 14–15: linear maps of Gaussian vectors and independent Gaussian samples.",
+      "url": null,
+      "original_hypotheses_and_quantifiers": "For every finite candidate count, every centered Gaussian covariance and independent positive-variance Gaussian bias, the full score vector at fixed z is an iid scaled standard-normal vector. The input contains no selector or winner moment.",
+      "lean_declarations": [
+        {
+          "name": "AffineGaussianLawInput",
+          "file": "Paper35/GaussianWinner.lean",
+          "line": 177,
+          "statement": "def AffineGaussianLawInput : Prop :=\n  ∀ (q n : ℕ) (m : GaussianUnit q) (z : Fin q → ℝ),\n    (m.sampleLaw (n+1)).map (m.scores z) =\n      Paper35.standardNormalSequence.map\n        (fun x => fun j : Fin (n+1) => Real.sqrt (m.scoreVariance z) * x j.val)"
+        }
+      ],
+      "uses": [
+        "GaussianWinner actual maximum score L² and second moment"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "gaussian-regression",
+      "status": "explicit_classical_input",
+      "source": "MIT 6.436J/15.085J (Fall 2018), Lecture 15, Gaussian regression/conditioning and jointly Gaussian uncorrelated independence, pp.2–4,9.",
+      "url": null,
+      "original_hypotheses_and_quantifiers": "For every Gaussian unit, finite K and fixed z, each fixed-candidate regression residual W_j−ΣzY_j/s² is centered L² with covariance Σ−ΣzzᵀΣ/s², and the full residual vector is independent of the full score vector. Singular weight covariance is allowed; positive bias variance ensures s²>0.",
+      "lean_declarations": [
+        {
+          "name": "GaussianRegressionInput",
+          "file": "Paper35/GaussianWinner.lean",
+          "line": 185,
+          "statement": "def GaussianRegressionInput : Prop :=\n  ∀ (q K : ℕ) (m : GaussianUnit q) (z : Fin q → ℝ),\n    (∀ j i, MemLp (fun ω : GaussianUnit.Sample q K => m.residuals z ω j i) 2 (m.sampleLaw K)) ∧\n    (∀ j i, (∫ ω : GaussianUnit.Sample q K, m.residuals z ω j i ∂m.sampleLaw K) = 0) ∧\n    (∀ j i k, (∫ ω : GaussianUnit.Sample q K,\n        m.residuals z ω j i * m.residuals z ω j k ∂m.sampleLaw K) =\n      m.covariance i k - (m.covariance *ᵥ z) i * (m.covariance *ᵥ z) k / m.scoreVariance z) ∧\n    IndepFun (m.scores (K := K) z) (m.residuals (K := K) z) (m.sampleLaw K)"
+        }
+      ],
+      "uses": [
+        "Own selected-winner expansion entry-by-entry yielding Q and the domination by q_KΣ"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "maximum-density-normalization",
+      "status": "explicit_classical_input",
+      "source": "Classical density formula for the maximum of independent absolutely continuous variables, from the finite product rule and the absolutely continuous FTC; Folland, Real Analysis (2nd ed.), Cor.3.33 and Thm.3.35.",
+      "url": "https://heil.math.gatech.edu/handouts/ac.pdf",
+      "original_hypotheses_and_quantifiers": "For arbitrary finite measurable nonnegative densities h_i with integral one and arbitrary nonempty index subset t, the integral of Σ_(j∈t) h_j∏_(k∈t\\{j})F_k is one. No slope, crossing kernel, envelope or inequality is included.",
+      "lean_declarations": [
+        {
+          "name": "MaxDensityFormula",
+          "file": "Paper35/Heterogeneous.lean",
+          "line": 188,
+          "statement": "def MaxDensityFormula : Prop :=\n  ∀ {n : ℕ} (h : Fin n → ℝ → ℝ≥0∞),\n    (∀ i, Measurable (h i)) → (∀ i, (∫⁻ y, h i y) = 1) →\n      ∀ t : Finset (Fin n), t.Nonempty →\n        (∫⁻ y, ∑ j ∈ t, h j y * ∏ k ∈ t.erase j,\n          (volume.withDensity (h k)) (Iic y)) = 1"
+        }
+      ],
+      "uses": [
+        "Heterogeneous.leaveOneDensity_normalized only; all common-reference estimates and infimum steps are proved in Lean"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "generic-tail-integration",
+      "status": "explicit_classical_input",
+      "source": "Folland, Real Analysis (2nd ed.), Theorem 2.37 (layer cake/Tonelli); standard signed tail-expectation formula.",
+      "url": null,
+      "original_hypotheses_and_quantifiers": "For every integrable real probability law ν and every real threshold b, the positive and negative tail integrals are integrable and EνX=b+∫_(b,∞)(1−Fν)−∫_(-∞,b]Fν.",
+      "lean_declarations": [
+        {
+          "name": "TailIntegrationInput",
+          "file": "Paper35/RankBounds.lean",
+          "line": 33,
+          "statement": "def TailIntegrationInput : Prop :=\n  ∀ (ν : Measure ℝ) [IsProbabilityMeasure ν], Integrable (id : ℝ → ℝ) ν → ∀ b : ℝ,\n    IntegrableOn (fun t => 1-cdf ν t) (Ioi b) volume ∧\n    IntegrableOn (cdf ν) (Iic b) volume ∧\n    (∫ x, x ∂ν) = b + (∫ t in Ioi b, 1-cdf ν t) - ∫ t in Iic b, cdf ν t"
+        }
+      ],
+      "uses": [
+        "Own Gaussian maximum lower finite quantile bound and exact source tail identity (7.3)"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "normal-stop-loss",
+      "status": "explicit_classical_input",
+      "source": "Classical truncated-normal first moment / Gaussian integration by parts; Orjebin, A Recursive Formula for the Moments of a Truncated Univariate Normal Distribution (2014), first-moment formula and derivation.",
+      "url": "https://people.smp.uq.edu.au/YoniNazarathy/teaching_projects/studentWork/EricOrjebin_TruncatedNormalMoments.pdf",
+      "original_hypotheses_and_quantifiers": "For every b∈ℝ and one standard normal G, E(G−b)_+=φ(b)−b(1−Φ(b)). No maximum, rank coefficient or switch count is supplied.",
+      "lean_declarations": [
+        {
+          "name": "GaussianStopLossInput",
+          "file": "Paper35/RankBounds.lean",
+          "line": 42,
+          "statement": "def GaussianStopLossInput : Prop :=\n  ∀ b : ℝ, (∫ x, max (x-b) 0 ∂gaussianReal 0 1) = φ b - b*(1-Φ b)"
+        }
+      ],
+      "uses": [
+        "Own deterministic maximum ≤threshold+sum stop losses, yielding upper bound (7.1)"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "normal-log-cdf-tangent",
+      "status": "explicit_classical_input",
+      "source": "Bagnoli–Bergstrom, Log-concave probability and its applications, Economic Theory 26 (2005), Theorem 1; differentiable concave-function supporting-line inequality.",
+      "url": "https://escholarship.org/uc/item/0xt8k6sd",
+      "original_hypotheses_and_quantifiers": "The normal CDF is log-concave. For every integer power K and t≤b with Φ(b)>0, Φ(t)^K≤Φ(b)^K exp(Kφ(b)(t−b)/Φ(b)). This specializes only the classical tangent inequality.",
+      "lean_declarations": [
+        {
+          "name": "GaussianCDFTangentInput",
+          "file": "Paper35/RankBounds.lean",
+          "line": 49,
+          "statement": "def GaussianCDFTangentInput : Prop :=\n  ∀ (K : ℕ) (b t : ℝ), 0 < Φ b → t ≤ b →\n    Φ t ^ K ≤ Φ b ^ K * Real.exp ((K : ℝ)*φ b/Φ b*(t-b))"
+        }
+      ],
+      "uses": [
+        "Own exponential integral and lower quantile-bound algebra (7.1)"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "gaussian-extreme-mean",
+      "status": "explicit_classical_input",
+      "source": "Kabluchko–Zaporozhets, arXiv:1706.08092, §1.3 Eq.(9), Eq.(11), and the displayed expected maximum expansion after Eq.(11), pp.3–4; compare Leadbetter–Lindgren–Rootzén (1983), Thms.1.5.3 and 1.8.3.",
+      "url": "https://arxiv.org/pdf/1706.08092",
+      "original_hypotheses_and_quantifiers": "As K→∞ the actual iid normal maximum mean has m_K/sqrt(2logK)→1 and the standard second-order mean expansion with Euler’s constant. The scaled remainder tends to zero; this explicitly includes expectation convergence, rather than weak Gumbel convergence alone.",
+      "lean_declarations": [
+        {
+          "name": "GaussianExtremeMeanLaw",
+          "file": "Paper35/RankAsymptotics.lean",
+          "line": 34,
+          "statement": "def GaussianExtremeMeanLaw : Prop :=\n  Tendsto (fun K : ℕ => gaussianMaxMean K / Real.sqrt (2 * Real.log K))\n    atTop (𝓝 1) ∧\n  Tendsto (fun K : ℕ => Real.sqrt (Real.log K) *\n    (gaussianMaxMean K - meanMain K)) atTop (𝓝 0)"
+        }
+      ],
+      "uses": [
+        "Own c_K normalization and second-order/leading source asymptotics",
+        "Own Gaussian q_K=Theta(logK) consequence combined with proved moment inequalities and tail upper bound",
+        "GaussianRankFamily real-parameter uniform O/Theta of exact layer factors"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "arclength-factorization",
+      "status": "explicit_classical_input",
+      "source": "Burago–Burago–Ivanov, A Course in Metric Geometry (AMS GSM 33, 2001), Proposition 2.5.9, p.46, doi:10.1090/gsm/033; Euclidean unit velocity from Ambrosio–Gigli–Savaré, Gradient Flows, 2nd ed. (2008), Theorem 1.1.2, with null-set modification.",
+      "url": null,
+      "original_hypotheses_and_quantifiers": "Every continuous finite-variation curve in positive-dimensional Euclidean space on a finite interval admits a continuous monotone surjective arclength time change and a globally 1-Lipschitz unit-speed representative on its length interval.",
+      "lean_declarations": [
+        {
+          "name": "ArclengthFactorizationInput",
+          "file": "Paper35/CurveCalculus.lean",
+          "line": 126,
+          "statement": "def ArclengthFactorizationInput : Prop :=\n  ∀ (d : ℕ), 0 < d → ∀ (η : ℝ → Space d) (L : ℝ), 0 ≤ L →\n    ContinuousOn η (Icc 0 L) → eVariationOn η (Icc 0 L) ≠ ∞ →\n    ∃ (x u : ℝ → Space d) (σ : ℝ → ℝ),\n      LipschitzWith 1 x ∧ Measurable u ∧ (∀ s, ‖u s‖=1) ∧\n      (∀ᵐ s ∂volume.restrict (Icc 0 (eVariationOn η (Icc 0 L)).toReal), HasDerivAt x (u s) s) ∧\n      ContinuousOn σ (Icc 0 L) ∧ MonotoneOn σ (Icc 0 L) ∧\n      σ '' Icc 0 L = Icc 0 (eVariationOn η (Icc 0 L)).toReal ∧\n      EqOn η (x ∘ σ) (Icc 0 L)"
+        }
+      ],
+      "uses": [
+        "Own post-composition variation preservation, strict-switch injection across flat pauses, one-layer D estimate and actual deep recursion"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "linear-ac-calculus",
+      "status": "explicit_classical_input",
+      "source": "Standard absolutely continuous Banach/Euclidean curve calculus; same AGS Theorem 1.1.2 and the fundamental theorem for absolutely continuous curves.",
+      "url": null,
+      "original_hypotheses_and_quantifiers": "For arbitrary finite-dimensional AC curves, ordinary derivatives exist almost everywhere and composition with a continuous linear map plus a constant is AC with the expected almost-everywhere derivative.",
+      "lean_declarations": [
+        {
+          "name": "LinearACCalculusInput",
+          "file": "Paper35/CurveCalculus.lean",
+          "line": 161,
+          "statement": "def LinearACCalculusInput : Prop :=\n  ∀ (d : ℕ) (T : ℝ) (η : ℝ → Space d),\n    AbsolutelyContinuousOnInterval η 0 T →\n      (∀ᵐ s ∂volume.restrict (Icc 0 T), HasDerivAt η (deriv η s) s) ∧\n      (∀ (ℓ : Space d →L[ℝ] ℝ) (b : ℝ),\n        AbsolutelyContinuousOnInterval (fun s => ℓ (η s)+b) 0 T)"
+        }
+      ],
+      "uses": [
+        "Own affine score derivatives and layer-map derivative transport"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "finite-max-ac-calculus",
+      "status": "explicit_classical_input",
+      "source": "Classical AC finite-max/variation calculus corollary: finite Lipschitz maxima preserve AC, derivatives agree almost everywhere on scalar equality sets, and AC metric-speed/variation identity (AGS Theorem 1.1.2). Rockafellar–Wets, Variational Analysis (1998), Theorem 10.31 is a supporting smooth/lower-C1 max-calculus reference, not a verbatim arbitrary-AC statement.",
+      "url": null,
+      "original_hypotheses_and_quantifiers": "For arbitrary finite families of scalar AC curves and arbitrary active selectors, the actual variation of the coordinatewise finite maximum is the integral of the selected candidate derivative norm. The input records this entire deterministic calculus corollary explicitly, with arbitrary AC scalar curves and arbitrary active selectors; it supplies no probabilistic moment or network bound.",
+      "lean_declarations": [
+        {
+          "name": "FiniteMaxACCalculusInput",
+          "file": "Paper35/CurveCalculus.lean",
+          "line": 177,
+          "statement": "def FiniteMaxACCalculusInput : Prop :=\n  ∀ (q : ℕ) (K : Fin q → ℕ) (hK : ∀ r, 0 < K r) (T : ℝ)\n    (f a : (r : Fin q) → Fin (K r) → ℝ → ℝ)\n    (J : (s : ℝ) → (r : Fin q) → Fin (K r)),\n    (∀ r j, AbsolutelyContinuousOnInterval (f r j) 0 T) →\n    (∀ r j, ∀ᵐ s ∂volume.restrict (Icc 0 T), HasDerivAt (f r j) (a r j s) s) →\n    (∀ s r j, f r j s ≤ f r (J s r) s) →\n    eVariationOn (fun s => WithLp.toLp 2 (fun r => finiteSup (hK r) (fun j => f r j s)))\n      (Icc 0 T) =\n      ∫⁻ s in Icc 0 T, ENNReal.ofReal ‖WithLp.toLp 2 (fun r => a r (J s r) s)‖"
+        }
+      ],
+      "uses": [
+        "Own measurable finite selector, current-layer moments, Tonelli, Jensen and A/Q estimates"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "planar-gaussian-face-count",
+      "status": "explicit_classical_input",
+      "source": "Kabluchko–Zaporozhets, Absorption probabilities for Gaussian polytopes and regular spherical simplices, arXiv:1704.04968v3, Theorem 1.4, Eq.(1.25), p.9; Eq.(1.7) defines g_n.",
+      "url": "https://arxiv.org/pdf/1704.04968",
+      "original_hypotheses_and_quantifiers": "For K≥3 independent standard Gaussian points in R², their actual convex-hull vertex count is measurable and has expectation K(K−1)g_(K−2)(1/2). This is the d=2,k=0 specialization of the general published Gaussian face formula. It contains no c_K or Maxout claim; K=2 is proved separately in Lean from segment extreme points.",
+      "lean_declarations": [
+        {
+          "name": "ClassicalGaussianFaceLaw",
+          "file": "Paper35/PlanarPolytope.lean",
+          "line": 85,
+          "statement": "def ClassicalGaussianFaceLaw : Prop :=\n  ∀ K : ℕ, 3 ≤ K →\n    AEMeasurable vertexCount (cloudLaw K) ∧\n      (∫⁻ Z, vertexCount Z ∂cloudLaw K) = ENNReal.ofReal ((K : ℝ)*((K : ℝ)-1)) *\n        ∫⁻ y, normalCDF (Real.sqrt (1/2)*y)^(K-2) ∂gaussianReal 0 1"
+        }
+      ],
+      "uses": [
+        "Own conversion to visibilityProbability and marked coefficient, then Evertices=2πc_K",
+        "Own elimination with the proved expected perimeter identity"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    },
+    {
+      "id": "cauchy-perimeter",
+      "status": "explicit_classical_input",
+      "source": "Alexander–Berg–Foote (2005), Rocky Mountain Journal of Mathematics 35(6), pp.1825–1826, Eqs.(1.2)–(1.3), classical Cauchy support-function perimeter formula.",
+      "url": "https://persweb.wabash.edu/facstaff/footer/papers/abfinrmj.pdf",
+      "original_hypotheses_and_quantifiers": "For every nonempty finite deterministic planar point cloud, the geometric perimeter of its convex hull is the full-circle integral of its support function. Perimeter is actual Hausdorff-1 boundary length in full dimension and twice segment length in the degenerate case.",
+      "lean_declarations": [
+        {
+          "name": "CauchyPerimeterLaw",
+          "file": "Paper35/PlanarPolytope.lean",
+          "line": 96,
+          "statement": "def CauchyPerimeterLaw : Prop :=\n  ∀ (K : ℕ) (hK : 0 < K) (Z : Cloud K),\n    perimeter (hull Z) = ∫ t in Icc 0 (2*Real.pi), support hK Z t"
+        }
+      ],
+      "uses": [
+        "Own Gaussian projection law, maximum distribution, absolute-integrability Fubini and Eperimeter=2πm_K"
+      ],
+      "scope_guard": "Only the stated classical theorem is supplied explicitly as a proposition parameter. No own Maxout estimate, local limit, selected-winner formula, stochastic crossing identity or network recursion is assumed."
+    }
+  ],
+  "pending_registry_extensions": [],
+  "internal_dependencies_not_external": [
+    "ExactCrossingClaim",
+    "WeightedVisibilityClaim",
+    "WeightedCovarianceClaim",
+    "Heterogeneous.ExactCrossingClaim",
+    "MaxoutArclengthCalculusInput (proved specialization of generic calculus inputs)",
+    "GaussianCurveCalculusInput (proved specialization of generic calculus inputs)",
+    "IndependentMarkingInput (proved by GaussianWinner.independentMarking)",
+    "StandardGaussianSquaredTailInput (proved from the Gaussian mgf)",
+    "ArclengthRepresentationInput (proved from ArclengthFactorizationInput)"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "paper_id": "01",
+  "title": "Boundary reduction for growth-optimal e-variables: a Gaussian theorem and a finite counterexample",
+  "source_url": "https://liuchliuch.github.io/repository/boundary-reduction-for-growth-optimal-e-variables-a-gaussian-theorem-and-a-finite-counterexample/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "BoundaryReduction"
+  ],
+  "build_targets": [
+    "BoundaryReduction",
+    "Verification.Challenge",
+    "Verification.Solution"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "Twenty fixed explicit targets covering all eight numbered results and supplemental model and analytic statements."
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/controller-negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "First-exit theorem with an extra False premise. Rejection detail: type mismatch caused by an added False premise."
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/controller-negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Same first-exit statement proved through an intentionally unauthorized axiom. Rejection detail: unauthorized controllerNegativeUnauthorized axiom."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Lemma 2.1",
+      "declaration": "BoundaryReduction.NEF.lemma_2_1",
+      "scope": "GROW–information bound for arbitrary subfamilies of tilted laws on an open exponential-moment domain; extended logarithms permit zero e-variables."
+    },
+    {
+      "source_result": "Theorem 3.1",
+      "declaration": "BoundaryReduction.NinePoint.theorem_3_1_mean",
+      "scope": "Explicit minimal nine-point model, compact mean-space excluded ball, strict information gap, and obstruction for every countably additive Borel boundary prior."
+    },
+    {
+      "source_result": "Proposition 3.2",
+      "declaration": "BoundaryReduction.FiniteExponential.proposition_3_2_full",
+      "scope": "Information bounds and Borel obstruction for finite positive minimal exponential families with exposed vertices and closure containment in the mean image."
+    },
+    {
+      "source_result": "Theorem 4.1",
+      "declaration": "BoundaryReduction.Gaussian.theorem_4_1_covariance",
+      "scope": "Gaussian boundary conclusion for centered measures with symmetric positive definite covariance and bounded open neighborhoods of zero in positive dimension; the inverse precision operator is constructed."
+    },
+    {
+      "source_result": "Proposition 4.2",
+      "declaration": "BoundaryReduction.Gaussian.proposition_4_2_iff",
+      "scope": "Variational optimality equivalence for compact Borel priors, with the computable bound in proposition_4_2_gap."
+    },
+    {
+      "source_result": "Lemma 4.3",
+      "declaration": "BoundaryReduction.first_exit_propagation",
+      "scope": "Raywise-convex first-exit propagation for arbitrary open neighborhoods of zero."
+    },
+    {
+      "source_result": "Corollary 4.4",
+      "declaration": "BoundaryReduction.Gaussian.corollary_4_4_family",
+      "scope": "Finite priors on optimal support, exact KL identity, quadratic error, and weak convergence; corollary_4_4_map gives the linear-plus-quadratic map bound."
+    },
+    {
+      "source_result": "Lemma A.1 and displays A.5–A.12",
+      "declaration": "BoundaryReduction.NinePoint.lemma_A_1",
+      "scope": "At t = 200, all eight component means are exterior and KL is below 1.001e-15; appendix_closed_forms states displays A.5–A.12."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "primary_comparator": "main"
+}

@@ -1,0 +1,58 @@
+import Paper20.Certs.RContent36.B23C00
+set_option maxHeartbeats 0
+set_option maxRecDepth 200000
+namespace Paper20.Cert.RContent36.Tree
+open Paper20.RContent36
+open Paper20.HilbertJobs (Job parts children)
+
+def j_23_3_2 : Job := ⟨[23, 3, 2], 2, 8, 34⟩
+
+def v_23_3_2 : State := @@GENERATED_RHS:v_23_3_2@@
+
+theorem correct_23_3_2 : Correct j_23_3_2 v_23_3_2 := correct_leaf j_23_3_2 v_23_3_2 (by decide +kernel)
+
+def j_23_3_1 : Job := ⟨[23, 3, 1], 1, 9, 34⟩
+
+def v_23_3_1 : State := @@GENERATED_RHS:v_23_3_1@@
+
+theorem correct_23_3_1 : Correct j_23_3_1 v_23_3_1 := correct_leaf j_23_3_1 v_23_3_1 (by decide +kernel)
+
+def j_23_3 : Job := ⟨[23, 3], 3, 10, 35⟩
+
+def v_23_3 : State := @@GENERATED_RHS:v_23_3@@
+
+theorem correct_23_3 : Correct j_23_3 v_23_3 := by
+  have hc : children j_23_3 = [j_23_3_3, j_23_3_2, j_23_3_1] := by decide +kernel
+  have hv : List.Forall₂ Correct (children j_23_3) [v_23_3_3, v_23_3_2, v_23_3_1] := by
+    rw [hc]
+    exact (List.Forall₂.cons correct_23_3_3 (List.Forall₂.cons correct_23_3_2 (List.Forall₂.cons correct_23_3_1 List.Forall₂.nil)))
+  have hp := correct_children j_23_3 (by decide) (by decide) [v_23_3_3, v_23_3_2, v_23_3_1] hv
+  have he : combine [v_23_3_3, v_23_3_2, v_23_3_1] = v_23_3 := by decide +kernel
+  rwa [he] at hp
+
+def j_23_2 : Job := ⟨[23, 2], 2, 11, 35⟩
+
+def v_23_2 : State := @@GENERATED_RHS:v_23_2@@
+
+theorem correct_23_2 : Correct j_23_2 v_23_2 := correct_leaf j_23_2 v_23_2 (by decide +kernel)
+
+def j_23_1 : Job := ⟨[23, 1], 1, 12, 35⟩
+
+def v_23_1 : State := @@GENERATED_RHS:v_23_1@@
+
+theorem correct_23_1 : Correct j_23_1 v_23_1 := correct_leaf j_23_1 v_23_1 (by decide +kernel)
+
+def j_23 : Job := ⟨[23], 23, 13, 36⟩
+
+def v_23 : State := @@GENERATED_RHS:v_23@@
+
+theorem correct_23 : Correct j_23 v_23 := by
+  have hc : children j_23 = [j_23_13, j_23_12, j_23_11, j_23_10, j_23_9, j_23_8, j_23_7, j_23_6, j_23_5, j_23_4, j_23_3, j_23_2, j_23_1] := by decide +kernel
+  have hv : List.Forall₂ Correct (children j_23) [v_23_13, v_23_12, v_23_11, v_23_10, v_23_9, v_23_8, v_23_7, v_23_6, v_23_5, v_23_4, v_23_3, v_23_2, v_23_1] := by
+    rw [hc]
+    exact (List.Forall₂.cons correct_23_13 (List.Forall₂.cons correct_23_12 (List.Forall₂.cons correct_23_11 (List.Forall₂.cons correct_23_10 (List.Forall₂.cons correct_23_9 (List.Forall₂.cons correct_23_8 (List.Forall₂.cons correct_23_7 (List.Forall₂.cons correct_23_6 (List.Forall₂.cons correct_23_5 (List.Forall₂.cons correct_23_4 (List.Forall₂.cons correct_23_3 (List.Forall₂.cons correct_23_2 (List.Forall₂.cons correct_23_1 List.Forall₂.nil)))))))))))))
+  have hp := correct_children j_23 (by decide) (by decide) [v_23_13, v_23_12, v_23_11, v_23_10, v_23_9, v_23_8, v_23_7, v_23_6, v_23_5, v_23_4, v_23_3, v_23_2, v_23_1] hv
+  have he : combine [v_23_13, v_23_12, v_23_11, v_23_10, v_23_9, v_23_8, v_23_7, v_23_6, v_23_5, v_23_4, v_23_3, v_23_2, v_23_1] = v_23 := by decide +kernel
+  rwa [he] at hp
+
+end Paper20.Cert.RContent36.Tree

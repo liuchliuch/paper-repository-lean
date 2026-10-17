@@ -1,0 +1,152 @@
+import Paper23.CertificateCocycle.Data
+set_option maxRecDepth 100000
+set_option maxHeartbeats 0
+namespace Paper23.CertificateChecks
+open Cubical CertificateData
+attribute [local irreducible] codeChain
+noncomputable def cocycleLeaf192Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf192Part0@@
+noncomputable def cocycleLeaf192Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf192Part1@@
+noncomputable def cocycleLeaf192Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf192Part2@@
+noncomputable def cocycleLeaf192Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf192Part3@@
+noncomputable def cocycleLeaf192 : List (ℕ × ℤ) := cocycleLeaf192Part0 ++ cocycleLeaf192Part1 ++ cocycleLeaf192Part2 ++ cocycleLeaf192Part3
+theorem cocycleLeaf192_check :
+    modularCollapse 16 ((codeTreeCofaces phiCut192).map (fun p => [p])) = [cocycleLeaf192] := by decide +kernel
+theorem cocycleLeaf192_chain : reduceChain (codeChain cocycleLeaf192) =
+    reduceChain (restrictCubes 3 (coBoundary (codeChain (treeEntries phiCut192)))) := by
+  exact (modularNormalization_sound 16 (codeTreeCofaces phiCut192) cocycleLeaf192 cocycleLeaf192_check).trans
+    (congrArg reduceChain (codeTreeCofaces_sound phiCut192))
+noncomputable def cocycleLeaf193 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf193@@
+theorem cocycleLeaf193_check :
+    modularCollapse 16 ((codeTreeCofaces phiCut193).map (fun p => [p])) = [cocycleLeaf193] := by decide +kernel
+theorem cocycleLeaf193_chain : reduceChain (codeChain cocycleLeaf193) =
+    reduceChain (restrictCubes 3 (coBoundary (codeChain (treeEntries phiCut193)))) := by
+  exact (modularNormalization_sound 16 (codeTreeCofaces phiCut193) cocycleLeaf193 cocycleLeaf193_check).trans
+    (congrArg reduceChain (codeTreeCofaces_sound phiCut193))
+noncomputable def cocycleLeaf194Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf194Part0@@
+noncomputable def cocycleLeaf194Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf194Part1@@
+noncomputable def cocycleLeaf194Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf194Part2@@
+noncomputable def cocycleLeaf194Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf194Part3@@
+noncomputable def cocycleLeaf194 : List (ℕ × ℤ) := cocycleLeaf194Part0 ++ cocycleLeaf194Part1 ++ cocycleLeaf194Part2 ++ cocycleLeaf194Part3
+theorem cocycleLeaf194_check :
+    modularCollapse 16 ((codeTreeCofaces phiCut194).map (fun p => [p])) = [cocycleLeaf194] := by decide +kernel
+theorem cocycleLeaf194_chain : reduceChain (codeChain cocycleLeaf194) =
+    reduceChain (restrictCubes 3 (coBoundary (codeChain (treeEntries phiCut194)))) := by
+  exact (modularNormalization_sound 16 (codeTreeCofaces phiCut194) cocycleLeaf194 cocycleLeaf194_check).trans
+    (congrArg reduceChain (codeTreeCofaces_sound phiCut194))
+noncomputable def cocycleLeaf195 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf195@@
+theorem cocycleLeaf195_check :
+    modularCollapse 16 ((codeTreeCofaces phiCut195).map (fun p => [p])) = [cocycleLeaf195] := by decide +kernel
+theorem cocycleLeaf195_chain : reduceChain (codeChain cocycleLeaf195) =
+    reduceChain (restrictCubes 3 (coBoundary (codeChain (treeEntries phiCut195)))) := by
+  exact (modularNormalization_sound 16 (codeTreeCofaces phiCut195) cocycleLeaf195 cocycleLeaf195_check).trans
+    (congrArg reduceChain (codeTreeCofaces_sound phiCut195))
+noncomputable def cocycleLeaf196Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf196Part0@@
+noncomputable def cocycleLeaf196Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf196Part1@@
+noncomputable def cocycleLeaf196Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf196Part2@@
+noncomputable def cocycleLeaf196Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf196Part3@@
+noncomputable def cocycleLeaf196 : List (ℕ × ℤ) := cocycleLeaf196Part0 ++ cocycleLeaf196Part1 ++ cocycleLeaf196Part2 ++ cocycleLeaf196Part3
+theorem cocycleLeaf196_check :
+    modularCollapse 16 ((codeTreeCofaces phiCut196).map (fun p => [p])) = [cocycleLeaf196] := by decide +kernel
+theorem cocycleLeaf196_chain : reduceChain (codeChain cocycleLeaf196) =
+    reduceChain (restrictCubes 3 (coBoundary (codeChain (treeEntries phiCut196)))) := by
+  exact (modularNormalization_sound 16 (codeTreeCofaces phiCut196) cocycleLeaf196 cocycleLeaf196_check).trans
+    (congrArg reduceChain (codeTreeCofaces_sound phiCut196))
+noncomputable def cocycleLeaf197 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf197@@
+theorem cocycleLeaf197_check :
+    modularCollapse 16 ((codeTreeCofaces phiCut197).map (fun p => [p])) = [cocycleLeaf197] := by decide +kernel
+theorem cocycleLeaf197_chain : reduceChain (codeChain cocycleLeaf197) =
+    reduceChain (restrictCubes 3 (coBoundary (codeChain (treeEntries phiCut197)))) := by
+  exact (modularNormalization_sound 16 (codeTreeCofaces phiCut197) cocycleLeaf197 cocycleLeaf197_check).trans
+    (congrArg reduceChain (codeTreeCofaces_sound phiCut197))
+noncomputable def cocycleLeaf198Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf198Part0@@
+noncomputable def cocycleLeaf198Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf198Part1@@
+noncomputable def cocycleLeaf198Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf198Part2@@
+noncomputable def cocycleLeaf198Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf198Part3@@
+noncomputable def cocycleLeaf198 : List (ℕ × ℤ) := cocycleLeaf198Part0 ++ cocycleLeaf198Part1 ++ cocycleLeaf198Part2 ++ cocycleLeaf198Part3
+theorem cocycleLeaf198_check :
+    modularCollapse 16 ((codeTreeCofaces phiCut198).map (fun p => [p])) = [cocycleLeaf198] := by decide +kernel
+theorem cocycleLeaf198_chain : reduceChain (codeChain cocycleLeaf198) =
+    reduceChain (restrictCubes 3 (coBoundary (codeChain (treeEntries phiCut198)))) := by
+  exact (modularNormalization_sound 16 (codeTreeCofaces phiCut198) cocycleLeaf198 cocycleLeaf198_check).trans
+    (congrArg reduceChain (codeTreeCofaces_sound phiCut198))
+noncomputable def cocycleLeaf199 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf199@@
+theorem cocycleLeaf199_check :
+    modularCollapse 16 ((codeTreeCofaces phiCut199).map (fun p => [p])) = [cocycleLeaf199] := by decide +kernel
+theorem cocycleLeaf199_chain : reduceChain (codeChain cocycleLeaf199) =
+    reduceChain (restrictCubes 3 (coBoundary (codeChain (treeEntries phiCut199)))) := by
+  exact (modularNormalization_sound 16 (codeTreeCofaces phiCut199) cocycleLeaf199 cocycleLeaf199_check).trans
+    (congrArg reduceChain (codeTreeCofaces_sound phiCut199))
+noncomputable def cocycleLeaf200Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf200Part0@@
+noncomputable def cocycleLeaf200Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf200Part1@@
+noncomputable def cocycleLeaf200Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf200Part2@@
+noncomputable def cocycleLeaf200Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf200Part3@@
+noncomputable def cocycleLeaf200Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf200Part4@@
+noncomputable def cocycleLeaf200 : List (ℕ × ℤ) := cocycleLeaf200Part0 ++ cocycleLeaf200Part1 ++ cocycleLeaf200Part2 ++ cocycleLeaf200Part3 ++ cocycleLeaf200Part4
+theorem cocycleLeaf200_check :
+    modularCollapse 16 ((codeTreeCofaces phiCut200).map (fun p => [p])) = [cocycleLeaf200] := by decide +kernel
+theorem cocycleLeaf200_chain : reduceChain (codeChain cocycleLeaf200) =
+    reduceChain (restrictCubes 3 (coBoundary (codeChain (treeEntries phiCut200)))) := by
+  exact (modularNormalization_sound 16 (codeTreeCofaces phiCut200) cocycleLeaf200 cocycleLeaf200_check).trans
+    (congrArg reduceChain (codeTreeCofaces_sound phiCut200))
+noncomputable def cocycleLeaf201 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf201@@
+theorem cocycleLeaf201_check :
+    modularCollapse 16 ((codeTreeCofaces phiCut201).map (fun p => [p])) = [cocycleLeaf201] := by decide +kernel
+theorem cocycleLeaf201_chain : reduceChain (codeChain cocycleLeaf201) =
+    reduceChain (restrictCubes 3 (coBoundary (codeChain (treeEntries phiCut201)))) := by
+  exact (modularNormalization_sound 16 (codeTreeCofaces phiCut201) cocycleLeaf201 cocycleLeaf201_check).trans
+    (congrArg reduceChain (codeTreeCofaces_sound phiCut201))
+noncomputable def cocycleLeaf202Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf202Part0@@
+noncomputable def cocycleLeaf202Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf202Part1@@
+noncomputable def cocycleLeaf202Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf202Part2@@
+noncomputable def cocycleLeaf202Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf202Part3@@
+noncomputable def cocycleLeaf202 : List (ℕ × ℤ) := cocycleLeaf202Part0 ++ cocycleLeaf202Part1 ++ cocycleLeaf202Part2 ++ cocycleLeaf202Part3
+theorem cocycleLeaf202_check :
+    modularCollapse 16 ((codeTreeCofaces phiCut202).map (fun p => [p])) = [cocycleLeaf202] := by decide +kernel
+theorem cocycleLeaf202_chain : reduceChain (codeChain cocycleLeaf202) =
+    reduceChain (restrictCubes 3 (coBoundary (codeChain (treeEntries phiCut202)))) := by
+  exact (modularNormalization_sound 16 (codeTreeCofaces phiCut202) cocycleLeaf202 cocycleLeaf202_check).trans
+    (congrArg reduceChain (codeTreeCofaces_sound phiCut202))
+noncomputable def cocycleLeaf203 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf203@@
+theorem cocycleLeaf203_check :
+    modularCollapse 16 ((codeTreeCofaces phiCut203).map (fun p => [p])) = [cocycleLeaf203] := by decide +kernel
+theorem cocycleLeaf203_chain : reduceChain (codeChain cocycleLeaf203) =
+    reduceChain (restrictCubes 3 (coBoundary (codeChain (treeEntries phiCut203)))) := by
+  exact (modularNormalization_sound 16 (codeTreeCofaces phiCut203) cocycleLeaf203 cocycleLeaf203_check).trans
+    (congrArg reduceChain (codeTreeCofaces_sound phiCut203))
+noncomputable def cocycleLeaf204Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf204Part0@@
+noncomputable def cocycleLeaf204Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf204Part1@@
+noncomputable def cocycleLeaf204Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf204Part2@@
+noncomputable def cocycleLeaf204Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf204Part3@@
+noncomputable def cocycleLeaf204 : List (ℕ × ℤ) := cocycleLeaf204Part0 ++ cocycleLeaf204Part1 ++ cocycleLeaf204Part2 ++ cocycleLeaf204Part3
+theorem cocycleLeaf204_check :
+    modularCollapse 16 ((codeTreeCofaces phiCut204).map (fun p => [p])) = [cocycleLeaf204] := by decide +kernel
+theorem cocycleLeaf204_chain : reduceChain (codeChain cocycleLeaf204) =
+    reduceChain (restrictCubes 3 (coBoundary (codeChain (treeEntries phiCut204)))) := by
+  exact (modularNormalization_sound 16 (codeTreeCofaces phiCut204) cocycleLeaf204 cocycleLeaf204_check).trans
+    (congrArg reduceChain (codeTreeCofaces_sound phiCut204))
+noncomputable def cocycleLeaf205 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf205@@
+theorem cocycleLeaf205_check :
+    modularCollapse 16 ((codeTreeCofaces phiCut205).map (fun p => [p])) = [cocycleLeaf205] := by decide +kernel
+theorem cocycleLeaf205_chain : reduceChain (codeChain cocycleLeaf205) =
+    reduceChain (restrictCubes 3 (coBoundary (codeChain (treeEntries phiCut205)))) := by
+  exact (modularNormalization_sound 16 (codeTreeCofaces phiCut205) cocycleLeaf205 cocycleLeaf205_check).trans
+    (congrArg reduceChain (codeTreeCofaces_sound phiCut205))
+noncomputable def cocycleLeaf206Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf206Part0@@
+noncomputable def cocycleLeaf206Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf206Part1@@
+noncomputable def cocycleLeaf206Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf206Part2@@
+noncomputable def cocycleLeaf206Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf206Part3@@
+noncomputable def cocycleLeaf206 : List (ℕ × ℤ) := cocycleLeaf206Part0 ++ cocycleLeaf206Part1 ++ cocycleLeaf206Part2 ++ cocycleLeaf206Part3
+theorem cocycleLeaf206_check :
+    modularCollapse 16 ((codeTreeCofaces phiCut206).map (fun p => [p])) = [cocycleLeaf206] := by decide +kernel
+theorem cocycleLeaf206_chain : reduceChain (codeChain cocycleLeaf206) =
+    reduceChain (restrictCubes 3 (coBoundary (codeChain (treeEntries phiCut206)))) := by
+  exact (modularNormalization_sound 16 (codeTreeCofaces phiCut206) cocycleLeaf206 cocycleLeaf206_check).trans
+    (congrArg reduceChain (codeTreeCofaces_sound phiCut206))
+noncomputable def cocycleLeaf207 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleLeaf207@@
+theorem cocycleLeaf207_check :
+    modularCollapse 16 ((codeTreeCofaces phiCut207).map (fun p => [p])) = [cocycleLeaf207] := by decide +kernel
+theorem cocycleLeaf207_chain : reduceChain (codeChain cocycleLeaf207) =
+    reduceChain (restrictCubes 3 (coBoundary (codeChain (treeEntries phiCut207)))) := by
+  exact (modularNormalization_sound 16 (codeTreeCofaces phiCut207) cocycleLeaf207 cocycleLeaf207_check).trans
+    (congrArg reduceChain (codeTreeCofaces_sound phiCut207))
+end Paper23.CertificateChecks

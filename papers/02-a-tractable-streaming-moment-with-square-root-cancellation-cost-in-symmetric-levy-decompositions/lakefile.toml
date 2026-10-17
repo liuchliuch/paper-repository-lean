@@ -1,0 +1,29 @@
+name = "Paper02"
+version = "0.1.0"
+defaultTargets = ["Paper02", "Verification"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
+
+[[lean_lib]]
+name = "Paper02"
+globs = ["Paper02", "Paper02.*"]
+
+[[lean_lib]]
+name = "Verification"
+roots = ["Verification.Solution", "Verification.Audit"]
+globs = ["Verification.Statements", "Verification.Solution", "Verification.Audit"]
+
+[[lean_lib]]
+name = "VerificationChallenge"
+roots = ["Verification.Challenge"]
+
+[[lean_lib]]
+name = "VerificationNegativePremise"
+roots = ["Verification.NegativePremise"]
+
+[[lean_lib]]
+name = "VerificationNegativeAxiom"
+roots = ["Verification.NegativeAxiom"]

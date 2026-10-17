@@ -1,0 +1,62 @@
+{
+  "paper_id": "37",
+  "title": "Rate-Optimal Polynomial-Time Prediction of Stationary Renewal Processes",
+  "source_url": "https://liuchliuch.github.io/repository/sharp-polynomial-time-renewal-prediction/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper37"
+  ],
+  "build_targets": [
+    "Paper37"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "89 frozen explicit theorem contracts covering source-facing statistical, program and finite-machine results; 101 named coverage declarations were historically checked separately."
+    },
+    {
+      "id": "negative-added-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "The frozen boundary/minimax contract with a real added premise."
+    },
+    {
+      "id": "negative-illegal-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Unchanged boundary/minimax contract from a forbidden axiom."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Main fixed-time prediction theorem",
+      "declaration": "Paper37.MainResults.fixed_time_minimax_rate",
+      "scope": "Fixed-time stationary renewal word-risk and minimax rates, conditional on the finite equilibrium renewal-cycle principle for the lower-bound transfer."
+    },
+    {
+      "source_result": "Polynomial-time rate attainment",
+      "declaration": "Paper37.CompleteResults.fixed_time_rate_attainment",
+      "scope": "Exact fixed predictor, rate attainment and finite-alphabet TM2 polynomial-time implementation, conditional on EquilibriumCyclePrinciple and BoundedLoopSimulationPrinciple."
+    },
+    {
+      "source_result": "Adaptive prediction",
+      "declaration": "Paper37.CompleteResults.adaptive_rate_attainment",
+      "scope": "Adaptive predictor with risk oracle inequalities and finite-machine polynomial-time attainment, conditional on the generic bounded-loop simulation principle."
+    },
+    {
+      "source_result": "Anytime/cumulative prediction",
+      "declaration": "Paper37.CompleteResults.anytime_rate_attainment",
+      "scope": "Cumulative risk rates and an anytime finite-machine implementation, conditional on the equilibrium-cycle and bounded-loop simulation principles."
+    },
+    {
+      "source_result": "Known bounded support, Appendix H.1",
+      "declaration": "Paper37.KnownSupportCycle.risk_bounds",
+      "scope": "Known-bounded-support estimator and renewal word-risk bounds under the finite lattice equilibrium projection principle; no general infinite-support two-sided construction is established."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "primary_comparator": "main"
+}

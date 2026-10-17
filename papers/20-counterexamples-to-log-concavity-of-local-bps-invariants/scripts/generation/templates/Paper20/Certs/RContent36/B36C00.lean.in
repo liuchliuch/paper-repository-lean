@@ -1,0 +1,15 @@
+import Paper20.RContent36
+import Paper20.Certs.RContent36.Test36
+set_option maxHeartbeats 0
+set_option maxRecDepth 200000
+namespace Paper20.Cert.RContent36.Tree
+open Paper20.RContent36
+open Paper20.HilbertJobs (Job parts children)
+
+def j_36 : Job := ⟨[36], 36, 0, 36⟩
+
+def v_36 : State := Paper20.Cert.RContent36.v36
+
+theorem correct_36 : Correct j_36 v_36 := Paper20.Cert.RContent36.v36_correct
+
+end Paper20.Cert.RContent36.Tree

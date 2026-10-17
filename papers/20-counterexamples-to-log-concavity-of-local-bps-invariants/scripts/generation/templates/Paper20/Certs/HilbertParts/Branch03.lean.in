@@ -1,0 +1,198 @@
+import Paper20.HilbertJobsProof
+
+set_option maxHeartbeats 0
+set_option maxRecDepth 200000
+namespace Paper20.Cert.HilbertParts.Tree
+open Paper20.HilbertJobs
+
+def j_3_3_3_3_3_3_3_3_3 : Job := ⟨[3, 3, 3, 3, 3, 3, 3, 3, 3], 3, 16, 35⟩
+
+def v_3_3_3_3_3_3_3_3_3 : List ℕ := @@GENERATED_RHS:v_3_3_3_3_3_3_3_3_3@@
+
+theorem correct_3_3_3_3_3_3_3_3_3 : value j_3_3_3_3_3_3_3_3_3 = v_3_3_3_3_3_3_3_3_3 := by decide
+
+def j_3_3_3_3_3_3_3_3_2 : Job := ⟨[3, 3, 3, 3, 3, 3, 3, 3, 2], 2, 17, 35⟩
+
+def v_3_3_3_3_3_3_3_3_2 : List ℕ := @@GENERATED_RHS:v_3_3_3_3_3_3_3_3_2@@
+
+theorem correct_3_3_3_3_3_3_3_3_2 : value j_3_3_3_3_3_3_3_3_2 = v_3_3_3_3_3_3_3_3_2 := by decide
+
+def j_3_3_3_3_3_3_3_3_1 : Job := ⟨[3, 3, 3, 3, 3, 3, 3, 3, 1], 1, 18, 35⟩
+
+def v_3_3_3_3_3_3_3_3_1 : List ℕ := @@GENERATED_RHS:v_3_3_3_3_3_3_3_3_1@@
+
+theorem correct_3_3_3_3_3_3_3_3_1 : value j_3_3_3_3_3_3_3_3_1 = v_3_3_3_3_3_3_3_3_1 := by decide
+
+def j_3_3_3_3_3_3_3_3 : Job := ⟨[3, 3, 3, 3, 3, 3, 3, 3], 3, 19, 36⟩
+
+def v_3_3_3_3_3_3_3_3 : List ℕ := @@GENERATED_RHS:v_3_3_3_3_3_3_3_3@@
+
+theorem correct_3_3_3_3_3_3_3_3 : value j_3_3_3_3_3_3_3_3 = v_3_3_3_3_3_3_3_3 := by
+  rw [value_children j_3_3_3_3_3_3_3_3 (by decide) (by decide)]
+  have hc : children j_3_3_3_3_3_3_3_3 = [j_3_3_3_3_3_3_3_3_3, j_3_3_3_3_3_3_3_3_2, j_3_3_3_3_3_3_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_3_3_3_3_3_3_3_3_3, correct_3_3_3_3_3_3_3_3_2, correct_3_3_3_3_3_3_3_3_1]
+  all_goals decide
+
+def j_3_3_3_3_3_3_3_2 : Job := ⟨[3, 3, 3, 3, 3, 3, 3, 2], 2, 20, 36⟩
+
+def v_3_3_3_3_3_3_3_2 : List ℕ := @@GENERATED_RHS:v_3_3_3_3_3_3_3_2@@
+
+theorem correct_3_3_3_3_3_3_3_2 : value j_3_3_3_3_3_3_3_2 = v_3_3_3_3_3_3_3_2 := by decide
+
+def j_3_3_3_3_3_3_3_1 : Job := ⟨[3, 3, 3, 3, 3, 3, 3, 1], 1, 21, 36⟩
+
+def v_3_3_3_3_3_3_3_1 : List ℕ := @@GENERATED_RHS:v_3_3_3_3_3_3_3_1@@
+
+theorem correct_3_3_3_3_3_3_3_1 : value j_3_3_3_3_3_3_3_1 = v_3_3_3_3_3_3_3_1 := by decide
+
+def j_3_3_3_3_3_3_3 : Job := ⟨[3, 3, 3, 3, 3, 3, 3], 3, 22, 37⟩
+
+def v_3_3_3_3_3_3_3 : List ℕ := @@GENERATED_RHS:v_3_3_3_3_3_3_3@@
+
+theorem correct_3_3_3_3_3_3_3 : value j_3_3_3_3_3_3_3 = v_3_3_3_3_3_3_3 := by
+  rw [value_children j_3_3_3_3_3_3_3 (by decide) (by decide)]
+  have hc : children j_3_3_3_3_3_3_3 = [j_3_3_3_3_3_3_3_3, j_3_3_3_3_3_3_3_2, j_3_3_3_3_3_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_3_3_3_3_3_3_3_3, correct_3_3_3_3_3_3_3_2, correct_3_3_3_3_3_3_3_1]
+  all_goals decide
+
+def j_3_3_3_3_3_3_2 : Job := ⟨[3, 3, 3, 3, 3, 3, 2], 2, 23, 37⟩
+
+def v_3_3_3_3_3_3_2 : List ℕ := @@GENERATED_RHS:v_3_3_3_3_3_3_2@@
+
+theorem correct_3_3_3_3_3_3_2 : value j_3_3_3_3_3_3_2 = v_3_3_3_3_3_3_2 := by decide
+
+def j_3_3_3_3_3_3_1 : Job := ⟨[3, 3, 3, 3, 3, 3, 1], 1, 24, 37⟩
+
+def v_3_3_3_3_3_3_1 : List ℕ := @@GENERATED_RHS:v_3_3_3_3_3_3_1@@
+
+theorem correct_3_3_3_3_3_3_1 : value j_3_3_3_3_3_3_1 = v_3_3_3_3_3_3_1 := by decide
+
+def j_3_3_3_3_3_3 : Job := ⟨[3, 3, 3, 3, 3, 3], 3, 25, 38⟩
+
+def v_3_3_3_3_3_3 : List ℕ := @@GENERATED_RHS:v_3_3_3_3_3_3@@
+
+theorem correct_3_3_3_3_3_3 : value j_3_3_3_3_3_3 = v_3_3_3_3_3_3 := by
+  rw [value_children j_3_3_3_3_3_3 (by decide) (by decide)]
+  have hc : children j_3_3_3_3_3_3 = [j_3_3_3_3_3_3_3, j_3_3_3_3_3_3_2, j_3_3_3_3_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_3_3_3_3_3_3_3, correct_3_3_3_3_3_3_2, correct_3_3_3_3_3_3_1]
+  all_goals decide
+
+def j_3_3_3_3_3_2 : Job := ⟨[3, 3, 3, 3, 3, 2], 2, 26, 38⟩
+
+def v_3_3_3_3_3_2 : List ℕ := @@GENERATED_RHS:v_3_3_3_3_3_2@@
+
+theorem correct_3_3_3_3_3_2 : value j_3_3_3_3_3_2 = v_3_3_3_3_3_2 := by decide
+
+def j_3_3_3_3_3_1 : Job := ⟨[3, 3, 3, 3, 3, 1], 1, 27, 38⟩
+
+def v_3_3_3_3_3_1 : List ℕ := @@GENERATED_RHS:v_3_3_3_3_3_1@@
+
+theorem correct_3_3_3_3_3_1 : value j_3_3_3_3_3_1 = v_3_3_3_3_3_1 := by decide
+
+def j_3_3_3_3_3 : Job := ⟨[3, 3, 3, 3, 3], 3, 28, 39⟩
+
+def v_3_3_3_3_3 : List ℕ := @@GENERATED_RHS:v_3_3_3_3_3@@
+
+theorem correct_3_3_3_3_3 : value j_3_3_3_3_3 = v_3_3_3_3_3 := by
+  rw [value_children j_3_3_3_3_3 (by decide) (by decide)]
+  have hc : children j_3_3_3_3_3 = [j_3_3_3_3_3_3, j_3_3_3_3_3_2, j_3_3_3_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_3_3_3_3_3_3, correct_3_3_3_3_3_2, correct_3_3_3_3_3_1]
+  all_goals decide
+
+def j_3_3_3_3_2 : Job := ⟨[3, 3, 3, 3, 2], 2, 29, 39⟩
+
+def v_3_3_3_3_2 : List ℕ := @@GENERATED_RHS:v_3_3_3_3_2@@
+
+theorem correct_3_3_3_3_2 : value j_3_3_3_3_2 = v_3_3_3_3_2 := by decide
+
+def j_3_3_3_3_1 : Job := ⟨[3, 3, 3, 3, 1], 1, 30, 39⟩
+
+def v_3_3_3_3_1 : List ℕ := @@GENERATED_RHS:v_3_3_3_3_1@@
+
+theorem correct_3_3_3_3_1 : value j_3_3_3_3_1 = v_3_3_3_3_1 := by decide
+
+def j_3_3_3_3 : Job := ⟨[3, 3, 3, 3], 3, 31, 40⟩
+
+def v_3_3_3_3 : List ℕ := @@GENERATED_RHS:v_3_3_3_3@@
+
+theorem correct_3_3_3_3 : value j_3_3_3_3 = v_3_3_3_3 := by
+  rw [value_children j_3_3_3_3 (by decide) (by decide)]
+  have hc : children j_3_3_3_3 = [j_3_3_3_3_3, j_3_3_3_3_2, j_3_3_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_3_3_3_3_3, correct_3_3_3_3_2, correct_3_3_3_3_1]
+  all_goals decide
+
+def j_3_3_3_2 : Job := ⟨[3, 3, 3, 2], 2, 32, 40⟩
+
+def v_3_3_3_2 : List ℕ := @@GENERATED_RHS:v_3_3_3_2@@
+
+theorem correct_3_3_3_2 : value j_3_3_3_2 = v_3_3_3_2 := by decide
+
+def j_3_3_3_1 : Job := ⟨[3, 3, 3, 1], 1, 33, 40⟩
+
+def v_3_3_3_1 : List ℕ := @@GENERATED_RHS:v_3_3_3_1@@
+
+theorem correct_3_3_3_1 : value j_3_3_3_1 = v_3_3_3_1 := by decide
+
+def j_3_3_3 : Job := ⟨[3, 3, 3], 3, 34, 41⟩
+
+def v_3_3_3 : List ℕ := @@GENERATED_RHS:v_3_3_3@@
+
+theorem correct_3_3_3 : value j_3_3_3 = v_3_3_3 := by
+  rw [value_children j_3_3_3 (by decide) (by decide)]
+  have hc : children j_3_3_3 = [j_3_3_3_3, j_3_3_3_2, j_3_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_3_3_3_3, correct_3_3_3_2, correct_3_3_3_1]
+  all_goals decide
+
+def j_3_3_2 : Job := ⟨[3, 3, 2], 2, 35, 41⟩
+
+def v_3_3_2 : List ℕ := @@GENERATED_RHS:v_3_3_2@@
+
+theorem correct_3_3_2 : value j_3_3_2 = v_3_3_2 := by decide
+
+def j_3_3_1 : Job := ⟨[3, 3, 1], 1, 36, 41⟩
+
+def v_3_3_1 : List ℕ := @@GENERATED_RHS:v_3_3_1@@
+
+theorem correct_3_3_1 : value j_3_3_1 = v_3_3_1 := by decide
+
+def j_3_3 : Job := ⟨[3, 3], 3, 37, 42⟩
+
+def v_3_3 : List ℕ := @@GENERATED_RHS:v_3_3@@
+
+theorem correct_3_3 : value j_3_3 = v_3_3 := by
+  rw [value_children j_3_3 (by decide) (by decide)]
+  have hc : children j_3_3 = [j_3_3_3, j_3_3_2, j_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_3_3_3, correct_3_3_2, correct_3_3_1]
+  all_goals decide
+
+def j_3_2 : Job := ⟨[3, 2], 2, 38, 42⟩
+
+def v_3_2 : List ℕ := @@GENERATED_RHS:v_3_2@@
+
+theorem correct_3_2 : value j_3_2 = v_3_2 := by decide
+
+def j_3_1 : Job := ⟨[3, 1], 1, 39, 42⟩
+
+def v_3_1 : List ℕ := @@GENERATED_RHS:v_3_1@@
+
+theorem correct_3_1 : value j_3_1 = v_3_1 := by decide
+
+def j_3 : Job := ⟨[3], 3, 40, 43⟩
+
+def v_3 : List ℕ := @@GENERATED_RHS:v_3@@
+
+theorem correct_3 : value j_3 = v_3 := by
+  rw [value_children j_3 (by decide) (by decide)]
+  have hc : children j_3 = [j_3_3, j_3_2, j_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_3_3, correct_3_2, correct_3_1]
+  all_goals decide
+
+end Paper20.Cert.HilbertParts.Tree

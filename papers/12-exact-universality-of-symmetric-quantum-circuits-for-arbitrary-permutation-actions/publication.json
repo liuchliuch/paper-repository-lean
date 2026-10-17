@@ -1,0 +1,72 @@
+{
+  "paper_id": "12",
+  "title": "Exact universality of symmetric quantum circuits for arbitrary permutation actions",
+  "source_url": "https://liuchliuch.github.io/repository/exact-universality-of-symmetric-quantum-circuits-for-arbitrary-permutation-actions/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper12",
+    "Paper12.Proofs"
+  ],
+  "build_targets": [
+    "Paper12",
+    "PaperProofs"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "comparator/config.json",
+      "expected_rejection": null,
+      "scope": "17 fixed explicit contracts covering all eight numbered results, actual circuit construction/resource equations and the conditional Choi appendix."
+    },
+    {
+      "id": "negative-premise",
+      "config": "comparator/added-premise.json",
+      "expected_rejection": "type",
+      "scope": "One fixed numbered-result endpoint.",
+      "rejection_detail": "Additional premise changes the fixed theorem type"
+    },
+    {
+      "id": "negative-axiom",
+      "config": "comparator/illegal-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "One fixed numbered-result endpoint.",
+      "rejection_detail": "injectedFalse is outside the permitted axioms"
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1.1",
+      "declaration": "Paper12.Paper.theorem_1_1",
+      "scope": "A unitary on a finite register has a clean symmetric circuit exactly when it is equivariant, including the empty-register case and the stated nonuniform gate/workspace bounds."
+    },
+    {
+      "source_result": "Corollary 4.2",
+      "declaration": "Paper12.Paper.corollary_4_2",
+      "scope": "An equivariant unitary for any group action on a finite register admits a clean symmetric circuit through the action's finite permutation image."
+    },
+    {
+      "source_result": "Lemma 4.1",
+      "declaration": "Paper12.Paper.lemma_4_1",
+      "scope": "A specified symmetric block encoding with success probability strictly between zero and one admits exact clean oblivious amplification with the stated resource bound."
+    },
+    {
+      "source_result": "Appendix A",
+      "declaration": "Paper12.Paper.appendix_choi",
+      "scope": "Given the specified clean symmetric Choi-state preparation and register lifts, constructs the Bell/swap block encoding, clean amplifier and resource bounds."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "dependency_pins": {
+    "mathlib": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "plausible": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+    "LeanSearchClient": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+    "importGraph": "d768126816be17600904726ca7976b185786e6b9",
+    "proofwidgets": "556caed0eadb7901e068131d1be208dd907d07a2",
+    "aesop": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+    "Qq": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+    "batteries": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+    "Cli": "91c18fa62838ad0ab7384c03c9684d99d306e1da"
+  },
+  "primary_comparator": "main"
+}

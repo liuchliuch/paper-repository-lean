@@ -1,0 +1,144 @@
+import Paper20.HilbertJobsProof
+
+set_option maxHeartbeats 0
+set_option maxRecDepth 200000
+namespace Paper20.Cert.HilbertParts.Tree
+open Paper20.HilbertJobs
+
+def j_17_17 : Job := ⟨[17, 17], 17, 9, 42⟩
+
+def v_17_17 : List ℕ := List.replicate 904 0
+
+theorem correct_17_17 : value j_17_17 = v_17_17 := by decide
+
+def j_17_16 : Job := ⟨[17, 16], 16, 10, 42⟩
+
+def v_17_16 : List ℕ := List.replicate 904 0
+
+theorem correct_17_16 : value j_17_16 = v_17_16 := by decide
+
+def j_17_15 : Job := ⟨[17, 15], 15, 11, 42⟩
+
+def v_17_15 : List ℕ := List.replicate 904 0
+
+theorem correct_17_15 : value j_17_15 = v_17_15 := by decide
+
+def j_17_14 : Job := ⟨[17, 14], 14, 12, 42⟩
+
+def v_17_14 : List ℕ := List.replicate 904 0
+
+theorem correct_17_14 : value j_17_14 = v_17_14 := by decide
+
+def j_17_13 : Job := ⟨[17, 13], 13, 13, 42⟩
+
+def v_17_13 : List ℕ := List.replicate 904 0
+
+theorem correct_17_13 : value j_17_13 = v_17_13 := by decide
+
+def j_17_12 : Job := ⟨[17, 12], 12, 14, 42⟩
+
+def v_17_12 : List ℕ := List.replicate 904 0
+
+theorem correct_17_12 : value j_17_12 = v_17_12 := by decide
+
+def j_17_11 : Job := ⟨[17, 11], 11, 15, 42⟩
+
+def v_17_11 : List ℕ := List.replicate 904 0
+
+theorem correct_17_11 : value j_17_11 = v_17_11 := by decide
+
+def j_17_10 : Job := ⟨[17, 10], 10, 16, 42⟩
+
+def v_17_10 : List ℕ := List.replicate 904 0
+
+theorem correct_17_10 : value j_17_10 = v_17_10 := by decide
+
+def j_17_9 : Job := ⟨[17, 9], 9, 17, 42⟩
+
+def v_17_9 : List ℕ := List.replicate 904 0
+
+theorem correct_17_9 : value j_17_9 = v_17_9 := by decide
+
+def j_17_8 : Job := ⟨[17, 8], 8, 18, 42⟩
+
+def v_17_8 : List ℕ := List.replicate 904 0
+
+theorem correct_17_8 : value j_17_8 = v_17_8 := by decide
+
+def j_17_7 : Job := ⟨[17, 7], 7, 19, 42⟩
+
+def v_17_7 : List ℕ := List.replicate 904 0
+
+theorem correct_17_7 : value j_17_7 = v_17_7 := by decide
+
+def j_17_6 : Job := ⟨[17, 6], 6, 20, 42⟩
+
+def v_17_6 : List ℕ := List.replicate 904 0
+
+theorem correct_17_6 : value j_17_6 = v_17_6 := by decide
+
+def j_17_5 : Job := ⟨[17, 5], 5, 21, 42⟩
+
+def v_17_5 : List ℕ := List.replicate 904 0
+
+theorem correct_17_5 : value j_17_5 = v_17_5 := by decide
+
+def j_17_4 : Job := ⟨[17, 4], 4, 22, 42⟩
+
+def v_17_4 : List ℕ := List.replicate 904 0
+
+theorem correct_17_4 : value j_17_4 = v_17_4 := by decide
+
+def j_17_3_3 : Job := ⟨[17, 3, 3], 3, 20, 41⟩
+
+def v_17_3_3 : List ℕ := List.replicate 904 0
+
+theorem correct_17_3_3 : value j_17_3_3 = v_17_3_3 := by decide
+
+def j_17_3_2 : Job := ⟨[17, 3, 2], 2, 21, 41⟩
+
+def v_17_3_2 : List ℕ := List.replicate 903 0 ++ [682578852087132]
+
+theorem correct_17_3_2 : value j_17_3_2 = v_17_3_2 := by decide
+
+def j_17_3_1 : Job := ⟨[17, 3, 1], 1, 22, 41⟩
+
+def v_17_3_1 : List ℕ := @@GENERATED_RHS:v_17_3_1@@
+
+theorem correct_17_3_1 : value j_17_3_1 = v_17_3_1 := by decide
+
+def j_17_3 : Job := ⟨[17, 3], 3, 23, 42⟩
+
+def v_17_3 : List ℕ := @@GENERATED_RHS:v_17_3@@
+
+theorem correct_17_3 : value j_17_3 = v_17_3 := by
+  rw [value_children j_17_3 (by decide) (by decide)]
+  have hc : children j_17_3 = [j_17_3_3, j_17_3_2, j_17_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_17_3_3, correct_17_3_2, correct_17_3_1]
+  all_goals decide
+
+def j_17_2 : Job := ⟨[17, 2], 2, 24, 42⟩
+
+def v_17_2 : List ℕ := @@GENERATED_RHS:v_17_2@@
+
+theorem correct_17_2 : value j_17_2 = v_17_2 := by decide
+
+def j_17_1 : Job := ⟨[17, 1], 1, 25, 42⟩
+
+def v_17_1 : List ℕ := @@GENERATED_RHS:v_17_1@@
+
+theorem correct_17_1 : value j_17_1 = v_17_1 := by decide
+
+def j_17 : Job := ⟨[17], 17, 26, 43⟩
+
+def v_17 : List ℕ := @@GENERATED_RHS:v_17@@
+
+theorem correct_17 : value j_17 = v_17 := by
+  rw [value_children j_17 (by decide) (by decide)]
+  have hc : children j_17 = [j_17_17, j_17_16, j_17_15, j_17_14, j_17_13, j_17_12, j_17_11, j_17_10, j_17_9, j_17_8, j_17_7, j_17_6, j_17_5, j_17_4, j_17_3, j_17_2, j_17_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_17_17, correct_17_16, correct_17_15, correct_17_14, correct_17_13, correct_17_12, correct_17_11, correct_17_10, correct_17_9, correct_17_8, correct_17_7, correct_17_6, correct_17_5, correct_17_4, correct_17_3, correct_17_2, correct_17_1]
+  all_goals decide
+
+end Paper20.Cert.HilbertParts.Tree

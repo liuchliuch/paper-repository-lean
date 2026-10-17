@@ -1,0 +1,912 @@
+{
+  "paper_id": "29",
+  "status": "13 exact registered generic external interfaces; no local Lean witnesses supplied.",
+  "inputs": [
+    {
+      "paper_id": "29",
+      "dependency_id": "AnchoredChaining",
+      "status": "registered_unformalized_external_input",
+      "interface_name": "AnchoredChaining",
+      "interface_file": "Paper29/ExternalProcess.lean",
+      "interface_file_sha256": "054ecf5970a3ce08663394216f05c1d9339f8074eca9705a5c04030c2b8c0dc5",
+      "exact_lean_contract": "def AnchoredChaining (C : ℝ) : Prop :=\n  ∀ (n m : ℕ) (T : Type) (t₀ : T) (π : Fin n → ℝ) (f : Fin n → T → ℝ),\n    0 < m → (∀ i, 0 < π i) → (∑ i, π i = 1) →\n    (∀ i, f i t₀ = 0) →\n    (∀ i, BddAbove (Set.range (fun t => |f i t|))) →\n    ∀ G : (Fin m → Fin n) → ℝ, (∀ ν, 0 ≤ G ν) →\n      (∀ ν, Chaining.gamma2 (sampleMetric π f ν) ≤ ENNReal.ofReal (G ν)) →\n      Sampling.expectation π (errorSup (m := m) π f) ≤ C * Sampling.expectation π G",
+      "source": "Jambulapati–Lee–Liu–Sidford arXiv:2311.18145v1 §1.6.2 Lemma1.14 first inequality (1.20), symmetrization/generic chaining",
+      "source_urls": [
+        "https://arxiv.org/html/2311.18145v1#S1.SS6.SSS2"
+      ],
+      "scope": "Universal bounded anchored population function class; no Huber, score, transfer, pilot or query-complexity conclusion",
+      "original_hypotheses_and_quantifiers": "Explicit in exact_lean_contract; includes all dimensions, ranks/nonzero rows, probability/measurability/conditional-kernel or convexity hypotheses as applicable.",
+      "missing_formalization": "This published generic result is a Prop parameter with no supplied Lean inhabitant, custom production axiom or sorry. Its application is in the own proof; the external theorem itself is not machine-proved.",
+      "own_result_exempted": false,
+      "proved_in_Lean": false,
+      "implementation_mode": "explicit quantified external theorem argument",
+      "use_sites": [
+        {
+          "file": "Paper29/CenteredTransfer.lean",
+          "line": 57,
+          "enclosing_declaration": "centered_affine_transfer",
+          "source": "(external : ExternalProcess.AnchoredChaining C)"
+        },
+        {
+          "file": "Paper29/ExpandedSpecification.lean",
+          "line": 14,
+          "enclosing_declaration": "theorem21",
+          "source": "ExternalProcess.AnchoredChaining C → WeightConstruction.RadiusLogNonexpansive →"
+        },
+        {
+          "file": "Paper29/LogTransfer.lean",
+          "line": 59,
+          "enclosing_declaration": "centered_affine_transfer_scores",
+          "source": "(external : ExternalProcess.AnchoredChaining C)"
+        },
+        {
+          "file": "Paper29/MinimaxProof.lean",
+          "line": 76,
+          "enclosing_declaration": "corollary2_3",
+          "source": "(external : ExternalProcess.AnchoredChaining C)"
+        },
+        {
+          "file": "Paper29/NumberedContracts.lean",
+          "line": 24,
+          "enclosing_declaration": "corollary23",
+          "source": "ExternalProcess.AnchoredChaining C → RadiusLogNonexpansive →"
+        },
+        {
+          "file": "Paper29/NumberedContracts.lean",
+          "line": 58,
+          "enclosing_declaration": "lemma35",
+          "source": "(external : ExternalProcess.AnchoredChaining C)"
+        },
+        {
+          "file": "Paper29/NumberedContracts.lean",
+          "line": 69,
+          "enclosing_declaration": "lemma36",
+          "source": "(external : ExternalProcess.AnchoredChaining C)"
+        },
+        {
+          "file": "Paper29/NumberedContracts.lean",
+          "line": 84,
+          "enclosing_declaration": "lemma39",
+          "source": "(external : ExternalProcess.AnchoredChaining C)"
+        },
+        {
+          "file": "Paper29/PilotFull.lean",
+          "line": 10,
+          "enclosing_declaration": "pilot_full_guarantee",
+          "source": "(external : ExternalProcess.AnchoredChaining C)"
+        },
+        {
+          "file": "Paper29/PilotGrid.lean",
+          "line": 35,
+          "enclosing_declaration": "pilotTest_expectation",
+          "source": "(external : ExternalProcess.AnchoredChaining C)"
+        },
+        {
+          "file": "Paper29/PilotGrid.lean",
+          "line": 95,
+          "enclosing_declaration": "pilot_embedding_probability",
+          "source": "(external : ExternalProcess.AnchoredChaining C)"
+        },
+        {
+          "file": "Paper29/PilotSampling.lean",
+          "line": 72,
+          "enclosing_declaration": "pilot_guarantee",
+          "source": "(external : ExternalProcess.AnchoredChaining C)"
+        },
+        {
+          "file": "Paper29/ProcessComparison.lean",
+          "line": 66,
+          "enclosing_declaration": "affine_chaining_comparison",
+          "source": "(external : ExternalProcess.AnchoredChaining C)"
+        },
+        {
+          "file": "Paper29/ReducedUpper.lean",
+          "line": 18,
+          "enclosing_declaration": "reduced_upper_large",
+          "source": "(external : ExternalProcess.AnchoredChaining C)"
+        },
+        {
+          "file": "Paper29/TwoBatchProbability.lean",
+          "line": 22,
+          "enclosing_declaration": "two_batch_probability",
+          "source": "(external : ExternalProcess.AnchoredChaining C)"
+        },
+        {
+          "file": "Paper29/UniformExpectation.lean",
+          "line": 12,
+          "enclosing_declaration": "unshifted_expectation_bound",
+          "source": "(external : ExternalProcess.AnchoredChaining C)"
+        },
+        {
+          "file": "Paper29/UniformExpectation.lean",
+          "line": 64,
+          "enclosing_declaration": "shifted_envelope_expectation",
+          "source": "(external : ExternalProcess.AnchoredChaining C)"
+        },
+        {
+          "file": "Paper29/UniformExpectation.lean",
+          "line": 88,
+          "enclosing_declaration": "centered_error_expectation",
+          "source": "(external : ExternalProcess.AnchoredChaining C)"
+        },
+        {
+          "file": "Paper29/UpperProof.lean",
+          "line": 31,
+          "enclosing_declaration": "full_rank_upper",
+          "source": "(external : ExternalProcess.AnchoredChaining C)"
+        },
+        {
+          "file": "Paper29/UpperProof.lean",
+          "line": 60,
+          "enclosing_declaration": "theorem2_1",
+          "source": "(external : ExternalProcess.AnchoredChaining C)"
+        }
+      ],
+      "source_paper_html_sha256": "b5a24fd1ac4fb6bb3542ff338df63a496ede1a5c7dc5807f4e8fcfaaeb6569bf"
+    },
+    {
+      "paper_id": "29",
+      "dependency_id": "RadiusLogNonexpansive",
+      "status": "registered_unformalized_external_input",
+      "interface_name": "RadiusLogNonexpansive",
+      "interface_file": "Paper29/WeightLogMetric.lean",
+      "interface_file_sha256": "03a9f425c66acdf76afa9fc94872d8fea020be29e780faa2b074f3795c3ead09",
+      "exact_lean_contract": "def RadiusLogNonexpansive : Prop :=\n  ∀ (n d : ℕ) (A : Matrix (Fin n) (Fin d) ℝ), A.rank = d →\n    (∀ i, A i ≠ 0) → ∀ u w : PositiveWeights n, ∀ i,\n      |Real.log (Leverage.radiusSq A u i) - Real.log (Leverage.radiusSq A w i)| ≤ logDist u w",
+      "source": "Same source Lemma2.6",
+      "source_urls": [
+        "https://arxiv.org/html/2311.18145v1#S2.SS1"
+      ],
+      "scope": "Loss-independent weighted Gram inverse/radius-squared log stability; own scalar contraction and finite construction proved locally",
+      "original_hypotheses_and_quantifiers": "Explicit in exact_lean_contract; includes all dimensions, ranks/nonzero rows, probability/measurability/conditional-kernel or convexity hypotheses as applicable.",
+      "missing_formalization": "This published generic result is a Prop parameter with no supplied Lean inhabitant, custom production axiom or sorry. Its application is in the own proof; the external theorem itself is not machine-proved.",
+      "own_result_exempted": false,
+      "proved_in_Lean": false,
+      "implementation_mode": "explicit quantified external theorem argument",
+      "use_sites": [
+        {
+          "file": "Paper29/AllRadius.lean",
+          "line": 15,
+          "enclosing_declaration": "all_radius_scores_exist",
+          "source": "(stability : RadiusLogNonexpansive) (transition : HuberPrimitive 4 Cₜ)"
+        },
+        {
+          "file": "Paper29/AllRadius.lean",
+          "line": 38,
+          "enclosing_declaration": "all_radius_scores_statement",
+          "source": "(stability : RadiusLogNonexpansive) (transition : HuberPrimitive 4 Cₜ)"
+        },
+        {
+          "file": "Paper29/ExpandedSpecification.lean",
+          "line": 14,
+          "enclosing_declaration": "theorem21",
+          "source": "ExternalProcess.AnchoredChaining C → WeightConstruction.RadiusLogNonexpansive →"
+        },
+        {
+          "file": "Paper29/ExpandedSpecification.lean",
+          "line": 19,
+          "enclosing_declaration": "lemma34",
+          "source": "∀ Cₜ Cₑ : ℝ, 0 ≤ Cₜ → 0 ≤ Cₑ → WeightConstruction.RadiusLogNonexpansive →"
+        },
+        {
+          "file": "Paper29/ExternalCovering.lean",
+          "line": 56,
+          "enclosing_declaration": "constructedHuberScheme",
+          "source": "(external : RadiusLogNonexpansive) (a b : ℤ) : HuberScheme A a b 4 := by"
+        },
+        {
+          "file": "Paper29/FiniteEndpoint.lean",
+          "line": 25,
+          "enclosing_declaration": "oneUpdate_contracts",
+          "source": "theorem oneUpdate_contracts (external : RadiusLogNonexpansive) (u w : PositiveWeights n) :"
+        },
+        {
+          "file": "Paper29/FiniteEndpoint.lean",
+          "line": 36,
+          "enclosing_declaration": "oneStop",
+          "source": "def oneStop (external : RadiusLogNonexpansive) : ℕ :="
+        },
+        {
+          "file": "Paper29/FiniteEndpoint.lean",
+          "line": 41,
+          "enclosing_declaration": "finiteOneWeight",
+          "source": "def finiteOneWeight (external : RadiusLogNonexpansive) : PositiveWeights n :="
+        },
+        {
+          "file": "Paper29/FiniteEndpoint.lean",
+          "line": 44,
+          "enclosing_declaration": "finiteOneWeight_residual",
+          "source": "theorem finiteOneWeight_residual (external : RadiusLogNonexpansive) :"
+        },
+        {
+          "file": "Paper29/FiniteEndpoint.lean",
+          "line": 73,
+          "enclosing_declaration": "finiteOneWeight_distance",
+          "source": "theorem finiteOneWeight_distance (external : RadiusLogNonexpansive) (v : PositiveWeights n)"
+        },
+        {
+          "file": "Paper29/FiniteEndpoint.lean",
+          "line": 84,
+          "enclosing_declaration": "finite_endpoint_dominates",
+          "source": "theorem finite_endpoint_dominates (external : RadiusLogNonexpansive) (v : PositiveWeights n)"
+        },
+        {
+          "file": "Paper29/FiniteScoreConstruction.lean",
+          "line": 12,
+          "enclosing_declaration": "finiteScores",
+          "source": "(hA : A.rank = d) (hrows : ∀ i, A i ≠ 0) (stability : RadiusLogNonexpansive)"
+        },
+        {
+          "file": "Paper29/FiniteScoreConstruction.lean",
+          "line": 25,
+          "enclosing_declaration": "finiteScores_spec",
+          "source": "(stability : RadiusLogNonexpansive) (transition : HuberPrimitive 4 Cₜ)"
+        },
+        {
+          "file": "Paper29/FiniteWeights.lean",
+          "line": 50,
+          "enclosing_declaration": "firstStop",
+          "source": "def firstStop (external : RadiusLogNonexpansive) (j : ℤ) (w : PositiveWeights n) : ℕ :="
+        },
+        {
+          "file": "Paper29/FiniteWeights.lean",
+          "line": 53,
+          "enclosing_declaration": "initialWeight",
+          "source": "def initialWeight (external : RadiusLogNonexpansive) (j : ℤ) : PositiveWeights n :="
+        },
+        {
+          "file": "Paper29/FiniteWeights.lean",
+          "line": 57,
+          "enclosing_declaration": "initialWeight_residual",
+          "source": "theorem initialWeight_residual (external : RadiusLogNonexpansive) (j : ℤ) :"
+        },
+        {
+          "file": "Paper29/FiniteWeights.lean",
+          "line": 69,
+          "enclosing_declaration": "sequence_residual",
+          "source": "theorem sequence_residual (external : RadiusLogNonexpansive) (j₀ : ℤ)"
+        },
+        {
+          "file": "Paper29/FiniteWeights.lean",
+          "line": 81,
+          "enclosing_declaration": "sequence_step_le",
+          "source": "theorem sequence_step_le (external : RadiusLogNonexpansive) (j₀ : ℤ)"
+        },
+        {
+          "file": "Paper29/FiniteWeights.lean",
+          "line": 96,
+          "enclosing_declaration": "constructed_scheme",
+          "source": "theorem constructed_scheme (external : RadiusLogNonexpansive) (j₀ : ℤ) :"
+        },
+        {
+          "file": "Paper29/MinimaxProof.lean",
+          "line": 77,
+          "enclosing_declaration": "corollary2_3",
+          "source": "(stability : WeightConstruction.RadiusLogNonexpansive)"
+        },
+        {
+          "file": "Paper29/NumberedContracts.lean",
+          "line": 24,
+          "enclosing_declaration": "corollary23",
+          "source": "ExternalProcess.AnchoredChaining C → RadiusLogNonexpansive →"
+        },
+        {
+          "file": "Paper29/NumberedContracts.lean",
+          "line": 29,
+          "enclosing_declaration": "lemma32Construction",
+          "source": "A.rank=d → (∀ i,A i≠0) → RadiusLogNonexpansive → ∀ j₀ : ℤ,"
+        },
+        {
+          "file": "Paper29/ReducedUpper.lean",
+          "line": 19,
+          "enclosing_declaration": "reduced_upper_large",
+          "source": "(stability : WeightConstruction.RadiusLogNonexpansive)"
+        },
+        {
+          "file": "Paper29/UpperProof.lean",
+          "line": 32,
+          "enclosing_declaration": "full_rank_upper",
+          "source": "(stability : WeightConstruction.RadiusLogNonexpansive)"
+        },
+        {
+          "file": "Paper29/UpperProof.lean",
+          "line": 61,
+          "enclosing_declaration": "theorem2_1",
+          "source": "(stability : WeightConstruction.RadiusLogNonexpansive)"
+        },
+        {
+          "file": "Paper29/WeightIteration.lean",
+          "line": 41,
+          "enclosing_declaration": "update_contracts",
+          "source": "theorem update_contracts [Nonempty (Fin n)] (external : RadiusLogNonexpansive)"
+        },
+        {
+          "file": "Paper29/WeightIteration.lean",
+          "line": 63,
+          "enclosing_declaration": "successive_iterates",
+          "source": "theorem successive_iterates [Nonempty (Fin n)] (external : RadiusLogNonexpansive)"
+        },
+        {
+          "file": "Paper29/WeightIteration.lean",
+          "line": 85,
+          "enclosing_declaration": "finite_stopping",
+          "source": "theorem finite_stopping [Nonempty (Fin n)] (external : RadiusLogNonexpansive)"
+        },
+        {
+          "file": "Paper29/WeightIteration.lean",
+          "line": 104,
+          "enclosing_declaration": "warm_start",
+          "source": "theorem warm_start [Nonempty (Fin n)] (external : RadiusLogNonexpansive)"
+        }
+      ],
+      "source_paper_html_sha256": "b5a24fd1ac4fb6bb3542ff338df63a496ede1a5c7dc5807f4e8fcfaaeb6569bf"
+    },
+    {
+      "paper_id": "29",
+      "dependency_id": "HuberPrimitive",
+      "status": "registered_unformalized_external_input",
+      "interface_name": "HuberPrimitive",
+      "interface_file": "Paper29/ExternalCovering.lean",
+      "interface_file_sha256": "98f740bb39acb746d91da0f75b4699bb37beeb5feb7c3d35b57d511a374362da",
+      "exact_lean_contract": "def HuberPrimitive (α C : ℝ) : Prop :=\n  ∀ (n d : ℕ) (A : Matrix (Fin n) (Fin d) ℝ), A.rank = d → (∀ i, A i ≠ 0) →\n    ∀ (a b : ℤ), a ≤ b → 4 * Real.log (2*(n:ℝ)) ≤ ((Finset.Icc a b).card : ℝ) →\n    ∀ scheme : HuberScheme A a b α,\n      gamma2 (T := Ball A ((2:ℝ)^(b+1)))\n        (fun h k => huberMetric A (maxScore A (Finset.Icc a b) scheme.w) h k) ≤\n      ENNReal.ofReal (C * Real.sqrt ((2:ℝ)^(b+1)) * ProcessTools.logFactor n)",
+      "source": "Same source Definition1.8 and covering/Dudley argument in proof of Theorem3.14; P29 imported (3.11)/(A.3)",
+      "source_urls": [
+        "https://arxiv.org/html/2311.18145v1#S3.Thmtheorem14"
+      ],
+      "scope": "Only finite interval covering estimate given actual normalized schemes; no existence, mass, all-radius assembly or sampling probability",
+      "original_hypotheses_and_quantifiers": "Explicit in exact_lean_contract; includes all dimensions, ranks/nonzero rows, probability/measurability/conditional-kernel or convexity hypotheses as applicable.",
+      "missing_formalization": "This published generic result is a Prop parameter with no supplied Lean inhabitant, custom production axiom or sorry. Its application is in the own proof; the external theorem itself is not machine-proved.",
+      "own_result_exempted": false,
+      "proved_in_Lean": false,
+      "implementation_mode": "explicit quantified external theorem argument",
+      "use_sites": [
+        {
+          "file": "Paper29/AllRadius.lean",
+          "line": 15,
+          "enclosing_declaration": "all_radius_scores_exist",
+          "source": "(stability : RadiusLogNonexpansive) (transition : HuberPrimitive 4 Cₜ)"
+        },
+        {
+          "file": "Paper29/AllRadius.lean",
+          "line": 38,
+          "enclosing_declaration": "all_radius_scores_statement",
+          "source": "(stability : RadiusLogNonexpansive) (transition : HuberPrimitive 4 Cₜ)"
+        },
+        {
+          "file": "Paper29/ExpandedSpecification.lean",
+          "line": 15,
+          "enclosing_declaration": "theorem21",
+          "source": "ExternalCovering.HuberPrimitive 4 Cₜ → ExternalCovering.PowerPrimitive Cₑ →"
+        },
+        {
+          "file": "Paper29/ExpandedSpecification.lean",
+          "line": 20,
+          "enclosing_declaration": "lemma34",
+          "source": "ExternalCovering.HuberPrimitive 4 Cₜ → ExternalCovering.PowerPrimitive Cₑ →"
+        },
+        {
+          "file": "Paper29/FiniteScoreConstruction.lean",
+          "line": 25,
+          "enclosing_declaration": "finiteScores_spec",
+          "source": "(stability : RadiusLogNonexpansive) (transition : HuberPrimitive 4 Cₜ)"
+        },
+        {
+          "file": "Paper29/MinimaxProof.lean",
+          "line": 78,
+          "enclosing_declaration": "corollary2_3",
+          "source": "(transition : ExternalCovering.HuberPrimitive 4 Cₜ)"
+        },
+        {
+          "file": "Paper29/NumberedContracts.lean",
+          "line": 25,
+          "enclosing_declaration": "corollary23",
+          "source": "HuberPrimitive 4 Cₜ → PowerPrimitive Cₑ → LewisOneNormalization → QueryModel.MinimaxBoundsStatement"
+        },
+        {
+          "file": "Paper29/NumberedContracts.lean",
+          "line": 37,
+          "enclosing_declaration": "lemma32",
+          "source": "∀ (α C : ℝ),1≤α → 0≤C → HuberPrimitive α C →"
+        },
+        {
+          "file": "Paper29/ReducedUpper.lean",
+          "line": 20,
+          "enclosing_declaration": "reduced_upper_large",
+          "source": "(transition : ExternalCovering.HuberPrimitive 4 Cₜ)"
+        },
+        {
+          "file": "Paper29/ScoreAssembly.lean",
+          "line": 25,
+          "enclosing_declaration": "all_radius_score_assembly",
+          "source": "(transition : HuberPrimitive 4 Cₜ) (endpoint : PowerPrimitive Cₑ) :"
+        },
+        {
+          "file": "Paper29/TransitionScores.lean",
+          "line": 61,
+          "enclosing_declaration": "transition_radius_cover",
+          "source": "(C : ℝ) (hC : 0 ≤ C) (external : HuberPrimitive 4 C)"
+        },
+        {
+          "file": "Paper29/UpperProof.lean",
+          "line": 33,
+          "enclosing_declaration": "full_rank_upper",
+          "source": "(transition : ExternalCovering.HuberPrimitive 4 Cₜ)"
+        },
+        {
+          "file": "Paper29/UpperProof.lean",
+          "line": 62,
+          "enclosing_declaration": "theorem2_1",
+          "source": "(transition : ExternalCovering.HuberPrimitive 4 Cₜ)"
+        }
+      ],
+      "source_paper_html_sha256": "b5a24fd1ac4fb6bb3542ff338df63a496ede1a5c7dc5807f4e8fcfaaeb6569bf"
+    },
+    {
+      "paper_id": "29",
+      "dependency_id": "PowerPrimitive",
+      "status": "registered_unformalized_external_input",
+      "interface_name": "PowerPrimitive",
+      "interface_file": "Paper29/ExternalCovering.lean",
+      "interface_file_sha256": "98f740bb39acb746d91da0f75b4699bb37beeb5feb7c3d35b57d511a374362da",
+      "exact_lean_contract": "def PowerPrimitive (C : ℝ) : Prop :=\n  ∀ (n d p : ℕ), (p = 1 ∨ p = 2) → ∀ (A : Matrix (Fin n) (Fin d) ℝ),\n    A.rank = d → (∀ i, A i ≠ 0) → ∀ (a b : ℤ), a ≤ b →\n    4 * Real.log (2*(n:ℝ)) ≤ ((Finset.Icc a b).card : ℝ) →\n    ∀ w : ℤ → PositiveWeights n,\n      (∀ j ∈ Finset.Icc a b, ∀ i,\n        |Leverage.radius A (w j) i|^p / Leverage.leverage A (w j) i = (2:ℝ)^j) →\n      (∀ j, j ∈ Finset.Icc a b → j+1 ∈ Finset.Icc a b → ∀ i, w (j+1) i ≤ w j i) →\n      gamma2 (T := PowerBall A p ((2:ℝ)^(b+1)))\n        (fun h k => powerMetric A p (maxScore A (Finset.Icc a b) w) h k) ≤\n      ENNReal.ofReal (C * Real.sqrt ((2:ℝ)^(b+1)) * ProcessTools.logFactor n)",
+      "source": "Same source Definition1.8 and covering/Dudley argument in proof of Theorem3.14; P29 imported (3.11)/(A.3)",
+      "source_urls": [
+        "https://arxiv.org/html/2311.18145v1#S3.Thmtheorem14"
+      ],
+      "scope": "Only finite interval covering estimate given actual normalized schemes; no existence, mass, all-radius assembly or sampling probability",
+      "original_hypotheses_and_quantifiers": "Explicit in exact_lean_contract; includes all dimensions, ranks/nonzero rows, probability/measurability/conditional-kernel or convexity hypotheses as applicable.",
+      "missing_formalization": "This published generic result is a Prop parameter with no supplied Lean inhabitant, custom production axiom or sorry. Its application is in the own proof; the external theorem itself is not machine-proved.",
+      "own_result_exempted": false,
+      "proved_in_Lean": false,
+      "implementation_mode": "explicit quantified external theorem argument",
+      "use_sites": [
+        {
+          "file": "Paper29/AllRadius.lean",
+          "line": 16,
+          "enclosing_declaration": "all_radius_scores_exist",
+          "source": "(endpoint : PowerPrimitive Cₑ) (lewis : LewisOneNormalization) :"
+        },
+        {
+          "file": "Paper29/AllRadius.lean",
+          "line": 39,
+          "enclosing_declaration": "all_radius_scores_statement",
+          "source": "(endpoint : PowerPrimitive Cₑ) (lewis : LewisOneNormalization) : AllRadiusScoresStatement := by"
+        },
+        {
+          "file": "Paper29/EndpointCovering.lean",
+          "line": 52,
+          "enclosing_declaration": "endpoint_cover_all_radii",
+          "source": "(C : ℝ) (hC : 0 ≤ C) (external : PowerPrimitive C) :"
+        },
+        {
+          "file": "Paper29/ExpandedSpecification.lean",
+          "line": 15,
+          "enclosing_declaration": "theorem21",
+          "source": "ExternalCovering.HuberPrimitive 4 Cₜ → ExternalCovering.PowerPrimitive Cₑ →"
+        },
+        {
+          "file": "Paper29/ExpandedSpecification.lean",
+          "line": 20,
+          "enclosing_declaration": "lemma34",
+          "source": "ExternalCovering.HuberPrimitive 4 Cₜ → ExternalCovering.PowerPrimitive Cₑ →"
+        },
+        {
+          "file": "Paper29/FiniteScoreConstruction.lean",
+          "line": 26,
+          "enclosing_declaration": "finiteScores_spec",
+          "source": "(endpoint : PowerPrimitive Cₑ) (lewis : LewisOneNormalization) :"
+        },
+        {
+          "file": "Paper29/MinimaxProof.lean",
+          "line": 79,
+          "enclosing_declaration": "corollary2_3",
+          "source": "(endpoint : ExternalCovering.PowerPrimitive Cₑ) (lewis : ExternalCovering.LewisOneNormalization) :"
+        },
+        {
+          "file": "Paper29/NumberedContracts.lean",
+          "line": 25,
+          "enclosing_declaration": "corollary23",
+          "source": "HuberPrimitive 4 Cₜ → PowerPrimitive Cₑ → LewisOneNormalization → QueryModel.MinimaxBoundsStatement"
+        },
+        {
+          "file": "Paper29/NumberedContracts.lean",
+          "line": 51,
+          "enclosing_declaration": "lemma33",
+          "source": "(C : ℝ) (hC : 0 ≤ C) (external : PowerPrimitive C),"
+        },
+        {
+          "file": "Paper29/ReducedUpper.lean",
+          "line": 21,
+          "enclosing_declaration": "reduced_upper_large",
+          "source": "(endpoint : ExternalCovering.PowerPrimitive Cₑ) (lewis : ExternalCovering.LewisOneNormalization)"
+        },
+        {
+          "file": "Paper29/ScoreAssembly.lean",
+          "line": 25,
+          "enclosing_declaration": "all_radius_score_assembly",
+          "source": "(transition : HuberPrimitive 4 Cₜ) (endpoint : PowerPrimitive Cₑ) :"
+        },
+        {
+          "file": "Paper29/UpperProof.lean",
+          "line": 34,
+          "enclosing_declaration": "full_rank_upper",
+          "source": "(endpoint : ExternalCovering.PowerPrimitive Cₑ) (lewis : ExternalCovering.LewisOneNormalization)"
+        },
+        {
+          "file": "Paper29/UpperProof.lean",
+          "line": 63,
+          "enclosing_declaration": "theorem2_1",
+          "source": "(endpoint : ExternalCovering.PowerPrimitive Cₑ) (lewis : ExternalCovering.LewisOneNormalization) :"
+        }
+      ],
+      "source_paper_html_sha256": "b5a24fd1ac4fb6bb3542ff338df63a496ede1a5c7dc5807f4e8fcfaaeb6569bf"
+    },
+    {
+      "paper_id": "29",
+      "dependency_id": "LewisOneNormalization",
+      "status": "registered_unformalized_external_input",
+      "interface_name": "LewisOneNormalization",
+      "interface_file": "Paper29/LewisInput.lean",
+      "interface_file_sha256": "2e296f25e90b08db29a5589b5d4902f8bf1adaeb77d4318663fa97fc832edfa1",
+      "exact_lean_contract": "def LewisOneNormalization : Prop :=\n  ∀ (n d : ℕ) (A : Matrix (Fin n) (Fin d) ℝ), A.rank = d → (∀ i, A i ≠ 0) →\n    ∃ w : PositiveWeights n, ∀ i,\n      Leverage.radius A w i / Leverage.leverage A w i = 1",
+      "source": "Cohen–Peng arXiv:1412.0588v1 Definition2.2 and Corollary3.4",
+      "source_urls": [
+        "https://arxiv.org/pdf/1412.0588"
+      ],
+      "scope": "Exact l1 endpoint normalization existence; finite stopped approximation, safe factor16 inflation and trace mass proved locally",
+      "original_hypotheses_and_quantifiers": "Explicit in exact_lean_contract; includes all dimensions, ranks/nonzero rows, probability/measurability/conditional-kernel or convexity hypotheses as applicable.",
+      "missing_formalization": "This published generic result is a Prop parameter with no supplied Lean inhabitant, custom production axiom or sorry. Its application is in the own proof; the external theorem itself is not machine-proved.",
+      "own_result_exempted": false,
+      "proved_in_Lean": false,
+      "implementation_mode": "explicit quantified external theorem argument",
+      "use_sites": [
+        {
+          "file": "Paper29/AllRadius.lean",
+          "line": 16,
+          "enclosing_declaration": "all_radius_scores_exist",
+          "source": "(endpoint : PowerPrimitive Cₑ) (lewis : LewisOneNormalization) :"
+        },
+        {
+          "file": "Paper29/AllRadius.lean",
+          "line": 39,
+          "enclosing_declaration": "all_radius_scores_statement",
+          "source": "(endpoint : PowerPrimitive Cₑ) (lewis : LewisOneNormalization) : AllRadiusScoresStatement := by"
+        },
+        {
+          "file": "Paper29/ExpandedSpecification.lean",
+          "line": 16,
+          "enclosing_declaration": "theorem21",
+          "source": "ExternalCovering.LewisOneNormalization → QueryModel.UpperBoundStatement"
+        },
+        {
+          "file": "Paper29/ExpandedSpecification.lean",
+          "line": 21,
+          "enclosing_declaration": "lemma34",
+          "source": "ExternalCovering.LewisOneNormalization → Chaining.AllRadiusScoresStatement"
+        },
+        {
+          "file": "Paper29/FiniteScoreConstruction.lean",
+          "line": 26,
+          "enclosing_declaration": "finiteScores_spec",
+          "source": "(endpoint : PowerPrimitive Cₑ) (lewis : LewisOneNormalization) :"
+        },
+        {
+          "file": "Paper29/MinimaxProof.lean",
+          "line": 79,
+          "enclosing_declaration": "corollary2_3",
+          "source": "(endpoint : ExternalCovering.PowerPrimitive Cₑ) (lewis : ExternalCovering.LewisOneNormalization) :"
+        },
+        {
+          "file": "Paper29/NumberedContracts.lean",
+          "line": 25,
+          "enclosing_declaration": "corollary23",
+          "source": "HuberPrimitive 4 Cₜ → PowerPrimitive Cₑ → LewisOneNormalization → QueryModel.MinimaxBoundsStatement"
+        },
+        {
+          "file": "Paper29/ReducedUpper.lean",
+          "line": 21,
+          "enclosing_declaration": "reduced_upper_large",
+          "source": "(endpoint : ExternalCovering.PowerPrimitive Cₑ) (lewis : ExternalCovering.LewisOneNormalization)"
+        },
+        {
+          "file": "Paper29/UpperProof.lean",
+          "line": 34,
+          "enclosing_declaration": "full_rank_upper",
+          "source": "(endpoint : ExternalCovering.PowerPrimitive Cₑ) (lewis : ExternalCovering.LewisOneNormalization)"
+        },
+        {
+          "file": "Paper29/UpperProof.lean",
+          "line": 63,
+          "enclosing_declaration": "theorem2_1",
+          "source": "(endpoint : ExternalCovering.PowerPrimitive Cₑ) (lewis : ExternalCovering.LewisOneNormalization) :"
+        }
+      ],
+      "source_paper_html_sha256": "b5a24fd1ac4fb6bb3542ff338df63a496ede1a5c7dc5807f4e8fcfaaeb6569bf"
+    },
+    {
+      "paper_id": "29",
+      "dependency_id": "ConditionalChainRule",
+      "status": "registered_unformalized_external_input",
+      "interface_name": "ConditionalChainRule",
+      "interface_file": "Paper29/GeneralInformation.lean",
+      "interface_file_sha256": "1b0cf594e0047b94497968799bf51dd82315408d48c08091e636c595814e7b6e",
+      "exact_lean_contract": "def ConditionalChainRule : Prop :=\n  ∀ {Ω S B H Z : Type} [MeasurableSpace Ω] [MeasurableSpace S] [MeasurableSpace B]\n    [MeasurableSpace H] [MeasurableSpace Z] [StandardBorelSpace S] [StandardBorelSpace B]\n    [StandardBorelSpace Z] (μ : Measure Ω) [IsProbabilityMeasure μ]\n    (X : Ω → S) (Bsrc : Ω → B) (Hrv : Ω → H) (Zrv : Ω → Z)\n    (K : H → Measure (S × B)) (f : H → (S × B) → Z),\n    Measurable X → Measurable Bsrc → Measurable Hrv → Measurable Zrv →\n    Measurable (Function.uncurry f) → ConditionalLaw μ (fun ω => (X ω,Bsrc ω)) Hrv K →\n    (∀ ω,Zrv ω=f (Hrv ω) (X ω,Bsrc ω)) →\n    information μ X (fun ω => (Hrv ω,Zrv ω)) = information μ X Hrv +\n      ∫⁻ h,information (K h) Prod.fst (f h) ∂μ.map Hrv",
+      "source": "R. M. Gray, Entropy and Information Theory, corrected first edition (3 June 2023), §§5.3/5.5, equation5.28, Corollary5.5.3 and Lemma5.5.7; general source quantization and data processing",
+      "source_urls": [
+        "https://ee.stanford.edu/~gray/it1_corrected_6-23.pdf"
+      ],
+      "scope": "Generic Shannon/KL rules only. Chain theorem uses standard Borel source/response/tagged observation, arbitrary conditioning alphabet and an actual conditional kernel. Arbitrary source handled by local finite quantization. No algorithm, active-slot inequality, stopping, query count or Lemma4.3 bound is an input.",
+      "original_hypotheses_and_quantifiers": "Explicit in exact_lean_contract; includes all dimensions, ranks/nonzero rows, probability/measurability/conditional-kernel or convexity hypotheses as applicable.",
+      "missing_formalization": "This published generic result is a Prop parameter with no supplied Lean inhabitant, custom production axiom or sorry. Its application is in the own proof; the external theorem itself is not machine-proved.",
+      "own_result_exempted": false,
+      "proved_in_Lean": false,
+      "implementation_mode": "explicit quantified external theorem argument",
+      "use_sites": [
+        {
+          "file": "Paper29/GeneralInformation.lean",
+          "line": 80,
+          "enclosing_declaration": "StandardRules",
+          "source": "chain : ConditionalChainRule"
+        }
+      ],
+      "source_paper_html_sha256": "b5a24fd1ac4fb6bb3542ff338df63a496ede1a5c7dc5807f4e8fcfaaeb6569bf",
+      "standard_rules_field_use_sites": [
+        {
+          "file": "Paper29/GeneralTranscript.lean",
+          "line": 55,
+          "source": "have hc := rules.chain μ source responses (H k) Z (K k) (fixedSlot p k)"
+        }
+      ],
+      "dependent_conclusion": "Lemma4.3 general adaptive transcript only; main Theorem2.2 has its own finite information/concentration proof."
+    },
+    {
+      "paper_id": "29",
+      "dependency_id": "IndependentInformation",
+      "status": "registered_unformalized_external_input",
+      "interface_name": "IndependentInformation",
+      "interface_file": "Paper29/GeneralInformation.lean",
+      "interface_file_sha256": "1b0cf594e0047b94497968799bf51dd82315408d48c08091e636c595814e7b6e",
+      "exact_lean_contract": "def IndependentInformation : Prop :=\n  ∀ {Ω S T : Type} [MeasurableSpace Ω] [MeasurableSpace S] [MeasurableSpace T]\n    (μ : Measure Ω) [IsProbabilityMeasure μ] (X : Ω → S) (Y : Ω → T),\n    Measurable X → Measurable Y → ProbabilityTheory.IndepFun X Y μ → information μ X Y=0",
+      "source": "R. M. Gray, Entropy and Information Theory, corrected first edition (3 June 2023), §§5.3/5.5, equation5.28, Corollary5.5.3 and Lemma5.5.7; general source quantization and data processing",
+      "source_urls": [
+        "https://ee.stanford.edu/~gray/it1_corrected_6-23.pdf"
+      ],
+      "scope": "Generic Shannon/KL rules only. Chain theorem uses standard Borel source/response/tagged observation, arbitrary conditioning alphabet and an actual conditional kernel. Arbitrary source handled by local finite quantization. No algorithm, active-slot inequality, stopping, query count or Lemma4.3 bound is an input.",
+      "original_hypotheses_and_quantifiers": "Explicit in exact_lean_contract; includes all dimensions, ranks/nonzero rows, probability/measurability/conditional-kernel or convexity hypotheses as applicable.",
+      "missing_formalization": "This published generic result is a Prop parameter with no supplied Lean inhabitant, custom production axiom or sorry. Its application is in the own proof; the external theorem itself is not machine-proved.",
+      "own_result_exempted": false,
+      "proved_in_Lean": false,
+      "implementation_mode": "explicit quantified external theorem argument",
+      "use_sites": [
+        {
+          "file": "Paper29/GeneralInformation.lean",
+          "line": 81,
+          "enclosing_declaration": "StandardRules",
+          "source": "independent : IndependentInformation"
+        }
+      ],
+      "source_paper_html_sha256": "b5a24fd1ac4fb6bb3542ff338df63a496ede1a5c7dc5807f4e8fcfaaeb6569bf",
+      "standard_rules_field_use_sites": [
+        {
+          "file": "Paper29/GeneralTranscript.lean",
+          "line": 49,
+          "source": "simpa only [H,history,Finset.sum_range_zero] using rules.independent μ source seed hsource hseed hind'"
+        }
+      ],
+      "dependent_conclusion": "Lemma4.3 general adaptive transcript only; main Theorem2.2 has its own finite information/concentration proof."
+    },
+    {
+      "paper_id": "29",
+      "dependency_id": "ReversibleRelabeling",
+      "status": "registered_unformalized_external_input",
+      "interface_name": "ReversibleRelabeling",
+      "interface_file": "Paper29/GeneralInformation.lean",
+      "interface_file_sha256": "1b0cf594e0047b94497968799bf51dd82315408d48c08091e636c595814e7b6e",
+      "exact_lean_contract": "def ReversibleRelabeling : Prop :=\n  ∀ {Ω S T Z : Type} [MeasurableSpace Ω] [MeasurableSpace S] [MeasurableSpace T] [MeasurableSpace Z]\n    (μ : Measure Ω) [IsProbabilityMeasure μ] (X : Ω → S) (Y : Ω → T) (f : T → Z) (g : Z → T),\n    Measurable X → Measurable Y → Measurable f → Measurable g → Function.LeftInverse g f →\n    information μ X (fun ω => f (Y ω))=information μ X Y",
+      "source": "R. M. Gray, Entropy and Information Theory, corrected first edition (3 June 2023), §§5.3/5.5, equation5.28, Corollary5.5.3 and Lemma5.5.7; general source quantization and data processing",
+      "source_urls": [
+        "https://ee.stanford.edu/~gray/it1_corrected_6-23.pdf"
+      ],
+      "scope": "Generic Shannon/KL rules only. Chain theorem uses standard Borel source/response/tagged observation, arbitrary conditioning alphabet and an actual conditional kernel. Arbitrary source handled by local finite quantization. No algorithm, active-slot inequality, stopping, query count or Lemma4.3 bound is an input.",
+      "original_hypotheses_and_quantifiers": "Explicit in exact_lean_contract; includes all dimensions, ranks/nonzero rows, probability/measurability/conditional-kernel or convexity hypotheses as applicable.",
+      "missing_formalization": "This published generic result is a Prop parameter with no supplied Lean inhabitant, custom production axiom or sorry. Its application is in the own proof; the external theorem itself is not machine-proved.",
+      "own_result_exempted": false,
+      "proved_in_Lean": false,
+      "implementation_mode": "explicit quantified external theorem argument",
+      "use_sites": [
+        {
+          "file": "Paper29/GeneralInformation.lean",
+          "line": 82,
+          "enclosing_declaration": "StandardRules",
+          "source": "relabel : ReversibleRelabeling"
+        }
+      ],
+      "source_paper_html_sha256": "b5a24fd1ac4fb6bb3542ff338df63a496ede1a5c7dc5807f4e8fcfaaeb6569bf",
+      "standard_rules_field_use_sites": [
+        {
+          "file": "Paper29/GeneralPosterior.lean",
+          "line": 26,
+          "source": "have hr := rules.relabel P Prod.fst (fun sb => sb.2 j) f g measurable_fst"
+        }
+      ],
+      "dependent_conclusion": "Lemma4.3 general adaptive transcript only; main Theorem2.2 has its own finite information/concentration proof."
+    },
+    {
+      "paper_id": "29",
+      "dependency_id": "ConstantInformation",
+      "status": "registered_unformalized_external_input",
+      "interface_name": "ConstantInformation",
+      "interface_file": "Paper29/GeneralInformation.lean",
+      "interface_file_sha256": "1b0cf594e0047b94497968799bf51dd82315408d48c08091e636c595814e7b6e",
+      "exact_lean_contract": "def ConstantInformation : Prop :=\n  ∀ {Ω S Z : Type} [MeasurableSpace Ω] [MeasurableSpace S] [MeasurableSpace Z]\n    (μ : Measure Ω) [IsProbabilityMeasure μ] (X : Ω → S) (z : Z),\n    Measurable X → information μ X (fun _ => z)=0",
+      "source": "R. M. Gray, Entropy and Information Theory, corrected first edition (3 June 2023), §§5.3/5.5, equation5.28, Corollary5.5.3 and Lemma5.5.7; general source quantization and data processing",
+      "source_urls": [
+        "https://ee.stanford.edu/~gray/it1_corrected_6-23.pdf"
+      ],
+      "scope": "Generic Shannon/KL rules only. Chain theorem uses standard Borel source/response/tagged observation, arbitrary conditioning alphabet and an actual conditional kernel. Arbitrary source handled by local finite quantization. No algorithm, active-slot inequality, stopping, query count or Lemma4.3 bound is an input.",
+      "original_hypotheses_and_quantifiers": "Explicit in exact_lean_contract; includes all dimensions, ranks/nonzero rows, probability/measurability/conditional-kernel or convexity hypotheses as applicable.",
+      "missing_formalization": "This published generic result is a Prop parameter with no supplied Lean inhabitant, custom production axiom or sorry. Its application is in the own proof; the external theorem itself is not machine-proved.",
+      "own_result_exempted": false,
+      "proved_in_Lean": false,
+      "implementation_mode": "explicit quantified external theorem argument",
+      "use_sites": [
+        {
+          "file": "Paper29/GeneralInformation.lean",
+          "line": 83,
+          "enclosing_declaration": "StandardRules",
+          "source": "constant : ConstantInformation"
+        }
+      ],
+      "source_paper_html_sha256": "b5a24fd1ac4fb6bb3542ff338df63a496ede1a5c7dc5807f4e8fcfaaeb6569bf",
+      "standard_rules_field_use_sites": [
+        {
+          "file": "Paper29/GeneralPosterior.lean",
+          "line": 35,
+          "source": "rw [he,rules.constant P Prod.fst (Sum.inr ()) measurable_fst]"
+        }
+      ],
+      "dependent_conclusion": "Lemma4.3 general adaptive transcript only; main Theorem2.2 has its own finite information/concentration proof."
+    },
+    {
+      "paper_id": "29",
+      "dependency_id": "SourceQuantization",
+      "status": "registered_unformalized_external_input",
+      "interface_name": "SourceQuantization",
+      "interface_file": "Paper29/GeneralInformation.lean",
+      "interface_file_sha256": "1b0cf594e0047b94497968799bf51dd82315408d48c08091e636c595814e7b6e",
+      "exact_lean_contract": "def SourceQuantization : Prop :=\n  ∀ {Ω S T : Type} [MeasurableSpace Ω] [MeasurableSpace S] [MeasurableSpace T]\n    (μ : Measure Ω) [IsProbabilityMeasure μ] (X : Ω → S) (Y : Ω → T),\n    Measurable X → Measurable Y → information μ X Y =\n      ⨆ (m : ℕ) (f : S → Fin m) (_ : Measurable f),information μ (fun ω => f (X ω)) Y",
+      "source": "R. M. Gray, Entropy and Information Theory, corrected first edition (3 June 2023), §§5.3/5.5, equation5.28, Corollary5.5.3 and Lemma5.5.7; general source quantization and data processing",
+      "source_urls": [
+        "https://ee.stanford.edu/~gray/it1_corrected_6-23.pdf"
+      ],
+      "scope": "Generic Shannon/KL rules only. Chain theorem uses standard Borel source/response/tagged observation, arbitrary conditioning alphabet and an actual conditional kernel. Arbitrary source handled by local finite quantization. No algorithm, active-slot inequality, stopping, query count or Lemma4.3 bound is an input.",
+      "original_hypotheses_and_quantifiers": "Explicit in exact_lean_contract; includes all dimensions, ranks/nonzero rows, probability/measurability/conditional-kernel or convexity hypotheses as applicable.",
+      "missing_formalization": "This published generic result is a Prop parameter with no supplied Lean inhabitant, custom production axiom or sorry. Its application is in the own proof; the external theorem itself is not machine-proved.",
+      "own_result_exempted": false,
+      "proved_in_Lean": false,
+      "implementation_mode": "explicit quantified external theorem argument",
+      "use_sites": [
+        {
+          "file": "Paper29/GeneralInformation.lean",
+          "line": 84,
+          "enclosing_declaration": "StandardRules",
+          "source": "quantization : SourceQuantization"
+        }
+      ],
+      "source_paper_html_sha256": "b5a24fd1ac4fb6bb3542ff338df63a496ede1a5c7dc5807f4e8fcfaaeb6569bf",
+      "standard_rules_field_use_sites": [
+        {
+          "file": "Paper29/GeneralSourceTranscript.lean",
+          "line": 31,
+          "source": "rw [rules.quantization μ source (fun ω => history p seed responses ω n) hsource hH]"
+        }
+      ],
+      "dependent_conclusion": "Lemma4.3 general adaptive transcript only; main Theorem2.2 has its own finite information/concentration proof."
+    },
+    {
+      "paper_id": "29",
+      "dependency_id": "SourceDataProcessing",
+      "status": "registered_unformalized_external_input",
+      "interface_name": "SourceDataProcessing",
+      "interface_file": "Paper29/GeneralInformation.lean",
+      "interface_file_sha256": "1b0cf594e0047b94497968799bf51dd82315408d48c08091e636c595814e7b6e",
+      "exact_lean_contract": "def SourceDataProcessing : Prop :=\n  ∀ {Ω S T Z : Type} [MeasurableSpace Ω] [MeasurableSpace S] [MeasurableSpace T] [MeasurableSpace Z]\n    (μ : Measure Ω) [IsProbabilityMeasure μ] (X : Ω → S) (Y : Ω → T) (f : S → Z),\n    Measurable X → Measurable Y → Measurable f → information μ (fun ω => f (X ω)) Y ≤ information μ X Y",
+      "source": "R. M. Gray, Entropy and Information Theory, corrected first edition (3 June 2023), §§5.3/5.5, equation5.28, Corollary5.5.3 and Lemma5.5.7; general source quantization and data processing",
+      "source_urls": [
+        "https://ee.stanford.edu/~gray/it1_corrected_6-23.pdf"
+      ],
+      "scope": "Generic Shannon/KL rules only. Chain theorem uses standard Borel source/response/tagged observation, arbitrary conditioning alphabet and an actual conditional kernel. Arbitrary source handled by local finite quantization. No algorithm, active-slot inequality, stopping, query count or Lemma4.3 bound is an input.",
+      "original_hypotheses_and_quantifiers": "Explicit in exact_lean_contract; includes all dimensions, ranks/nonzero rows, probability/measurability/conditional-kernel or convexity hypotheses as applicable.",
+      "missing_formalization": "This published generic result is a Prop parameter with no supplied Lean inhabitant, custom production axiom or sorry. Its application is in the own proof; the external theorem itself is not machine-proved.",
+      "own_result_exempted": false,
+      "proved_in_Lean": false,
+      "implementation_mode": "explicit quantified external theorem argument",
+      "use_sites": [
+        {
+          "file": "Paper29/GeneralInformation.lean",
+          "line": 85,
+          "enclosing_declaration": "StandardRules",
+          "source": "dataProcessing : SourceDataProcessing"
+        }
+      ],
+      "source_paper_html_sha256": "b5a24fd1ac4fb6bb3542ff338df63a496ede1a5c7dc5807f4e8fcfaaeb6569bf",
+      "standard_rules_field_use_sites": [
+        {
+          "file": "Paper29/GeneralSourceTranscript.lean",
+          "line": 58,
+          "source": "exact (rules.dataProcessing (K t h) Prod.fst (fun sb => sb.2 j) f measurable_fst"
+        }
+      ],
+      "dependent_conclusion": "Lemma4.3 general adaptive transcript only; main Theorem2.2 has its own finite information/concentration proof."
+    },
+    {
+      "paper_id": "29",
+      "dependency_id": "ParametricQuadraticSelection",
+      "status": "registered_unformalized_external_input",
+      "interface_name": "ParametricQuadraticSelection",
+      "interface_file": "Paper29/ExternalConvexSelection.lean",
+      "interface_file_sha256": "2deffe0e27c9ea6fe03a1aa4a3fb248cef1694dbefdf0dd7a28e702e61138750",
+      "exact_lean_contract": "def ParametricQuadraticSelection : Prop :=\n  ∀ n d (F : (Fin n → ℝ) × Space d → ℝ),Continuous F →\n    (∀ b,ConvexOn ℝ Set.univ (fun x => F (b,x))) → (∀ b x,0 ≤ F (b,x)) →\n    ∃ z : ℕ → (Fin n → ℝ) → Space d,\n      (∀ k,Measurable (z k)) ∧ ∀ k b,\n        RegularizedMinimizer (fun x => F (b,x)) k (z k b) ∧\n        ∀ x,RegularizedMinimizer (fun x => F (b,x)) k x → x=z k b",
+      "source": "Classical measurable/continuous maximum theorem specialized to positive quadratic regularization; Terazono–Matani SIAM J. Optim.23(2), 2013; classical convex Tikhonov/proximal limit, Bauschke–Combettes regularization of minimization problems",
+      "source_urls": [
+        "https://doi.org/10.1137/110850189",
+        "https://doi.org/10.1007/978-3-319-48311-5"
+      ],
+      "scope": "Generic finite-dimensional convex objectives only. No Huber, sample, pilot or regression conclusion. Actual Huber joint continuity, convexity, nonnegativity and unregularized minimum-norm point checked locally, then general regularization/parameter theorems instantiated.",
+      "original_hypotheses_and_quantifiers": "Explicit in exact_lean_contract; includes all dimensions, ranks/nonzero rows, probability/measurability/conditional-kernel or convexity hypotheses as applicable.",
+      "missing_formalization": "This published generic result is a Prop parameter with no supplied Lean inhabitant, custom production axiom or sorry. Its application is in the own proof; the external theorem itself is not machine-proved.",
+      "own_result_exempted": false,
+      "proved_in_Lean": false,
+      "implementation_mode": "explicit quantified external theorem argument",
+      "use_sites": [
+        {
+          "file": "Paper29/MeasurableSelection.lean",
+          "line": 23,
+          "enclosing_declaration": "minimumNormSelection_regularization",
+          "source": "(parametric : ParametricQuadraticSelection) (tikhonov : TikhonovConvergence)"
+        },
+        {
+          "file": "Paper29/NumberedContracts.lean",
+          "line": 118,
+          "enclosing_declaration": "appendixA3",
+          "source": "(parametric : ParametricQuadraticSelection) (tikhonov : TikhonovConvergence)"
+        }
+      ],
+      "source_paper_html_sha256": "b5a24fd1ac4fb6bb3542ff338df63a496ede1a5c7dc5807f4e8fcfaaeb6569bf"
+    },
+    {
+      "paper_id": "29",
+      "dependency_id": "TikhonovConvergence",
+      "status": "registered_unformalized_external_input",
+      "interface_name": "TikhonovConvergence",
+      "interface_file": "Paper29/ExternalConvexSelection.lean",
+      "interface_file_sha256": "2deffe0e27c9ea6fe03a1aa4a3fb248cef1694dbefdf0dd7a28e702e61138750",
+      "exact_lean_contract": "def TikhonovConvergence : Prop :=\n  ∀ d (f : Space d → ℝ),Continuous f → ConvexOn ℝ Set.univ f →\n    ∀ v,(∀ y,f v ≤ f y) → (∀ y,(∀ u,f y ≤ f u) → ‖v‖ ≤ ‖y‖) →\n    ∀ z : ℕ → Space d,(∀ k,RegularizedMinimizer f k (z k)) → Tendsto z atTop (nhds v)",
+      "source": "Classical measurable/continuous maximum theorem specialized to positive quadratic regularization; Terazono–Matani SIAM J. Optim.23(2), 2013; classical convex Tikhonov/proximal limit, Bauschke–Combettes regularization of minimization problems",
+      "source_urls": [
+        "https://doi.org/10.1137/110850189",
+        "https://doi.org/10.1007/978-3-319-48311-5"
+      ],
+      "scope": "Generic finite-dimensional convex objectives only. No Huber, sample, pilot or regression conclusion. Actual Huber joint continuity, convexity, nonnegativity and unregularized minimum-norm point checked locally, then general regularization/parameter theorems instantiated.",
+      "original_hypotheses_and_quantifiers": "Explicit in exact_lean_contract; includes all dimensions, ranks/nonzero rows, probability/measurability/conditional-kernel or convexity hypotheses as applicable.",
+      "missing_formalization": "This published generic result is a Prop parameter with no supplied Lean inhabitant, custom production axiom or sorry. Its application is in the own proof; the external theorem itself is not machine-proved.",
+      "own_result_exempted": false,
+      "proved_in_Lean": false,
+      "implementation_mode": "explicit quantified external theorem argument",
+      "use_sites": [
+        {
+          "file": "Paper29/MeasurableSelection.lean",
+          "line": 23,
+          "enclosing_declaration": "minimumNormSelection_regularization",
+          "source": "(parametric : ParametricQuadraticSelection) (tikhonov : TikhonovConvergence)"
+        },
+        {
+          "file": "Paper29/NumberedContracts.lean",
+          "line": 118,
+          "enclosing_declaration": "appendixA3",
+          "source": "(parametric : ParametricQuadraticSelection) (tikhonov : TikhonovConvergence)"
+        }
+      ],
+      "source_paper_html_sha256": "b5a24fd1ac4fb6bb3542ff338df63a496ede1a5c7dc5807f4e8fcfaaeb6569bf"
+    }
+  ]
+}

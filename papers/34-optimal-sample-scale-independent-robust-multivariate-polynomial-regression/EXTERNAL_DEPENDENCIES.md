@@ -1,0 +1,11 @@
+# External dependencies
+
+Lean is pinned by `lean-toolchain` to `leanprover/lean4:v4.24.0`. Mathlib is pinned to `f897ebcf72cd16f89ab4577d0c826cd14afaafc7` in the Lake configuration and `lake-manifest.json`; all transitive packages retain exact commit revisions in the manifest. Preserve these pins and use the repository shared tooling.
+
+The sole required published theorem input is `Paper34.TrigBernstein.ClassicalTrigBernstein` (`Paper34/TrigBernsteinContract.lean`). For every degree `d ≥ 1`, every genuine complex trigonometric polynomial with frequencies in `[-d,d]`, every global magnitude bound `M ≥ 0`, and every real point, it asserts `‖deriv T t‖ ≤ d*M`. It is a caller-supplied proposition, not an added Lean axiom or a supplied Lean proof. Reference: Queffélec–Zarouf, *On Bernstein's inequality for polynomials*, [Theorem 1.1](https://arxiv.org/html/1903.10801#S1.SS1). Its native polynomial membership, cosine lift, norming, cell oscillation transfer, algorithm and probability consequences are local proofs. The input is consumed by the cell/anisotropic derivative bound and then the main source recovery theorems.
+
+The formerly abstract Chernoff and fixed-subset Hoeffding interfaces are discharged in `Paper34/StandardConcentration.lean` from pinned Mathlib. They are not extra external inputs to the final main wrappers. LP optimizer existence is local; the complexity statement adopts an exact-real LP-oracle computational model and does not establish finite-precision bit complexity.
+
+`ExternalInputs.json` retains exact interfaces and use sites. `ExternalComparisons.json` documents seven secondary comparisons and the background bibliography; those published statistical lower bounds and Lebesgue estimates are not asserted as Lean theorems. `SecondaryComparisons.lean` proves only numerical algebra conditional on displayed inequalities. No compile-time certificates or external data are required.
+
+Official Comparator uses the repository shared pinned installation. Challenge modules intentionally contain proof placeholders to specify fixed expected theorem types. They and deliberate negative-control axioms are verification fixtures, outside the production build target. The production proof closure must be checked independently of those fixtures.

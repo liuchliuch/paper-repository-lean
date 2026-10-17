@@ -1,0 +1,18 @@
+name = "K44K35Free"
+version = "0.1.0"
+defaultTargets = ["K44K35Free"]
+
+# Pinned mathlib: f897ebcf72cd16f89ab4577d0c826cd14afaafc7 (Lean 4.24.0).
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
+
+[[lean_lib]]
+name = "K44K35Free"
+globs = ["K44K35Free.*"]
+
+[[lean_lib]]
+name = "Verification"
+globs = ["Verification.*"]
+

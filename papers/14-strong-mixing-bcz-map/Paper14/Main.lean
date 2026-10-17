@@ -1,0 +1,82 @@
+import Paper14.Completion
+import Paper14.BlockMixing
+import Paper14.BCZWeakMixingFromErgodic
+import Paper14.MixingL2
+import Paper14.PhiRSectionL2
+import Paper14.EigenExclusion
+import Paper14.ExactlyOneProbability
+import Paper14.Basic
+import Paper14.MeasureOmega
+import Paper14.ReturnTime
+import Paper14.RoofMean
+import Paper14.MapBCZ
+import Paper14.MeasureBCZ
+import Paper14.SelfInduction
+import Paper14.SelfInductionMeasure
+import Paper14.ReturnGeometry
+import Paper14.ChangingSectionBirkhoff
+import Paper14.LatticeCount
+import Paper14.RectangleCount
+import Paper14.PrimitiveReturns
+import Paper14.SieveVariance
+import Paper14.SieveTorus
+import Paper14.PeriodicSums
+import Paper14.SievePeriodMean
+import Paper14.SieveCounts
+import Paper14.SieveIndicatorTorus
+import Paper14.SieveIndicatorMean
+import Paper14.SieveResidueCount
+import Paper14.SieveActualMoments
+import Paper14.PrimitiveVoid
+import Paper14.PrimitiveVoidProof
+import Paper14.InducedReturn
+import Paper14.ReturnMeasure
+import Paper14.Kac
+import Paper14.KacExcess
+import Paper14.InducedMeasure
+import Paper14.GraphMeasures
+import Paper14.MeasureSubsequence
+import Paper14.MeasureLimits
+import Paper14.BoundedProductLimits
+import Paper14.GraphLimits
+import Paper14.GraphTails
+import Paper14.MomentLimits
+import Paper14.LimitComponentBounds
+import Paper14.ExcessDecomposition
+import Paper14.SectionGraphLimits
+import Paper14.MeasurableMapLimits
+import Paper14.NearIdentityGraphs
+import Paper14.ConditioningLimits
+import Paper14.SetIntegralBounds
+import Paper14.ExcessGraphInvariance
+import Paper14.ExcessFirstMoment
+import Paper14.Chebyshev
+import Paper14.GraphDecomposition
+import Paper14.InvariantComponents
+import Paper14.InvariantMarginals
+import Paper14.ExcessCriterion
+import Paper14.ExcessCriterionProof
+import Paper14.WeakMixing
+import Paper14.MoebiusCoprime
+import Paper14.MoebiusSeries
+import Paper14.DivisorWindows
+import Paper14.DivisorRatios
+import Paper14.CoprimeRectangle
+import Paper14.CoprimeAsymptotic
+import Paper14.CoprimeRate
+import Paper14.CompactDynamics
+import Paper14.StrongMixing
+import Paper14.BCZCriterionApplication
+import Paper14.ScaleLimit
+
+/-!
+# Paper 14 assembly
+
+Re-exports the complete proof library. The five original numbered conclusions
+are proved as `Theorem1`, `Lemma2`, `Proposition3`, `Theorem4`, and `Lemma5`,
+with the statements specified independently in `Paper14.Basic`. The actual
+BCZ ergodicity background is proved in `BCZErgodic`; no numbered conclusion
+retains an additional background premise.
+-/
+namespace Paper14
+end Paper14

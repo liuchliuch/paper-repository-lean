@@ -1,0 +1,57 @@
+{
+  "paper_id": "32",
+  "title": "Nonminimizing Limits of Noisy Clarke Subgradient Descent",
+  "source_url": "https://liuchliuch.github.io/repository/counterexample-to-generic-convergence-to-local-minima/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper32"
+  ],
+  "build_targets": [
+    "Paper32"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "442 frozen literal contracts across the 36 production components, covering the source inventory and supporting statements."
+    },
+    {
+      "id": "negative-added-premise",
+      "config": "Verification/negative-added-premise.json",
+      "expected_rejection": "type",
+      "scope": "Lemma 5.1 with an extra False premise."
+    },
+    {
+      "id": "negative-illegal-axiom",
+      "config": "Verification/negative-illegal-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Unchanged Lemma 5.1 type proved from a deliberately forbidden axiom."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 2.2",
+      "declaration": "Paper32.coercive_trapping_ae",
+      "scope": "Almost-sure trapping and convergence of Clarke-subgradient iterates for a fixed oracle/noise pair satisfying the conditional absolute-continuity, support, initialization, tilt and power-step hypotheses."
+    },
+    {
+      "source_result": "Corollary 2.3",
+      "declaration": "Paper32.minimumNorm_fixed_counterexample",
+      "scope": "A minimum Euclidean-norm measurable selection and deterministic initialization converge to a nonminimum with probability one under iid disk noise."
+    },
+    {
+      "source_result": "Corollary 2.5 / Target 2.1",
+      "declaration": "Paper32.no_conull_universal_good_tilt_set",
+      "scope": "No conull tilt set satisfies the universal good-tilt predicate over all admissible algorithmic choices; a necessary canonical iid case is refuted."
+    },
+    {
+      "source_result": "Corollaries 7.1 and 7.2",
+      "declaration": "Paper32.iid_uniformDisk_scaled_selected_trapping_ae",
+      "scope": "Scaled selected iterates are trapped for every finite positive noise radius; the higher-dimensional extension uses full Euclidean-ball noise."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "primary_comparator": "main"
+}

@@ -1,0 +1,60 @@
+{
+  "paper_id": "22",
+  "title": "Non-signaling reliability of classical-quantum channels with full-rank outputs",
+  "source_url": "https://liuchliuch.github.io/repository/non-signaling-reliability-of-classical-quantum-channels-with-full-rank-outputs/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper22",
+    "Paper.Proofs"
+  ],
+  "build_targets": [
+    "Paper22",
+    "Paper"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "comparator/config.json",
+      "expected_rejection": null,
+      "scope": "The three original numbered results; Theorem2 retains exactly the reviewed published meta-converse exponent parameter."
+    },
+    {
+      "id": "negative-premise",
+      "config": "negative-controls/config-premise.json",
+      "expected_rejection": "type",
+      "scope": "Real added premise in Lemma1 effect completion."
+    },
+    {
+      "id": "negative-axiom",
+      "config": "negative-controls/config-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Real illegal axiom in Lemma1 effect completion."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Lemma 1",
+      "declaration": "Paper22.Paper.lemma_1_effect_completion",
+      "scope": "For M ≥ 2 and K = M+6, increase the finite-dimensional effects while fixing their weighted average to I/M."
+    },
+    {
+      "source_result": "Theorem 1",
+      "declaration": "Paper22.Paper.theorem_1_one_shot",
+      "scope": "For every finite classical-quantum channel and integer M ≥ 2, epsMC(M) ≤ epsNS(M) ≤ epsMC(M+6)."
+    },
+    {
+      "source_result": "Theorem 2",
+      "declaration": "Paper22.Paper.theorem_2_reliability",
+      "scope": "ExternalMetaConverseLimit implies both extended-real reliability limits for every full-rank finite channel and 0 < R < C(W), with no activation hypothesis."
+    },
+    {
+      "source_result": "Equation 26",
+      "declaration": "Paper22.activationIdentity_proved",
+      "scope": "For every actual finite channel and m ≥ 1, one-bit activation gives epsNS(V ⊗ noiselessBit, 2m) = epsMC(V, m)."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "source_html_sha256": "1757238d1df14075dbedee51f6d7f519d0b78efecf539013f2d56e49544c13aa",
+  "primary_comparator": "main"
+}

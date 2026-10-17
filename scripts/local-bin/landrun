@@ -1,0 +1,14 @@
+#!/bin/sh
+# Explicit local adapter: NO OS SANDBOX. Used only with verify.py --local.
+set -eu
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    --ro|--rox|--rw|--rwx|--env) shift 2 ;;
+    --best-effort|-ldd|-add-exec) shift ;;
+    --) shift; break ;;
+    -*) echo "Unknown local adapter argument: $1" >&2; exit 2 ;;
+    *) break ;;
+  esac
+done
+[ "$#" -gt 0 ] || exit 2
+exec "$@"

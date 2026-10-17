@@ -1,0 +1,21 @@
+import Paper20.Certs.RContent36.B02C00
+set_option maxHeartbeats 0
+set_option maxRecDepth 200000
+namespace Paper20.Cert.RContent36.Tree
+open Paper20.RContent36
+open Paper20.HilbertJobs (Job parts children)
+
+def j_2 : Job := ⟨[2], 2, 34, 36⟩
+
+def v_2 : State := @@GENERATED_RHS:v_2@@
+
+theorem correct_2 : Correct j_2 v_2 := by
+  have hc : children j_2 = [j_2_2, j_2_1] := by decide +kernel
+  have hv : List.Forall₂ Correct (children j_2) [v_2_2, v_2_1] := by
+    rw [hc]
+    exact (List.Forall₂.cons correct_2_2 (List.Forall₂.cons correct_2_1 List.Forall₂.nil))
+  have hp := correct_children j_2 (by decide) (by decide) [v_2_2, v_2_1] hv
+  have he : combine [v_2_2, v_2_1] = v_2 := by decide +kernel
+  rwa [he] at hp
+
+end Paper20.Cert.RContent36.Tree

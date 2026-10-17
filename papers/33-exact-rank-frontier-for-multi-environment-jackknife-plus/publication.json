@@ -1,0 +1,59 @@
+{
+  "paper_id": "33",
+  "title": "Exact Coverage Frontiers for Multi-Environment Jackknife+",
+  "source_url": "https://liuchliuch.github.io/repository/exact-rank-frontier-for-multi-environment-jackknife-plus/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "MEJF",
+    "Proofs"
+  ],
+  "build_targets": [
+    "MEJF",
+    "Proofs"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator-positive.json",
+      "expected_rejection": null,
+      "scope": "67 separately written fixed proposition contracts covering the 23 source inventory blocks and substantive extensions."
+    },
+    {
+      "id": "negative-added-premise",
+      "config": "Verification/comparator-negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Exact failure-law contract with an additional False premise."
+    },
+    {
+      "id": "negative-illegal-axiom",
+      "config": "Verification/comparator-negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Exact failure-law contract using a fresh unauthorized False axiom."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 3.1",
+      "declaration": "MEJF.MainResults.exact_failure_law",
+      "scope": "Exact worst-case failure probability over jointly measurable multiset learners and exchangeable complete-block laws, with attainment and zero/positive rank cases."
+    },
+    {
+      "source_result": "Corollaries 3.2–3.6",
+      "declaration": "MEJF.ActualPareto.ranks_eq_lattice",
+      "scope": "Characterization of valid finite ranks by a lattice, with Pareto, enumeration, asymptotic-frontier and complete-failure consequences."
+    },
+    {
+      "source_result": "Theorems 6.1–6.3",
+      "declaration": "MEJF.HeterogeneousProbability.gamma_eq",
+      "scope": "Exact heterogeneous-size minimax law with attainment; complete sorting and DP-to-tournament identification require explicit published interfaces."
+    },
+    {
+      "source_result": "Proposition 7.2",
+      "declaration": "MEJF.EfficiencyCompletion.proposition_7_2",
+      "scope": "An atomless exchangeable construction gives pathwise interval-length separation for every supported sample."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "primary_comparator": "main"
+}

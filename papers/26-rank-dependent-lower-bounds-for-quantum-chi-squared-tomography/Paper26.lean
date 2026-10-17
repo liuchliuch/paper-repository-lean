@@ -1,0 +1,165 @@
+import Paper26.Classical
+import Paper26.Variational
+import Paper26.SpectralLoss
+import Paper26.QuantumModel
+import Paper26.Normalization
+import Paper26.EnergyReality
+import Paper26.ShellAccounting
+import Paper26.BlockReplacement
+import Paper26.Regularization
+import Paper26.PureState
+import Paper26.PosteriorIdentity
+import Paper26.FisherVolume
+import Paper26.SharpFisherVolume
+import Paper26.SpectralAveraging
+import Paper26.TailConvexity
+import Paper26.TailGeometry
+import Paper26.VolumeSymmetry
+import Paper26.TailVolume
+import Paper26.TailMass
+import Paper26.TailMassBridges
+import Paper26.TailLossConstraints
+import Paper26.ScalarTailBall
+import Paper26.BuresTailVolume
+import Paper26.RightTailVolume
+import Paper26.H1PosteriorBound
+import Paper26.VolumeRates
+import Paper26.TensorCopies
+import Paper26.ContinuousPOVM
+import Paper26.CollectiveModel
+import Paper26.PositiveLossBridge
+import Paper26.HaarFrames
+import Paper26.HaarTruncation
+import Paper26.SingularHaarLoss
+import Paper26.PositiveOutputDecomposition
+import Paper26.GraphFamily
+import Paper26.FrameTailConstraints
+import Paper26.DiagonalHaarLossBalls
+import Paper26.HaarLossBalls
+import Paper26.SampleLowerBounds
+import Paper26.RankReduction
+import Paper26.InformationRateBounds
+import Paper26.VolumeNormalizerUpper
+import Paper26.ChartVolume
+import Paper26.MatrixCoordinates
+import Paper26.GraphPrior
+import Paper26.WeakPosteriorIdentity
+import Paper26.AdaptiveModel
+import Paper26.SymmetricSupport
+import Paper26.CommonCenter
+
+import Paper26.AdaptiveCollectiveEmbedding
+import Paper26.AdaptiveFisherChain
+import Paper26.AlignedFisherBudget
+import Paper26.CollectiveGraphBudget
+import Paper26.CollectiveLowerBounds
+import Paper26.FisherPullback
+import Paper26.FlatSLD
+import Paper26.GraphExperiment
+import Paper26.GraphFisherBudget
+import Paper26.IndependentAmplification
+import Paper26.JordanLossMeasurability
+import Paper26.LossMeasurability
+import Paper26.MetricAmplification
+import Paper26.PureCollectiveLowerBounds
+import Paper26.PureLowerArithmetic
+import Paper26.PureMinimax
+import Paper26.PureTensorSuccess
+import Paper26.SupportCompression
+import Paper26.TensorSLD
+import Paper26.WeightedTraceCS
+import Paper26.A1LowerRisk
+import Paper26.AdaptiveCoordinateTransport
+import Paper26.AdaptiveGraphBudget
+import Paper26.AdaptiveLowerBounds
+import Paper26.BinomialMoments
+import Paper26.CollectiveFiltering
+import Paper26.CollectiveMainLowerBounds
+import Paper26.CollectiveRightCopyBound
+import Paper26.CollectiveRightUpper
+import Paper26.CollectiveSubmatrix
+import Paper26.ComparisonInequalities
+import Paper26.CoordinateTransport
+import Paper26.CopyComplexity
+import Paper26.FinitePolarization
+import Paper26.FrobeniusAmplification
+import Paper26.FrobeniusLearning
+import Paper26.MainLowerBounds
+import Paper26.OneCopyObservation
+import Paper26.OperatorPOVMTransport
+import Paper26.ProductCollectiveMeasurement
+import Paper26.PureCovariant
+import Paper26.PureCovariantRisk
+import Paper26.PurePosterior
+import Paper26.PureUpperBounds
+import Paper26.A1MinimaxValue
+import Paper26.AdaptiveOperatorModelTransport
+import Paper26.FlatLowerBounds
+import Paper26.GeneralPosteriorIdentity
+import Paper26.LikelihoodSupport
+import Paper26.MainCopyLowerBounds
+import Paper26.MeasurableSpectralSelection
+import Paper26.OneCopySubmatrix
+import Paper26.OperatorMeasureConstruction
+import Paper26.SourceCopyComplexity
+
+import Paper26.CollectiveFilterComposition
+import Paper26.ContinuousSubmatrixLearning
+import Paper26.DensityProjection
+import Paper26.FlatCopyComplexity
+import Paper26.GeneralBayesNormalization
+import Paper26.MultiscaleRefinement
+import Paper26.OneCopyFullRank
+import Paper26.OneCopyMeanVariance
+import Paper26.OneCopyNormalized
+import Paper26.OneCopyProductProtocol
+import Paper26.OneCopyRightUpper
+
+import Paper26.CollectiveBlockProtocol
+import Paper26.CollectivePadding
+import Paper26.CollectiveStageFamily
+import Paper26.CollectiveStageRoutine
+import Paper26.CollectiveSubmatrixRoutine
+import Paper26.DyadicSchedule
+import Paper26.FrozenOneCopyBlock
+import Paper26.MatrixAmplification
+import Paper26.MultiscaleCollectiveCost
+import Paper26.MultiscaleEstimator
+import Paper26.MultiscaleExecutionFacts
+import Paper26.MultiscaleMatrixBridge
+import Paper26.MultiscaleOneCopyCost
+import Paper26.MultiscalePolicy
+import Paper26.MultiscaleRoutineBridge
+import Paper26.MultiscaleUpdate
+import Paper26.OneCopyStageComposition
+import Paper26.OneCopyStageRoutine
+import Paper26.StagePolicy
+
+import Paper26.AtomicBatchPolicy
+import Paper26.ProductOutcomeStep
+import Paper26.UpperBoundWitnesses
+import Paper26.OneCopyBuresUpper
+import Paper26.CollectiveBuresUpper
+import Paper26.RightUpperWitnesses
+import Paper26.PureUpperWitnesses
+import Paper26.MainUpperBounds
+import Paper26.DiagonalCounterexample
+import Paper26.PureRiskAsymptotics
+
+import Paper26.MeasuredChiSquaredAttainment
+import Paper26.PureBetaLaw
+import Paper26.IntermediateLossLowerBounds
+
+import Paper26.ConfidenceLowerBounds
+
+import Paper26.GaussianRootCalculus
+import Paper26.NumericGraphPrior
+import Paper26.NumericPriorArithmetic
+
+/-!
+Final production sources for Paper26: all original numbered results and the
+separately audited substantive unnumbered claims, relative to precisely
+registered known external inputs. See README.md and the source-result coverage map in Verification/.
+This root was edited as source only: the user deferred final root compilation,
+whole-production checked-kernel/axiom audit and official Comparator checks.
+-/

@@ -1,0 +1,2604 @@
+{
+  "schema_version": 2,
+  "paper_id": "27",
+  "title": "At most two smooth holomorphic fibrations over hyperbolic curves",
+  "sources": [
+    {
+      "id": "troyanov1991",
+      "title": "M. Troyanov, Prescribing curvature on compact surfaces with conical singularities, Trans. AMS 324 (1991), 793–821",
+      "urls": [
+        "https://sma.epfl.ch/~troyanov/Papers/Prescribing.pdf",
+        "https://doi.org/10.1090/S0002-9947-1991-1005085-9"
+      ],
+      "anchors": [
+        "Theorem A, p.793",
+        "§1.3, p.799",
+        "Corollary 2, p.801"
+      ],
+      "verified": "Primary PDF search extraction actually checked: negative conical Euler number gives uniqueness for prescribed smooth negative curvature; pullback cone order is m+(m+1)β; conical Riemann–Hurwitz.",
+      "limitation": "Direct PDF fetch intermittently returned 502. No proof of the external theorem is supplied in Lean."
+    },
+    {
+      "id": "petersen2006",
+      "title": "P. Petersen, Riemannian Geometry, 2nd ed., Springer GTM 171 (2006)",
+      "urls": [
+        "https://poisson.phc.dm.unipi.it/~lmigliorini/secondo_magistrale/riemanniana/petersen.pdf"
+      ],
+      "anchors": [
+        "Chapter 5 §10.1, Propositions 21–22, pp.143–144 (PDF158–159)",
+        "Chapter 5 §10.2, Theorem 17, p.145 (PDF160)"
+      ],
+      "verified": "Primary book body opened: local isometries intertwine exponential maps; same first jet on connected source implies equality; simply connected constant-curvature manifolds admit the developing isometry with prescribed linear isometry, globally a diffeomorphism when complete.",
+      "limitation": "Disc orientation, conformal/complex differentiability, completeness, and density-to-Riemannian representation are translation ingredients, not extra statements of Proposition 22."
+    },
+    {
+      "id": "lebl44",
+      "title": "J. Lebl, Tasty Bits of Several Complex Variables, version 4.4",
+      "urls": [
+        "https://www.jirka.org/scv/scv.pdf",
+        "https://www.jirka.org/scv/changes.html"
+      ],
+      "anchors": [
+        "Theorem 1.2.1, printed p.20"
+      ],
+      "verified": "Parent verified version and page; primary current-PDF search extraction independently checked the power-series representation theorem.",
+      "limitation": "The printed statement starts with continuity up to a polydisc boundary and holomorphicity inside; the subsequent note removes the boundary requirement by using a smaller polydisc. The Lean neighbourhood Frechet-differentiable statement is a consequence, not a verbatim theorem statement."
+    },
+    {
+      "id": "forster1981",
+      "title": "O. Forster, Lectures on Riemann Surfaces, Springer GTM 81",
+      "urls": [
+        "https://www.mathematik.uni-muenchen.de/~forster/books/riem/riemsurf.html",
+        "https://ronan.terpereau.perso.math.cnrs.fr/Master_Class_2023_Dijon/FORSTER_Lectures%20on%20Riemann%20Surfaces.pdf",
+        "https://link.springer.com/chapter/10.1007/978-1-4612-5961-9_1"
+      ],
+      "anchors": [
+        "Theorem 2.1, p.10",
+        "Theorem 4.24, p.29"
+      ],
+      "verified": "Indexed primary book text checked: local expression z↦z^k for nonconstant curve maps; proper nonconstant curve maps have fixed finite multiplicity-counting degree.",
+      "limitation": "The publicly hosted book scan sometimes timed out. Identification of the project's homological genus with the surface genus remains unformalized."
+    },
+    {
+      "id": "abst2013",
+      "title": "M. Abate, F. Bracci, T. Suwa, F. Tovena, Localization of Atiyah classes, Rev. Mat. Iberoam. 29 (2013), 547–578",
+      "urls": [
+        "https://ems.press/content/serial-article-files/38428",
+        "https://doi.org/10.4171/RMI/730"
+      ],
+      "anchors": [
+        "Theorem 6.13, p.567",
+        "Theorem 7.1, pp.567–568",
+        "Corollary 7.3, p.568"
+      ],
+      "verified": "Primary full text opened: holomorphic connection on compact Kahler bundle implies Chern-class vanishing; tangential holomorphic subbundle gives a partial connection on the normal bundle; the compact-Kahler tangential case gives Chern vanishing.",
+      "limitation": "Theorem 7.1 does not require integrability. Applying it requires an actual tangential subbundle and actual normal bundle, not a free Leaf type."
+    },
+    {
+      "id": "atiyah_weil",
+      "title": "Holomorphic connection criterion on compact curves",
+      "urls": [
+        "https://www.ams.org/journals/tran/1957-085-01/S0002-9947-1957-0086359-5/S0002-9947-1957-0086359-5.pdf",
+        "https://link.springer.com/article/10.1007/s40065-021-00319-z"
+      ],
+      "anchors": [
+        "Atiyah, Complex analytic connections in fibre bundles, Trans. AMS 85 (1957), 181–207",
+        "Azad–Biswas (2021), Introduction and §3"
+      ],
+      "verified": "Azad–Biswas primary HTML actually checked: a holomorphic bundle on a compact connected Riemann surface admits a holomorphic connection iff its indecomposable direct summands have degree zero.",
+      "limitation": "Original Atiyah PDF returned 403; no original theorem number is claimed independently verified. ABST is a directly checked alternative for the needed implication."
+    },
+    {
+      "id": "kobayashi1987",
+      "title": "S. Kobayashi, Differential Geometry of Complex Vector Bundles (1987; MSJ retypeset edition)",
+      "urls": [
+        "https://www.mathsoc.jp/assets/pdf/publications/pubmsj/Vol15.pdf"
+      ],
+      "anchors": [
+        "Theorem 3.1.24(a), printed p.53 (PDF63)"
+      ],
+      "verified": "Primary book checked: a negative-degree holomorphic line bundle over a compact Kahler manifold has no nonzero holomorphic section.",
+      "limitation": "Applying the theorem to the coordinate cocycle representation and the intended geometric degree still requires the usual bundle/first-Chern interpretation."
+    },
+    {
+      "id": "catanese2000",
+      "title": "F. Catanese, Fibred surfaces, varieties isogenous to a product and related moduli spaces, AJM 122 (2000), 1–44",
+      "urls": [
+        "https://www.mathe8.uni-bayreuth.de/de/team/prof-fabrizio-catanese-old/pdf/066.pdf"
+      ],
+      "anchors": [
+        "Rigidity Lemma 3.8 and its proof, p.19"
+      ],
+      "verified": "Primary text checked: surjective maps between products with hyperbolic target factors split up to exchanging factors; its proof uses that a nonconstant component map to a hyperbolic curve depends on only one source factor.",
+      "limitation": "The project's one-target-curve interface is the component consequence of the proof. The word 'finite' concerns nonconstant maps; constant maps form families."
+    },
+    {
+      "id": "hatcher2002",
+      "title": "A. Hatcher, Algebraic Topology (2002), Chapter 1",
+      "urls": [
+        "https://pi.math.cornell.edu/~hatcher/AT/ATch1.pdf"
+      ],
+      "anchors": [
+        "Proposition 1.12",
+        "Proposition 1.32",
+        "Proposition 1.33",
+        "Theorem 1.38"
+      ],
+      "verified": "Primary chapter checked: fundamental group of products, sheet/index relation, covering lift criterion, and subgroup classification for path-connected locally path-connected semilocally simply-connected spaces.",
+      "limitation": "Holomorphic structures on covering curves and local inverses must be transported. The finite-index product-subgroup inclusion is proved in Paper27.ProductCoverGroup; the nonregular-cover case is included."
+    },
+    {
+      "id": "forstneric_prezelj2001",
+      "title": "F. Forstneric and J. Prezelj, Extending holomorphic sections from complex subvarieties, Math. Z. 236 (2001), 43–68",
+      "urls": [
+        "https://arxiv.org/pdf/math/0101034"
+      ],
+      "anchors": [
+        "Proposition 1.3, preprint p.3"
+      ],
+      "verified": "Primary text checked: a holomorphic section of a holomorphic submersion over a closed Stein subspace extends to a neighbourhood. A single point gives the local holomorphic sections used here.",
+      "limitation": "The singleton specialization needs no global spray or Oka assumption. It does not by itself assert fibration factorization."
+    },
+    {
+      "id": "fernandes2024",
+      "title": "R. L. Fernandes, Lectures on Differential Geometry, World Scientific (2024)",
+      "urls": [
+        "https://doi.org/10.1142/12733",
+        "https://par.nsf.gov/servlets/purl/10632844",
+        "https://math.illinois.edu/directory/profile/ruiloja"
+      ],
+      "anchors": [
+        "Proposition 6.2, p.48"
+      ],
+      "verified": "Primary NSF book-text index checked: a smooth map whose differential vanishes on a connected open set is constant there. Author's official publication list confirms book metadata.",
+      "limitation": "Direct NSF PDF fetch returned 502. The complex-coordinate and connected-fibre formulations require the standard chart/submanifold translation."
+    },
+    {
+      "id": "sga1",
+      "title": "SGA 1, Revetements etales et groupe fondamental, Expose XII",
+      "urls": [
+        "https://arxiv.org/pdf/math/0206203"
+      ],
+      "anchors": [
+        "Proposition 5.3, pp.254–255 (PDF270)",
+        "Theorem 5.4, p.255"
+      ],
+      "verified": "Primary retypeset original checked: finite normal analytic covers and their morphisms are determined by restriction off a rare analytic subset; Grauert–Remmert finite normal extension exists uniquely under the stated analytic ramification hypotheses.",
+      "limitation": "This is general normal finite extension theory. It does not prove that P27's source branches have one common graph image."
+    },
+    {
+      "id": "edixhoven2010",
+      "title": "B. Edixhoven, R. de Jong, J. Schepers, Covers of surfaces with fixed branch locus, Int. J. Math. 21 (2010), 859–874",
+      "urls": [
+        "https://arxiv.org/pdf/0807.0184"
+      ],
+      "anchors": [
+        "Lemma 2.1 proof, p.3"
+      ],
+      "verified": "Primary proof checked: near a smooth branch locus the connected punctured cover is classified by π1(Δ×Δ*)=Z, and normal extension gives the cyclic local model.",
+      "limitation": "Its article's global setting is projective; the cited local analytic proof uses covering classification and SGA 1. No projectivity assumption should be silently inserted into P27."
+    },
+    {
+      "id": "popescu2011",
+      "title": "P. Popescu-Pampu, Introduction to Jung's method of resolution of singularities, Contemp. Math. 538 (2011)",
+      "urls": [
+        "https://math.univ-lille1.fr/~popescu/2011-Jung-resol.pdf"
+      ],
+      "anchors": [
+        "Theorem 2.7, printed p.409 (PDF9)"
+      ],
+      "verified": "Primary text checked: a locally bounded holomorphic function off a proper closed analytic subset of an open subset of C^n extends uniquely.",
+      "limitation": "To remove a meromorphic bundle-map pole, actual local coefficient functions, analytic pole set, boundedness/no negative terms, and compatibility must be exhibited."
+    },
+    {
+      "id": "stacks_gluing",
+      "title": "Stacks Project, Sheaves §6.33, Gluing sheaves",
+      "urls": [
+        "https://stacks.math.columbia.edu/tag/00AK",
+        "https://stacks.math.columbia.edu/tag/00AN"
+      ],
+      "anchors": [
+        "Lemma 6.33.1",
+        "Lemma 6.33.4"
+      ],
+      "verified": "Primary text checked: compatible local sheaf morphisms glue uniquely and compatible sheaf data glue.",
+      "limitation": "This only supplies the generic gluing operation. P27's actual coordinate compatibility, finite group identities, and Laurent calculations remain own work."
+    },
+    {
+      "id": "catanese_rollenske2009",
+      "title": "F. Catanese and S. Rollenske, Double Kodaira fibrations, J. Reine Angew. Math. 628 (2009), 205–233",
+      "urls": [
+        "https://arxiv.org/pdf/math/0611428"
+      ],
+      "anchors": [
+        "Definition 2.1, preprint printed p.3",
+        "Remark 2.3, preprint printed p.4",
+        "Example 5.8, preprint printed p.16",
+        "Corollary 6.6, preprint printed p.20",
+        "Remark 2.6, preprint printed p.6"
+      ],
+      "verified": "Primary PDF body rechecked in this update: Definition 2.1 distinguishes smooth non-bundle Kodaira fibrations; Remark 2.3 proves base genus at least two via periods, Liouville and Torelli; Example 5.8 constructs a double Kodaira fibration, Corollary 6.6 gives rigid double-étale examples; Remark 2.6 records a branch projection that is not étale.",
+      "limitation": "The raw existence theorem supplies compact surfaces and two varying fibrations; the current own theorem supplies the at-most-two conclusion. Equivalence between non-holomorphic-bundle wording and genuinely differing fibre complex structures is standard Fischer–Grauert background in the translation; no main P27 bound is imported."
+    },
+    {
+      "id": "lee2013_metadata",
+      "title": "J. M. Lee, Introduction to Smooth Manifolds, 2nd ed. (2013)",
+      "urls": [
+        "https://sites.math.washington.edu/~lee/Books/ISM/",
+        "https://link.springer.com/chapter/10.1007/978-1-4419-9982-5_4"
+      ],
+      "anchors": [
+        "Proposition 4.46, proposed anchor"
+      ],
+      "verified": "Author's primary book page verifies metadata. The exact Proposition 4.46 body was not independently opened from a primary copy in this review.",
+      "limitation": "The proper-local-diffeomorphism covering interface is mathematically standard, but this ledger does not claim its precise primary statement has been verified here."
+    },
+    {
+      "id": "dinh_sibony2008",
+      "title": "T.-C. Dinh and N. Sibony, Dynamics in several complex variables: endomorphisms of projective spaces and polynomial-like mappings, arXiv:0810.0811",
+      "urls": [
+        "https://arxiv.org/pdf/0810.0811"
+      ],
+      "anchors": [
+        "Appendix A.1, analytic sets and locally finite irreducible decomposition, printed pp.115–116 (PDF zero-based pp.114–115)",
+        "Theorem A.1.3, printed p.116; local multiplicity/topological degree discussion, printed pp.116–117 (PDF pp.115–116)",
+        "Theorem A.1.4 and Example A.1.5, printed p.117 (PDF p.116)",
+        "Exercise A.1.4, printed p.118 (PDF p.117)"
+      ],
+      "verified": "Primary PDF body checked in this update: locally finite irreducible decomposition; local finite projection; finite normalization and smoothness of normalized curves; local multiplicity; connected dense complement of a proper analytic subset.",
+      "limitation": "CriticalCurveNormalizationTheorem also incorporates the ordinary analytic Jacobian hypersurface and compactness consequences. Local-degree value n in cyclic charts is the elementary y^n count, not an explicit P27 theorem in this source. Printed page numbers and zero-based PDF pages differ by one."
+    },
+    {
+      "id": "forstneric2018",
+      "title": "F. Forstnerič, Divisors defined by noncritical functions, Proc. Amer. Math. Soc. 146 (2018), 2985–2994",
+      "urls": [
+        "https://users.fmf.uni-lj.si/forstneric/papers/2018PAMS.pdf",
+        "https://doi.org/10.1090/proc/13990"
+      ],
+      "anchors": [
+        "Printed p.2987, paragraph immediately preceding Corollary 1.5; cites Forstnerič book Theorem 5.3.1(iii), p.213"
+      ],
+      "verified": "Primary published article body checked in this update: holomorphic vector bundles on an open Riemann surface are holomorphically trivial by Oka–Grauert.",
+      "limitation": "Adapted frames additionally use the standard tangent/normal exact sequence and its Stein splitting by Cartan B. A separate exact printed Cartan-B anchor has not been body-verified here; the interface is a known bundle-theory consequence, not a verbatim statement of Corollary 1.5."
+    },
+    {
+      "id": "mcmullen2023",
+      "title": "C. McMullen, Harvard Math 213a course notes (2023)",
+      "urls": [
+        "https://people.math.harvard.edu/~ctm/home/text/class/harvard/213a/23/html/home/course/course.pdf"
+      ],
+      "anchors": [
+        "Corollary 2.26 and Theorem 2.28, printed p.65"
+      ],
+      "verified": "Primary indexed PDF body checked: a holomorphic map between hyperbolic Riemann surfaces is a locally isometric covering or a strict hyperbolic contraction; proof lifts to universal covers.",
+      "limitation": "The metric selection and genus-to-disc uniformization translation in HyperbolicMetricTheory are standard uniformization inputs in addition to Theorem 2.28. UniformizingDiscCharts for an arbitrary specified smooth curvature −1 metric also uses local constant-curvature isometries (Petersen). No direct numbered uniformization-existence statement from these notes is claimed body-verified."
+    },
+    {
+      "id": "ehresmann1952",
+      "title": "C. Ehresmann, Les connexions infinitésimales dans un espace fibré différentiable, Séminaire Bourbaki 1952, exposé 24, pp.153–168",
+      "urls": [
+        "https://www.numdam.org/item/SB_1948-1951__1__153_0/",
+        "https://www.numdam.org/item/SB_1948-1951__1__153_0.pdf"
+      ],
+      "anchors": [
+        "§1, unnumbered Proposition and following path-lifting lemma, printed p.154 (PDF zero-based p.2)"
+      ],
+      "verified": "Primary original body checked: a surjective C² full-rank map over a connected base, with compact total space (or the stated compact-connected fibre alternative), is a differentiable fibre bundle; horizontal transport identifies fibres.",
+      "limitation": "The Lean degree-invariance interface further uses complex orientations and homotopy invariance/holomorphic local-multiplicity comparison. Smooth complex fibre models use the ordinary holomorphic submersion/level-set theorem. These translations are explicit unformalized general inputs."
+    },
+    {
+      "id": "hatcher_degree2002",
+      "title": "A. Hatcher, Algebraic Topology (2002), Chapter 2",
+      "urls": [
+        "https://pi.math.cornell.edu/~hatcher/AT/ATch2.pdf"
+      ],
+      "anchors": [
+        "Theorem 2.10, printed p.111; Example 2A.2, printed p.168",
+        "Proposition 2.30, printed p.136, sphere local-degree formula (supporting model calculation only)"
+      ],
+      "verified": "Primary body checked in this update: homotopic maps induce identical homology maps; closed orientable genus-g surface H1 has rank 2g. Proposition 2.30 was checked, but its displayed setting is spheres.",
+      "limitation": "No claim that the sphere proposition literally states the general closed-surface degree comparison. Oriented fundamental classes and the holomorphic local multiplicity sum are the ordinary additional degree-theory interpretation in EhresmannDegreeInvariance."
+    },
+    {
+      "id": "gui2022_notes",
+      "title": "B. Gui, Notes on Complex Analytic Geometry, main body 2022, updated April 2025",
+      "urls": [
+        "https://binguimath.github.io/Files/2022_CAG.pdf"
+      ],
+      "anchors": [
+        "Theorem 2.7.2, printed p.70; proof Lemma 2.7.7, pp.72–73"
+      ],
+      "verified": "Author-hosted primary notes body checked: an isolated point of a fibre of a holomorphic map admits neighbourhoods on which the map is finite. The proof reduces to Weierstrass preparation.",
+      "limitation": "This is a precise primary exposition, not a claim that the 2022 notes are the original published finite-mapping theorem. The current interface additionally chooses a sufficiently small graph bidisc, connected source, surjectivity and connected analytic complement; these are standard shrinking/openness/complement consequences. A published Grauert–Remmert theorem number has not been body-verified in this update."
+    },
+    {
+      "id": "grauert_remmert1984",
+      "title": "H. Grauert and R. Remmert, Coherent Analytic Sheaves, Grundlehren 265 (1984)",
+      "urls": [
+        "https://link.springer.com/book/10.1007/978-3-642-69582-7"
+      ],
+      "anchors": [
+        "Chapter Finite Holomorphic Maps, pp.61–74",
+        "Chapters Riemann Extension Theorem and Analytic Coverings, pp.130–151; Normalization of Complex Spaces, pp.152–166"
+      ],
+      "verified": "Publisher primary metadata and chapter/page table checked in this update. This verifies the published source and topic coverage, not a precise theorem body.",
+      "limitation": "Exact numbered finite-mapping/isolated-fibre theorem body was not opened from this book. Gui Theorem 2.7.2 supplies the independently body-verified primary exposition of the precise local statement."
+    },
+    {
+      "id": "llosa_py2021",
+      "title": "C. Llosa Isenrich and P. Py, Mapping class groups, multiple Kodaira fibrations, and CAT(0) spaces, arXiv:2001.03694v3",
+      "urls": [
+        "https://arxiv.org/pdf/2001.03694"
+      ],
+      "anchors": [
+        "Introduction, printed p.2, first paragraph (PDF zero-based p.1)"
+      ],
+      "verified": "Primary body checked in this update: Kodaira means holomorphic submersion with connected fibres and nonisotrivial family; base and fibre genera exceed one.",
+      "limitation": "Only this background fact is used. The article discusses other equivalence conventions; the current project equivalence changes the base only and is not silently replaced by arbitrary total-space automorphisms."
+    },
+    {
+      "id": "zaal1995",
+      "title": "C. G. Zaal, Explicit complete curves in the moduli space of curves of genus three, Geom. Dedicata 56 (1995), 185–196",
+      "urls": [
+        "https://pure.uva.nl/ws/files/3875454/1106_11965y.pdf",
+        "https://doi.org/10.1007/BF01267642"
+      ],
+      "anchors": [
+        "§1 The Construction, printed pp.186–187 (PDF zero-based pp.2–3)",
+        "Later trigonal genus-three family: printed pp.188–189"
+      ],
+      "verified": "Original published UvA scan body checked in this update: genus-nine F lies in C3×C3 off diagonal; two projection restrictions; a squaring-Picard base change B→F is étale of total degree 64; double cover of B×C3 branches on the two pulled-back graphs and gives smooth genus-six fibres.",
+      "limitation": "The original B may be reducible, explicitly stated on p.187. A connected component is a legitimate Curve and is étale/surjective over connected F, but its degree must not be asserted 64 without further proof. Projection degree two follows from the defining fibre product. The nonsmooth second projection and ramification number 8 are P27 own deductions, not external historical inputs."
+    }
+  ],
+  "explicit_interfaces": [
+    {
+      "id": "E01",
+      "names": [
+        "Paper27.Geometry.MetricComparison.ClassicalCurveMapFacts"
+      ],
+      "sources": [
+        "forster1981",
+        "troyanov1991"
+      ],
+      "status": "explicit_universal_parameter_no_Lean_instance",
+      "quantifiers": "All actual compact curves D,B, all actual HolomorphicMap u:D→B with ∃p q,u p≠u q. All p: analytic finite order of deriv(writtenCoordinateMap u p); actual finite ramification support and finite fibres; surjectivity; for every finiteness witness, χD+degR(u)=mapDegree(u)χB.",
+      "uses": [
+        "Lemma 2.3",
+        "Proposition 2.4"
+      ],
+      "translation": "R is constructed from analyticOrderNatAt of the actual coordinate derivative; mapDegree is the sum of order+1 over the actual chosen target-point fibre. Euler characteristic is 2−2 genus, where genus is defined from H1 rank.",
+      "missing": "No external instance, surface-classification/genus identification, or general finite-zero/Riemann–Hurwitz proof is formalized.",
+      "definition": {
+        "file": "Paper27/Geometry/MetricComparison.lean",
+        "line": 107,
+        "declaration": "structure ClassicalCurveMapFacts : Prop where\n  derivative_analytic : ∀ (D B : Curve) (u : HolomorphicMap D B), Nonconstant u →\n    ∀ p : D, AnalyticAt ℂ (deriv (writtenCoordinateMap u p)) (chartAt ℂ p p)\n  derivative_order_finite : ∀ (D B : Curve) (u : HolomorphicMap D B), Nonconstant u →\n    ∀ p : D, analyticOrderAt (deriv (writtenCoordinateMap u p)) (chartAt ℂ p p) ≠ ⊤\n  ramification_finite : ∀ (D B : Curve) (u : HolomorphicMap D B), Nonconstant u →\n    RamificationSupportFinite u\n  fibres_finite : ∀ (D B : Curve) (u : HolomorphicMap D B), Nonconstant u →\n    ∀ b : B, {p : D | u p = b}.Finite\n  surjective : ∀ (D B : Curve) (u : HolomorphicMap D B), Nonconstant u →\n    Function.Surjective u\n  riemann_hurwitz : ∀ (D B : Curve) (u : HolomorphicMap D B) (_hu : Nonconstant u)\n    (hr : RamificationSupportFinite u) (hf : {p : D | u p = B.basepoint}.Finite),\n    eulerCharacteristic D + divisorDegree (ramificationDivisor u hr) =\n      (mapDegree u hf : ℝ) * eulerCharacteristic B",
+        "file_sha256": "5b44abf71299c84f66c447514cfd593feee77ddd26ac189230468daacb629cc2"
+      },
+      "classical_inputs_fields": [
+        "curveMaps"
+      ],
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "FibreGeometry.curveDegree_zero_iff_constant",
+        "FibreGeometry.finitePair_pairSurjective",
+        "CoordinateCalculus.normalized_comparison_complete",
+        "RamificationFamilies.ramification_family_exists"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "forster1981",
+          "anchors": [
+            "Theorem 2.1, p.10",
+            "Theorem 4.24, p.29"
+          ],
+          "verification": "Indexed primary book text checked: local expression z↦z^k for nonconstant curve maps; proper nonconstant curve maps have fixed finite multiplicity-counting degree."
+        },
+        {
+          "source_id": "troyanov1991",
+          "anchors": [
+            "Theorem A, p.793",
+            "§1.3, p.799",
+            "Corollary 2, p.801"
+          ],
+          "verification": "Primary PDF search extraction actually checked: negative conical Euler number gives uniqueness for prescribed smooth negative curvature; pullback cone order is m+(m+1)β; conical Riemann–Hurwitz."
+        }
+      ],
+      "known_external_reason": "R is constructed from analyticOrderNatAt of the actual coordinate derivative; mapDegree is the sum of order+1 over the actual chosen target-point fibre. Euler characteristic is 2−2 genus, where genus is defined from H1 rank.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E02",
+      "names": [
+        "Paper27.Geometry.MetricComparison.ClassicalPullbackFacts"
+      ],
+      "sources": [
+        "troyanov1991"
+      ],
+      "status": "explicit_universal_parameter_no_Lean_instance",
+      "quantifiers": "All actual compact curves, nonconstant actual u, finite actual R(u), and concrete ConformalMetric g with HasConeData g 0: pullback u g has cone divisor R(u); if g has curvature −1, pullback has curvature −1 off R(u).",
+      "uses": [
+        "Lemma 2.3"
+      ],
+      "translation": "Concrete metric weights, inverse-chart differential densities, actual mfderiv pullback, and Laplacian curvature are defined; quadratic-form pullback identity is own proof.",
+      "missing": "General local degeneracy/curvature instance and the coordinate representation/intrinsic tensor bridge remain unformalized.",
+      "definition": {
+        "file": "Paper27/Geometry/MetricComparison.lean",
+        "line": 278,
+        "declaration": "structure ClassicalPullbackFacts : Prop where\n  cone_data : ∀ (D B : Curve) (u : HolomorphicMap D B), Nonconstant u →\n    ∀ (hr : RamificationSupportFinite u) (g : ConformalMetric B),\n    HasConeData g 0 → HasConeData (pullback u g) (ramificationDivisor u hr)\n  curvature : ∀ (D B : Curve) (u : HolomorphicMap D B), Nonconstant u →\n    ∀ (hr : RamificationSupportFinite u) (g : ConformalMetric B),\n    HasConeData g 0 → HasConstantCurvature g 0 (-1) →\n      HasConstantCurvature (pullback u g) (ramificationDivisor u hr) (-1)",
+        "file_sha256": "5b44abf71299c84f66c447514cfd593feee77ddd26ac189230468daacb629cc2"
+      },
+      "classical_inputs_fields": [
+        "pullbacks"
+      ],
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "MetricComparison.pullback_metrics_equal",
+        "CoordinateCalculus.normalized_comparison_complete"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "troyanov1991",
+          "anchors": [
+            "Theorem A, p.793",
+            "§1.3, p.799",
+            "Corollary 2, p.801"
+          ],
+          "verification": "Primary PDF search extraction actually checked: negative conical Euler number gives uniqueness for prescribed smooth negative curvature; pullback cone order is m+(m+1)β; conical Riemann–Hurwitz."
+        }
+      ],
+      "known_external_reason": "Concrete metric weights, inverse-chart differential densities, actual mfderiv pullback, and Laplacian curvature are defined; quadratic-form pullback identity is own proof.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E03",
+      "names": [
+        "Paper27.Geometry.MetricComparison.TroyanovUniqueness"
+      ],
+      "sources": [
+        "troyanov1991"
+      ],
+      "status": "explicit_universal_parameter_no_Lean_instance",
+      "quantifiers": "Every actual compact curve D, finite effective R:D→₀N, concrete metrics g,h: if χD+degR<0, both have cone order R and curvature −1 off R, then g=h.",
+      "uses": [
+        "Lemma 2.3 metric equality"
+      ],
+      "translation": "Only uniqueness is imported. Own proofs establish θ=2π(m+1)>0, angle defect, negative conical Euler number, equality of actual divisors, and equal pullback metrics.",
+      "missing": "The uniqueness theorem has no Lean instance. Existence of chosen hyperbolic metrics is separately supplied by E20, and local metric charts by E21. Neither is left as an own missing graph bridge.",
+      "definition": {
+        "file": "Paper27/Geometry/MetricComparison.lean",
+        "line": 268,
+        "declaration": "def TroyanovUniqueness : Prop :=\n  ∀ (D : Curve) (R : D →₀ ℕ) (g h : ConformalMetric D),\n    eulerCharacteristic D + divisorDegree R < 0 →\n    HasConeData g R → HasConeData h R →\n    HasConstantCurvature g R (-1) → HasConstantCurvature h R (-1) → g = h",
+        "file_sha256": "5b44abf71299c84f66c447514cfd593feee77ddd26ac189230468daacb629cc2"
+      },
+      "classical_inputs_fields": [
+        "negativeCurvatureUniqueness"
+      ],
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "MetricComparison.pullback_metrics_equal",
+        "NormalizedBranchConstruction.MetricBranchData.normalizedBranchGraph_exists"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "troyanov1991",
+          "anchors": [
+            "Theorem A, p.793",
+            "§1.3, p.799",
+            "Corollary 2, p.801"
+          ],
+          "verification": "Primary PDF search extraction actually checked: negative conical Euler number gives uniqueness for prescribed smooth negative curvature; pullback cone order is m+(m+1)β; conical Riemann–Hurwitz."
+        }
+      ],
+      "known_external_reason": "Only uniqueness is imported. Own proofs establish θ=2π(m+1)>0, angle defect, negative conical Euler number, equality of actual divisors, and equal pullback metrics.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E04",
+      "names": [
+        "Paper27.Geometry.BranchGraphs.IsometryFirstJetRigidity"
+      ],
+      "sources": [
+        "petersen2006"
+      ],
+      "status": "explicit_universal_parameter_no_Lean_instance",
+      "quantifiers": "Every z:C and actual LocalDiscIsometry a,b at z; same value and complex derivative imply equality of germs at z.",
+      "uses": [
+        "Proposition 2.4 single-source graph uniqueness"
+      ],
+      "translation": "Restrict to a connected common neighbourhood; density identities define actual local Riemannian isometries. Petersen Proposition 22 then supplies uniqueness.",
+      "missing": "No instance translating actual Poincare density isometries into Petersen's Riemannian formulation is formalized. The own graph-slope and continuity arguments are separate.",
+      "definition": {
+        "file": "Paper27/Geometry/BranchGraphs.lean",
+        "line": 53,
+        "declaration": "def IsometryFirstJetRigidity : Prop :=\n  ∀ (z : ℂ) (a b : LocalDiscIsometry z), a z = b z →\n    deriv a z = deriv b z → a.toFun =ᶠ[𝓝 z] b.toFun",
+        "file_sha256": "0327b236b0ae747208dc0ce05c94ef42676ba011db9282b220301a32adbd1ffd"
+      },
+      "classical_inputs_fields": [
+        "isometryRigidity"
+      ],
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "BranchGraphs.single_source_branch_graph_germ_unique",
+        "FiniteAnalyticGerm.FiniteBranchCover.single_graph_neighbourhood",
+        "ActualCyclicModels.cyclic_model_exists"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "petersen2006",
+          "anchors": [
+            "Chapter 5 §10.1, Propositions 21–22, pp.143–144 (PDF158–159)",
+            "Chapter 5 §10.2, Theorem 17, p.145 (PDF160)"
+          ],
+          "verification": "Primary book body opened: local isometries intertwine exponential maps; same first jet on connected source implies equality; simply connected constant-curvature manifolds admit the developing isometry with prescribed linear isometry, globally a diffeomorphism when complete."
+        }
+      ],
+      "known_external_reason": "Restrict to a connected common neighbourhood; density identities define actual local Riemannian isometries. Petersen Proposition 22 then supplies uniqueness.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E05",
+      "names": [
+        "Paper27.Geometry.DiscGraphExtension.LocalDiscIsometryExtension"
+      ],
+      "sources": [
+        "petersen2006"
+      ],
+      "status": "explicit_universal_parameter_no_Lean_instance",
+      "quantifiers": "Every z:C and actual LocalDiscIsometry φ at z admits an actual GlobalDiscIsometry A agreeing with φ near z.",
+      "uses": [
+        "Lemma 2.3 graph across ramification"
+      ],
+      "translation": "Apply Theorem 17 to the complete simply connected curvature −1 disc and the orientation-preserving linear isometry given by the first jet; Proposition 22 matches the given local germ. Complex analyticity is the standard oriented-isometry/conformal correspondence.",
+      "missing": "Completeness/model-curvature/orientation/analyticity translation is not instantiated in Lean. This parameter contains no ramified maps or branch graph conclusion.",
+      "definition": {
+        "file": "Paper27/Geometry/DiscGraphExtension.lean",
+        "line": 80,
+        "declaration": "def LocalDiscIsometryExtension : Prop :=\n  ∀ (z : ℂ) (φ : LocalDiscIsometry z), ∃ A : GlobalDiscIsometry,\n    φ.toFun =ᶠ[𝓝 z] A.toFun",
+        "file_sha256": "406aba59d5769c7c9add9c1397e95083a96368c6c9289168b985e2bd7cd1a647"
+      },
+      "classical_inputs_fields": [
+        "discExtension"
+      ],
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "DiscGraphExtension.graph_across_ramification",
+        "NormalizedBranchConstruction.MetricBranchData.normalizedBranchGraph_exists"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "petersen2006",
+          "anchors": [
+            "Chapter 5 §10.1, Propositions 21–22, pp.143–144 (PDF158–159)",
+            "Chapter 5 §10.2, Theorem 17, p.145 (PDF160)"
+          ],
+          "verification": "Primary book body opened: local isometries intertwine exponential maps; same first jet on connected source implies equality; simply connected constant-curvature manifolds admit the developing isometry with prescribed linear isometry, globally a diffeomorphism when complete."
+        }
+      ],
+      "known_external_reason": "Apply Theorem 17 to the complete simply connected curvature −1 disc and the orientation-preserving linear isometry given by the first jet; Proposition 22 matches the given local germ. Complex analyticity is the standard oriented-isometry/conformal correspondence.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E06",
+      "names": [
+        "Paper27.Geometry.CovectorGauges.ClassicalZeroDifferentialConstancy"
+      ],
+      "sources": [
+        "fernandes2024"
+      ],
+      "status": "explicit_universal_parameter_no_Lean_instance",
+      "quantifiers": "All actual compact curves D,B and actual holomorphic u:D→B: if every actual written-coordinate derivative at its chart centre is zero, u is constant.",
+      "uses": [
+        "Proposition 2.4 restriction maps both nonconstant"
+      ],
+      "translation": "The constant⇒zero converse, unit-germ comparison, constancy equivalence, and promotion of one nonconstant projection to both are own proofs.",
+      "missing": "The general chart-to-real-differential constancy instance is not formalized.",
+      "definition": {
+        "file": "Paper27/Geometry/CovectorGauges.lean",
+        "line": 178,
+        "declaration": "def ClassicalZeroDifferentialConstancy : Prop :=\n  ∀ (D B : Curve) (u : HolomorphicMap D B),\n    (∀ p, deriv (MetricComparison.writtenCoordinateMap u p) (chartAt ℂ p p) = 0) →\n      IsConstant u",
+        "file_sha256": "e6c10622da5ae8fc900caeea8112b9fbe31cf810f9b909819d5938f338b264b8"
+      },
+      "classical_inputs_fields": [
+        "zeroDifferential"
+      ],
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "CovectorGauges.CurveCovectorData.nonconstant_and_same_ramification",
+        "CoordinateCalculus.normalized_nonconstant_and_same_ramification"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "fernandes2024",
+          "anchors": [
+            "Proposition 6.2, p.48"
+          ],
+          "verification": "Primary NSF book-text index checked: a smooth map whose differential vanishes on a connected open set is constant there. Author's official publication list confirms book metadata."
+        }
+      ],
+      "known_external_reason": "The constant⇒zero converse, unit-germ comparison, constancy equivalence, and promotion of one nonconstant projection to both are own proofs.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E07",
+      "names": [
+        "Paper27.Geometry.CoordinateCalculus.SurfaceAnalyticRegularity"
+      ],
+      "sources": [
+        "lebl44"
+      ],
+      "status": "explicit_universal_parameter_no_Lean_instance",
+      "quantifiers": "Exact current interface: every F:(C×C)→C and z0, (eventually z near z0, DifferentiableAt C F z) implies AnalyticAt C F z0.",
+      "uses": [
+        "Actual surface coordinate maps feeding NormalizedDifferentials"
+      ],
+      "translation": "On a smaller closed polydisc, nearby complex Frechet differentiability gives continuity and coordinate-wise holomorphicity; Theorem 1.2.1 supplies a convergent power series. One-source-dimensional analyticity is already proved from mathlib's Cauchy theorem.",
+      "missing": "Only the universal SCV regularity theorem remains uninstantiated; actual one-variable and surface-coordinate applications are proved.",
+      "definition": {
+        "file": "Paper27/Geometry/CoordinateCalculus.lean",
+        "line": 268,
+        "declaration": "def SurfaceAnalyticRegularity : Prop :=\n  ∀ (F : (ℂ × ℂ) → ℂ) (p : ℂ × ℂ),\n    (∀ᶠ q in 𝓝 p, DifferentiableAt ℂ F q) → AnalyticAt ℂ F p",
+        "file_sha256": "d22d565e1b3a00d45caac22dcf056902374115c92dad9c0814e50599ba8e49d7"
+      },
+      "classical_inputs_fields": [
+        "regularity"
+      ],
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "CurveBranchInputs.euclidean_model_exists",
+        "NormalAtlasTensor.componentNormalTensorData",
+        "RetractionCoordinateGerms.NormalAtlas.compatibleJets"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "lebl44",
+          "anchors": [
+            "Theorem 1.2.1, printed p.20"
+          ],
+          "verification": "Parent verified version and page; primary current-PDF search extraction independently checked the power-series representation theorem."
+        }
+      ],
+      "known_external_reason": "On a smaller closed polydisc, nearby complex Frechet differentiability gives continuity and coordinate-wise holomorphicity; Theorem 1.2.1 supplies a convergent power series. One-source-dimensional analyticity is already proved from mathlib's Cauchy theorem.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E08",
+      "names": [
+        "Paper27.Geometry.LineBundleDegreeTheory"
+      ],
+      "sources": [
+        "abst2013",
+        "atiyah_weil",
+        "kobayashi1987"
+      ],
+      "status": "explicit_universal_parameter_no_Lean_instance",
+      "quantifiers": "Degree operation on every actual HolomorphicLineCocycle over every actual compact curve; invariance under same transitions, tensor-power degree law, tangent degree 2−2g, holomorphic connection⇒degree zero, negative degree⇒every actual HolomorphicSection coefficient zero on its chart.",
+      "uses": [
+        "Lemma 2.2 connection part",
+        "Proposition 2.4 degree",
+        "Lemma 3.1 quotient section",
+        "Appendix A"
+      ],
+      "translation": "The degree is the unformalized first-Chern number of the bundle represented by the concrete cocycle. Connections contain actual holomorphic coefficients and the connection transformation law.",
+      "missing": "The canonical first-Chern degree operation and universal bundle/connection/section facts remain unformalized. Actual normal cocycles, tangent cocycles, tensor gauges, correction sections and the actual Bott application are now constructed in the own proof chain; do not relist them as missing.",
+      "definition": {
+        "file": "Paper27/Geometry/LineCocycles.lean",
+        "line": 130,
+        "declaration": "structure LineBundleDegreeTheory where\n  degree : (D : Curve) → HolomorphicLineCocycle D → ℤ\n  invariant : ∀ D (L K : HolomorphicLineCocycle D), L.SameTransitions K →\n    degree D L = degree D K\n  tensor_power : ∀ D (L : HolomorphicLineCocycle D) (n : ℕ),\n    degree D (L.tensorPower n) = (n : ℤ) * degree D L\n  tangent_degree : ∀ D (T : TangentLineCocycle D),\n    degree D T.bundle = 2 - 2 * (D.genus : ℤ)\n  connection_degree_zero : ∀ D (L : HolomorphicLineCocycle D),\n    Nonempty L.Connection → degree D L = 0\n  negative_degree_no_section : ∀ D (L : HolomorphicLineCocycle D), degree D L < 0 →\n    ∀ (s : L.HolomorphicSection) i p, p ∈ D.chartDomain i → s.coefficient i p = 0",
+        "file_sha256": "bfe321575ef53f95f2cc7c4c3f278b8dbbf2eb8439bbce4edb7916492da816a7"
+      },
+      "classical_inputs_fields": [
+        "degreeTheory"
+      ],
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "NormalAtlasTensor.normal_tensor_degree",
+        "NormalQuotient.NormalizedCovectors.covectors_equal_from_normal_tensor",
+        "ThreePairNormalObstruction.impossible"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "abst2013",
+          "anchors": [
+            "Theorem 6.13, p.567",
+            "Theorem 7.1, pp.567–568",
+            "Corollary 7.3, p.568"
+          ],
+          "verification": "Primary full text opened: holomorphic connection on compact Kahler bundle implies Chern-class vanishing; tangential holomorphic subbundle gives a partial connection on the normal bundle; the compact-Kahler tangential case gives Chern vanishing."
+        },
+        {
+          "source_id": "atiyah_weil",
+          "anchors": [
+            "Atiyah, Complex analytic connections in fibre bundles, Trans. AMS 85 (1957), 181–207",
+            "Azad–Biswas (2021), Introduction and §3"
+          ],
+          "verification": "Azad–Biswas primary HTML actually checked: a holomorphic bundle on a compact connected Riemann surface admits a holomorphic connection iff its indecomposable direct summands have degree zero."
+        },
+        {
+          "source_id": "kobayashi1987",
+          "anchors": [
+            "Theorem 3.1.24(a), printed p.53 (PDF63)"
+          ],
+          "verification": "Primary book checked: a negative-degree holomorphic line bundle over a compact Kahler manifold has no nonzero holomorphic section."
+        }
+      ],
+      "known_external_reason": "The degree is the unformalized first-Chern number of the bundle represented by the concrete cocycle. Connections contain actual holomorphic coefficients and the connection transformation law.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E09",
+      "names": [
+        "Paper27.Geometry.HomDegreeLaw"
+      ],
+      "sources": [
+        "kobayashi1987"
+      ],
+      "status": "explicit_universal_parameter_no_Lean_instance",
+      "quantifiers": "Every actual D,N,T and HomLineCocycle H whose transitions are T/N: degree(H)=degree(T)−degree(N).",
+      "uses": [
+        "Lemma 3.1"
+      ],
+      "translation": "NormalQuotient constructs H itself, its holomorphic quotient section, factorization, and transition law. The negative Hom degree and resulting covector equality are own proofs.",
+      "missing": "Standard first-Chern Hom law is explicit but not instantiated; the negative-section source is verified, while a separate numbered source for this elementary degree law is not asserted.",
+      "definition": {
+        "file": "Paper27/Geometry/NormalCorrection.lean",
+        "line": 24,
+        "declaration": "def HomDegreeLaw (theory : LineBundleDegreeTheory) : Prop :=\n  ∀ (D : Curve) (N T : HolomorphicLineCocycle D) (H : HomLineCocycle N T),\n    theory.degree D H.bundle = theory.degree D T - theory.degree D N",
+        "file_sha256": "fd5e8ce4d11da6b52c8e3682f54b70134cba7278380de526ef24634289de712e"
+      },
+      "classical_inputs_fields": [
+        "homDegree"
+      ],
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "EmbeddedFrames.tangentToPair_from_normal_tensor",
+        "intrinsic_ramification_component_dichotomy"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "kobayashi1987",
+          "anchors": [
+            "Theorem 3.1.24(a), printed p.53 (PDF63)"
+          ],
+          "verification": "Primary book checked: a negative-degree holomorphic line bundle over a compact Kahler manifold has no nonzero holomorphic section."
+        }
+      ],
+      "known_external_reason": "NormalQuotient constructs H itself, its holomorphic quotient section, factorization, and transition law. The negative Hom degree and resulting covector equality are own proofs.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E10",
+      "names": [
+        "Paper27.Geometry.NonconstantCompactCurveMapTheorem"
+      ],
+      "sources": [
+        "forster1981"
+      ],
+      "status": "derived_from_E01_not_an_additional_main_parameter",
+      "quantifiers": "All compact actual curves C,D and nonconstant actual holomorphic a:C→D: every fibre is finite and a is surjective.",
+      "uses": [
+        "Lemma 2.1",
+        "Lemma 3.4"
+      ],
+      "translation": "The finite-fibre connected-factor argument proving a bijection and the descent function are own proofs.",
+      "missing": "No independent input is required by ClassicalInputs: FibreGeometry.compactCurveMapTheorem derives this interface from ClassicalCurveMapFacts.fibres_finite/surjective.",
+      "definition": {
+        "file": "Paper27/Geometry/Factorization.lean",
+        "line": 85,
+        "declaration": "def NonconstantCompactCurveMapTheorem : Prop :=\n  ∀ (C D : Curve) (a : HolomorphicMap C D),\n    (∃ x y : C, a x ≠ a y) →\n      (∀ d : D, (a ⁻¹' {d}).Finite) ∧ Function.Surjective a",
+        "file_sha256": "37f8e3d0e09bbe440dbd67ee4b067f47a8d642a612a89c1b03dae891fcb2070f"
+      },
+      "classical_inputs_fields": [],
+      "formalization_status": "derived_from_E01_not_an_additional_main_parameter",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "FibreGeometry.compactCurveMapTheorem"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "forster1981",
+          "anchors": [
+            "Theorem 2.1, p.10",
+            "Theorem 4.24, p.29"
+          ],
+          "verification": "Indexed primary book text checked: local expression z↦z^k for nonconstant curve maps; proper nonconstant curve maps have fixed finite multiplicity-counting degree."
+        }
+      ],
+      "known_external_reason": "The finite-fibre connected-factor argument proving a bijection and the descent function are own proofs.",
+      "proof_path": "derived_support"
+    },
+    {
+      "id": "E11",
+      "names": [
+        "Paper27.Geometry.BijectiveHolomorphicInverse"
+      ],
+      "sources": [
+        "forster1981"
+      ],
+      "status": "explicit_universal_parameter_no_Lean_instance",
+      "quantifiers": "Every equivalence e:C≃D of actual compact curves, if e is holomorphic then e.symm is holomorphic.",
+      "uses": [
+        "Lemma 2.1",
+        "Lemma 3.4"
+      ],
+      "translation": "Local z↦z^k form and injectivity force k=1. The interface does not assert any fibration factorization or degree-one result.",
+      "missing": "No general curve biholomorphic-inverse instance.",
+      "definition": {
+        "file": "Paper27/Geometry/Factorization.lean",
+        "line": 65,
+        "declaration": "def BijectiveHolomorphicInverse : Prop :=\n  ∀ (C D : Curve) (e : C ≃ D),\n    MDifferentiable 𝓘(ℂ, ℂ) 𝓘(ℂ, ℂ) e →\n      MDifferentiable 𝓘(ℂ, ℂ) 𝓘(ℂ, ℂ) e.symm",
+        "file_sha256": "37f8e3d0e09bbe440dbd67ee4b067f47a8d642a612a89c1b03dae891fcb2070f"
+      },
+      "classical_inputs_fields": [
+        "inverseCurveMap"
+      ],
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "Fibration.equivalent_of_factorization",
+        "ClassicalInputs.finite_pair",
+        "ClassicalInputs.third_equivalent_of_empty"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "forster1981",
+          "anchors": [
+            "Theorem 2.1, p.10",
+            "Theorem 4.24, p.29"
+          ],
+          "verification": "Indexed primary book text checked: local expression z↦z^k for nonconstant curve maps; proper nonconstant curve maps have fixed finite multiplicity-counting degree."
+        }
+      ],
+      "known_external_reason": "Local z↦z^k form and injectivity force k=1. The interface does not assert any fibration factorization or degree-one result.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E12",
+      "names": [
+        "Paper27.Geometry.ProductCurveRigidity"
+      ],
+      "sources": [
+        "catanese2000"
+      ],
+      "status": "explicit_universal_parameter_no_Lean_instance",
+      "quantifiers": "All actual compact curves A,B,C with C hyperbolic; every actual holomorphic F:A×B→C factors through one actual projection by a holomorphic curve map. Constants are allowed.",
+      "uses": [
+        "Lemma 3.4",
+        "Product special case"
+      ],
+      "translation": "This is the one-component consequence of Catanese's proof, not the entire Lemma 3.4.",
+      "missing": "No de Franchis/product-rigidity instance; own proof handles descent and equivalence after this input.",
+      "definition": {
+        "file": "Paper27/Geometry/ProductCover.lean",
+        "line": 121,
+        "declaration": "def ProductCurveRigidity : Prop :=\n  ∀ (A B C : Curve), C.Hyperbolic →\n    ∀ F : HolomorphicMap (A.productSurface B) C,\n      (∃ a : HolomorphicMap A C, ∀ p : A × B, F p = a p.1) ∨\n        (∃ b : HolomorphicMap B C, ∀ p : A × B, F p = b p.2)",
+        "file_sha256": "0df3937d18cb8a0133f9e138a326c6b9868ff5181cef22d7d9b3af9d4f3299b9"
+      },
+      "classical_inputs_fields": [
+        "productRigidity"
+      ],
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "unramified_pair_fibration_equivalent",
+        "ClassicalInputs.third_equivalent_of_empty"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "catanese2000",
+          "anchors": [
+            "Rigidity Lemma 3.8 and its proof, p.19"
+          ],
+          "verification": "Primary text checked: surjective maps between products with hyperbolic target factors split up to exchanging factors; its proof uses that a nonconstant component map to a hyperbolic curve depends on only one source factor."
+        }
+      ],
+      "known_external_reason": "This is the one-component consequence of Catanese's proof, not the entire Lemma 3.4.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E13",
+      "names": [
+        "Paper27.Geometry.ProductCoverExistence"
+      ],
+      "sources": [
+        "hatcher2002"
+      ],
+      "status": "explicit_universal_parameter_no_Lean_instance",
+      "quantifiers": "Every actual finite unramified cover q:X→C×D has a finite unramified product cover A×B→X with actual finite covers A→C,B→D and commuting product diagram.",
+      "uses": [
+        "Lemma 3.4"
+      ],
+      "translation": "No normality/regularity of q is required. The finite-index subgroup product inclusion is own algebra; covering classification and transported holomorphic structures supply the geometry.",
+      "missing": "No covering-space construction/complex structure transport instance.",
+      "definition": {
+        "file": "Paper27/Geometry/ProductCover.lean",
+        "line": 153,
+        "declaration": "def ProductCoverExistence : Prop :=\n  ∀ (X : CompactComplexSurface) (C D : Curve)\n    (q : FiniteUnramifiedCover X (C.productSurface D)), Nonempty (ProductCoverModel q)",
+        "file_sha256": "0df3937d18cb8a0133f9e138a326c6b9868ff5181cef22d7d9b3af9d4f3299b9"
+      },
+      "classical_inputs_fields": [
+        "productCovers"
+      ],
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "Paper27.ProductCoverGroup.product_le",
+        "Paper27.ProductCoverGroup.axis_subgroups_finite_index",
+        "Paper27.Geometry.unramified_pair_fibration_equivalent"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "hatcher2002",
+          "anchors": [
+            "Proposition 1.12",
+            "Proposition 1.32",
+            "Proposition 1.33",
+            "Theorem 1.38"
+          ],
+          "verification": "Primary chapter checked: fundamental group of products, sheet/index relation, covering lift criterion, and subgroup classification for path-connected locally path-connected semilocally simply-connected spaces."
+        }
+      ],
+      "known_external_reason": "No normality/regularity of q is required. The finite-index subgroup product inclusion is own algebra; covering classification and transported holomorphic structures supply the geometry.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E14",
+      "names": [
+        "Paper27.Geometry.ConnectedFibreDerivativeConstancy"
+      ],
+      "sources": [
+        "fernandes2024"
+      ],
+      "status": "explicit_universal_parameter_no_Lean_instance",
+      "quantifiers": "Every actual holomorphic submersion f:X→B with connected fibres and actual holomorphic h:X→C; if dh vanishes on ker df everywhere, h is constant on each fibre.",
+      "uses": [
+        "Lemma 3.4"
+      ],
+      "translation": "Apply zero-differential constancy to each connected smooth fibre. The vertical-kernel statement itself is proved from the actual covering/factorization chain rule.",
+      "missing": "The smooth fibre-submanifold and differential-restriction instance is not formalized.",
+      "definition": {
+        "file": "Paper27/Geometry/ProductCover.lean",
+        "line": 159,
+        "declaration": "def ConnectedFibreDerivativeConstancy : Prop :=\n  ∀ (X : CompactComplexSurface) (B C : Curve)\n    (f : HolomorphicMap X B) (h : HolomorphicMap X C),\n    (∀ b : B, IsConnected (f ⁻¹' {b})) →\n    (∀ p : X, Function.Surjective (mfderiv 𝓘(ℂ, ℂ × ℂ) 𝓘(ℂ, ℂ) f p)) →\n    (∀ (p : X) (v : ℂ × ℂ),\n      mfderiv 𝓘(ℂ, ℂ × ℂ) 𝓘(ℂ, ℂ) f p v = 0 →\n        mfderiv 𝓘(ℂ, ℂ × ℂ) 𝓘(ℂ, ℂ) h p v = 0) →\n    ∀ (b : B) (p r : X), f p = b → f r = b → h p = h r",
+        "file_sha256": "0df3937d18cb8a0133f9e138a326c6b9868ff5181cef22d7d9b3af9d4f3299b9"
+      },
+      "classical_inputs_fields": [
+        "fibreConstancy"
+      ],
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "unramified_pair_fibration_equivalent"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "fernandes2024",
+          "anchors": [
+            "Proposition 6.2, p.48"
+          ],
+          "verification": "Primary NSF book-text index checked: a smooth map whose differential vanishes on a connected open set is constant there. Author's official publication list confirms book metadata."
+        }
+      ],
+      "known_external_reason": "Apply zero-differential constancy to each connected smooth fibre. The vertical-kernel statement itself is proved from the actual covering/factorization chain rule.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E15",
+      "names": [
+        "Paper27.Geometry.HolomorphicSubmersionSections"
+      ],
+      "sources": [
+        "forstneric_prezelj2001"
+      ],
+      "status": "explicit_universal_parameter_no_Lean_instance",
+      "quantifiers": "Every actual smooth Fibration f on an actual compact complex surface has actual holomorphic sections over sufficiently small open neighbourhoods of each base point.",
+      "uses": [
+        "Lemma 2.1",
+        "Lemma 3.4"
+      ],
+      "translation": "Take a point of a fibre and the singleton case of Proposition 1.3; no global Oka condition is introduced. Fibrewise constancy and construction/holomorphicity of descent are own proofs.",
+      "missing": "No general local-section instance. The local section structure is data; no whole fibration-factorization theorem is imported.",
+      "definition": {
+        "file": "Paper27/Geometry/ProductCover.lean",
+        "line": 170,
+        "declaration": "def HolomorphicSubmersionSections : Prop :=\n  ∀ (X : CompactComplexSurface) (f : Fibration X), f.Smooth → f.LocalHolomorphicSections",
+        "file_sha256": "0df3937d18cb8a0133f9e138a326c6b9868ff5181cef22d7d9b3af9d4f3299b9"
+      },
+      "classical_inputs_fields": [
+        "localSections"
+      ],
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "Fibration.descendedFunction_holomorphic",
+        "ClassicalInputs.finite_pair",
+        "ClassicalInputs.third_equivalent_of_empty"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "forstneric_prezelj2001",
+          "anchors": [
+            "Proposition 1.3, preprint p.3"
+          ],
+          "verification": "Primary text checked: a holomorphic section of a holomorphic submersion over a closed Stein subspace extends to a neighbourhood. A single point gives the local holomorphic sections used here."
+        }
+      ],
+      "known_external_reason": "Take a point of a fibre and the singleton case of Proposition 1.3; no global Oka condition is introduced. Fibrewise constancy and construction/holomorphicity of descent are own proofs.",
+      "related_data_not_extra_parameter": [
+        "Paper27.Geometry.Fibration.LocalHolomorphicSections"
+      ],
+      "proof_path": "main"
+    },
+    {
+      "id": "E16",
+      "names": [
+        "Paper27.Geometry.RamificationSupport.ProperHolomorphicLocalDiffeomorphismCovering"
+      ],
+      "sources": [
+        "lee2013_metadata"
+      ],
+      "status": "explicit_universal_parameter_no_Lean_instance",
+      "quantifiers": "Every actual holomorphic map between compact complex surfaces: proper, surjective, finite fibres, and bijective actual differential imply IsCoveringMap.",
+      "uses": [
+        "Empty ramification ⇒ finite unramified cover"
+      ],
+      "translation": "Holomorphic inverse-function theorem plus proper local-homeomorphism covering theorem. Properness and actual differential bijectivity from empty ramification are own proofs.",
+      "missing": "No instance; exact primary Proposition 4.46 body and chart-to-local-diffeomorphism translation remain to be registered/verified.",
+      "definition": {
+        "file": "Paper27/Geometry/RamificationSupport.lean",
+        "line": 93,
+        "declaration": "def ProperHolomorphicLocalDiffeomorphismCovering : Prop :=\n  ∀ (M N : CompactComplexSurface) (u : HolomorphicMap M N),\n    IsProperMap u → Function.Surjective u → (∀ y : N, (u ⁻¹' {y}).Finite) →\n    (∀ p : M, Function.Bijective (mfderiv 𝓘(ℂ, ℂ × ℂ) 𝓘(ℂ, ℂ × ℂ) u p)) →\n      IsCoveringMap u",
+        "file_sha256": "4745dffce83b441f7fb8e57c1e12fef73c52d8fae248ed43bc9445129b2308a1"
+      },
+      "classical_inputs_fields": [
+        "unramifiedSurfaceCovering"
+      ],
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "RamificationSupport.unramifiedCoverOfEmptyRamification",
+        "ClassicalInputs.third_equivalent_of_empty"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "lee2013_metadata",
+          "anchors": [
+            "Proposition 4.46, proposed anchor"
+          ],
+          "verification": "Author's primary book page verifies metadata. The exact Proposition 4.46 body was not independently opened from a primary copy in this review."
+        }
+      ],
+      "known_external_reason": "Holomorphic inverse-function theorem plus proper local-homeomorphism covering theorem. Properness and actual differential bijectivity from empty ramification are own proofs.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E17",
+      "names": [
+        "Paper27.Geometry.CriticalCurveNormalizationTheorem"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/NormalizationLocalization.lean",
+        "line": 128,
+        "declaration": "def CriticalCurveNormalizationTheorem : Prop :=\n  ∀ (X Y : CompactComplexSurface)\n    (q : RamificationSupport.FiniteSurjectiveHolomorphicMap X Y),\n      Nonempty (CriticalCurveNormalization q)",
+        "file_sha256": "873b598c92945a1b8c98b053ffc6fbb2bea54eb17ddec604ac5cf250d4b77c90"
+      },
+      "classical_inputs_fields": [
+        "normalization"
+      ],
+      "sources": [
+        "dinh_sibony2008"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "dinh_sibony2008",
+          "anchors": [
+            "Appendix A.1, analytic sets and locally finite irreducible decomposition, printed pp.115–116 (PDF zero-based pp.114–115)",
+            "Theorem A.1.3, printed p.116; local multiplicity/topological degree discussion, printed pp.116–117 (PDF pp.115–116)",
+            "Theorem A.1.4 and Example A.1.5, printed p.117 (PDF p.116)",
+            "Exercise A.1.4, printed p.118 (PDF p.117)"
+          ],
+          "verification": "Primary PDF body checked in this update: locally finite irreducible decomposition; local finite projection; finite normalization and smoothness of normalized curves; local multiplicity; connected dense complement of a proper analytic subset."
+        }
+      ],
+      "quantifiers": "Every actual compact complex surfaces X,Y and actual finite surjective holomorphic q:X→Y admit a finite compact-curve cover whose union is exactly the actual nonsurjectivity locus of dq. Normalization curves are genuine connected compact complex curves and their actual maps have finite fibres; embeddings and projection unramifiedness are not supplied.",
+      "known_external_reason": "The Jacobian determinant is an analytic section; a nontrivial Jacobian of a finite map cuts out a pure analytic curve or the empty set. Normalize each component; compactness and locally finite component decomposition give finitely many compact smooth curves.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "NormalizationLocalization.localize_branches",
+        "CurveBranchInputs.euclidean_model_exists",
+        "RamificationFamilies.ramification_family_exists"
+      ],
+      "missing": "The analytic-space/Jacobian-divisor normalization theorem itself and its translation to the displayed manifold data remain unformalized. The external interface does not assert any P27 smooth branch graph or Proposition 2.4.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E18",
+      "names": [
+        "Paper27.Geometry.CoordinateFiniteGerms.FiniteHolomorphicGermRepresentatives"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/CoordinateFiniteGerms.lean",
+        "line": 72,
+        "declaration": "def FiniteHolomorphicGermRepresentatives : Prop :=\n  ∀ (F G : ℂ × ℂ → ℂ) (p : ℂ × ℂ),\n    AnalyticAt ℂ F p → AnalyticAt ℂ G p →\n    (∃ W : Set (ℂ × ℂ), IsOpen W ∧ p ∈ W ∧\n      {z | z ∈ W ∧ (F z, G z) = (F p, G p)} = {p}) →\n    ∀ (φ : ℂ → ℂ), AnalyticAt ℂ φ (F p) → φ (F p) = G p →\n    ∀ (V : Set (ℂ × ℂ)), IsOpen V → p ∈ V →\n    ∀ r : ℝ, 0 < r →\n      ∃ A : FiniteAnalyticGerm.FiniteGermData F G p φ,\n        A.radius ≤ r ∧ A.source ⊆ V",
+        "file_sha256": "0ff0b34f456ae3335b58c831451c4a0fa09029973272dd1648dbfa7e75b2ae22"
+      },
+      "classical_inputs_fields": [
+        "finiteRepresentatives"
+      ],
+      "sources": [
+        "grauert_remmert1984",
+        "gui2022_notes",
+        "dinh_sibony2008"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "grauert_remmert1984",
+          "anchors": [
+            "Chapter Finite Holomorphic Maps, pp.61–74",
+            "Chapters Riemann Extension Theorem and Analytic Coverings, pp.130–151; Normalization of Complex Spaces, pp.152–166"
+          ],
+          "verification": "Publisher primary metadata and chapter/page table checked in this update. This verifies the published source and topic coverage, not a precise theorem body."
+        },
+        {
+          "source_id": "gui2022_notes",
+          "anchors": [
+            "Theorem 2.7.2, printed p.70; proof Lemma 2.7.7, pp.72–73"
+          ],
+          "verification": "Author-hosted primary notes body checked: an isolated point of a fibre of a holomorphic map admits neighbourhoods on which the map is finite. The proof reduces to Weierstrass preparation."
+        },
+        {
+          "source_id": "dinh_sibony2008",
+          "anchors": [
+            "Appendix A.1, analytic sets and locally finite irreducible decomposition, printed pp.115–116 (PDF zero-based pp.114–115)",
+            "Theorem A.1.3, printed p.116; local multiplicity/topological degree discussion, printed pp.116–117 (PDF pp.115–116)",
+            "Theorem A.1.4 and Example A.1.5, printed p.117 (PDF p.116)",
+            "Exercise A.1.4, printed p.118 (PDF p.117)"
+          ],
+          "verification": "Primary PDF body checked in this update: locally finite irreducible decomposition; local finite projection; finite normalization and smoothness of normalized curves; local multiplicity; connected dense complement of a proper analytic subset."
+        }
+      ],
+      "quantifiers": "Every analytic germ (F,G):ℂ²→ℂ² at p with isolated actual centre fibre, every analytic φ through its target value, every prescribed open source neighbourhood V of p and positive radius bound r admit raw FiniteGermData with source⊆V and radius≤r. This includes properness, finite fibres, surjectivity onto a graph bidisc, singleton centre fibre, connected source and connected source minus the actual graph preimage. It supplies no critical-image containment.",
+      "known_external_reason": "The ordinary finite mapping theorem gives arbitrarily small representatives; finite equal-dimensional holomorphic maps are open, allowing a small target graph bidisc and its connected source component. The inverse image of the smooth graph is a proper analytic subset; its complement is connected.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "CoordinateFiniteGerms.cyclic_model_of_branch_cover",
+        "ActualCyclicModels.cyclic_model_exists"
+      ],
+      "missing": "The universal finite representative construction remains uninstantiated. Published Grauert–Remmert chapter metadata is verified but its exact theorem body/number is not; author-hosted Gui Theorem 2.7.2 is body-verified. Arbitrarily small graph-bidisc/connectedness packaging is a standard consequence, not a verbatim quoted theorem. Own critical graph containment is proved separately.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E19",
+      "names": [
+        "Paper27.Geometry.FiniteAnalyticGerm.SmoothBranchFiniteCoverClassification"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/FiniteAnalyticGerm.lean",
+        "line": 94,
+        "declaration": "def SmoothBranchFiniteCoverClassification : Prop :=\n  ∀ (F G : ℂ × ℂ → ℂ) (p : ℂ × ℂ) (φ : ℂ → ℂ),\n    FiniteGraphGerm F G p φ →\n      ∃ B : CyclicModel.CyclicNormalForm F G p, B.graph = φ",
+        "file_sha256": "1010d72f4b51dfd38ef52ad26f3c4ca09daa3b2aefb03bea994cec9b85e6980f"
+      },
+      "classical_inputs_fields": [
+        "finiteCoverClassification"
+      ],
+      "sources": [
+        "sga1",
+        "edixhoven2010"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "sga1",
+          "anchors": [
+            "Proposition 5.3, pp.254–255 (PDF270)",
+            "Theorem 5.4, p.255"
+          ],
+          "verification": "Primary retypeset original checked: finite normal analytic covers and their morphisms are determined by restriction off a rare analytic subset; Grauert–Remmert finite normal extension exists uniquely under the stated analytic ramification hypotheses."
+        },
+        {
+          "source_id": "edixhoven2010",
+          "anchors": [
+            "Lemma 2.1 proof, p.3"
+          ],
+          "verification": "Primary proof checked: near a smooth branch locus the connected punctured cover is classified by π1(Δ×Δ*)=Z, and normal extension gives the cyclic local model."
+        }
+      ],
+      "quantifiers": "Every actual analytic (F,G):ℂ²→ℂ², p and analytic smooth target graph φ, with FiniteGraphGerm data (proper finite surjective representative; connected punctured source; actual critical image contained in that graph), admit actual CyclicNormalForm F G p with exactly graph φ. Positive exponent is part of that data; n≥2 is subsequently proved from actual criticality.",
+      "known_external_reason": "Connected finite covers of Δ×Δ* are classified by subgroups of ℤ; normal finite analytic extension is unique. This is general smooth branch-locus classification, not the P27 single-graph theorem.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "FiniteAnalyticGerm.FiniteBranchCover.single_graph_neighbourhood",
+        "CoordinateFiniteGerms.ramified_cyclic_model_of_branch_cover",
+        "ActualCyclicModels.surfaceChartOfModel"
+      ],
+      "missing": "Only the universal cover/classification theorem is unformalized. Actual same-source graph uniqueness, critical containment, actual source isolation, model validity and exponent≥2 are proved by the own chain.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E20",
+      "names": [
+        "Paper27.Geometry.MetricTangency.HyperbolicMetricTheory"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/MetricTangency.lean",
+        "line": 24,
+        "declaration": "structure HyperbolicMetricTheory where\n  metric : (C : Curve) → ConformalMetric C\n  positive : ∀ (C : Curve), C.Hyperbolic → ∀ p : C, 0 < (metric C).weight p\n  cone : ∀ (C : Curve), C.Hyperbolic → HasConeData (metric C) 0\n  curvature : ∀ (C : Curve), C.Hyperbolic → HasConstantCurvature (metric C) 0 (-1)\n  covering_isometry : ∀ (D B : Curve) (u : HolomorphicMap D B),\n    D.Hyperbolic → B.Hyperbolic →\n    (∀ p, Function.Bijective (mfderiv 𝓘(ℂ, ℂ) 𝓘(ℂ, ℂ) u p)) →\n    pullback u (metric B) = metric D\n  schwarz_pick_equality : ∀ (D B : Curve) (u : HolomorphicMap D B),\n    D.Hyperbolic → B.Hyperbolic →\n    (∃ p : D, ∃ v : ℂ, v ≠ 0 ∧\n      squaredNorm (metric D) p v =\n        squaredNorm (metric B) (u p) (mfderiv 𝓘(ℂ, ℂ) 𝓘(ℂ, ℂ) u p v)) →\n    ∀ p, Function.Bijective (mfderiv 𝓘(ℂ, ℂ) 𝓘(ℂ, ℂ) u p)",
+        "file_sha256": "47b9e615fe42907d82078fabe3e4bee900be42bceacc8ffdac90434dbbbea4b1"
+      },
+      "classical_inputs_fields": [
+        "metrics"
+      ],
+      "sources": [
+        "mcmullen2023",
+        "petersen2006"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "mcmullen2023",
+          "anchors": [
+            "Corollary 2.26 and Theorem 2.28, printed p.65"
+          ],
+          "verification": "Primary indexed PDF body checked: a holomorphic map between hyperbolic Riemann surfaces is a locally isometric covering or a strict hyperbolic contraction; proof lifts to universal covers."
+        },
+        {
+          "source_id": "petersen2006",
+          "anchors": [
+            "Chapter 5 §10.1, Propositions 21–22, pp.143–144 (PDF158–159)",
+            "Chapter 5 §10.2, Theorem 17, p.145 (PDF160)"
+          ],
+          "verification": "Primary book body opened: local isometries intertwine exponential maps; same first jet on connected source implies equality; simply connected constant-curvature manifolds admit the developing isometry with prescribed linear isometry, globally a diffeomorphism when complete."
+        }
+      ],
+      "quantifiers": "Select a concrete ConformalMetric for every actual Curve C. For genus≥2: its weights are positive, cone divisor is zero, curvature is −1. Every unramified actual map between hyperbolic compact curves preserves these metrics under the defined actual pullback. For every actual map between such curves, equality of the two squared norms on one nonzero tangent implies bijective actual differential everywhere.",
+      "known_external_reason": "Uniformization supplies the metrics; lift maps to the unit disc and apply Schwarz–Pick equality. Covering invariance and equality are general curve-map facts.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "MetricTangency.third_restriction_unramified_of_intersection",
+        "intrinsic_ramification_component_dichotomy"
+      ],
+      "missing": "Uniformization existence and the translation between intrinsic metrics, actual metric weights and the topological genus remain universal uninstantiated theory. McMullen Theorem 2.28 itself was body-verified; no claim of a separate verified numbered existence theorem.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E21",
+      "names": [
+        "Paper27.Geometry.NormalizedBranchConstruction.UniformizingDiscCharts"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/NormalizedBranchConstruction.lean",
+        "line": 183,
+        "declaration": "def UniformizingDiscCharts : Prop :=\n  ∀ (B : Curve) (g : ConformalMetric B), B.Hyperbolic → HasConeData g 0 →\n    HasConstantCurvature g 0 (-1) → ∀ b : B, Nonempty (UniformizingDiscChart g b)",
+        "file_sha256": "85dcbf51ce1d6140459427bbe7d9d64434d22b2a3fc5572c7518495ad065953e"
+      },
+      "classical_inputs_fields": [
+        "uniformizingCharts"
+      ],
+      "sources": [
+        "petersen2006",
+        "mcmullen2023"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "petersen2006",
+          "anchors": [
+            "Chapter 5 §10.1, Propositions 21–22, pp.143–144 (PDF158–159)",
+            "Chapter 5 §10.2, Theorem 17, p.145 (PDF160)"
+          ],
+          "verification": "Primary book body opened: local isometries intertwine exponential maps; same first jet on connected source implies equality; simply connected constant-curvature manifolds admit the developing isometry with prescribed linear isometry, globally a diffeomorphism when complete."
+        },
+        {
+          "source_id": "mcmullen2023",
+          "anchors": [
+            "Corollary 2.26 and Theorem 2.28, printed p.65"
+          ],
+          "verification": "Primary indexed PDF body checked: a holomorphic map between hyperbolic Riemann surfaces is a locally isometric covering or a strict hyperbolic contraction; proof lifts to universal covers."
+        }
+      ],
+      "quantifiers": "For every actual hyperbolic curve B and every specified concrete g with HasConeData g 0 and curvature −1, every b has a genuine biholomorphic local chart into the unit disc satisfying equality of the actual quadratic forms under the actual chart differential.",
+      "known_external_reason": "Local constant-negative-curvature developing coordinates, with orientation chosen compatibly with the complex structure, give the Poincaré density identity.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "Paper27.Geometry.CurveBranchInputs.euclidean_model_exists",
+        "Paper27.Geometry.FixedAmbientBranchGraphs.metricBranchData_exists_spec",
+        "Paper27.Geometry.CurveBranchInputs.local_isometry_graph"
+      ],
+      "missing": "The general local Riemannian/complex chart construction is not instantiated. Choosing the two target charts and transporting the actual map/density identities is own work, now completed.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E22",
+      "names": [
+        "Paper27.Geometry.FibreGeometry.SmoothProperFibreModels"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/FibreGeometry.lean",
+        "line": 79,
+        "declaration": "def SmoothProperFibreModels : Prop :=\n  ∀ (X : CompactComplexSurface) (f : Fibration X),\n    IsProperMap f.map → f.Smooth → ∀ b : f.base, Nonempty (FibreCurveModel f b)",
+        "file_sha256": "912cc40b85059a628e771452ccc37dd2217c4ea28248a99e6f6191c7b91dbd3c"
+      },
+      "classical_inputs_fields": [
+        "fibreModels"
+      ],
+      "sources": [
+        "ehresmann1952",
+        "forstneric_prezelj2001"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "ehresmann1952",
+          "anchors": [
+            "§1, unnumbered Proposition and following path-lifting lemma, printed p.154 (PDF zero-based p.2)"
+          ],
+          "verification": "Primary original body checked: a surjective C² full-rank map over a connected base, with compact total space (or the stated compact-connected fibre alternative), is a differentiable fibre bundle; horizontal transport identifies fibres."
+        },
+        {
+          "source_id": "forstneric_prezelj2001",
+          "anchors": [
+            "Proposition 1.3, preprint p.3"
+          ],
+          "verification": "Primary text checked: a holomorphic section of a holomorphic submersion over a closed Stein subspace extends to a neighbourhood. A single point gives the local holomorphic sections used here."
+        }
+      ],
+      "quantifiers": "Every actual Fibration f:X→B with proper actual map and surjective actual differential has, over every b, a genuine compact connected complex curve model, a homeomorphism to the actual fibre, and an actual holomorphic inclusion compatible with that homeomorphism. No second fibration is quantified or concluded.",
+      "known_external_reason": "Holomorphic submersion/level-set theorem gives the complex fibre; compactness, connected fibres and inherited topology give the remaining data. Ehresmann supplies the surrounding smooth-family interpretation.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "FibreGeometry.fibreModels",
+        "FibreGeometry.fibreDegreeFacts",
+        "ClassicalInputs.finite_pair"
+      ],
+      "missing": "The universal complex fibre-submanifold construction is not formalized; a separate exact primary numbered holomorphic level-set statement was not body-verified. Per-pair FibreCurveModel is no longer a main theorem premise.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E23",
+      "names": [
+        "Paper27.Geometry.FibreGeometry.EhresmannDegreeInvariance"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/FibreGeometry.lean",
+        "line": 115,
+        "declaration": "def EhresmannDegreeInvariance (maps : ClassicalCurveMapFacts) : Prop :=\n  ∀ (X : CompactComplexSurface) (f : Fibration X),\n    IsProperMap f.map → f.Smooth →\n    ∀ (C : Curve) (g : HolomorphicMap X C)\n      (models : ∀ b : f.base, FibreCurveModel f b) (b b' : f.base),\n      curveDegree maps (restrictionMap (models b) g) =\n        curveDegree maps (restrictionMap (models b') g)",
+        "file_sha256": "912cc40b85059a628e771452ccc37dd2217c4ea28248a99e6f6191c7b91dbd3c"
+      },
+      "classical_inputs_fields": [
+        "fibreDegrees"
+      ],
+      "sources": [
+        "ehresmann1952",
+        "hatcher_degree2002",
+        "forster1981"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "ehresmann1952",
+          "anchors": [
+            "§1, unnumbered Proposition and following path-lifting lemma, printed p.154 (PDF zero-based p.2)"
+          ],
+          "verification": "Primary original body checked: a surjective C² full-rank map over a connected base, with compact total space (or the stated compact-connected fibre alternative), is a differentiable fibre bundle; horizontal transport identifies fibres."
+        },
+        {
+          "source_id": "hatcher_degree2002",
+          "anchors": [
+            "Theorem 2.10, printed p.111; Example 2A.2, printed p.168",
+            "Proposition 2.30, printed p.136, sphere local-degree formula (supporting model calculation only)"
+          ],
+          "verification": "Primary body checked in this update: homotopic maps induce identical homology maps; closed orientable genus-g surface H1 has rank 2g. Proposition 2.30 was checked, but its displayed setting is spheres."
+        },
+        {
+          "source_id": "forster1981",
+          "anchors": [
+            "Theorem 2.1, p.10",
+            "Theorem 4.24, p.29"
+          ],
+          "verification": "Indexed primary book text checked: local expression z↦z^k for nonconstant curve maps; proper nonconstant curve maps have fixed finite multiplicity-counting degree."
+        }
+      ],
+      "quantifiers": "Given ClassicalCurveMapFacts, every actual smooth proper Fibration f, every actual holomorphic map g:X→C to an arbitrary compact curve, every honest family of actual fibre models and every b,b′, the two restrictions have equal curveDegree. That degree is defined as the actual multiplicity sum mapDegree for nonconstant maps and zero for constants.",
+      "known_external_reason": "Ehresmann transport identifies fibres orientation-preservingly; restrictions vary by homotopy. Oriented topological degree equals the holomorphic local multiplicity sum. Arbitrary honest fibre parametrizations differ by holomorphic orientation-preserving identifications.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "FibreGeometry.curveDegree_zero_iff_constant",
+        "FibreGeometry.fibreDegreeFacts",
+        "FibreGeometry.finitePair_pairSurjective"
+      ],
+      "missing": "Ehresmann plus degree comparison remain a universal explicit input; there is no free degree label or per-pair degree-zero axiom. Zero-degree iff constant and the original-map finite-pair conclusion are proved.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E24",
+      "names": [
+        "Paper27.Geometry.SmoothCurveDecomposition.EmbeddedSubmanifoldDecomposition"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/SmoothCurveDecomposition.lean",
+        "line": 35,
+        "declaration": "def EmbeddedSubmanifoldDecomposition : Prop :=\n  ∀ (X : CompactComplexSurface) (S : Set X), IsClosed S →\n    (∀ p ∈ S, Nonempty (HolomorphicAxisChart X S p)) →\n      ∃ F : DisjointCurveFamily X, F.support = S",
+        "file_sha256": "e55b0c41545237cf28cc3f5363d0a7daa11d29bcee46d641e86ab2777a563e29"
+      },
+      "classical_inputs_fields": [
+        "submanifolds"
+      ],
+      "sources": [
+        "dinh_sibony2008"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "dinh_sibony2008",
+          "anchors": [
+            "Appendix A.1, analytic sets and locally finite irreducible decomposition, printed pp.115–116 (PDF zero-based pp.114–115)",
+            "Theorem A.1.3, printed p.116; local multiplicity/topological degree discussion, printed pp.116–117 (PDF pp.115–116)",
+            "Theorem A.1.4 and Example A.1.5, printed p.117 (PDF p.116)",
+            "Exercise A.1.4, printed p.118 (PDF p.117)"
+          ],
+          "verification": "Primary PDF body checked in this update: locally finite irreducible decomposition; local finite projection; finite normalization and smoothness of normalized curves; local multiplicity; connected dense complement of a proper analytic subset."
+        }
+      ],
+      "quantifiers": "Every closed S in every actual compact complex surface X, locally identified with the exact coordinate axis by actual biholomorphic axis charts, is the support of a finite DisjointCurveFamily of actual embedded compact connected curves. No maps to base curves, unramifiedness, exponent or hyperbolicity are included.",
+      "known_external_reason": "Transport the one-dimensional complex charts to the locally embedded submanifold S. Its components are open in S, and compactness gives finitely many; each is a closed embedded compact complex curve. This is ordinary submanifold construction, not a ramification theorem.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "SmoothCurveDecomposition.decompose_ramification",
+        "RamificationFamilies.ramification_family_exists"
+      ],
+      "missing": "The universal manifold construction and component-to-Curve packaging are unformalized. The source analytic-submanifold discussion supports the background; no exact numbered theorem with this precise Lean statement was body-verified. Actual critical-axis charts, closedness, coverage and unramified/hyperbolic conclusions are own proofs.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E25",
+      "names": [
+        "Paper27.Geometry.RetractionFactorization.NonsingularJointLocusOpen"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/RetractionFactorization.lean",
+        "line": 140,
+        "declaration": "def NonsingularJointLocusOpen : Prop :=\n  ∀ (X : CompactComplexSurface) (B C : Curve)\n    (f : HolomorphicMap X B) (h : HolomorphicMap X C),\n    IsOpen {x : X | Function.Bijective (jointDifferential f h x)}",
+        "file_sha256": "b3476404ed0c325403ccd48159741edb977e4c124f08c7d82c484b700d8ec4e5"
+      },
+      "classical_inputs_fields": [
+        "nonsingularOpen"
+      ],
+      "sources": [
+        "lebl44"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "lebl44",
+          "anchors": [
+            "Theorem 1.2.1, printed p.20"
+          ],
+          "verification": "Parent verified version and page; primary current-PDF search extraction independently checked the power-series representation theorem."
+        }
+      ],
+      "quantifiers": "Every actual pair of holomorphic maps X→B and X→C has an open locus where their actual joint differential ℂ²→ℂ² is bijective.",
+      "known_external_reason": "In any fixed holomorphic charts, the determinant is holomorphic and nonvanishing is open; chart changes preserve nonsingularity.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "SmoothCurveDecomposition.ramificationSet_isClosed",
+        "RetractionFactorization.exists_transverse_neighbourhood",
+        "ActualDisjointObstruction.impossible"
+      ],
+      "missing": "The generic chart-to-bundle regularity/open-locus fact is not instantiated. It is an elementary determinant consequence, not a separately claimed numbered Lebl theorem.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E26",
+      "names": [
+        "Paper27.Geometry.RamificationIndexConstancy.FiniteLocalDegreeTheory"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/RamificationIndexConstancy.lean",
+        "line": 64,
+        "declaration": "structure FiniteLocalDegreeTheory where\n  localDegree : ∀ (X Y : CompactComplexSurface), FiniteSurjectiveHolomorphicMap X Y → X → ℕ\n  cyclic_coordinate_degree : ∀ (X Y : CompactComplexSurface)\n    (q : FiniteSurjectiveHolomorphicMap X Y)\n    (e : OpenPartialHomeomorph X (ℂ × ℂ)) (t : OpenPartialHomeomorph Y (ℂ × ℂ)),\n    MDifferentiableOn 𝓘(ℂ, ℂ × ℂ) 𝓘(ℂ, ℂ × ℂ) e e.source →\n    MDifferentiableOn 𝓘(ℂ, ℂ × ℂ) 𝓘(ℂ, ℂ × ℂ) e.symm e.target →\n    MDifferentiableOn 𝓘(ℂ, ℂ × ℂ) 𝓘(ℂ, ℂ × ℂ) t t.source →\n    MDifferentiableOn 𝓘(ℂ, ℂ × ℂ) 𝓘(ℂ, ℂ × ℂ) t.symm t.target →\n    (∀ x ∈ e.source, q.map x ∈ t.source) →\n    ∀ (n : ℕ), 0 < n → ∀ (φ : ℂ → ℂ),\n    (∀ x ∈ e.source, AnalyticAt ℂ φ (e x).1) →\n    (∀ x ∈ e.source, t (q.map x) = localBranchMap n φ (e x)) →\n    ∀ x ∈ e.source, (e x).2 = 0 → localDegree X Y q x = n",
+        "file_sha256": "8f157662a19d4e5964e2de27e66d2ddb79cbfe640d2e7c7d2d248dd7d9374d96"
+      },
+      "classical_inputs_fields": [
+        "localDegrees"
+      ],
+      "sources": [
+        "dinh_sibony2008"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "dinh_sibony2008",
+          "anchors": [
+            "Appendix A.1, analytic sets and locally finite irreducible decomposition, printed pp.115–116 (PDF zero-based pp.114–115)",
+            "Theorem A.1.3, printed p.116; local multiplicity/topological degree discussion, printed pp.116–117 (PDF pp.115–116)",
+            "Theorem A.1.4 and Example A.1.5, printed p.117 (PDF p.116)",
+            "Exercise A.1.4, printed p.118 (PDF p.117)"
+          ],
+          "verification": "Primary PDF body checked in this update: locally finite irreducible decomposition; local finite projection; finite normalization and smoothness of normalized curves; local multiplicity; connected dense complement of a proper analytic subset."
+        }
+      ],
+      "quantifiers": "A localDegree operation for every actual finite surjective holomorphic map between compact complex surfaces. In every actual biholomorphic source/target chart with actual identity (x,y)↦(x,φ(x)+y^n), n>0 and analytic φ, its value at every point of the actual coordinate axis is n. No component constancy is a field.",
+      "known_external_reason": "Local topological degree is invariant under biholomorphic coordinates; the transverse map y↦y^n has n nearby preimages counted positively.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "RamificationIndexConstancy.component_index_constant",
+        "RamificationFamilies.component_index",
+        "RetractionNormalAtlasBridge.normalAtlas_of_original_pair"
+      ],
+      "missing": "The canonical general local topological degree and coordinate comparison are unformalized. Constancy on the actual connected component and agreement of all chart exponents are proved.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E27",
+      "names": [
+        "Paper27.Geometry.RetractionFactorization.CompactUnramifiedCurveCovering"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/RetractionFactorization.lean",
+        "line": 175,
+        "declaration": "def CompactUnramifiedCurveCovering : Prop :=\n  ∀ (C B : Curve) (a : HolomorphicMap C B),\n    (∀ p : C, Function.Bijective (mfderiv 𝓘(ℂ, ℂ) 𝓘(ℂ, ℂ) a p)) → IsCoveringMap a",
+        "file_sha256": "b3476404ed0c325403ccd48159741edb977e4c124f08c7d82c484b700d8ec4e5"
+      },
+      "classical_inputs_fields": [
+        "unramifiedCurveCovering"
+      ],
+      "sources": [
+        "forster1981",
+        "lee2013_metadata"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "forster1981",
+          "anchors": [
+            "Theorem 2.1, p.10",
+            "Theorem 4.24, p.29"
+          ],
+          "verification": "Indexed primary book text checked: local expression z↦z^k for nonconstant curve maps; proper nonconstant curve maps have fixed finite multiplicity-counting degree."
+        },
+        {
+          "source_id": "lee2013_metadata",
+          "anchors": [
+            "Proposition 4.46, proposed anchor"
+          ],
+          "verification": "Author's primary book page verifies metadata. The exact Proposition 4.46 body was not independently opened from a primary copy in this review."
+        }
+      ],
+      "quantifiers": "Every actual holomorphic map between compact actual curves with bijective actual differential everywhere is IsCoveringMap.",
+      "known_external_reason": "Holomorphic inverse-function theorem gives a local homeomorphism; compactness makes it proper, hence a covering. The image is open and closed in the connected target.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "RetractionFactorization.factoredRetraction",
+        "CommonRetractions.pair",
+        "CommonRetractions.triple"
+      ],
+      "missing": "The generic covering interpretation is uninstantiated. Lee Proposition 4.46 remains a proposed anchor whose original body was not independently read; this uncertainty is bibliographic, not a per-pair retraction assumption.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E28",
+      "names": [
+        "Paper27.Geometry.RetractionFactorization.TopologicalCoverNeighbourhoodLifting"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/RetractionFactorization.lean",
+        "line": 193,
+        "declaration": "def TopologicalCoverNeighbourhoodLifting : Prop :=\n  ∀ (X : CompactComplexSurface) (D : EmbeddedCurve X) (B : Curve)\n    (a : HolomorphicMap D.curve B) (f : HolomorphicMap X B), IsCoveringMap a →\n    (∀ p : D.curve, a p = f (D.inclusion p)) → Nonempty (ContinuousCoverLift D a f)",
+        "file_sha256": "b3476404ed0c325403ccd48159741edb977e4c124f08c7d82c484b700d8ec4e5"
+      },
+      "classical_inputs_fields": [
+        "neighbourhoodLifting"
+      ],
+      "sources": [
+        "hatcher2002",
+        "lee2013_metadata"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "hatcher2002",
+          "anchors": [
+            "Proposition 1.12",
+            "Proposition 1.32",
+            "Proposition 1.33",
+            "Theorem 1.38"
+          ],
+          "verification": "Primary chapter checked: fundamental group of products, sheet/index relation, covering lift criterion, and subgroup classification for path-connected locally path-connected semilocally simply-connected spaces."
+        },
+        {
+          "source_id": "lee2013_metadata",
+          "anchors": [
+            "Proposition 4.46, proposed anchor"
+          ],
+          "verification": "Author's primary book page verifies metadata. The exact Proposition 4.46 body was not independently opened from a primary copy in this review."
+        }
+      ],
+      "quantifiers": "Every actual embedded compact curve D⊂X, every actual covering a:D→B and actual holomorphic f:X→B with a=f∘ι admit a continuous covering lift r on some actual open neighbourhood of D, with r∘ι=id and a∘r=f there. The conclusion contains no holomorphicity, cyclic chart, action or degree assertion.",
+      "known_external_reason": "A smooth tubular neighbourhood deformation retracts onto D. The covering lift criterion/homotopy lifting extends the specified lift id on D.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "RetractionFactorization.ContinuousCoverLift.holomorphicRetraction",
+        "RetractionFactorization.factoredRetraction",
+        "CommonRetractions.triple"
+      ],
+      "missing": "General tubular-neighbourhood lifting is an explicit unformalized theorem consequence. Hatcher Proposition 1.33 is body-verified; an exact independent primary tubular-neighbourhood theorem number is not claimed verified. Holomorphicity and actual factored retractions are constructed separately.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E29",
+      "names": [
+        "Paper27.Geometry.RetractionFactorization.HolomorphicEtaleLiftRegularity"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/RetractionFactorization.lean",
+        "line": 201,
+        "declaration": "def HolomorphicEtaleLiftRegularity : Prop :=\n  ∀ (X : CompactComplexSurface) (C B : Curve) (a : HolomorphicMap C B)\n    (f : HolomorphicMap X B),\n    (∀ p : C, Function.Bijective (mfderiv 𝓘(ℂ, ℂ) 𝓘(ℂ, ℂ) a p)) →\n    ∀ (V : Set X), IsOpen V → ∀ (lift : X → C), ContinuousOn lift V →\n    (∀ x ∈ V, a (lift x) = f x) → MDifferentiableOn 𝓘(ℂ, ℂ × ℂ) 𝓘(ℂ, ℂ) lift V",
+        "file_sha256": "b3476404ed0c325403ccd48159741edb977e4c124f08c7d82c484b700d8ec4e5"
+      },
+      "classical_inputs_fields": [
+        "etaleLiftRegularity"
+      ],
+      "sources": [
+        "forster1981"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "forster1981",
+          "anchors": [
+            "Theorem 2.1, p.10",
+            "Theorem 4.24, p.29"
+          ],
+          "verification": "Indexed primary book text checked: local expression z↦z^k for nonconstant curve maps; proper nonconstant curve maps have fixed finite multiplicity-counting degree."
+        }
+      ],
+      "quantifiers": "Every actual unramified holomorphic curve map a:C→B, every actual holomorphic f:X→B, every open V and continuous lift r:V→C with a∘r=f has holomorphic r on V.",
+      "known_external_reason": "Locally r is the holomorphic local inverse of a composed with f; continuity chooses the sheet.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "RetractionFactorization.ContinuousCoverLift.holomorphicRetraction",
+        "CommonRetractions.pair",
+        "CommonRetractions.triple"
+      ],
+      "missing": "The general local étale-inverse regularity theorem is not instantiated. It does not choose the lift, a normal atlas, or an action.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E30",
+      "names": [
+        "Paper27.Geometry.RetractionNormalCoordinates.AnalyticDividedDifferences"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/RetractionNormalCoordinates.lean",
+        "line": 24,
+        "declaration": "def AnalyticDividedDifferences : Prop :=\n  ∀ (f : ℂ → ℂ) (a : ℂ), AnalyticAt ℂ f a →\n    AnalyticAt ℂ (fun z : ℂ × ℂ => dslope f z.1 (z.1 + z.2)) (a, 0)",
+        "file_sha256": "4e3d05eb2ed7277930f5b18aece4c9242d0a1ec5b5719a7c2b9561fcb21e084c"
+      },
+      "classical_inputs_fields": [
+        "dividedDifferences"
+      ],
+      "sources": [
+        "lebl44"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "lebl44",
+          "anchors": [
+            "Theorem 1.2.1, printed p.20"
+          ],
+          "verification": "Parent verified version and page; primary current-PDF search extraction independently checked the power-series representation theorem."
+        }
+      ],
+      "quantifiers": "Every scalar f analytic at a has an analytic two-variable divided difference (x,y)↦dslope f x (x+y) at (a,0), including the diagonal.",
+      "known_external_reason": "Expand the convergent power series and divide f(x+y)−f(x) by y termwise; the diagonal value is f′(x). This is an ordinary analytic consequence.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "Paper27.Geometry.RetractionNormalCoordinates.straightenedPair_exists",
+        "Paper27.Geometry.RetractionNormalAtlasBridge.normalAtlas_of_original_pair"
+      ],
+      "missing": "The general analytic divided-difference lemma is explicit and not instantiated. The specific coordinate straightening and resulting retraction chart are own proofs. No separate numbered divided-difference source is asserted.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E31",
+      "names": [
+        "Paper27.Geometry.RetractionNormalCoordinates.AnalyticUnitRoots"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/RetractionNormalCoordinates.lean",
+        "line": 30,
+        "declaration": "def AnalyticUnitRoots : Prop :=\n  ∀ (F : ℂ × ℂ → ℂ) (p : ℂ × ℂ), AnalyticAt ℂ F p → F p ≠ 0 →\n    ∀ n : ℕ, 0 < n → ∃ ρ : ℂ × ℂ → ℂ,\n      AnalyticAt ℂ ρ p ∧ ρ p ≠ 0 ∧ (fun z => ρ z ^ n) =ᶠ[𝓝 p] F",
+        "file_sha256": "4e3d05eb2ed7277930f5b18aece4c9242d0a1ec5b5719a7c2b9561fcb21e084c"
+      },
+      "classical_inputs_fields": [
+        "localUnitRoots"
+      ],
+      "sources": [
+        "lebl44"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "lebl44",
+          "anchors": [
+            "Theorem 1.2.1, printed p.20"
+          ],
+          "verification": "Parent verified version and page; primary current-PDF search extraction independently checked the power-series representation theorem."
+        }
+      ],
+      "quantifiers": "Every analytic F:ℂ²→ℂ with F(p)≠0 and every positive n have an analytic nonzero local n-th root ρ with ρ^n=F as an actual germ at p.",
+      "known_external_reason": "Choose c with c^n=F(p), shrink so F/F(p) is near 1, and set ρ=c·exp(log(F/F(p))/n) using a local analytic logarithm. This is the ordinary local-unit root theorem.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "RetractionNormalCoordinates.straightenedPair_exists",
+        "RetractionNormalAtlasBridge.normalAtlas_of_original_pair"
+      ],
+      "missing": "The universal local root instance is not supplied. It neither chooses global roots on canonical curve chart domains nor assumes a P27 normal form. A precise independent numbered local-root anchor is not claimed verified.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E32",
+      "names": [
+        "Paper27.Geometry.NormalAtlasAction.HolomorphicNormalDivision"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/NormalAtlasAction.lean",
+        "line": 177,
+        "declaration": "def HolomorphicNormalDivision : Prop :=\n  ∀ (F : (ℂ × ℂ) → ℂ) (p : ℂ × ℂ), p.2 = 0 → AnalyticAt ℂ F p →\n    (∀ᶠ x in 𝓝 p.1, F (x, 0) = 0) →\n      ∃ h : (ℂ × ℂ) → ℂ, AnalyticAt ℂ h p ∧\n        F =ᶠ[𝓝 p] (fun z => z.2 * h z)",
+        "file_sha256": "8f9690853aa6d13425ed344d8aacbee0735c947e687d0826f2caff8c8542b5ea"
+      },
+      "classical_inputs_fields": [
+        "normalDivision"
+      ],
+      "sources": [
+        "lebl44"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "lebl44",
+          "anchors": [
+            "Theorem 1.2.1, printed p.20"
+          ],
+          "verification": "Parent verified version and page; primary current-PDF search extraction independently checked the power-series representation theorem."
+        }
+      ],
+      "quantifiers": "Every analytic F:ℂ²→ℂ at p with p₂=0 and F(x,0)=0 near p₁ has an analytic h at p with F=y·h as a germ.",
+      "known_external_reason": "The convergent two-variable power series has no y-degree-zero term, so it factors by y.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "Paper27.Geometry.NormalAtlasAction.localRotation_compatible_germ",
+        "Paper27.Geometry.NormalAtlasAction.action_from_normalAtlas",
+        "Paper27.Geometry.ActualDisjointObstruction.impossible"
+      ],
+      "missing": "Only the generic analytic division operation is uninstantiated. The nth-power cancellation, finite-root rotation uniqueness and compatibility are own proofs; whole cyclic action is not external.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E33",
+      "names": [
+        "Paper27.Geometry.NormalAtlasAction.HolomorphicOpenGermGluing"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/NormalAtlasAction.lean",
+        "line": 480,
+        "declaration": "def HolomorphicOpenGermGluing : Prop :=\n  ∀ (X : CompactComplexSurface) (D : EmbeddedCurve X) (I : Type)\n    (localMap : I → X → X) (domain : I → Set X),\n    (∀ i, IsOpen (domain i)) →\n    (∀ i, MDifferentiableOn 𝓘(ℂ, ℂ × ℂ) 𝓘(ℂ, ℂ × ℂ) (localMap i) (domain i)) →\n    (∀ i W, IsOpen W → W ⊆ domain i → IsOpen (localMap i '' W)) →\n    (∀ p : D.curve, ∃ i, D.inclusion p ∈ domain i) →\n    (∀ i j (p : D.curve), D.inclusion p ∈ domain i → D.inclusion p ∈ domain j →\n      localMap i =ᶠ[𝓝 (D.inclusion p)] localMap j) →\n    ∃ (V : D.Neighbourhood) (τ : X → X),\n      MDifferentiableOn 𝓘(ℂ, ℂ × ℂ) 𝓘(ℂ, ℂ × ℂ) τ V.domain ∧\n      (∀ W, IsOpen W → W ⊆ V.domain → IsOpen (τ '' W)) ∧\n      ∀ i (p : D.curve), D.inclusion p ∈ domain i → τ =ᶠ[𝓝 (D.inclusion p)] localMap i",
+        "file_sha256": "8f9690853aa6d13425ed344d8aacbee0735c947e687d0826f2caff8c8542b5ea"
+      },
+      "classical_inputs_fields": [
+        "mapGermGluing"
+      ],
+      "sources": [
+        "stacks_gluing"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "stacks_gluing",
+          "anchors": [
+            "Lemma 6.33.1",
+            "Lemma 6.33.4"
+          ],
+          "verification": "Primary text checked: compatible local sheaf morphisms glue uniquely and compatible sheaf data glue."
+        }
+      ],
+      "quantifiers": "Arbitrary actual local holomorphic open maps X→X on open domains covering an embedded compact curve D, with pairwise equal actual germs at all overlap points of D, have an actual holomorphic open-map representative on some neighbourhood of D agreeing with every specified germ. No group/retraction/index appears.",
+      "known_external_reason": "The sheaf of holomorphic maps glues compatible representatives; compactness and shrinking make germs into representatives along the compact closed set. Local openness is retained because it is local.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "NormalAtlasAction.nonempty_rotationRepresentative",
+        "NormalAtlasAction.action_from_normalAtlas",
+        "NormalAtlasAction.finite_normal_action_with_order"
+      ],
+      "missing": "The generic compact-germ representative/sheaf theorem is unformalized. Stacks supports ordinary sheaf gluing, not verbatim this compact shrinking statement. All action identities, finite invariant shrinking, faithfulness and generator order are own deductions.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E34",
+      "names": [
+        "Paper27.Geometry.ThreePairNormalObstruction.NormalFrameExistence"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/ThreePairNormalObstruction.lean",
+        "line": 95,
+        "declaration": "def NormalFrameExistence : Prop :=\n  ∀ (X : CompactComplexSurface) (D : EmbeddedCurve X),\n    ∃ (N : HolomorphicLineCocycle D.curve) (T : TangentLineCocycle D.curve),\n      Nonempty (RawEmbeddedFrames D N T.bundle)",
+        "file_sha256": "b8297ca3ca7d6fa11b753e232ffa689faf9d38710659e1c0124bf809d8b67ea3"
+      },
+      "classical_inputs_fields": [
+        "normalFrames"
+      ],
+      "sources": [
+        "forstneric2018"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "forstneric2018",
+          "anchors": [
+            "Printed p.2987, paragraph immediately preceding Corollary 1.5; cites Forstnerič book Theorem 5.3.1(iii), p.213"
+          ],
+          "verification": "Primary published article body checked in this update: holomorphic vector bundles on an open Riemann surface are holomorphically trivial by Oka–Grauert."
+        }
+      ],
+      "quantifiers": "For every actual embedded compact complex curve D⊂X, there are actual holomorphic normal and tangent line cocycles N,T and RawEmbeddedFrames adapted to actual dι and actual tangent-chart differentials. Frames are holomorphic in actual ambient tangent charts and their normal transition is the actual quotient transition. No retraction or exponent occurs.",
+      "known_external_reason": "On each canonical curve chart domain, an open Riemann surface, normal bundles are holomorphically trivial and the tangent/normal sequence splits holomorphically by Stein theory. Choose the actual tangent-normal frames and construct the normal/tangent cocycles.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "EmbeddedFrames.normalizedCovectors",
+        "NormalAtlasTensor.componentNormalTensorData",
+        "ActualDisjointObstruction.impossible",
+        "ThreePairNormalObstruction.impossible"
+      ],
+      "missing": "The universal Oka–Grauert/Cartan-B frame construction remains unformalized. The raw frame type is honest actual tangent data, not NormalizedCovectors existence, a β-section, a tensor identity or negative degree.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E35",
+      "names": [
+        "Paper27.Geometry.EmbeddedFrames.HolomorphicFrameCalculus"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/EmbeddedFrames.lean",
+        "line": 214,
+        "declaration": "def HolomorphicFrameCalculus : Prop :=\n  ∀ (X : CompactComplexSurface) (D : EmbeddedCurve X)\n    (N T : HolomorphicLineCocycle D.curve) (A : RawEmbeddedFrames D N T)\n    (B : Curve) (u : HolomorphicMap X B) (hu : UnramifiedRestriction D u)\n    (i : D.curve) (v : ℂ × ℂ),\n    MDifferentiableOn 𝓘(ℂ, ℂ) 𝓘(ℂ, ℂ)\n      (fun p => normalizedCovector A u hu i p v) (D.curve.chartDomain i)",
+        "file_sha256": "c333ae1bf71c416291a11372ebdf0e04a532209e0da631a8630b249cd9cb9e22"
+      },
+      "classical_inputs_fields": [
+        "frameCalculus"
+      ],
+      "sources": [
+        "forstneric2018",
+        "lebl44"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "forstneric2018",
+          "anchors": [
+            "Printed p.2987, paragraph immediately preceding Corollary 1.5; cites Forstnerič book Theorem 5.3.1(iii), p.213"
+          ],
+          "verification": "Primary published article body checked in this update: holomorphic vector bundles on an open Riemann surface are holomorphically trivial by Oka–Grauert."
+        },
+        {
+          "source_id": "lebl44",
+          "anchors": [
+            "Theorem 1.2.1, printed p.20"
+          ],
+          "verification": "Parent verified version and page; primary current-PDF search extraction independently checked the power-series representation theorem."
+        }
+      ],
+      "quantifiers": "For every actual embedding D⊂X, every honest RawEmbeddedFrames, every actual holomorphic u:X→B with unramified actual restriction u|D, every frame index i and vector v, the coefficient of ci_i∘d(u|D)^{-1}∘du∘frame_i applied to v is holomorphic on the canonical chart domain.",
+      "known_external_reason": "Differentiation of holomorphic maps, composition of holomorphic bundle maps and inversion of an invertible line-bundle map preserve holomorphicity.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "EmbeddedFrames.normalizedCovectors",
+        "intrinsic_tangency_from_intersection",
+        "intrinsic_ramification_component_dichotomy"
+      ],
+      "missing": "The general coefficient-regularity instance is unformalized. Tangent normalization, actual overlap law, constructed β, vanishing and actual kernel/tangency conclusion are all own proofs.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E36",
+      "names": [
+        "Paper27.Geometry.NormalDegreeInvariance.LineBundleDegreeGaugeInvariance"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/NormalDegreeInvariance.lean",
+        "line": 125,
+        "declaration": "def LineBundleDegreeGaugeInvariance (theory : LineBundleDegreeTheory) : Prop :=\n  ∀ (C : Curve) (L K : HolomorphicLineCocycle C), HolomorphicLineGauge L K →\n    theory.degree C L = theory.degree C K",
+        "file_sha256": "c368d6d56f63cad0ab06fe06691b93aabbd0f1f3c0303b4b61b69fd5d9d1e8dd"
+      },
+      "classical_inputs_fields": [
+        "degreeGaugeInvariance"
+      ],
+      "sources": [
+        "kobayashi1987"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "kobayashi1987",
+          "anchors": [
+            "Theorem 3.1.24(a), printed p.53 (PDF63)"
+          ],
+          "verification": "Primary book checked: a negative-degree holomorphic line bundle over a compact Kahler manifold has no nonzero holomorphic section."
+        }
+      ],
+      "quantifiers": "For every actual compact curve C, actual holomorphic line cocycles L,K and explicit nowhere-zero holomorphic gauge with its actual overlap compatibility, degree(C,L)=degree(C,K). No embedding, fibration, exponent or sign appears.",
+      "known_external_reason": "The gauge is a holomorphic line-bundle isomorphism and first-Chern degree is isomorphism invariant.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "NormalAtlasTensor.normal_tensor_degree",
+        "ThreePairNormalObstruction.three_exponents_equal_common_frames",
+        "ThreePairNormalObstruction.impossible"
+      ],
+      "missing": "The universal degree-isomorphism theorem remains uninstantiated. Actual normal tensor gauge and common-index cancellation are constructed. A separate exact numbered primary gauge-degree theorem is not claimed body-verified.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E37",
+      "names": [
+        "Paper27.Geometry.NeighbourhoodSplittings.HolomorphicSplittingCalculus"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/NeighbourhoodSplittings.lean",
+        "line": 408,
+        "declaration": "structure HolomorphicSplittingCalculus : Prop where\n  inverse_holomorphic : ∀ (X : CompactComplexSurface) (D : EmbeddedCurve X)\n    (U : D.Neighbourhood) (r : D.Retraction U) (B : Curve)\n    (h : HolomorphicMap X B) (ht : JointTransverse r h),\n      HolomorphicSection r (transverseSplitting r h ht)\n  pushforward_holomorphic : ∀ (X : CompactComplexSurface) (D : EmbeddedCurve X)\n    (U : D.Neighbourhood) (r : D.Retraction U) (G : Type) [Group G]\n    (A : NeighbourhoodAction G r) (g : G) (σ : Section U),\n      HolomorphicSection r σ → HolomorphicSection r (A.pushforward g σ)",
+        "file_sha256": "ec3b3ccf1326a75096d9b3a5cdbe457f04b8fca19f4d35f8bd20932a2965a913"
+      },
+      "classical_inputs_fields": [
+        "splittingCalculus"
+      ],
+      "sources": [
+        "lebl44",
+        "forstneric2018"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "lebl44",
+          "anchors": [
+            "Theorem 1.2.1, printed p.20"
+          ],
+          "verification": "Parent verified version and page; primary current-PDF search extraction independently checked the power-series representation theorem."
+        },
+        {
+          "source_id": "forstneric2018",
+          "anchors": [
+            "Printed p.2987, paragraph immediately preceding Corollary 1.5; cites Forstnerič book Theorem 5.3.1(iii), p.213"
+          ],
+          "verification": "Primary published article body checked in this update: holomorphic vector bundles on an open Riemann surface are holomorphically trivial by Oka–Grauert."
+        }
+      ],
+      "quantifiers": "For every actual retraction r and actual globally holomorphic h with actual joint differential bijective throughout U, the actual inverse joint differential applied to (w,0) is a holomorphic bundle section. For every actual neighbourhood action preserving r, differential pushforward of an actual holomorphic section remains holomorphic.",
+      "known_external_reason": "Inverse matrices and derivatives of holomorphic bundle maps are holomorphic in local charts; pushforward is their composition at the actual inverse point.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "NeighbourhoodSplittings.NeighbourhoodAction.average_holomorphic",
+        "NeighbourhoodSplittings.transverse_obstruction",
+        "ActualDisjointObstruction.impossible"
+      ],
+      "missing": "Only universal regularity is supplied; Section, projection, differential representation, averaging, splitting preservation, normal tangency and actual line subbundle are own constructions. No free module/Leaf or degree-zero-from-average input is used.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E38",
+      "names": [
+        "Paper27.Geometry.NeighbourhoodSplittings.BottTangentialSubbundleDegreeZero"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/NeighbourhoodSplittings.lean",
+        "line": 363,
+        "declaration": "def BottTangentialSubbundleDegreeZero (theory : LineBundleDegreeTheory) : Prop :=\n  ∀ (X : CompactComplexSurface) (D : EmbeddedCurve X) (U : D.Neighbourhood)\n    (r : D.Retraction U) (N T : HolomorphicLineCocycle D.curve)\n    (_frames : EmbeddedFrames.RawEmbeddedFrames D N T) (L : HolomorphicLineSubbundle r),\n    (∀ p : D.curve, L.lineAt (curvePoint U p) = LinearMap.range\n      (mfderiv 𝓘(ℂ, ℂ) 𝓘(ℂ, ℂ × ℂ) D.inclusion p).toLinearMap) →\n      theory.degree D.curve N = 0",
+        "file_sha256": "ec3b3ccf1326a75096d9b3a5cdbe457f04b8fca19f4d35f8bd20932a2965a913"
+      },
+      "classical_inputs_fields": [
+        "bott"
+      ],
+      "sources": [
+        "abst2013"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "abst2013",
+          "anchors": [
+            "Theorem 6.13, p.567",
+            "Theorem 7.1, pp.567–568",
+            "Corollary 7.3, p.568"
+          ],
+          "verification": "Primary full text opened: holomorphic connection on compact Kahler bundle implies Chern-class vanishing; tangential holomorphic subbundle gives a partial connection on the normal bundle; the compact-Kahler tangential case gives Chern vanishing."
+        }
+      ],
+      "quantifiers": "Every actual compact embedded curve D, actual neighbourhood/retraction r, honest actual normal frames N, and actual holomorphic injective line-bundle map r*TD→TX whose image along D equals actual dι(TD), have degree(N)=0. No averaging, arbitrary Leaf, group action or negative degree appears.",
+      "known_external_reason": "ABST Theorem 7.1 gives the tangential normal partial connection; Corollary 7.3 gives Chern vanishing for compact Kähler D. Every compact complex curve is Kähler. Integrability need not be separately imposed for this implication.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "NeighbourhoodSplittings.transverse_obstruction",
+        "ActualDisjointObstruction.impossible",
+        "PuncturedSectionRemovability.bott_of_extended_splitting"
+      ],
+      "missing": "The general Bott/Atiyah and cocycle-to-first-Chern interpretation remain explicit unformalized theory. Actual subbundle/tangent equality is constructed before application, so Lemma 2.2 is a required disclosed dependency, not an automatic whole-step exemption.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E39",
+      "names": [
+        "Paper27.Geometry.TaylorGerms.TaylorCalculus"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/TaylorGerms.lean",
+        "line": 166,
+        "declaration": "structure TaylorCalculus where\n  jet : ℕ → (ℂ → ℂ) → ℂ[X]\n  bounded : ∀ d f, (jet d f).natDegree ≤ d\n  congr : ∀ d {f g : ℂ → ℂ}, f =ᶠ[𝓝 0] g → jet d f = jet d g\n  constant : ∀ d f, AnalyticAt ℂ f 0 → (jet d f).coeff 0 = f 0\n  first : ∀ d f, AnalyticAt ℂ f 0 → 1 ≤ d → (jet d f).coeff 1 = deriv f 0\n  second : ∀ d f, AnalyticAt ℂ f 0 → 2 ≤ d → (jet d f).coeff 2 = deriv (deriv f) 0 / 2\n  polynomial : ∀ d (P : ℂ[X]), P.natDegree ≤ d → jet d (fun z => P.eval z) = P\n  add : ∀ d f g, AnalyticAt ℂ f 0 → AnalyticAt ℂ g 0 →\n    jet d (fun z => f z + g z) = jet d f + jet d g\n  mul : ∀ d f g, AnalyticAt ℂ f 0 → AnalyticAt ℂ g 0 →\n    JetEq d (jet d (fun z => f z * g z)) (jet d f * jet d g)\n  power : ∀ d f m, AnalyticAt ℂ f 0 →\n    JetEq d (jet d (fun z => f z ^ m)) (jet d f ^ m)\n  composition : ∀ d f g, AnalyticAt ℂ f 0 → AnalyticAt ℂ g 0 → g 0 = 0 →\n    JetEq d (jet d (f ∘ g)) ((jet d f).comp (jet d g))\n  order_factor : ∀ d m f h, m ≤ d → AnalyticAt ℂ f 0 → AnalyticAt ℂ h 0 →\n    f =ᶠ[𝓝 0] (fun z => z ^ m * h z) →\n    X ^ m ∣ jet d f ∧ (jet d f).coeff m = h 0",
+        "file_sha256": "89533d5e999a9fa2f8614ffbf7cecab9a04ea2e985bcb41d79dcb420bf949c55"
+      },
+      "classical_inputs_fields": [
+        "taylor"
+      ],
+      "sources": [
+        "lebl44"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "lebl44",
+          "anchors": [
+            "Theorem 1.2.1, printed p.20"
+          ],
+          "verification": "Parent verified version and page; primary current-PDF search extraction independently checked the power-series representation theorem."
+        }
+      ],
+      "quantifiers": "An ordinary finite jet operation d,f↦J.jet d f∈ℂ[X], bounded by d, invariant under equality of actual germs, with constant/first/second coefficients for analytic f, exact polynomial truncation, addition, multiplication/powers/composition modulo X^(d+1), and leading monomial-factor coefficient. Quantified only over scalar functions/polynomials/degrees.",
+      "known_external_reason": "Convergent Taylor series truncated to degree d have these universal ring/substitution laws. The operation can be extended to nonanalytic functions without using them in analytic claims.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "TaylorGerms.compatibleJets",
+        "RetractionCoordinateGerms.NormalAtlas.compatibleJets",
+        "ThreePairNormalObstruction.impossible"
+      ],
+      "missing": "The universal jet operation/laws have no Lean instance. Actual normal/retraction germs, full intermediate terms, equation (7), connection cocycle and degree contradiction are own proofs, not fields of J.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E40",
+      "names": [
+        "Paper27.Geometry.RetractionCoefficientHolomorphic.ParametricTaylorCalculus"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/RetractionCoefficientHolomorphic.lean",
+        "line": 26,
+        "declaration": "structure ParametricTaylorCalculus (J : TaylorGerms.TaylorCalculus) : Prop where\n  regularity : CoordinateCalculus.SurfaceAnalyticRegularity\n  parameter : ∀ (d k : ℕ) (F : ℂ × ℂ → ℂ) (V : Set (ℂ × ℂ)), IsOpen V →\n    AnalyticOnNhd ℂ F V → ∀ x : ℂ, (x, 0) ∈ V →\n      AnalyticAt ℂ (fun t => (J.jet d (fun z => F (t, z))).coeff k) x",
+        "file_sha256": "8d32b7fd6698ddcb63abadeb7ffa32a15e585aaec62a4f3954515493594406b1"
+      },
+      "classical_inputs_fields": [
+        "parameterTaylor"
+      ],
+      "sources": [
+        "lebl44"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "lebl44",
+          "anchors": [
+            "Theorem 1.2.1, printed p.20"
+          ],
+          "verification": "Parent verified version and page; primary current-PDF search extraction independently checked the power-series representation theorem."
+        }
+      ],
+      "quantifiers": "Given TaylorCalculus J: general SurfaceAnalyticRegularity and, for every open V⊂ℂ², every analytic F near V, every d,k and every (x,0)∈V, analyticity in t near x of coeff_k(J.jet d (z↦F(t,z))).",
+      "known_external_reason": "The locally convergent multivariable power series has holomorphic parameter coefficients; the Cauchy coefficient formula yields the same statement.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "RetractionCoefficientHolomorphic.coefficient_holomorphic",
+        "RetractionCoefficientHolomorphic.globalLeading",
+        "ThreePairNormalObstruction.impossible"
+      ],
+      "missing": "The generic parameter-Taylor instance is unformalized. Own code constructs actual centred coordinate functions, chart-choice independence, global leading coefficient, compact constancy and connection data.",
+      "proof_path": "main"
+    },
+    {
+      "id": "E41",
+      "names": [
+        "Paper27.Geometry.HolomorphicEmbeddedFactorization"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/CurveFamilies.lean",
+        "line": 77,
+        "declaration": "def HolomorphicEmbeddedFactorization : Prop :=\n  ∀ (X : CompactComplexSurface) (D E : EmbeddedCurve X), D.support ⊆ E.support →\n    ∃ a : HolomorphicMap D.curve E.curve, ∀ p : D.curve,\n      E.inclusion (a p) = D.inclusion p",
+        "file_sha256": "51dc55e2f65adb206a44f4a34a30cbf17d6706a879b2cb5dd81eeb1efd999501"
+      },
+      "classical_inputs_fields": [],
+      "sources": [
+        "forster1981"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "forster1981",
+          "anchors": [
+            "Theorem 2.1, p.10",
+            "Theorem 4.24, p.29"
+          ],
+          "verification": "Indexed primary book text checked: local expression z↦z^k for nonconstant curve maps; proper nonconstant curve maps have fixed finite multiplicity-counting degree."
+        }
+      ],
+      "quantifiers": "Every two actual embedded compact curves D,E⊂X with D.support⊆E.support have an actual holomorphic factor map a:D→E with ιE∘a=ιD.",
+      "known_external_reason": "Locally an embedded complex submanifold has holomorphic inverse coordinate charts; maps whose image lies in it factor holomorphically.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "supporting_path_see_witnesses_not_a_main_record_field",
+      "own_application_witnesses": [
+        "CommonComponents.common_components_of_tangency",
+        "CommonComponents.embedded_curves_biholomorphic_of_support_eq",
+        "Paper27.Geometry.ClassicalInputs.component_alternatives",
+        "Paper27.Geometry.ClassicalInputs.common_tangency_impossible_by_averaging",
+        "Paper27.Geometry.ClassicalInputs.three_fibration_component_alternatives"
+      ],
+      "missing": "Known generic submanifold calculus remains explicit in these supporting results; it is NOT a field or premise of the current main theorem, which uses actual tangency and common retractions directly. No exact numbered primary statement was body-verified.",
+      "proof_path": "supplementary_full_Lemma_3_1_support_identification_not_main_bound",
+      "averaging_inputs_fields": [
+        "factorization"
+      ]
+    },
+    {
+      "id": "E42",
+      "names": [
+        "Paper27.Geometry.NormalDegreeInvariance.HolomorphicMixedFrameCalculus"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/NormalDegreeInvariance.lean",
+        "line": 104,
+        "declaration": "def HolomorphicMixedFrameCalculus : Prop :=\n  ∀ (X : CompactComplexSurface) (D : EmbeddedCurve X)\n    (N T N' T' : HolomorphicLineCocycle D.curve)\n    (A : EmbeddedFrames.RawEmbeddedFrames D N T)\n    (B : EmbeddedFrames.RawEmbeddedFrames D N' T') (i : D.curve) (v : ℂ × ℂ),\n    MDifferentiableOn 𝓘(ℂ, ℂ) 𝓘(ℂ, ℂ)\n      (fun p => (mixedFrame A B i p v).2) (D.curve.chartDomain i)",
+        "file_sha256": "c368d6d56f63cad0ab06fe06691b93aabbd0f1f3c0303b4b61b69fd5d9d1e8dd"
+      },
+      "classical_inputs_fields": [],
+      "sources": [
+        "forstneric2018",
+        "lebl44"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "forstneric2018",
+          "anchors": [
+            "Printed p.2987, paragraph immediately preceding Corollary 1.5; cites Forstnerič book Theorem 5.3.1(iii), p.213"
+          ],
+          "verification": "Primary published article body checked in this update: holomorphic vector bundles on an open Riemann surface are holomorphically trivial by Oka–Grauert."
+        },
+        {
+          "source_id": "lebl44",
+          "anchors": [
+            "Theorem 1.2.1, printed p.20"
+          ],
+          "verification": "Parent verified version and page; primary current-PDF search extraction independently checked the power-series representation theorem."
+        }
+      ],
+      "quantifiers": "For every actual embedding and two honest RawEmbeddedFrames, each scalar normal coordinate of the actual mixed-frame map B_i^{-1}∘A_i applied to v is holomorphic on the canonical chart domain.",
+      "known_external_reason": "Inversion and composition of actual holomorphic frames preserve holomorphicity.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "supporting_path_see_witnesses_not_a_main_record_field",
+      "own_application_witnesses": [
+        "NormalDegreeInvariance.normalLineGauge",
+        "ComponentNormalTensorData.exponents_equal"
+      ],
+      "missing": "Optional mixed-frame regularity is explicit; current main proof chooses one honest frame and uses three_exponents_equal_common_frames, so this is not a main record field.",
+      "proof_path": "optional_mixed_frames"
+    },
+    {
+      "id": "E43",
+      "names": [
+        "Paper27.Geometry.MeromorphicSplittingAverage.LaurentCalculus"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/MeromorphicSplittingAverage.lean",
+        "line": 25,
+        "declaration": "structure LaurentCalculus where\n  coeff : (ℂ → ℂ) →ₗ[ℂ] CyclicLaurent.Coefficients\n  congr : ∀ {f g : ℂ → ℂ}, f =ᶠ[𝓝[≠] 0] g → coeff f = coeff g\n  monomial : ∀ (c : ℂ) (e k : ℤ),\n    coeff (fun z => c * z ^ e) k = if k = e then c else 0\n  below : ∀ (h : ℂ → ℂ) (e k : ℤ), AnalyticAt ℂ h 0 → k < e →\n    coeff (fun z => z ^ e * h z) k = 0\n  leading : ∀ (h : ℂ → ℂ) (e : ℤ), AnalyticAt ℂ h 0 →\n    coeff (fun z => z ^ e * h z) e = h 0\n  rotation : ∀ (f : ℂ → ℂ) (α : ℂ), MeromorphicAt f 0 → α ≠ 0 → ∀ k : ℤ,\n    coeff (fun z => α * f (α⁻¹ * z)) k = α ^ (1 - k) * coeff f k\n  removable : ∀ f : ℂ → ℂ, MeromorphicAt f 0 →\n    (∀ k : ℤ, k < 0 → coeff f k = 0) →\n      ∃ g : ℂ → ℂ, AnalyticAt ℂ g 0 ∧ g =ᶠ[𝓝[≠] 0] f ∧ g 0 = coeff f 0",
+        "file_sha256": "0762a2b3d9b698bc163b7a5650e2db2320dc0df8ab099e0a0d2b46833a2cbb89"
+      },
+      "classical_inputs_fields": [],
+      "sources": [
+        "lebl44",
+        "popescu2011"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "lebl44",
+          "anchors": [
+            "Theorem 1.2.1, printed p.20"
+          ],
+          "verification": "Parent verified version and page; primary current-PDF search extraction independently checked the power-series representation theorem."
+        },
+        {
+          "source_id": "popescu2011",
+          "anchors": [
+            "Theorem 2.7, printed p.409 (PDF9)"
+          ],
+          "verification": "Primary text checked: a locally bounded holomorphic function off a proper closed analytic subset of an open subset of C^n extends uniquely."
+        }
+      ],
+      "quantifiers": "A linear Laurent-coefficient operation on all scalar functions (arbitrary linear extension outside meromorphic germs), invariant under equality on a punctured germ; exact monomial, lower-order/leading analytic-factor, rotation laws for meromorphic functions and nonzero scalar; no negative coefficients implies an analytic punctured-germ extension whose value is coefficient zero.",
+      "known_external_reason": "Ordinary scalar Laurent theory; use linear extension from the subspace of meromorphic germs for the all-functions operation.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_original_actual_map_averaging_application_relative_to_universal_inputs",
+      "own_application_witnesses": [
+        "NormalAtlas.verticalSplitting_pole_leading",
+        "NormalAtlas.second_vertical_coefficients",
+        "NormalAtlas.localFormulaSix_tangent",
+        "NormalAtlas.localFormulaSix_extension",
+        "Paper27.Geometry.FormulaSixGeometry.impossible",
+        "Paper27.Geometry.ClassicalInputs.common_tangency_impossible_by_averaging",
+        "Paper27.Geometry.RetractionCoordinateGerms.NormalAtlas.actual_formulaSix_invariant_extension"
+      ],
+      "missing": "Universal scalar Laurent extraction/removal is uninstantiated. The actual quotient −r_x/r_y, pole order, leading coefficient, finite root-of-unity cancellation and formula (6) are own deductions. The main at-most-two proof independently uses the Appendix path. The full original-map formula-(6) path is now constructed via AveragingInputs; no pair-specific section/action/leading-coefficient assumptions remain.",
+      "proof_path": "AveragingInputs_supplementary_original_formula_6_path",
+      "averaging_inputs_fields": [
+        "laurent"
+      ]
+    },
+    {
+      "id": "E44",
+      "names": [
+        "Paper27.Geometry.PuncturedSplittingSections.HolomorphicPuncturedCalculus"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/PuncturedSectionRemovability.lean",
+        "line": 63,
+        "declaration": "structure HolomorphicPuncturedCalculus : Prop where\n  inverse_holomorphic : ∀ (X : CompactComplexSurface) (D : EmbeddedCurve X)\n    (U : D.Neighbourhood) (r s : D.Retraction U) (ht : JointTransverse r s),\n      HolomorphicSection r (jointInverse r s ht)\n  pushforward_holomorphic : ∀ (X : CompactComplexSurface) (D : EmbeddedCurve X)\n    (U : D.Neighbourhood) (r : D.Retraction U) (G : Type) [Group G]\n    (A : NeighbourhoodSplittings.NeighbourhoodAction G r)\n    (hfix : ∀ g p, A.permutation g (NeighbourhoodSplittings.curvePoint U p) =\n      NeighbourhoodSplittings.curvePoint U p)\n    (g : G) (σ : Section D U), HolomorphicSection r σ →\n      HolomorphicSection r (NeighbourhoodAction.pushforward A hfix g σ)",
+        "file_sha256": "7e3f41cc5bc931e46409a7f82e54441bfe56693a96535d88038c946d6d218107"
+      },
+      "classical_inputs_fields": [],
+      "sources": [
+        "lebl44",
+        "forstneric2018"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "lebl44",
+          "anchors": [
+            "Theorem 1.2.1, printed p.20"
+          ],
+          "verification": "Parent verified version and page; primary current-PDF search extraction independently checked the power-series representation theorem."
+        },
+        {
+          "source_id": "forstneric2018",
+          "anchors": [
+            "Printed p.2987, paragraph immediately preceding Corollary 1.5; cites Forstnerič book Theorem 5.3.1(iii), p.213"
+          ],
+          "verification": "Primary published article body checked in this update: holomorphic vector bundles on an open Riemann surface are holomorphically trivial by Oka–Grauert."
+        }
+      ],
+      "quantifiers": "On every actual punctured neighbourhood U\\D, inverse actual joint retraction differential defines a holomorphic actual section; for every actual action fixing D, its actual derivative pushforward preserves holomorphicity.",
+      "known_external_reason": "Local holomorphic matrix inversion and bundle-map composition on the actual open punctured domain.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_original_actual_map_averaging_application_relative_to_universal_inputs",
+      "own_application_witnesses": [
+        "PuncturedSectionRemovability.formulaSix_holomorphic",
+        "PuncturedSectionAverage.NeighbourhoodAction.formulaSix",
+        "Paper27.Geometry.FormulaSixGeometry.impossible",
+        "Paper27.Geometry.ClassicalInputs.common_tangency_impossible_by_averaging",
+        "Paper27.Geometry.RetractionCoordinateGerms.NormalAtlas.actual_formulaSix_invariant_extension"
+      ],
+      "missing": "Only generic regularity is unformalized. Actual Point/Section types, restricted permutation, inverse joint map, pushforward representation and finite global formula (6) are own definitions/proofs.",
+      "proof_path": "AveragingInputs_supplementary_original_formula_6_path",
+      "averaging_inputs_fields": [
+        "calculus"
+      ]
+    },
+    {
+      "id": "E45",
+      "names": [
+        "Paper27.Geometry.PuncturedSplittingSections.LaurentSectionExtension"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/PuncturedSectionRemovability.lean",
+        "line": 46,
+        "declaration": "def LaurentSectionExtension (L : LaurentCalculus) : Prop :=\n  ∀ (X : CompactComplexSurface) (D : EmbeddedCurve X) (U : D.Neighbourhood)\n    (r : D.Retraction U) (C : RetractionCoordinates r) (σ : Section D U),\n    HolomorphicSection r σ →\n    (∀ p : D.curve, MeromorphicAt (fun y => (C.coefficient σ p y).1) 0 ∧\n      MeromorphicAt (fun y => (C.coefficient σ p y).2) 0) →\n    (∀ p : D.curve, ∀ k : ℤ, k < 0 →\n      L.coeff (fun y => (C.coefficient σ p y).1) k = 0 ∧\n        L.coeff (fun y => (C.coefficient σ p y).2) k = 0) →\n    ∃ s : NeighbourhoodSplittings.Section U,\n      NeighbourhoodSplittings.HolomorphicSection r s ∧ restrict s = σ ∧\n        ∀ p : D.curve, C.curveValue s p =\n          (L.coeff (fun y => (C.coefficient σ p y).1) 0,\n            L.coeff (fun y => (C.coefficient σ p y).2) 0)",
+        "file_sha256": "7e3f41cc5bc931e46409a7f82e54441bfe56693a96535d88038c946d6d218107"
+      },
+      "classical_inputs_fields": [],
+      "sources": [
+        "lebl44",
+        "popescu2011",
+        "stacks_gluing"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "lebl44",
+          "anchors": [
+            "Theorem 1.2.1, printed p.20"
+          ],
+          "verification": "Parent verified version and page; primary current-PDF search extraction independently checked the power-series representation theorem."
+        },
+        {
+          "source_id": "popescu2011",
+          "anchors": [
+            "Theorem 2.7, printed p.409 (PDF9)"
+          ],
+          "verification": "Primary text checked: a locally bounded holomorphic function off a proper closed analytic subset of an open subset of C^n extends uniquely."
+        },
+        {
+          "source_id": "stacks_gluing",
+          "anchors": [
+            "Lemma 6.33.1",
+            "Lemma 6.33.4"
+          ],
+          "verification": "Primary text checked: compatible local sheaf morphisms glue uniquely and compatible sheaf data glue."
+        }
+      ],
+      "quantifiers": "For every actual retraction r, ordinary adapted coordinates C (no second retraction or exponent), and actual holomorphic punctured bundle section σ, if both actual scalar coefficients on every normal slice are meromorphic with all negative Laurent coefficients zero, there is an actual holomorphic section on U restricting to σ, with the stated constant-coefficient values along D.",
+      "known_external_reason": "Use parameter-dependent Laurent/Cauchy coefficients in fixed adapted charts: pointwise vanishing of the negative coefficients gives joint holomorphic removal across the smooth hypersurface; compatible local extensions glue uniquely. This is a universal analytic extension theorem, not pole cancellation.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_original_actual_map_averaging_application_relative_to_universal_inputs",
+      "own_application_witnesses": [
+        "PuncturedSectionRemovability.extend_splitting",
+        "PuncturedFormulaSix.extend_formulaSix_coordinates",
+        "PuncturedSectionRemovability.bott_of_extended_splitting",
+        "Paper27.Geometry.FormulaSixGeometry.impossible",
+        "Paper27.Geometry.ClassicalInputs.common_tangency_impossible_by_averaging",
+        "Paper27.Geometry.RetractionCoordinateGerms.NormalAtlas.actual_formulaSix_invariant_extension"
+      ],
+      "missing": "The universal parametric Laurent removal and actual bundle sheaf gluing instance is not formalized. A primary exact theorem with the full slice-to-bundle statement has NOT been independently body-verified; the cited scalar bounded-removal/gluing theorems are ingredients, not verbatim the full interface. Actual nonpositive-coefficient cancellation and chart compatibility remain own work.",
+      "proof_path": "AveragingInputs_supplementary_original_formula_6_path",
+      "averaging_inputs_fields": [
+        "extension"
+      ]
+    },
+    {
+      "id": "E46",
+      "names": [
+        "Paper27.Geometry.KodairaBaseHyperbolicity"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/KodairaFibrations.lean",
+        "line": 38,
+        "declaration": "def KodairaBaseHyperbolicity : Prop :=\n  ∀ (X : CompactComplexSurface) (f : Fibration X),\n    f.Smooth → f.NonIsotrivial → f.Hyperbolic",
+        "file_sha256": "1dc331e230695291de1595ce7907fc2b317edd27955d72d1c9d01cc61e32d965"
+      },
+      "classical_inputs_fields": [],
+      "sources": [
+        "catanese_rollenske2009",
+        "llosa_py2021"
+      ],
+      "quantifiers": "For every actual compact complex surface X and actual Fibration f, actual Smooth f and actual NonIsotrivial f imply genus(base f)≥2. NonIsotrivial means there exist two actual compact fibre models not biholomorphic; hyperbolicity is not part of the definition.",
+      "known_external_reason": "The standard period-map argument excludes base P¹ or elliptic curve; Liouville/compactness makes the period map constant, and Torelli contradicts varying actual fibres.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "Paper27.Geometry.at_most_two_kodaira",
+        "Paper27.Geometry.double_kodaira_attains_bound"
+      ],
+      "missing": "The universal base-hyperbolicity theorem and its translation to actual fibre models have no Lean instance. Actual Corollary 1.2 is derived from this separate background theorem and the own at-most-two bound.",
+      "proof_path": "corollary_and_sharpness_supplementary_parameter",
+      "source_anchors": [
+        {
+          "source_id": "catanese_rollenske2009",
+          "anchors": [
+            "Definition 2.1, preprint printed p.3",
+            "Remark 2.3, preprint printed p.4",
+            "Example 5.8, preprint printed p.16",
+            "Corollary 6.6, preprint printed p.20",
+            "Remark 2.6, preprint printed p.6"
+          ],
+          "verification": "Primary PDF body rechecked in this update: Definition 2.1 distinguishes smooth non-bundle Kodaira fibrations; Remark 2.3 proves base genus at least two via periods, Liouville and Torelli; Example 5.8 constructs a double Kodaira fibration, Corollary 6.6 gives rigid double-étale examples; Remark 2.6 records a branch projection that is not étale."
+        },
+        {
+          "source_id": "llosa_py2021",
+          "anchors": [
+            "Introduction, printed p.2, first paragraph (PDF zero-based p.1)"
+          ],
+          "verification": "Primary body checked in this update: Kodaira means holomorphic submersion with connected fibres and nonisotrivial family; base and fibre genera exceed one."
+        }
+      ]
+    },
+    {
+      "id": "E47",
+      "names": [
+        "Paper27.Geometry.DoubleKodairaExistence"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/KodairaFibrations.lean",
+        "line": 91,
+        "declaration": "def DoubleKodairaExistence : Prop :=\n  ∃ (X : CompactComplexSurface) (f g : KodairaFibration X),\n    ¬ Fibration.Equivalent f.val g.val",
+        "file_sha256": "1dc331e230695291de1595ce7907fc2b317edd27955d72d1c9d01cc61e32d965"
+      },
+      "classical_inputs_fields": [],
+      "sources": [
+        "catanese_rollenske2009"
+      ],
+      "quantifiers": "There exist an actual compact complex surface X and two actual KodairaFibration X, each smooth and nonisotrivial in the actual fibre-model sense, inequivalent under a biholomorphic change of base alone. No upper bound or exactly-two conclusion is included.",
+      "known_external_reason": "The published double Kodaira examples supply the surface and two distinct smooth varying fibrations; own upper-bound reasoning supplies exact sharpness.",
+      "formalization_status": "explicit_universal_parameter_no_Lean_instance",
+      "own_application_status": "completed_relative_to_stated_universal_inputs",
+      "own_application_witnesses": [
+        "Paper27.Geometry.double_kodaira_exactly_two",
+        "Paper27.Geometry.double_kodaira_attains_bound"
+      ],
+      "missing": "The example surface/construction is not recreated in Lean. Its existential input is explicit. The deduction of exactly two actual classes and product_exactly_two are own theorems.",
+      "proof_path": "corollary_and_sharpness_supplementary_parameter",
+      "source_anchors": [
+        {
+          "source_id": "catanese_rollenske2009",
+          "anchors": [
+            "Definition 2.1, preprint printed p.3",
+            "Remark 2.3, preprint printed p.4",
+            "Example 5.8, preprint printed p.16",
+            "Corollary 6.6, preprint printed p.20",
+            "Remark 2.6, preprint printed p.6"
+          ],
+          "verification": "Primary PDF body rechecked in this update: Definition 2.1 distinguishes smooth non-bundle Kodaira fibrations; Remark 2.3 proves base genus at least two via periods, Liouville and Torelli; Example 5.8 constructs a double Kodaira fibration, Corollary 6.6 gives rigid double-étale examples; Remark 2.6 records a branch projection that is not étale."
+        }
+      ]
+    },
+    {
+      "id": "E48",
+      "names": [
+        "Paper27.Geometry.CheckingBothProjections.ZaalIntermediateConstruction"
+      ],
+      "definition": {
+        "file": "Paper27/Geometry/CheckingBothProjections.lean",
+        "line": 277,
+        "declaration": "def ZaalIntermediateConstruction : Prop := Nonempty ZaalIntermediateData",
+        "file_sha256": "c93b608d13a025c053d551a5130f0f058a454f7bacb99302792e12e59dab611f"
+      },
+      "referenced_data_signatures": [
+        {
+          "file": "Paper27/Geometry/CheckingBothProjections.lean",
+          "line": 251,
+          "declaration": "structure ZaalIntermediateData where\n  genusThreeCurve : Curve\n  genusNineCurve : Curve\n  parameterCurve : Curve\n  surface : CompactComplexSurface\n  π : HolomorphicMap genusNineCurve genusThreeCurve\n  π_nonconstant : Nonconstant π\n  genus_nine : genusNineCurve.genus = 9\n  genus_three : genusThreeCurve.genus = 3\n  fibre_finite : {p : genusNineCurve | π p = genusThreeCurve.basepoint}.Finite\n  degree_two : mapDegree π fibre_finite = 2\n  baseChange : HolomorphicMap parameterCurve genusNineCurve\n  baseChange_surjective : Function.Surjective baseChange\n  baseChange_unramified : ∀ p : parameterCurve,\n    Function.Bijective (mfderiv 𝓘(ℂ, ℂ) 𝓘(ℂ, ℂ) baseChange p)\n  secondProjection : HolomorphicMap surface genusThreeCurve\n  local_double_chart : ∀ t : parameterCurve,\n    Nonempty (DoubleProjectionChart secondProjection (composeCurveMaps π baseChange) t)",
+          "file_sha256": "c93b608d13a025c053d551a5130f0f058a454f7bacb99302792e12e59dab611f"
+        },
+        {
+          "file": "Paper27/Geometry/CheckingBothProjections.lean",
+          "line": 165,
+          "declaration": "structure DoubleProjectionChart (h : HolomorphicMap X B) (κ : HolomorphicMap C B) (t : C) where\n  point : X\n  point_image : h point = κ t\n  coordinates : OpenPartialHomeomorph X (ℂ × ℂ)\n  source_mem : point ∈ coordinates.source\n  holomorphic : MDifferentiableOn 𝓘(ℂ, ℂ × ℂ) 𝓘(ℂ, ℂ × ℂ) coordinates coordinates.source\n  inverse_holomorphic : MDifferentiableOn 𝓘(ℂ, ℂ × ℂ) 𝓘(ℂ, ℂ × ℂ)\n    coordinates.symm coordinates.target\n  centre : coordinates point = ((chartAt ℂ t) t, 0)\n  maps_target : ∀ q ∈ coordinates.source, h q ∈ (chartAt ℂ (κ t)).source\n  identity : ∀ q ∈ coordinates.source,\n    (chartAt ℂ (κ t)) (h q) =\n      localSecondProjection 2 (writtenCoordinateMap κ t) (coordinates q)",
+          "file_sha256": "c93b608d13a025c053d551a5130f0f058a454f7bacb99302792e12e59dab611f"
+        }
+      ],
+      "classical_inputs_fields": [],
+      "sources": [
+        "zaal1995"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "zaal1995",
+          "anchors": [
+            "§1 The Construction, printed pp.186–187 (PDF zero-based pp.2–3)",
+            "Later trigonal genus-three family: printed pp.188–189"
+          ],
+          "verification": "Original published UvA scan body checked in this update: genus-nine F lies in C3×C3 off diagonal; two projection restrictions; a squaring-Picard base change B→F is étale of total degree 64; double cover of B×C3 branches on the two pulled-back graphs and gives smooth genus-six fibres."
+        }
+      ],
+      "quantifiers": "Existence of actual compact curves C3,F,B and compact complex surface X, actual nonconstant π:F→C3 with genera 9 and 3 and actual multiplicity-sum degree 2, an actual surjective unramified b:B→F, an actual holomorphic secondProjection:X→C3 and actual local double-cover coordinate charts along π∘b at every t∈B. No ramification-degree-eight or nonsubmersion conclusion is a field. The original possibly reducible B is replaced by one connected component with no degree64 assertion.",
+      "known_external_reason": "Zaal printed pp.186–187 constructs the translated fibre-product genus-nine curve, its two degree-two projections, étale squaring-Picard base change and local squared-line-bundle double cover branched on the two graphs. Choosing a connected component gives the displayed minimal raw data.",
+      "formalization_status": "explicit_historical_construction_parameter_no_Lean_instance",
+      "own_application_status": "completed_actual_Riemann_Hurwitz_basechange_and_projection_derivative_application",
+      "own_application_witnesses": [
+        "Paper27.Geometry.CheckingBothProjections.ramification_degree_eight",
+        "Paper27.Geometry.CheckingBothProjections.exists_ramification_point",
+        "Paper27.Geometry.CheckingBothProjections.basechange_mfderiv_zero",
+        "Paper27.Geometry.CheckingBothProjections.double_projection_mfderiv_zero",
+        "Paper27.Geometry.CheckingBothProjections.ZaalIntermediateData.second_projection_not_submersion",
+        "Paper27.Geometry.CheckingBothProjections.basechanged_double_fibration_not_smooth",
+        "Paper27.Geometry.CheckingBothProjections.checking_both_projections"
+      ],
+      "missing": "The concrete historical algebraic construction is not reconstructed in Lean; its minimal actual-map existence is an explicit published input. The own theorem proves second-projection failure for an actual HolomorphicMap, without presuming unverified connected fibres of that projection. The later genus-three family is outside this diagnostic input.",
+      "proof_path": "Remark_2_5_historical_example"
+    }
+  ],
+  "classical_inputs_record": {
+    "files": [
+      "Paper27/Geometry/CurveBranchInputs.lean",
+      "Paper27/Geometry/ClassicalInputs.lean"
+    ],
+    "field_count": 39,
+    "all_current_fields_registered": true,
+    "field_to_interface": {
+      "regularity": "E07",
+      "curveMaps": "E01",
+      "zeroDifferential": "E06",
+      "pullbacks": "E02",
+      "negativeCurvatureUniqueness": "E03",
+      "discExtension": "E05",
+      "finiteRepresentatives": "E18",
+      "isometryRigidity": "E04",
+      "finiteCoverClassification": "E19",
+      "metrics": "E20",
+      "uniformizingCharts": "E21",
+      "normalization": "E17",
+      "fibreModels": "E22",
+      "fibreDegrees": "E23",
+      "localSections": "E15",
+      "inverseCurveMap": "E11",
+      "submanifolds": "E24",
+      "nonsingularOpen": "E25",
+      "localDegrees": "E26",
+      "unramifiedCurveCovering": "E27",
+      "neighbourhoodLifting": "E28",
+      "etaleLiftRegularity": "E29",
+      "dividedDifferences": "E30",
+      "localUnitRoots": "E31",
+      "normalDivision": "E32",
+      "mapGermGluing": "E33",
+      "normalFrames": "E34",
+      "frameCalculus": "E35",
+      "degreeTheory": "E08",
+      "degreeGaugeInvariance": "E36",
+      "homDegree": "E09",
+      "splittingCalculus": "E37",
+      "bott": "E38",
+      "taylor": "E39",
+      "parameterTaylor": "E40",
+      "unramifiedSurfaceCovering": "E16",
+      "productRigidity": "E12",
+      "productCovers": "E13",
+      "fibreConstancy": "E14"
+    },
+    "instances_constructed": false,
+    "interpretation": "Explicit universal theorem parameters, not Lean axioms. Main geometry and obstruction conclusions are own derived outputs."
+  },
+  "averaging_inputs_record": {
+    "file": "Paper27/Geometry/OriginalAveragingProof.lean",
+    "definition": {
+      "file": "Paper27/Geometry/OriginalAveragingProof.lean",
+      "line": 17,
+      "declaration": "structure AveragingInputs where\n  laurent : MeromorphicSplittingAverage.LaurentCalculus\n  extension : PuncturedSplittingSections.LaurentSectionExtension laurent\n  calculus : PuncturedSplittingSections.HolomorphicPuncturedCalculus\n  factorization : HolomorphicEmbeddedFactorization",
+      "file_sha256": "3089b5af1d8cbd0393508ccccf5c5b44af2e2a1f4678b51219264c9b17045c59"
+    },
+    "field_count": 4,
+    "field_to_interface": {
+      "laurent": "E43",
+      "extension": "E45",
+      "calculus": "E44",
+      "factorization": "E41"
+    },
+    "all_current_fields_registered": true,
+    "own_application": "Paper27.Geometry.ClassicalInputs.common_tangency_impossible_by_averaging",
+    "main_bound_requires_this_record": false,
+    "status": "Original actual-map formula-(6) proof now completed relative only to these four supplementary generic interfaces and ClassicalInputs; target build passed, reported by parent (1.4s)."
+  },
+  "not_external_inputs": [
+    "RetractionNormalCoordinates.analytic_chart_exists: actual analytic inverse function theorem proved from mathlib",
+    "DiscGraphExtension.analyticInverse_exists: actual scalar inverse function theorem proved from mathlib",
+    "ActualCyclicModels.cyclic_model_exists / surfaceChartOfModel: own actual pair/model assembly",
+    "RamificationFamilies.ramification_family_exists / component_index: own finite actual family and uniform indices",
+    "RetractionNormalAtlasBridge.normalAtlas_of_original_pair: own factored retraction atlas construction",
+    "NormalAtlasTensor.componentNormalTensorData: own normal tensor gauge and degree application",
+    "NormalAtlasAction.action_from_normalAtlas / finite_normal_action_with_order: own action, normal derivative, faithfulness and order",
+    "IntrinsicDichotomy: own intersection-to-tangency argument and alternatives",
+    "ActualDisjointObstruction.impossible: own actual Lemma 3.2 application",
+    "ThreePairNormalObstruction.impossible: own actual common-tangency Appendix connection obstruction",
+    "ClassicalInputs.at_most_two / at_most_two_classes: own original actual-map main assembly",
+    "Obstruction arbitrary M/R/Leaf records: historical abstract support only, not current main inputs",
+    "OriginalAveragingProof.common_tangency_impossible_by_averaging: own actual-map original formula-(6) proof; its AveragingInputs contains only ordinary universal calculus/factorization",
+    "CheckingBothProjections.ramification_degree_eight / second_projection_not_submersion: own Hurwitz and actual differential diagnosis from raw historical data",
+    "Paper27.Geometry.PuncturedSplittingSections.NeighbourhoodAction.representation: own actual section invariance proof",
+    "Paper27.Geometry.PuncturedSplittingSections.NeighbourhoodAction.powerAverage_fixed: own actual section invariance proof",
+    "Paper27.Geometry.PuncturedSplittingSections.NeighbourhoodAction.jointInverse_fixed: own actual section invariance proof",
+    "Paper27.Geometry.PuncturedSplittingSections.NeighbourhoodAction.formulaSix_fixed: own actual section invariance proof",
+    "Paper27.Geometry.PuncturedSplittingSections.NeighbourhoodAction.extension_fixed: own actual section invariance proof",
+    "Paper27.Geometry.RetractionCoordinateGerms.NormalAtlas.actual_formulaSix_invariant_extension: own actual section invariance proof",
+    "ClassicalInputs.three_fibration_component_alternatives: own original-triple wrapper, no pair-specific family/component-hyperbolicity premise",
+    "double_kodaira_attains_bound: own sharpness deduction for the same actual surface X"
+  ],
+  "source_translation_cautions": [
+    "Dinh–Sibony printed pp.115–118 correspond to zero-based PDF pages114–117. In particular normalization A.1.4/ExampleA.1.5 is printed117 and connected-complement ExerciseA.1.4 printed118.",
+    "Grauert–Remmert published chapter metadata is body-unverified; Gui gives a precise verified primary exposition. Do not promote metadata to a checked theorem statement.",
+    "Forstnerič2018 p2987 directly verifies open-surface bundle triviality. Cartan-B splitting and exact-sequence packaging are standard additional theorem consequences; no invented numbered anchor.",
+    "Lee Proposition4.46 and an exact tubular-neighbourhood numbered body remain unverified. Hatcher covering lift criterion is verified.",
+    "General LaurentSectionExtension is a parametric Laurent-removal+sheaf consequence. Scalar removable theorem alone does not verbatim supply the full bundle statement.",
+    "Kodaira actual fibre-model variation matches the nonisotrivial family meaning; hyperbolic base is a separate external theorem, not a definition field.",
+    "Zaal total B is possibly reducible and total degree64 must not be silently assigned to a connected component.",
+    "Proposition 2.4 is represented by actual critical support, all actual cyclic-chart Jacobian orders and honest normal cocycle degree. A global surface-Divisor/intersection pairing API is not separately implemented; do not claim that such a library was built."
+  ]
+}

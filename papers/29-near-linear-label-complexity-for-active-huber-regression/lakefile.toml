@@ -1,0 +1,45 @@
+name = "paper29"
+version = "0.1.0"
+defaultTargets = ["Paper29"]
+
+[[lean_lib]]
+name = "Paper29"
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
+
+
+[[lean_lib]]
+name = "Verification"
+roots = ["Verification.Solution"]
+globs = ["Verification.Challenge", "Verification.Solution"]
+
+[[lean_lib]]
+name = "VerificationChallenge"
+roots = ["Verification.Challenge"]
+
+[[lean_lib]]
+name = "VerificationNegativePremise"
+roots = ["Verification.NegativePremise"]
+
+[[lean_lib]]
+name = "VerificationNegativeAxiom"
+roots = ["Verification.NegativeAxiom"]
+
+[[lean_lib]]
+name = "VerificationExpandedChallenge"
+roots = ["Verification.ExpandedChallenge"]
+
+[[lean_lib]]
+name = "VerificationExpandedSolution"
+roots = ["Verification.ExpandedSolution"]
+
+[[lean_lib]]
+name = "VerificationWholeChallenge"
+roots = ["Verification.WholeChallenge"]
+
+[[lean_lib]]
+name = "VerificationWholeSolution"
+roots = ["Verification.WholeSolution"]

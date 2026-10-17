@@ -1,0 +1,113 @@
+{
+  "paper_id": "23",
+  "title": "Order-six torsion in an ordered graph configuration space",
+  "source_url": "https://liuchliuch.github.io/repository/order-six-torsion-in-an-ordered-graph-configuration-space/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper23",
+    "Verification.Audit",
+    "Verification.RelativeSolution",
+    "Verification.Solution"
+  ],
+  "build_targets": [
+    "Paper23",
+    "Verification"
+  ],
+  "comparators": [
+    {
+      "id": "relative-main",
+      "config": "Verification/relative-main-comparator.json",
+      "expected_rejection": null,
+      "scope": "Concrete exact-order6 class and multiples of orders3/2 in actual integral singular H2 of the original four-particle ordered space, relative to the two disclosed topology inputs.",
+      "availability": "available"
+    },
+    {
+      "id": "auxiliary",
+      "config": "Verification/auxiliary-comparator.json",
+      "expected_rejection": null,
+      "scope": "Thirteen generic certificate, cubical-boundary, lift/cancellation and actual closed-cell carrier contracts; auxiliary scope only.",
+      "availability": "available"
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/relative-main-negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Real extra premise in the main relative theorem.",
+      "availability": "available"
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/relative-main-negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Real unauthorized axiom in the main relative theorem.",
+      "availability": "available"
+    },
+    {
+      "id": "auxiliary-negative-premise",
+      "config": "Verification/auxiliary-negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Real extra premise in the auxiliary contracts.",
+      "availability": "available"
+    },
+    {
+      "id": "auxiliary-negative-axiom",
+      "config": "Verification/auxiliary-negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Real unauthorized axiom in the auxiliary contracts.",
+      "availability": "available"
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1, discrete certificate",
+      "declaration": "Paper23.discrete_result",
+      "scope": "An explicit class of exact order 6 and multiples of orders 3 and 2 in the actual ordered-cube cycles/boundaries quotient, without a certificate premise."
+    },
+    {
+      "source_result": "Theorem 1, source space",
+      "declaration": "Paper23.main_result",
+      "scope": "The corresponding class in integral singular H₂ of four ordered particles on the six-vertex, thirteen-edge core multigraph, relative to PrueScrimshawH2Input and OrderedCubicalComparisonInput."
+    },
+    {
+      "source_result": "Simple presentation",
+      "declaration": "Paper23.simple_presentation_result",
+      "scope": "The same order assertions for the homeomorphic eight-vertex, fifteen-edge simple graph presentation, relative to the two topology inputs."
+    },
+    {
+      "source_result": "Subdivision and graph hypotheses",
+      "declaration": "Paper23.GraphGirth.fourParticleConditions",
+      "scope": "Connectedness, special-vertex path lengths and girth conditions for the explicit thirty-two-vertex, thirty-nine-edge subdivision."
+    }
+  ],
+  "preparation": [
+    {
+      "kind": "generated_certificate_check_sources",
+      "manifest": "generated-artifacts.json",
+      "plan_command": [
+        "python3",
+        "../../scripts/prepare.py",
+        "--paper",
+        "23"
+      ],
+      "execute_command": [
+        "python3",
+        "../../scripts/prepare.py",
+        "--paper",
+        "23",
+        "--execute"
+      ],
+      "check_command": [
+        "python3",
+        "../../scripts/prepare.py",
+        "--paper",
+        "23",
+        "--check"
+      ],
+      "generation_status": "not_run"
+    }
+  ],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "source_html_sha256": "c1c49e68644c33aa49728c07cb1d63184b2d7540a8b2408cc67e80ef244997df",
+  "generated_artifacts": "generated-artifacts.json",
+  "primary_comparator": "relative-main"
+}

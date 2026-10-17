@@ -1,0 +1,57 @@
+{
+  "paper_id": "34",
+  "title": "Scale-Independent Robust Multivariate Polynomial Regression",
+  "source_url": "https://liuchliuch.github.io/repository/optimal-sample-scale-independent-robust-multivariate-polynomial-regression/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper34"
+  ],
+  "build_targets": [
+    "Paper34"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "66 fixed explicit source-result/algorithm/probability/complexity and appendix contracts; includes the actual Theorem 1.1 recovery endpoints."
+    },
+    {
+      "id": "negative-added-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Full Theorem 1.1 Chebyshev contract with an extra False premise."
+    },
+    {
+      "id": "negative-illegal-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Full unchanged Theorem 1.1 Chebyshev contract using a fresh forbidden axiom."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1.1, Chebyshev design",
+      "declaration": "Paper34.theorem_1_1_chebyshev",
+      "scope": "Fixed-budget polynomial recovery under iid Chebyshev-design locations and independent label outliers, conditional on ClassicalTrigBernstein."
+    },
+    {
+      "source_result": "Theorem 1.1, uniform design",
+      "declaration": "Paper34.theorem_1_1_uniform",
+      "scope": "Uniform-cube polynomial recovery with explicit grid/sample ceilings and iteration budget, conditional on ClassicalTrigBernstein and independent label outliers."
+    },
+    {
+      "source_result": "Source computational claim",
+      "declaration": "Paper34.source_outside_finite_loop_polynomial",
+      "scope": "Polynomial outside-loop arithmetic and LP call bounds in the exact-real LP-oracle model; no finite-precision bit-complexity guarantee."
+    },
+    {
+      "source_result": "Appendix A",
+      "declaration": "Paper34.AppendixSpaces.restricted_source_chebyshev",
+      "scope": "Total-degree restricted polynomial recovery and probability rates under Chebyshev sampling, independent label outliers and ClassicalTrigBernstein."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "primary_comparator": "main"
+}

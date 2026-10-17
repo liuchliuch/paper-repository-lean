@@ -1,0 +1,175 @@
+import Paper20.Certs.RContent36.B12C01
+set_option maxHeartbeats 0
+set_option maxRecDepth 200000
+namespace Paper20.Cert.RContent36.Tree
+open Paper20.RContent36
+open Paper20.HilbertJobs (Job parts children)
+
+def j_12_11_4_4 : Job := ⟨[12, 11, 4, 4], 4, 5, 33⟩
+
+def v_12_11_4_4 : State := @@GENERATED_RHS:v_12_11_4_4@@
+
+theorem correct_12_11_4_4 : Correct j_12_11_4_4 v_12_11_4_4 := correct_leaf j_12_11_4_4 v_12_11_4_4 (by decide +kernel)
+
+def j_12_11_4_3 : Job := ⟨[12, 11, 4, 3], 3, 6, 33⟩
+
+def v_12_11_4_3 : State := @@GENERATED_RHS:v_12_11_4_3@@
+
+theorem correct_12_11_4_3 : Correct j_12_11_4_3 v_12_11_4_3 := correct_leaf j_12_11_4_3 v_12_11_4_3 (by decide +kernel)
+
+def j_12_11_4_2 : Job := ⟨[12, 11, 4, 2], 2, 7, 33⟩
+
+def v_12_11_4_2 : State := @@GENERATED_RHS:v_12_11_4_2@@
+
+theorem correct_12_11_4_2 : Correct j_12_11_4_2 v_12_11_4_2 := correct_leaf j_12_11_4_2 v_12_11_4_2 (by decide +kernel)
+
+def j_12_11_4_1 : Job := ⟨[12, 11, 4, 1], 1, 8, 33⟩
+
+def v_12_11_4_1 : State := @@GENERATED_RHS:v_12_11_4_1@@
+
+theorem correct_12_11_4_1 : Correct j_12_11_4_1 v_12_11_4_1 := correct_leaf j_12_11_4_1 v_12_11_4_1 (by decide +kernel)
+
+def j_12_11_4 : Job := ⟨[12, 11, 4], 4, 9, 34⟩
+
+def v_12_11_4 : State := @@GENERATED_RHS:v_12_11_4@@
+
+theorem correct_12_11_4 : Correct j_12_11_4 v_12_11_4 := by
+  have hc : children j_12_11_4 = [j_12_11_4_4, j_12_11_4_3, j_12_11_4_2, j_12_11_4_1] := by decide +kernel
+  have hv : List.Forall₂ Correct (children j_12_11_4) [v_12_11_4_4, v_12_11_4_3, v_12_11_4_2, v_12_11_4_1] := by
+    rw [hc]
+    exact (List.Forall₂.cons correct_12_11_4_4 (List.Forall₂.cons correct_12_11_4_3 (List.Forall₂.cons correct_12_11_4_2 (List.Forall₂.cons correct_12_11_4_1 List.Forall₂.nil))))
+  have hp := correct_children j_12_11_4 (by decide) (by decide) [v_12_11_4_4, v_12_11_4_3, v_12_11_4_2, v_12_11_4_1] hv
+  have he : combine [v_12_11_4_4, v_12_11_4_3, v_12_11_4_2, v_12_11_4_1] = v_12_11_4 := by decide +kernel
+  rwa [he] at hp
+
+def j_12_11_3_3 : Job := ⟨[12, 11, 3, 3], 3, 7, 33⟩
+
+def v_12_11_3_3 : State := @@GENERATED_RHS:v_12_11_3_3@@
+
+theorem correct_12_11_3_3 : Correct j_12_11_3_3 v_12_11_3_3 := correct_leaf j_12_11_3_3 v_12_11_3_3 (by decide +kernel)
+
+def j_12_11_3_2 : Job := ⟨[12, 11, 3, 2], 2, 8, 33⟩
+
+def v_12_11_3_2 : State := @@GENERATED_RHS:v_12_11_3_2@@
+
+theorem correct_12_11_3_2 : Correct j_12_11_3_2 v_12_11_3_2 := correct_leaf j_12_11_3_2 v_12_11_3_2 (by decide +kernel)
+
+def j_12_11_3_1 : Job := ⟨[12, 11, 3, 1], 1, 9, 33⟩
+
+def v_12_11_3_1 : State := @@GENERATED_RHS:v_12_11_3_1@@
+
+theorem correct_12_11_3_1 : Correct j_12_11_3_1 v_12_11_3_1 := correct_leaf j_12_11_3_1 v_12_11_3_1 (by decide +kernel)
+
+def j_12_11_3 : Job := ⟨[12, 11, 3], 3, 10, 34⟩
+
+def v_12_11_3 : State := @@GENERATED_RHS:v_12_11_3@@
+
+theorem correct_12_11_3 : Correct j_12_11_3 v_12_11_3 := by
+  have hc : children j_12_11_3 = [j_12_11_3_3, j_12_11_3_2, j_12_11_3_1] := by decide +kernel
+  have hv : List.Forall₂ Correct (children j_12_11_3) [v_12_11_3_3, v_12_11_3_2, v_12_11_3_1] := by
+    rw [hc]
+    exact (List.Forall₂.cons correct_12_11_3_3 (List.Forall₂.cons correct_12_11_3_2 (List.Forall₂.cons correct_12_11_3_1 List.Forall₂.nil)))
+  have hp := correct_children j_12_11_3 (by decide) (by decide) [v_12_11_3_3, v_12_11_3_2, v_12_11_3_1] hv
+  have he : combine [v_12_11_3_3, v_12_11_3_2, v_12_11_3_1] = v_12_11_3 := by decide +kernel
+  rwa [he] at hp
+
+def j_12_11_2 : Job := ⟨[12, 11, 2], 2, 11, 34⟩
+
+def v_12_11_2 : State := @@GENERATED_RHS:v_12_11_2@@
+
+theorem correct_12_11_2 : Correct j_12_11_2 v_12_11_2 := correct_leaf j_12_11_2 v_12_11_2 (by decide +kernel)
+
+def j_12_11_1 : Job := ⟨[12, 11, 1], 1, 12, 34⟩
+
+def v_12_11_1 : State := @@GENERATED_RHS:v_12_11_1@@
+
+theorem correct_12_11_1 : Correct j_12_11_1 v_12_11_1 := correct_leaf j_12_11_1 v_12_11_1 (by decide +kernel)
+
+def j_12_11 : Job := ⟨[12, 11], 11, 13, 35⟩
+
+def v_12_11_row000 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row000@@
+def v_12_11_row001 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row001@@
+def v_12_11_row002 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row002@@
+def v_12_11_row003 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row003@@
+def v_12_11_row004 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row004@@
+def v_12_11_row005 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row005@@
+def v_12_11_row006 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row006@@
+def v_12_11_row007 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row007@@
+def v_12_11_row008 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row008@@
+def v_12_11_row009 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row009@@
+def v_12_11_row010 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row010@@
+def v_12_11_row011 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row011@@
+def v_12_11_row012 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row012@@
+def v_12_11_row013 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row013@@
+def v_12_11_row014 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row014@@
+def v_12_11_row015 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row015@@
+def v_12_11_row016 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row016@@
+def v_12_11_row017 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row017@@
+def v_12_11_row018 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row018@@
+def v_12_11_row019 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row019@@
+def v_12_11_row020 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row020@@
+def v_12_11_row021 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row021@@
+def v_12_11_row022 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row022@@
+def v_12_11_row023 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row023@@
+def v_12_11_row024 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row024@@
+def v_12_11_row025 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row025@@
+def v_12_11_row026 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row026@@
+def v_12_11_row027 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row027@@
+def v_12_11_row028 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row028@@
+def v_12_11_row029 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row029@@
+def v_12_11_row030 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row030@@
+def v_12_11_row031 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row031@@
+def v_12_11_row032 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row032@@
+def v_12_11_row033 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row033@@
+def v_12_11_row034 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row034@@
+def v_12_11_row035 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row035@@
+def v_12_11_row036 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row036@@
+def v_12_11_row037 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row037@@
+def v_12_11_row038 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row038@@
+def v_12_11_row039 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row039@@
+def v_12_11_row040 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row040@@
+def v_12_11_row041 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row041@@
+def v_12_11_row042 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row042@@
+def v_12_11_row043 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row043@@
+def v_12_11_row044 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row044@@
+def v_12_11_row045 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row045@@
+def v_12_11_row046 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row046@@
+def v_12_11_row047 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row047@@
+def v_12_11_row048 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row048@@
+def v_12_11_row049 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row049@@
+def v_12_11_row050 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row050@@
+def v_12_11_row051 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row051@@
+def v_12_11_row052 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row052@@
+def v_12_11_row053 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row053@@
+def v_12_11_row054 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row054@@
+def v_12_11_row055 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row055@@
+def v_12_11_row056 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row056@@
+def v_12_11_row057 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row057@@
+def v_12_11_row058 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row058@@
+def v_12_11_row059 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row059@@
+def v_12_11_row060 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row060@@
+def v_12_11_row061 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row061@@
+def v_12_11_row062 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row062@@
+def v_12_11_row063 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row063@@
+def v_12_11_row064 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row064@@
+def v_12_11_row065 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row065@@
+def v_12_11_row066 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row066@@
+def v_12_11_row067 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row067@@
+def v_12_11_row068 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row068@@
+def v_12_11_row069 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row069@@
+def v_12_11_row070 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row070@@
+def v_12_11_row071 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row071@@
+def v_12_11_row072 : ℕ × List ℤ := @@GENERATED_RHS:v_12_11_row072@@
+
+def v_12_11 : State := [v_12_11_row000, v_12_11_row001, v_12_11_row002, v_12_11_row003, v_12_11_row004, v_12_11_row005, v_12_11_row006, v_12_11_row007, v_12_11_row008, v_12_11_row009, v_12_11_row010, v_12_11_row011, v_12_11_row012, v_12_11_row013, v_12_11_row014, v_12_11_row015, v_12_11_row016, v_12_11_row017, v_12_11_row018, v_12_11_row019, v_12_11_row020, v_12_11_row021, v_12_11_row022, v_12_11_row023, v_12_11_row024, v_12_11_row025, v_12_11_row026, v_12_11_row027, v_12_11_row028, v_12_11_row029, v_12_11_row030, v_12_11_row031, v_12_11_row032, v_12_11_row033, v_12_11_row034, v_12_11_row035, v_12_11_row036, v_12_11_row037, v_12_11_row038, v_12_11_row039, v_12_11_row040, v_12_11_row041, v_12_11_row042, v_12_11_row043, v_12_11_row044, v_12_11_row045, v_12_11_row046, v_12_11_row047, v_12_11_row048, v_12_11_row049, v_12_11_row050, v_12_11_row051, v_12_11_row052, v_12_11_row053, v_12_11_row054, v_12_11_row055, v_12_11_row056, v_12_11_row057, v_12_11_row058, v_12_11_row059, v_12_11_row060, v_12_11_row061, v_12_11_row062, v_12_11_row063, v_12_11_row064, v_12_11_row065, v_12_11_row066, v_12_11_row067, v_12_11_row068, v_12_11_row069, v_12_11_row070, v_12_11_row071, v_12_11_row072]
+
+theorem correct_12_11 : Correct j_12_11 v_12_11 := by
+  have hc : children j_12_11 = [j_12_11_11, j_12_11_10, j_12_11_9, j_12_11_8, j_12_11_7, j_12_11_6, j_12_11_5, j_12_11_4, j_12_11_3, j_12_11_2, j_12_11_1] := by decide +kernel
+  have hv : List.Forall₂ Correct (children j_12_11) [v_12_11_11, v_12_11_10, v_12_11_9, v_12_11_8, v_12_11_7, v_12_11_6, v_12_11_5, v_12_11_4, v_12_11_3, v_12_11_2, v_12_11_1] := by
+    rw [hc]
+    exact (List.Forall₂.cons correct_12_11_11 (List.Forall₂.cons correct_12_11_10 (List.Forall₂.cons correct_12_11_9 (List.Forall₂.cons correct_12_11_8 (List.Forall₂.cons correct_12_11_7 (List.Forall₂.cons correct_12_11_6 (List.Forall₂.cons correct_12_11_5 (List.Forall₂.cons correct_12_11_4 (List.Forall₂.cons correct_12_11_3 (List.Forall₂.cons correct_12_11_2 (List.Forall₂.cons correct_12_11_1 List.Forall₂.nil)))))))))))
+  have hp := correct_children j_12_11 (by decide) (by decide) [v_12_11_11, v_12_11_10, v_12_11_9, v_12_11_8, v_12_11_7, v_12_11_6, v_12_11_5, v_12_11_4, v_12_11_3, v_12_11_2, v_12_11_1] hv
+  have he : combine [v_12_11_11, v_12_11_10, v_12_11_9, v_12_11_8, v_12_11_7, v_12_11_6, v_12_11_5, v_12_11_4, v_12_11_3, v_12_11_2, v_12_11_1] = v_12_11 := by decide +kernel
+  rwa [he] at hp
+
+end Paper20.Cert.RContent36.Tree

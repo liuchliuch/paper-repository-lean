@@ -1,0 +1,1284 @@
+import Paper23.Bounding.Canon016
+import Paper23.Bounding.Canon017
+import Paper23.Bounding.Canon019
+import Paper23.Bounding.Canon020
+import Paper23.Bounding.Canon021
+import Paper23.Bounding.Canon023
+import Paper23.Bounding.Canon024
+import Paper23.Bounding.Canon025
+import Paper23.Bounding.Canon026
+import Paper23.Bounding.Canon027
+import Paper23.Bounding.Canon028
+import Paper23.Bounding.Canon030
+import Paper23.Bounding.Canon032
+import Paper23.Bounding.Canon033
+import Paper23.Bounding.Canon034
+import Paper23.Bounding.Canon036
+import Paper23.Bounding.Canon037
+import Paper23.Bounding.Canon038
+import Paper23.Bounding.Canon039
+import Paper23.Bounding.Canon040
+import Paper23.Bounding.Canon042
+import Paper23.Bounding.Canon043
+import Paper23.Bounding.Canon047
+import Paper23.Bounding.Canon048
+import Paper23.Bounding.Canon049
+import Paper23.Bounding.Canon052
+import Paper23.Bounding.Canon053
+import Paper23.Bounding.Canon054
+import Paper23.Bounding.Canon059
+import Paper23.Bounding.Canon060
+import Paper23.Bounding.Canon069
+import Paper23.Bounding.Canon071
+import Paper23.Bounding.Canon074
+import Paper23.Bounding.Canon075
+import Paper23.Bounding.Canon076
+import Paper23.Bounding.Canon078
+import Paper23.BoundingSupport
+import Paper23.CertificateChecks
+set_option maxRecDepth 1000000
+set_option maxHeartbeats 0
+namespace Paper23.Bounding
+open Cubical CertificateData CertificateChecks
+attribute [local irreducible] codeChain
+noncomputable def boundingEntries2016 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingEntries2016@@
+theorem boundingLeaf2016_valid : ∀ p ∈ boundingEntries2016, ValidThree p.1 := by
+  simp only [boundingEntries2016, List.forall_mem_cons]
+  exact ⟨validThree_of_perm 13615583 911353 (by decide +kernel) boundingCanonical2697,
+    validThree_of_perm 13615585 911495 (by decide +kernel) boundingCanonical2705,
+    validThree_of_perm 13615588 911708 (by decide +kernel) boundingCanonical2715,
+    validThree_of_perm 13615589 911779 (by decide +kernel) boundingCanonical2718,
+    validThree_of_perm 13615593 912063 (by decide +kernel) boundingCanonical2724,
+    validThree_of_perm 13615594 912134 (by decide +kernel) boundingCanonical2726,
+    validThree_of_perm 13615635 900065 (by decide +kernel) boundingCanonical2444,
+    validThree_of_perm 13615641 910431 (by decide +kernel) boundingCanonical2646,
+    validThree_of_perm 13615646 910786 (by decide +kernel) boundingCanonical2662,
+    validThree_of_perm 13615647 910857 (by decide +kernel) boundingCanonical2670,
+    validThree_of_perm 13615648 910928 (by decide +kernel) boundingCanonical2678,
+    validThree_of_perm 13615653 911283 (by decide +kernel) boundingCanonical2695,
+    validThree_of_perm 13615654 911354 (by decide +kernel) boundingCanonical2698,
+    validThree_of_perm 13615656 911496 (by decide +kernel) boundingCanonical2706,
+    validThree_of_perm 13615659 911709 (by decide +kernel) boundingCanonical2716,
+    validThree_of_perm 13615664 912064 (by decide +kernel) boundingCanonical2725,
+    validThree_of_perm 13615665 912135 (by decide +kernel) boundingCanonical2727,
+    validThree_of_perm 13615703 884943 (by decide +kernel) boundingCanonical2121,
+    validThree_of_perm 13615704 889984 (by decide +kernel) boundingCanonical2240,
+    validThree_of_perm 13615706 900066 (by decide +kernel) boundingCanonical2445,
+    validThree_of_perm 13615710 910290 (by decide +kernel) boundingCanonical2640,
+    validThree_of_perm 13615712 910432 (by decide +kernel) boundingCanonical2647,
+    validThree_of_perm 13615717 910787 (by decide +kernel) boundingCanonical2663,
+    validThree_of_perm 13615718 910858 (by decide +kernel) boundingCanonical2671,
+    validThree_of_perm 13615719 910929 (by decide +kernel) boundingCanonical2679,
+    validThree_of_perm 13615725 911355 (by decide +kernel) boundingCanonical2699,
+    validThree_of_perm 13615727 911497 (by decide +kernel) boundingCanonical2707,
+    validThree_of_perm 13615736 912136 (by decide +kernel) boundingCanonical2728,
+    validThree_of_perm 13618120 1242680 (by decide +kernel) boundingCanonical3036,
+    validThree_of_perm 13618121 1242751 (by decide +kernel) boundingCanonical3048,
+    validThree_of_perm 13618124 1242824 (by decide +kernel) boundingCanonical3060,
+    validThree_of_perm 13618137 1242837 (by decide +kernel) boundingCanonical3061,
+    validThree_of_perm 13618142 1242842 (by decide +kernel) boundingCanonical3062,
+    validThree_of_perm 13618153 1242853 (by decide +kernel) boundingCanonical3063,
+    validThree_of_perm 13618198 1247868 (by decide +kernel) boundingCanonical3157,
+    validThree_of_perm 13618208 1247878 (by decide +kernel) boundingCanonical3158,
+    validThree_of_perm 13618213 1247883 (by decide +kernel) boundingCanonical3159,
+    validThree_of_perm 13618214 1247884 (by decide +kernel) boundingCanonical3160,
+    validThree_of_perm 13618215 1247885 (by decide +kernel) boundingCanonical3161,
+    validThree_of_perm 13618330 1242680 (by decide +kernel) boundingCanonical3036,
+    validThree_of_perm 13618339 1257949 (by decide +kernel) boundingCanonical3323,
+    validThree_of_perm 13618340 1257950 (by decide +kernel) boundingCanonical3324,
+    validThree_of_perm 13618344 1257954 (by decide +kernel) boundingCanonical3325,
+    validThree_of_perm 13618345 1257955 (by decide +kernel) boundingCanonical3326,
+    validThree_of_perm 13618346 1257956 (by decide +kernel) boundingCanonical3327,
+    validThree_of_perm 13618347 1257957 (by decide +kernel) boundingCanonical3328,
+    validThree_of_perm 13618348 1257958 (by decide +kernel) boundingCanonical3329,
+    validThree_of_perm 13618349 1257959 (by decide +kernel) boundingCanonical3330,
+    validThree_of_perm 13618356 1257966 (by decide +kernel) boundingCanonical3331,
+    validThree_of_perm 13618357 1257967 (by decide +kernel) boundingCanonical3332,
+    validThree_of_perm 13618360 1257970 (by decide +kernel) boundingCanonical3333,
+    validThree_of_perm 13618361 1257971 (by decide +kernel) boundingCanonical3334,
+    validThree_of_perm 13618366 1257976 (by decide +kernel) boundingCanonical3335,
+    validThree_of_perm 13618367 1257977 (by decide +kernel) boundingCanonical3336,
+    validThree_of_perm 13618401 1242751 (by decide +kernel) boundingCanonical3048,
+    validThree_of_perm 13618411 1262991 (by decide +kernel) boundingCanonical3452,
+    validThree_of_perm 13618417 1262997 (by decide +kernel) boundingCanonical3453,
+    validThree_of_perm 13618428 1263008 (by decide +kernel) boundingCanonical3454,
+    validThree_of_perm 13618614 1242824 (by decide +kernel) boundingCanonical3060,
+    validThree_of_perm 13618637 1268187 (by decide +kernel) boundingCanonical3523,
+    validThree_of_perm 13618651 1268201 (by decide +kernel) boundingCanonical3526,
+    validThree_of_perm 13618759 1257949 (by decide +kernel) boundingCanonical3323,
+    validThree_of_perm 13618770 1268320 (by decide +kernel) boundingCanonical3527,
+    validThree_of_perm 13618771 1268321 (by decide +kernel) boundingCanonical3528,
+    by simp⟩
+theorem boundingLeaf2016_mem : codeChain boundingEntries2016 ∈ Chains 3 := codeChain_mem_three _ boundingLeaf2016_valid
+noncomputable def boundingLeaf2016Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2016Part0@@
+noncomputable def boundingLeaf2016Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2016Part1@@
+noncomputable def boundingLeaf2016 : List (ℕ × ℤ) := boundingLeaf2016Part0 ++ boundingLeaf2016Part1
+theorem boundingLeaf2016_check :
+    collapse 10 (((codeDifferential boundingEntries2016) ++ scaleEntries (Int.negSucc 5) ([] : List (ℕ × ℤ))).map
+      (fun p => [p])) = [boundingLeaf2016] := by decide +kernel
+ theorem boundingLeaf2016_chain : codeChain boundingLeaf2016 =
+    boundary (codeChain boundingEntries2016) + (-6 : ℤ) • (0 : RawChain) := by
+  simpa only [codeChain_nil] using (leaf_sound 10 boundingEntries2016 ([] : List (ℕ × ℤ)) boundingLeaf2016 boundingLeaf2016_valid boundingLeaf2016_check)
+noncomputable def boundingEntries2017 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingEntries2017@@
+theorem boundingLeaf2017_valid : ∀ p ∈ boundingEntries2017, ValidThree p.1 := by
+  simp only [boundingEntries2017, List.forall_mem_cons]
+  exact ⟨validThree_of_perm 13618772 1268322 (by decide +kernel) boundingCanonical3529,
+    validThree_of_perm 13618828 1247868 (by decide +kernel) boundingCanonical3157,
+    validThree_of_perm 13618830 1257950 (by decide +kernel) boundingCanonical3324,
+    validThree_of_perm 13618831 1262991 (by decide +kernel) boundingCanonical3452,
+    validThree_of_perm 13618843 1268393 (by decide +kernel) boundingCanonical3531,
+    validThree_of_perm 13618862 1268412 (by decide +kernel) boundingCanonical3534,
+    validThree_of_perm 13618863 1268413 (by decide +kernel) boundingCanonical3535,
+    validThree_of_perm 13618864 1268414 (by decide +kernel) boundingCanonical3536,
+    validThree_of_perm 13619114 1257954 (by decide +kernel) boundingCanonical3325,
+    validThree_of_perm 13619120 1268320 (by decide +kernel) boundingCanonical3527,
+    validThree_of_perm 13619134 1268684 (by decide +kernel) boundingCanonical3541,
+    validThree_of_perm 13619135 1268685 (by decide +kernel) boundingCanonical3542,
+    validThree_of_perm 13619146 1268696 (by decide +kernel) boundingCanonical3544,
+    validThree_of_perm 13619185 1257955 (by decide +kernel) boundingCanonical3326,
+    validThree_of_perm 13619191 1268321 (by decide +kernel) boundingCanonical3528,
+    validThree_of_perm 13619208 1268758 (by decide +kernel) boundingCanonical3548,
+    validThree_of_perm 13619210 1268760 (by decide +kernel) boundingCanonical3549,
+    validThree_of_perm 13619256 1257956 (by decide +kernel) boundingCanonical3327,
+    validThree_of_perm 13619257 1262997 (by decide +kernel) boundingCanonical3453,
+    validThree_of_perm 13619262 1268322 (by decide +kernel) boundingCanonical3529,
+    validThree_of_perm 13619263 1268393 (by decide +kernel) boundingCanonical3531,
+    validThree_of_perm 13619281 1268831 (by decide +kernel) boundingCanonical3550,
+    validThree_of_perm 13619327 1257957 (by decide +kernel) boundingCanonical3328,
+    validThree_of_perm 13619358 1268908 (by decide +kernel) boundingCanonical3554,
+    validThree_of_perm 13619398 1257958 (by decide +kernel) boundingCanonical3329,
+    validThree_of_perm 13619421 1268971 (by decide +kernel) boundingCanonical3558,
+    validThree_of_perm 13619428 1268978 (by decide +kernel) boundingCanonical3559,
+    validThree_of_perm 13619469 1257959 (by decide +kernel) boundingCanonical3330,
+    validThree_of_perm 13619492 1269042 (by decide +kernel) boundingCanonical3563,
+    validThree_of_perm 13619537 1242837 (by decide +kernel) boundingCanonical3061,
+    validThree_of_perm 13619538 1247878 (by decide +kernel) boundingCanonical3158,
+    validThree_of_perm 13619757 1268187 (by decide +kernel) boundingCanonical3523,
+    validThree_of_perm 13619759 1268329 (by decide +kernel) boundingCanonical3530,
+    validThree_of_perm 13619764 1268684 (by decide +kernel) boundingCanonical3541,
+    validThree_of_perm 13619783 1269333 (by decide +kernel) boundingCanonical3572,
+    validThree_of_perm 13619784 1269334 (by decide +kernel) boundingCanonical3573,
+    validThree_of_perm 13619831 1268401 (by decide +kernel) boundingCanonical3532,
+    validThree_of_perm 13619835 1268685 (by decide +kernel) boundingCanonical3542,
+    validThree_of_perm 13619841 1269111 (by decide +kernel) boundingCanonical3565,
+    validThree_of_perm 13619847 1269397 (by decide +kernel) boundingCanonical3577,
+    validThree_of_perm 13619848 1269398 (by decide +kernel) boundingCanonical3578,
+    validThree_of_perm 13619849 1269399 (by decide +kernel) boundingCanonical3579,
+    validThree_of_perm 13619854 1269404 (by decide +kernel) boundingCanonical3580,
+    validThree_of_perm 13619855 1269405 (by decide +kernel) boundingCanonical3581,
+    validThree_of_perm 13619892 1242842 (by decide +kernel) boundingCanonical3062,
+    validThree_of_perm 13619893 1247883 (by decide +kernel) boundingCanonical3159,
+    validThree_of_perm 13619902 1268402 (by decide +kernel) boundingCanonical3533,
+    validThree_of_perm 13619912 1269112 (by decide +kernel) boundingCanonical3566,
+    validThree_of_perm 13619918 1269468 (by decide +kernel) boundingCanonical3585,
+    validThree_of_perm 13619919 1269469 (by decide +kernel) boundingCanonical3586,
+    validThree_of_perm 13619920 1269470 (by decide +kernel) boundingCanonical3587,
+    validThree_of_perm 13619926 1269476 (by decide +kernel) boundingCanonical3589,
+    validThree_of_perm 13619964 1247884 (by decide +kernel) boundingCanonical3160,
+    validThree_of_perm 13619966 1257966 (by decide +kernel) boundingCanonical3331,
+    validThree_of_perm 13619978 1268758 (by decide +kernel) boundingCanonical3548,
+    validThree_of_perm 13619988 1269468 (by decide +kernel) boundingCanonical3585,
+    validThree_of_perm 13619997 1269547 (by decide +kernel) boundingCanonical3593,
+    validThree_of_perm 13619998 1269548 (by decide +kernel) boundingCanonical3594,
+    validThree_of_perm 13620035 1247885 (by decide +kernel) boundingCanonical3161,
+    validThree_of_perm 13620037 1257967 (by decide +kernel) boundingCanonical3332,
+    validThree_of_perm 13620038 1263008 (by decide +kernel) boundingCanonical3454,
+    validThree_of_perm 13620054 1269114 (by decide +kernel) boundingCanonical3567,
+    validThree_of_perm 13620068 1269618 (by decide +kernel) boundingCanonical3597,
+    validThree_of_perm 13620120 1268760 (by decide +kernel) boundingCanonical3549,
+    by simp⟩
+theorem boundingLeaf2017_mem : codeChain boundingEntries2017 ∈ Chains 3 := codeChain_mem_three _ boundingLeaf2017_valid
+noncomputable def boundingLeaf2017Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2017Part0@@
+noncomputable def boundingLeaf2017Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2017Part1@@
+noncomputable def boundingLeaf2017 : List (ℕ × ℤ) := boundingLeaf2017Part0 ++ boundingLeaf2017Part1
+theorem boundingLeaf2017_check :
+    collapse 10 (((codeDifferential boundingEntries2017) ++ scaleEntries (Int.negSucc 5) ([] : List (ℕ × ℤ))).map
+      (fun p => [p])) = [boundingLeaf2017] := by decide +kernel
+ theorem boundingLeaf2017_chain : codeChain boundingLeaf2017 =
+    boundary (codeChain boundingEntries2017) + (-6 : ℤ) • (0 : RawChain) := by
+  simpa only [codeChain_nil] using (leaf_sound 10 boundingEntries2017 ([] : List (ℕ × ℤ)) boundingLeaf2017 boundingLeaf2017_valid boundingLeaf2017_check)
+noncomputable def boundingEntries2018 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingEntries2018@@
+theorem boundingLeaf2018_valid : ∀ p ∈ boundingEntries2018, ValidThree p.1 := by
+  simp only [boundingEntries2018, List.forall_mem_cons]
+  exact ⟨validThree_of_perm 13620121 1268831 (by decide +kernel) boundingCanonical3550,
+    validThree_of_perm 13620125 1269115 (by decide +kernel) boundingCanonical3568,
+    validThree_of_perm 13620129 1269399 (by decide +kernel) boundingCanonical3579,
+    validThree_of_perm 13620130 1269470 (by decide +kernel) boundingCanonical3587,
+    validThree_of_perm 13620250 1257970 (by decide +kernel) boundingCanonical3333,
+    validThree_of_perm 13620321 1257971 (by decide +kernel) boundingCanonical3334,
+    validThree_of_perm 13620612 1268412 (by decide +kernel) boundingCanonical3534,
+    validThree_of_perm 13620616 1268696 (by decide +kernel) boundingCanonical3544,
+    validThree_of_perm 13620628 1269548 (by decide +kernel) boundingCanonical3594,
+    validThree_of_perm 13620635 1270045 (by decide +kernel) boundingCanonical3600,
+    validThree_of_perm 13620673 1242853 (by decide +kernel) boundingCanonical3063,
+    validThree_of_perm 13620676 1257976 (by decide +kernel) boundingCanonical3335,
+    validThree_of_perm 13620683 1268413 (by decide +kernel) boundingCanonical3535,
+    validThree_of_perm 13620706 1270046 (by decide +kernel) boundingCanonical3601,
+    validThree_of_perm 13620747 1257977 (by decide +kernel) boundingCanonical3336,
+    validThree_of_perm 13620751 1268201 (by decide +kernel) boundingCanonical3526,
+    validThree_of_perm 13620754 1268414 (by decide +kernel) boundingCanonical3536,
+    validThree_of_perm 13623161 1600591 (by decide +kernel) boundingCanonical3850,
+    validThree_of_perm 13623162 1600662 (by decide +kernel) boundingCanonical3857,
+    validThree_of_perm 13623175 1600745 (by decide +kernel) boundingCanonical3864,
+    validThree_of_perm 13623176 1600746 (by decide +kernel) boundingCanonical3865,
+    validThree_of_perm 13623178 1600748 (by decide +kernel) boundingCanonical3866,
+    validThree_of_perm 13623179 1600749 (by decide +kernel) boundingCanonical3867,
+    validThree_of_perm 13623180 1600750 (by decide +kernel) boundingCanonical3868,
+    validThree_of_perm 13623184 1600754 (by decide +kernel) boundingCanonical3869,
+    validThree_of_perm 13623192 1600762 (by decide +kernel) boundingCanonical3872,
+    validThree_of_perm 13623232 1605632 (by decide +kernel) boundingCanonical3945,
+    validThree_of_perm 13623238 1605778 (by decide +kernel) boundingCanonical3949,
+    validThree_of_perm 13623242 1605782 (by decide +kernel) boundingCanonical3950,
+    validThree_of_perm 13623249 1605789 (by decide +kernel) boundingCanonical3951,
+    validThree_of_perm 13623255 1605795 (by decide +kernel) boundingCanonical3952,
+    validThree_of_perm 13623263 1605803 (by decide +kernel) boundingCanonical3955,
+    validThree_of_perm 13623371 1600591 (by decide +kernel) boundingCanonical3850,
+    validThree_of_perm 13623372 1605632 (by decide +kernel) boundingCanonical3945,
+    validThree_of_perm 13623380 1615860 (by decide +kernel) boundingCanonical4107,
+    validThree_of_perm 13623381 1615861 (by decide +kernel) boundingCanonical4108,
+    validThree_of_perm 13623383 1615863 (by decide +kernel) boundingCanonical4109,
+    validThree_of_perm 13623384 1615864 (by decide +kernel) boundingCanonical4110,
+    validThree_of_perm 13623391 1615871 (by decide +kernel) boundingCanonical4111,
+    validThree_of_perm 13623393 1615873 (by decide +kernel) boundingCanonical4112,
+    validThree_of_perm 13623397 1615877 (by decide +kernel) boundingCanonical4113,
+    validThree_of_perm 13623400 1615880 (by decide +kernel) boundingCanonical4114,
+    validThree_of_perm 13623403 1615883 (by decide +kernel) boundingCanonical4115,
+    validThree_of_perm 13623404 1615884 (by decide +kernel) boundingCanonical4116,
+    validThree_of_perm 13623442 1600662 (by decide +kernel) boundingCanonical3857,
+    validThree_of_perm 13623455 1620905 (by decide +kernel) boundingCanonical4202,
+    validThree_of_perm 13623464 1620914 (by decide +kernel) boundingCanonical4203,
+    validThree_of_perm 13623675 1626095 (by decide +kernel) boundingCanonical4292,
+    validThree_of_perm 13623677 1626097 (by decide +kernel) boundingCanonical4293,
+    validThree_of_perm 13623678 1626098 (by decide +kernel) boundingCanonical4294,
+    validThree_of_perm 13623684 1626104 (by decide +kernel) boundingCanonical4295,
+    validThree_of_perm 13623687 1626107 (by decide +kernel) boundingCanonical4296,
+    validThree_of_perm 13623798 1605778 (by decide +kernel) boundingCanonical3949,
+    validThree_of_perm 13623800 1615860 (by decide +kernel) boundingCanonical4107,
+    validThree_of_perm 13623816 1626236 (by decide +kernel) boundingCanonical4297,
+    validThree_of_perm 13623818 1626238 (by decide +kernel) boundingCanonical4298,
+    validThree_of_perm 13623819 1626239 (by decide +kernel) boundingCanonical4299,
+    validThree_of_perm 13623820 1626240 (by decide +kernel) boundingCanonical4300,
+    validThree_of_perm 13623830 1626250 (by decide +kernel) boundingCanonical4301,
+    validThree_of_perm 13623831 1626251 (by decide +kernel) boundingCanonical4302,
+    validThree_of_perm 13623871 1615861 (by decide +kernel) boundingCanonical4108,
+    validThree_of_perm 13623881 1626301 (by decide +kernel) boundingCanonical4303,
+    validThree_of_perm 13623887 1626307 (by decide +kernel) boundingCanonical4304,
+    validThree_of_perm 13624013 1615863 (by decide +kernel) boundingCanonical4109,
+    by simp⟩
+theorem boundingLeaf2018_mem : codeChain boundingEntries2018 ∈ Chains 3 := codeChain_mem_three _ boundingLeaf2018_valid
+noncomputable def boundingLeaf2018Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2018Part0@@
+noncomputable def boundingLeaf2018Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2018Part1@@
+noncomputable def boundingLeaf2018 : List (ℕ × ℤ) := boundingLeaf2018Part0 ++ boundingLeaf2018Part1
+theorem boundingLeaf2018_check :
+    collapse 10 (((codeDifferential boundingEntries2018) ++ scaleEntries (Int.negSucc 5) ([] : List (ℕ × ℤ))).map
+      (fun p => [p])) = [boundingLeaf2018] := by decide +kernel
+ theorem boundingLeaf2018_chain : codeChain boundingLeaf2018 =
+    boundary (codeChain boundingEntries2018) + (-6 : ℤ) • (0 : RawChain) := by
+  simpa only [codeChain_nil] using (leaf_sound 10 boundingEntries2018 ([] : List (ℕ × ℤ)) boundingLeaf2018 boundingLeaf2018_valid boundingLeaf2018_check)
+noncomputable def boundingEntries2019 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingEntries2019@@
+theorem boundingLeaf2019_valid : ∀ p ∈ boundingEntries2019, ValidThree p.1 := by
+  simp only [boundingEntries2019, List.forall_mem_cons]
+  exact ⟨validThree_of_perm 13624024 1626444 (by decide +kernel) boundingCanonical4310,
+    validThree_of_perm 13624025 1626445 (by decide +kernel) boundingCanonical4311,
+    validThree_of_perm 13624036 1626456 (by decide +kernel) boundingCanonical4315,
+    validThree_of_perm 13624038 1626458 (by decide +kernel) boundingCanonical4316,
+    validThree_of_perm 13624082 1605782 (by decide +kernel) boundingCanonical3950,
+    validThree_of_perm 13624084 1615864 (by decide +kernel) boundingCanonical4110,
+    validThree_of_perm 13624085 1620905 (by decide +kernel) boundingCanonical4202,
+    validThree_of_perm 13624091 1626301 (by decide +kernel) boundingCanonical4303,
+    validThree_of_perm 13624108 1626528 (by decide +kernel) boundingCanonical4320,
+    validThree_of_perm 13624109 1626529 (by decide +kernel) boundingCanonical4321,
+    validThree_of_perm 13624164 1626444 (by decide +kernel) boundingCanonical4310,
+    validThree_of_perm 13624172 1626592 (by decide +kernel) boundingCanonical4323,
+    validThree_of_perm 13624174 1626594 (by decide +kernel) boundingCanonical4324,
+    validThree_of_perm 13624235 1626445 (by decide +kernel) boundingCanonical4311,
+    validThree_of_perm 13624365 1600745 (by decide +kernel) boundingCanonical3864,
+    validThree_of_perm 13624392 1626812 (by decide +kernel) boundingCanonical4329,
+    validThree_of_perm 13624393 1626813 (by decide +kernel) boundingCanonical4330,
+    validThree_of_perm 13624436 1600746 (by decide +kernel) boundingCanonical3865,
+    validThree_of_perm 13624463 1626883 (by decide +kernel) boundingCanonical4331,
+    validThree_of_perm 13624468 1626888 (by decide +kernel) boundingCanonical4332,
+    validThree_of_perm 13624469 1626889 (by decide +kernel) boundingCanonical4333,
+    validThree_of_perm 13624516 1626236 (by decide +kernel) boundingCanonical4297,
+    validThree_of_perm 13624517 1626307 (by decide +kernel) boundingCanonical4304,
+    validThree_of_perm 13624578 1600748 (by decide +kernel) boundingCanonical3866,
+    validThree_of_perm 13624579 1605789 (by decide +kernel) boundingCanonical3951,
+    validThree_of_perm 13624581 1615871 (by decide +kernel) boundingCanonical4111,
+    validThree_of_perm 13624585 1626095 (by decide +kernel) boundingCanonical4292,
+    validThree_of_perm 13624592 1626592 (by decide +kernel) boundingCanonical4323,
+    validThree_of_perm 13624605 1627025 (by decide +kernel) boundingCanonical4334,
+    validThree_of_perm 13624606 1627026 (by decide +kernel) boundingCanonical4335,
+    validThree_of_perm 13624614 1627034 (by decide +kernel) boundingCanonical4337,
+    validThree_of_perm 13624615 1627035 (by decide +kernel) boundingCanonical4338,
+    validThree_of_perm 13624649 1600749 (by decide +kernel) boundingCanonical3867,
+    validThree_of_perm 13624658 1626238 (by decide +kernel) boundingCanonical4298,
+    validThree_of_perm 13624672 1627092 (by decide +kernel) boundingCanonical4339,
+    validThree_of_perm 13624677 1627097 (by decide +kernel) boundingCanonical4340,
+    validThree_of_perm 13624720 1600750 (by decide +kernel) boundingCanonical3868,
+    validThree_of_perm 13624723 1615873 (by decide +kernel) boundingCanonical4112,
+    validThree_of_perm 13624724 1620914 (by decide +kernel) boundingCanonical4203,
+    validThree_of_perm 13624727 1626097 (by decide +kernel) boundingCanonical4293,
+    validThree_of_perm 13624729 1626239 (by decide +kernel) boundingCanonical4299,
+    validThree_of_perm 13624734 1626594 (by decide +kernel) boundingCanonical4324,
+    validThree_of_perm 13624746 1627166 (by decide +kernel) boundingCanonical4342,
+    validThree_of_perm 13624747 1627167 (by decide +kernel) boundingCanonical4343,
+    validThree_of_perm 13624748 1627168 (by decide +kernel) boundingCanonical4344,
+    validThree_of_perm 13624798 1626098 (by decide +kernel) boundingCanonical4294,
+    validThree_of_perm 13624800 1626240 (by decide +kernel) boundingCanonical4300,
+    validThree_of_perm 13624812 1627092 (by decide +kernel) boundingCanonical4339,
+    validThree_of_perm 13624888 1627308 (by decide +kernel) boundingCanonical4349,
+    validThree_of_perm 13624889 1627309 (by decide +kernel) boundingCanonical4350,
+    validThree_of_perm 13625004 1600754 (by decide +kernel) boundingCanonical3869,
+    validThree_of_perm 13625005 1605795 (by decide +kernel) boundingCanonical3952,
+    validThree_of_perm 13625007 1615877 (by decide +kernel) boundingCanonical4113,
+    validThree_of_perm 13625016 1626456 (by decide +kernel) boundingCanonical4315,
+    validThree_of_perm 13625026 1627166 (by decide +kernel) boundingCanonical4342,
+    validThree_of_perm 13625085 1626315 (by decide +kernel) boundingCanonical4305,
+    validThree_of_perm 13625088 1626528 (by decide +kernel) boundingCanonical4320,
+    validThree_of_perm 13625095 1627025 (by decide +kernel) boundingCanonical4334,
+    validThree_of_perm 13625097 1627167 (by decide +kernel) boundingCanonical4343,
+    validThree_of_perm 13625107 1627527 (by decide +kernel) boundingCanonical4357,
+    validThree_of_perm 13625156 1626316 (by decide +kernel) boundingCanonical4306,
+    validThree_of_perm 13625158 1626458 (by decide +kernel) boundingCanonical4316,
+    validThree_of_perm 13625159 1626529 (by decide +kernel) boundingCanonical4321,
+    validThree_of_perm 13625166 1627026 (by decide +kernel) boundingCanonical4335,
+    by simp⟩
+theorem boundingLeaf2019_mem : codeChain boundingEntries2019 ∈ Chains 3 := codeChain_mem_three _ boundingLeaf2019_valid
+noncomputable def boundingLeaf2019Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2019Part0@@
+noncomputable def boundingLeaf2019Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2019Part1@@
+noncomputable def boundingLeaf2019 : List (ℕ × ℤ) := boundingLeaf2019Part0 ++ boundingLeaf2019Part1
+theorem boundingLeaf2019_check :
+    collapse 10 (((codeDifferential boundingEntries2019) ++ scaleEntries (Int.negSucc 5) ([] : List (ℕ × ℤ))).map
+      (fun p => [p])) = [boundingLeaf2019] := by decide +kernel
+ theorem boundingLeaf2019_chain : codeChain boundingLeaf2019 =
+    boundary (codeChain boundingEntries2019) + (-6 : ℤ) • (0 : RawChain) := by
+  simpa only [codeChain_nil] using (leaf_sound 10 boundingEntries2019 ([] : List (ℕ × ℤ)) boundingLeaf2019 boundingLeaf2019_valid boundingLeaf2019_check)
+noncomputable def boundingEntries2020 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingEntries2020@@
+theorem boundingLeaf2020_valid : ∀ p ∈ boundingEntries2020, ValidThree p.1 := by
+  simp only [boundingEntries2020, List.forall_mem_cons]
+  exact ⟨validThree_of_perm 13625167 1627097 (by decide +kernel) boundingCanonical4340,
+    validThree_of_perm 13625168 1627168 (by decide +kernel) boundingCanonical4344,
+    validThree_of_perm 13625175 1627595 (by decide +kernel) boundingCanonical4358,
+    validThree_of_perm 13625220 1615880 (by decide +kernel) boundingCanonical4114,
+    validThree_of_perm 13625224 1626104 (by decide +kernel) boundingCanonical4295,
+    validThree_of_perm 13625245 1627595 (by decide +kernel) boundingCanonical4358,
+    validThree_of_perm 13625433 1615883 (by decide +kernel) boundingCanonical4115,
+    validThree_of_perm 13625437 1626107 (by decide +kernel) boundingCanonical4296,
+    validThree_of_perm 13625504 1615884 (by decide +kernel) boundingCanonical4116,
+    validThree_of_perm 13625510 1626250 (by decide +kernel) boundingCanonical4301,
+    validThree_of_perm 13625572 1600762 (by decide +kernel) boundingCanonical3872,
+    validThree_of_perm 13625573 1605803 (by decide +kernel) boundingCanonical3955,
+    validThree_of_perm 13625581 1626251 (by decide +kernel) boundingCanonical4302,
+    validThree_of_perm 13625734 1627034 (by decide +kernel) boundingCanonical4337,
+    validThree_of_perm 13625805 1627035 (by decide +kernel) boundingCanonical4338,
+    validThree_of_perm 13628202 1958502 (by decide +kernel) boundingCanonical4633,
+    validThree_of_perm 13628203 1958573 (by decide +kernel) boundingCanonical4642,
+    validThree_of_perm 13628213 1958653 (by decide +kernel) boundingCanonical4650,
+    validThree_of_perm 13628214 1958654 (by decide +kernel) boundingCanonical4651,
+    validThree_of_perm 13628220 1958660 (by decide +kernel) boundingCanonical4652,
+    validThree_of_perm 13628221 1958661 (by decide +kernel) boundingCanonical4653,
+    validThree_of_perm 13628223 1958663 (by decide +kernel) boundingCanonical4654,
+    validThree_of_perm 13628224 1958664 (by decide +kernel) boundingCanonical4655,
+    validThree_of_perm 13628228 1958668 (by decide +kernel) boundingCanonical4656,
+    validThree_of_perm 13628273 1963543 (by decide +kernel) boundingCanonical4765,
+    validThree_of_perm 13628279 1963689 (by decide +kernel) boundingCanonical4773,
+    validThree_of_perm 13628282 1963692 (by decide +kernel) boundingCanonical4774,
+    validThree_of_perm 13628291 1963701 (by decide +kernel) boundingCanonical4775,
+    validThree_of_perm 13628294 1963704 (by decide +kernel) boundingCanonical4776,
+    validThree_of_perm 13628295 1963705 (by decide +kernel) boundingCanonical4777,
+    validThree_of_perm 13628412 1958502 (by decide +kernel) boundingCanonical4633,
+    validThree_of_perm 13628413 1963543 (by decide +kernel) boundingCanonical4765,
+    validThree_of_perm 13628421 1973771 (by decide +kernel) boundingCanonical4952,
+    validThree_of_perm 13628425 1973775 (by decide +kernel) boundingCanonical4953,
+    validThree_of_perm 13628426 1973776 (by decide +kernel) boundingCanonical4954,
+    validThree_of_perm 13628427 1973777 (by decide +kernel) boundingCanonical4955,
+    validThree_of_perm 13628434 1973784 (by decide +kernel) boundingCanonical4956,
+    validThree_of_perm 13628441 1973791 (by decide +kernel) boundingCanonical4957,
+    validThree_of_perm 13628447 1973797 (by decide +kernel) boundingCanonical4958,
+    validThree_of_perm 13628483 1958573 (by decide +kernel) boundingCanonical4642,
+    validThree_of_perm 13628496 1978816 (by decide +kernel) boundingCanonical5079,
+    validThree_of_perm 13628503 1978823 (by decide +kernel) boundingCanonical5080,
+    validThree_of_perm 13628507 1978827 (by decide +kernel) boundingCanonical5081,
+    validThree_of_perm 13628512 1978832 (by decide +kernel) boundingCanonical5082,
+    validThree_of_perm 13628518 1978838 (by decide +kernel) boundingCanonical5083,
+    validThree_of_perm 13628716 1984006 (by decide +kernel) boundingCanonical5161,
+    validThree_of_perm 13628718 1984008 (by decide +kernel) boundingCanonical5162,
+    validThree_of_perm 13628839 1963689 (by decide +kernel) boundingCanonical4773,
+    validThree_of_perm 13628841 1973771 (by decide +kernel) boundingCanonical4952,
+    validThree_of_perm 13628854 1984144 (by decide +kernel) boundingCanonical5164,
+    validThree_of_perm 13628859 1984149 (by decide +kernel) boundingCanonical5165,
+    validThree_of_perm 13628869 1984159 (by decide +kernel) boundingCanonical5167,
+    validThree_of_perm 13628923 1984213 (by decide +kernel) boundingCanonical5169,
+    validThree_of_perm 13628924 1984214 (by decide +kernel) boundingCanonical5170,
+    validThree_of_perm 13628925 1984215 (by decide +kernel) boundingCanonical5171,
+    validThree_of_perm 13628938 1984228 (by decide +kernel) boundingCanonical5174,
+    validThree_of_perm 13628939 1984229 (by decide +kernel) boundingCanonical5175,
+    validThree_of_perm 13628940 1984230 (by decide +kernel) boundingCanonical5176,
+    validThree_of_perm 13628941 1984231 (by decide +kernel) boundingCanonical5177,
+    validThree_of_perm 13629052 1963692 (by decide +kernel) boundingCanonical4774,
+    validThree_of_perm 13629067 1984357 (by decide +kernel) boundingCanonical5178,
+    validThree_of_perm 13629125 1973775 (by decide +kernel) boundingCanonical4953,
+    validThree_of_perm 13629126 1978816 (by decide +kernel) boundingCanonical5079,
+    validThree_of_perm 13629136 1984426 (by decide +kernel) boundingCanonical5181,
+    by simp⟩
+theorem boundingLeaf2020_mem : codeChain boundingEntries2020 ∈ Chains 3 := codeChain_mem_three _ boundingLeaf2020_valid
+noncomputable def boundingLeaf2020Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2020Part0@@
+noncomputable def boundingLeaf2020Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2020Part1@@
+noncomputable def boundingLeaf2020 : List (ℕ × ℤ) := boundingLeaf2020Part0 ++ boundingLeaf2020Part1
+theorem boundingLeaf2020_check :
+    collapse 10 (((codeDifferential boundingEntries2020) ++ scaleEntries (Int.negSucc 5) ([] : List (ℕ × ℤ))).map
+      (fun p => [p])) = [boundingLeaf2020] := by decide +kernel
+ theorem boundingLeaf2020_chain : codeChain boundingLeaf2020 =
+    boundary (codeChain boundingEntries2020) + (-6 : ℤ) • (0 : RawChain) := by
+  simpa only [codeChain_nil] using (leaf_sound 10 boundingEntries2020 ([] : List (ℕ × ℤ)) boundingLeaf2020 boundingLeaf2020_valid boundingLeaf2020_check)
+noncomputable def boundingEntries2021 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingEntries2021@@
+theorem boundingLeaf2021_valid : ∀ p ∈ boundingEntries2021, ValidThree p.1 := by
+  simp only [boundingEntries2021, List.forall_mem_cons]
+  exact ⟨validThree_of_perm 13629137 1984427 (by decide +kernel) boundingCanonical5182,
+    validThree_of_perm 13629138 1984428 (by decide +kernel) boundingCanonical5183,
+    validThree_of_perm 13629193 1958653 (by decide +kernel) boundingCanonical4650,
+    validThree_of_perm 13629196 1973776 (by decide +kernel) boundingCanonical4954,
+    validThree_of_perm 13629203 1984213 (by decide +kernel) boundingCanonical5169,
+    validThree_of_perm 13629206 1984426 (by decide +kernel) boundingCanonical5181,
+    validThree_of_perm 13629215 1984505 (by decide +kernel) boundingCanonical5186,
+    validThree_of_perm 13629264 1958654 (by decide +kernel) boundingCanonical4651,
+    validThree_of_perm 13629267 1973777 (by decide +kernel) boundingCanonical4955,
+    validThree_of_perm 13629274 1984214 (by decide +kernel) boundingCanonical5170,
+    validThree_of_perm 13629277 1984427 (by decide +kernel) boundingCanonical5182,
+    validThree_of_perm 13629285 1984575 (by decide +kernel) boundingCanonical5188,
+    validThree_of_perm 13629344 1984144 (by decide +kernel) boundingCanonical5164,
+    validThree_of_perm 13629345 1984215 (by decide +kernel) boundingCanonical5171,
+    validThree_of_perm 13629347 1984357 (by decide +kernel) boundingCanonical5178,
+    validThree_of_perm 13629348 1984428 (by decide +kernel) boundingCanonical5183,
+    validThree_of_perm 13629356 1984646 (by decide +kernel) boundingCanonical5191,
+    validThree_of_perm 13629623 1978823 (by decide +kernel) boundingCanonical5080,
+    validThree_of_perm 13629626 1984006 (by decide +kernel) boundingCanonical5161,
+    validThree_of_perm 13629643 1984933 (by decide +kernel) boundingCanonical5197,
+    validThree_of_perm 13629690 1958660 (by decide +kernel) boundingCanonical4652,
+    validThree_of_perm 13629691 1963701 (by decide +kernel) boundingCanonical4775,
+    validThree_of_perm 13629699 1984149 (by decide +kernel) boundingCanonical5165,
+    validThree_of_perm 13629705 1984575 (by decide +kernel) boundingCanonical5188,
+    validThree_of_perm 13629706 1984646 (by decide +kernel) boundingCanonical5191,
+    validThree_of_perm 13629714 1985004 (by decide +kernel) boundingCanonical5200,
+    validThree_of_perm 13629716 1985006 (by decide +kernel) boundingCanonical5201,
+    validThree_of_perm 13629761 1958661 (by decide +kernel) boundingCanonical4653,
+    validThree_of_perm 13629764 1973784 (by decide +kernel) boundingCanonical4956,
+    validThree_of_perm 13629768 1984008 (by decide +kernel) boundingCanonical5162,
+    validThree_of_perm 13629775 1984505 (by decide +kernel) boundingCanonical5186,
+    validThree_of_perm 13629785 1985075 (by decide +kernel) boundingCanonical5205,
+    validThree_of_perm 13629786 1985076 (by decide +kernel) boundingCanonical5206,
+    validThree_of_perm 13629787 1985077 (by decide +kernel) boundingCanonical5207,
+    validThree_of_perm 13629841 1984151 (by decide +kernel) boundingCanonical5166,
+    validThree_of_perm 13629854 1985074 (by decide +kernel) boundingCanonical5204,
+    validThree_of_perm 13629861 1985151 (by decide +kernel) boundingCanonical5208,
+    validThree_of_perm 13629862 1985152 (by decide +kernel) boundingCanonical5209,
+    validThree_of_perm 13629863 1985153 (by decide +kernel) boundingCanonical5210,
+    validThree_of_perm 13629864 1985154 (by decide +kernel) boundingCanonical5211,
+    validThree_of_perm 13629867 1985157 (by decide +kernel) boundingCanonical5212,
+    validThree_of_perm 13629903 1958663 (by decide +kernel) boundingCanonical4654,
+    validThree_of_perm 13629904 1963704 (by decide +kernel) boundingCanonical4776,
+    validThree_of_perm 13629907 1978827 (by decide +kernel) boundingCanonical5081,
+    validThree_of_perm 13629913 1984223 (by decide +kernel) boundingCanonical5172,
+    validThree_of_perm 13629923 1984933 (by decide +kernel) boundingCanonical5197,
+    validThree_of_perm 13629924 1985004 (by decide +kernel) boundingCanonical5200,
+    validThree_of_perm 13629925 1985075 (by decide +kernel) boundingCanonical5205,
+    validThree_of_perm 13629929 1985219 (by decide +kernel) boundingCanonical5213,
+    validThree_of_perm 13629932 1985222 (by decide +kernel) boundingCanonical5214,
+    validThree_of_perm 13629933 1985223 (by decide +kernel) boundingCanonical5215,
+    validThree_of_perm 13629934 1985224 (by decide +kernel) boundingCanonical5216,
+    validThree_of_perm 13629938 1985228 (by decide +kernel) boundingCanonical5217,
+    validThree_of_perm 13629974 1958664 (by decide +kernel) boundingCanonical4655,
+    validThree_of_perm 13629975 1963705 (by decide +kernel) boundingCanonical4777,
+    validThree_of_perm 13629984 1984224 (by decide +kernel) boundingCanonical5173,
+    validThree_of_perm 13629996 1985076 (by decide +kernel) boundingCanonical5206,
+    validThree_of_perm 13630003 1985293 (by decide +kernel) boundingCanonical5219,
+    validThree_of_perm 13630066 1985006 (by decide +kernel) boundingCanonical5201,
+    validThree_of_perm 13630067 1985077 (by decide +kernel) boundingCanonical5207,
+    validThree_of_perm 13630136 1984936 (by decide +kernel) boundingCanonical5198,
+    validThree_of_perm 13630258 1958668 (by decide +kernel) boundingCanonical4656,
+    validThree_of_perm 13630261 1973791 (by decide +kernel) boundingCanonical4957,
+    validThree_of_perm 13630262 1978832 (by decide +kernel) boundingCanonical5082,
+    by simp⟩
+theorem boundingLeaf2021_mem : codeChain boundingEntries2021 ∈ Chains 3 := codeChain_mem_three _ boundingLeaf2021_valid
+noncomputable def boundingLeaf2021Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2021Part0@@
+noncomputable def boundingLeaf2021Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2021Part1@@
+noncomputable def boundingLeaf2021 : List (ℕ × ℤ) := boundingLeaf2021Part0 ++ boundingLeaf2021Part1
+theorem boundingLeaf2021_check :
+    collapse 10 (((codeDifferential boundingEntries2021) ++ scaleEntries (Int.negSucc 5) ([] : List (ℕ × ℤ))).map
+      (fun p => [p])) = [boundingLeaf2021] := by decide +kernel
+ theorem boundingLeaf2021_chain : codeChain boundingLeaf2021 =
+    boundary (codeChain boundingEntries2021) + (-6 : ℤ) • (0 : RawChain) := by
+  simpa only [codeChain_nil] using (leaf_sound 10 boundingEntries2021 ([] : List (ℕ × ℤ)) boundingLeaf2021 boundingLeaf2021_valid boundingLeaf2021_check)
+noncomputable def boundingEntries2022 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingEntries2022@@
+theorem boundingLeaf2022_valid : ∀ p ∈ boundingEntries2022, ValidThree p.1 := by
+  simp only [boundingEntries2022, List.forall_mem_cons]
+  exact ⟨validThree_of_perm 13630268 1984228 (by decide +kernel) boundingCanonical5174,
+    validThree_of_perm 13630281 1985151 (by decide +kernel) boundingCanonical5208,
+    validThree_of_perm 13630282 1985222 (by decide +kernel) boundingCanonical5214,
+    validThree_of_perm 13630283 1985293 (by decide +kernel) boundingCanonical5219,
+    validThree_of_perm 13630339 1984229 (by decide +kernel) boundingCanonical5175,
+    validThree_of_perm 13630352 1985152 (by decide +kernel) boundingCanonical5209,
+    validThree_of_perm 13630353 1985223 (by decide +kernel) boundingCanonical5215,
+    validThree_of_perm 13630361 1985651 (by decide +kernel) boundingCanonical5220,
+    validThree_of_perm 13630409 1984159 (by decide +kernel) boundingCanonical5167,
+    validThree_of_perm 13630410 1984230 (by decide +kernel) boundingCanonical5176,
+    validThree_of_perm 13630423 1985153 (by decide +kernel) boundingCanonical5210,
+    validThree_of_perm 13630424 1985224 (by decide +kernel) boundingCanonical5216,
+    validThree_of_perm 13630481 1984231 (by decide +kernel) boundingCanonical5177,
+    validThree_of_perm 13630494 1985154 (by decide +kernel) boundingCanonical5211,
+    validThree_of_perm 13630501 1985651 (by decide +kernel) boundingCanonical5220,
+    validThree_of_perm 13630687 1973797 (by decide +kernel) boundingCanonical4958,
+    validThree_of_perm 13630688 1978838 (by decide +kernel) boundingCanonical5083,
+    validThree_of_perm 13630707 1985157 (by decide +kernel) boundingCanonical5212,
+    validThree_of_perm 13630708 1985228 (by decide +kernel) boundingCanonical5217,
+    validThree_of_perm 13633476 2331696 (by decide +kernel) boundingCanonical5417,
+    validThree_of_perm 13633477 2331697 (by decide +kernel) boundingCanonical5418,
+    validThree_of_perm 13633478 2331698 (by decide +kernel) boundingCanonical5419,
+    validThree_of_perm 13633482 2331702 (by decide +kernel) boundingCanonical5420,
+    validThree_of_perm 13633483 2331703 (by decide +kernel) boundingCanonical5421,
+    validThree_of_perm 13633487 2331707 (by decide +kernel) boundingCanonical5422,
+    validThree_of_perm 13633547 2336737 (by decide +kernel) boundingCanonical5501,
+    validThree_of_perm 13633548 2336738 (by decide +kernel) boundingCanonical5502,
+    validThree_of_perm 13633549 2336739 (by decide +kernel) boundingCanonical5503,
+    validThree_of_perm 13633553 2336743 (by decide +kernel) boundingCanonical5504,
+    validThree_of_perm 13633554 2336744 (by decide +kernel) boundingCanonical5505,
+    validThree_of_perm 13633558 2336748 (by decide +kernel) boundingCanonical5506,
+    validThree_of_perm 13633766 2341926 (by decide +kernel) boundingCanonical5555,
+    validThree_of_perm 13633983 2342143 (by decide +kernel) boundingCanonical5556,
+    validThree_of_perm 13633984 2342144 (by decide +kernel) boundingCanonical5557,
+    validThree_of_perm 13633987 2342147 (by decide +kernel) boundingCanonical5558,
+    validThree_of_perm 13634115 2342275 (by decide +kernel) boundingCanonical5559,
+    validThree_of_perm 13634116 2342276 (by decide +kernel) boundingCanonical5560,
+    validThree_of_perm 13634186 2342346 (by decide +kernel) boundingCanonical5561,
+    validThree_of_perm 13634187 2342347 (by decide +kernel) boundingCanonical5562,
+    validThree_of_perm 13634254 2342414 (by decide +kernel) boundingCanonical5563,
+    validThree_of_perm 13634255 2342415 (by decide +kernel) boundingCanonical5564,
+    validThree_of_perm 13634267 2342427 (by decide +kernel) boundingCanonical5565,
+    validThree_of_perm 13634268 2342428 (by decide +kernel) boundingCanonical5566,
+    validThree_of_perm 13634325 2342485 (by decide +kernel) boundingCanonical5567,
+    validThree_of_perm 13634326 2342486 (by decide +kernel) boundingCanonical5568,
+    validThree_of_perm 13634332 2342492 (by decide +kernel) boundingCanonical5569,
+    validThree_of_perm 13634338 2342498 (by decide +kernel) boundingCanonical5570,
+    validThree_of_perm 13634339 2342499 (by decide +kernel) boundingCanonical5571,
+    validThree_of_perm 13634396 2342556 (by decide +kernel) boundingCanonical5572,
+    validThree_of_perm 13634397 2342557 (by decide +kernel) boundingCanonical5573,
+    validThree_of_perm 13634398 2342558 (by decide +kernel) boundingCanonical5574,
+    validThree_of_perm 13634403 2342563 (by decide +kernel) boundingCanonical5575,
+    validThree_of_perm 13634404 2342564 (by decide +kernel) boundingCanonical5576,
+    validThree_of_perm 13634408 2342568 (by decide +kernel) boundingCanonical5577,
+    validThree_of_perm 13634409 2342569 (by decide +kernel) boundingCanonical5578,
+    validThree_of_perm 13634410 2342570 (by decide +kernel) boundingCanonical5579,
+    validThree_of_perm 13634467 2342627 (by decide +kernel) boundingCanonical5580,
+    validThree_of_perm 13634468 2342628 (by decide +kernel) boundingCanonical5581,
+    validThree_of_perm 13634470 2342630 (by decide +kernel) boundingCanonical5582,
+    validThree_of_perm 13634471 2342631 (by decide +kernel) boundingCanonical5583,
+    validThree_of_perm 13634472 2342632 (by decide +kernel) boundingCanonical5584,
+    validThree_of_perm 13634477 2342637 (by decide +kernel) boundingCanonical5585,
+    validThree_of_perm 13634539 2342699 (by decide +kernel) boundingCanonical5586,
+    validThree_of_perm 13634542 2342702 (by decide +kernel) boundingCanonical5587,
+    by simp⟩
+theorem boundingLeaf2022_mem : codeChain boundingEntries2022 ∈ Chains 3 := codeChain_mem_three _ boundingLeaf2022_valid
+noncomputable def boundingLeaf2022 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2022@@
+theorem boundingLeaf2022_check :
+    collapse 10 (((codeDifferential boundingEntries2022) ++ scaleEntries (Int.negSucc 5) ([] : List (ℕ × ℤ))).map
+      (fun p => [p])) = [boundingLeaf2022] := by decide +kernel
+ theorem boundingLeaf2022_chain : codeChain boundingLeaf2022 =
+    boundary (codeChain boundingEntries2022) + (-6 : ℤ) • (0 : RawChain) := by
+  simpa only [codeChain_nil] using (leaf_sound 10 boundingEntries2022 ([] : List (ℕ × ℤ)) boundingLeaf2022 boundingLeaf2022_valid boundingLeaf2022_check)
+noncomputable def boundingEntries2023 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingEntries2023@@
+theorem boundingLeaf2023_valid : ∀ p ∈ boundingEntries2023, ValidThree p.1 := by
+  simp only [boundingEntries2023, List.forall_mem_cons]
+  exact ⟨validThree_of_perm 13634543 2342703 (by decide +kernel) boundingCanonical5588,
+    validThree_of_perm 13634548 2342708 (by decide +kernel) boundingCanonical5589,
+    validThree_of_perm 13634610 2342770 (by decide +kernel) boundingCanonical5590,
+    validThree_of_perm 13634611 2342771 (by decide +kernel) boundingCanonical5591,
+    validThree_of_perm 13634612 2342772 (by decide +kernel) boundingCanonical5592,
+    validThree_of_perm 13634613 2342773 (by decide +kernel) boundingCanonical5593,
+    validThree_of_perm 13634614 2342774 (by decide +kernel) boundingCanonical5594,
+    validThree_of_perm 13634618 2342778 (by decide +kernel) boundingCanonical5595,
+    validThree_of_perm 13634619 2342779 (by decide +kernel) boundingCanonical5596,
+    validThree_of_perm 13634620 2342780 (by decide +kernel) boundingCanonical5597,
+    validThree_of_perm 13634674 2342414 (by decide +kernel) boundingCanonical5563,
+    validThree_of_perm 13634675 2342485 (by decide +kernel) boundingCanonical5567,
+    validThree_of_perm 13634676 2342556 (by decide +kernel) boundingCanonical5572,
+    validThree_of_perm 13634677 2342627 (by decide +kernel) boundingCanonical5580,
+    validThree_of_perm 13634692 2342852 (by decide +kernel) boundingCanonical5598,
+    validThree_of_perm 13634745 2342415 (by decide +kernel) boundingCanonical5564,
+    validThree_of_perm 13634746 2342486 (by decide +kernel) boundingCanonical5568,
+    validThree_of_perm 13634747 2342557 (by decide +kernel) boundingCanonical5573,
+    validThree_of_perm 13634748 2342628 (by decide +kernel) boundingCanonical5581,
+    validThree_of_perm 13634749 2342699 (by decide +kernel) boundingCanonical5586,
+    validThree_of_perm 13634750 2342770 (by decide +kernel) boundingCanonical5590,
+    validThree_of_perm 13634767 2342927 (by decide +kernel) boundingCanonical5599,
+    validThree_of_perm 13634818 2342558 (by decide +kernel) boundingCanonical5574,
+    validThree_of_perm 13634821 2342771 (by decide +kernel) boundingCanonical5591,
+    validThree_of_perm 13634838 2342998 (by decide +kernel) boundingCanonical5600,
+    validThree_of_perm 13634876 2331696 (by decide +kernel) boundingCanonical5417,
+    validThree_of_perm 13634877 2336737 (by decide +kernel) boundingCanonical5501,
+    validThree_of_perm 13634885 2342275 (by decide +kernel) boundingCanonical5559,
+    validThree_of_perm 13634886 2342346 (by decide +kernel) boundingCanonical5561,
+    validThree_of_perm 13634890 2342630 (by decide +kernel) boundingCanonical5582,
+    validThree_of_perm 13634892 2342772 (by decide +kernel) boundingCanonical5592,
+    validThree_of_perm 13634905 2343065 (by decide +kernel) boundingCanonical5601,
+    validThree_of_perm 13634906 2343066 (by decide +kernel) boundingCanonical5602,
+    validThree_of_perm 13634907 2343067 (by decide +kernel) boundingCanonical5603,
+    validThree_of_perm 13634947 2331697 (by decide +kernel) boundingCanonical5418,
+    validThree_of_perm 13634948 2336738 (by decide +kernel) boundingCanonical5502,
+    validThree_of_perm 13634956 2342276 (by decide +kernel) boundingCanonical5560,
+    validThree_of_perm 13634957 2342347 (by decide +kernel) boundingCanonical5562,
+    validThree_of_perm 13634961 2342631 (by decide +kernel) boundingCanonical5583,
+    validThree_of_perm 13634962 2342702 (by decide +kernel) boundingCanonical5587,
+    validThree_of_perm 13634963 2342773 (by decide +kernel) boundingCanonical5593,
+    validThree_of_perm 13634976 2343136 (by decide +kernel) boundingCanonical5604,
+    validThree_of_perm 13634977 2343137 (by decide +kernel) boundingCanonical5605,
+    validThree_of_perm 13635018 2331698 (by decide +kernel) boundingCanonical5419,
+    validThree_of_perm 13635019 2336739 (by decide +kernel) boundingCanonical5503,
+    validThree_of_perm 13635032 2342632 (by decide +kernel) boundingCanonical5584,
+    validThree_of_perm 13635033 2342703 (by decide +kernel) boundingCanonical5588,
+    validThree_of_perm 13635034 2342774 (by decide +kernel) boundingCanonical5594,
+    validThree_of_perm 13635047 2343207 (by decide +kernel) boundingCanonical5606,
+    validThree_of_perm 13635048 2343208 (by decide +kernel) boundingCanonical5607,
+    validThree_of_perm 13635117 2343277 (by decide +kernel) boundingCanonical5608,
+    validThree_of_perm 13635172 2342492 (by decide +kernel) boundingCanonical5569,
+    validThree_of_perm 13635173 2342563 (by decide +kernel) boundingCanonical5575,
+    validThree_of_perm 13635188 2343348 (by decide +kernel) boundingCanonical5609,
+    validThree_of_perm 13635244 2342564 (by decide +kernel) boundingCanonical5576,
+    validThree_of_perm 13635258 2343418 (by decide +kernel) boundingCanonical5610,
+    validThree_of_perm 13635259 2343419 (by decide +kernel) boundingCanonical5611,
+    validThree_of_perm 13635302 2331702 (by decide +kernel) boundingCanonical5420,
+    validThree_of_perm 13635303 2336743 (by decide +kernel) boundingCanonical5504,
+    validThree_of_perm 13635306 2341926 (by decide +kernel) boundingCanonical5555,
+    validThree_of_perm 13635318 2342778 (by decide +kernel) boundingCanonical5595,
+    validThree_of_perm 13635373 2331703 (by decide +kernel) boundingCanonical5421,
+    validThree_of_perm 13635374 2336744 (by decide +kernel) boundingCanonical5505,
+    validThree_of_perm 13635387 2342637 (by decide +kernel) boundingCanonical5585,
+    by simp⟩
+theorem boundingLeaf2023_mem : codeChain boundingEntries2023 ∈ Chains 3 := codeChain_mem_three _ boundingLeaf2023_valid
+noncomputable def boundingLeaf2023 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2023@@
+theorem boundingLeaf2023_check :
+    collapse 10 (((codeDifferential boundingEntries2023) ++ scaleEntries (Int.negSucc 5) ([] : List (ℕ × ℤ))).map
+      (fun p => [p])) = [boundingLeaf2023] := by decide +kernel
+ theorem boundingLeaf2023_chain : codeChain boundingLeaf2023 =
+    boundary (codeChain boundingEntries2023) + (-6 : ℤ) • (0 : RawChain) := by
+  simpa only [codeChain_nil] using (leaf_sound 10 boundingEntries2023 ([] : List (ℕ × ℤ)) boundingLeaf2023 boundingLeaf2023_valid boundingLeaf2023_check)
+noncomputable def boundingEntries2024 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingEntries2024@@
+theorem boundingLeaf2024_valid : ∀ p ∈ boundingEntries2024, ValidThree p.1 := by
+  simp only [boundingEntries2024, List.forall_mem_cons]
+  exact ⟨validThree_of_perm 13635388 2342708 (by decide +kernel) boundingCanonical5589,
+    validThree_of_perm 13635389 2342779 (by decide +kernel) boundingCanonical5596,
+    validThree_of_perm 13635398 2343418 (by decide +kernel) boundingCanonical5610,
+    validThree_of_perm 13635460 2342780 (by decide +kernel) boundingCanonical5597,
+    validThree_of_perm 13635467 2343277 (by decide +kernel) boundingCanonical5608,
+    validThree_of_perm 13635468 2343348 (by decide +kernel) boundingCanonical5609,
+    validThree_of_perm 13635469 2343419 (by decide +kernel) boundingCanonical5611,
+    validThree_of_perm 13635528 2342568 (by decide +kernel) boundingCanonical5577,
+    validThree_of_perm 13635532 2342852 (by decide +kernel) boundingCanonical5598,
+    validThree_of_perm 13635535 2343065 (by decide +kernel) boundingCanonical5601,
+    validThree_of_perm 13635536 2343136 (by decide +kernel) boundingCanonical5604,
+    validThree_of_perm 13635537 2343207 (by decide +kernel) boundingCanonical5606,
+    validThree_of_perm 13635593 2342143 (by decide +kernel) boundingCanonical5556,
+    validThree_of_perm 13635597 2342427 (by decide +kernel) boundingCanonical5565,
+    validThree_of_perm 13635598 2342498 (by decide +kernel) boundingCanonical5570,
+    validThree_of_perm 13635599 2342569 (by decide +kernel) boundingCanonical5578,
+    validThree_of_perm 13635606 2343066 (by decide +kernel) boundingCanonical5602,
+    validThree_of_perm 13635607 2343137 (by decide +kernel) boundingCanonical5605,
+    validThree_of_perm 13635608 2343208 (by decide +kernel) boundingCanonical5607,
+    validThree_of_perm 13635657 2331707 (by decide +kernel) boundingCanonical5422,
+    validThree_of_perm 13635658 2336748 (by decide +kernel) boundingCanonical5506,
+    validThree_of_perm 13635664 2342144 (by decide +kernel) boundingCanonical5557,
+    validThree_of_perm 13635668 2342428 (by decide +kernel) boundingCanonical5566,
+    validThree_of_perm 13635669 2342499 (by decide +kernel) boundingCanonical5571,
+    validThree_of_perm 13635670 2342570 (by decide +kernel) boundingCanonical5579,
+    validThree_of_perm 13635677 2343067 (by decide +kernel) boundingCanonical5603,
+    validThree_of_perm 13635817 2342927 (by decide +kernel) boundingCanonical5599,
+    validThree_of_perm 13635818 2342998 (by decide +kernel) boundingCanonical5600,
+    validThree_of_perm 13635877 2342147 (by decide +kernel) boundingCanonical5558,
+    validThree_of_perm 13638519 2689609 (by decide +kernel) boundingCanonical6111,
+    validThree_of_perm 13638520 2689610 (by decide +kernel) boundingCanonical6112,
+    validThree_of_perm 13638521 2689611 (by decide +kernel) boundingCanonical6113,
+    validThree_of_perm 13638522 2689612 (by decide +kernel) boundingCanonical6114,
+    validThree_of_perm 13638523 2689613 (by decide +kernel) boundingCanonical6115,
+    validThree_of_perm 13638525 2689615 (by decide +kernel) boundingCanonical6116,
+    validThree_of_perm 13638527 2689617 (by decide +kernel) boundingCanonical6117,
+    validThree_of_perm 13638528 2689618 (by decide +kernel) boundingCanonical6118,
+    validThree_of_perm 13638591 2694651 (by decide +kernel) boundingCanonical6184,
+    validThree_of_perm 13638592 2694652 (by decide +kernel) boundingCanonical6185,
+    validThree_of_perm 13638593 2694653 (by decide +kernel) boundingCanonical6186,
+    validThree_of_perm 13638596 2694656 (by decide +kernel) boundingCanonical6187,
+    validThree_of_perm 13638597 2694657 (by decide +kernel) boundingCanonical6188,
+    validThree_of_perm 13638598 2694658 (by decide +kernel) boundingCanonical6189,
+    validThree_of_perm 13638807 2699837 (by decide +kernel) boundingCanonical6241,
+    validThree_of_perm 13638954 2699984 (by decide +kernel) boundingCanonical6242,
+    validThree_of_perm 13638955 2699985 (by decide +kernel) boundingCanonical6243,
+    validThree_of_perm 13638956 2699986 (by decide +kernel) boundingCanonical6244,
+    validThree_of_perm 13639020 2700050 (by decide +kernel) boundingCanonical6245,
+    validThree_of_perm 13639157 2700187 (by decide +kernel) boundingCanonical6246,
+    validThree_of_perm 13639159 2700189 (by decide +kernel) boundingCanonical6247,
+    validThree_of_perm 13639161 2700191 (by decide +kernel) boundingCanonical6248,
+    validThree_of_perm 13639169 2700199 (by decide +kernel) boundingCanonical6249,
+    validThree_of_perm 13639230 2700260 (by decide +kernel) boundingCanonical6250,
+    validThree_of_perm 13639231 2700261 (by decide +kernel) boundingCanonical6251,
+    validThree_of_perm 13639232 2700262 (by decide +kernel) boundingCanonical6252,
+    validThree_of_perm 13639239 2700269 (by decide +kernel) boundingCanonical6253,
+    validThree_of_perm 13639240 2700270 (by decide +kernel) boundingCanonical6254,
+    validThree_of_perm 13639241 2700271 (by decide +kernel) boundingCanonical6255,
+    validThree_of_perm 13639297 2700327 (by decide +kernel) boundingCanonical6256,
+    validThree_of_perm 13639301 2700331 (by decide +kernel) boundingCanonical6257,
+    validThree_of_perm 13639302 2700332 (by decide +kernel) boundingCanonical6258,
+    validThree_of_perm 13639303 2700333 (by decide +kernel) boundingCanonical6259,
+    validThree_of_perm 13639307 2700337 (by decide +kernel) boundingCanonical6260,
+    validThree_of_perm 13639368 2700398 (by decide +kernel) boundingCanonical6261,
+    by simp⟩
+theorem boundingLeaf2024_mem : codeChain boundingEntries2024 ∈ Chains 3 := codeChain_mem_three _ boundingLeaf2024_valid
+noncomputable def boundingLeaf2024Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2024Part0@@
+noncomputable def boundingLeaf2024Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2024Part1@@
+noncomputable def boundingLeaf2024 : List (ℕ × ℤ) := boundingLeaf2024Part0 ++ boundingLeaf2024Part1
+theorem boundingLeaf2024_check :
+    collapse 10 (((codeDifferential boundingEntries2024) ++ scaleEntries (Int.negSucc 5) ([] : List (ℕ × ℤ))).map
+      (fun p => [p])) = [boundingLeaf2024] := by decide +kernel
+ theorem boundingLeaf2024_chain : codeChain boundingLeaf2024 =
+    boundary (codeChain boundingEntries2024) + (-6 : ℤ) • (0 : RawChain) := by
+  simpa only [codeChain_nil] using (leaf_sound 10 boundingEntries2024 ([] : List (ℕ × ℤ)) boundingLeaf2024 boundingLeaf2024_valid boundingLeaf2024_check)
+noncomputable def boundingEntries2025 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingEntries2025@@
+theorem boundingLeaf2025_valid : ∀ p ∈ boundingEntries2025, ValidThree p.1 := by
+  simp only [boundingEntries2025, List.forall_mem_cons]
+  exact ⟨validThree_of_perm 13639372 2700402 (by decide +kernel) boundingCanonical6262,
+    validThree_of_perm 13639374 2700404 (by decide +kernel) boundingCanonical6263,
+    validThree_of_perm 13639378 2700408 (by decide +kernel) boundingCanonical6264,
+    validThree_of_perm 13639443 2700473 (by decide +kernel) boundingCanonical6265,
+    validThree_of_perm 13639510 2700540 (by decide +kernel) boundingCanonical6266,
+    validThree_of_perm 13639517 2700547 (by decide +kernel) boundingCanonical6267,
+    validThree_of_perm 13639519 2700549 (by decide +kernel) boundingCanonical6268,
+    validThree_of_perm 13639579 2700609 (by decide +kernel) boundingCanonical6269,
+    validThree_of_perm 13639581 2700611 (by decide +kernel) boundingCanonical6270,
+    validThree_of_perm 13639582 2700612 (by decide +kernel) boundingCanonical6271,
+    validThree_of_perm 13639588 2700618 (by decide +kernel) boundingCanonical6272,
+    validThree_of_perm 13639590 2700620 (by decide +kernel) boundingCanonical6273,
+    validThree_of_perm 13639719 2700609 (by decide +kernel) boundingCanonical6269,
+    validThree_of_perm 13639807 2700837 (by decide +kernel) boundingCanonical6274,
+    validThree_of_perm 13639857 2700327 (by decide +kernel) boundingCanonical6256,
+    validThree_of_perm 13639858 2700398 (by decide +kernel) boundingCanonical6261,
+    validThree_of_perm 13639860 2700540 (by decide +kernel) boundingCanonical6266,
+    validThree_of_perm 13639861 2700611 (by decide +kernel) boundingCanonical6270,
+    validThree_of_perm 13639878 2700908 (by decide +kernel) boundingCanonical6275,
+    validThree_of_perm 13639880 2700910 (by decide +kernel) boundingCanonical6276,
+    validThree_of_perm 13639932 2700612 (by decide +kernel) boundingCanonical6271,
+    validThree_of_perm 13639997 2700187 (by decide +kernel) boundingCanonical6246,
+    validThree_of_perm 13640059 2689609 (by decide +kernel) boundingCanonical6111,
+    validThree_of_perm 13640130 2689610 (by decide +kernel) boundingCanonical6112,
+    validThree_of_perm 13640131 2694651 (by decide +kernel) boundingCanonical6184,
+    validThree_of_perm 13640139 2700189 (by decide +kernel) boundingCanonical6247,
+    validThree_of_perm 13640140 2700260 (by decide +kernel) boundingCanonical6250,
+    validThree_of_perm 13640141 2700331 (by decide +kernel) boundingCanonical6257,
+    validThree_of_perm 13640142 2700402 (by decide +kernel) boundingCanonical6262,
+    validThree_of_perm 13640143 2700473 (by decide +kernel) boundingCanonical6265,
+    validThree_of_perm 13640158 2701188 (by decide +kernel) boundingCanonical6277,
+    validThree_of_perm 13640201 2689611 (by decide +kernel) boundingCanonical6113,
+    validThree_of_perm 13640202 2694652 (by decide +kernel) boundingCanonical6185,
+    validThree_of_perm 13640211 2700261 (by decide +kernel) boundingCanonical6251,
+    validThree_of_perm 13640212 2700332 (by decide +kernel) boundingCanonical6258,
+    validThree_of_perm 13640228 2701258 (by decide +kernel) boundingCanonical6278,
+    validThree_of_perm 13640272 2689612 (by decide +kernel) boundingCanonical6114,
+    validThree_of_perm 13640273 2694653 (by decide +kernel) boundingCanonical6186,
+    validThree_of_perm 13640281 2700191 (by decide +kernel) boundingCanonical6248,
+    validThree_of_perm 13640282 2700262 (by decide +kernel) boundingCanonical6252,
+    validThree_of_perm 13640283 2700333 (by decide +kernel) boundingCanonical6259,
+    validThree_of_perm 13640284 2700404 (by decide +kernel) boundingCanonical6263,
+    validThree_of_perm 13640298 2701328 (by decide +kernel) boundingCanonical6279,
+    validThree_of_perm 13640343 2689613 (by decide +kernel) boundingCanonical6115,
+    validThree_of_perm 13640347 2699837 (by decide +kernel) boundingCanonical6241,
+    validThree_of_perm 13640350 2700050 (by decide +kernel) boundingCanonical6245,
+    validThree_of_perm 13640357 2700547 (by decide +kernel) boundingCanonical6267,
+    validThree_of_perm 13640358 2700618 (by decide +kernel) boundingCanonical6272,
+    validThree_of_perm 13640368 2701328 (by decide +kernel) boundingCanonical6279,
+    validThree_of_perm 13640438 2701258 (by decide +kernel) boundingCanonical6278,
+    validThree_of_perm 13640485 2689615 (by decide +kernel) boundingCanonical6116,
+    validThree_of_perm 13640486 2694656 (by decide +kernel) boundingCanonical6187,
+    validThree_of_perm 13640499 2700549 (by decide +kernel) boundingCanonical6268,
+    validThree_of_perm 13640500 2700620 (by decide +kernel) boundingCanonical6273,
+    validThree_of_perm 13640508 2701188 (by decide +kernel) boundingCanonical6277,
+    validThree_of_perm 13640557 2694657 (by decide +kernel) boundingCanonical6188,
+    validThree_of_perm 13640567 2700337 (by decide +kernel) boundingCanonical6260,
+    validThree_of_perm 13640568 2700408 (by decide +kernel) boundingCanonical6264,
+    validThree_of_perm 13640627 2689617 (by decide +kernel) boundingCanonical6117,
+    validThree_of_perm 13640628 2694658 (by decide +kernel) boundingCanonical6189,
+    validThree_of_perm 13640698 2689618 (by decide +kernel) boundingCanonical6118,
+    validThree_of_perm 13640704 2699984 (by decide +kernel) boundingCanonical6242,
+    validThree_of_perm 13640775 2699985 (by decide +kernel) boundingCanonical6243,
+    validThree_of_perm 13640779 2700269 (by decide +kernel) boundingCanonical6253,
+    by simp⟩
+theorem boundingLeaf2025_mem : codeChain boundingEntries2025 ∈ Chains 3 := codeChain_mem_three _ boundingLeaf2025_valid
+noncomputable def boundingLeaf2025Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2025Part0@@
+noncomputable def boundingLeaf2025Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2025Part1@@
+noncomputable def boundingLeaf2025 : List (ℕ × ℤ) := boundingLeaf2025Part0 ++ boundingLeaf2025Part1
+theorem boundingLeaf2025_check :
+    collapse 10 (((codeDifferential boundingEntries2025) ++ scaleEntries (Int.negSucc 5) ([] : List (ℕ × ℤ))).map
+      (fun p => [p])) = [boundingLeaf2025] := by decide +kernel
+ theorem boundingLeaf2025_chain : codeChain boundingLeaf2025 =
+    boundary (codeChain boundingEntries2025) + (-6 : ℤ) • (0 : RawChain) := by
+  simpa only [codeChain_nil] using (leaf_sound 10 boundingEntries2025 ([] : List (ℕ × ℤ)) boundingLeaf2025 boundingLeaf2025_valid boundingLeaf2025_check)
+noncomputable def boundingEntries2026 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingEntries2026@@
+theorem boundingLeaf2026_valid : ∀ p ∈ boundingEntries2026, ValidThree p.1 := by
+  simp only [boundingEntries2026, List.forall_mem_cons]
+  exact ⟨validThree_of_perm 13640787 2700837 (by decide +kernel) boundingCanonical6274,
+    validThree_of_perm 13640788 2700908 (by decide +kernel) boundingCanonical6275,
+    validThree_of_perm 13640846 2699986 (by decide +kernel) boundingCanonical6244,
+    validThree_of_perm 13640849 2700199 (by decide +kernel) boundingCanonical6249,
+    validThree_of_perm 13640850 2700270 (by decide +kernel) boundingCanonical6254,
+    validThree_of_perm 13640921 2700271 (by decide +kernel) boundingCanonical6255,
+    validThree_of_perm 13640930 2700910 (by decide +kernel) boundingCanonical6276,
+    validThree_of_perm 13643345 3032395 (by decide +kernel) boundingCanonical6756,
+    validThree_of_perm 13643346 3032396 (by decide +kernel) boundingCanonical6757,
+    validThree_of_perm 13643347 3032397 (by decide +kernel) boundingCanonical6758,
+    validThree_of_perm 13643351 3032401 (by decide +kernel) boundingCanonical6759,
+    validThree_of_perm 13643352 3032402 (by decide +kernel) boundingCanonical6760,
+    validThree_of_perm 13643356 3032406 (by decide +kernel) boundingCanonical6761,
+    validThree_of_perm 13643416 3037436 (by decide +kernel) boundingCanonical6841,
+    validThree_of_perm 13643417 3037437 (by decide +kernel) boundingCanonical6842,
+    validThree_of_perm 13643419 3037439 (by decide +kernel) boundingCanonical6843,
+    validThree_of_perm 13643420 3037440 (by decide +kernel) boundingCanonical6844,
+    validThree_of_perm 13643421 3037441 (by decide +kernel) boundingCanonical6845,
+    validThree_of_perm 13643423 3037443 (by decide +kernel) boundingCanonical6846,
+    validThree_of_perm 13643424 3037444 (by decide +kernel) boundingCanonical6847,
+    validThree_of_perm 13643426 3037446 (by decide +kernel) boundingCanonical6848,
+    validThree_of_perm 13643985 3057885 (by decide +kernel) boundingCanonical6904,
+    validThree_of_perm 13643986 3057886 (by decide +kernel) boundingCanonical6905,
+    validThree_of_perm 13643991 3057891 (by decide +kernel) boundingCanonical6906,
+    validThree_of_perm 13643993 3057893 (by decide +kernel) boundingCanonical6907,
+    validThree_of_perm 13643994 3057894 (by decide +kernel) boundingCanonical6908,
+    validThree_of_perm 13643995 3057895 (by decide +kernel) boundingCanonical6909,
+    validThree_of_perm 13643997 3057897 (by decide +kernel) boundingCanonical6910,
+    validThree_of_perm 13644056 3057956 (by decide +kernel) boundingCanonical6911,
+    validThree_of_perm 13644057 3057957 (by decide +kernel) boundingCanonical6912,
+    validThree_of_perm 13644061 3057961 (by decide +kernel) boundingCanonical6913,
+    validThree_of_perm 13644062 3057962 (by decide +kernel) boundingCanonical6914,
+    validThree_of_perm 13644063 3057963 (by decide +kernel) boundingCanonical6915,
+    validThree_of_perm 13644064 3057964 (by decide +kernel) boundingCanonical6916,
+    validThree_of_perm 13644065 3057965 (by decide +kernel) boundingCanonical6917,
+    validThree_of_perm 13644066 3057966 (by decide +kernel) boundingCanonical6918,
+    validThree_of_perm 13644067 3057967 (by decide +kernel) boundingCanonical6919,
+    validThree_of_perm 13644068 3057968 (by decide +kernel) boundingCanonical6920,
+    validThree_of_perm 13644069 3057969 (by decide +kernel) boundingCanonical6921,
+    validThree_of_perm 13644199 3058099 (by decide +kernel) boundingCanonical6922,
+    validThree_of_perm 13644270 3058170 (by decide +kernel) boundingCanonical6923,
+    validThree_of_perm 13644337 3058237 (by decide +kernel) boundingCanonical6924,
+    validThree_of_perm 13644343 3058243 (by decide +kernel) boundingCanonical6925,
+    validThree_of_perm 13644348 3058248 (by decide +kernel) boundingCanonical6926,
+    validThree_of_perm 13644350 3058250 (by decide +kernel) boundingCanonical6927,
+    validThree_of_perm 13644408 3058308 (by decide +kernel) boundingCanonical6928,
+    validThree_of_perm 13644414 3058314 (by decide +kernel) boundingCanonical6929,
+    validThree_of_perm 13644419 3058319 (by decide +kernel) boundingCanonical6930,
+    validThree_of_perm 13644421 3058321 (by decide +kernel) boundingCanonical6931,
+    validThree_of_perm 13644479 3058379 (by decide +kernel) boundingCanonical6932,
+    validThree_of_perm 13644485 3058385 (by decide +kernel) boundingCanonical6933,
+    validThree_of_perm 13644486 3058386 (by decide +kernel) boundingCanonical6934,
+    validThree_of_perm 13644490 3058390 (by decide +kernel) boundingCanonical6935,
+    validThree_of_perm 13644492 3058392 (by decide +kernel) boundingCanonical6936,
+    validThree_of_perm 13644549 3058449 (by decide +kernel) boundingCanonical6937,
+    validThree_of_perm 13644550 3058450 (by decide +kernel) boundingCanonical6938,
+    validThree_of_perm 13644552 3058452 (by decide +kernel) boundingCanonical6939,
+    validThree_of_perm 13644553 3058453 (by decide +kernel) boundingCanonical6940,
+    validThree_of_perm 13644554 3058454 (by decide +kernel) boundingCanonical6941,
+    validThree_of_perm 13644558 3058458 (by decide +kernel) boundingCanonical6942,
+    validThree_of_perm 13644559 3058459 (by decide +kernel) boundingCanonical6943,
+    validThree_of_perm 13644560 3058460 (by decide +kernel) boundingCanonical6944,
+    validThree_of_perm 13644620 3058520 (by decide +kernel) boundingCanonical6945,
+    validThree_of_perm 13644621 3058521 (by decide +kernel) boundingCanonical6946,
+    by simp⟩
+theorem boundingLeaf2026_mem : codeChain boundingEntries2026 ∈ Chains 3 := codeChain_mem_three _ boundingLeaf2026_valid
+noncomputable def boundingLeaf2026Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2026Part0@@
+noncomputable def boundingLeaf2026Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2026Part1@@
+noncomputable def boundingLeaf2026 : List (ℕ × ℤ) := boundingLeaf2026Part0 ++ boundingLeaf2026Part1
+theorem boundingLeaf2026_check :
+    collapse 10 (((codeDifferential boundingEntries2026) ++ scaleEntries (Int.negSucc 5) ([] : List (ℕ × ℤ))).map
+      (fun p => [p])) = [boundingLeaf2026] := by decide +kernel
+ theorem boundingLeaf2026_chain : codeChain boundingLeaf2026 =
+    boundary (codeChain boundingEntries2026) + (-6 : ℤ) • (0 : RawChain) := by
+  simpa only [codeChain_nil] using (leaf_sound 10 boundingEntries2026 ([] : List (ℕ × ℤ)) boundingLeaf2026 boundingLeaf2026_valid boundingLeaf2026_check)
+noncomputable def boundingEntries2027 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingEntries2027@@
+theorem boundingLeaf2027_valid : ∀ p ∈ boundingEntries2027, ValidThree p.1 := by
+  simp only [boundingEntries2027, List.forall_mem_cons]
+  exact ⟨validThree_of_perm 13644623 3058523 (by decide +kernel) boundingCanonical6947,
+    validThree_of_perm 13644624 3058524 (by decide +kernel) boundingCanonical6948,
+    validThree_of_perm 13644625 3058525 (by decide +kernel) boundingCanonical6949,
+    validThree_of_perm 13644629 3058529 (by decide +kernel) boundingCanonical6950,
+    validThree_of_perm 13644630 3058530 (by decide +kernel) boundingCanonical6951,
+    validThree_of_perm 13644631 3058531 (by decide +kernel) boundingCanonical6952,
+    validThree_of_perm 13644691 3058591 (by decide +kernel) boundingCanonical6953,
+    validThree_of_perm 13644692 3058592 (by decide +kernel) boundingCanonical6954,
+    validThree_of_perm 13644694 3058594 (by decide +kernel) boundingCanonical6955,
+    validThree_of_perm 13644695 3058595 (by decide +kernel) boundingCanonical6956,
+    validThree_of_perm 13644696 3058596 (by decide +kernel) boundingCanonical6957,
+    validThree_of_perm 13644700 3058600 (by decide +kernel) boundingCanonical6958,
+    validThree_of_perm 13644701 3058601 (by decide +kernel) boundingCanonical6959,
+    validThree_of_perm 13644702 3058602 (by decide +kernel) boundingCanonical6960,
+    validThree_of_perm 13644759 3058449 (by decide +kernel) boundingCanonical6937,
+    validThree_of_perm 13644760 3058520 (by decide +kernel) boundingCanonical6945,
+    validThree_of_perm 13644761 3058591 (by decide +kernel) boundingCanonical6953,
+    validThree_of_perm 13644767 3058667 (by decide +kernel) boundingCanonical6961,
+    validThree_of_perm 13644777 3058677 (by decide +kernel) boundingCanonical6962,
+    validThree_of_perm 13644779 3058679 (by decide +kernel) boundingCanonical6963,
+    validThree_of_perm 13644827 3058237 (by decide +kernel) boundingCanonical6924,
+    validThree_of_perm 13644828 3058308 (by decide +kernel) boundingCanonical6928,
+    validThree_of_perm 13644829 3058379 (by decide +kernel) boundingCanonical6932,
+    validThree_of_perm 13644830 3058450 (by decide +kernel) boundingCanonical6938,
+    validThree_of_perm 13644831 3058521 (by decide +kernel) boundingCanonical6946,
+    validThree_of_perm 13644832 3058592 (by decide +kernel) boundingCanonical6954,
+    validThree_of_perm 13644838 3058738 (by decide +kernel) boundingCanonical6964,
+    validThree_of_perm 13644848 3058748 (by decide +kernel) boundingCanonical6965,
+    validThree_of_perm 13644850 3058750 (by decide +kernel) boundingCanonical6966,
+    validThree_of_perm 13644919 3058819 (by decide +kernel) boundingCanonical6967,
+    validThree_of_perm 13644921 3058821 (by decide +kernel) boundingCanonical6968,
+    validThree_of_perm 13644955 3032395 (by decide +kernel) boundingCanonical6756,
+    validThree_of_perm 13644956 3037436 (by decide +kernel) boundingCanonical6841,
+    validThree_of_perm 13644972 3058452 (by decide +kernel) boundingCanonical6939,
+    validThree_of_perm 13644973 3058523 (by decide +kernel) boundingCanonical6947,
+    validThree_of_perm 13644974 3058594 (by decide +kernel) boundingCanonical6955,
+    validThree_of_perm 13644989 3058889 (by decide +kernel) boundingCanonical6969,
+    validThree_of_perm 13645026 3032396 (by decide +kernel) boundingCanonical6757,
+    validThree_of_perm 13645027 3037437 (by decide +kernel) boundingCanonical6842,
+    validThree_of_perm 13645035 3057885 (by decide +kernel) boundingCanonical6904,
+    validThree_of_perm 13645036 3057956 (by decide +kernel) boundingCanonical6911,
+    validThree_of_perm 13645043 3058453 (by decide +kernel) boundingCanonical6940,
+    validThree_of_perm 13645044 3058524 (by decide +kernel) boundingCanonical6948,
+    validThree_of_perm 13645045 3058595 (by decide +kernel) boundingCanonical6956,
+    validThree_of_perm 13645060 3058960 (by decide +kernel) boundingCanonical6970,
+    validThree_of_perm 13645097 3032397 (by decide +kernel) boundingCanonical6758,
+    validThree_of_perm 13645106 3057886 (by decide +kernel) boundingCanonical6905,
+    validThree_of_perm 13645107 3057957 (by decide +kernel) boundingCanonical6912,
+    validThree_of_perm 13645109 3058099 (by decide +kernel) boundingCanonical6922,
+    validThree_of_perm 13645110 3058170 (by decide +kernel) boundingCanonical6923,
+    validThree_of_perm 13645114 3058454 (by decide +kernel) boundingCanonical6941,
+    validThree_of_perm 13645115 3058525 (by decide +kernel) boundingCanonical6949,
+    validThree_of_perm 13645116 3058596 (by decide +kernel) boundingCanonical6957,
+    validThree_of_perm 13645117 3058667 (by decide +kernel) boundingCanonical6961,
+    validThree_of_perm 13645118 3058738 (by decide +kernel) boundingCanonical6964,
+    validThree_of_perm 13645126 3059026 (by decide +kernel) boundingCanonical6971,
+    validThree_of_perm 13645131 3059031 (by decide +kernel) boundingCanonical6972,
+    validThree_of_perm 13645169 3037439 (by decide +kernel) boundingCanonical6843,
+    validThree_of_perm 13645197 3059097 (by decide +kernel) boundingCanonical6973,
+    validThree_of_perm 13645198 3059098 (by decide +kernel) boundingCanonical6974,
+    validThree_of_perm 13645199 3059099 (by decide +kernel) boundingCanonical6975,
+    validThree_of_perm 13645201 3059101 (by decide +kernel) boundingCanonical6976,
+    validThree_of_perm 13645240 3037440 (by decide +kernel) boundingCanonical6844,
+    validThree_of_perm 13645253 3058243 (by decide +kernel) boundingCanonical6925,
+    by simp⟩
+theorem boundingLeaf2027_mem : codeChain boundingEntries2027 ∈ Chains 3 := codeChain_mem_three _ boundingLeaf2027_valid
+noncomputable def boundingLeaf2027 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2027@@
+theorem boundingLeaf2027_check :
+    collapse 10 (((codeDifferential boundingEntries2027) ++ scaleEntries (Int.negSucc 5) ([] : List (ℕ × ℤ))).map
+      (fun p => [p])) = [boundingLeaf2027] := by decide +kernel
+ theorem boundingLeaf2027_chain : codeChain boundingLeaf2027 =
+    boundary (codeChain boundingEntries2027) + (-6 : ℤ) • (0 : RawChain) := by
+  simpa only [codeChain_nil] using (leaf_sound 10 boundingEntries2027 ([] : List (ℕ × ℤ)) boundingLeaf2027 boundingLeaf2027_valid boundingLeaf2027_check)
+noncomputable def boundingEntries2028 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingEntries2028@@
+theorem boundingLeaf2028_valid : ∀ p ∈ boundingEntries2028, ValidThree p.1 := by
+  simp only [boundingEntries2028, List.forall_mem_cons]
+  exact ⟨validThree_of_perm 13645254 3058314 (by decide +kernel) boundingCanonical6929,
+    validThree_of_perm 13645255 3058385 (by decide +kernel) boundingCanonical6933,
+    validThree_of_perm 13645268 3059168 (by decide +kernel) boundingCanonical6977,
+    validThree_of_perm 13645269 3059169 (by decide +kernel) boundingCanonical6978,
+    validThree_of_perm 13645270 3059170 (by decide +kernel) boundingCanonical6979,
+    validThree_of_perm 13645272 3059172 (by decide +kernel) boundingCanonical6980,
+    validThree_of_perm 13645311 3037441 (by decide +kernel) boundingCanonical6845,
+    validThree_of_perm 13645326 3058386 (by decide +kernel) boundingCanonical6934,
+    validThree_of_perm 13645340 3059240 (by decide +kernel) boundingCanonical6982,
+    validThree_of_perm 13645341 3059241 (by decide +kernel) boundingCanonical6983,
+    validThree_of_perm 13645381 3032401 (by decide +kernel) boundingCanonical6759,
+    validThree_of_perm 13645391 3057961 (by decide +kernel) boundingCanonical6913,
+    validThree_of_perm 13645398 3058458 (by decide +kernel) boundingCanonical6942,
+    validThree_of_perm 13645399 3058529 (by decide +kernel) boundingCanonical6950,
+    validThree_of_perm 13645400 3058600 (by decide +kernel) boundingCanonical6958,
+    validThree_of_perm 13645406 3059026 (by decide +kernel) boundingCanonical6971,
+    validThree_of_perm 13645407 3059097 (by decide +kernel) boundingCanonical6973,
+    validThree_of_perm 13645408 3059168 (by decide +kernel) boundingCanonical6977,
+    validThree_of_perm 13645452 3032402 (by decide +kernel) boundingCanonical6760,
+    validThree_of_perm 13645453 3037443 (by decide +kernel) boundingCanonical6846,
+    validThree_of_perm 13645461 3057891 (by decide +kernel) boundingCanonical6906,
+    validThree_of_perm 13645462 3057962 (by decide +kernel) boundingCanonical6914,
+    validThree_of_perm 13645469 3058459 (by decide +kernel) boundingCanonical6943,
+    validThree_of_perm 13645470 3058530 (by decide +kernel) boundingCanonical6951,
+    validThree_of_perm 13645471 3058601 (by decide +kernel) boundingCanonical6959,
+    validThree_of_perm 13645478 3059098 (by decide +kernel) boundingCanonical6974,
+    validThree_of_perm 13645479 3059169 (by decide +kernel) boundingCanonical6978,
+    validThree_of_perm 13645480 3059240 (by decide +kernel) boundingCanonical6982,
+    validThree_of_perm 13645484 3059384 (by decide +kernel) boundingCanonical6984,
+    validThree_of_perm 13645524 3037444 (by decide +kernel) boundingCanonical6847,
+    validThree_of_perm 13645533 3057963 (by decide +kernel) boundingCanonical6915,
+    validThree_of_perm 13645540 3058460 (by decide +kernel) boundingCanonical6944,
+    validThree_of_perm 13645541 3058531 (by decide +kernel) boundingCanonical6952,
+    validThree_of_perm 13645542 3058602 (by decide +kernel) boundingCanonical6960,
+    validThree_of_perm 13645549 3059099 (by decide +kernel) boundingCanonical6975,
+    validThree_of_perm 13645550 3059170 (by decide +kernel) boundingCanonical6979,
+    validThree_of_perm 13645551 3059241 (by decide +kernel) boundingCanonical6983,
+    validThree_of_perm 13645555 3059455 (by decide +kernel) boundingCanonical6985,
+    validThree_of_perm 13645603 3057893 (by decide +kernel) boundingCanonical6907,
+    validThree_of_perm 13645604 3057964 (by decide +kernel) boundingCanonical6916,
+    validThree_of_perm 13645608 3058248 (by decide +kernel) boundingCanonical6926,
+    validThree_of_perm 13645609 3058319 (by decide +kernel) boundingCanonical6930,
+    validThree_of_perm 13645610 3058390 (by decide +kernel) boundingCanonical6935,
+    validThree_of_perm 13645624 3059384 (by decide +kernel) boundingCanonical6984,
+    validThree_of_perm 13645625 3059455 (by decide +kernel) boundingCanonical6985,
+    validThree_of_perm 13645629 3059529 (by decide +kernel) boundingCanonical6986,
+    validThree_of_perm 13645630 3059530 (by decide +kernel) boundingCanonical6987,
+    validThree_of_perm 13645666 3037446 (by decide +kernel) boundingCanonical6848,
+    validThree_of_perm 13645674 3057894 (by decide +kernel) boundingCanonical6908,
+    validThree_of_perm 13645675 3057965 (by decide +kernel) boundingCanonical6917,
+    validThree_of_perm 13645691 3059101 (by decide +kernel) boundingCanonical6976,
+    validThree_of_perm 13645692 3059172 (by decide +kernel) boundingCanonical6980,
+    validThree_of_perm 13645701 3059601 (by decide +kernel) boundingCanonical6988,
+    validThree_of_perm 13645736 3032406 (by decide +kernel) boundingCanonical6761,
+    validThree_of_perm 13645745 3057895 (by decide +kernel) boundingCanonical6909,
+    validThree_of_perm 13645746 3057966 (by decide +kernel) boundingCanonical6918,
+    validThree_of_perm 13645750 3058250 (by decide +kernel) boundingCanonical6927,
+    validThree_of_perm 13645751 3058321 (by decide +kernel) boundingCanonical6931,
+    validThree_of_perm 13645752 3058392 (by decide +kernel) boundingCanonical6936,
+    validThree_of_perm 13645759 3058889 (by decide +kernel) boundingCanonical6969,
+    validThree_of_perm 13645760 3058960 (by decide +kernel) boundingCanonical6970,
+    validThree_of_perm 13645761 3059031 (by decide +kernel) boundingCanonical6972,
+    validThree_of_perm 13645817 3057967 (by decide +kernel) boundingCanonical6919,
+    validThree_of_perm 13645827 3058677 (by decide +kernel) boundingCanonical6962,
+    by simp⟩
+theorem boundingLeaf2028_mem : codeChain boundingEntries2028 ∈ Chains 3 := codeChain_mem_three _ boundingLeaf2028_valid
+noncomputable def boundingLeaf2028 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2028@@
+theorem boundingLeaf2028_check :
+    collapse 10 (((codeDifferential boundingEntries2028) ++ scaleEntries (Int.negSucc 5) ([] : List (ℕ × ℤ))).map
+      (fun p => [p])) = [boundingLeaf2028] := by decide +kernel
+ theorem boundingLeaf2028_chain : codeChain boundingLeaf2028 =
+    boundary (codeChain boundingEntries2028) + (-6 : ℤ) • (0 : RawChain) := by
+  simpa only [codeChain_nil] using (leaf_sound 10 boundingEntries2028 ([] : List (ℕ × ℤ)) boundingLeaf2028 boundingLeaf2028_valid boundingLeaf2028_check)
+noncomputable def boundingEntries2029 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingEntries2029@@
+theorem boundingLeaf2029_valid : ∀ p ∈ boundingEntries2029, ValidThree p.1 := by
+  simp only [boundingEntries2029, List.forall_mem_cons]
+  exact ⟨validThree_of_perm 13645828 3058748 (by decide +kernel) boundingCanonical6965,
+    validThree_of_perm 13645829 3058819 (by decide +kernel) boundingCanonical6967,
+    validThree_of_perm 13645839 3059529 (by decide +kernel) boundingCanonical6986,
+    validThree_of_perm 13645887 3057897 (by decide +kernel) boundingCanonical6910,
+    validThree_of_perm 13645888 3057968 (by decide +kernel) boundingCanonical6920,
+    validThree_of_perm 13645910 3059530 (by decide +kernel) boundingCanonical6987,
+    validThree_of_perm 13645911 3059601 (by decide +kernel) boundingCanonical6988,
+    validThree_of_perm 13645959 3057969 (by decide +kernel) boundingCanonical6921,
+    validThree_of_perm 13645969 3058679 (by decide +kernel) boundingCanonical6963,
+    validThree_of_perm 13645970 3058750 (by decide +kernel) boundingCanonical6966,
+    validThree_of_perm 13645971 3058821 (by decide +kernel) boundingCanonical6968,
+    validThree_of_perm 13648459 3395349 (by decide +kernel) boundingCanonical7643,
+    validThree_of_perm 13648463 3395353 (by decide +kernel) boundingCanonical7644,
+    validThree_of_perm 13648466 3395356 (by decide +kernel) boundingCanonical7645,
+    validThree_of_perm 13648468 3395358 (by decide +kernel) boundingCanonical7646,
+    validThree_of_perm 13649026 3415796 (by decide +kernel) boundingCanonical7666,
+    validThree_of_perm 13649027 3415797 (by decide +kernel) boundingCanonical7667,
+    validThree_of_perm 13649032 3415802 (by decide +kernel) boundingCanonical7668,
+    validThree_of_perm 13649034 3415804 (by decide +kernel) boundingCanonical7669,
+    validThree_of_perm 13649035 3415805 (by decide +kernel) boundingCanonical7670,
+    validThree_of_perm 13649036 3415806 (by decide +kernel) boundingCanonical7671,
+    validThree_of_perm 13649038 3415808 (by decide +kernel) boundingCanonical7672,
+    validThree_of_perm 13649088 3415858 (by decide +kernel) boundingCanonical7673,
+    validThree_of_perm 13649089 3415859 (by decide +kernel) boundingCanonical7674,
+    validThree_of_perm 13649097 3415867 (by decide +kernel) boundingCanonical7675,
+    validThree_of_perm 13649100 3415870 (by decide +kernel) boundingCanonical7676,
+    validThree_of_perm 13649101 3415871 (by decide +kernel) boundingCanonical7677,
+    validThree_of_perm 13649105 3415875 (by decide +kernel) boundingCanonical7678,
+    validThree_of_perm 13649109 3415879 (by decide +kernel) boundingCanonical7680,
+    validThree_of_perm 13649110 3415880 (by decide +kernel) boundingCanonical7681,
+    validThree_of_perm 13649240 3416010 (by decide +kernel) boundingCanonical7682,
+    validThree_of_perm 13649242 3416012 (by decide +kernel) boundingCanonical7683,
+    validThree_of_perm 13649323 3416093 (by decide +kernel) boundingCanonical7684,
+    validThree_of_perm 13649377 3416147 (by decide +kernel) boundingCanonical7685,
+    validThree_of_perm 13649379 3416149 (by decide +kernel) boundingCanonical7686,
+    validThree_of_perm 13649383 3416153 (by decide +kernel) boundingCanonical7687,
+    validThree_of_perm 13649385 3416155 (by decide +kernel) boundingCanonical7688,
+    validThree_of_perm 13649390 3416160 (by decide +kernel) boundingCanonical7689,
+    validThree_of_perm 13649438 3415858 (by decide +kernel) boundingCanonical7673,
+    validThree_of_perm 13649448 3416218 (by decide +kernel) boundingCanonical7690,
+    validThree_of_perm 13649450 3416220 (by decide +kernel) boundingCanonical7691,
+    validThree_of_perm 13649454 3416224 (by decide +kernel) boundingCanonical7692,
+    validThree_of_perm 13649456 3416226 (by decide +kernel) boundingCanonical7693,
+    validThree_of_perm 13649509 3415859 (by decide +kernel) boundingCanonical7674,
+    validThree_of_perm 13649519 3416289 (by decide +kernel) boundingCanonical7695,
+    validThree_of_perm 13649521 3416291 (by decide +kernel) boundingCanonical7696,
+    validThree_of_perm 13649525 3416295 (by decide +kernel) boundingCanonical7697,
+    validThree_of_perm 13649531 3416301 (by decide +kernel) boundingCanonical7698,
+    validThree_of_perm 13649592 3416362 (by decide +kernel) boundingCanonical7700,
+    validThree_of_perm 13649663 3416433 (by decide +kernel) boundingCanonical7701,
+    validThree_of_perm 13649734 3416504 (by decide +kernel) boundingCanonical7702,
+    validThree_of_perm 13649797 3416147 (by decide +kernel) boundingCanonical7685,
+    validThree_of_perm 13649798 3416218 (by decide +kernel) boundingCanonical7690,
+    validThree_of_perm 13649799 3416289 (by decide +kernel) boundingCanonical7695,
+    validThree_of_perm 13649820 3416590 (by decide +kernel) boundingCanonical7703,
+    validThree_of_perm 13649890 3416660 (by decide +kernel) boundingCanonical7704,
+    validThree_of_perm 13649939 3416149 (by decide +kernel) boundingCanonical7686,
+    validThree_of_perm 13649940 3416220 (by decide +kernel) boundingCanonical7691,
+    validThree_of_perm 13649941 3416291 (by decide +kernel) boundingCanonical7696,
+    validThree_of_perm 13649942 3416362 (by decide +kernel) boundingCanonical7700,
+    validThree_of_perm 13649943 3416433 (by decide +kernel) boundingCanonical7701,
+    validThree_of_perm 13649944 3416504 (by decide +kernel) boundingCanonical7702,
+    validThree_of_perm 13649951 3416721 (by decide +kernel) boundingCanonical7705,
+    validThree_of_perm 13649961 3416731 (by decide +kernel) boundingCanonical7706,
+    by simp⟩
+theorem boundingLeaf2029_mem : codeChain boundingEntries2029 ∈ Chains 3 := codeChain_mem_three _ boundingLeaf2029_valid
+noncomputable def boundingLeaf2029Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2029Part0@@
+noncomputable def boundingLeaf2029Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2029Part1@@
+noncomputable def boundingLeaf2029 : List (ℕ × ℤ) := boundingLeaf2029Part0 ++ boundingLeaf2029Part1
+theorem boundingLeaf2029_check :
+    collapse 10 (((codeDifferential boundingEntries2029) ++ scaleEntries (Int.negSucc 5) ([] : List (ℕ × ℤ))).map
+      (fun p => [p])) = [boundingLeaf2029] := by decide +kernel
+ theorem boundingLeaf2029_chain : codeChain boundingLeaf2029 =
+    boundary (codeChain boundingEntries2029) + (-6 : ℤ) • (0 : RawChain) := by
+  simpa only [codeChain_nil] using (leaf_sound 10 boundingEntries2029 ([] : List (ℕ × ℤ)) boundingLeaf2029 boundingLeaf2029_valid boundingLeaf2029_check)
+noncomputable def boundingEntries2030 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingEntries2030@@
+theorem boundingLeaf2030_valid : ∀ p ∈ boundingEntries2030, ValidThree p.1 := by
+  simp only [boundingEntries2030, List.forall_mem_cons]
+  exact ⟨validThree_of_perm 13650076 3415796 (by decide +kernel) boundingCanonical7666,
+    validThree_of_perm 13650077 3415867 (by decide +kernel) boundingCanonical7675,
+    validThree_of_perm 13650100 3416870 (by decide +kernel) boundingCanonical7707,
+    validThree_of_perm 13650139 3395349 (by decide +kernel) boundingCanonical7643,
+    validThree_of_perm 13650147 3415797 (by decide +kernel) boundingCanonical7667,
+    validThree_of_perm 13650150 3416010 (by decide +kernel) boundingCanonical7682,
+    validThree_of_perm 13650223 3416153 (by decide +kernel) boundingCanonical7687,
+    validThree_of_perm 13650224 3416224 (by decide +kernel) boundingCanonical7692,
+    validThree_of_perm 13650225 3416295 (by decide +kernel) boundingCanonical7697,
+    validThree_of_perm 13650231 3416721 (by decide +kernel) boundingCanonical7705,
+    validThree_of_perm 13650290 3415870 (by decide +kernel) boundingCanonical7676,
+    validThree_of_perm 13650292 3416012 (by decide +kernel) boundingCanonical7683,
+    validThree_of_perm 13650361 3415871 (by decide +kernel) boundingCanonical7677,
+    validThree_of_perm 13650365 3416155 (by decide +kernel) boundingCanonical7688,
+    validThree_of_perm 13650366 3416226 (by decide +kernel) boundingCanonical7693,
+    validThree_of_perm 13650423 3395353 (by decide +kernel) boundingCanonical7644,
+    validThree_of_perm 13650453 3417223 (by decide +kernel) boundingCanonical7708,
+    validThree_of_perm 13650502 3415802 (by decide +kernel) boundingCanonical7668,
+    validThree_of_perm 13650525 3417295 (by decide +kernel) boundingCanonical7709,
+    validThree_of_perm 13650593 3417223 (by decide +kernel) boundingCanonical7708,
+    validThree_of_perm 13650636 3395356 (by decide +kernel) boundingCanonical7645,
+    validThree_of_perm 13650644 3415804 (by decide +kernel) boundingCanonical7669,
+    validThree_of_perm 13650645 3415875 (by decide +kernel) boundingCanonical7678,
+    validThree_of_perm 13650651 3416301 (by decide +kernel) boundingCanonical7698,
+    validThree_of_perm 13650665 3417295 (by decide +kernel) boundingCanonical7709,
+    validThree_of_perm 13650715 3415805 (by decide +kernel) boundingCanonical7670,
+    validThree_of_perm 13650720 3416160 (by decide +kernel) boundingCanonical7689,
+    validThree_of_perm 13650730 3416870 (by decide +kernel) boundingCanonical7707,
+    validThree_of_perm 13650778 3395358 (by decide +kernel) boundingCanonical7646,
+    validThree_of_perm 13650786 3415806 (by decide +kernel) boundingCanonical7671,
+    validThree_of_perm 13650928 3415808 (by decide +kernel) boundingCanonical7672,
+    validThree_of_perm 13650929 3415879 (by decide +kernel) boundingCanonical7680,
+    validThree_of_perm 13650940 3416660 (by decide +kernel) boundingCanonical7704,
+    validThree_of_perm 13650941 3416731 (by decide +kernel) boundingCanonical7706,
+    validThree_of_perm 13651000 3415880 (by decide +kernel) boundingCanonical7681,
+    validThree_of_perm 13651003 3416093 (by decide +kernel) boundingCanonical7684,
+    validThree_of_perm 13651010 3416590 (by decide +kernel) boundingCanonical7703,
+    validThree_of_perm 13658474 4106134 (by decide +kernel) boundingCanonical8950,
+    validThree_of_perm 13659900 4132410 (by decide +kernel) boundingCanonical9109,
+    validThree_of_perm 13659902 4132412 (by decide +kernel) boundingCanonical9110,
+    validThree_of_perm 13660044 4132554 (by decide +kernel) boundingCanonical9112,
+    validThree_of_perm 13660107 4132617 (by decide +kernel) boundingCanonical9113,
+    validThree_of_perm 13660113 4132623 (by decide +kernel) boundingCanonical9114,
+    validThree_of_perm 13660182 4132692 (by decide +kernel) boundingCanonical9115,
+    validThree_of_perm 13660395 4132905 (by decide +kernel) boundingCanonical9116,
+    validThree_of_perm 13660504 4106134 (by decide +kernel) boundingCanonical8950,
+    validThree_of_perm 13660527 4132617 (by decide +kernel) boundingCanonical9113,
+    validThree_of_perm 13660535 4133045 (by decide +kernel) boundingCanonical9118,
+    validThree_of_perm 13660675 4133045 (by decide +kernel) boundingCanonical9118,
+    validThree_of_perm 13660678 4133188 (by decide +kernel) boundingCanonical9119,
+    validThree_of_perm 13660748 4133188 (by decide +kernel) boundingCanonical9119,
+    validThree_of_perm 13660812 4132692 (by decide +kernel) boundingCanonical9115,
+    validThree_of_perm 13660815 4132905 (by decide +kernel) boundingCanonical9116,
+    validThree_of_perm 13660950 4132410 (by decide +kernel) boundingCanonical9109,
+    validThree_of_perm 13660952 4132552 (by decide +kernel) boundingCanonical9111,
+    validThree_of_perm 13660953 4132623 (by decide +kernel) boundingCanonical9114,
+    validThree_of_perm 13661092 4132412 (by decide +kernel) boundingCanonical9110,
+    validThree_of_perm 13661094 4132554 (by decide +kernel) boundingCanonical9112,
+    validThree_of_perm 13663591 4469091 (by decide +kernel) boundingCanonical9549,
+    validThree_of_perm 13663592 4469092 (by decide +kernel) boundingCanonical9550,
+    validThree_of_perm 13663593 4469093 (by decide +kernel) boundingCanonical9551,
+    validThree_of_perm 13663723 4479163 (by decide +kernel) boundingCanonical9674,
+    validThree_of_perm 13663724 4479164 (by decide +kernel) boundingCanonical9675,
+    validThree_of_perm 13663729 4479169 (by decide +kernel) boundingCanonical9676,
+    by simp⟩
+theorem boundingLeaf2030_mem : codeChain boundingEntries2030 ∈ Chains 3 := codeChain_mem_three _ boundingLeaf2030_valid
+noncomputable def boundingLeaf2030Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2030Part0@@
+noncomputable def boundingLeaf2030Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2030Part1@@
+noncomputable def boundingLeaf2030 : List (ℕ × ℤ) := boundingLeaf2030Part0 ++ boundingLeaf2030Part1
+theorem boundingLeaf2030_check :
+    collapse 10 (((codeDifferential boundingEntries2030) ++ scaleEntries (Int.negSucc 5) ([] : List (ℕ × ℤ))).map
+      (fun p => [p])) = [boundingLeaf2030] := by decide +kernel
+ theorem boundingLeaf2030_chain : codeChain boundingLeaf2030 =
+    boundary (codeChain boundingEntries2030) + (-6 : ℤ) • (0 : RawChain) := by
+  simpa only [codeChain_nil] using (leaf_sound 10 boundingEntries2030 ([] : List (ℕ × ℤ)) boundingLeaf2030 boundingLeaf2030_valid boundingLeaf2030_check)
+noncomputable def boundingEntries2031 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingEntries2031@@
+theorem boundingLeaf2031_valid : ∀ p ∈ boundingEntries2031, ValidThree p.1 := by
+  simp only [boundingEntries2031, List.forall_mem_cons]
+  exact ⟨validThree_of_perm 13663731 4479171 (by decide +kernel) boundingCanonical9677,
+    validThree_of_perm 13663732 4479172 (by decide +kernel) boundingCanonical9678,
+    validThree_of_perm 13663733 4479173 (by decide +kernel) boundingCanonical9679,
+    validThree_of_perm 13663735 4479175 (by decide +kernel) boundingCanonical9680,
+    validThree_of_perm 13664502 4489882 (by decide +kernel) boundingCanonical9784,
+    validThree_of_perm 13664573 4489953 (by decide +kernel) boundingCanonical9785,
+    validThree_of_perm 13664574 4489954 (by decide +kernel) boundingCanonical9786,
+    validThree_of_perm 13664643 4490023 (by decide +kernel) boundingCanonical9787,
+    validThree_of_perm 13664644 4490024 (by decide +kernel) boundingCanonical9788,
+    validThree_of_perm 13664645 4490025 (by decide +kernel) boundingCanonical9789,
+    validThree_of_perm 13664655 4490035 (by decide +kernel) boundingCanonical9790,
+    validThree_of_perm 13664656 4490036 (by decide +kernel) boundingCanonical9791,
+    validThree_of_perm 13664713 4490093 (by decide +kernel) boundingCanonical9792,
+    validThree_of_perm 13664716 4490096 (by decide +kernel) boundingCanonical9793,
+    validThree_of_perm 13664784 4490164 (by decide +kernel) boundingCanonical9794,
+    validThree_of_perm 13664787 4490167 (by decide +kernel) boundingCanonical9795,
+    validThree_of_perm 13664855 4490235 (by decide +kernel) boundingCanonical9796,
+    validThree_of_perm 13664858 4490238 (by decide +kernel) boundingCanonical9797,
+    validThree_of_perm 13664866 4490246 (by decide +kernel) boundingCanonical9798,
+    validThree_of_perm 13664923 4490093 (by decide +kernel) boundingCanonical9792,
+    validThree_of_perm 13664924 4490164 (by decide +kernel) boundingCanonical9794,
+    validThree_of_perm 13664925 4490235 (by decide +kernel) boundingCanonical9796,
+    validThree_of_perm 13664943 4490323 (by decide +kernel) boundingCanonical9799,
+    validThree_of_perm 13664993 4490023 (by decide +kernel) boundingCanonical9787,
+    validThree_of_perm 13665014 4490394 (by decide +kernel) boundingCanonical9800,
+    validThree_of_perm 13665062 4489882 (by decide +kernel) boundingCanonical9784,
+    validThree_of_perm 13665063 4489953 (by decide +kernel) boundingCanonical9785,
+    validThree_of_perm 13665064 4490024 (by decide +kernel) boundingCanonical9788,
+    validThree_of_perm 13665134 4489954 (by decide +kernel) boundingCanonical9786,
+    validThree_of_perm 13665135 4490025 (by decide +kernel) boundingCanonical9789,
+    validThree_of_perm 13665136 4490096 (by decide +kernel) boundingCanonical9793,
+    validThree_of_perm 13665137 4490167 (by decide +kernel) boundingCanonical9795,
+    validThree_of_perm 13665138 4490238 (by decide +kernel) boundingCanonical9797,
+    validThree_of_perm 13665151 4490531 (by decide +kernel) boundingCanonical9801,
+    validThree_of_perm 13665152 4490532 (by decide +kernel) boundingCanonical9802,
+    validThree_of_perm 13665155 4490535 (by decide +kernel) boundingCanonical9803,
+    validThree_of_perm 13665156 4490536 (by decide +kernel) boundingCanonical9804,
+    validThree_of_perm 13665193 4479163 (by decide +kernel) boundingCanonical9674,
+    validThree_of_perm 13665264 4479164 (by decide +kernel) boundingCanonical9675,
+    validThree_of_perm 13665362 4490742 (by decide +kernel) boundingCanonical9805,
+    validThree_of_perm 13665619 4479169 (by decide +kernel) boundingCanonical9676,
+    validThree_of_perm 13665642 4490742 (by decide +kernel) boundingCanonical9805,
+    validThree_of_perm 13665706 4490246 (by decide +kernel) boundingCanonical9798,
+    validThree_of_perm 13665761 4479171 (by decide +kernel) boundingCanonical9677,
+    validThree_of_perm 13665781 4490531 (by decide +kernel) boundingCanonical9801,
+    validThree_of_perm 13665832 4479172 (by decide +kernel) boundingCanonical9678,
+    validThree_of_perm 13665845 4490035 (by decide +kernel) boundingCanonical9790,
+    validThree_of_perm 13665852 4490532 (by decide +kernel) boundingCanonical9802,
+    validThree_of_perm 13665901 4469091 (by decide +kernel) boundingCanonical9549,
+    validThree_of_perm 13665903 4479173 (by decide +kernel) boundingCanonical9679,
+    validThree_of_perm 13665916 4490036 (by decide +kernel) boundingCanonical9791,
+    validThree_of_perm 13665972 4469092 (by decide +kernel) boundingCanonical9550,
+    validThree_of_perm 13666043 4469093 (by decide +kernel) boundingCanonical9551,
+    validThree_of_perm 13666045 4479175 (by decide +kernel) boundingCanonical9680,
+    validThree_of_perm 13666065 4490535 (by decide +kernel) boundingCanonical9803,
+    validThree_of_perm 13666133 4490323 (by decide +kernel) boundingCanonical9799,
+    validThree_of_perm 13666134 4490394 (by decide +kernel) boundingCanonical9800,
+    validThree_of_perm 13666136 4490536 (by decide +kernel) boundingCanonical9804,
+    validThree_of_perm 13668560 4821960 (by decide +kernel) boundingCanonical9989,
+    validThree_of_perm 13668561 4821961 (by decide +kernel) boundingCanonical9990,
+    validThree_of_perm 13668564 4821964 (by decide +kernel) boundingCanonical9991,
+    validThree_of_perm 13668627 4826997 (by decide +kernel) boundingCanonical10070,
+    validThree_of_perm 13668631 4827001 (by decide +kernel) boundingCanonical10071,
+    validThree_of_perm 13668633 4827003 (by decide +kernel) boundingCanonical10072,
+    by simp⟩
+theorem boundingLeaf2031_mem : codeChain boundingEntries2031 ∈ Chains 3 := codeChain_mem_three _ boundingLeaf2031_valid
+noncomputable def boundingLeaf2031Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2031Part0@@
+noncomputable def boundingLeaf2031Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingLeaf2031Part1@@
+noncomputable def boundingLeaf2031 : List (ℕ × ℤ) := boundingLeaf2031Part0 ++ boundingLeaf2031Part1
+theorem boundingLeaf2031_check :
+    collapse 10 (((codeDifferential boundingEntries2031) ++ scaleEntries (Int.negSucc 5) ([] : List (ℕ × ℤ))).map
+      (fun p => [p])) = [boundingLeaf2031] := by decide +kernel
+ theorem boundingLeaf2031_chain : codeChain boundingLeaf2031 =
+    boundary (codeChain boundingEntries2031) + (-6 : ℤ) • (0 : RawChain) := by
+  simpa only [codeChain_nil] using (leaf_sound 10 boundingEntries2031 ([] : List (ℕ × ℤ)) boundingLeaf2031 boundingLeaf2031_valid boundingLeaf2031_check)
+end Paper23.Bounding

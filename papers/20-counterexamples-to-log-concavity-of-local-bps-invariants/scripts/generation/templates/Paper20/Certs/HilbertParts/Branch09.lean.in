@@ -1,0 +1,3956 @@
+import Paper20.HilbertJobsProof
+
+set_option maxHeartbeats 0
+set_option maxRecDepth 200000
+namespace Paper20.Cert.HilbertParts.Tree
+open Paper20.HilbertJobs
+
+def j_9_9_9 : Job := ⟨[9, 9, 9], 9, 16, 41⟩
+
+def v_9_9_9 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_9 : value j_9_9_9 = v_9_9_9 := by decide
+
+def j_9_9_8_8 : Job := ⟨[9, 9, 8, 8], 8, 9, 40⟩
+
+def v_9_9_8_8 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_8_8 : value j_9_9_8_8 = v_9_9_8_8 := by decide
+
+def j_9_9_8_7 : Job := ⟨[9, 9, 8, 7], 7, 10, 40⟩
+
+def v_9_9_8_7 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_8_7 : value j_9_9_8_7 = v_9_9_8_7 := by decide
+
+def j_9_9_8_6 : Job := ⟨[9, 9, 8, 6], 6, 11, 40⟩
+
+def v_9_9_8_6 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_8_6 : value j_9_9_8_6 = v_9_9_8_6 := by decide
+
+def j_9_9_8_5 : Job := ⟨[9, 9, 8, 5], 5, 12, 40⟩
+
+def v_9_9_8_5 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_8_5 : value j_9_9_8_5 = v_9_9_8_5 := by decide
+
+def j_9_9_8_4 : Job := ⟨[9, 9, 8, 4], 4, 13, 40⟩
+
+def v_9_9_8_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_8_4 : value j_9_9_8_4 = v_9_9_8_4 := by decide
+
+def j_9_9_8_3 : Job := ⟨[9, 9, 8, 3], 3, 14, 40⟩
+
+def v_9_9_8_3 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_8_3 : value j_9_9_8_3 = v_9_9_8_3 := by decide
+
+def j_9_9_8_2 : Job := ⟨[9, 9, 8, 2], 2, 15, 40⟩
+
+def v_9_9_8_2 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_8_2 : value j_9_9_8_2 = v_9_9_8_2 := by decide
+
+def j_9_9_8_1 : Job := ⟨[9, 9, 8, 1], 1, 16, 40⟩
+
+def v_9_9_8_1 : List ℕ := @@GENERATED_RHS:v_9_9_8_1@@
+
+theorem correct_9_9_8_1 : value j_9_9_8_1 = v_9_9_8_1 := by decide
+
+def j_9_9_8 : Job := ⟨[9, 9, 8], 8, 17, 41⟩
+
+def v_9_9_8 : List ℕ := @@GENERATED_RHS:v_9_9_8@@
+
+theorem correct_9_9_8 : value j_9_9_8 = v_9_9_8 := by
+  rw [value_children j_9_9_8 (by decide) (by decide)]
+  have hc : children j_9_9_8 = [j_9_9_8_8, j_9_9_8_7, j_9_9_8_6, j_9_9_8_5, j_9_9_8_4, j_9_9_8_3, j_9_9_8_2, j_9_9_8_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_9_8_8, correct_9_9_8_7, correct_9_9_8_6, correct_9_9_8_5, correct_9_9_8_4, correct_9_9_8_3, correct_9_9_8_2, correct_9_9_8_1]
+  all_goals decide
+
+def j_9_9_7_7 : Job := ⟨[9, 9, 7, 7], 7, 11, 40⟩
+
+def v_9_9_7_7 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_7_7 : value j_9_9_7_7 = v_9_9_7_7 := by decide
+
+def j_9_9_7_6 : Job := ⟨[9, 9, 7, 6], 6, 12, 40⟩
+
+def v_9_9_7_6 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_7_6 : value j_9_9_7_6 = v_9_9_7_6 := by decide
+
+def j_9_9_7_5 : Job := ⟨[9, 9, 7, 5], 5, 13, 40⟩
+
+def v_9_9_7_5 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_7_5 : value j_9_9_7_5 = v_9_9_7_5 := by decide
+
+def j_9_9_7_4 : Job := ⟨[9, 9, 7, 4], 4, 14, 40⟩
+
+def v_9_9_7_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_7_4 : value j_9_9_7_4 = v_9_9_7_4 := by decide
+
+def j_9_9_7_3 : Job := ⟨[9, 9, 7, 3], 3, 15, 40⟩
+
+def v_9_9_7_3 : List ℕ := @@GENERATED_RHS:v_9_9_7_3@@
+
+theorem correct_9_9_7_3 : value j_9_9_7_3 = v_9_9_7_3 := by decide
+
+def j_9_9_7_2 : Job := ⟨[9, 9, 7, 2], 2, 16, 40⟩
+
+def v_9_9_7_2 : List ℕ := @@GENERATED_RHS:v_9_9_7_2@@
+
+theorem correct_9_9_7_2 : value j_9_9_7_2 = v_9_9_7_2 := by decide
+
+def j_9_9_7_1 : Job := ⟨[9, 9, 7, 1], 1, 17, 40⟩
+
+def v_9_9_7_1 : List ℕ := @@GENERATED_RHS:v_9_9_7_1@@
+
+theorem correct_9_9_7_1 : value j_9_9_7_1 = v_9_9_7_1 := by decide
+
+def j_9_9_7 : Job := ⟨[9, 9, 7], 7, 18, 41⟩
+
+def v_9_9_7 : List ℕ := @@GENERATED_RHS:v_9_9_7@@
+
+theorem correct_9_9_7 : value j_9_9_7 = v_9_9_7 := by
+  rw [value_children j_9_9_7 (by decide) (by decide)]
+  have hc : children j_9_9_7 = [j_9_9_7_7, j_9_9_7_6, j_9_9_7_5, j_9_9_7_4, j_9_9_7_3, j_9_9_7_2, j_9_9_7_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_9_7_7, correct_9_9_7_6, correct_9_9_7_5, correct_9_9_7_4, correct_9_9_7_3, correct_9_9_7_2, correct_9_9_7_1]
+  all_goals decide
+
+def j_9_9_6_6 : Job := ⟨[9, 9, 6, 6], 6, 13, 40⟩
+
+def v_9_9_6_6 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_6_6 : value j_9_9_6_6 = v_9_9_6_6 := by decide
+
+def j_9_9_6_5 : Job := ⟨[9, 9, 6, 5], 5, 14, 40⟩
+
+def v_9_9_6_5 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_6_5 : value j_9_9_6_5 = v_9_9_6_5 := by decide
+
+def j_9_9_6_4_4 : Job := ⟨[9, 9, 6, 4, 4], 4, 11, 39⟩
+
+def v_9_9_6_4_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_6_4_4 : value j_9_9_6_4_4 = v_9_9_6_4_4 := by decide
+
+def j_9_9_6_4_3 : Job := ⟨[9, 9, 6, 4, 3], 3, 12, 39⟩
+
+def v_9_9_6_4_3 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_6_4_3 : value j_9_9_6_4_3 = v_9_9_6_4_3 := by decide
+
+def j_9_9_6_4_2 : Job := ⟨[9, 9, 6, 4, 2], 2, 13, 39⟩
+
+def v_9_9_6_4_2 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_6_4_2 : value j_9_9_6_4_2 = v_9_9_6_4_2 := by decide
+
+def j_9_9_6_4_1 : Job := ⟨[9, 9, 6, 4, 1], 1, 14, 39⟩
+
+def v_9_9_6_4_1 : List ℕ := @@GENERATED_RHS:v_9_9_6_4_1@@
+
+theorem correct_9_9_6_4_1 : value j_9_9_6_4_1 = v_9_9_6_4_1 := by decide
+
+def j_9_9_6_4 : Job := ⟨[9, 9, 6, 4], 4, 15, 40⟩
+
+def v_9_9_6_4 : List ℕ := @@GENERATED_RHS:v_9_9_6_4@@
+
+theorem correct_9_9_6_4 : value j_9_9_6_4 = v_9_9_6_4 := by
+  rw [value_children j_9_9_6_4 (by decide) (by decide)]
+  have hc : children j_9_9_6_4 = [j_9_9_6_4_4, j_9_9_6_4_3, j_9_9_6_4_2, j_9_9_6_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_9_6_4_4, correct_9_9_6_4_3, correct_9_9_6_4_2, correct_9_9_6_4_1]
+  all_goals decide
+
+def j_9_9_6_3 : Job := ⟨[9, 9, 6, 3], 3, 16, 40⟩
+
+def v_9_9_6_3 : List ℕ := @@GENERATED_RHS:v_9_9_6_3@@
+
+theorem correct_9_9_6_3 : value j_9_9_6_3 = v_9_9_6_3 := by decide
+
+def j_9_9_6_2 : Job := ⟨[9, 9, 6, 2], 2, 17, 40⟩
+
+def v_9_9_6_2 : List ℕ := @@GENERATED_RHS:v_9_9_6_2@@
+
+theorem correct_9_9_6_2 : value j_9_9_6_2 = v_9_9_6_2 := by decide
+
+def j_9_9_6_1 : Job := ⟨[9, 9, 6, 1], 1, 18, 40⟩
+
+def v_9_9_6_1 : List ℕ := @@GENERATED_RHS:v_9_9_6_1@@
+
+theorem correct_9_9_6_1 : value j_9_9_6_1 = v_9_9_6_1 := by decide
+
+def j_9_9_6 : Job := ⟨[9, 9, 6], 6, 19, 41⟩
+
+def v_9_9_6 : List ℕ := @@GENERATED_RHS:v_9_9_6@@
+
+theorem correct_9_9_6 : value j_9_9_6 = v_9_9_6 := by
+  rw [value_children j_9_9_6 (by decide) (by decide)]
+  have hc : children j_9_9_6 = [j_9_9_6_6, j_9_9_6_5, j_9_9_6_4, j_9_9_6_3, j_9_9_6_2, j_9_9_6_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_9_6_6, correct_9_9_6_5, correct_9_9_6_4, correct_9_9_6_3, correct_9_9_6_2, correct_9_9_6_1]
+  all_goals decide
+
+def j_9_9_5_5_5 : Job := ⟨[9, 9, 5, 5, 5], 5, 10, 39⟩
+
+def v_9_9_5_5_5 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_5_5_5 : value j_9_9_5_5_5 = v_9_9_5_5_5 := by decide
+
+def j_9_9_5_5_4 : Job := ⟨[9, 9, 5, 5, 4], 4, 11, 39⟩
+
+def v_9_9_5_5_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_5_5_4 : value j_9_9_5_5_4 = v_9_9_5_5_4 := by decide
+
+def j_9_9_5_5_3 : Job := ⟨[9, 9, 5, 5, 3], 3, 12, 39⟩
+
+def v_9_9_5_5_3 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_5_5_3 : value j_9_9_5_5_3 = v_9_9_5_5_3 := by decide
+
+def j_9_9_5_5_2 : Job := ⟨[9, 9, 5, 5, 2], 2, 13, 39⟩
+
+def v_9_9_5_5_2 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_5_5_2 : value j_9_9_5_5_2 = v_9_9_5_5_2 := by decide
+
+def j_9_9_5_5_1 : Job := ⟨[9, 9, 5, 5, 1], 1, 14, 39⟩
+
+def v_9_9_5_5_1 : List ℕ := @@GENERATED_RHS:v_9_9_5_5_1@@
+
+theorem correct_9_9_5_5_1 : value j_9_9_5_5_1 = v_9_9_5_5_1 := by decide
+
+def j_9_9_5_5 : Job := ⟨[9, 9, 5, 5], 5, 15, 40⟩
+
+def v_9_9_5_5 : List ℕ := @@GENERATED_RHS:v_9_9_5_5@@
+
+theorem correct_9_9_5_5 : value j_9_9_5_5 = v_9_9_5_5 := by
+  rw [value_children j_9_9_5_5 (by decide) (by decide)]
+  have hc : children j_9_9_5_5 = [j_9_9_5_5_5, j_9_9_5_5_4, j_9_9_5_5_3, j_9_9_5_5_2, j_9_9_5_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_9_5_5_5, correct_9_9_5_5_4, correct_9_9_5_5_3, correct_9_9_5_5_2, correct_9_9_5_5_1]
+  all_goals decide
+
+def j_9_9_5_4_4 : Job := ⟨[9, 9, 5, 4, 4], 4, 12, 39⟩
+
+def v_9_9_5_4_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_5_4_4 : value j_9_9_5_4_4 = v_9_9_5_4_4 := by decide
+
+def j_9_9_5_4_3 : Job := ⟨[9, 9, 5, 4, 3], 3, 13, 39⟩
+
+def v_9_9_5_4_3 : List ℕ := @@GENERATED_RHS:v_9_9_5_4_3@@
+
+theorem correct_9_9_5_4_3 : value j_9_9_5_4_3 = v_9_9_5_4_3 := by decide
+
+def j_9_9_5_4_2 : Job := ⟨[9, 9, 5, 4, 2], 2, 14, 39⟩
+
+def v_9_9_5_4_2 : List ℕ := @@GENERATED_RHS:v_9_9_5_4_2@@
+
+theorem correct_9_9_5_4_2 : value j_9_9_5_4_2 = v_9_9_5_4_2 := by decide
+
+def j_9_9_5_4_1 : Job := ⟨[9, 9, 5, 4, 1], 1, 15, 39⟩
+
+def v_9_9_5_4_1 : List ℕ := @@GENERATED_RHS:v_9_9_5_4_1@@
+
+theorem correct_9_9_5_4_1 : value j_9_9_5_4_1 = v_9_9_5_4_1 := by decide
+
+def j_9_9_5_4 : Job := ⟨[9, 9, 5, 4], 4, 16, 40⟩
+
+def v_9_9_5_4 : List ℕ := @@GENERATED_RHS:v_9_9_5_4@@
+
+theorem correct_9_9_5_4 : value j_9_9_5_4 = v_9_9_5_4 := by
+  rw [value_children j_9_9_5_4 (by decide) (by decide)]
+  have hc : children j_9_9_5_4 = [j_9_9_5_4_4, j_9_9_5_4_3, j_9_9_5_4_2, j_9_9_5_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_9_5_4_4, correct_9_9_5_4_3, correct_9_9_5_4_2, correct_9_9_5_4_1]
+  all_goals decide
+
+def j_9_9_5_3_3 : Job := ⟨[9, 9, 5, 3, 3], 3, 14, 39⟩
+
+def v_9_9_5_3_3 : List ℕ := @@GENERATED_RHS:v_9_9_5_3_3@@
+
+theorem correct_9_9_5_3_3 : value j_9_9_5_3_3 = v_9_9_5_3_3 := by decide
+
+def j_9_9_5_3_2 : Job := ⟨[9, 9, 5, 3, 2], 2, 15, 39⟩
+
+def v_9_9_5_3_2 : List ℕ := @@GENERATED_RHS:v_9_9_5_3_2@@
+
+theorem correct_9_9_5_3_2 : value j_9_9_5_3_2 = v_9_9_5_3_2 := by decide
+
+def j_9_9_5_3_1 : Job := ⟨[9, 9, 5, 3, 1], 1, 16, 39⟩
+
+def v_9_9_5_3_1 : List ℕ := @@GENERATED_RHS:v_9_9_5_3_1@@
+
+theorem correct_9_9_5_3_1 : value j_9_9_5_3_1 = v_9_9_5_3_1 := by decide
+
+def j_9_9_5_3 : Job := ⟨[9, 9, 5, 3], 3, 17, 40⟩
+
+def v_9_9_5_3 : List ℕ := @@GENERATED_RHS:v_9_9_5_3@@
+
+theorem correct_9_9_5_3 : value j_9_9_5_3 = v_9_9_5_3 := by
+  rw [value_children j_9_9_5_3 (by decide) (by decide)]
+  have hc : children j_9_9_5_3 = [j_9_9_5_3_3, j_9_9_5_3_2, j_9_9_5_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_9_5_3_3, correct_9_9_5_3_2, correct_9_9_5_3_1]
+  all_goals decide
+
+def j_9_9_5_2 : Job := ⟨[9, 9, 5, 2], 2, 18, 40⟩
+
+def v_9_9_5_2 : List ℕ := @@GENERATED_RHS:v_9_9_5_2@@
+
+theorem correct_9_9_5_2 : value j_9_9_5_2 = v_9_9_5_2 := by decide
+
+def j_9_9_5_1 : Job := ⟨[9, 9, 5, 1], 1, 19, 40⟩
+
+def v_9_9_5_1 : List ℕ := @@GENERATED_RHS:v_9_9_5_1@@
+
+theorem correct_9_9_5_1 : value j_9_9_5_1 = v_9_9_5_1 := by decide
+
+def j_9_9_5 : Job := ⟨[9, 9, 5], 5, 20, 41⟩
+
+def v_9_9_5 : List ℕ := @@GENERATED_RHS:v_9_9_5@@
+
+theorem correct_9_9_5 : value j_9_9_5 = v_9_9_5 := by
+  rw [value_children j_9_9_5 (by decide) (by decide)]
+  have hc : children j_9_9_5 = [j_9_9_5_5, j_9_9_5_4, j_9_9_5_3, j_9_9_5_2, j_9_9_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_9_5_5, correct_9_9_5_4, correct_9_9_5_3, correct_9_9_5_2, correct_9_9_5_1]
+  all_goals decide
+
+def j_9_9_4_4_4_4 : Job := ⟨[9, 9, 4, 4, 4, 4], 4, 9, 38⟩
+
+def v_9_9_4_4_4_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_4_4_4_4 : value j_9_9_4_4_4_4 = v_9_9_4_4_4_4 := by decide
+
+def j_9_9_4_4_4_3 : Job := ⟨[9, 9, 4, 4, 4, 3], 3, 10, 38⟩
+
+def v_9_9_4_4_4_3 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_4_4_4_3 : value j_9_9_4_4_4_3 = v_9_9_4_4_4_3 := by decide
+
+def j_9_9_4_4_4_2 : Job := ⟨[9, 9, 4, 4, 4, 2], 2, 11, 38⟩
+
+def v_9_9_4_4_4_2 : List ℕ := List.replicate 904 0
+
+theorem correct_9_9_4_4_4_2 : value j_9_9_4_4_4_2 = v_9_9_4_4_4_2 := by decide
+
+def j_9_9_4_4_4_1 : Job := ⟨[9, 9, 4, 4, 4, 1], 1, 12, 38⟩
+
+def v_9_9_4_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_9_4_4_4_1@@
+
+theorem correct_9_9_4_4_4_1 : value j_9_9_4_4_4_1 = v_9_9_4_4_4_1 := by decide
+
+def j_9_9_4_4_4 : Job := ⟨[9, 9, 4, 4, 4], 4, 13, 39⟩
+
+def v_9_9_4_4_4 : List ℕ := @@GENERATED_RHS:v_9_9_4_4_4@@
+
+theorem correct_9_9_4_4_4 : value j_9_9_4_4_4 = v_9_9_4_4_4 := by
+  rw [value_children j_9_9_4_4_4 (by decide) (by decide)]
+  have hc : children j_9_9_4_4_4 = [j_9_9_4_4_4_4, j_9_9_4_4_4_3, j_9_9_4_4_4_2, j_9_9_4_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_9_4_4_4_4, correct_9_9_4_4_4_3, correct_9_9_4_4_4_2, correct_9_9_4_4_4_1]
+  all_goals decide
+
+def j_9_9_4_4_3 : Job := ⟨[9, 9, 4, 4, 3], 3, 14, 39⟩
+
+def v_9_9_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_9_4_4_3@@
+
+theorem correct_9_9_4_4_3 : value j_9_9_4_4_3 = v_9_9_4_4_3 := by decide
+
+def j_9_9_4_4_2 : Job := ⟨[9, 9, 4, 4, 2], 2, 15, 39⟩
+
+def v_9_9_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_9_4_4_2@@
+
+theorem correct_9_9_4_4_2 : value j_9_9_4_4_2 = v_9_9_4_4_2 := by decide
+
+def j_9_9_4_4_1 : Job := ⟨[9, 9, 4, 4, 1], 1, 16, 39⟩
+
+def v_9_9_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_9_4_4_1@@
+
+theorem correct_9_9_4_4_1 : value j_9_9_4_4_1 = v_9_9_4_4_1 := by decide
+
+def j_9_9_4_4 : Job := ⟨[9, 9, 4, 4], 4, 17, 40⟩
+
+def v_9_9_4_4 : List ℕ := @@GENERATED_RHS:v_9_9_4_4@@
+
+theorem correct_9_9_4_4 : value j_9_9_4_4 = v_9_9_4_4 := by
+  rw [value_children j_9_9_4_4 (by decide) (by decide)]
+  have hc : children j_9_9_4_4 = [j_9_9_4_4_4, j_9_9_4_4_3, j_9_9_4_4_2, j_9_9_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_9_4_4_4, correct_9_9_4_4_3, correct_9_9_4_4_2, correct_9_9_4_4_1]
+  all_goals decide
+
+def j_9_9_4_3_3 : Job := ⟨[9, 9, 4, 3, 3], 3, 15, 39⟩
+
+def v_9_9_4_3_3 : List ℕ := @@GENERATED_RHS:v_9_9_4_3_3@@
+
+theorem correct_9_9_4_3_3 : value j_9_9_4_3_3 = v_9_9_4_3_3 := by decide
+
+def j_9_9_4_3_2 : Job := ⟨[9, 9, 4, 3, 2], 2, 16, 39⟩
+
+def v_9_9_4_3_2 : List ℕ := @@GENERATED_RHS:v_9_9_4_3_2@@
+
+theorem correct_9_9_4_3_2 : value j_9_9_4_3_2 = v_9_9_4_3_2 := by decide
+
+def j_9_9_4_3_1 : Job := ⟨[9, 9, 4, 3, 1], 1, 17, 39⟩
+
+def v_9_9_4_3_1 : List ℕ := @@GENERATED_RHS:v_9_9_4_3_1@@
+
+theorem correct_9_9_4_3_1 : value j_9_9_4_3_1 = v_9_9_4_3_1 := by decide
+
+def j_9_9_4_3 : Job := ⟨[9, 9, 4, 3], 3, 18, 40⟩
+
+def v_9_9_4_3 : List ℕ := @@GENERATED_RHS:v_9_9_4_3@@
+
+theorem correct_9_9_4_3 : value j_9_9_4_3 = v_9_9_4_3 := by
+  rw [value_children j_9_9_4_3 (by decide) (by decide)]
+  have hc : children j_9_9_4_3 = [j_9_9_4_3_3, j_9_9_4_3_2, j_9_9_4_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_9_4_3_3, correct_9_9_4_3_2, correct_9_9_4_3_1]
+  all_goals decide
+
+def j_9_9_4_2 : Job := ⟨[9, 9, 4, 2], 2, 19, 40⟩
+
+def v_9_9_4_2 : List ℕ := @@GENERATED_RHS:v_9_9_4_2@@
+
+theorem correct_9_9_4_2 : value j_9_9_4_2 = v_9_9_4_2 := by decide
+
+def j_9_9_4_1 : Job := ⟨[9, 9, 4, 1], 1, 20, 40⟩
+
+def v_9_9_4_1 : List ℕ := @@GENERATED_RHS:v_9_9_4_1@@
+
+theorem correct_9_9_4_1 : value j_9_9_4_1 = v_9_9_4_1 := by decide
+
+def j_9_9_4 : Job := ⟨[9, 9, 4], 4, 21, 41⟩
+
+def v_9_9_4 : List ℕ := @@GENERATED_RHS:v_9_9_4@@
+
+theorem correct_9_9_4 : value j_9_9_4 = v_9_9_4 := by
+  rw [value_children j_9_9_4 (by decide) (by decide)]
+  have hc : children j_9_9_4 = [j_9_9_4_4, j_9_9_4_3, j_9_9_4_2, j_9_9_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_9_4_4, correct_9_9_4_3, correct_9_9_4_2, correct_9_9_4_1]
+  all_goals decide
+
+def j_9_9_3_3_3 : Job := ⟨[9, 9, 3, 3, 3], 3, 16, 39⟩
+
+def v_9_9_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_9_3_3_3@@
+
+theorem correct_9_9_3_3_3 : value j_9_9_3_3_3 = v_9_9_3_3_3 := by decide
+
+def j_9_9_3_3_2 : Job := ⟨[9, 9, 3, 3, 2], 2, 17, 39⟩
+
+def v_9_9_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_9_3_3_2@@
+
+theorem correct_9_9_3_3_2 : value j_9_9_3_3_2 = v_9_9_3_3_2 := by decide
+
+def j_9_9_3_3_1 : Job := ⟨[9, 9, 3, 3, 1], 1, 18, 39⟩
+
+def v_9_9_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_9_3_3_1@@
+
+theorem correct_9_9_3_3_1 : value j_9_9_3_3_1 = v_9_9_3_3_1 := by decide
+
+def j_9_9_3_3 : Job := ⟨[9, 9, 3, 3], 3, 19, 40⟩
+
+def v_9_9_3_3 : List ℕ := @@GENERATED_RHS:v_9_9_3_3@@
+
+theorem correct_9_9_3_3 : value j_9_9_3_3 = v_9_9_3_3 := by
+  rw [value_children j_9_9_3_3 (by decide) (by decide)]
+  have hc : children j_9_9_3_3 = [j_9_9_3_3_3, j_9_9_3_3_2, j_9_9_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_9_3_3_3, correct_9_9_3_3_2, correct_9_9_3_3_1]
+  all_goals decide
+
+def j_9_9_3_2 : Job := ⟨[9, 9, 3, 2], 2, 20, 40⟩
+
+def v_9_9_3_2 : List ℕ := @@GENERATED_RHS:v_9_9_3_2@@
+
+theorem correct_9_9_3_2 : value j_9_9_3_2 = v_9_9_3_2 := by decide
+
+def j_9_9_3_1 : Job := ⟨[9, 9, 3, 1], 1, 21, 40⟩
+
+def v_9_9_3_1 : List ℕ := @@GENERATED_RHS:v_9_9_3_1@@
+
+theorem correct_9_9_3_1 : value j_9_9_3_1 = v_9_9_3_1 := by decide
+
+def j_9_9_3 : Job := ⟨[9, 9, 3], 3, 22, 41⟩
+
+def v_9_9_3 : List ℕ := @@GENERATED_RHS:v_9_9_3@@
+
+theorem correct_9_9_3 : value j_9_9_3 = v_9_9_3 := by
+  rw [value_children j_9_9_3 (by decide) (by decide)]
+  have hc : children j_9_9_3 = [j_9_9_3_3, j_9_9_3_2, j_9_9_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_9_3_3, correct_9_9_3_2, correct_9_9_3_1]
+  all_goals decide
+
+def j_9_9_2 : Job := ⟨[9, 9, 2], 2, 23, 41⟩
+
+def v_9_9_2 : List ℕ := @@GENERATED_RHS:v_9_9_2@@
+
+theorem correct_9_9_2 : value j_9_9_2 = v_9_9_2 := by decide
+
+def j_9_9_1 : Job := ⟨[9, 9, 1], 1, 24, 41⟩
+
+def v_9_9_1 : List ℕ := @@GENERATED_RHS:v_9_9_1@@
+
+theorem correct_9_9_1 : value j_9_9_1 = v_9_9_1 := by decide
+
+def j_9_9 : Job := ⟨[9, 9], 9, 25, 42⟩
+
+def v_9_9 : List ℕ := @@GENERATED_RHS:v_9_9@@
+
+theorem correct_9_9 : value j_9_9 = v_9_9 := by
+  rw [value_children j_9_9 (by decide) (by decide)]
+  have hc : children j_9_9 = [j_9_9_9, j_9_9_8, j_9_9_7, j_9_9_6, j_9_9_5, j_9_9_4, j_9_9_3, j_9_9_2, j_9_9_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_9_9, correct_9_9_8, correct_9_9_7, correct_9_9_6, correct_9_9_5, correct_9_9_4, correct_9_9_3, correct_9_9_2, correct_9_9_1]
+  all_goals decide
+
+def j_9_8_8_8 : Job := ⟨[9, 8, 8, 8], 8, 10, 40⟩
+
+def v_9_8_8_8 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_8_8 : value j_9_8_8_8 = v_9_8_8_8 := by decide
+
+def j_9_8_8_7 : Job := ⟨[9, 8, 8, 7], 7, 11, 40⟩
+
+def v_9_8_8_7 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_8_7 : value j_9_8_8_7 = v_9_8_8_7 := by decide
+
+def j_9_8_8_6 : Job := ⟨[9, 8, 8, 6], 6, 12, 40⟩
+
+def v_9_8_8_6 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_8_6 : value j_9_8_8_6 = v_9_8_8_6 := by decide
+
+def j_9_8_8_5 : Job := ⟨[9, 8, 8, 5], 5, 13, 40⟩
+
+def v_9_8_8_5 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_8_5 : value j_9_8_8_5 = v_9_8_8_5 := by decide
+
+def j_9_8_8_4 : Job := ⟨[9, 8, 8, 4], 4, 14, 40⟩
+
+def v_9_8_8_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_8_4 : value j_9_8_8_4 = v_9_8_8_4 := by decide
+
+def j_9_8_8_3 : Job := ⟨[9, 8, 8, 3], 3, 15, 40⟩
+
+def v_9_8_8_3 : List ℕ := @@GENERATED_RHS:v_9_8_8_3@@
+
+theorem correct_9_8_8_3 : value j_9_8_8_3 = v_9_8_8_3 := by decide
+
+def j_9_8_8_2 : Job := ⟨[9, 8, 8, 2], 2, 16, 40⟩
+
+def v_9_8_8_2 : List ℕ := @@GENERATED_RHS:v_9_8_8_2@@
+
+theorem correct_9_8_8_2 : value j_9_8_8_2 = v_9_8_8_2 := by decide
+
+def j_9_8_8_1 : Job := ⟨[9, 8, 8, 1], 1, 17, 40⟩
+
+def v_9_8_8_1 : List ℕ := @@GENERATED_RHS:v_9_8_8_1@@
+
+theorem correct_9_8_8_1 : value j_9_8_8_1 = v_9_8_8_1 := by decide
+
+def j_9_8_8 : Job := ⟨[9, 8, 8], 8, 18, 41⟩
+
+def v_9_8_8 : List ℕ := @@GENERATED_RHS:v_9_8_8@@
+
+theorem correct_9_8_8 : value j_9_8_8 = v_9_8_8 := by
+  rw [value_children j_9_8_8 (by decide) (by decide)]
+  have hc : children j_9_8_8 = [j_9_8_8_8, j_9_8_8_7, j_9_8_8_6, j_9_8_8_5, j_9_8_8_4, j_9_8_8_3, j_9_8_8_2, j_9_8_8_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_8_8, correct_9_8_8_7, correct_9_8_8_6, correct_9_8_8_5, correct_9_8_8_4, correct_9_8_8_3, correct_9_8_8_2, correct_9_8_8_1]
+  all_goals decide
+
+def j_9_8_7_7 : Job := ⟨[9, 8, 7, 7], 7, 12, 40⟩
+
+def v_9_8_7_7 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_7_7 : value j_9_8_7_7 = v_9_8_7_7 := by decide
+
+def j_9_8_7_6 : Job := ⟨[9, 8, 7, 6], 6, 13, 40⟩
+
+def v_9_8_7_6 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_7_6 : value j_9_8_7_6 = v_9_8_7_6 := by decide
+
+def j_9_8_7_5 : Job := ⟨[9, 8, 7, 5], 5, 14, 40⟩
+
+def v_9_8_7_5 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_7_5 : value j_9_8_7_5 = v_9_8_7_5 := by decide
+
+def j_9_8_7_4_4 : Job := ⟨[9, 8, 7, 4, 4], 4, 11, 39⟩
+
+def v_9_8_7_4_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_7_4_4 : value j_9_8_7_4_4 = v_9_8_7_4_4 := by decide
+
+def j_9_8_7_4_3 : Job := ⟨[9, 8, 7, 4, 3], 3, 12, 39⟩
+
+def v_9_8_7_4_3 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_7_4_3 : value j_9_8_7_4_3 = v_9_8_7_4_3 := by decide
+
+def j_9_8_7_4_2 : Job := ⟨[9, 8, 7, 4, 2], 2, 13, 39⟩
+
+def v_9_8_7_4_2 : List ℕ := List.replicate 902 0 ++ [9938921452624395110880, 59633528715746370665280]
+
+theorem correct_9_8_7_4_2 : value j_9_8_7_4_2 = v_9_8_7_4_2 := by decide
+
+def j_9_8_7_4_1 : Job := ⟨[9, 8, 7, 4, 1], 1, 14, 39⟩
+
+def v_9_8_7_4_1 : List ℕ := @@GENERATED_RHS:v_9_8_7_4_1@@
+
+theorem correct_9_8_7_4_1 : value j_9_8_7_4_1 = v_9_8_7_4_1 := by decide
+
+def j_9_8_7_4 : Job := ⟨[9, 8, 7, 4], 4, 15, 40⟩
+
+def v_9_8_7_4 : List ℕ := @@GENERATED_RHS:v_9_8_7_4@@
+
+theorem correct_9_8_7_4 : value j_9_8_7_4 = v_9_8_7_4 := by
+  rw [value_children j_9_8_7_4 (by decide) (by decide)]
+  have hc : children j_9_8_7_4 = [j_9_8_7_4_4, j_9_8_7_4_3, j_9_8_7_4_2, j_9_8_7_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_7_4_4, correct_9_8_7_4_3, correct_9_8_7_4_2, correct_9_8_7_4_1]
+  all_goals decide
+
+def j_9_8_7_3 : Job := ⟨[9, 8, 7, 3], 3, 16, 40⟩
+
+def v_9_8_7_3 : List ℕ := @@GENERATED_RHS:v_9_8_7_3@@
+
+theorem correct_9_8_7_3 : value j_9_8_7_3 = v_9_8_7_3 := by decide
+
+def j_9_8_7_2 : Job := ⟨[9, 8, 7, 2], 2, 17, 40⟩
+
+def v_9_8_7_2 : List ℕ := @@GENERATED_RHS:v_9_8_7_2@@
+
+theorem correct_9_8_7_2 : value j_9_8_7_2 = v_9_8_7_2 := by decide
+
+def j_9_8_7_1 : Job := ⟨[9, 8, 7, 1], 1, 18, 40⟩
+
+def v_9_8_7_1 : List ℕ := @@GENERATED_RHS:v_9_8_7_1@@
+
+theorem correct_9_8_7_1 : value j_9_8_7_1 = v_9_8_7_1 := by decide
+
+def j_9_8_7 : Job := ⟨[9, 8, 7], 7, 19, 41⟩
+
+def v_9_8_7 : List ℕ := @@GENERATED_RHS:v_9_8_7@@
+
+theorem correct_9_8_7 : value j_9_8_7 = v_9_8_7 := by
+  rw [value_children j_9_8_7 (by decide) (by decide)]
+  have hc : children j_9_8_7 = [j_9_8_7_7, j_9_8_7_6, j_9_8_7_5, j_9_8_7_4, j_9_8_7_3, j_9_8_7_2, j_9_8_7_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_7_7, correct_9_8_7_6, correct_9_8_7_5, correct_9_8_7_4, correct_9_8_7_3, correct_9_8_7_2, correct_9_8_7_1]
+  all_goals decide
+
+def j_9_8_6_6 : Job := ⟨[9, 8, 6, 6], 6, 14, 40⟩
+
+def v_9_8_6_6 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_6_6 : value j_9_8_6_6 = v_9_8_6_6 := by decide
+
+def j_9_8_6_5_5 : Job := ⟨[9, 8, 6, 5, 5], 5, 10, 39⟩
+
+def v_9_8_6_5_5 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_6_5_5 : value j_9_8_6_5_5 = v_9_8_6_5_5 := by decide
+
+def j_9_8_6_5_4 : Job := ⟨[9, 8, 6, 5, 4], 4, 11, 39⟩
+
+def v_9_8_6_5_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_6_5_4 : value j_9_8_6_5_4 = v_9_8_6_5_4 := by decide
+
+def j_9_8_6_5_3 : Job := ⟨[9, 8, 6, 5, 3], 3, 12, 39⟩
+
+def v_9_8_6_5_3 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_6_5_3 : value j_9_8_6_5_3 = v_9_8_6_5_3 := by decide
+
+def j_9_8_6_5_2 : Job := ⟨[9, 8, 6, 5, 2], 2, 13, 39⟩
+
+def v_9_8_6_5_2 : List ℕ := @@GENERATED_RHS:v_9_8_6_5_2@@
+
+theorem correct_9_8_6_5_2 : value j_9_8_6_5_2 = v_9_8_6_5_2 := by decide
+
+def j_9_8_6_5_1 : Job := ⟨[9, 8, 6, 5, 1], 1, 14, 39⟩
+
+def v_9_8_6_5_1 : List ℕ := @@GENERATED_RHS:v_9_8_6_5_1@@
+
+theorem correct_9_8_6_5_1 : value j_9_8_6_5_1 = v_9_8_6_5_1 := by decide
+
+def j_9_8_6_5 : Job := ⟨[9, 8, 6, 5], 5, 15, 40⟩
+
+def v_9_8_6_5 : List ℕ := @@GENERATED_RHS:v_9_8_6_5@@
+
+theorem correct_9_8_6_5 : value j_9_8_6_5 = v_9_8_6_5 := by
+  rw [value_children j_9_8_6_5 (by decide) (by decide)]
+  have hc : children j_9_8_6_5 = [j_9_8_6_5_5, j_9_8_6_5_4, j_9_8_6_5_3, j_9_8_6_5_2, j_9_8_6_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_6_5_5, correct_9_8_6_5_4, correct_9_8_6_5_3, correct_9_8_6_5_2, correct_9_8_6_5_1]
+  all_goals decide
+
+def j_9_8_6_4_4 : Job := ⟨[9, 8, 6, 4, 4], 4, 12, 39⟩
+
+def v_9_8_6_4_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_6_4_4 : value j_9_8_6_4_4 = v_9_8_6_4_4 := by decide
+
+def j_9_8_6_4_3 : Job := ⟨[9, 8, 6, 4, 3], 3, 13, 39⟩
+
+def v_9_8_6_4_3 : List ℕ := @@GENERATED_RHS:v_9_8_6_4_3@@
+
+theorem correct_9_8_6_4_3 : value j_9_8_6_4_3 = v_9_8_6_4_3 := by decide
+
+def j_9_8_6_4_2 : Job := ⟨[9, 8, 6, 4, 2], 2, 14, 39⟩
+
+def v_9_8_6_4_2 : List ℕ := @@GENERATED_RHS:v_9_8_6_4_2@@
+
+theorem correct_9_8_6_4_2 : value j_9_8_6_4_2 = v_9_8_6_4_2 := by decide
+
+def j_9_8_6_4_1 : Job := ⟨[9, 8, 6, 4, 1], 1, 15, 39⟩
+
+def v_9_8_6_4_1 : List ℕ := @@GENERATED_RHS:v_9_8_6_4_1@@
+
+theorem correct_9_8_6_4_1 : value j_9_8_6_4_1 = v_9_8_6_4_1 := by decide
+
+def j_9_8_6_4 : Job := ⟨[9, 8, 6, 4], 4, 16, 40⟩
+
+def v_9_8_6_4 : List ℕ := @@GENERATED_RHS:v_9_8_6_4@@
+
+theorem correct_9_8_6_4 : value j_9_8_6_4 = v_9_8_6_4 := by
+  rw [value_children j_9_8_6_4 (by decide) (by decide)]
+  have hc : children j_9_8_6_4 = [j_9_8_6_4_4, j_9_8_6_4_3, j_9_8_6_4_2, j_9_8_6_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_6_4_4, correct_9_8_6_4_3, correct_9_8_6_4_2, correct_9_8_6_4_1]
+  all_goals decide
+
+def j_9_8_6_3_3 : Job := ⟨[9, 8, 6, 3, 3], 3, 14, 39⟩
+
+def v_9_8_6_3_3 : List ℕ := @@GENERATED_RHS:v_9_8_6_3_3@@
+
+theorem correct_9_8_6_3_3 : value j_9_8_6_3_3 = v_9_8_6_3_3 := by decide
+
+def j_9_8_6_3_2 : Job := ⟨[9, 8, 6, 3, 2], 2, 15, 39⟩
+
+def v_9_8_6_3_2 : List ℕ := @@GENERATED_RHS:v_9_8_6_3_2@@
+
+theorem correct_9_8_6_3_2 : value j_9_8_6_3_2 = v_9_8_6_3_2 := by decide
+
+def j_9_8_6_3_1 : Job := ⟨[9, 8, 6, 3, 1], 1, 16, 39⟩
+
+def v_9_8_6_3_1 : List ℕ := @@GENERATED_RHS:v_9_8_6_3_1@@
+
+theorem correct_9_8_6_3_1 : value j_9_8_6_3_1 = v_9_8_6_3_1 := by decide
+
+def j_9_8_6_3 : Job := ⟨[9, 8, 6, 3], 3, 17, 40⟩
+
+def v_9_8_6_3 : List ℕ := @@GENERATED_RHS:v_9_8_6_3@@
+
+theorem correct_9_8_6_3 : value j_9_8_6_3 = v_9_8_6_3 := by
+  rw [value_children j_9_8_6_3 (by decide) (by decide)]
+  have hc : children j_9_8_6_3 = [j_9_8_6_3_3, j_9_8_6_3_2, j_9_8_6_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_6_3_3, correct_9_8_6_3_2, correct_9_8_6_3_1]
+  all_goals decide
+
+def j_9_8_6_2 : Job := ⟨[9, 8, 6, 2], 2, 18, 40⟩
+
+def v_9_8_6_2 : List ℕ := @@GENERATED_RHS:v_9_8_6_2@@
+
+theorem correct_9_8_6_2 : value j_9_8_6_2 = v_9_8_6_2 := by decide
+
+def j_9_8_6_1 : Job := ⟨[9, 8, 6, 1], 1, 19, 40⟩
+
+def v_9_8_6_1 : List ℕ := @@GENERATED_RHS:v_9_8_6_1@@
+
+theorem correct_9_8_6_1 : value j_9_8_6_1 = v_9_8_6_1 := by decide
+
+def j_9_8_6 : Job := ⟨[9, 8, 6], 6, 20, 41⟩
+
+def v_9_8_6 : List ℕ := @@GENERATED_RHS:v_9_8_6@@
+
+theorem correct_9_8_6 : value j_9_8_6 = v_9_8_6 := by
+  rw [value_children j_9_8_6 (by decide) (by decide)]
+  have hc : children j_9_8_6 = [j_9_8_6_6, j_9_8_6_5, j_9_8_6_4, j_9_8_6_3, j_9_8_6_2, j_9_8_6_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_6_6, correct_9_8_6_5, correct_9_8_6_4, correct_9_8_6_3, correct_9_8_6_2, correct_9_8_6_1]
+  all_goals decide
+
+def j_9_8_5_5_5 : Job := ⟨[9, 8, 5, 5, 5], 5, 11, 39⟩
+
+def v_9_8_5_5_5 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_5_5_5 : value j_9_8_5_5_5 = v_9_8_5_5_5 := by decide
+
+def j_9_8_5_5_4 : Job := ⟨[9, 8, 5, 5, 4], 4, 12, 39⟩
+
+def v_9_8_5_5_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_5_5_4 : value j_9_8_5_5_4 = v_9_8_5_5_4 := by decide
+
+def j_9_8_5_5_3 : Job := ⟨[9, 8, 5, 5, 3], 3, 13, 39⟩
+
+def v_9_8_5_5_3 : List ℕ := @@GENERATED_RHS:v_9_8_5_5_3@@
+
+theorem correct_9_8_5_5_3 : value j_9_8_5_5_3 = v_9_8_5_5_3 := by decide
+
+def j_9_8_5_5_2 : Job := ⟨[9, 8, 5, 5, 2], 2, 14, 39⟩
+
+def v_9_8_5_5_2 : List ℕ := @@GENERATED_RHS:v_9_8_5_5_2@@
+
+theorem correct_9_8_5_5_2 : value j_9_8_5_5_2 = v_9_8_5_5_2 := by decide
+
+def j_9_8_5_5_1 : Job := ⟨[9, 8, 5, 5, 1], 1, 15, 39⟩
+
+def v_9_8_5_5_1 : List ℕ := @@GENERATED_RHS:v_9_8_5_5_1@@
+
+theorem correct_9_8_5_5_1 : value j_9_8_5_5_1 = v_9_8_5_5_1 := by decide
+
+def j_9_8_5_5 : Job := ⟨[9, 8, 5, 5], 5, 16, 40⟩
+
+def v_9_8_5_5 : List ℕ := @@GENERATED_RHS:v_9_8_5_5@@
+
+theorem correct_9_8_5_5 : value j_9_8_5_5 = v_9_8_5_5 := by
+  rw [value_children j_9_8_5_5 (by decide) (by decide)]
+  have hc : children j_9_8_5_5 = [j_9_8_5_5_5, j_9_8_5_5_4, j_9_8_5_5_3, j_9_8_5_5_2, j_9_8_5_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_5_5_5, correct_9_8_5_5_4, correct_9_8_5_5_3, correct_9_8_5_5_2, correct_9_8_5_5_1]
+  all_goals decide
+
+def j_9_8_5_4_4_4 : Job := ⟨[9, 8, 5, 4, 4, 4], 4, 9, 38⟩
+
+def v_9_8_5_4_4_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_5_4_4_4 : value j_9_8_5_4_4_4 = v_9_8_5_4_4_4 := by decide
+
+def j_9_8_5_4_4_3 : Job := ⟨[9, 8, 5, 4, 4, 3], 3, 10, 38⟩
+
+def v_9_8_5_4_4_3 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_5_4_4_3 : value j_9_8_5_4_4_3 = v_9_8_5_4_4_3 := by decide
+
+def j_9_8_5_4_4_2 : Job := ⟨[9, 8, 5, 4, 4, 2], 2, 11, 38⟩
+
+def v_9_8_5_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_8_5_4_4_2@@
+
+theorem correct_9_8_5_4_4_2 : value j_9_8_5_4_4_2 = v_9_8_5_4_4_2 := by decide
+
+def j_9_8_5_4_4_1 : Job := ⟨[9, 8, 5, 4, 4, 1], 1, 12, 38⟩
+
+def v_9_8_5_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_8_5_4_4_1@@
+
+theorem correct_9_8_5_4_4_1 : value j_9_8_5_4_4_1 = v_9_8_5_4_4_1 := by decide
+
+def j_9_8_5_4_4 : Job := ⟨[9, 8, 5, 4, 4], 4, 13, 39⟩
+
+def v_9_8_5_4_4 : List ℕ := @@GENERATED_RHS:v_9_8_5_4_4@@
+
+theorem correct_9_8_5_4_4 : value j_9_8_5_4_4 = v_9_8_5_4_4 := by
+  rw [value_children j_9_8_5_4_4 (by decide) (by decide)]
+  have hc : children j_9_8_5_4_4 = [j_9_8_5_4_4_4, j_9_8_5_4_4_3, j_9_8_5_4_4_2, j_9_8_5_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_5_4_4_4, correct_9_8_5_4_4_3, correct_9_8_5_4_4_2, correct_9_8_5_4_4_1]
+  all_goals decide
+
+def j_9_8_5_4_3 : Job := ⟨[9, 8, 5, 4, 3], 3, 14, 39⟩
+
+def v_9_8_5_4_3 : List ℕ := @@GENERATED_RHS:v_9_8_5_4_3@@
+
+theorem correct_9_8_5_4_3 : value j_9_8_5_4_3 = v_9_8_5_4_3 := by decide
+
+def j_9_8_5_4_2 : Job := ⟨[9, 8, 5, 4, 2], 2, 15, 39⟩
+
+def v_9_8_5_4_2 : List ℕ := @@GENERATED_RHS:v_9_8_5_4_2@@
+
+theorem correct_9_8_5_4_2 : value j_9_8_5_4_2 = v_9_8_5_4_2 := by decide
+
+def j_9_8_5_4_1 : Job := ⟨[9, 8, 5, 4, 1], 1, 16, 39⟩
+
+def v_9_8_5_4_1 : List ℕ := @@GENERATED_RHS:v_9_8_5_4_1@@
+
+theorem correct_9_8_5_4_1 : value j_9_8_5_4_1 = v_9_8_5_4_1 := by decide
+
+def j_9_8_5_4 : Job := ⟨[9, 8, 5, 4], 4, 17, 40⟩
+
+def v_9_8_5_4 : List ℕ := @@GENERATED_RHS:v_9_8_5_4@@
+
+theorem correct_9_8_5_4 : value j_9_8_5_4 = v_9_8_5_4 := by
+  rw [value_children j_9_8_5_4 (by decide) (by decide)]
+  have hc : children j_9_8_5_4 = [j_9_8_5_4_4, j_9_8_5_4_3, j_9_8_5_4_2, j_9_8_5_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_5_4_4, correct_9_8_5_4_3, correct_9_8_5_4_2, correct_9_8_5_4_1]
+  all_goals decide
+
+def j_9_8_5_3_3 : Job := ⟨[9, 8, 5, 3, 3], 3, 15, 39⟩
+
+def v_9_8_5_3_3 : List ℕ := @@GENERATED_RHS:v_9_8_5_3_3@@
+
+theorem correct_9_8_5_3_3 : value j_9_8_5_3_3 = v_9_8_5_3_3 := by decide
+
+def j_9_8_5_3_2 : Job := ⟨[9, 8, 5, 3, 2], 2, 16, 39⟩
+
+def v_9_8_5_3_2 : List ℕ := @@GENERATED_RHS:v_9_8_5_3_2@@
+
+theorem correct_9_8_5_3_2 : value j_9_8_5_3_2 = v_9_8_5_3_2 := by decide
+
+def j_9_8_5_3_1 : Job := ⟨[9, 8, 5, 3, 1], 1, 17, 39⟩
+
+def v_9_8_5_3_1 : List ℕ := @@GENERATED_RHS:v_9_8_5_3_1@@
+
+theorem correct_9_8_5_3_1 : value j_9_8_5_3_1 = v_9_8_5_3_1 := by decide
+
+def j_9_8_5_3 : Job := ⟨[9, 8, 5, 3], 3, 18, 40⟩
+
+def v_9_8_5_3 : List ℕ := @@GENERATED_RHS:v_9_8_5_3@@
+
+theorem correct_9_8_5_3 : value j_9_8_5_3 = v_9_8_5_3 := by
+  rw [value_children j_9_8_5_3 (by decide) (by decide)]
+  have hc : children j_9_8_5_3 = [j_9_8_5_3_3, j_9_8_5_3_2, j_9_8_5_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_5_3_3, correct_9_8_5_3_2, correct_9_8_5_3_1]
+  all_goals decide
+
+def j_9_8_5_2 : Job := ⟨[9, 8, 5, 2], 2, 19, 40⟩
+
+def v_9_8_5_2 : List ℕ := @@GENERATED_RHS:v_9_8_5_2@@
+
+theorem correct_9_8_5_2 : value j_9_8_5_2 = v_9_8_5_2 := by decide
+
+def j_9_8_5_1 : Job := ⟨[9, 8, 5, 1], 1, 20, 40⟩
+
+def v_9_8_5_1 : List ℕ := @@GENERATED_RHS:v_9_8_5_1@@
+
+theorem correct_9_8_5_1 : value j_9_8_5_1 = v_9_8_5_1 := by decide
+
+def j_9_8_5 : Job := ⟨[9, 8, 5], 5, 21, 41⟩
+
+def v_9_8_5 : List ℕ := @@GENERATED_RHS:v_9_8_5@@
+
+theorem correct_9_8_5 : value j_9_8_5 = v_9_8_5 := by
+  rw [value_children j_9_8_5 (by decide) (by decide)]
+  have hc : children j_9_8_5 = [j_9_8_5_5, j_9_8_5_4, j_9_8_5_3, j_9_8_5_2, j_9_8_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_5_5, correct_9_8_5_4, correct_9_8_5_3, correct_9_8_5_2, correct_9_8_5_1]
+  all_goals decide
+
+def j_9_8_4_4_4_4 : Job := ⟨[9, 8, 4, 4, 4, 4], 4, 10, 38⟩
+
+def v_9_8_4_4_4_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_8_4_4_4_4 : value j_9_8_4_4_4_4 = v_9_8_4_4_4_4 := by decide
+
+def j_9_8_4_4_4_3 : Job := ⟨[9, 8, 4, 4, 4, 3], 3, 11, 38⟩
+
+def v_9_8_4_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_8_4_4_4_3@@
+
+theorem correct_9_8_4_4_4_3 : value j_9_8_4_4_4_3 = v_9_8_4_4_4_3 := by decide
+
+def j_9_8_4_4_4_2 : Job := ⟨[9, 8, 4, 4, 4, 2], 2, 12, 38⟩
+
+def v_9_8_4_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_8_4_4_4_2@@
+
+theorem correct_9_8_4_4_4_2 : value j_9_8_4_4_4_2 = v_9_8_4_4_4_2 := by decide
+
+def j_9_8_4_4_4_1 : Job := ⟨[9, 8, 4, 4, 4, 1], 1, 13, 38⟩
+
+def v_9_8_4_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_8_4_4_4_1@@
+
+theorem correct_9_8_4_4_4_1 : value j_9_8_4_4_4_1 = v_9_8_4_4_4_1 := by decide
+
+def j_9_8_4_4_4 : Job := ⟨[9, 8, 4, 4, 4], 4, 14, 39⟩
+
+def v_9_8_4_4_4 : List ℕ := @@GENERATED_RHS:v_9_8_4_4_4@@
+
+theorem correct_9_8_4_4_4 : value j_9_8_4_4_4 = v_9_8_4_4_4 := by
+  rw [value_children j_9_8_4_4_4 (by decide) (by decide)]
+  have hc : children j_9_8_4_4_4 = [j_9_8_4_4_4_4, j_9_8_4_4_4_3, j_9_8_4_4_4_2, j_9_8_4_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_4_4_4_4, correct_9_8_4_4_4_3, correct_9_8_4_4_4_2, correct_9_8_4_4_4_1]
+  all_goals decide
+
+def j_9_8_4_4_3 : Job := ⟨[9, 8, 4, 4, 3], 3, 15, 39⟩
+
+def v_9_8_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_8_4_4_3@@
+
+theorem correct_9_8_4_4_3 : value j_9_8_4_4_3 = v_9_8_4_4_3 := by decide
+
+def j_9_8_4_4_2 : Job := ⟨[9, 8, 4, 4, 2], 2, 16, 39⟩
+
+def v_9_8_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_8_4_4_2@@
+
+theorem correct_9_8_4_4_2 : value j_9_8_4_4_2 = v_9_8_4_4_2 := by decide
+
+def j_9_8_4_4_1 : Job := ⟨[9, 8, 4, 4, 1], 1, 17, 39⟩
+
+def v_9_8_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_8_4_4_1@@
+
+theorem correct_9_8_4_4_1 : value j_9_8_4_4_1 = v_9_8_4_4_1 := by decide
+
+def j_9_8_4_4 : Job := ⟨[9, 8, 4, 4], 4, 18, 40⟩
+
+def v_9_8_4_4 : List ℕ := @@GENERATED_RHS:v_9_8_4_4@@
+
+theorem correct_9_8_4_4 : value j_9_8_4_4 = v_9_8_4_4 := by
+  rw [value_children j_9_8_4_4 (by decide) (by decide)]
+  have hc : children j_9_8_4_4 = [j_9_8_4_4_4, j_9_8_4_4_3, j_9_8_4_4_2, j_9_8_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_4_4_4, correct_9_8_4_4_3, correct_9_8_4_4_2, correct_9_8_4_4_1]
+  all_goals decide
+
+def j_9_8_4_3_3 : Job := ⟨[9, 8, 4, 3, 3], 3, 16, 39⟩
+
+def v_9_8_4_3_3 : List ℕ := @@GENERATED_RHS:v_9_8_4_3_3@@
+
+theorem correct_9_8_4_3_3 : value j_9_8_4_3_3 = v_9_8_4_3_3 := by decide
+
+def j_9_8_4_3_2 : Job := ⟨[9, 8, 4, 3, 2], 2, 17, 39⟩
+
+def v_9_8_4_3_2 : List ℕ := @@GENERATED_RHS:v_9_8_4_3_2@@
+
+theorem correct_9_8_4_3_2 : value j_9_8_4_3_2 = v_9_8_4_3_2 := by decide
+
+def j_9_8_4_3_1 : Job := ⟨[9, 8, 4, 3, 1], 1, 18, 39⟩
+
+def v_9_8_4_3_1 : List ℕ := @@GENERATED_RHS:v_9_8_4_3_1@@
+
+theorem correct_9_8_4_3_1 : value j_9_8_4_3_1 = v_9_8_4_3_1 := by decide
+
+def j_9_8_4_3 : Job := ⟨[9, 8, 4, 3], 3, 19, 40⟩
+
+def v_9_8_4_3 : List ℕ := @@GENERATED_RHS:v_9_8_4_3@@
+
+theorem correct_9_8_4_3 : value j_9_8_4_3 = v_9_8_4_3 := by
+  rw [value_children j_9_8_4_3 (by decide) (by decide)]
+  have hc : children j_9_8_4_3 = [j_9_8_4_3_3, j_9_8_4_3_2, j_9_8_4_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_4_3_3, correct_9_8_4_3_2, correct_9_8_4_3_1]
+  all_goals decide
+
+def j_9_8_4_2 : Job := ⟨[9, 8, 4, 2], 2, 20, 40⟩
+
+def v_9_8_4_2 : List ℕ := @@GENERATED_RHS:v_9_8_4_2@@
+
+theorem correct_9_8_4_2 : value j_9_8_4_2 = v_9_8_4_2 := by decide
+
+def j_9_8_4_1 : Job := ⟨[9, 8, 4, 1], 1, 21, 40⟩
+
+def v_9_8_4_1 : List ℕ := @@GENERATED_RHS:v_9_8_4_1@@
+
+theorem correct_9_8_4_1 : value j_9_8_4_1 = v_9_8_4_1 := by decide
+
+def j_9_8_4 : Job := ⟨[9, 8, 4], 4, 22, 41⟩
+
+def v_9_8_4 : List ℕ := @@GENERATED_RHS:v_9_8_4@@
+
+theorem correct_9_8_4 : value j_9_8_4 = v_9_8_4 := by
+  rw [value_children j_9_8_4 (by decide) (by decide)]
+  have hc : children j_9_8_4 = [j_9_8_4_4, j_9_8_4_3, j_9_8_4_2, j_9_8_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_4_4, correct_9_8_4_3, correct_9_8_4_2, correct_9_8_4_1]
+  all_goals decide
+
+def j_9_8_3_3_3_3 : Job := ⟨[9, 8, 3, 3, 3, 3], 3, 14, 38⟩
+
+def v_9_8_3_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_8_3_3_3_3@@
+
+theorem correct_9_8_3_3_3_3 : value j_9_8_3_3_3_3 = v_9_8_3_3_3_3 := by decide
+
+def j_9_8_3_3_3_2 : Job := ⟨[9, 8, 3, 3, 3, 2], 2, 15, 38⟩
+
+def v_9_8_3_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_8_3_3_3_2@@
+
+theorem correct_9_8_3_3_3_2 : value j_9_8_3_3_3_2 = v_9_8_3_3_3_2 := by decide
+
+def j_9_8_3_3_3_1 : Job := ⟨[9, 8, 3, 3, 3, 1], 1, 16, 38⟩
+
+def v_9_8_3_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_8_3_3_3_1@@
+
+theorem correct_9_8_3_3_3_1 : value j_9_8_3_3_3_1 = v_9_8_3_3_3_1 := by decide
+
+def j_9_8_3_3_3 : Job := ⟨[9, 8, 3, 3, 3], 3, 17, 39⟩
+
+def v_9_8_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_8_3_3_3@@
+
+theorem correct_9_8_3_3_3 : value j_9_8_3_3_3 = v_9_8_3_3_3 := by
+  rw [value_children j_9_8_3_3_3 (by decide) (by decide)]
+  have hc : children j_9_8_3_3_3 = [j_9_8_3_3_3_3, j_9_8_3_3_3_2, j_9_8_3_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_3_3_3_3, correct_9_8_3_3_3_2, correct_9_8_3_3_3_1]
+  all_goals decide
+
+def j_9_8_3_3_2 : Job := ⟨[9, 8, 3, 3, 2], 2, 18, 39⟩
+
+def v_9_8_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_8_3_3_2@@
+
+theorem correct_9_8_3_3_2 : value j_9_8_3_3_2 = v_9_8_3_3_2 := by decide
+
+def j_9_8_3_3_1 : Job := ⟨[9, 8, 3, 3, 1], 1, 19, 39⟩
+
+def v_9_8_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_8_3_3_1@@
+
+theorem correct_9_8_3_3_1 : value j_9_8_3_3_1 = v_9_8_3_3_1 := by decide
+
+def j_9_8_3_3 : Job := ⟨[9, 8, 3, 3], 3, 20, 40⟩
+
+def v_9_8_3_3 : List ℕ := @@GENERATED_RHS:v_9_8_3_3@@
+
+theorem correct_9_8_3_3 : value j_9_8_3_3 = v_9_8_3_3 := by
+  rw [value_children j_9_8_3_3 (by decide) (by decide)]
+  have hc : children j_9_8_3_3 = [j_9_8_3_3_3, j_9_8_3_3_2, j_9_8_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_3_3_3, correct_9_8_3_3_2, correct_9_8_3_3_1]
+  all_goals decide
+
+def j_9_8_3_2 : Job := ⟨[9, 8, 3, 2], 2, 21, 40⟩
+
+def v_9_8_3_2 : List ℕ := @@GENERATED_RHS:v_9_8_3_2@@
+
+theorem correct_9_8_3_2 : value j_9_8_3_2 = v_9_8_3_2 := by decide
+
+def j_9_8_3_1 : Job := ⟨[9, 8, 3, 1], 1, 22, 40⟩
+
+def v_9_8_3_1 : List ℕ := @@GENERATED_RHS:v_9_8_3_1@@
+
+theorem correct_9_8_3_1 : value j_9_8_3_1 = v_9_8_3_1 := by decide
+
+def j_9_8_3 : Job := ⟨[9, 8, 3], 3, 23, 41⟩
+
+def v_9_8_3 : List ℕ := @@GENERATED_RHS:v_9_8_3@@
+
+theorem correct_9_8_3 : value j_9_8_3 = v_9_8_3 := by
+  rw [value_children j_9_8_3 (by decide) (by decide)]
+  have hc : children j_9_8_3 = [j_9_8_3_3, j_9_8_3_2, j_9_8_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_3_3, correct_9_8_3_2, correct_9_8_3_1]
+  all_goals decide
+
+def j_9_8_2 : Job := ⟨[9, 8, 2], 2, 24, 41⟩
+
+def v_9_8_2 : List ℕ := @@GENERATED_RHS:v_9_8_2@@
+
+theorem correct_9_8_2 : value j_9_8_2 = v_9_8_2 := by decide
+
+def j_9_8_1 : Job := ⟨[9, 8, 1], 1, 25, 41⟩
+
+def v_9_8_1 : List ℕ := @@GENERATED_RHS:v_9_8_1@@
+
+theorem correct_9_8_1 : value j_9_8_1 = v_9_8_1 := by decide
+
+def j_9_8 : Job := ⟨[9, 8], 8, 26, 42⟩
+
+def v_9_8 : List ℕ := @@GENERATED_RHS:v_9_8@@
+
+theorem correct_9_8 : value j_9_8 = v_9_8 := by
+  rw [value_children j_9_8 (by decide) (by decide)]
+  have hc : children j_9_8 = [j_9_8_8, j_9_8_7, j_9_8_6, j_9_8_5, j_9_8_4, j_9_8_3, j_9_8_2, j_9_8_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_8_8, correct_9_8_7, correct_9_8_6, correct_9_8_5, correct_9_8_4, correct_9_8_3, correct_9_8_2, correct_9_8_1]
+  all_goals decide
+
+def j_9_7_7_7 : Job := ⟨[9, 7, 7, 7], 7, 13, 40⟩
+
+def v_9_7_7_7 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_7_7 : value j_9_7_7_7 = v_9_7_7_7 := by decide
+
+def j_9_7_7_6_6 : Job := ⟨[9, 7, 7, 6, 6], 6, 8, 39⟩
+
+def v_9_7_7_6_6 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_7_6_6 : value j_9_7_7_6_6 = v_9_7_7_6_6 := by decide
+
+def j_9_7_7_6_5 : Job := ⟨[9, 7, 7, 6, 5], 5, 9, 39⟩
+
+def v_9_7_7_6_5 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_7_6_5 : value j_9_7_7_6_5 = v_9_7_7_6_5 := by decide
+
+def j_9_7_7_6_4 : Job := ⟨[9, 7, 7, 6, 4], 4, 10, 39⟩
+
+def v_9_7_7_6_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_7_6_4 : value j_9_7_7_6_4 = v_9_7_7_6_4 := by decide
+
+def j_9_7_7_6_3 : Job := ⟨[9, 7, 7, 6, 3], 3, 11, 39⟩
+
+def v_9_7_7_6_3 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_7_6_3 : value j_9_7_7_6_3 = v_9_7_7_6_3 := by decide
+
+def j_9_7_7_6_2 : Job := ⟨[9, 7, 7, 6, 2], 2, 12, 39⟩
+
+def v_9_7_7_6_2 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_7_6_2 : value j_9_7_7_6_2 = v_9_7_7_6_2 := by decide
+
+def j_9_7_7_6_1 : Job := ⟨[9, 7, 7, 6, 1], 1, 13, 39⟩
+
+def v_9_7_7_6_1 : List ℕ := List.replicate 903 0 ++ [1168907596832005168320]
+
+theorem correct_9_7_7_6_1 : value j_9_7_7_6_1 = v_9_7_7_6_1 := by decide
+
+def j_9_7_7_6 : Job := ⟨[9, 7, 7, 6], 6, 14, 40⟩
+
+def v_9_7_7_6 : List ℕ := List.replicate 903 0 ++ [1168907596832005168320]
+
+theorem correct_9_7_7_6 : value j_9_7_7_6 = v_9_7_7_6 := by
+  rw [value_children j_9_7_7_6 (by decide) (by decide)]
+  have hc : children j_9_7_7_6 = [j_9_7_7_6_6, j_9_7_7_6_5, j_9_7_7_6_4, j_9_7_7_6_3, j_9_7_7_6_2, j_9_7_7_6_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_7_6_6, correct_9_7_7_6_5, correct_9_7_7_6_4, correct_9_7_7_6_3, correct_9_7_7_6_2, correct_9_7_7_6_1]
+  all_goals decide
+
+def j_9_7_7_5_5 : Job := ⟨[9, 7, 7, 5, 5], 5, 10, 39⟩
+
+def v_9_7_7_5_5 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_7_5_5 : value j_9_7_7_5_5 = v_9_7_7_5_5 := by decide
+
+def j_9_7_7_5_4 : Job := ⟨[9, 7, 7, 5, 4], 4, 11, 39⟩
+
+def v_9_7_7_5_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_7_5_4 : value j_9_7_7_5_4 = v_9_7_7_5_4 := by decide
+
+def j_9_7_7_5_3 : Job := ⟨[9, 7, 7, 5, 3], 3, 12, 39⟩
+
+def v_9_7_7_5_3 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_7_5_3 : value j_9_7_7_5_3 = v_9_7_7_5_3 := by decide
+
+def j_9_7_7_5_2 : Job := ⟨[9, 7, 7, 5, 2], 2, 13, 39⟩
+
+def v_9_7_7_5_2 : List ℕ := @@GENERATED_RHS:v_9_7_7_5_2@@
+
+theorem correct_9_7_7_5_2 : value j_9_7_7_5_2 = v_9_7_7_5_2 := by decide
+
+def j_9_7_7_5_1 : Job := ⟨[9, 7, 7, 5, 1], 1, 14, 39⟩
+
+def v_9_7_7_5_1 : List ℕ := @@GENERATED_RHS:v_9_7_7_5_1@@
+
+theorem correct_9_7_7_5_1 : value j_9_7_7_5_1 = v_9_7_7_5_1 := by decide
+
+def j_9_7_7_5 : Job := ⟨[9, 7, 7, 5], 5, 15, 40⟩
+
+def v_9_7_7_5 : List ℕ := @@GENERATED_RHS:v_9_7_7_5@@
+
+theorem correct_9_7_7_5 : value j_9_7_7_5 = v_9_7_7_5 := by
+  rw [value_children j_9_7_7_5 (by decide) (by decide)]
+  have hc : children j_9_7_7_5 = [j_9_7_7_5_5, j_9_7_7_5_4, j_9_7_7_5_3, j_9_7_7_5_2, j_9_7_7_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_7_5_5, correct_9_7_7_5_4, correct_9_7_7_5_3, correct_9_7_7_5_2, correct_9_7_7_5_1]
+  all_goals decide
+
+def j_9_7_7_4_4 : Job := ⟨[9, 7, 7, 4, 4], 4, 12, 39⟩
+
+def v_9_7_7_4_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_7_4_4 : value j_9_7_7_4_4 = v_9_7_7_4_4 := by decide
+
+def j_9_7_7_4_3 : Job := ⟨[9, 7, 7, 4, 3], 3, 13, 39⟩
+
+def v_9_7_7_4_3 : List ℕ := @@GENERATED_RHS:v_9_7_7_4_3@@
+
+theorem correct_9_7_7_4_3 : value j_9_7_7_4_3 = v_9_7_7_4_3 := by decide
+
+def j_9_7_7_4_2 : Job := ⟨[9, 7, 7, 4, 2], 2, 14, 39⟩
+
+def v_9_7_7_4_2 : List ℕ := @@GENERATED_RHS:v_9_7_7_4_2@@
+
+theorem correct_9_7_7_4_2 : value j_9_7_7_4_2 = v_9_7_7_4_2 := by decide
+
+def j_9_7_7_4_1 : Job := ⟨[9, 7, 7, 4, 1], 1, 15, 39⟩
+
+def v_9_7_7_4_1 : List ℕ := @@GENERATED_RHS:v_9_7_7_4_1@@
+
+theorem correct_9_7_7_4_1 : value j_9_7_7_4_1 = v_9_7_7_4_1 := by decide
+
+def j_9_7_7_4 : Job := ⟨[9, 7, 7, 4], 4, 16, 40⟩
+
+def v_9_7_7_4 : List ℕ := @@GENERATED_RHS:v_9_7_7_4@@
+
+theorem correct_9_7_7_4 : value j_9_7_7_4 = v_9_7_7_4 := by
+  rw [value_children j_9_7_7_4 (by decide) (by decide)]
+  have hc : children j_9_7_7_4 = [j_9_7_7_4_4, j_9_7_7_4_3, j_9_7_7_4_2, j_9_7_7_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_7_4_4, correct_9_7_7_4_3, correct_9_7_7_4_2, correct_9_7_7_4_1]
+  all_goals decide
+
+def j_9_7_7_3_3 : Job := ⟨[9, 7, 7, 3, 3], 3, 14, 39⟩
+
+def v_9_7_7_3_3 : List ℕ := @@GENERATED_RHS:v_9_7_7_3_3@@
+
+theorem correct_9_7_7_3_3 : value j_9_7_7_3_3 = v_9_7_7_3_3 := by decide
+
+def j_9_7_7_3_2 : Job := ⟨[9, 7, 7, 3, 2], 2, 15, 39⟩
+
+def v_9_7_7_3_2 : List ℕ := @@GENERATED_RHS:v_9_7_7_3_2@@
+
+theorem correct_9_7_7_3_2 : value j_9_7_7_3_2 = v_9_7_7_3_2 := by decide
+
+def j_9_7_7_3_1 : Job := ⟨[9, 7, 7, 3, 1], 1, 16, 39⟩
+
+def v_9_7_7_3_1 : List ℕ := @@GENERATED_RHS:v_9_7_7_3_1@@
+
+theorem correct_9_7_7_3_1 : value j_9_7_7_3_1 = v_9_7_7_3_1 := by decide
+
+def j_9_7_7_3 : Job := ⟨[9, 7, 7, 3], 3, 17, 40⟩
+
+def v_9_7_7_3 : List ℕ := @@GENERATED_RHS:v_9_7_7_3@@
+
+theorem correct_9_7_7_3 : value j_9_7_7_3 = v_9_7_7_3 := by
+  rw [value_children j_9_7_7_3 (by decide) (by decide)]
+  have hc : children j_9_7_7_3 = [j_9_7_7_3_3, j_9_7_7_3_2, j_9_7_7_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_7_3_3, correct_9_7_7_3_2, correct_9_7_7_3_1]
+  all_goals decide
+
+def j_9_7_7_2 : Job := ⟨[9, 7, 7, 2], 2, 18, 40⟩
+
+def v_9_7_7_2 : List ℕ := @@GENERATED_RHS:v_9_7_7_2@@
+
+theorem correct_9_7_7_2 : value j_9_7_7_2 = v_9_7_7_2 := by decide
+
+def j_9_7_7_1 : Job := ⟨[9, 7, 7, 1], 1, 19, 40⟩
+
+def v_9_7_7_1 : List ℕ := @@GENERATED_RHS:v_9_7_7_1@@
+
+theorem correct_9_7_7_1 : value j_9_7_7_1 = v_9_7_7_1 := by decide
+
+def j_9_7_7 : Job := ⟨[9, 7, 7], 7, 20, 41⟩
+
+def v_9_7_7 : List ℕ := @@GENERATED_RHS:v_9_7_7@@
+
+theorem correct_9_7_7 : value j_9_7_7 = v_9_7_7 := by
+  rw [value_children j_9_7_7 (by decide) (by decide)]
+  have hc : children j_9_7_7 = [j_9_7_7_7, j_9_7_7_6, j_9_7_7_5, j_9_7_7_4, j_9_7_7_3, j_9_7_7_2, j_9_7_7_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_7_7, correct_9_7_7_6, correct_9_7_7_5, correct_9_7_7_4, correct_9_7_7_3, correct_9_7_7_2, correct_9_7_7_1]
+  all_goals decide
+
+def j_9_7_6_6_6 : Job := ⟨[9, 7, 6, 6, 6], 6, 9, 39⟩
+
+def v_9_7_6_6_6 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_6_6_6 : value j_9_7_6_6_6 = v_9_7_6_6_6 := by decide
+
+def j_9_7_6_6_5 : Job := ⟨[9, 7, 6, 6, 5], 5, 10, 39⟩
+
+def v_9_7_6_6_5 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_6_6_5 : value j_9_7_6_6_5 = v_9_7_6_6_5 := by decide
+
+def j_9_7_6_6_4 : Job := ⟨[9, 7, 6, 6, 4], 4, 11, 39⟩
+
+def v_9_7_6_6_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_6_6_4 : value j_9_7_6_6_4 = v_9_7_6_6_4 := by decide
+
+def j_9_7_6_6_3 : Job := ⟨[9, 7, 6, 6, 3], 3, 12, 39⟩
+
+def v_9_7_6_6_3 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_6_6_3 : value j_9_7_6_6_3 = v_9_7_6_6_3 := by decide
+
+def j_9_7_6_6_2 : Job := ⟨[9, 7, 6, 6, 2], 2, 13, 39⟩
+
+def v_9_7_6_6_2 : List ℕ := @@GENERATED_RHS:v_9_7_6_6_2@@
+
+theorem correct_9_7_6_6_2 : value j_9_7_6_6_2 = v_9_7_6_6_2 := by decide
+
+def j_9_7_6_6_1 : Job := ⟨[9, 7, 6, 6, 1], 1, 14, 39⟩
+
+def v_9_7_6_6_1 : List ℕ := @@GENERATED_RHS:v_9_7_6_6_1@@
+
+theorem correct_9_7_6_6_1 : value j_9_7_6_6_1 = v_9_7_6_6_1 := by decide
+
+def j_9_7_6_6 : Job := ⟨[9, 7, 6, 6], 6, 15, 40⟩
+
+def v_9_7_6_6 : List ℕ := @@GENERATED_RHS:v_9_7_6_6@@
+
+theorem correct_9_7_6_6 : value j_9_7_6_6 = v_9_7_6_6 := by
+  rw [value_children j_9_7_6_6 (by decide) (by decide)]
+  have hc : children j_9_7_6_6 = [j_9_7_6_6_6, j_9_7_6_6_5, j_9_7_6_6_4, j_9_7_6_6_3, j_9_7_6_6_2, j_9_7_6_6_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_6_6_6, correct_9_7_6_6_5, correct_9_7_6_6_4, correct_9_7_6_6_3, correct_9_7_6_6_2, correct_9_7_6_6_1]
+  all_goals decide
+
+def j_9_7_6_5_5 : Job := ⟨[9, 7, 6, 5, 5], 5, 11, 39⟩
+
+def v_9_7_6_5_5 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_6_5_5 : value j_9_7_6_5_5 = v_9_7_6_5_5 := by decide
+
+def j_9_7_6_5_4_4 : Job := ⟨[9, 7, 6, 5, 4, 4], 4, 8, 38⟩
+
+def v_9_7_6_5_4_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_6_5_4_4 : value j_9_7_6_5_4_4 = v_9_7_6_5_4_4 := by decide
+
+def j_9_7_6_5_4_3 : Job := ⟨[9, 7, 6, 5, 4, 3], 3, 9, 38⟩
+
+def v_9_7_6_5_4_3 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_6_5_4_3 : value j_9_7_6_5_4_3 = v_9_7_6_5_4_3 := by decide
+
+def j_9_7_6_5_4_2 : Job := ⟨[9, 7, 6, 5, 4, 2], 2, 10, 38⟩
+
+def v_9_7_6_5_4_2 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_6_5_4_2 : value j_9_7_6_5_4_2 = v_9_7_6_5_4_2 := by decide
+
+def j_9_7_6_5_4_1 : Job := ⟨[9, 7, 6, 5, 4, 1], 1, 11, 38⟩
+
+def v_9_7_6_5_4_1 : List ℕ := List.replicate 903 0 ++ [45809392513459712011056]
+
+theorem correct_9_7_6_5_4_1 : value j_9_7_6_5_4_1 = v_9_7_6_5_4_1 := by decide
+
+def j_9_7_6_5_4 : Job := ⟨[9, 7, 6, 5, 4], 4, 12, 39⟩
+
+def v_9_7_6_5_4 : List ℕ := List.replicate 903 0 ++ [45809392513459712011056]
+
+theorem correct_9_7_6_5_4 : value j_9_7_6_5_4 = v_9_7_6_5_4 := by
+  rw [value_children j_9_7_6_5_4 (by decide) (by decide)]
+  have hc : children j_9_7_6_5_4 = [j_9_7_6_5_4_4, j_9_7_6_5_4_3, j_9_7_6_5_4_2, j_9_7_6_5_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_6_5_4_4, correct_9_7_6_5_4_3, correct_9_7_6_5_4_2, correct_9_7_6_5_4_1]
+  all_goals decide
+
+def j_9_7_6_5_3 : Job := ⟨[9, 7, 6, 5, 3], 3, 13, 39⟩
+
+def v_9_7_6_5_3 : List ℕ := @@GENERATED_RHS:v_9_7_6_5_3@@
+
+theorem correct_9_7_6_5_3 : value j_9_7_6_5_3 = v_9_7_6_5_3 := by decide
+
+def j_9_7_6_5_2 : Job := ⟨[9, 7, 6, 5, 2], 2, 14, 39⟩
+
+def v_9_7_6_5_2 : List ℕ := @@GENERATED_RHS:v_9_7_6_5_2@@
+
+theorem correct_9_7_6_5_2 : value j_9_7_6_5_2 = v_9_7_6_5_2 := by decide
+
+def j_9_7_6_5_1 : Job := ⟨[9, 7, 6, 5, 1], 1, 15, 39⟩
+
+def v_9_7_6_5_1 : List ℕ := @@GENERATED_RHS:v_9_7_6_5_1@@
+
+theorem correct_9_7_6_5_1 : value j_9_7_6_5_1 = v_9_7_6_5_1 := by decide
+
+def j_9_7_6_5 : Job := ⟨[9, 7, 6, 5], 5, 16, 40⟩
+
+def v_9_7_6_5 : List ℕ := @@GENERATED_RHS:v_9_7_6_5@@
+
+theorem correct_9_7_6_5 : value j_9_7_6_5 = v_9_7_6_5 := by
+  rw [value_children j_9_7_6_5 (by decide) (by decide)]
+  have hc : children j_9_7_6_5 = [j_9_7_6_5_5, j_9_7_6_5_4, j_9_7_6_5_3, j_9_7_6_5_2, j_9_7_6_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_6_5_5, correct_9_7_6_5_4, correct_9_7_6_5_3, correct_9_7_6_5_2, correct_9_7_6_5_1]
+  all_goals decide
+
+def j_9_7_6_4_4_4 : Job := ⟨[9, 7, 6, 4, 4, 4], 4, 9, 38⟩
+
+def v_9_7_6_4_4_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_6_4_4_4 : value j_9_7_6_4_4_4 = v_9_7_6_4_4_4 := by decide
+
+def j_9_7_6_4_4_3 : Job := ⟨[9, 7, 6, 4, 4, 3], 3, 10, 38⟩
+
+def v_9_7_6_4_4_3 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_6_4_4_3 : value j_9_7_6_4_4_3 = v_9_7_6_4_4_3 := by decide
+
+def j_9_7_6_4_4_2 : Job := ⟨[9, 7, 6, 4, 4, 2], 2, 11, 38⟩
+
+def v_9_7_6_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_7_6_4_4_2@@
+
+theorem correct_9_7_6_4_4_2 : value j_9_7_6_4_4_2 = v_9_7_6_4_4_2 := by decide
+
+def j_9_7_6_4_4_1 : Job := ⟨[9, 7, 6, 4, 4, 1], 1, 12, 38⟩
+
+def v_9_7_6_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_7_6_4_4_1@@
+
+theorem correct_9_7_6_4_4_1 : value j_9_7_6_4_4_1 = v_9_7_6_4_4_1 := by decide
+
+def j_9_7_6_4_4 : Job := ⟨[9, 7, 6, 4, 4], 4, 13, 39⟩
+
+def v_9_7_6_4_4 : List ℕ := @@GENERATED_RHS:v_9_7_6_4_4@@
+
+theorem correct_9_7_6_4_4 : value j_9_7_6_4_4 = v_9_7_6_4_4 := by
+  rw [value_children j_9_7_6_4_4 (by decide) (by decide)]
+  have hc : children j_9_7_6_4_4 = [j_9_7_6_4_4_4, j_9_7_6_4_4_3, j_9_7_6_4_4_2, j_9_7_6_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_6_4_4_4, correct_9_7_6_4_4_3, correct_9_7_6_4_4_2, correct_9_7_6_4_4_1]
+  all_goals decide
+
+def j_9_7_6_4_3 : Job := ⟨[9, 7, 6, 4, 3], 3, 14, 39⟩
+
+def v_9_7_6_4_3 : List ℕ := @@GENERATED_RHS:v_9_7_6_4_3@@
+
+theorem correct_9_7_6_4_3 : value j_9_7_6_4_3 = v_9_7_6_4_3 := by decide
+
+def j_9_7_6_4_2 : Job := ⟨[9, 7, 6, 4, 2], 2, 15, 39⟩
+
+def v_9_7_6_4_2 : List ℕ := @@GENERATED_RHS:v_9_7_6_4_2@@
+
+theorem correct_9_7_6_4_2 : value j_9_7_6_4_2 = v_9_7_6_4_2 := by decide
+
+def j_9_7_6_4_1 : Job := ⟨[9, 7, 6, 4, 1], 1, 16, 39⟩
+
+def v_9_7_6_4_1 : List ℕ := @@GENERATED_RHS:v_9_7_6_4_1@@
+
+theorem correct_9_7_6_4_1 : value j_9_7_6_4_1 = v_9_7_6_4_1 := by decide
+
+def j_9_7_6_4 : Job := ⟨[9, 7, 6, 4], 4, 17, 40⟩
+
+def v_9_7_6_4 : List ℕ := @@GENERATED_RHS:v_9_7_6_4@@
+
+theorem correct_9_7_6_4 : value j_9_7_6_4 = v_9_7_6_4 := by
+  rw [value_children j_9_7_6_4 (by decide) (by decide)]
+  have hc : children j_9_7_6_4 = [j_9_7_6_4_4, j_9_7_6_4_3, j_9_7_6_4_2, j_9_7_6_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_6_4_4, correct_9_7_6_4_3, correct_9_7_6_4_2, correct_9_7_6_4_1]
+  all_goals decide
+
+def j_9_7_6_3_3 : Job := ⟨[9, 7, 6, 3, 3], 3, 15, 39⟩
+
+def v_9_7_6_3_3 : List ℕ := @@GENERATED_RHS:v_9_7_6_3_3@@
+
+theorem correct_9_7_6_3_3 : value j_9_7_6_3_3 = v_9_7_6_3_3 := by decide
+
+def j_9_7_6_3_2 : Job := ⟨[9, 7, 6, 3, 2], 2, 16, 39⟩
+
+def v_9_7_6_3_2 : List ℕ := @@GENERATED_RHS:v_9_7_6_3_2@@
+
+theorem correct_9_7_6_3_2 : value j_9_7_6_3_2 = v_9_7_6_3_2 := by decide
+
+def j_9_7_6_3_1 : Job := ⟨[9, 7, 6, 3, 1], 1, 17, 39⟩
+
+def v_9_7_6_3_1 : List ℕ := @@GENERATED_RHS:v_9_7_6_3_1@@
+
+theorem correct_9_7_6_3_1 : value j_9_7_6_3_1 = v_9_7_6_3_1 := by decide
+
+def j_9_7_6_3 : Job := ⟨[9, 7, 6, 3], 3, 18, 40⟩
+
+def v_9_7_6_3 : List ℕ := @@GENERATED_RHS:v_9_7_6_3@@
+
+theorem correct_9_7_6_3 : value j_9_7_6_3 = v_9_7_6_3 := by
+  rw [value_children j_9_7_6_3 (by decide) (by decide)]
+  have hc : children j_9_7_6_3 = [j_9_7_6_3_3, j_9_7_6_3_2, j_9_7_6_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_6_3_3, correct_9_7_6_3_2, correct_9_7_6_3_1]
+  all_goals decide
+
+def j_9_7_6_2 : Job := ⟨[9, 7, 6, 2], 2, 19, 40⟩
+
+def v_9_7_6_2 : List ℕ := @@GENERATED_RHS:v_9_7_6_2@@
+
+theorem correct_9_7_6_2 : value j_9_7_6_2 = v_9_7_6_2 := by decide
+
+def j_9_7_6_1 : Job := ⟨[9, 7, 6, 1], 1, 20, 40⟩
+
+def v_9_7_6_1 : List ℕ := @@GENERATED_RHS:v_9_7_6_1@@
+
+theorem correct_9_7_6_1 : value j_9_7_6_1 = v_9_7_6_1 := by decide
+
+def j_9_7_6 : Job := ⟨[9, 7, 6], 6, 21, 41⟩
+
+def v_9_7_6 : List ℕ := @@GENERATED_RHS:v_9_7_6@@
+
+theorem correct_9_7_6 : value j_9_7_6 = v_9_7_6 := by
+  rw [value_children j_9_7_6 (by decide) (by decide)]
+  have hc : children j_9_7_6 = [j_9_7_6_6, j_9_7_6_5, j_9_7_6_4, j_9_7_6_3, j_9_7_6_2, j_9_7_6_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_6_6, correct_9_7_6_5, correct_9_7_6_4, correct_9_7_6_3, correct_9_7_6_2, correct_9_7_6_1]
+  all_goals decide
+
+def j_9_7_5_5_5_5 : Job := ⟨[9, 7, 5, 5, 5, 5], 5, 7, 38⟩
+
+def v_9_7_5_5_5_5 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_5_5_5_5 : value j_9_7_5_5_5_5 = v_9_7_5_5_5_5 := by decide
+
+def j_9_7_5_5_5_4 : Job := ⟨[9, 7, 5, 5, 5, 4], 4, 8, 38⟩
+
+def v_9_7_5_5_5_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_5_5_5_4 : value j_9_7_5_5_5_4 = v_9_7_5_5_5_4 := by decide
+
+def j_9_7_5_5_5_3 : Job := ⟨[9, 7, 5, 5, 5, 3], 3, 9, 38⟩
+
+def v_9_7_5_5_5_3 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_5_5_5_3 : value j_9_7_5_5_5_3 = v_9_7_5_5_5_3 := by decide
+
+def j_9_7_5_5_5_2 : Job := ⟨[9, 7, 5, 5, 5, 2], 2, 10, 38⟩
+
+def v_9_7_5_5_5_2 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_5_5_5_2 : value j_9_7_5_5_5_2 = v_9_7_5_5_5_2 := by decide
+
+def j_9_7_5_5_5_1 : Job := ⟨[9, 7, 5, 5, 5, 1], 1, 11, 38⟩
+
+def v_9_7_5_5_5_1 : List ℕ := @@GENERATED_RHS:v_9_7_5_5_5_1@@
+
+theorem correct_9_7_5_5_5_1 : value j_9_7_5_5_5_1 = v_9_7_5_5_5_1 := by decide
+
+def j_9_7_5_5_5 : Job := ⟨[9, 7, 5, 5, 5], 5, 12, 39⟩
+
+def v_9_7_5_5_5 : List ℕ := @@GENERATED_RHS:v_9_7_5_5_5@@
+
+theorem correct_9_7_5_5_5 : value j_9_7_5_5_5 = v_9_7_5_5_5 := by
+  rw [value_children j_9_7_5_5_5 (by decide) (by decide)]
+  have hc : children j_9_7_5_5_5 = [j_9_7_5_5_5_5, j_9_7_5_5_5_4, j_9_7_5_5_5_3, j_9_7_5_5_5_2, j_9_7_5_5_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_5_5_5_5, correct_9_7_5_5_5_4, correct_9_7_5_5_5_3, correct_9_7_5_5_5_2, correct_9_7_5_5_5_1]
+  all_goals decide
+
+def j_9_7_5_5_4_4 : Job := ⟨[9, 7, 5, 5, 4, 4], 4, 9, 38⟩
+
+def v_9_7_5_5_4_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_5_5_4_4 : value j_9_7_5_5_4_4 = v_9_7_5_5_4_4 := by decide
+
+def j_9_7_5_5_4_3 : Job := ⟨[9, 7, 5, 5, 4, 3], 3, 10, 38⟩
+
+def v_9_7_5_5_4_3 : List ℕ := List.replicate 904 0
+
+theorem correct_9_7_5_5_4_3 : value j_9_7_5_5_4_3 = v_9_7_5_5_4_3 := by decide
+
+def j_9_7_5_5_4_2 : Job := ⟨[9, 7, 5, 5, 4, 2], 2, 11, 38⟩
+
+def v_9_7_5_5_4_2 : List ℕ := @@GENERATED_RHS:v_9_7_5_5_4_2@@
+
+theorem correct_9_7_5_5_4_2 : value j_9_7_5_5_4_2 = v_9_7_5_5_4_2 := by decide
+
+def j_9_7_5_5_4_1 : Job := ⟨[9, 7, 5, 5, 4, 1], 1, 12, 38⟩
+
+def v_9_7_5_5_4_1 : List ℕ := @@GENERATED_RHS:v_9_7_5_5_4_1@@
+
+theorem correct_9_7_5_5_4_1 : value j_9_7_5_5_4_1 = v_9_7_5_5_4_1 := by decide
+
+def j_9_7_5_5_4 : Job := ⟨[9, 7, 5, 5, 4], 4, 13, 39⟩
+
+def v_9_7_5_5_4 : List ℕ := @@GENERATED_RHS:v_9_7_5_5_4@@
+
+theorem correct_9_7_5_5_4 : value j_9_7_5_5_4 = v_9_7_5_5_4 := by
+  rw [value_children j_9_7_5_5_4 (by decide) (by decide)]
+  have hc : children j_9_7_5_5_4 = [j_9_7_5_5_4_4, j_9_7_5_5_4_3, j_9_7_5_5_4_2, j_9_7_5_5_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_5_5_4_4, correct_9_7_5_5_4_3, correct_9_7_5_5_4_2, correct_9_7_5_5_4_1]
+  all_goals decide
+
+def j_9_7_5_5_3 : Job := ⟨[9, 7, 5, 5, 3], 3, 14, 39⟩
+
+def v_9_7_5_5_3 : List ℕ := @@GENERATED_RHS:v_9_7_5_5_3@@
+
+theorem correct_9_7_5_5_3 : value j_9_7_5_5_3 = v_9_7_5_5_3 := by decide
+
+def j_9_7_5_5_2 : Job := ⟨[9, 7, 5, 5, 2], 2, 15, 39⟩
+
+def v_9_7_5_5_2 : List ℕ := @@GENERATED_RHS:v_9_7_5_5_2@@
+
+theorem correct_9_7_5_5_2 : value j_9_7_5_5_2 = v_9_7_5_5_2 := by decide
+
+def j_9_7_5_5_1 : Job := ⟨[9, 7, 5, 5, 1], 1, 16, 39⟩
+
+def v_9_7_5_5_1 : List ℕ := @@GENERATED_RHS:v_9_7_5_5_1@@
+
+theorem correct_9_7_5_5_1 : value j_9_7_5_5_1 = v_9_7_5_5_1 := by decide
+
+def j_9_7_5_5 : Job := ⟨[9, 7, 5, 5], 5, 17, 40⟩
+
+def v_9_7_5_5 : List ℕ := @@GENERATED_RHS:v_9_7_5_5@@
+
+theorem correct_9_7_5_5 : value j_9_7_5_5 = v_9_7_5_5 := by
+  rw [value_children j_9_7_5_5 (by decide) (by decide)]
+  have hc : children j_9_7_5_5 = [j_9_7_5_5_5, j_9_7_5_5_4, j_9_7_5_5_3, j_9_7_5_5_2, j_9_7_5_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_5_5_5, correct_9_7_5_5_4, correct_9_7_5_5_3, correct_9_7_5_5_2, correct_9_7_5_5_1]
+  all_goals decide
+
+def j_9_7_5_4_4_4 : Job := ⟨[9, 7, 5, 4, 4, 4], 4, 10, 38⟩
+
+def v_9_7_5_4_4_4 : List ℕ := List.replicate 903 0 ++ [108770339366731262820600]
+
+theorem correct_9_7_5_4_4_4 : value j_9_7_5_4_4_4 = v_9_7_5_4_4_4 := by decide
+
+def j_9_7_5_4_4_3 : Job := ⟨[9, 7, 5, 4, 4, 3], 3, 11, 38⟩
+
+def v_9_7_5_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_7_5_4_4_3@@
+
+theorem correct_9_7_5_4_4_3 : value j_9_7_5_4_4_3 = v_9_7_5_4_4_3 := by decide
+
+def j_9_7_5_4_4_2 : Job := ⟨[9, 7, 5, 4, 4, 2], 2, 12, 38⟩
+
+def v_9_7_5_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_7_5_4_4_2@@
+
+theorem correct_9_7_5_4_4_2 : value j_9_7_5_4_4_2 = v_9_7_5_4_4_2 := by decide
+
+def j_9_7_5_4_4_1 : Job := ⟨[9, 7, 5, 4, 4, 1], 1, 13, 38⟩
+
+def v_9_7_5_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_7_5_4_4_1@@
+
+theorem correct_9_7_5_4_4_1 : value j_9_7_5_4_4_1 = v_9_7_5_4_4_1 := by decide
+
+def j_9_7_5_4_4 : Job := ⟨[9, 7, 5, 4, 4], 4, 14, 39⟩
+
+def v_9_7_5_4_4 : List ℕ := @@GENERATED_RHS:v_9_7_5_4_4@@
+
+theorem correct_9_7_5_4_4 : value j_9_7_5_4_4 = v_9_7_5_4_4 := by
+  rw [value_children j_9_7_5_4_4 (by decide) (by decide)]
+  have hc : children j_9_7_5_4_4 = [j_9_7_5_4_4_4, j_9_7_5_4_4_3, j_9_7_5_4_4_2, j_9_7_5_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_5_4_4_4, correct_9_7_5_4_4_3, correct_9_7_5_4_4_2, correct_9_7_5_4_4_1]
+  all_goals decide
+
+def j_9_7_5_4_3 : Job := ⟨[9, 7, 5, 4, 3], 3, 15, 39⟩
+
+def v_9_7_5_4_3 : List ℕ := @@GENERATED_RHS:v_9_7_5_4_3@@
+
+theorem correct_9_7_5_4_3 : value j_9_7_5_4_3 = v_9_7_5_4_3 := by decide
+
+def j_9_7_5_4_2 : Job := ⟨[9, 7, 5, 4, 2], 2, 16, 39⟩
+
+def v_9_7_5_4_2 : List ℕ := @@GENERATED_RHS:v_9_7_5_4_2@@
+
+theorem correct_9_7_5_4_2 : value j_9_7_5_4_2 = v_9_7_5_4_2 := by decide
+
+def j_9_7_5_4_1 : Job := ⟨[9, 7, 5, 4, 1], 1, 17, 39⟩
+
+def v_9_7_5_4_1 : List ℕ := @@GENERATED_RHS:v_9_7_5_4_1@@
+
+theorem correct_9_7_5_4_1 : value j_9_7_5_4_1 = v_9_7_5_4_1 := by decide
+
+def j_9_7_5_4 : Job := ⟨[9, 7, 5, 4], 4, 18, 40⟩
+
+def v_9_7_5_4 : List ℕ := @@GENERATED_RHS:v_9_7_5_4@@
+
+theorem correct_9_7_5_4 : value j_9_7_5_4 = v_9_7_5_4 := by
+  rw [value_children j_9_7_5_4 (by decide) (by decide)]
+  have hc : children j_9_7_5_4 = [j_9_7_5_4_4, j_9_7_5_4_3, j_9_7_5_4_2, j_9_7_5_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_5_4_4, correct_9_7_5_4_3, correct_9_7_5_4_2, correct_9_7_5_4_1]
+  all_goals decide
+
+def j_9_7_5_3_3 : Job := ⟨[9, 7, 5, 3, 3], 3, 16, 39⟩
+
+def v_9_7_5_3_3 : List ℕ := @@GENERATED_RHS:v_9_7_5_3_3@@
+
+theorem correct_9_7_5_3_3 : value j_9_7_5_3_3 = v_9_7_5_3_3 := by decide
+
+def j_9_7_5_3_2 : Job := ⟨[9, 7, 5, 3, 2], 2, 17, 39⟩
+
+def v_9_7_5_3_2 : List ℕ := @@GENERATED_RHS:v_9_7_5_3_2@@
+
+theorem correct_9_7_5_3_2 : value j_9_7_5_3_2 = v_9_7_5_3_2 := by decide
+
+def j_9_7_5_3_1 : Job := ⟨[9, 7, 5, 3, 1], 1, 18, 39⟩
+
+def v_9_7_5_3_1 : List ℕ := @@GENERATED_RHS:v_9_7_5_3_1@@
+
+theorem correct_9_7_5_3_1 : value j_9_7_5_3_1 = v_9_7_5_3_1 := by decide
+
+def j_9_7_5_3 : Job := ⟨[9, 7, 5, 3], 3, 19, 40⟩
+
+def v_9_7_5_3 : List ℕ := @@GENERATED_RHS:v_9_7_5_3@@
+
+theorem correct_9_7_5_3 : value j_9_7_5_3 = v_9_7_5_3 := by
+  rw [value_children j_9_7_5_3 (by decide) (by decide)]
+  have hc : children j_9_7_5_3 = [j_9_7_5_3_3, j_9_7_5_3_2, j_9_7_5_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_5_3_3, correct_9_7_5_3_2, correct_9_7_5_3_1]
+  all_goals decide
+
+def j_9_7_5_2 : Job := ⟨[9, 7, 5, 2], 2, 20, 40⟩
+
+def v_9_7_5_2 : List ℕ := @@GENERATED_RHS:v_9_7_5_2@@
+
+theorem correct_9_7_5_2 : value j_9_7_5_2 = v_9_7_5_2 := by decide
+
+def j_9_7_5_1 : Job := ⟨[9, 7, 5, 1], 1, 21, 40⟩
+
+def v_9_7_5_1 : List ℕ := @@GENERATED_RHS:v_9_7_5_1@@
+
+theorem correct_9_7_5_1 : value j_9_7_5_1 = v_9_7_5_1 := by decide
+
+def j_9_7_5 : Job := ⟨[9, 7, 5], 5, 22, 41⟩
+
+def v_9_7_5 : List ℕ := @@GENERATED_RHS:v_9_7_5@@
+
+theorem correct_9_7_5 : value j_9_7_5 = v_9_7_5 := by
+  rw [value_children j_9_7_5 (by decide) (by decide)]
+  have hc : children j_9_7_5 = [j_9_7_5_5, j_9_7_5_4, j_9_7_5_3, j_9_7_5_2, j_9_7_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_5_5, correct_9_7_5_4, correct_9_7_5_3, correct_9_7_5_2, correct_9_7_5_1]
+  all_goals decide
+
+def j_9_7_4_4_4_4 : Job := ⟨[9, 7, 4, 4, 4, 4], 4, 11, 38⟩
+
+def v_9_7_4_4_4_4 : List ℕ := @@GENERATED_RHS:v_9_7_4_4_4_4@@
+
+theorem correct_9_7_4_4_4_4 : value j_9_7_4_4_4_4 = v_9_7_4_4_4_4 := by decide
+
+def j_9_7_4_4_4_3 : Job := ⟨[9, 7, 4, 4, 4, 3], 3, 12, 38⟩
+
+def v_9_7_4_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_7_4_4_4_3@@
+
+theorem correct_9_7_4_4_4_3 : value j_9_7_4_4_4_3 = v_9_7_4_4_4_3 := by decide
+
+def j_9_7_4_4_4_2 : Job := ⟨[9, 7, 4, 4, 4, 2], 2, 13, 38⟩
+
+def v_9_7_4_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_7_4_4_4_2@@
+
+theorem correct_9_7_4_4_4_2 : value j_9_7_4_4_4_2 = v_9_7_4_4_4_2 := by decide
+
+def j_9_7_4_4_4_1 : Job := ⟨[9, 7, 4, 4, 4, 1], 1, 14, 38⟩
+
+def v_9_7_4_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_7_4_4_4_1@@
+
+theorem correct_9_7_4_4_4_1 : value j_9_7_4_4_4_1 = v_9_7_4_4_4_1 := by decide
+
+def j_9_7_4_4_4 : Job := ⟨[9, 7, 4, 4, 4], 4, 15, 39⟩
+
+def v_9_7_4_4_4 : List ℕ := @@GENERATED_RHS:v_9_7_4_4_4@@
+
+theorem correct_9_7_4_4_4 : value j_9_7_4_4_4 = v_9_7_4_4_4 := by
+  rw [value_children j_9_7_4_4_4 (by decide) (by decide)]
+  have hc : children j_9_7_4_4_4 = [j_9_7_4_4_4_4, j_9_7_4_4_4_3, j_9_7_4_4_4_2, j_9_7_4_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_4_4_4_4, correct_9_7_4_4_4_3, correct_9_7_4_4_4_2, correct_9_7_4_4_4_1]
+  all_goals decide
+
+def j_9_7_4_4_3 : Job := ⟨[9, 7, 4, 4, 3], 3, 16, 39⟩
+
+def v_9_7_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_7_4_4_3@@
+
+theorem correct_9_7_4_4_3 : value j_9_7_4_4_3 = v_9_7_4_4_3 := by decide
+
+def j_9_7_4_4_2 : Job := ⟨[9, 7, 4, 4, 2], 2, 17, 39⟩
+
+def v_9_7_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_7_4_4_2@@
+
+theorem correct_9_7_4_4_2 : value j_9_7_4_4_2 = v_9_7_4_4_2 := by decide
+
+def j_9_7_4_4_1 : Job := ⟨[9, 7, 4, 4, 1], 1, 18, 39⟩
+
+def v_9_7_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_7_4_4_1@@
+
+theorem correct_9_7_4_4_1 : value j_9_7_4_4_1 = v_9_7_4_4_1 := by decide
+
+def j_9_7_4_4 : Job := ⟨[9, 7, 4, 4], 4, 19, 40⟩
+
+def v_9_7_4_4 : List ℕ := @@GENERATED_RHS:v_9_7_4_4@@
+
+theorem correct_9_7_4_4 : value j_9_7_4_4 = v_9_7_4_4 := by
+  rw [value_children j_9_7_4_4 (by decide) (by decide)]
+  have hc : children j_9_7_4_4 = [j_9_7_4_4_4, j_9_7_4_4_3, j_9_7_4_4_2, j_9_7_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_4_4_4, correct_9_7_4_4_3, correct_9_7_4_4_2, correct_9_7_4_4_1]
+  all_goals decide
+
+def j_9_7_4_3_3_3 : Job := ⟨[9, 7, 4, 3, 3, 3], 3, 14, 38⟩
+
+def v_9_7_4_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_7_4_3_3_3@@
+
+theorem correct_9_7_4_3_3_3 : value j_9_7_4_3_3_3 = v_9_7_4_3_3_3 := by decide
+
+def j_9_7_4_3_3_2 : Job := ⟨[9, 7, 4, 3, 3, 2], 2, 15, 38⟩
+
+def v_9_7_4_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_7_4_3_3_2@@
+
+theorem correct_9_7_4_3_3_2 : value j_9_7_4_3_3_2 = v_9_7_4_3_3_2 := by decide
+
+def j_9_7_4_3_3_1 : Job := ⟨[9, 7, 4, 3, 3, 1], 1, 16, 38⟩
+
+def v_9_7_4_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_7_4_3_3_1@@
+
+theorem correct_9_7_4_3_3_1 : value j_9_7_4_3_3_1 = v_9_7_4_3_3_1 := by decide
+
+def j_9_7_4_3_3 : Job := ⟨[9, 7, 4, 3, 3], 3, 17, 39⟩
+
+def v_9_7_4_3_3 : List ℕ := @@GENERATED_RHS:v_9_7_4_3_3@@
+
+theorem correct_9_7_4_3_3 : value j_9_7_4_3_3 = v_9_7_4_3_3 := by
+  rw [value_children j_9_7_4_3_3 (by decide) (by decide)]
+  have hc : children j_9_7_4_3_3 = [j_9_7_4_3_3_3, j_9_7_4_3_3_2, j_9_7_4_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_4_3_3_3, correct_9_7_4_3_3_2, correct_9_7_4_3_3_1]
+  all_goals decide
+
+def j_9_7_4_3_2 : Job := ⟨[9, 7, 4, 3, 2], 2, 18, 39⟩
+
+def v_9_7_4_3_2 : List ℕ := @@GENERATED_RHS:v_9_7_4_3_2@@
+
+theorem correct_9_7_4_3_2 : value j_9_7_4_3_2 = v_9_7_4_3_2 := by decide
+
+def j_9_7_4_3_1 : Job := ⟨[9, 7, 4, 3, 1], 1, 19, 39⟩
+
+def v_9_7_4_3_1 : List ℕ := @@GENERATED_RHS:v_9_7_4_3_1@@
+
+theorem correct_9_7_4_3_1 : value j_9_7_4_3_1 = v_9_7_4_3_1 := by decide
+
+def j_9_7_4_3 : Job := ⟨[9, 7, 4, 3], 3, 20, 40⟩
+
+def v_9_7_4_3 : List ℕ := @@GENERATED_RHS:v_9_7_4_3@@
+
+theorem correct_9_7_4_3 : value j_9_7_4_3 = v_9_7_4_3 := by
+  rw [value_children j_9_7_4_3 (by decide) (by decide)]
+  have hc : children j_9_7_4_3 = [j_9_7_4_3_3, j_9_7_4_3_2, j_9_7_4_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_4_3_3, correct_9_7_4_3_2, correct_9_7_4_3_1]
+  all_goals decide
+
+def j_9_7_4_2 : Job := ⟨[9, 7, 4, 2], 2, 21, 40⟩
+
+def v_9_7_4_2 : List ℕ := @@GENERATED_RHS:v_9_7_4_2@@
+
+theorem correct_9_7_4_2 : value j_9_7_4_2 = v_9_7_4_2 := by decide
+
+def j_9_7_4_1 : Job := ⟨[9, 7, 4, 1], 1, 22, 40⟩
+
+def v_9_7_4_1 : List ℕ := @@GENERATED_RHS:v_9_7_4_1@@
+
+theorem correct_9_7_4_1 : value j_9_7_4_1 = v_9_7_4_1 := by decide
+
+def j_9_7_4 : Job := ⟨[9, 7, 4], 4, 23, 41⟩
+
+def v_9_7_4 : List ℕ := @@GENERATED_RHS:v_9_7_4@@
+
+theorem correct_9_7_4 : value j_9_7_4 = v_9_7_4 := by
+  rw [value_children j_9_7_4 (by decide) (by decide)]
+  have hc : children j_9_7_4 = [j_9_7_4_4, j_9_7_4_3, j_9_7_4_2, j_9_7_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_4_4, correct_9_7_4_3, correct_9_7_4_2, correct_9_7_4_1]
+  all_goals decide
+
+def j_9_7_3_3_3_3 : Job := ⟨[9, 7, 3, 3, 3, 3], 3, 15, 38⟩
+
+def v_9_7_3_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_7_3_3_3_3@@
+
+theorem correct_9_7_3_3_3_3 : value j_9_7_3_3_3_3 = v_9_7_3_3_3_3 := by decide
+
+def j_9_7_3_3_3_2 : Job := ⟨[9, 7, 3, 3, 3, 2], 2, 16, 38⟩
+
+def v_9_7_3_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_7_3_3_3_2@@
+
+theorem correct_9_7_3_3_3_2 : value j_9_7_3_3_3_2 = v_9_7_3_3_3_2 := by decide
+
+def j_9_7_3_3_3_1 : Job := ⟨[9, 7, 3, 3, 3, 1], 1, 17, 38⟩
+
+def v_9_7_3_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_7_3_3_3_1@@
+
+theorem correct_9_7_3_3_3_1 : value j_9_7_3_3_3_1 = v_9_7_3_3_3_1 := by decide
+
+def j_9_7_3_3_3 : Job := ⟨[9, 7, 3, 3, 3], 3, 18, 39⟩
+
+def v_9_7_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_7_3_3_3@@
+
+theorem correct_9_7_3_3_3 : value j_9_7_3_3_3 = v_9_7_3_3_3 := by
+  rw [value_children j_9_7_3_3_3 (by decide) (by decide)]
+  have hc : children j_9_7_3_3_3 = [j_9_7_3_3_3_3, j_9_7_3_3_3_2, j_9_7_3_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_3_3_3_3, correct_9_7_3_3_3_2, correct_9_7_3_3_3_1]
+  all_goals decide
+
+def j_9_7_3_3_2 : Job := ⟨[9, 7, 3, 3, 2], 2, 19, 39⟩
+
+def v_9_7_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_7_3_3_2@@
+
+theorem correct_9_7_3_3_2 : value j_9_7_3_3_2 = v_9_7_3_3_2 := by decide
+
+def j_9_7_3_3_1 : Job := ⟨[9, 7, 3, 3, 1], 1, 20, 39⟩
+
+def v_9_7_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_7_3_3_1@@
+
+theorem correct_9_7_3_3_1 : value j_9_7_3_3_1 = v_9_7_3_3_1 := by decide
+
+def j_9_7_3_3 : Job := ⟨[9, 7, 3, 3], 3, 21, 40⟩
+
+def v_9_7_3_3 : List ℕ := @@GENERATED_RHS:v_9_7_3_3@@
+
+theorem correct_9_7_3_3 : value j_9_7_3_3 = v_9_7_3_3 := by
+  rw [value_children j_9_7_3_3 (by decide) (by decide)]
+  have hc : children j_9_7_3_3 = [j_9_7_3_3_3, j_9_7_3_3_2, j_9_7_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_3_3_3, correct_9_7_3_3_2, correct_9_7_3_3_1]
+  all_goals decide
+
+def j_9_7_3_2 : Job := ⟨[9, 7, 3, 2], 2, 22, 40⟩
+
+def v_9_7_3_2 : List ℕ := @@GENERATED_RHS:v_9_7_3_2@@
+
+theorem correct_9_7_3_2 : value j_9_7_3_2 = v_9_7_3_2 := by decide
+
+def j_9_7_3_1 : Job := ⟨[9, 7, 3, 1], 1, 23, 40⟩
+
+def v_9_7_3_1 : List ℕ := @@GENERATED_RHS:v_9_7_3_1@@
+
+theorem correct_9_7_3_1 : value j_9_7_3_1 = v_9_7_3_1 := by decide
+
+def j_9_7_3 : Job := ⟨[9, 7, 3], 3, 24, 41⟩
+
+def v_9_7_3 : List ℕ := @@GENERATED_RHS:v_9_7_3@@
+
+theorem correct_9_7_3 : value j_9_7_3 = v_9_7_3 := by
+  rw [value_children j_9_7_3 (by decide) (by decide)]
+  have hc : children j_9_7_3 = [j_9_7_3_3, j_9_7_3_2, j_9_7_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_3_3, correct_9_7_3_2, correct_9_7_3_1]
+  all_goals decide
+
+def j_9_7_2 : Job := ⟨[9, 7, 2], 2, 25, 41⟩
+
+def v_9_7_2 : List ℕ := @@GENERATED_RHS:v_9_7_2@@
+
+theorem correct_9_7_2 : value j_9_7_2 = v_9_7_2 := by decide
+
+def j_9_7_1 : Job := ⟨[9, 7, 1], 1, 26, 41⟩
+
+def v_9_7_1 : List ℕ := @@GENERATED_RHS:v_9_7_1@@
+
+theorem correct_9_7_1 : value j_9_7_1 = v_9_7_1 := by decide
+
+def j_9_7 : Job := ⟨[9, 7], 7, 27, 42⟩
+
+def v_9_7 : List ℕ := @@GENERATED_RHS:v_9_7@@
+
+theorem correct_9_7 : value j_9_7 = v_9_7 := by
+  rw [value_children j_9_7 (by decide) (by decide)]
+  have hc : children j_9_7 = [j_9_7_7, j_9_7_6, j_9_7_5, j_9_7_4, j_9_7_3, j_9_7_2, j_9_7_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_7_7, correct_9_7_6, correct_9_7_5, correct_9_7_4, correct_9_7_3, correct_9_7_2, correct_9_7_1]
+  all_goals decide
+
+def j_9_6_6_6_6 : Job := ⟨[9, 6, 6, 6, 6], 6, 10, 39⟩
+
+def v_9_6_6_6_6 : List ℕ := List.replicate 904 0
+
+theorem correct_9_6_6_6_6 : value j_9_6_6_6_6 = v_9_6_6_6_6 := by decide
+
+def j_9_6_6_6_5 : Job := ⟨[9, 6, 6, 6, 5], 5, 11, 39⟩
+
+def v_9_6_6_6_5 : List ℕ := List.replicate 904 0
+
+theorem correct_9_6_6_6_5 : value j_9_6_6_6_5 = v_9_6_6_6_5 := by decide
+
+def j_9_6_6_6_4_4 : Job := ⟨[9, 6, 6, 6, 4, 4], 4, 8, 38⟩
+
+def v_9_6_6_6_4_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_6_6_6_4_4 : value j_9_6_6_6_4_4 = v_9_6_6_6_4_4 := by decide
+
+def j_9_6_6_6_4_3 : Job := ⟨[9, 6, 6, 6, 4, 3], 3, 9, 38⟩
+
+def v_9_6_6_6_4_3 : List ℕ := List.replicate 904 0
+
+theorem correct_9_6_6_6_4_3 : value j_9_6_6_6_4_3 = v_9_6_6_6_4_3 := by decide
+
+def j_9_6_6_6_4_2 : Job := ⟨[9, 6, 6, 6, 4, 2], 2, 10, 38⟩
+
+def v_9_6_6_6_4_2 : List ℕ := List.replicate 904 0
+
+theorem correct_9_6_6_6_4_2 : value j_9_6_6_6_4_2 = v_9_6_6_6_4_2 := by decide
+
+def j_9_6_6_6_4_1 : Job := ⟨[9, 6, 6, 6, 4, 1], 1, 11, 38⟩
+
+def v_9_6_6_6_4_1 : List ℕ := @@GENERATED_RHS:v_9_6_6_6_4_1@@
+
+theorem correct_9_6_6_6_4_1 : value j_9_6_6_6_4_1 = v_9_6_6_6_4_1 := by decide
+
+def j_9_6_6_6_4 : Job := ⟨[9, 6, 6, 6, 4], 4, 12, 39⟩
+
+def v_9_6_6_6_4 : List ℕ := @@GENERATED_RHS:v_9_6_6_6_4@@
+
+theorem correct_9_6_6_6_4 : value j_9_6_6_6_4 = v_9_6_6_6_4 := by
+  rw [value_children j_9_6_6_6_4 (by decide) (by decide)]
+  have hc : children j_9_6_6_6_4 = [j_9_6_6_6_4_4, j_9_6_6_6_4_3, j_9_6_6_6_4_2, j_9_6_6_6_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_6_6_4_4, correct_9_6_6_6_4_3, correct_9_6_6_6_4_2, correct_9_6_6_6_4_1]
+  all_goals decide
+
+def j_9_6_6_6_3 : Job := ⟨[9, 6, 6, 6, 3], 3, 13, 39⟩
+
+def v_9_6_6_6_3 : List ℕ := @@GENERATED_RHS:v_9_6_6_6_3@@
+
+theorem correct_9_6_6_6_3 : value j_9_6_6_6_3 = v_9_6_6_6_3 := by decide
+
+def j_9_6_6_6_2 : Job := ⟨[9, 6, 6, 6, 2], 2, 14, 39⟩
+
+def v_9_6_6_6_2 : List ℕ := @@GENERATED_RHS:v_9_6_6_6_2@@
+
+theorem correct_9_6_6_6_2 : value j_9_6_6_6_2 = v_9_6_6_6_2 := by decide
+
+def j_9_6_6_6_1 : Job := ⟨[9, 6, 6, 6, 1], 1, 15, 39⟩
+
+def v_9_6_6_6_1 : List ℕ := @@GENERATED_RHS:v_9_6_6_6_1@@
+
+theorem correct_9_6_6_6_1 : value j_9_6_6_6_1 = v_9_6_6_6_1 := by decide
+
+def j_9_6_6_6 : Job := ⟨[9, 6, 6, 6], 6, 16, 40⟩
+
+def v_9_6_6_6 : List ℕ := @@GENERATED_RHS:v_9_6_6_6@@
+
+theorem correct_9_6_6_6 : value j_9_6_6_6 = v_9_6_6_6 := by
+  rw [value_children j_9_6_6_6 (by decide) (by decide)]
+  have hc : children j_9_6_6_6 = [j_9_6_6_6_6, j_9_6_6_6_5, j_9_6_6_6_4, j_9_6_6_6_3, j_9_6_6_6_2, j_9_6_6_6_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_6_6_6, correct_9_6_6_6_5, correct_9_6_6_6_4, correct_9_6_6_6_3, correct_9_6_6_6_2, correct_9_6_6_6_1]
+  all_goals decide
+
+def j_9_6_6_5_5_5 : Job := ⟨[9, 6, 6, 5, 5, 5], 5, 7, 38⟩
+
+def v_9_6_6_5_5_5 : List ℕ := List.replicate 904 0
+
+theorem correct_9_6_6_5_5_5 : value j_9_6_6_5_5_5 = v_9_6_6_5_5_5 := by decide
+
+def j_9_6_6_5_5_4 : Job := ⟨[9, 6, 6, 5, 5, 4], 4, 8, 38⟩
+
+def v_9_6_6_5_5_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_6_6_5_5_4 : value j_9_6_6_5_5_4 = v_9_6_6_5_5_4 := by decide
+
+def j_9_6_6_5_5_3 : Job := ⟨[9, 6, 6, 5, 5, 3], 3, 9, 38⟩
+
+def v_9_6_6_5_5_3 : List ℕ := List.replicate 904 0
+
+theorem correct_9_6_6_5_5_3 : value j_9_6_6_5_5_3 = v_9_6_6_5_5_3 := by decide
+
+def j_9_6_6_5_5_2 : Job := ⟨[9, 6, 6, 5, 5, 2], 2, 10, 38⟩
+
+def v_9_6_6_5_5_2 : List ℕ := List.replicate 904 0
+
+theorem correct_9_6_6_5_5_2 : value j_9_6_6_5_5_2 = v_9_6_6_5_5_2 := by decide
+
+def j_9_6_6_5_5_1 : Job := ⟨[9, 6, 6, 5, 5, 1], 1, 11, 38⟩
+
+def v_9_6_6_5_5_1 : List ℕ := @@GENERATED_RHS:v_9_6_6_5_5_1@@
+
+theorem correct_9_6_6_5_5_1 : value j_9_6_6_5_5_1 = v_9_6_6_5_5_1 := by decide
+
+def j_9_6_6_5_5 : Job := ⟨[9, 6, 6, 5, 5], 5, 12, 39⟩
+
+def v_9_6_6_5_5 : List ℕ := @@GENERATED_RHS:v_9_6_6_5_5@@
+
+theorem correct_9_6_6_5_5 : value j_9_6_6_5_5 = v_9_6_6_5_5 := by
+  rw [value_children j_9_6_6_5_5 (by decide) (by decide)]
+  have hc : children j_9_6_6_5_5 = [j_9_6_6_5_5_5, j_9_6_6_5_5_4, j_9_6_6_5_5_3, j_9_6_6_5_5_2, j_9_6_6_5_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_6_5_5_5, correct_9_6_6_5_5_4, correct_9_6_6_5_5_3, correct_9_6_6_5_5_2, correct_9_6_6_5_5_1]
+  all_goals decide
+
+def j_9_6_6_5_4_4 : Job := ⟨[9, 6, 6, 5, 4, 4], 4, 9, 38⟩
+
+def v_9_6_6_5_4_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_6_6_5_4_4 : value j_9_6_6_5_4_4 = v_9_6_6_5_4_4 := by decide
+
+def j_9_6_6_5_4_3 : Job := ⟨[9, 6, 6, 5, 4, 3], 3, 10, 38⟩
+
+def v_9_6_6_5_4_3 : List ℕ := List.replicate 904 0
+
+theorem correct_9_6_6_5_4_3 : value j_9_6_6_5_4_3 = v_9_6_6_5_4_3 := by decide
+
+def j_9_6_6_5_4_2 : Job := ⟨[9, 6, 6, 5, 4, 2], 2, 11, 38⟩
+
+def v_9_6_6_5_4_2 : List ℕ := @@GENERATED_RHS:v_9_6_6_5_4_2@@
+
+theorem correct_9_6_6_5_4_2 : value j_9_6_6_5_4_2 = v_9_6_6_5_4_2 := by decide
+
+def j_9_6_6_5_4_1 : Job := ⟨[9, 6, 6, 5, 4, 1], 1, 12, 38⟩
+
+def v_9_6_6_5_4_1 : List ℕ := @@GENERATED_RHS:v_9_6_6_5_4_1@@
+
+theorem correct_9_6_6_5_4_1 : value j_9_6_6_5_4_1 = v_9_6_6_5_4_1 := by decide
+
+def j_9_6_6_5_4 : Job := ⟨[9, 6, 6, 5, 4], 4, 13, 39⟩
+
+def v_9_6_6_5_4 : List ℕ := @@GENERATED_RHS:v_9_6_6_5_4@@
+
+theorem correct_9_6_6_5_4 : value j_9_6_6_5_4 = v_9_6_6_5_4 := by
+  rw [value_children j_9_6_6_5_4 (by decide) (by decide)]
+  have hc : children j_9_6_6_5_4 = [j_9_6_6_5_4_4, j_9_6_6_5_4_3, j_9_6_6_5_4_2, j_9_6_6_5_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_6_5_4_4, correct_9_6_6_5_4_3, correct_9_6_6_5_4_2, correct_9_6_6_5_4_1]
+  all_goals decide
+
+def j_9_6_6_5_3 : Job := ⟨[9, 6, 6, 5, 3], 3, 14, 39⟩
+
+def v_9_6_6_5_3 : List ℕ := @@GENERATED_RHS:v_9_6_6_5_3@@
+
+theorem correct_9_6_6_5_3 : value j_9_6_6_5_3 = v_9_6_6_5_3 := by decide
+
+def j_9_6_6_5_2 : Job := ⟨[9, 6, 6, 5, 2], 2, 15, 39⟩
+
+def v_9_6_6_5_2 : List ℕ := @@GENERATED_RHS:v_9_6_6_5_2@@
+
+theorem correct_9_6_6_5_2 : value j_9_6_6_5_2 = v_9_6_6_5_2 := by decide
+
+def j_9_6_6_5_1 : Job := ⟨[9, 6, 6, 5, 1], 1, 16, 39⟩
+
+def v_9_6_6_5_1 : List ℕ := @@GENERATED_RHS:v_9_6_6_5_1@@
+
+theorem correct_9_6_6_5_1 : value j_9_6_6_5_1 = v_9_6_6_5_1 := by decide
+
+def j_9_6_6_5 : Job := ⟨[9, 6, 6, 5], 5, 17, 40⟩
+
+def v_9_6_6_5 : List ℕ := @@GENERATED_RHS:v_9_6_6_5@@
+
+theorem correct_9_6_6_5 : value j_9_6_6_5 = v_9_6_6_5 := by
+  rw [value_children j_9_6_6_5 (by decide) (by decide)]
+  have hc : children j_9_6_6_5 = [j_9_6_6_5_5, j_9_6_6_5_4, j_9_6_6_5_3, j_9_6_6_5_2, j_9_6_6_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_6_5_5, correct_9_6_6_5_4, correct_9_6_6_5_3, correct_9_6_6_5_2, correct_9_6_6_5_1]
+  all_goals decide
+
+def j_9_6_6_4_4_4 : Job := ⟨[9, 6, 6, 4, 4, 4], 4, 10, 38⟩
+
+def v_9_6_6_4_4_4 : List ℕ := @@GENERATED_RHS:v_9_6_6_4_4_4@@
+
+theorem correct_9_6_6_4_4_4 : value j_9_6_6_4_4_4 = v_9_6_6_4_4_4 := by decide
+
+def j_9_6_6_4_4_3 : Job := ⟨[9, 6, 6, 4, 4, 3], 3, 11, 38⟩
+
+def v_9_6_6_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_6_6_4_4_3@@
+
+theorem correct_9_6_6_4_4_3 : value j_9_6_6_4_4_3 = v_9_6_6_4_4_3 := by decide
+
+def j_9_6_6_4_4_2 : Job := ⟨[9, 6, 6, 4, 4, 2], 2, 12, 38⟩
+
+def v_9_6_6_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_6_6_4_4_2@@
+
+theorem correct_9_6_6_4_4_2 : value j_9_6_6_4_4_2 = v_9_6_6_4_4_2 := by decide
+
+def j_9_6_6_4_4_1 : Job := ⟨[9, 6, 6, 4, 4, 1], 1, 13, 38⟩
+
+def v_9_6_6_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_6_6_4_4_1@@
+
+theorem correct_9_6_6_4_4_1 : value j_9_6_6_4_4_1 = v_9_6_6_4_4_1 := by decide
+
+def j_9_6_6_4_4 : Job := ⟨[9, 6, 6, 4, 4], 4, 14, 39⟩
+
+def v_9_6_6_4_4 : List ℕ := @@GENERATED_RHS:v_9_6_6_4_4@@
+
+theorem correct_9_6_6_4_4 : value j_9_6_6_4_4 = v_9_6_6_4_4 := by
+  rw [value_children j_9_6_6_4_4 (by decide) (by decide)]
+  have hc : children j_9_6_6_4_4 = [j_9_6_6_4_4_4, j_9_6_6_4_4_3, j_9_6_6_4_4_2, j_9_6_6_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_6_4_4_4, correct_9_6_6_4_4_3, correct_9_6_6_4_4_2, correct_9_6_6_4_4_1]
+  all_goals decide
+
+def j_9_6_6_4_3 : Job := ⟨[9, 6, 6, 4, 3], 3, 15, 39⟩
+
+def v_9_6_6_4_3 : List ℕ := @@GENERATED_RHS:v_9_6_6_4_3@@
+
+theorem correct_9_6_6_4_3 : value j_9_6_6_4_3 = v_9_6_6_4_3 := by decide
+
+def j_9_6_6_4_2 : Job := ⟨[9, 6, 6, 4, 2], 2, 16, 39⟩
+
+def v_9_6_6_4_2 : List ℕ := @@GENERATED_RHS:v_9_6_6_4_2@@
+
+theorem correct_9_6_6_4_2 : value j_9_6_6_4_2 = v_9_6_6_4_2 := by decide
+
+def j_9_6_6_4_1 : Job := ⟨[9, 6, 6, 4, 1], 1, 17, 39⟩
+
+def v_9_6_6_4_1 : List ℕ := @@GENERATED_RHS:v_9_6_6_4_1@@
+
+theorem correct_9_6_6_4_1 : value j_9_6_6_4_1 = v_9_6_6_4_1 := by decide
+
+def j_9_6_6_4 : Job := ⟨[9, 6, 6, 4], 4, 18, 40⟩
+
+def v_9_6_6_4 : List ℕ := @@GENERATED_RHS:v_9_6_6_4@@
+
+theorem correct_9_6_6_4 : value j_9_6_6_4 = v_9_6_6_4 := by
+  rw [value_children j_9_6_6_4 (by decide) (by decide)]
+  have hc : children j_9_6_6_4 = [j_9_6_6_4_4, j_9_6_6_4_3, j_9_6_6_4_2, j_9_6_6_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_6_4_4, correct_9_6_6_4_3, correct_9_6_6_4_2, correct_9_6_6_4_1]
+  all_goals decide
+
+def j_9_6_6_3_3 : Job := ⟨[9, 6, 6, 3, 3], 3, 16, 39⟩
+
+def v_9_6_6_3_3 : List ℕ := @@GENERATED_RHS:v_9_6_6_3_3@@
+
+theorem correct_9_6_6_3_3 : value j_9_6_6_3_3 = v_9_6_6_3_3 := by decide
+
+def j_9_6_6_3_2 : Job := ⟨[9, 6, 6, 3, 2], 2, 17, 39⟩
+
+def v_9_6_6_3_2 : List ℕ := @@GENERATED_RHS:v_9_6_6_3_2@@
+
+theorem correct_9_6_6_3_2 : value j_9_6_6_3_2 = v_9_6_6_3_2 := by decide
+
+def j_9_6_6_3_1 : Job := ⟨[9, 6, 6, 3, 1], 1, 18, 39⟩
+
+def v_9_6_6_3_1 : List ℕ := @@GENERATED_RHS:v_9_6_6_3_1@@
+
+theorem correct_9_6_6_3_1 : value j_9_6_6_3_1 = v_9_6_6_3_1 := by decide
+
+def j_9_6_6_3 : Job := ⟨[9, 6, 6, 3], 3, 19, 40⟩
+
+def v_9_6_6_3 : List ℕ := @@GENERATED_RHS:v_9_6_6_3@@
+
+theorem correct_9_6_6_3 : value j_9_6_6_3 = v_9_6_6_3 := by
+  rw [value_children j_9_6_6_3 (by decide) (by decide)]
+  have hc : children j_9_6_6_3 = [j_9_6_6_3_3, j_9_6_6_3_2, j_9_6_6_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_6_3_3, correct_9_6_6_3_2, correct_9_6_6_3_1]
+  all_goals decide
+
+def j_9_6_6_2 : Job := ⟨[9, 6, 6, 2], 2, 20, 40⟩
+
+def v_9_6_6_2 : List ℕ := @@GENERATED_RHS:v_9_6_6_2@@
+
+theorem correct_9_6_6_2 : value j_9_6_6_2 = v_9_6_6_2 := by decide
+
+def j_9_6_6_1 : Job := ⟨[9, 6, 6, 1], 1, 21, 40⟩
+
+def v_9_6_6_1 : List ℕ := @@GENERATED_RHS:v_9_6_6_1@@
+
+theorem correct_9_6_6_1 : value j_9_6_6_1 = v_9_6_6_1 := by decide
+
+def j_9_6_6 : Job := ⟨[9, 6, 6], 6, 22, 41⟩
+
+def v_9_6_6 : List ℕ := @@GENERATED_RHS:v_9_6_6@@
+
+theorem correct_9_6_6 : value j_9_6_6 = v_9_6_6 := by
+  rw [value_children j_9_6_6 (by decide) (by decide)]
+  have hc : children j_9_6_6 = [j_9_6_6_6, j_9_6_6_5, j_9_6_6_4, j_9_6_6_3, j_9_6_6_2, j_9_6_6_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_6_6, correct_9_6_6_5, correct_9_6_6_4, correct_9_6_6_3, correct_9_6_6_2, correct_9_6_6_1]
+  all_goals decide
+
+def j_9_6_5_5_5_5 : Job := ⟨[9, 6, 5, 5, 5, 5], 5, 8, 38⟩
+
+def v_9_6_5_5_5_5 : List ℕ := List.replicate 904 0
+
+theorem correct_9_6_5_5_5_5 : value j_9_6_5_5_5_5 = v_9_6_5_5_5_5 := by decide
+
+def j_9_6_5_5_5_4 : Job := ⟨[9, 6, 5, 5, 5, 4], 4, 9, 38⟩
+
+def v_9_6_5_5_5_4 : List ℕ := List.replicate 904 0
+
+theorem correct_9_6_5_5_5_4 : value j_9_6_5_5_5_4 = v_9_6_5_5_5_4 := by decide
+
+def j_9_6_5_5_5_3 : Job := ⟨[9, 6, 5, 5, 5, 3], 3, 10, 38⟩
+
+def v_9_6_5_5_5_3 : List ℕ := @@GENERATED_RHS:v_9_6_5_5_5_3@@
+
+theorem correct_9_6_5_5_5_3 : value j_9_6_5_5_5_3 = v_9_6_5_5_5_3 := by decide
+
+def j_9_6_5_5_5_2 : Job := ⟨[9, 6, 5, 5, 5, 2], 2, 11, 38⟩
+
+def v_9_6_5_5_5_2 : List ℕ := @@GENERATED_RHS:v_9_6_5_5_5_2@@
+
+theorem correct_9_6_5_5_5_2 : value j_9_6_5_5_5_2 = v_9_6_5_5_5_2 := by decide
+
+def j_9_6_5_5_5_1 : Job := ⟨[9, 6, 5, 5, 5, 1], 1, 12, 38⟩
+
+def v_9_6_5_5_5_1 : List ℕ := @@GENERATED_RHS:v_9_6_5_5_5_1@@
+
+theorem correct_9_6_5_5_5_1 : value j_9_6_5_5_5_1 = v_9_6_5_5_5_1 := by decide
+
+def j_9_6_5_5_5 : Job := ⟨[9, 6, 5, 5, 5], 5, 13, 39⟩
+
+def v_9_6_5_5_5 : List ℕ := @@GENERATED_RHS:v_9_6_5_5_5@@
+
+theorem correct_9_6_5_5_5 : value j_9_6_5_5_5 = v_9_6_5_5_5 := by
+  rw [value_children j_9_6_5_5_5 (by decide) (by decide)]
+  have hc : children j_9_6_5_5_5 = [j_9_6_5_5_5_5, j_9_6_5_5_5_4, j_9_6_5_5_5_3, j_9_6_5_5_5_2, j_9_6_5_5_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_5_5_5_5, correct_9_6_5_5_5_4, correct_9_6_5_5_5_3, correct_9_6_5_5_5_2, correct_9_6_5_5_5_1]
+  all_goals decide
+
+def j_9_6_5_5_4_4 : Job := ⟨[9, 6, 5, 5, 4, 4], 4, 10, 38⟩
+
+def v_9_6_5_5_4_4 : List ℕ := @@GENERATED_RHS:v_9_6_5_5_4_4@@
+
+theorem correct_9_6_5_5_4_4 : value j_9_6_5_5_4_4 = v_9_6_5_5_4_4 := by decide
+
+def j_9_6_5_5_4_3 : Job := ⟨[9, 6, 5, 5, 4, 3], 3, 11, 38⟩
+
+def v_9_6_5_5_4_3 : List ℕ := @@GENERATED_RHS:v_9_6_5_5_4_3@@
+
+theorem correct_9_6_5_5_4_3 : value j_9_6_5_5_4_3 = v_9_6_5_5_4_3 := by decide
+
+def j_9_6_5_5_4_2 : Job := ⟨[9, 6, 5, 5, 4, 2], 2, 12, 38⟩
+
+def v_9_6_5_5_4_2 : List ℕ := @@GENERATED_RHS:v_9_6_5_5_4_2@@
+
+theorem correct_9_6_5_5_4_2 : value j_9_6_5_5_4_2 = v_9_6_5_5_4_2 := by decide
+
+def j_9_6_5_5_4_1 : Job := ⟨[9, 6, 5, 5, 4, 1], 1, 13, 38⟩
+
+def v_9_6_5_5_4_1 : List ℕ := @@GENERATED_RHS:v_9_6_5_5_4_1@@
+
+theorem correct_9_6_5_5_4_1 : value j_9_6_5_5_4_1 = v_9_6_5_5_4_1 := by decide
+
+def j_9_6_5_5_4 : Job := ⟨[9, 6, 5, 5, 4], 4, 14, 39⟩
+
+def v_9_6_5_5_4 : List ℕ := @@GENERATED_RHS:v_9_6_5_5_4@@
+
+theorem correct_9_6_5_5_4 : value j_9_6_5_5_4 = v_9_6_5_5_4 := by
+  rw [value_children j_9_6_5_5_4 (by decide) (by decide)]
+  have hc : children j_9_6_5_5_4 = [j_9_6_5_5_4_4, j_9_6_5_5_4_3, j_9_6_5_5_4_2, j_9_6_5_5_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_5_5_4_4, correct_9_6_5_5_4_3, correct_9_6_5_5_4_2, correct_9_6_5_5_4_1]
+  all_goals decide
+
+def j_9_6_5_5_3 : Job := ⟨[9, 6, 5, 5, 3], 3, 15, 39⟩
+
+def v_9_6_5_5_3 : List ℕ := @@GENERATED_RHS:v_9_6_5_5_3@@
+
+theorem correct_9_6_5_5_3 : value j_9_6_5_5_3 = v_9_6_5_5_3 := by decide
+
+def j_9_6_5_5_2 : Job := ⟨[9, 6, 5, 5, 2], 2, 16, 39⟩
+
+def v_9_6_5_5_2 : List ℕ := @@GENERATED_RHS:v_9_6_5_5_2@@
+
+theorem correct_9_6_5_5_2 : value j_9_6_5_5_2 = v_9_6_5_5_2 := by decide
+
+def j_9_6_5_5_1 : Job := ⟨[9, 6, 5, 5, 1], 1, 17, 39⟩
+
+def v_9_6_5_5_1 : List ℕ := @@GENERATED_RHS:v_9_6_5_5_1@@
+
+theorem correct_9_6_5_5_1 : value j_9_6_5_5_1 = v_9_6_5_5_1 := by decide
+
+def j_9_6_5_5 : Job := ⟨[9, 6, 5, 5], 5, 18, 40⟩
+
+def v_9_6_5_5 : List ℕ := @@GENERATED_RHS:v_9_6_5_5@@
+
+theorem correct_9_6_5_5 : value j_9_6_5_5 = v_9_6_5_5 := by
+  rw [value_children j_9_6_5_5 (by decide) (by decide)]
+  have hc : children j_9_6_5_5 = [j_9_6_5_5_5, j_9_6_5_5_4, j_9_6_5_5_3, j_9_6_5_5_2, j_9_6_5_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_5_5_5, correct_9_6_5_5_4, correct_9_6_5_5_3, correct_9_6_5_5_2, correct_9_6_5_5_1]
+  all_goals decide
+
+def j_9_6_5_4_4_4 : Job := ⟨[9, 6, 5, 4, 4, 4], 4, 11, 38⟩
+
+def v_9_6_5_4_4_4 : List ℕ := @@GENERATED_RHS:v_9_6_5_4_4_4@@
+
+theorem correct_9_6_5_4_4_4 : value j_9_6_5_4_4_4 = v_9_6_5_4_4_4 := by decide
+
+def j_9_6_5_4_4_3 : Job := ⟨[9, 6, 5, 4, 4, 3], 3, 12, 38⟩
+
+def v_9_6_5_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_6_5_4_4_3@@
+
+theorem correct_9_6_5_4_4_3 : value j_9_6_5_4_4_3 = v_9_6_5_4_4_3 := by decide
+
+def j_9_6_5_4_4_2 : Job := ⟨[9, 6, 5, 4, 4, 2], 2, 13, 38⟩
+
+def v_9_6_5_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_6_5_4_4_2@@
+
+theorem correct_9_6_5_4_4_2 : value j_9_6_5_4_4_2 = v_9_6_5_4_4_2 := by decide
+
+def j_9_6_5_4_4_1 : Job := ⟨[9, 6, 5, 4, 4, 1], 1, 14, 38⟩
+
+def v_9_6_5_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_6_5_4_4_1@@
+
+theorem correct_9_6_5_4_4_1 : value j_9_6_5_4_4_1 = v_9_6_5_4_4_1 := by decide
+
+def j_9_6_5_4_4 : Job := ⟨[9, 6, 5, 4, 4], 4, 15, 39⟩
+
+def v_9_6_5_4_4 : List ℕ := @@GENERATED_RHS:v_9_6_5_4_4@@
+
+theorem correct_9_6_5_4_4 : value j_9_6_5_4_4 = v_9_6_5_4_4 := by
+  rw [value_children j_9_6_5_4_4 (by decide) (by decide)]
+  have hc : children j_9_6_5_4_4 = [j_9_6_5_4_4_4, j_9_6_5_4_4_3, j_9_6_5_4_4_2, j_9_6_5_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_5_4_4_4, correct_9_6_5_4_4_3, correct_9_6_5_4_4_2, correct_9_6_5_4_4_1]
+  all_goals decide
+
+def j_9_6_5_4_3 : Job := ⟨[9, 6, 5, 4, 3], 3, 16, 39⟩
+
+def v_9_6_5_4_3 : List ℕ := @@GENERATED_RHS:v_9_6_5_4_3@@
+
+theorem correct_9_6_5_4_3 : value j_9_6_5_4_3 = v_9_6_5_4_3 := by decide
+
+def j_9_6_5_4_2 : Job := ⟨[9, 6, 5, 4, 2], 2, 17, 39⟩
+
+def v_9_6_5_4_2 : List ℕ := @@GENERATED_RHS:v_9_6_5_4_2@@
+
+theorem correct_9_6_5_4_2 : value j_9_6_5_4_2 = v_9_6_5_4_2 := by decide
+
+def j_9_6_5_4_1 : Job := ⟨[9, 6, 5, 4, 1], 1, 18, 39⟩
+
+def v_9_6_5_4_1 : List ℕ := @@GENERATED_RHS:v_9_6_5_4_1@@
+
+theorem correct_9_6_5_4_1 : value j_9_6_5_4_1 = v_9_6_5_4_1 := by decide
+
+def j_9_6_5_4 : Job := ⟨[9, 6, 5, 4], 4, 19, 40⟩
+
+def v_9_6_5_4 : List ℕ := @@GENERATED_RHS:v_9_6_5_4@@
+
+theorem correct_9_6_5_4 : value j_9_6_5_4 = v_9_6_5_4 := by
+  rw [value_children j_9_6_5_4 (by decide) (by decide)]
+  have hc : children j_9_6_5_4 = [j_9_6_5_4_4, j_9_6_5_4_3, j_9_6_5_4_2, j_9_6_5_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_5_4_4, correct_9_6_5_4_3, correct_9_6_5_4_2, correct_9_6_5_4_1]
+  all_goals decide
+
+def j_9_6_5_3_3_3 : Job := ⟨[9, 6, 5, 3, 3, 3], 3, 14, 38⟩
+
+def v_9_6_5_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_6_5_3_3_3@@
+
+theorem correct_9_6_5_3_3_3 : value j_9_6_5_3_3_3 = v_9_6_5_3_3_3 := by decide
+
+def j_9_6_5_3_3_2 : Job := ⟨[9, 6, 5, 3, 3, 2], 2, 15, 38⟩
+
+def v_9_6_5_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_6_5_3_3_2@@
+
+theorem correct_9_6_5_3_3_2 : value j_9_6_5_3_3_2 = v_9_6_5_3_3_2 := by decide
+
+def j_9_6_5_3_3_1 : Job := ⟨[9, 6, 5, 3, 3, 1], 1, 16, 38⟩
+
+def v_9_6_5_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_6_5_3_3_1@@
+
+theorem correct_9_6_5_3_3_1 : value j_9_6_5_3_3_1 = v_9_6_5_3_3_1 := by decide
+
+def j_9_6_5_3_3 : Job := ⟨[9, 6, 5, 3, 3], 3, 17, 39⟩
+
+def v_9_6_5_3_3 : List ℕ := @@GENERATED_RHS:v_9_6_5_3_3@@
+
+theorem correct_9_6_5_3_3 : value j_9_6_5_3_3 = v_9_6_5_3_3 := by
+  rw [value_children j_9_6_5_3_3 (by decide) (by decide)]
+  have hc : children j_9_6_5_3_3 = [j_9_6_5_3_3_3, j_9_6_5_3_3_2, j_9_6_5_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_5_3_3_3, correct_9_6_5_3_3_2, correct_9_6_5_3_3_1]
+  all_goals decide
+
+def j_9_6_5_3_2 : Job := ⟨[9, 6, 5, 3, 2], 2, 18, 39⟩
+
+def v_9_6_5_3_2 : List ℕ := @@GENERATED_RHS:v_9_6_5_3_2@@
+
+theorem correct_9_6_5_3_2 : value j_9_6_5_3_2 = v_9_6_5_3_2 := by decide
+
+def j_9_6_5_3_1 : Job := ⟨[9, 6, 5, 3, 1], 1, 19, 39⟩
+
+def v_9_6_5_3_1 : List ℕ := @@GENERATED_RHS:v_9_6_5_3_1@@
+
+theorem correct_9_6_5_3_1 : value j_9_6_5_3_1 = v_9_6_5_3_1 := by decide
+
+def j_9_6_5_3 : Job := ⟨[9, 6, 5, 3], 3, 20, 40⟩
+
+def v_9_6_5_3 : List ℕ := @@GENERATED_RHS:v_9_6_5_3@@
+
+theorem correct_9_6_5_3 : value j_9_6_5_3 = v_9_6_5_3 := by
+  rw [value_children j_9_6_5_3 (by decide) (by decide)]
+  have hc : children j_9_6_5_3 = [j_9_6_5_3_3, j_9_6_5_3_2, j_9_6_5_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_5_3_3, correct_9_6_5_3_2, correct_9_6_5_3_1]
+  all_goals decide
+
+def j_9_6_5_2 : Job := ⟨[9, 6, 5, 2], 2, 21, 40⟩
+
+def v_9_6_5_2 : List ℕ := @@GENERATED_RHS:v_9_6_5_2@@
+
+theorem correct_9_6_5_2 : value j_9_6_5_2 = v_9_6_5_2 := by decide
+
+def j_9_6_5_1 : Job := ⟨[9, 6, 5, 1], 1, 22, 40⟩
+
+def v_9_6_5_1 : List ℕ := @@GENERATED_RHS:v_9_6_5_1@@
+
+theorem correct_9_6_5_1 : value j_9_6_5_1 = v_9_6_5_1 := by decide
+
+def j_9_6_5 : Job := ⟨[9, 6, 5], 5, 23, 41⟩
+
+def v_9_6_5 : List ℕ := @@GENERATED_RHS:v_9_6_5@@
+
+theorem correct_9_6_5 : value j_9_6_5 = v_9_6_5 := by
+  rw [value_children j_9_6_5 (by decide) (by decide)]
+  have hc : children j_9_6_5 = [j_9_6_5_5, j_9_6_5_4, j_9_6_5_3, j_9_6_5_2, j_9_6_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_5_5, correct_9_6_5_4, correct_9_6_5_3, correct_9_6_5_2, correct_9_6_5_1]
+  all_goals decide
+
+def j_9_6_4_4_4_4_4 : Job := ⟨[9, 6, 4, 4, 4, 4, 4], 4, 8, 37⟩
+
+def v_9_6_4_4_4_4_4 : List ℕ := @@GENERATED_RHS:v_9_6_4_4_4_4_4@@
+
+theorem correct_9_6_4_4_4_4_4 : value j_9_6_4_4_4_4_4 = v_9_6_4_4_4_4_4 := by decide
+
+def j_9_6_4_4_4_4_3 : Job := ⟨[9, 6, 4, 4, 4, 4, 3], 3, 9, 37⟩
+
+def v_9_6_4_4_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_6_4_4_4_4_3@@
+
+theorem correct_9_6_4_4_4_4_3 : value j_9_6_4_4_4_4_3 = v_9_6_4_4_4_4_3 := by decide
+
+def j_9_6_4_4_4_4_2 : Job := ⟨[9, 6, 4, 4, 4, 4, 2], 2, 10, 37⟩
+
+def v_9_6_4_4_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_6_4_4_4_4_2@@
+
+theorem correct_9_6_4_4_4_4_2 : value j_9_6_4_4_4_4_2 = v_9_6_4_4_4_4_2 := by decide
+
+def j_9_6_4_4_4_4_1 : Job := ⟨[9, 6, 4, 4, 4, 4, 1], 1, 11, 37⟩
+
+def v_9_6_4_4_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_6_4_4_4_4_1@@
+
+theorem correct_9_6_4_4_4_4_1 : value j_9_6_4_4_4_4_1 = v_9_6_4_4_4_4_1 := by decide
+
+def j_9_6_4_4_4_4 : Job := ⟨[9, 6, 4, 4, 4, 4], 4, 12, 38⟩
+
+def v_9_6_4_4_4_4 : List ℕ := @@GENERATED_RHS:v_9_6_4_4_4_4@@
+
+theorem correct_9_6_4_4_4_4 : value j_9_6_4_4_4_4 = v_9_6_4_4_4_4 := by
+  rw [value_children j_9_6_4_4_4_4 (by decide) (by decide)]
+  have hc : children j_9_6_4_4_4_4 = [j_9_6_4_4_4_4_4, j_9_6_4_4_4_4_3, j_9_6_4_4_4_4_2, j_9_6_4_4_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_4_4_4_4_4, correct_9_6_4_4_4_4_3, correct_9_6_4_4_4_4_2, correct_9_6_4_4_4_4_1]
+  all_goals decide
+
+def j_9_6_4_4_4_3 : Job := ⟨[9, 6, 4, 4, 4, 3], 3, 13, 38⟩
+
+def v_9_6_4_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_6_4_4_4_3@@
+
+theorem correct_9_6_4_4_4_3 : value j_9_6_4_4_4_3 = v_9_6_4_4_4_3 := by decide
+
+def j_9_6_4_4_4_2 : Job := ⟨[9, 6, 4, 4, 4, 2], 2, 14, 38⟩
+
+def v_9_6_4_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_6_4_4_4_2@@
+
+theorem correct_9_6_4_4_4_2 : value j_9_6_4_4_4_2 = v_9_6_4_4_4_2 := by decide
+
+def j_9_6_4_4_4_1 : Job := ⟨[9, 6, 4, 4, 4, 1], 1, 15, 38⟩
+
+def v_9_6_4_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_6_4_4_4_1@@
+
+theorem correct_9_6_4_4_4_1 : value j_9_6_4_4_4_1 = v_9_6_4_4_4_1 := by decide
+
+def j_9_6_4_4_4 : Job := ⟨[9, 6, 4, 4, 4], 4, 16, 39⟩
+
+def v_9_6_4_4_4 : List ℕ := @@GENERATED_RHS:v_9_6_4_4_4@@
+
+theorem correct_9_6_4_4_4 : value j_9_6_4_4_4 = v_9_6_4_4_4 := by
+  rw [value_children j_9_6_4_4_4 (by decide) (by decide)]
+  have hc : children j_9_6_4_4_4 = [j_9_6_4_4_4_4, j_9_6_4_4_4_3, j_9_6_4_4_4_2, j_9_6_4_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_4_4_4_4, correct_9_6_4_4_4_3, correct_9_6_4_4_4_2, correct_9_6_4_4_4_1]
+  all_goals decide
+
+def j_9_6_4_4_3_3 : Job := ⟨[9, 6, 4, 4, 3, 3], 3, 14, 38⟩
+
+def v_9_6_4_4_3_3 : List ℕ := @@GENERATED_RHS:v_9_6_4_4_3_3@@
+
+theorem correct_9_6_4_4_3_3 : value j_9_6_4_4_3_3 = v_9_6_4_4_3_3 := by decide
+
+def j_9_6_4_4_3_2 : Job := ⟨[9, 6, 4, 4, 3, 2], 2, 15, 38⟩
+
+def v_9_6_4_4_3_2 : List ℕ := @@GENERATED_RHS:v_9_6_4_4_3_2@@
+
+theorem correct_9_6_4_4_3_2 : value j_9_6_4_4_3_2 = v_9_6_4_4_3_2 := by decide
+
+def j_9_6_4_4_3_1 : Job := ⟨[9, 6, 4, 4, 3, 1], 1, 16, 38⟩
+
+def v_9_6_4_4_3_1 : List ℕ := @@GENERATED_RHS:v_9_6_4_4_3_1@@
+
+theorem correct_9_6_4_4_3_1 : value j_9_6_4_4_3_1 = v_9_6_4_4_3_1 := by decide
+
+def j_9_6_4_4_3 : Job := ⟨[9, 6, 4, 4, 3], 3, 17, 39⟩
+
+def v_9_6_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_6_4_4_3@@
+
+theorem correct_9_6_4_4_3 : value j_9_6_4_4_3 = v_9_6_4_4_3 := by
+  rw [value_children j_9_6_4_4_3 (by decide) (by decide)]
+  have hc : children j_9_6_4_4_3 = [j_9_6_4_4_3_3, j_9_6_4_4_3_2, j_9_6_4_4_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_4_4_3_3, correct_9_6_4_4_3_2, correct_9_6_4_4_3_1]
+  all_goals decide
+
+def j_9_6_4_4_2 : Job := ⟨[9, 6, 4, 4, 2], 2, 18, 39⟩
+
+def v_9_6_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_6_4_4_2@@
+
+theorem correct_9_6_4_4_2 : value j_9_6_4_4_2 = v_9_6_4_4_2 := by decide
+
+def j_9_6_4_4_1 : Job := ⟨[9, 6, 4, 4, 1], 1, 19, 39⟩
+
+def v_9_6_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_6_4_4_1@@
+
+theorem correct_9_6_4_4_1 : value j_9_6_4_4_1 = v_9_6_4_4_1 := by decide
+
+def j_9_6_4_4 : Job := ⟨[9, 6, 4, 4], 4, 20, 40⟩
+
+def v_9_6_4_4 : List ℕ := @@GENERATED_RHS:v_9_6_4_4@@
+
+theorem correct_9_6_4_4 : value j_9_6_4_4 = v_9_6_4_4 := by
+  rw [value_children j_9_6_4_4 (by decide) (by decide)]
+  have hc : children j_9_6_4_4 = [j_9_6_4_4_4, j_9_6_4_4_3, j_9_6_4_4_2, j_9_6_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_4_4_4, correct_9_6_4_4_3, correct_9_6_4_4_2, correct_9_6_4_4_1]
+  all_goals decide
+
+def j_9_6_4_3_3_3 : Job := ⟨[9, 6, 4, 3, 3, 3], 3, 15, 38⟩
+
+def v_9_6_4_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_6_4_3_3_3@@
+
+theorem correct_9_6_4_3_3_3 : value j_9_6_4_3_3_3 = v_9_6_4_3_3_3 := by decide
+
+def j_9_6_4_3_3_2 : Job := ⟨[9, 6, 4, 3, 3, 2], 2, 16, 38⟩
+
+def v_9_6_4_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_6_4_3_3_2@@
+
+theorem correct_9_6_4_3_3_2 : value j_9_6_4_3_3_2 = v_9_6_4_3_3_2 := by decide
+
+def j_9_6_4_3_3_1 : Job := ⟨[9, 6, 4, 3, 3, 1], 1, 17, 38⟩
+
+def v_9_6_4_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_6_4_3_3_1@@
+
+theorem correct_9_6_4_3_3_1 : value j_9_6_4_3_3_1 = v_9_6_4_3_3_1 := by decide
+
+def j_9_6_4_3_3 : Job := ⟨[9, 6, 4, 3, 3], 3, 18, 39⟩
+
+def v_9_6_4_3_3 : List ℕ := @@GENERATED_RHS:v_9_6_4_3_3@@
+
+theorem correct_9_6_4_3_3 : value j_9_6_4_3_3 = v_9_6_4_3_3 := by
+  rw [value_children j_9_6_4_3_3 (by decide) (by decide)]
+  have hc : children j_9_6_4_3_3 = [j_9_6_4_3_3_3, j_9_6_4_3_3_2, j_9_6_4_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_4_3_3_3, correct_9_6_4_3_3_2, correct_9_6_4_3_3_1]
+  all_goals decide
+
+def j_9_6_4_3_2 : Job := ⟨[9, 6, 4, 3, 2], 2, 19, 39⟩
+
+def v_9_6_4_3_2 : List ℕ := @@GENERATED_RHS:v_9_6_4_3_2@@
+
+theorem correct_9_6_4_3_2 : value j_9_6_4_3_2 = v_9_6_4_3_2 := by decide
+
+def j_9_6_4_3_1 : Job := ⟨[9, 6, 4, 3, 1], 1, 20, 39⟩
+
+def v_9_6_4_3_1 : List ℕ := @@GENERATED_RHS:v_9_6_4_3_1@@
+
+theorem correct_9_6_4_3_1 : value j_9_6_4_3_1 = v_9_6_4_3_1 := by decide
+
+def j_9_6_4_3 : Job := ⟨[9, 6, 4, 3], 3, 21, 40⟩
+
+def v_9_6_4_3 : List ℕ := @@GENERATED_RHS:v_9_6_4_3@@
+
+theorem correct_9_6_4_3 : value j_9_6_4_3 = v_9_6_4_3 := by
+  rw [value_children j_9_6_4_3 (by decide) (by decide)]
+  have hc : children j_9_6_4_3 = [j_9_6_4_3_3, j_9_6_4_3_2, j_9_6_4_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_4_3_3, correct_9_6_4_3_2, correct_9_6_4_3_1]
+  all_goals decide
+
+def j_9_6_4_2 : Job := ⟨[9, 6, 4, 2], 2, 22, 40⟩
+
+def v_9_6_4_2 : List ℕ := @@GENERATED_RHS:v_9_6_4_2@@
+
+theorem correct_9_6_4_2 : value j_9_6_4_2 = v_9_6_4_2 := by decide
+
+def j_9_6_4_1 : Job := ⟨[9, 6, 4, 1], 1, 23, 40⟩
+
+def v_9_6_4_1 : List ℕ := @@GENERATED_RHS:v_9_6_4_1@@
+
+theorem correct_9_6_4_1 : value j_9_6_4_1 = v_9_6_4_1 := by decide
+
+def j_9_6_4 : Job := ⟨[9, 6, 4], 4, 24, 41⟩
+
+def v_9_6_4 : List ℕ := @@GENERATED_RHS:v_9_6_4@@
+
+theorem correct_9_6_4 : value j_9_6_4 = v_9_6_4 := by
+  rw [value_children j_9_6_4 (by decide) (by decide)]
+  have hc : children j_9_6_4 = [j_9_6_4_4, j_9_6_4_3, j_9_6_4_2, j_9_6_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_4_4, correct_9_6_4_3, correct_9_6_4_2, correct_9_6_4_1]
+  all_goals decide
+
+def j_9_6_3_3_3_3 : Job := ⟨[9, 6, 3, 3, 3, 3], 3, 16, 38⟩
+
+def v_9_6_3_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_6_3_3_3_3@@
+
+theorem correct_9_6_3_3_3_3 : value j_9_6_3_3_3_3 = v_9_6_3_3_3_3 := by decide
+
+def j_9_6_3_3_3_2 : Job := ⟨[9, 6, 3, 3, 3, 2], 2, 17, 38⟩
+
+def v_9_6_3_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_6_3_3_3_2@@
+
+theorem correct_9_6_3_3_3_2 : value j_9_6_3_3_3_2 = v_9_6_3_3_3_2 := by decide
+
+def j_9_6_3_3_3_1 : Job := ⟨[9, 6, 3, 3, 3, 1], 1, 18, 38⟩
+
+def v_9_6_3_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_6_3_3_3_1@@
+
+theorem correct_9_6_3_3_3_1 : value j_9_6_3_3_3_1 = v_9_6_3_3_3_1 := by decide
+
+def j_9_6_3_3_3 : Job := ⟨[9, 6, 3, 3, 3], 3, 19, 39⟩
+
+def v_9_6_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_6_3_3_3@@
+
+theorem correct_9_6_3_3_3 : value j_9_6_3_3_3 = v_9_6_3_3_3 := by
+  rw [value_children j_9_6_3_3_3 (by decide) (by decide)]
+  have hc : children j_9_6_3_3_3 = [j_9_6_3_3_3_3, j_9_6_3_3_3_2, j_9_6_3_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_3_3_3_3, correct_9_6_3_3_3_2, correct_9_6_3_3_3_1]
+  all_goals decide
+
+def j_9_6_3_3_2 : Job := ⟨[9, 6, 3, 3, 2], 2, 20, 39⟩
+
+def v_9_6_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_6_3_3_2@@
+
+theorem correct_9_6_3_3_2 : value j_9_6_3_3_2 = v_9_6_3_3_2 := by decide
+
+def j_9_6_3_3_1 : Job := ⟨[9, 6, 3, 3, 1], 1, 21, 39⟩
+
+def v_9_6_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_6_3_3_1@@
+
+theorem correct_9_6_3_3_1 : value j_9_6_3_3_1 = v_9_6_3_3_1 := by decide
+
+def j_9_6_3_3 : Job := ⟨[9, 6, 3, 3], 3, 22, 40⟩
+
+def v_9_6_3_3 : List ℕ := @@GENERATED_RHS:v_9_6_3_3@@
+
+theorem correct_9_6_3_3 : value j_9_6_3_3 = v_9_6_3_3 := by
+  rw [value_children j_9_6_3_3 (by decide) (by decide)]
+  have hc : children j_9_6_3_3 = [j_9_6_3_3_3, j_9_6_3_3_2, j_9_6_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_3_3_3, correct_9_6_3_3_2, correct_9_6_3_3_1]
+  all_goals decide
+
+def j_9_6_3_2 : Job := ⟨[9, 6, 3, 2], 2, 23, 40⟩
+
+def v_9_6_3_2 : List ℕ := @@GENERATED_RHS:v_9_6_3_2@@
+
+theorem correct_9_6_3_2 : value j_9_6_3_2 = v_9_6_3_2 := by decide
+
+def j_9_6_3_1 : Job := ⟨[9, 6, 3, 1], 1, 24, 40⟩
+
+def v_9_6_3_1 : List ℕ := @@GENERATED_RHS:v_9_6_3_1@@
+
+theorem correct_9_6_3_1 : value j_9_6_3_1 = v_9_6_3_1 := by decide
+
+def j_9_6_3 : Job := ⟨[9, 6, 3], 3, 25, 41⟩
+
+def v_9_6_3 : List ℕ := @@GENERATED_RHS:v_9_6_3@@
+
+theorem correct_9_6_3 : value j_9_6_3 = v_9_6_3 := by
+  rw [value_children j_9_6_3 (by decide) (by decide)]
+  have hc : children j_9_6_3 = [j_9_6_3_3, j_9_6_3_2, j_9_6_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_3_3, correct_9_6_3_2, correct_9_6_3_1]
+  all_goals decide
+
+def j_9_6_2 : Job := ⟨[9, 6, 2], 2, 26, 41⟩
+
+def v_9_6_2 : List ℕ := @@GENERATED_RHS:v_9_6_2@@
+
+theorem correct_9_6_2 : value j_9_6_2 = v_9_6_2 := by decide
+
+def j_9_6_1 : Job := ⟨[9, 6, 1], 1, 27, 41⟩
+
+def v_9_6_1 : List ℕ := @@GENERATED_RHS:v_9_6_1@@
+
+theorem correct_9_6_1 : value j_9_6_1 = v_9_6_1 := by decide
+
+def j_9_6 : Job := ⟨[9, 6], 6, 28, 42⟩
+
+def v_9_6 : List ℕ := @@GENERATED_RHS:v_9_6@@
+
+theorem correct_9_6 : value j_9_6 = v_9_6 := by
+  rw [value_children j_9_6 (by decide) (by decide)]
+  have hc : children j_9_6 = [j_9_6_6, j_9_6_5, j_9_6_4, j_9_6_3, j_9_6_2, j_9_6_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_6_6, correct_9_6_5, correct_9_6_4, correct_9_6_3, correct_9_6_2, correct_9_6_1]
+  all_goals decide
+
+def j_9_5_5_5_5_5 : Job := ⟨[9, 5, 5, 5, 5, 5], 5, 9, 38⟩
+
+def v_9_5_5_5_5_5 : List ℕ := List.replicate 904 0
+
+theorem correct_9_5_5_5_5_5 : value j_9_5_5_5_5_5 = v_9_5_5_5_5_5 := by decide
+
+def j_9_5_5_5_5_4 : Job := ⟨[9, 5, 5, 5, 5, 4], 4, 10, 38⟩
+
+def v_9_5_5_5_5_4 : List ℕ := @@GENERATED_RHS:v_9_5_5_5_5_4@@
+
+theorem correct_9_5_5_5_5_4 : value j_9_5_5_5_5_4 = v_9_5_5_5_5_4 := by decide
+
+def j_9_5_5_5_5_3 : Job := ⟨[9, 5, 5, 5, 5, 3], 3, 11, 38⟩
+
+def v_9_5_5_5_5_3 : List ℕ := @@GENERATED_RHS:v_9_5_5_5_5_3@@
+
+theorem correct_9_5_5_5_5_3 : value j_9_5_5_5_5_3 = v_9_5_5_5_5_3 := by decide
+
+def j_9_5_5_5_5_2 : Job := ⟨[9, 5, 5, 5, 5, 2], 2, 12, 38⟩
+
+def v_9_5_5_5_5_2 : List ℕ := @@GENERATED_RHS:v_9_5_5_5_5_2@@
+
+theorem correct_9_5_5_5_5_2 : value j_9_5_5_5_5_2 = v_9_5_5_5_5_2 := by decide
+
+def j_9_5_5_5_5_1 : Job := ⟨[9, 5, 5, 5, 5, 1], 1, 13, 38⟩
+
+def v_9_5_5_5_5_1 : List ℕ := @@GENERATED_RHS:v_9_5_5_5_5_1@@
+
+theorem correct_9_5_5_5_5_1 : value j_9_5_5_5_5_1 = v_9_5_5_5_5_1 := by decide
+
+def j_9_5_5_5_5 : Job := ⟨[9, 5, 5, 5, 5], 5, 14, 39⟩
+
+def v_9_5_5_5_5 : List ℕ := @@GENERATED_RHS:v_9_5_5_5_5@@
+
+theorem correct_9_5_5_5_5 : value j_9_5_5_5_5 = v_9_5_5_5_5 := by
+  rw [value_children j_9_5_5_5_5 (by decide) (by decide)]
+  have hc : children j_9_5_5_5_5 = [j_9_5_5_5_5_5, j_9_5_5_5_5_4, j_9_5_5_5_5_3, j_9_5_5_5_5_2, j_9_5_5_5_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_5_5_5_5, correct_9_5_5_5_5_4, correct_9_5_5_5_5_3, correct_9_5_5_5_5_2, correct_9_5_5_5_5_1]
+  all_goals decide
+
+def j_9_5_5_5_4_4 : Job := ⟨[9, 5, 5, 5, 4, 4], 4, 11, 38⟩
+
+def v_9_5_5_5_4_4 : List ℕ := @@GENERATED_RHS:v_9_5_5_5_4_4@@
+
+theorem correct_9_5_5_5_4_4 : value j_9_5_5_5_4_4 = v_9_5_5_5_4_4 := by decide
+
+def j_9_5_5_5_4_3 : Job := ⟨[9, 5, 5, 5, 4, 3], 3, 12, 38⟩
+
+def v_9_5_5_5_4_3 : List ℕ := @@GENERATED_RHS:v_9_5_5_5_4_3@@
+
+theorem correct_9_5_5_5_4_3 : value j_9_5_5_5_4_3 = v_9_5_5_5_4_3 := by decide
+
+def j_9_5_5_5_4_2 : Job := ⟨[9, 5, 5, 5, 4, 2], 2, 13, 38⟩
+
+def v_9_5_5_5_4_2 : List ℕ := @@GENERATED_RHS:v_9_5_5_5_4_2@@
+
+theorem correct_9_5_5_5_4_2 : value j_9_5_5_5_4_2 = v_9_5_5_5_4_2 := by decide
+
+def j_9_5_5_5_4_1 : Job := ⟨[9, 5, 5, 5, 4, 1], 1, 14, 38⟩
+
+def v_9_5_5_5_4_1 : List ℕ := @@GENERATED_RHS:v_9_5_5_5_4_1@@
+
+theorem correct_9_5_5_5_4_1 : value j_9_5_5_5_4_1 = v_9_5_5_5_4_1 := by decide
+
+def j_9_5_5_5_4 : Job := ⟨[9, 5, 5, 5, 4], 4, 15, 39⟩
+
+def v_9_5_5_5_4 : List ℕ := @@GENERATED_RHS:v_9_5_5_5_4@@
+
+theorem correct_9_5_5_5_4 : value j_9_5_5_5_4 = v_9_5_5_5_4 := by
+  rw [value_children j_9_5_5_5_4 (by decide) (by decide)]
+  have hc : children j_9_5_5_5_4 = [j_9_5_5_5_4_4, j_9_5_5_5_4_3, j_9_5_5_5_4_2, j_9_5_5_5_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_5_5_4_4, correct_9_5_5_5_4_3, correct_9_5_5_5_4_2, correct_9_5_5_5_4_1]
+  all_goals decide
+
+def j_9_5_5_5_3 : Job := ⟨[9, 5, 5, 5, 3], 3, 16, 39⟩
+
+def v_9_5_5_5_3 : List ℕ := @@GENERATED_RHS:v_9_5_5_5_3@@
+
+theorem correct_9_5_5_5_3 : value j_9_5_5_5_3 = v_9_5_5_5_3 := by decide
+
+def j_9_5_5_5_2 : Job := ⟨[9, 5, 5, 5, 2], 2, 17, 39⟩
+
+def v_9_5_5_5_2 : List ℕ := @@GENERATED_RHS:v_9_5_5_5_2@@
+
+theorem correct_9_5_5_5_2 : value j_9_5_5_5_2 = v_9_5_5_5_2 := by decide
+
+def j_9_5_5_5_1 : Job := ⟨[9, 5, 5, 5, 1], 1, 18, 39⟩
+
+def v_9_5_5_5_1 : List ℕ := @@GENERATED_RHS:v_9_5_5_5_1@@
+
+theorem correct_9_5_5_5_1 : value j_9_5_5_5_1 = v_9_5_5_5_1 := by decide
+
+def j_9_5_5_5 : Job := ⟨[9, 5, 5, 5], 5, 19, 40⟩
+
+def v_9_5_5_5 : List ℕ := @@GENERATED_RHS:v_9_5_5_5@@
+
+theorem correct_9_5_5_5 : value j_9_5_5_5 = v_9_5_5_5 := by
+  rw [value_children j_9_5_5_5 (by decide) (by decide)]
+  have hc : children j_9_5_5_5 = [j_9_5_5_5_5, j_9_5_5_5_4, j_9_5_5_5_3, j_9_5_5_5_2, j_9_5_5_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_5_5_5, correct_9_5_5_5_4, correct_9_5_5_5_3, correct_9_5_5_5_2, correct_9_5_5_5_1]
+  all_goals decide
+
+def j_9_5_5_4_4_4_4 : Job := ⟨[9, 5, 5, 4, 4, 4, 4], 4, 8, 37⟩
+
+def v_9_5_5_4_4_4_4 : List ℕ := @@GENERATED_RHS:v_9_5_5_4_4_4_4@@
+
+theorem correct_9_5_5_4_4_4_4 : value j_9_5_5_4_4_4_4 = v_9_5_5_4_4_4_4 := by decide
+
+def j_9_5_5_4_4_4_3 : Job := ⟨[9, 5, 5, 4, 4, 4, 3], 3, 9, 37⟩
+
+def v_9_5_5_4_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_5_5_4_4_4_3@@
+
+theorem correct_9_5_5_4_4_4_3 : value j_9_5_5_4_4_4_3 = v_9_5_5_4_4_4_3 := by decide
+
+def j_9_5_5_4_4_4_2 : Job := ⟨[9, 5, 5, 4, 4, 4, 2], 2, 10, 37⟩
+
+def v_9_5_5_4_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_5_5_4_4_4_2@@
+
+theorem correct_9_5_5_4_4_4_2 : value j_9_5_5_4_4_4_2 = v_9_5_5_4_4_4_2 := by decide
+
+def j_9_5_5_4_4_4_1 : Job := ⟨[9, 5, 5, 4, 4, 4, 1], 1, 11, 37⟩
+
+def v_9_5_5_4_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_5_5_4_4_4_1@@
+
+theorem correct_9_5_5_4_4_4_1 : value j_9_5_5_4_4_4_1 = v_9_5_5_4_4_4_1 := by decide
+
+def j_9_5_5_4_4_4 : Job := ⟨[9, 5, 5, 4, 4, 4], 4, 12, 38⟩
+
+def v_9_5_5_4_4_4 : List ℕ := @@GENERATED_RHS:v_9_5_5_4_4_4@@
+
+theorem correct_9_5_5_4_4_4 : value j_9_5_5_4_4_4 = v_9_5_5_4_4_4 := by
+  rw [value_children j_9_5_5_4_4_4 (by decide) (by decide)]
+  have hc : children j_9_5_5_4_4_4 = [j_9_5_5_4_4_4_4, j_9_5_5_4_4_4_3, j_9_5_5_4_4_4_2, j_9_5_5_4_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_5_4_4_4_4, correct_9_5_5_4_4_4_3, correct_9_5_5_4_4_4_2, correct_9_5_5_4_4_4_1]
+  all_goals decide
+
+def j_9_5_5_4_4_3 : Job := ⟨[9, 5, 5, 4, 4, 3], 3, 13, 38⟩
+
+def v_9_5_5_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_5_5_4_4_3@@
+
+theorem correct_9_5_5_4_4_3 : value j_9_5_5_4_4_3 = v_9_5_5_4_4_3 := by decide
+
+def j_9_5_5_4_4_2 : Job := ⟨[9, 5, 5, 4, 4, 2], 2, 14, 38⟩
+
+def v_9_5_5_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_5_5_4_4_2@@
+
+theorem correct_9_5_5_4_4_2 : value j_9_5_5_4_4_2 = v_9_5_5_4_4_2 := by decide
+
+def j_9_5_5_4_4_1 : Job := ⟨[9, 5, 5, 4, 4, 1], 1, 15, 38⟩
+
+def v_9_5_5_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_5_5_4_4_1@@
+
+theorem correct_9_5_5_4_4_1 : value j_9_5_5_4_4_1 = v_9_5_5_4_4_1 := by decide
+
+def j_9_5_5_4_4 : Job := ⟨[9, 5, 5, 4, 4], 4, 16, 39⟩
+
+def v_9_5_5_4_4 : List ℕ := @@GENERATED_RHS:v_9_5_5_4_4@@
+
+theorem correct_9_5_5_4_4 : value j_9_5_5_4_4 = v_9_5_5_4_4 := by
+  rw [value_children j_9_5_5_4_4 (by decide) (by decide)]
+  have hc : children j_9_5_5_4_4 = [j_9_5_5_4_4_4, j_9_5_5_4_4_3, j_9_5_5_4_4_2, j_9_5_5_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_5_4_4_4, correct_9_5_5_4_4_3, correct_9_5_5_4_4_2, correct_9_5_5_4_4_1]
+  all_goals decide
+
+def j_9_5_5_4_3_3 : Job := ⟨[9, 5, 5, 4, 3, 3], 3, 14, 38⟩
+
+def v_9_5_5_4_3_3 : List ℕ := @@GENERATED_RHS:v_9_5_5_4_3_3@@
+
+theorem correct_9_5_5_4_3_3 : value j_9_5_5_4_3_3 = v_9_5_5_4_3_3 := by decide
+
+def j_9_5_5_4_3_2 : Job := ⟨[9, 5, 5, 4, 3, 2], 2, 15, 38⟩
+
+def v_9_5_5_4_3_2 : List ℕ := @@GENERATED_RHS:v_9_5_5_4_3_2@@
+
+theorem correct_9_5_5_4_3_2 : value j_9_5_5_4_3_2 = v_9_5_5_4_3_2 := by decide
+
+def j_9_5_5_4_3_1 : Job := ⟨[9, 5, 5, 4, 3, 1], 1, 16, 38⟩
+
+def v_9_5_5_4_3_1 : List ℕ := @@GENERATED_RHS:v_9_5_5_4_3_1@@
+
+theorem correct_9_5_5_4_3_1 : value j_9_5_5_4_3_1 = v_9_5_5_4_3_1 := by decide
+
+def j_9_5_5_4_3 : Job := ⟨[9, 5, 5, 4, 3], 3, 17, 39⟩
+
+def v_9_5_5_4_3 : List ℕ := @@GENERATED_RHS:v_9_5_5_4_3@@
+
+theorem correct_9_5_5_4_3 : value j_9_5_5_4_3 = v_9_5_5_4_3 := by
+  rw [value_children j_9_5_5_4_3 (by decide) (by decide)]
+  have hc : children j_9_5_5_4_3 = [j_9_5_5_4_3_3, j_9_5_5_4_3_2, j_9_5_5_4_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_5_4_3_3, correct_9_5_5_4_3_2, correct_9_5_5_4_3_1]
+  all_goals decide
+
+def j_9_5_5_4_2 : Job := ⟨[9, 5, 5, 4, 2], 2, 18, 39⟩
+
+def v_9_5_5_4_2 : List ℕ := @@GENERATED_RHS:v_9_5_5_4_2@@
+
+theorem correct_9_5_5_4_2 : value j_9_5_5_4_2 = v_9_5_5_4_2 := by decide
+
+def j_9_5_5_4_1 : Job := ⟨[9, 5, 5, 4, 1], 1, 19, 39⟩
+
+def v_9_5_5_4_1 : List ℕ := @@GENERATED_RHS:v_9_5_5_4_1@@
+
+theorem correct_9_5_5_4_1 : value j_9_5_5_4_1 = v_9_5_5_4_1 := by decide
+
+def j_9_5_5_4 : Job := ⟨[9, 5, 5, 4], 4, 20, 40⟩
+
+def v_9_5_5_4 : List ℕ := @@GENERATED_RHS:v_9_5_5_4@@
+
+theorem correct_9_5_5_4 : value j_9_5_5_4 = v_9_5_5_4 := by
+  rw [value_children j_9_5_5_4 (by decide) (by decide)]
+  have hc : children j_9_5_5_4 = [j_9_5_5_4_4, j_9_5_5_4_3, j_9_5_5_4_2, j_9_5_5_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_5_4_4, correct_9_5_5_4_3, correct_9_5_5_4_2, correct_9_5_5_4_1]
+  all_goals decide
+
+def j_9_5_5_3_3_3 : Job := ⟨[9, 5, 5, 3, 3, 3], 3, 15, 38⟩
+
+def v_9_5_5_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_5_5_3_3_3@@
+
+theorem correct_9_5_5_3_3_3 : value j_9_5_5_3_3_3 = v_9_5_5_3_3_3 := by decide
+
+def j_9_5_5_3_3_2 : Job := ⟨[9, 5, 5, 3, 3, 2], 2, 16, 38⟩
+
+def v_9_5_5_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_5_5_3_3_2@@
+
+theorem correct_9_5_5_3_3_2 : value j_9_5_5_3_3_2 = v_9_5_5_3_3_2 := by decide
+
+def j_9_5_5_3_3_1 : Job := ⟨[9, 5, 5, 3, 3, 1], 1, 17, 38⟩
+
+def v_9_5_5_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_5_5_3_3_1@@
+
+theorem correct_9_5_5_3_3_1 : value j_9_5_5_3_3_1 = v_9_5_5_3_3_1 := by decide
+
+def j_9_5_5_3_3 : Job := ⟨[9, 5, 5, 3, 3], 3, 18, 39⟩
+
+def v_9_5_5_3_3 : List ℕ := @@GENERATED_RHS:v_9_5_5_3_3@@
+
+theorem correct_9_5_5_3_3 : value j_9_5_5_3_3 = v_9_5_5_3_3 := by
+  rw [value_children j_9_5_5_3_3 (by decide) (by decide)]
+  have hc : children j_9_5_5_3_3 = [j_9_5_5_3_3_3, j_9_5_5_3_3_2, j_9_5_5_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_5_3_3_3, correct_9_5_5_3_3_2, correct_9_5_5_3_3_1]
+  all_goals decide
+
+def j_9_5_5_3_2 : Job := ⟨[9, 5, 5, 3, 2], 2, 19, 39⟩
+
+def v_9_5_5_3_2 : List ℕ := @@GENERATED_RHS:v_9_5_5_3_2@@
+
+theorem correct_9_5_5_3_2 : value j_9_5_5_3_2 = v_9_5_5_3_2 := by decide
+
+def j_9_5_5_3_1 : Job := ⟨[9, 5, 5, 3, 1], 1, 20, 39⟩
+
+def v_9_5_5_3_1 : List ℕ := @@GENERATED_RHS:v_9_5_5_3_1@@
+
+theorem correct_9_5_5_3_1 : value j_9_5_5_3_1 = v_9_5_5_3_1 := by decide
+
+def j_9_5_5_3 : Job := ⟨[9, 5, 5, 3], 3, 21, 40⟩
+
+def v_9_5_5_3 : List ℕ := @@GENERATED_RHS:v_9_5_5_3@@
+
+theorem correct_9_5_5_3 : value j_9_5_5_3 = v_9_5_5_3 := by
+  rw [value_children j_9_5_5_3 (by decide) (by decide)]
+  have hc : children j_9_5_5_3 = [j_9_5_5_3_3, j_9_5_5_3_2, j_9_5_5_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_5_3_3, correct_9_5_5_3_2, correct_9_5_5_3_1]
+  all_goals decide
+
+def j_9_5_5_2 : Job := ⟨[9, 5, 5, 2], 2, 22, 40⟩
+
+def v_9_5_5_2 : List ℕ := @@GENERATED_RHS:v_9_5_5_2@@
+
+theorem correct_9_5_5_2 : value j_9_5_5_2 = v_9_5_5_2 := by decide
+
+def j_9_5_5_1 : Job := ⟨[9, 5, 5, 1], 1, 23, 40⟩
+
+def v_9_5_5_1 : List ℕ := @@GENERATED_RHS:v_9_5_5_1@@
+
+theorem correct_9_5_5_1 : value j_9_5_5_1 = v_9_5_5_1 := by decide
+
+def j_9_5_5 : Job := ⟨[9, 5, 5], 5, 24, 41⟩
+
+def v_9_5_5 : List ℕ := @@GENERATED_RHS:v_9_5_5@@
+
+theorem correct_9_5_5 : value j_9_5_5 = v_9_5_5 := by
+  rw [value_children j_9_5_5 (by decide) (by decide)]
+  have hc : children j_9_5_5 = [j_9_5_5_5, j_9_5_5_4, j_9_5_5_3, j_9_5_5_2, j_9_5_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_5_5, correct_9_5_5_4, correct_9_5_5_3, correct_9_5_5_2, correct_9_5_5_1]
+  all_goals decide
+
+def j_9_5_4_4_4_4_4 : Job := ⟨[9, 5, 4, 4, 4, 4, 4], 4, 9, 37⟩
+
+def v_9_5_4_4_4_4_4 : List ℕ := @@GENERATED_RHS:v_9_5_4_4_4_4_4@@
+
+theorem correct_9_5_4_4_4_4_4 : value j_9_5_4_4_4_4_4 = v_9_5_4_4_4_4_4 := by decide
+
+def j_9_5_4_4_4_4_3 : Job := ⟨[9, 5, 4, 4, 4, 4, 3], 3, 10, 37⟩
+
+def v_9_5_4_4_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_5_4_4_4_4_3@@
+
+theorem correct_9_5_4_4_4_4_3 : value j_9_5_4_4_4_4_3 = v_9_5_4_4_4_4_3 := by decide
+
+def j_9_5_4_4_4_4_2 : Job := ⟨[9, 5, 4, 4, 4, 4, 2], 2, 11, 37⟩
+
+def v_9_5_4_4_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_5_4_4_4_4_2@@
+
+theorem correct_9_5_4_4_4_4_2 : value j_9_5_4_4_4_4_2 = v_9_5_4_4_4_4_2 := by decide
+
+def j_9_5_4_4_4_4_1 : Job := ⟨[9, 5, 4, 4, 4, 4, 1], 1, 12, 37⟩
+
+def v_9_5_4_4_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_5_4_4_4_4_1@@
+
+theorem correct_9_5_4_4_4_4_1 : value j_9_5_4_4_4_4_1 = v_9_5_4_4_4_4_1 := by decide
+
+def j_9_5_4_4_4_4 : Job := ⟨[9, 5, 4, 4, 4, 4], 4, 13, 38⟩
+
+def v_9_5_4_4_4_4 : List ℕ := @@GENERATED_RHS:v_9_5_4_4_4_4@@
+
+theorem correct_9_5_4_4_4_4 : value j_9_5_4_4_4_4 = v_9_5_4_4_4_4 := by
+  rw [value_children j_9_5_4_4_4_4 (by decide) (by decide)]
+  have hc : children j_9_5_4_4_4_4 = [j_9_5_4_4_4_4_4, j_9_5_4_4_4_4_3, j_9_5_4_4_4_4_2, j_9_5_4_4_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_4_4_4_4_4, correct_9_5_4_4_4_4_3, correct_9_5_4_4_4_4_2, correct_9_5_4_4_4_4_1]
+  all_goals decide
+
+def j_9_5_4_4_4_3 : Job := ⟨[9, 5, 4, 4, 4, 3], 3, 14, 38⟩
+
+def v_9_5_4_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_5_4_4_4_3@@
+
+theorem correct_9_5_4_4_4_3 : value j_9_5_4_4_4_3 = v_9_5_4_4_4_3 := by decide
+
+def j_9_5_4_4_4_2 : Job := ⟨[9, 5, 4, 4, 4, 2], 2, 15, 38⟩
+
+def v_9_5_4_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_5_4_4_4_2@@
+
+theorem correct_9_5_4_4_4_2 : value j_9_5_4_4_4_2 = v_9_5_4_4_4_2 := by decide
+
+def j_9_5_4_4_4_1 : Job := ⟨[9, 5, 4, 4, 4, 1], 1, 16, 38⟩
+
+def v_9_5_4_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_5_4_4_4_1@@
+
+theorem correct_9_5_4_4_4_1 : value j_9_5_4_4_4_1 = v_9_5_4_4_4_1 := by decide
+
+def j_9_5_4_4_4 : Job := ⟨[9, 5, 4, 4, 4], 4, 17, 39⟩
+
+def v_9_5_4_4_4 : List ℕ := @@GENERATED_RHS:v_9_5_4_4_4@@
+
+theorem correct_9_5_4_4_4 : value j_9_5_4_4_4 = v_9_5_4_4_4 := by
+  rw [value_children j_9_5_4_4_4 (by decide) (by decide)]
+  have hc : children j_9_5_4_4_4 = [j_9_5_4_4_4_4, j_9_5_4_4_4_3, j_9_5_4_4_4_2, j_9_5_4_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_4_4_4_4, correct_9_5_4_4_4_3, correct_9_5_4_4_4_2, correct_9_5_4_4_4_1]
+  all_goals decide
+
+def j_9_5_4_4_3_3 : Job := ⟨[9, 5, 4, 4, 3, 3], 3, 15, 38⟩
+
+def v_9_5_4_4_3_3 : List ℕ := @@GENERATED_RHS:v_9_5_4_4_3_3@@
+
+theorem correct_9_5_4_4_3_3 : value j_9_5_4_4_3_3 = v_9_5_4_4_3_3 := by decide
+
+def j_9_5_4_4_3_2 : Job := ⟨[9, 5, 4, 4, 3, 2], 2, 16, 38⟩
+
+def v_9_5_4_4_3_2 : List ℕ := @@GENERATED_RHS:v_9_5_4_4_3_2@@
+
+theorem correct_9_5_4_4_3_2 : value j_9_5_4_4_3_2 = v_9_5_4_4_3_2 := by decide
+
+def j_9_5_4_4_3_1 : Job := ⟨[9, 5, 4, 4, 3, 1], 1, 17, 38⟩
+
+def v_9_5_4_4_3_1 : List ℕ := @@GENERATED_RHS:v_9_5_4_4_3_1@@
+
+theorem correct_9_5_4_4_3_1 : value j_9_5_4_4_3_1 = v_9_5_4_4_3_1 := by decide
+
+def j_9_5_4_4_3 : Job := ⟨[9, 5, 4, 4, 3], 3, 18, 39⟩
+
+def v_9_5_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_5_4_4_3@@
+
+theorem correct_9_5_4_4_3 : value j_9_5_4_4_3 = v_9_5_4_4_3 := by
+  rw [value_children j_9_5_4_4_3 (by decide) (by decide)]
+  have hc : children j_9_5_4_4_3 = [j_9_5_4_4_3_3, j_9_5_4_4_3_2, j_9_5_4_4_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_4_4_3_3, correct_9_5_4_4_3_2, correct_9_5_4_4_3_1]
+  all_goals decide
+
+def j_9_5_4_4_2 : Job := ⟨[9, 5, 4, 4, 2], 2, 19, 39⟩
+
+def v_9_5_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_5_4_4_2@@
+
+theorem correct_9_5_4_4_2 : value j_9_5_4_4_2 = v_9_5_4_4_2 := by decide
+
+def j_9_5_4_4_1 : Job := ⟨[9, 5, 4, 4, 1], 1, 20, 39⟩
+
+def v_9_5_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_5_4_4_1@@
+
+theorem correct_9_5_4_4_1 : value j_9_5_4_4_1 = v_9_5_4_4_1 := by decide
+
+def j_9_5_4_4 : Job := ⟨[9, 5, 4, 4], 4, 21, 40⟩
+
+def v_9_5_4_4 : List ℕ := @@GENERATED_RHS:v_9_5_4_4@@
+
+theorem correct_9_5_4_4 : value j_9_5_4_4 = v_9_5_4_4 := by
+  rw [value_children j_9_5_4_4 (by decide) (by decide)]
+  have hc : children j_9_5_4_4 = [j_9_5_4_4_4, j_9_5_4_4_3, j_9_5_4_4_2, j_9_5_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_4_4_4, correct_9_5_4_4_3, correct_9_5_4_4_2, correct_9_5_4_4_1]
+  all_goals decide
+
+def j_9_5_4_3_3_3 : Job := ⟨[9, 5, 4, 3, 3, 3], 3, 16, 38⟩
+
+def v_9_5_4_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_5_4_3_3_3@@
+
+theorem correct_9_5_4_3_3_3 : value j_9_5_4_3_3_3 = v_9_5_4_3_3_3 := by decide
+
+def j_9_5_4_3_3_2 : Job := ⟨[9, 5, 4, 3, 3, 2], 2, 17, 38⟩
+
+def v_9_5_4_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_5_4_3_3_2@@
+
+theorem correct_9_5_4_3_3_2 : value j_9_5_4_3_3_2 = v_9_5_4_3_3_2 := by decide
+
+def j_9_5_4_3_3_1 : Job := ⟨[9, 5, 4, 3, 3, 1], 1, 18, 38⟩
+
+def v_9_5_4_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_5_4_3_3_1@@
+
+theorem correct_9_5_4_3_3_1 : value j_9_5_4_3_3_1 = v_9_5_4_3_3_1 := by decide
+
+def j_9_5_4_3_3 : Job := ⟨[9, 5, 4, 3, 3], 3, 19, 39⟩
+
+def v_9_5_4_3_3 : List ℕ := @@GENERATED_RHS:v_9_5_4_3_3@@
+
+theorem correct_9_5_4_3_3 : value j_9_5_4_3_3 = v_9_5_4_3_3 := by
+  rw [value_children j_9_5_4_3_3 (by decide) (by decide)]
+  have hc : children j_9_5_4_3_3 = [j_9_5_4_3_3_3, j_9_5_4_3_3_2, j_9_5_4_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_4_3_3_3, correct_9_5_4_3_3_2, correct_9_5_4_3_3_1]
+  all_goals decide
+
+def j_9_5_4_3_2 : Job := ⟨[9, 5, 4, 3, 2], 2, 20, 39⟩
+
+def v_9_5_4_3_2 : List ℕ := @@GENERATED_RHS:v_9_5_4_3_2@@
+
+theorem correct_9_5_4_3_2 : value j_9_5_4_3_2 = v_9_5_4_3_2 := by decide
+
+def j_9_5_4_3_1 : Job := ⟨[9, 5, 4, 3, 1], 1, 21, 39⟩
+
+def v_9_5_4_3_1 : List ℕ := @@GENERATED_RHS:v_9_5_4_3_1@@
+
+theorem correct_9_5_4_3_1 : value j_9_5_4_3_1 = v_9_5_4_3_1 := by decide
+
+def j_9_5_4_3 : Job := ⟨[9, 5, 4, 3], 3, 22, 40⟩
+
+def v_9_5_4_3 : List ℕ := @@GENERATED_RHS:v_9_5_4_3@@
+
+theorem correct_9_5_4_3 : value j_9_5_4_3 = v_9_5_4_3 := by
+  rw [value_children j_9_5_4_3 (by decide) (by decide)]
+  have hc : children j_9_5_4_3 = [j_9_5_4_3_3, j_9_5_4_3_2, j_9_5_4_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_4_3_3, correct_9_5_4_3_2, correct_9_5_4_3_1]
+  all_goals decide
+
+def j_9_5_4_2 : Job := ⟨[9, 5, 4, 2], 2, 23, 40⟩
+
+def v_9_5_4_2 : List ℕ := @@GENERATED_RHS:v_9_5_4_2@@
+
+theorem correct_9_5_4_2 : value j_9_5_4_2 = v_9_5_4_2 := by decide
+
+def j_9_5_4_1 : Job := ⟨[9, 5, 4, 1], 1, 24, 40⟩
+
+def v_9_5_4_1 : List ℕ := @@GENERATED_RHS:v_9_5_4_1@@
+
+theorem correct_9_5_4_1 : value j_9_5_4_1 = v_9_5_4_1 := by decide
+
+def j_9_5_4 : Job := ⟨[9, 5, 4], 4, 25, 41⟩
+
+def v_9_5_4 : List ℕ := @@GENERATED_RHS:v_9_5_4@@
+
+theorem correct_9_5_4 : value j_9_5_4 = v_9_5_4 := by
+  rw [value_children j_9_5_4 (by decide) (by decide)]
+  have hc : children j_9_5_4 = [j_9_5_4_4, j_9_5_4_3, j_9_5_4_2, j_9_5_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_4_4, correct_9_5_4_3, correct_9_5_4_2, correct_9_5_4_1]
+  all_goals decide
+
+def j_9_5_3_3_3_3_3 : Job := ⟨[9, 5, 3, 3, 3, 3, 3], 3, 14, 37⟩
+
+def v_9_5_3_3_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_5_3_3_3_3_3@@
+
+theorem correct_9_5_3_3_3_3_3 : value j_9_5_3_3_3_3_3 = v_9_5_3_3_3_3_3 := by decide
+
+def j_9_5_3_3_3_3_2 : Job := ⟨[9, 5, 3, 3, 3, 3, 2], 2, 15, 37⟩
+
+def v_9_5_3_3_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_5_3_3_3_3_2@@
+
+theorem correct_9_5_3_3_3_3_2 : value j_9_5_3_3_3_3_2 = v_9_5_3_3_3_3_2 := by decide
+
+def j_9_5_3_3_3_3_1 : Job := ⟨[9, 5, 3, 3, 3, 3, 1], 1, 16, 37⟩
+
+def v_9_5_3_3_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_5_3_3_3_3_1@@
+
+theorem correct_9_5_3_3_3_3_1 : value j_9_5_3_3_3_3_1 = v_9_5_3_3_3_3_1 := by decide
+
+def j_9_5_3_3_3_3 : Job := ⟨[9, 5, 3, 3, 3, 3], 3, 17, 38⟩
+
+def v_9_5_3_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_5_3_3_3_3@@
+
+theorem correct_9_5_3_3_3_3 : value j_9_5_3_3_3_3 = v_9_5_3_3_3_3 := by
+  rw [value_children j_9_5_3_3_3_3 (by decide) (by decide)]
+  have hc : children j_9_5_3_3_3_3 = [j_9_5_3_3_3_3_3, j_9_5_3_3_3_3_2, j_9_5_3_3_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_3_3_3_3_3, correct_9_5_3_3_3_3_2, correct_9_5_3_3_3_3_1]
+  all_goals decide
+
+def j_9_5_3_3_3_2 : Job := ⟨[9, 5, 3, 3, 3, 2], 2, 18, 38⟩
+
+def v_9_5_3_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_5_3_3_3_2@@
+
+theorem correct_9_5_3_3_3_2 : value j_9_5_3_3_3_2 = v_9_5_3_3_3_2 := by decide
+
+def j_9_5_3_3_3_1 : Job := ⟨[9, 5, 3, 3, 3, 1], 1, 19, 38⟩
+
+def v_9_5_3_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_5_3_3_3_1@@
+
+theorem correct_9_5_3_3_3_1 : value j_9_5_3_3_3_1 = v_9_5_3_3_3_1 := by decide
+
+def j_9_5_3_3_3 : Job := ⟨[9, 5, 3, 3, 3], 3, 20, 39⟩
+
+def v_9_5_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_5_3_3_3@@
+
+theorem correct_9_5_3_3_3 : value j_9_5_3_3_3 = v_9_5_3_3_3 := by
+  rw [value_children j_9_5_3_3_3 (by decide) (by decide)]
+  have hc : children j_9_5_3_3_3 = [j_9_5_3_3_3_3, j_9_5_3_3_3_2, j_9_5_3_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_3_3_3_3, correct_9_5_3_3_3_2, correct_9_5_3_3_3_1]
+  all_goals decide
+
+def j_9_5_3_3_2 : Job := ⟨[9, 5, 3, 3, 2], 2, 21, 39⟩
+
+def v_9_5_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_5_3_3_2@@
+
+theorem correct_9_5_3_3_2 : value j_9_5_3_3_2 = v_9_5_3_3_2 := by decide
+
+def j_9_5_3_3_1 : Job := ⟨[9, 5, 3, 3, 1], 1, 22, 39⟩
+
+def v_9_5_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_5_3_3_1@@
+
+theorem correct_9_5_3_3_1 : value j_9_5_3_3_1 = v_9_5_3_3_1 := by decide
+
+def j_9_5_3_3 : Job := ⟨[9, 5, 3, 3], 3, 23, 40⟩
+
+def v_9_5_3_3 : List ℕ := @@GENERATED_RHS:v_9_5_3_3@@
+
+theorem correct_9_5_3_3 : value j_9_5_3_3 = v_9_5_3_3 := by
+  rw [value_children j_9_5_3_3 (by decide) (by decide)]
+  have hc : children j_9_5_3_3 = [j_9_5_3_3_3, j_9_5_3_3_2, j_9_5_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_3_3_3, correct_9_5_3_3_2, correct_9_5_3_3_1]
+  all_goals decide
+
+def j_9_5_3_2 : Job := ⟨[9, 5, 3, 2], 2, 24, 40⟩
+
+def v_9_5_3_2 : List ℕ := @@GENERATED_RHS:v_9_5_3_2@@
+
+theorem correct_9_5_3_2 : value j_9_5_3_2 = v_9_5_3_2 := by decide
+
+def j_9_5_3_1 : Job := ⟨[9, 5, 3, 1], 1, 25, 40⟩
+
+def v_9_5_3_1 : List ℕ := @@GENERATED_RHS:v_9_5_3_1@@
+
+theorem correct_9_5_3_1 : value j_9_5_3_1 = v_9_5_3_1 := by decide
+
+def j_9_5_3 : Job := ⟨[9, 5, 3], 3, 26, 41⟩
+
+def v_9_5_3 : List ℕ := @@GENERATED_RHS:v_9_5_3@@
+
+theorem correct_9_5_3 : value j_9_5_3 = v_9_5_3 := by
+  rw [value_children j_9_5_3 (by decide) (by decide)]
+  have hc : children j_9_5_3 = [j_9_5_3_3, j_9_5_3_2, j_9_5_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_3_3, correct_9_5_3_2, correct_9_5_3_1]
+  all_goals decide
+
+def j_9_5_2 : Job := ⟨[9, 5, 2], 2, 27, 41⟩
+
+def v_9_5_2 : List ℕ := @@GENERATED_RHS:v_9_5_2@@
+
+theorem correct_9_5_2 : value j_9_5_2 = v_9_5_2 := by decide
+
+def j_9_5_1 : Job := ⟨[9, 5, 1], 1, 28, 41⟩
+
+def v_9_5_1 : List ℕ := @@GENERATED_RHS:v_9_5_1@@
+
+theorem correct_9_5_1 : value j_9_5_1 = v_9_5_1 := by decide
+
+def j_9_5 : Job := ⟨[9, 5], 5, 29, 42⟩
+
+def v_9_5 : List ℕ := @@GENERATED_RHS:v_9_5@@
+
+theorem correct_9_5 : value j_9_5 = v_9_5 := by
+  rw [value_children j_9_5 (by decide) (by decide)]
+  have hc : children j_9_5 = [j_9_5_5, j_9_5_4, j_9_5_3, j_9_5_2, j_9_5_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_5_5, correct_9_5_4, correct_9_5_3, correct_9_5_2, correct_9_5_1]
+  all_goals decide
+
+def j_9_4_4_4_4_4_4 : Job := ⟨[9, 4, 4, 4, 4, 4, 4], 4, 10, 37⟩
+
+def v_9_4_4_4_4_4_4 : List ℕ := @@GENERATED_RHS:v_9_4_4_4_4_4_4@@
+
+theorem correct_9_4_4_4_4_4_4 : value j_9_4_4_4_4_4_4 = v_9_4_4_4_4_4_4 := by decide
+
+def j_9_4_4_4_4_4_3 : Job := ⟨[9, 4, 4, 4, 4, 4, 3], 3, 11, 37⟩
+
+def v_9_4_4_4_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_4_4_4_4_4_3@@
+
+theorem correct_9_4_4_4_4_4_3 : value j_9_4_4_4_4_4_3 = v_9_4_4_4_4_4_3 := by decide
+
+def j_9_4_4_4_4_4_2 : Job := ⟨[9, 4, 4, 4, 4, 4, 2], 2, 12, 37⟩
+
+def v_9_4_4_4_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_4_4_4_4_4_2@@
+
+theorem correct_9_4_4_4_4_4_2 : value j_9_4_4_4_4_4_2 = v_9_4_4_4_4_4_2 := by decide
+
+def j_9_4_4_4_4_4_1 : Job := ⟨[9, 4, 4, 4, 4, 4, 1], 1, 13, 37⟩
+
+def v_9_4_4_4_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_4_4_4_4_4_1@@
+
+theorem correct_9_4_4_4_4_4_1 : value j_9_4_4_4_4_4_1 = v_9_4_4_4_4_4_1 := by decide
+
+def j_9_4_4_4_4_4 : Job := ⟨[9, 4, 4, 4, 4, 4], 4, 14, 38⟩
+
+def v_9_4_4_4_4_4 : List ℕ := @@GENERATED_RHS:v_9_4_4_4_4_4@@
+
+theorem correct_9_4_4_4_4_4 : value j_9_4_4_4_4_4 = v_9_4_4_4_4_4 := by
+  rw [value_children j_9_4_4_4_4_4 (by decide) (by decide)]
+  have hc : children j_9_4_4_4_4_4 = [j_9_4_4_4_4_4_4, j_9_4_4_4_4_4_3, j_9_4_4_4_4_4_2, j_9_4_4_4_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_4_4_4_4_4_4, correct_9_4_4_4_4_4_3, correct_9_4_4_4_4_4_2, correct_9_4_4_4_4_4_1]
+  all_goals decide
+
+def j_9_4_4_4_4_3 : Job := ⟨[9, 4, 4, 4, 4, 3], 3, 15, 38⟩
+
+def v_9_4_4_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_4_4_4_4_3@@
+
+theorem correct_9_4_4_4_4_3 : value j_9_4_4_4_4_3 = v_9_4_4_4_4_3 := by decide
+
+def j_9_4_4_4_4_2 : Job := ⟨[9, 4, 4, 4, 4, 2], 2, 16, 38⟩
+
+def v_9_4_4_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_4_4_4_4_2@@
+
+theorem correct_9_4_4_4_4_2 : value j_9_4_4_4_4_2 = v_9_4_4_4_4_2 := by decide
+
+def j_9_4_4_4_4_1 : Job := ⟨[9, 4, 4, 4, 4, 1], 1, 17, 38⟩
+
+def v_9_4_4_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_4_4_4_4_1@@
+
+theorem correct_9_4_4_4_4_1 : value j_9_4_4_4_4_1 = v_9_4_4_4_4_1 := by decide
+
+def j_9_4_4_4_4 : Job := ⟨[9, 4, 4, 4, 4], 4, 18, 39⟩
+
+def v_9_4_4_4_4 : List ℕ := @@GENERATED_RHS:v_9_4_4_4_4@@
+
+theorem correct_9_4_4_4_4 : value j_9_4_4_4_4 = v_9_4_4_4_4 := by
+  rw [value_children j_9_4_4_4_4 (by decide) (by decide)]
+  have hc : children j_9_4_4_4_4 = [j_9_4_4_4_4_4, j_9_4_4_4_4_3, j_9_4_4_4_4_2, j_9_4_4_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_4_4_4_4_4, correct_9_4_4_4_4_3, correct_9_4_4_4_4_2, correct_9_4_4_4_4_1]
+  all_goals decide
+
+def j_9_4_4_4_3_3 : Job := ⟨[9, 4, 4, 4, 3, 3], 3, 16, 38⟩
+
+def v_9_4_4_4_3_3 : List ℕ := @@GENERATED_RHS:v_9_4_4_4_3_3@@
+
+theorem correct_9_4_4_4_3_3 : value j_9_4_4_4_3_3 = v_9_4_4_4_3_3 := by decide
+
+def j_9_4_4_4_3_2 : Job := ⟨[9, 4, 4, 4, 3, 2], 2, 17, 38⟩
+
+def v_9_4_4_4_3_2 : List ℕ := @@GENERATED_RHS:v_9_4_4_4_3_2@@
+
+theorem correct_9_4_4_4_3_2 : value j_9_4_4_4_3_2 = v_9_4_4_4_3_2 := by decide
+
+def j_9_4_4_4_3_1 : Job := ⟨[9, 4, 4, 4, 3, 1], 1, 18, 38⟩
+
+def v_9_4_4_4_3_1 : List ℕ := @@GENERATED_RHS:v_9_4_4_4_3_1@@
+
+theorem correct_9_4_4_4_3_1 : value j_9_4_4_4_3_1 = v_9_4_4_4_3_1 := by decide
+
+def j_9_4_4_4_3 : Job := ⟨[9, 4, 4, 4, 3], 3, 19, 39⟩
+
+def v_9_4_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_4_4_4_3@@
+
+theorem correct_9_4_4_4_3 : value j_9_4_4_4_3 = v_9_4_4_4_3 := by
+  rw [value_children j_9_4_4_4_3 (by decide) (by decide)]
+  have hc : children j_9_4_4_4_3 = [j_9_4_4_4_3_3, j_9_4_4_4_3_2, j_9_4_4_4_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_4_4_4_3_3, correct_9_4_4_4_3_2, correct_9_4_4_4_3_1]
+  all_goals decide
+
+def j_9_4_4_4_2 : Job := ⟨[9, 4, 4, 4, 2], 2, 20, 39⟩
+
+def v_9_4_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_4_4_4_2@@
+
+theorem correct_9_4_4_4_2 : value j_9_4_4_4_2 = v_9_4_4_4_2 := by decide
+
+def j_9_4_4_4_1 : Job := ⟨[9, 4, 4, 4, 1], 1, 21, 39⟩
+
+def v_9_4_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_4_4_4_1@@
+
+theorem correct_9_4_4_4_1 : value j_9_4_4_4_1 = v_9_4_4_4_1 := by decide
+
+def j_9_4_4_4 : Job := ⟨[9, 4, 4, 4], 4, 22, 40⟩
+
+def v_9_4_4_4 : List ℕ := @@GENERATED_RHS:v_9_4_4_4@@
+
+theorem correct_9_4_4_4 : value j_9_4_4_4 = v_9_4_4_4 := by
+  rw [value_children j_9_4_4_4 (by decide) (by decide)]
+  have hc : children j_9_4_4_4 = [j_9_4_4_4_4, j_9_4_4_4_3, j_9_4_4_4_2, j_9_4_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_4_4_4_4, correct_9_4_4_4_3, correct_9_4_4_4_2, correct_9_4_4_4_1]
+  all_goals decide
+
+def j_9_4_4_3_3_3_3 : Job := ⟨[9, 4, 4, 3, 3, 3, 3], 3, 14, 37⟩
+
+def v_9_4_4_3_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_4_4_3_3_3_3@@
+
+theorem correct_9_4_4_3_3_3_3 : value j_9_4_4_3_3_3_3 = v_9_4_4_3_3_3_3 := by decide
+
+def j_9_4_4_3_3_3_2 : Job := ⟨[9, 4, 4, 3, 3, 3, 2], 2, 15, 37⟩
+
+def v_9_4_4_3_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_4_4_3_3_3_2@@
+
+theorem correct_9_4_4_3_3_3_2 : value j_9_4_4_3_3_3_2 = v_9_4_4_3_3_3_2 := by decide
+
+def j_9_4_4_3_3_3_1 : Job := ⟨[9, 4, 4, 3, 3, 3, 1], 1, 16, 37⟩
+
+def v_9_4_4_3_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_4_4_3_3_3_1@@
+
+theorem correct_9_4_4_3_3_3_1 : value j_9_4_4_3_3_3_1 = v_9_4_4_3_3_3_1 := by decide
+
+def j_9_4_4_3_3_3 : Job := ⟨[9, 4, 4, 3, 3, 3], 3, 17, 38⟩
+
+def v_9_4_4_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_4_4_3_3_3@@
+
+theorem correct_9_4_4_3_3_3 : value j_9_4_4_3_3_3 = v_9_4_4_3_3_3 := by
+  rw [value_children j_9_4_4_3_3_3 (by decide) (by decide)]
+  have hc : children j_9_4_4_3_3_3 = [j_9_4_4_3_3_3_3, j_9_4_4_3_3_3_2, j_9_4_4_3_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_4_4_3_3_3_3, correct_9_4_4_3_3_3_2, correct_9_4_4_3_3_3_1]
+  all_goals decide
+
+def j_9_4_4_3_3_2 : Job := ⟨[9, 4, 4, 3, 3, 2], 2, 18, 38⟩
+
+def v_9_4_4_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_4_4_3_3_2@@
+
+theorem correct_9_4_4_3_3_2 : value j_9_4_4_3_3_2 = v_9_4_4_3_3_2 := by decide
+
+def j_9_4_4_3_3_1 : Job := ⟨[9, 4, 4, 3, 3, 1], 1, 19, 38⟩
+
+def v_9_4_4_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_4_4_3_3_1@@
+
+theorem correct_9_4_4_3_3_1 : value j_9_4_4_3_3_1 = v_9_4_4_3_3_1 := by decide
+
+def j_9_4_4_3_3 : Job := ⟨[9, 4, 4, 3, 3], 3, 20, 39⟩
+
+def v_9_4_4_3_3 : List ℕ := @@GENERATED_RHS:v_9_4_4_3_3@@
+
+theorem correct_9_4_4_3_3 : value j_9_4_4_3_3 = v_9_4_4_3_3 := by
+  rw [value_children j_9_4_4_3_3 (by decide) (by decide)]
+  have hc : children j_9_4_4_3_3 = [j_9_4_4_3_3_3, j_9_4_4_3_3_2, j_9_4_4_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_4_4_3_3_3, correct_9_4_4_3_3_2, correct_9_4_4_3_3_1]
+  all_goals decide
+
+def j_9_4_4_3_2 : Job := ⟨[9, 4, 4, 3, 2], 2, 21, 39⟩
+
+def v_9_4_4_3_2 : List ℕ := @@GENERATED_RHS:v_9_4_4_3_2@@
+
+theorem correct_9_4_4_3_2 : value j_9_4_4_3_2 = v_9_4_4_3_2 := by decide
+
+def j_9_4_4_3_1 : Job := ⟨[9, 4, 4, 3, 1], 1, 22, 39⟩
+
+def v_9_4_4_3_1 : List ℕ := @@GENERATED_RHS:v_9_4_4_3_1@@
+
+theorem correct_9_4_4_3_1 : value j_9_4_4_3_1 = v_9_4_4_3_1 := by decide
+
+def j_9_4_4_3 : Job := ⟨[9, 4, 4, 3], 3, 23, 40⟩
+
+def v_9_4_4_3 : List ℕ := @@GENERATED_RHS:v_9_4_4_3@@
+
+theorem correct_9_4_4_3 : value j_9_4_4_3 = v_9_4_4_3 := by
+  rw [value_children j_9_4_4_3 (by decide) (by decide)]
+  have hc : children j_9_4_4_3 = [j_9_4_4_3_3, j_9_4_4_3_2, j_9_4_4_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_4_4_3_3, correct_9_4_4_3_2, correct_9_4_4_3_1]
+  all_goals decide
+
+def j_9_4_4_2 : Job := ⟨[9, 4, 4, 2], 2, 24, 40⟩
+
+def v_9_4_4_2 : List ℕ := @@GENERATED_RHS:v_9_4_4_2@@
+
+theorem correct_9_4_4_2 : value j_9_4_4_2 = v_9_4_4_2 := by decide
+
+def j_9_4_4_1 : Job := ⟨[9, 4, 4, 1], 1, 25, 40⟩
+
+def v_9_4_4_1 : List ℕ := @@GENERATED_RHS:v_9_4_4_1@@
+
+theorem correct_9_4_4_1 : value j_9_4_4_1 = v_9_4_4_1 := by decide
+
+def j_9_4_4 : Job := ⟨[9, 4, 4], 4, 26, 41⟩
+
+def v_9_4_4 : List ℕ := @@GENERATED_RHS:v_9_4_4@@
+
+theorem correct_9_4_4 : value j_9_4_4 = v_9_4_4 := by
+  rw [value_children j_9_4_4 (by decide) (by decide)]
+  have hc : children j_9_4_4 = [j_9_4_4_4, j_9_4_4_3, j_9_4_4_2, j_9_4_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_4_4_4, correct_9_4_4_3, correct_9_4_4_2, correct_9_4_4_1]
+  all_goals decide
+
+def j_9_4_3_3_3_3_3 : Job := ⟨[9, 4, 3, 3, 3, 3, 3], 3, 15, 37⟩
+
+def v_9_4_3_3_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_4_3_3_3_3_3@@
+
+theorem correct_9_4_3_3_3_3_3 : value j_9_4_3_3_3_3_3 = v_9_4_3_3_3_3_3 := by decide
+
+def j_9_4_3_3_3_3_2 : Job := ⟨[9, 4, 3, 3, 3, 3, 2], 2, 16, 37⟩
+
+def v_9_4_3_3_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_4_3_3_3_3_2@@
+
+theorem correct_9_4_3_3_3_3_2 : value j_9_4_3_3_3_3_2 = v_9_4_3_3_3_3_2 := by decide
+
+def j_9_4_3_3_3_3_1 : Job := ⟨[9, 4, 3, 3, 3, 3, 1], 1, 17, 37⟩
+
+def v_9_4_3_3_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_4_3_3_3_3_1@@
+
+theorem correct_9_4_3_3_3_3_1 : value j_9_4_3_3_3_3_1 = v_9_4_3_3_3_3_1 := by decide
+
+def j_9_4_3_3_3_3 : Job := ⟨[9, 4, 3, 3, 3, 3], 3, 18, 38⟩
+
+def v_9_4_3_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_4_3_3_3_3@@
+
+theorem correct_9_4_3_3_3_3 : value j_9_4_3_3_3_3 = v_9_4_3_3_3_3 := by
+  rw [value_children j_9_4_3_3_3_3 (by decide) (by decide)]
+  have hc : children j_9_4_3_3_3_3 = [j_9_4_3_3_3_3_3, j_9_4_3_3_3_3_2, j_9_4_3_3_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_4_3_3_3_3_3, correct_9_4_3_3_3_3_2, correct_9_4_3_3_3_3_1]
+  all_goals decide
+
+def j_9_4_3_3_3_2 : Job := ⟨[9, 4, 3, 3, 3, 2], 2, 19, 38⟩
+
+def v_9_4_3_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_4_3_3_3_2@@
+
+theorem correct_9_4_3_3_3_2 : value j_9_4_3_3_3_2 = v_9_4_3_3_3_2 := by decide
+
+def j_9_4_3_3_3_1 : Job := ⟨[9, 4, 3, 3, 3, 1], 1, 20, 38⟩
+
+def v_9_4_3_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_4_3_3_3_1@@
+
+theorem correct_9_4_3_3_3_1 : value j_9_4_3_3_3_1 = v_9_4_3_3_3_1 := by decide
+
+def j_9_4_3_3_3 : Job := ⟨[9, 4, 3, 3, 3], 3, 21, 39⟩
+
+def v_9_4_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_4_3_3_3@@
+
+theorem correct_9_4_3_3_3 : value j_9_4_3_3_3 = v_9_4_3_3_3 := by
+  rw [value_children j_9_4_3_3_3 (by decide) (by decide)]
+  have hc : children j_9_4_3_3_3 = [j_9_4_3_3_3_3, j_9_4_3_3_3_2, j_9_4_3_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_4_3_3_3_3, correct_9_4_3_3_3_2, correct_9_4_3_3_3_1]
+  all_goals decide
+
+def j_9_4_3_3_2 : Job := ⟨[9, 4, 3, 3, 2], 2, 22, 39⟩
+
+def v_9_4_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_4_3_3_2@@
+
+theorem correct_9_4_3_3_2 : value j_9_4_3_3_2 = v_9_4_3_3_2 := by decide
+
+def j_9_4_3_3_1 : Job := ⟨[9, 4, 3, 3, 1], 1, 23, 39⟩
+
+def v_9_4_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_4_3_3_1@@
+
+theorem correct_9_4_3_3_1 : value j_9_4_3_3_1 = v_9_4_3_3_1 := by decide
+
+def j_9_4_3_3 : Job := ⟨[9, 4, 3, 3], 3, 24, 40⟩
+
+def v_9_4_3_3 : List ℕ := @@GENERATED_RHS:v_9_4_3_3@@
+
+theorem correct_9_4_3_3 : value j_9_4_3_3 = v_9_4_3_3 := by
+  rw [value_children j_9_4_3_3 (by decide) (by decide)]
+  have hc : children j_9_4_3_3 = [j_9_4_3_3_3, j_9_4_3_3_2, j_9_4_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_4_3_3_3, correct_9_4_3_3_2, correct_9_4_3_3_1]
+  all_goals decide
+
+def j_9_4_3_2 : Job := ⟨[9, 4, 3, 2], 2, 25, 40⟩
+
+def v_9_4_3_2 : List ℕ := @@GENERATED_RHS:v_9_4_3_2@@
+
+theorem correct_9_4_3_2 : value j_9_4_3_2 = v_9_4_3_2 := by decide
+
+def j_9_4_3_1 : Job := ⟨[9, 4, 3, 1], 1, 26, 40⟩
+
+def v_9_4_3_1 : List ℕ := @@GENERATED_RHS:v_9_4_3_1@@
+
+theorem correct_9_4_3_1 : value j_9_4_3_1 = v_9_4_3_1 := by decide
+
+def j_9_4_3 : Job := ⟨[9, 4, 3], 3, 27, 41⟩
+
+def v_9_4_3 : List ℕ := @@GENERATED_RHS:v_9_4_3@@
+
+theorem correct_9_4_3 : value j_9_4_3 = v_9_4_3 := by
+  rw [value_children j_9_4_3 (by decide) (by decide)]
+  have hc : children j_9_4_3 = [j_9_4_3_3, j_9_4_3_2, j_9_4_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_4_3_3, correct_9_4_3_2, correct_9_4_3_1]
+  all_goals decide
+
+def j_9_4_2 : Job := ⟨[9, 4, 2], 2, 28, 41⟩
+
+def v_9_4_2 : List ℕ := @@GENERATED_RHS:v_9_4_2@@
+
+theorem correct_9_4_2 : value j_9_4_2 = v_9_4_2 := by decide
+
+def j_9_4_1 : Job := ⟨[9, 4, 1], 1, 29, 41⟩
+
+def v_9_4_1 : List ℕ := @@GENERATED_RHS:v_9_4_1@@
+
+theorem correct_9_4_1 : value j_9_4_1 = v_9_4_1 := by decide
+
+def j_9_4 : Job := ⟨[9, 4], 4, 30, 42⟩
+
+def v_9_4 : List ℕ := @@GENERATED_RHS:v_9_4@@
+
+theorem correct_9_4 : value j_9_4 = v_9_4 := by
+  rw [value_children j_9_4 (by decide) (by decide)]
+  have hc : children j_9_4 = [j_9_4_4, j_9_4_3, j_9_4_2, j_9_4_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_4_4, correct_9_4_3, correct_9_4_2, correct_9_4_1]
+  all_goals decide
+
+def j_9_3_3_3_3_3_3 : Job := ⟨[9, 3, 3, 3, 3, 3, 3], 3, 16, 37⟩
+
+def v_9_3_3_3_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_3_3_3_3_3_3@@
+
+theorem correct_9_3_3_3_3_3_3 : value j_9_3_3_3_3_3_3 = v_9_3_3_3_3_3_3 := by decide
+
+def j_9_3_3_3_3_3_2 : Job := ⟨[9, 3, 3, 3, 3, 3, 2], 2, 17, 37⟩
+
+def v_9_3_3_3_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_3_3_3_3_3_2@@
+
+theorem correct_9_3_3_3_3_3_2 : value j_9_3_3_3_3_3_2 = v_9_3_3_3_3_3_2 := by decide
+
+def j_9_3_3_3_3_3_1 : Job := ⟨[9, 3, 3, 3, 3, 3, 1], 1, 18, 37⟩
+
+def v_9_3_3_3_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_3_3_3_3_3_1@@
+
+theorem correct_9_3_3_3_3_3_1 : value j_9_3_3_3_3_3_1 = v_9_3_3_3_3_3_1 := by decide
+
+def j_9_3_3_3_3_3 : Job := ⟨[9, 3, 3, 3, 3, 3], 3, 19, 38⟩
+
+def v_9_3_3_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_3_3_3_3_3@@
+
+theorem correct_9_3_3_3_3_3 : value j_9_3_3_3_3_3 = v_9_3_3_3_3_3 := by
+  rw [value_children j_9_3_3_3_3_3 (by decide) (by decide)]
+  have hc : children j_9_3_3_3_3_3 = [j_9_3_3_3_3_3_3, j_9_3_3_3_3_3_2, j_9_3_3_3_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_3_3_3_3_3_3, correct_9_3_3_3_3_3_2, correct_9_3_3_3_3_3_1]
+  all_goals decide
+
+def j_9_3_3_3_3_2 : Job := ⟨[9, 3, 3, 3, 3, 2], 2, 20, 38⟩
+
+def v_9_3_3_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_3_3_3_3_2@@
+
+theorem correct_9_3_3_3_3_2 : value j_9_3_3_3_3_2 = v_9_3_3_3_3_2 := by decide
+
+def j_9_3_3_3_3_1 : Job := ⟨[9, 3, 3, 3, 3, 1], 1, 21, 38⟩
+
+def v_9_3_3_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_3_3_3_3_1@@
+
+theorem correct_9_3_3_3_3_1 : value j_9_3_3_3_3_1 = v_9_3_3_3_3_1 := by decide
+
+def j_9_3_3_3_3 : Job := ⟨[9, 3, 3, 3, 3], 3, 22, 39⟩
+
+def v_9_3_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_3_3_3_3@@
+
+theorem correct_9_3_3_3_3 : value j_9_3_3_3_3 = v_9_3_3_3_3 := by
+  rw [value_children j_9_3_3_3_3 (by decide) (by decide)]
+  have hc : children j_9_3_3_3_3 = [j_9_3_3_3_3_3, j_9_3_3_3_3_2, j_9_3_3_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_3_3_3_3_3, correct_9_3_3_3_3_2, correct_9_3_3_3_3_1]
+  all_goals decide
+
+def j_9_3_3_3_2 : Job := ⟨[9, 3, 3, 3, 2], 2, 23, 39⟩
+
+def v_9_3_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_3_3_3_2@@
+
+theorem correct_9_3_3_3_2 : value j_9_3_3_3_2 = v_9_3_3_3_2 := by decide
+
+def j_9_3_3_3_1 : Job := ⟨[9, 3, 3, 3, 1], 1, 24, 39⟩
+
+def v_9_3_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_3_3_3_1@@
+
+theorem correct_9_3_3_3_1 : value j_9_3_3_3_1 = v_9_3_3_3_1 := by decide
+
+def j_9_3_3_3 : Job := ⟨[9, 3, 3, 3], 3, 25, 40⟩
+
+def v_9_3_3_3 : List ℕ := @@GENERATED_RHS:v_9_3_3_3@@
+
+theorem correct_9_3_3_3 : value j_9_3_3_3 = v_9_3_3_3 := by
+  rw [value_children j_9_3_3_3 (by decide) (by decide)]
+  have hc : children j_9_3_3_3 = [j_9_3_3_3_3, j_9_3_3_3_2, j_9_3_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_3_3_3_3, correct_9_3_3_3_2, correct_9_3_3_3_1]
+  all_goals decide
+
+def j_9_3_3_2 : Job := ⟨[9, 3, 3, 2], 2, 26, 40⟩
+
+def v_9_3_3_2 : List ℕ := @@GENERATED_RHS:v_9_3_3_2@@
+
+theorem correct_9_3_3_2 : value j_9_3_3_2 = v_9_3_3_2 := by decide
+
+def j_9_3_3_1 : Job := ⟨[9, 3, 3, 1], 1, 27, 40⟩
+
+def v_9_3_3_1 : List ℕ := @@GENERATED_RHS:v_9_3_3_1@@
+
+theorem correct_9_3_3_1 : value j_9_3_3_1 = v_9_3_3_1 := by decide
+
+def j_9_3_3 : Job := ⟨[9, 3, 3], 3, 28, 41⟩
+
+def v_9_3_3 : List ℕ := @@GENERATED_RHS:v_9_3_3@@
+
+theorem correct_9_3_3 : value j_9_3_3 = v_9_3_3 := by
+  rw [value_children j_9_3_3 (by decide) (by decide)]
+  have hc : children j_9_3_3 = [j_9_3_3_3, j_9_3_3_2, j_9_3_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_3_3_3, correct_9_3_3_2, correct_9_3_3_1]
+  all_goals decide
+
+def j_9_3_2 : Job := ⟨[9, 3, 2], 2, 29, 41⟩
+
+def v_9_3_2 : List ℕ := @@GENERATED_RHS:v_9_3_2@@
+
+theorem correct_9_3_2 : value j_9_3_2 = v_9_3_2 := by decide
+
+def j_9_3_1 : Job := ⟨[9, 3, 1], 1, 30, 41⟩
+
+def v_9_3_1 : List ℕ := @@GENERATED_RHS:v_9_3_1@@
+
+theorem correct_9_3_1 : value j_9_3_1 = v_9_3_1 := by decide
+
+def j_9_3 : Job := ⟨[9, 3], 3, 31, 42⟩
+
+def v_9_3 : List ℕ := @@GENERATED_RHS:v_9_3@@
+
+theorem correct_9_3 : value j_9_3 = v_9_3 := by
+  rw [value_children j_9_3 (by decide) (by decide)]
+  have hc : children j_9_3 = [j_9_3_3, j_9_3_2, j_9_3_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_3_3, correct_9_3_2, correct_9_3_1]
+  all_goals decide
+
+def j_9_2 : Job := ⟨[9, 2], 2, 32, 42⟩
+
+def v_9_2 : List ℕ := @@GENERATED_RHS:v_9_2@@
+
+theorem correct_9_2 : value j_9_2 = v_9_2 := by decide
+
+def j_9_1 : Job := ⟨[9, 1], 1, 33, 42⟩
+
+def v_9_1 : List ℕ := @@GENERATED_RHS:v_9_1@@
+
+theorem correct_9_1 : value j_9_1 = v_9_1 := by decide
+
+def j_9 : Job := ⟨[9], 9, 34, 43⟩
+
+def v_9 : List ℕ := @@GENERATED_RHS:v_9@@
+
+theorem correct_9 : value j_9 = v_9 := by
+  rw [value_children j_9 (by decide) (by decide)]
+  have hc : children j_9 = [j_9_9, j_9_8, j_9_7, j_9_6, j_9_5, j_9_4, j_9_3, j_9_2, j_9_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_9_9, correct_9_8, correct_9_7, correct_9_6, correct_9_5, correct_9_4, correct_9_3, correct_9_2, correct_9_1]
+  all_goals decide
+
+end Paper20.Cert.HilbertParts.Tree

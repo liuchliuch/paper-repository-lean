@@ -1,0 +1,322 @@
+{
+  "paper_id": "28",
+  "completion_scope": "All 8 paper-owned derivations are proved relative to the explicit standard foundation parameters recorded here. They are not asserted as closed native constructions, new axioms or already verified external theorem implementations.",
+  "inputs": [
+    {
+      "id": "Song-standard-round-orbit-metric",
+      "reference": "A. Song, Spherical volume and spherical Plateau problem, arXiv:2202.10636v6 (7 April 2025), Section 3.1, printed pp. 20-21.",
+      "primary_urls": [
+        "https://arxiv.org/pdf/2202.10636v6"
+      ],
+      "lean_input": "Paper28.SphericalQuotientMetricInput",
+      "input_scope": "Only the standard round metric object on the actual native regular Hilbert sphere orbit quotient: its topology is the already constructed quotient topology, and its distance is exactly the infimum over group translates of arccos of the actual Hilbert inner product. The real l2 space, unit sphere, regular action and orbit quotient themselves are native constructions.",
+      "excluded_own_claims": "No deformation, map, projection, local Lipschitz bound, homotopy, carrier, current, mass, approximation or transfer is supplied. Chord-angle comparisons, sharp local Lipschitz descent, finite carriers and the relative construction are proved locally.",
+      "state": "used as an explicit metric-object theorem parameter; no axiom or closed witness; standard metric realization itself is not rebuilt"
+    },
+    {
+      "id": "AK-metric-current-calculus",
+      "reference": "L. Ambrosio and B. Kirchheim, Currents in metric spaces, Acta Math. 185 (2000), 1-80, DOI 10.1007/BF02392711. Homotopy product formula is also stated in Riedweg-Schäppi, Proposition 2.8 (Wenger Theorem 3.2). For real test evaluations and Euclidean compatibility, see also U. Lang, Local currents in metric spaces (2011), author preprint revised 5 May 2010: Proposition 2.6, Lemma 3.2, Theorem 5.5, preprint pp.16,18,35-37; the latter cites AK Theorem 11.1 for compact finite-mass currents.",
+      "primary_urls": [
+        "https://www.mis.mpg.de/de/publications/preprint-repository/article/2000/issue-21",
+        "https://arxiv.org/pdf/0902.3831",
+        "https://people.math.ethz.ch/~lang/Lang_LocalCurrents.pdf"
+      ],
+      "input_scope": "Compact integral currents with integer coefficients; boundary squared zero; Lipschitz pushforward preserving integrality and commuting with boundary; individual mass/area estimates; interval-product boundary formula.",
+      "excluded_own_claims": "No joint tree-shadow mass bound, no Bass-Serre transfer, no near-isometric relative carrier deformation, and no finite-isotropy sharp approximation are included.",
+      "state": "typed standard current, metric-pinned support/boundary/mass, lower semicontinuity and simplex integration/Stokes signatures compiled; used as explicit published-object parameters; no native AK witness claimed",
+      "lean_inputs": [
+        "Paper28.CompactIntegralCurrentSupportInput",
+        "Paper28.CompactIntegralCurrentAlgebraInput",
+        "Paper28.SphericalSimplexIntegrationInput",
+        "Paper28.EuclideanSimplexIntegrationInput",
+        "Paper28.EuclideanCurrentTangentInput",
+        "Paper28.NeighborhoodCurrentPushforwardInput",
+        "Paper28.EuclideanCurrentAreaInput",
+        "Paper28.TwoStagePushforwardFunctorialityInput",
+        "Paper28.LipschitzSimplexIntegrationInput",
+        "Paper28.SimplexPushforwardCompatibilityInput",
+        "Paper28.CurrentMassFaithfulnessInput",
+        "Paper28.EuclideanAffineSupportTangentInput",
+        "Paper28.EuclideanSimplexSeparationInput",
+        "Paper28.ComponentCurrentDecompositionInput",
+        "Paper28.LocalCurrentPushforwardCalculusInput",
+        "Paper28.CompactCurrentHomotopyInput",
+        "Paper28.CanonicalLocalPushforwardInput"
+      ],
+      "typed_scope_note": "The current signatures are pinned to the exact metric object. The source polyhedral subgroup is defined locally as finite integer sums of actual lifted spherical simplex integration objects, including support covers under addition and cancellation. Integration support locality and Stokes are standard external laws, with no own deformation/approximation/transfer conclusion. Neighborhood pushforward is on the actual supported-current subgroup, with exact boundary commutation, support image and standard individual L^k mass law. Euclidean area calculus supplies only the canonical metric Jacobian, standard area inequality and generic smooth round-lift locality; no incident envelope or own sharp upper estimate is a field. The two-stage pushforward signature states only the generic canonical composition/identity/equality-on-support law for any two neighborhood maps whose composition is the identity on the current support. It has no spherical geometry, approximation, deformation, sharp mass or filling field; the actual inverse realization and retraction identity are local proofs. Actual Lipschitz singular simplex integration has only the canonical objects, support in the actual parameterized image and standard alternating-face Stokes. The corresponding integration chain map is constructed locally from the free abelian groups and native alternating face boundary. Canonical affine/Lipschitz-simplex integration compatibility states only that the pushforward of an actual affine simplex integration is the integration of its actual composed Lipschitz parameterization for any neighborhood map. Its compact-domain Lipschitz parameterization and the explicit normalized-affine spherical formula are local proofs; no polyhedral preservation, approximation or mass estimate is supplied. Additional generic locality facts say zero mass is the zero current, and any rectifiable current supported in an affine space has approximate tangent inside its direction space a.e. They contain no projective or spherical rank assertion. The collapsed-projective rank drop and Gram/exterior-Jacobian vanishing are local proofs, then the standard area law yields zero pushed current. Generic Euclidean simplex separation is an explicit real-valued test-evaluation corollary: for each actual strict simplex in a finite Euclidean complex, a compactly supported smooth test form in a small ball around its relative interior avoids every other simplex of the same dimension; canonical affine integration and normalization give evaluation 1 on that simplex and 0 on the others. Only these real additive evaluations are supplied; injectivity of finite integer simplicial integration, its spherical pull-push version, and the deduction that a closed integrated current has a closed simplicial representative are native proofs. This elementary corollary is based on standard test-form locality and Euclidean compatibility, not stated as a separate numbered theorem in the cited sources. On a finite clopen partition, ComponentCurrentDecompositionInput supplies only the standard canonical inclusion pushforwards of the actual subtype inclusions, additive current restrictions commuting with boundary, exact reconstruction, mass additivity for currents with disjoint component supports, and the same-component/other-component restriction identities. Native finite sums then assemble cycles, homologies, prescribed fillings and mass limits; no approximation or own joint transfer bound is a field. CompactCurrentHomotopyInput supplies the actual canonical interval-product homotopy push operator for arbitrary Lipschitz H:[0,1]×K→X and its standard boundary formula with actual canonical endpoint pushforwards. LocalCurrentPushforwardCalculusInput supplies only generic identity-on-current-support locality and the individual local L^k mass law when a common local Lipschitz constant L holds near every support point. Neither field asserts any deformation, carrier, relative fixing, approximation, prescribed filling or joint transfer conclusion. These are applied to the already natively constructed actual relative homotopy and map.",
+      "global_pushforward_extension": "CanonicalGlobalCurrentCalculusInput supplies canonical global Lipschitz pushforward objects, generic boundary/support/individual mass laws and functoriality/identity for its own coherent selected maps. GlobalCurrentPushforwardInput is the actual typed generic map signature. Native constant-on-support positive-degree zero follows from the individual L=0 mass law and separate generic mass faithfulness. No transfer field is supplied."
+    },
+    {
+      "id": "FF-Euclidean-deformation-and-approximation",
+      "reference": "H. Federer and W. H. Fleming, Normal and integral currents, Ann. Math. 72 (1960), 458-520, deformation Theorem 5.5 and strong approximation Theorem 8.22; localized forms cited by the source paper in Federer, Geometric Measure Theory (1969), Sections 4.1-4.2. The theorem numbering is confirmed by Fleming’s author retrospective, pp. 179-180.",
+      "primary_urls": [
+        "https://doi.org/10.2307/1970227",
+        "https://appliedmath.brown.edu/sites/default/files/2021-11/Early%20Developments%20in%20Geometric%20Measure%20Theory.pdf"
+      ],
+      "input_scope": "Standard Euclidean deformation and strong approximation of integral currents, with integer multiplicities and the stated mass/boundary controls.",
+      "excluded_own_claims": "The exact localized-cycle refinement, sharp mass after piecewise spherical retraction, and finite-isotropy quotient approximation are not assumed.",
+      "state": "typed initial localized decomposition and polyhedral-boundary deformation signatures compiled as explicit theorem parameter; no exact-cycle or sharp retraction conclusion supplied",
+      "lean_input": "Paper28.EuclideanDeformationInput"
+    },
+    {
+      "id": "RS-current-homology-comparison",
+      "reference": "C. Riedweg and D. Schäppi, arXiv:0902.3831v1, Definition 1.1; Corollaries 1.4 and 1.6; homotopy product Proposition 2.8.",
+      "primary_urls": [
+        "https://arxiv.org/pdf/0902.3831"
+      ],
+      "input_scope": "For spaces satisfying locally strong Lipschitz contractions (and completeness for the integral-current comparison), the canonical maps identify compact integral-current, integral Lipschitz-singular and singular homology.",
+      "excluded_own_claims": "No finite-carrier contraction hypothesis, simplicial integration homology isomorphism or prescribed filling is supplied. Native actual retraction contraction bounds and biLipschitz transfer prove completeness/local strong contractions for the spherical chart realization. The simplicial integration homology injection and exact filling are derived separately.",
+      "state": "typed explicit comparison parameter pinned to the canonical locally constructed Lipschitz singular integration chain map; requires exact CompleteSpace and AdmitsLocallyStrongLipschitzContractions hypotheses; no closed witness",
+      "lean_input": "Paper28.LipschitzCurrentHomologyComparisonInput"
+    },
+    {
+      "id": "Song-spherical-volume-framework",
+      "reference": "A. Song, Spherical volume and spherical Plateau problem, arXiv:2202.10636v6 (7 April 2025), Sections 3.1-3.4.2; Lemma 1.6; Theorem 4.1.",
+      "primary_urls": [
+        "https://arxiv.org/pdf/2202.10636v6"
+      ],
+      "input_scope": "Standard integral group homology objects, induced maps/identity/composition; Song canonical comparison into the native homology short complex of the actual compact integral-current groups, existence of cycle representatives, and naturality under actual group-homomorphism norm foldings (23). The native groupHomSphereFold/groupHomQuotientFold and their equivariance/1-Lipschitz property are compiled. The identity group homomorphism gives the actual absolute-value map, so its comparison-class preservation is derived from ordinary naturality and map_identity. Spherical volume is the native infimum of masses of actual cycles in the comparison class.",
+      "excluded_own_claims": "No approximation in singular quotients, relative filling, transfer, factor transfer recovery, free-product lower bound/additivity or connected-sum conclusion.",
+      "state": "precise typed external standard group homology objects and Song comparison/naturality parameters; current homology and mass-infimum are native actual-current constructions; no closed witness claimed",
+      "lean_input": "Paper28.IntegralGroupHomologyInput; Paper28.SongSphericalHomologyInput"
+    },
+    {
+      "id": "classical-multi-block-Fischer",
+      "reference": "T. H. Pate, Exterior products, elementary symmetric functions, and the Fischer determinant inequality, Linear Algebra Appl. 255 (1997), 203-242, DOI 10.1016/S0024-3795(96)00044-4. Multi-block form: Linear Principal Minor Polynomials: Hyperbolic Determinantal Inequalities and Spectral Containment, IMRN 2023(24), Corollary 4.5 and Remark 4.6.",
+      "primary_urls": [
+        "https://www.sciencedirect.com/science/article/pii/S0024379596000444",
+        "https://academic.oup.com/imrn/article/2023/24/21346/6819958"
+      ],
+      "lean_input": "Paper28.FischerInput",
+      "input_scope": "For every real PSD n-by-n matrix and an injective selection of two coordinates, det M is at most the selected 2-by-2 principal determinant times the product of all remaining diagonal entries.",
+      "excluded_own_claims": "No norm folding, tangent plane, current, tree, transfer or spherical-volume assertion is assumed. Diagonal contraction bounds, complement product bounds and the geometric application are derived locally.",
+      "state": "used as an explicit theorem parameter; no new axiom or closed external witness"
+    },
+    {
+      "id": "finite-sphere-rectifiable-tangent-calculus",
+      "reference": "Ambrosio-Kirchheim (2000), Currents in metric spaces, rectifiable-current representation and finite-dimensional Euclidean compatibility; classical approximate-tangent/Rademacher locality in Federer, Geometric Measure Theory (1969), Section 3.2.",
+      "primary_urls": [
+        "https://www.mis.mpg.de/de/publications/preprint-repository/article/2000/issue-21",
+        "https://doi.org/10.1007/BF02392711"
+      ],
+      "lean_input": "Paper28.RectifiableSphereCalculusInput",
+      "input_scope": "Rectifiable sphere-current objects with mass measure, almost-everywhere n-plane dimension and sphere tangency, approximate differentials, smooth restriction, equality-set locality and linearity. Their exact generic signatures are fixed in Lean.",
+      "excluded_own_claims": "No field contains a Jacobian inequality. Linear-kernel tangent locality, folding approximate differentials and the full joint n-Jacobian estimate are proved from the generic laws.",
+      "state": "opaque external object/calculus signature used as explicit parameter; no native AK object implementation claimed"
+    },
+    {
+      "id": "classical-Cauchy-Binet",
+      "reference": "R. A. Horn and C. R. Johnson, Matrix Analysis, 2nd edition, Cambridge University Press (2012/2013), Section 0.8.7, p.28; compound matrices Section 0.8.1. DOI 10.1017/CBO9781139020411.",
+      "primary_urls": [
+        "https://doi.org/10.1017/CBO9781139020411"
+      ],
+      "lean_input": "Paper28.CauchyBinetInput",
+      "input_scope": "The universal rectangular Cauchy-Binet determinant identity with canonically ordered k-element row/column subsets.",
+      "excluded_own_claims": "No geometric Jacobian, tangent, polyhedron, mass bound or current estimate. Actual Plucker coordinate vectors, their Gram norm identity and actual compound-action Jacobians are constructed locally.",
+      "state": "compiled precise explicit classical linear algebra parameter; no axiom or witness"
+    },
+    {
+      "id": "Reshetnyak-strict-polar-continuity",
+      "reference": "Yu. G. Reshetnyak, The weak convergence of completely additive vector-valued set functions, Siberian Mathematical Journal 9(6) (1968), 1039-1045, DOI 10.1007/BF02196453. Exact bounded-continuous polar formulation: F. Rindler and G. Shaw, Strictly continuous extension of functionals with linear growth to the space BV, Quart. J. Math. 66 (2015), Theorem 2.5, p.958, DOI 10.1093/qmath/hav022.",
+      "primary_urls": [
+        "https://www.mathnet.ru/eng/smj5605",
+        "https://api.repository.cam.ac.uk/server/api/core/bitstreams/0082de86-e9e7-491c-bf02-f09c09f797aa/content"
+      ],
+      "lean_input": "Paper28.StrictPolarMeasureContinuityInput",
+      "input_scope": "Generic actual finite Borel measures on finite Euclidean space, measurable unit vector densities, weak convergence of vector integrals against bounded continuous scalar tests and convergence of total masses imply weak convergence of the actual spatial-polar pushforward finite measures.",
+      "excluded_own_claims": "No current/polyhedral approximation, Jacobian, retraction, sharp upper mass or transfer statement is supplied. Native unit-barycenter concentration is separately proved.",
+      "state": "compiled generic explicit measure-theory parameter; instantiated for actual Euclidean AK mass measures and Plucker densities in strict_tangent_measure_tendsto and the constructed exact polyhedral approximation"
+    },
+    {
+      "id": "bounded-upper-Portmanteau",
+      "reference": "P. Billingsley, Convergence of Probability Measures, 2nd edition (1999), Theorem 2.1, bounded upper-semicontinuous integral form; finite-measure form includes total-mass convergence. Mathlib pinned Portmanteau.lean independently provides the closed-set finite-measure form.",
+      "primary_urls": [
+        "https://doi.org/10.1002/9780470316962",
+        "https://github.com/leanprover-community/mathlib4/blob/f897ebcf72cd16f89ab4577d0c826cd14afaafc7/Mathlib/MeasureTheory/Measure/Portmanteau.lean"
+      ],
+      "lean_input": "Paper28.UpperPortmanteauInput",
+      "input_scope": "For weakly convergent actual finite Borel measures on a metric space and a globally bounded nonnegative upper-semicontinuous real function J, its integrals are eventually at most the limiting integral plus every positive epsilon.",
+      "excluded_own_claims": "No geometric integrand, current, Jacobian equality or sharp mass bound is included; the actual incident compound-Jacobian envelope and its tangent value are own proofs.",
+      "state": "compiled generic explicit measure-theory parameter; instantiated with the actual native bounded incident exterior-Jacobian envelope in sharp_exterior_envelope_integral"
+    },
+    {
+      "id": "classical-simplicial-singular-comparison",
+      "reference": "A. Hatcher, Algebraic Topology, Section 2.1, Theorem 2.27, printed pp. 128-130. Author-hosted primary PDF verified.",
+      "primary_urls": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf"
+      ],
+      "lean_input": "Paper28.SimplicialSingularHomologyComparisonInput",
+      "input_scope": "For any native finite Euclidean simplicial complex and a Lipschitz homeomorphic realization, the canonical characteristic-simplex map from its actual strict ordered integer simplicial chain complex to the actual continuous singular chain complex induces homology isomorphisms. Vertices, ordered/strict simplices, alternating boundaries and the actual barycentric map are local constructions.",
+      "excluded_own_claims": "No current integration map or its homology injectivity/isomorphism, no sharp approximation, no spherical filling or other own estimate is supplied.",
+      "state": "precise explicit standard comparison parameter; no axiom or closed witness; source filling is derived using this and the separate RS comparison"
+    },
+    {
+      "id": "classical-Euclidean-common-cell-subdivision",
+      "reference": "C. P. Rourke and B. J. Sanderson, Introduction to Piecewise-Linear Topology (1972), Section 2: cell intersections 2.8(5)-(6), simplicial subdivision Proposition 2.9, simultaneous subcomplex Addendum 2.12, printed pp.15-16; with canonical affine integration additivity under subdivision (standard Euclidean polychain/current compatibility). Primary printed text verified, PDF pp.22-23.",
+      "primary_urls": [
+        "https://webhomes.maths.ed.ac.uk/~v1ranick/papers/rsplx.pdf",
+        "https://doi.org/10.1007/978-3-642-81735-9"
+      ],
+      "lean_input": "Paper28.EuclideanPolyhedralCellSubdivisionInput",
+      "input_scope": "For an actual Euclidean integral polyhedral current supported in an open set covered by finitely many convex hulls of finite vertex sets, common affine subdivision supplies a finite integer decomposition into actual affine simplex integration currents, each contained in the open set and one convex cell. The generic input combines classical simultaneous subdivision with canonical affine integration additivity/locality.",
+      "excluded_own_claims": "No spherical map, retraction, approximate cycle, homology, prescribed filling, mass estimate, collapsed-image vanishing or spherical-polyhedral preservation is supplied. Explicit projective formulas, actual image geometry, rank-drop zero current and linear pushforward membership are local own proofs.",
+      "state": "precise explicit generic Euclidean subdivision parameter; no axiom or closed witness"
+    },
+    {
+      "id": "standard-intrinsic-spherical-cell-metric",
+      "reference": "M. W. Davis, The Geometry and Topology of Coxeter Groups, Appendix I.3, printed p.508 (author primary PDF p.523): the intrinsic metric of a piecewise spherical polyhedron is the infimum of lengths of finite cellwise geodesic paths; connected components are treated separately.",
+      "primary_urls": [
+        "https://people.math.osu.edu/davis.12/davisbook.pdf"
+      ],
+      "lean_input": "Paper28.SphericalCellPathMetricInput",
+      "input_scope": "Only exact metric-defining data on one connected actual spherical chart realization: finite paths use actual lifted points in actual closed spherical cells and lengths are actual round angles; paths exist between each pair and dist is exactly the infimum of their lengths.",
+      "excluded_own_claims": "No Lipschitz constant for h or its inverse, no retraction, deformation, homotopy, current, mass or approximation is supplied. One-cell distance upper bounds and generic Lipschitz gluing along the exact native paths are own proofs.",
+      "state": "precise explicit intrinsic metric-object parameter; actual paths and length are native constructions; no closed metric witness or axiom"
+    },
+    {
+      "id": "classical-spherical-full-neighborhood-realization",
+      "reference": "Rourke and Sanderson, Introduction to Piecewise-Linear Topology (1972), Proposition 2.9, Addendum 2.12, and Lemma 3.3(a), printed pp.15-16,31 (primary PDF pp.22-23,38). Applied to the ordinary PL structure of finite spherical cells in gnomonic coordinates, with the defining intrinsic cell-path metric (Davis Appendix I.3).",
+      "primary_urls": [
+        "https://webhomes.maths.ed.ac.uk/~v1ranick/papers/rsplx.pdf",
+        "https://people.math.osu.edu/davis.12/davisbook.pdf"
+      ],
+      "lean_input": "Paper28.SphericalFullNeighborhoodInput",
+      "input_scope": "For a finite spherical triangulation defined independently of any neighborhood atlas, construct only an actual finite Euclidean realization and a classical full-subcomplex neighborhood triangulation, with actual barycentric hats, affine slopes, normalized spherical cell charts, independent unit vertices, cellwise linear isometric coordinate inclusions into the source charts, and exact intrinsic metric identification. Full-subcomplex neighborhood existence and compatibility are an explicit standard PL construction corollary, not claimed as a verbatim single numbered theorem.",
+      "excluded_own_claims": "No Lipschitz bound for the realization or inverse, no retraction/homotopy, derivative, sharp mass, current approximation, cycle, homology or filling is supplied. The actual h/h-inverse bounds, actual deleting-and-renormalizing retraction, contractions and all analytic estimates are native proofs.",
+      "state": "precise explicit standard geometric-object construction parameter; no axiom or closed witness"
+    },
+    {
+      "id": "classical-finite-geodesic-common-refinement",
+      "reference": "Rourke and Sanderson, Introduction to Piecewise-Linear Topology (1972), cell intersections 2.8(5)-(6), simplicial subdivision 2.9 and simultaneous subcomplex refinement 2.12, printed pp.15-16. Elementary gnomonic-coordinate corollary for finite spherical geodesic pieces, combined only with canonical AK simplex-integration additivity under subdivision.",
+      "primary_urls": [
+        "https://webhomes.maths.ed.ac.uk/~v1ranick/papers/rsplx.pdf",
+        "https://www.mis.mpg.de/de/publications/preprint-repository/article/2000/issue-21"
+      ],
+      "lean_input": "Paper28.SphericalFiniteRefinementInput",
+      "input_scope": "For any finite collection of actual independent geodesic simplex parameterizations contained, via linear isometric coordinate inclusions, in actual source spherical cells, common geometric refinement returns only an actual refined finite Euclidean/spherical cell realization and finite signed characteristic-simplex decompositions whose canonical integration equals each given simplex current. This is a standard common-subdivision plus canonical integration compatibility corollary, not a separately numbered theorem in the source.",
+      "excluded_own_claims": "No simplicial cycle condition, homology comparison, current boundary, filling, approximation or mass estimate is a field. Finite integer assembly of any source polyhedral current, actual integration injectivity, deduction of its simplicial cycle condition and exact prescribed polyhedral filling are native proofs.",
+      "state": "compiled precise explicit generic geometric subdivision/integration compatibility parameter; no axiom or closed witness"
+    },
+    {
+      "id": "general-finite-round-quotient-realization",
+      "reference": "Rourke–Sanderson, Introduction to Piecewise-Linear Topology, §2 (2.8–2.12); Bridson–Haefliger, Metric Spaces of Non-Positive Curvature, I.7 (polyhedral subdivision 7.49; finite distortion 7A.12–7A.13, printed pp.128–129); Davis, Appendix I.3. A combined finite proper geodesic-chart/common-refinement corollary, not a verbatim separately numbered theorem.",
+      "primary_urls": [
+        "https://webhomes.maths.ed.ac.uk/~v1ranick/papers/rsplx.pdf",
+        "https://www.maths.ed.ac.uk/~v1ranick/papers/bridsonhaefligerx.pdf",
+        "https://people.math.osu.edu/davis.12/davisbook.pdf"
+      ],
+      "lean_input": "Paper28.FiniteRoundQuotientRealizationInput",
+      "input_scope": "For any finite collection of actual proper finite-coordinate geodesic charts in the regular round orbit quotient, with explicit finite overlap translates, general common refinement/realization supplies a finite spherical polyhedron, its exact identification with the covered set, ordinary bi-Lipschitz comparison, actual linear isometric chart lifts and round metric agreement along every relative face. No numerical sharp constant is supplied. The actual coordinate carrier is proved natively to admit this presentation: finite_carrier_liftable_simplex_cover plus projected_liftable_simplex_intersection.",
+      "excluded_own_claims": "No deformation, current, polyhedral approximation, homology, relative filling, transfer or free-product volume assertion.",
+      "state": "precise explicit unformalized general geometric-foundation parameter; actual native presentation hypotheses checked in finite_carrier_spherical_presentation; no axiom or closed witness"
+    },
+    {
+      "id": "AK-finite-stratified-current-transport",
+      "reference": "Ambrosio–Kirchheim (2000), rectifiable representation, pushforward/area and locality; Lang, Local currents in metric spaces, Proposition 3.3, equations (3.3)–(3.5), Lemmas 3.7 and 4.6–4.7; common subdivision from Rourke–Sanderson §2. Combined standard canonical-object/compatibility corollary, not a separately numbered approximation theorem.",
+      "primary_urls": [
+        "https://doi.org/10.1007/BF02392711",
+        "https://people.math.ethz.ch/~lang/Lang_LocalCurrents.pdf",
+        "https://webhomes.maths.ed.ac.uk/~v1ranick/papers/rsplx.pdf"
+      ],
+      "lean_input": "Paper28.FiniteRoundCurrentTransportInput",
+      "input_scope": "On an already supplied finite spherical realization with actual forward/inverse Lipschitz maps, exact chart lifts and relative-face local metric agreement, supply canonical AK algebras on the space/components and their standard calculus foundations. The canonical closed-support pull/push is an additive chain equivalence, preserves mass by finite relative-face restriction and metric locality, and identifies the finite geodesic polyhedral subgroups by common subdivision and change of variables (including positive vertex normalization). This is a universal compatibility theorem on arbitrary finite proper spherical-chart presentations, not a carrier approximation/filling premise.",
+      "excluded_own_claims": "No cycle, approximation sequence, homology equivalence of a prescribed cycle, existence of filling, sharp deformation estimate, transfer independence/boundary/joint mass, or additivity conclusion.",
+      "state": "precise explicit unformalized standard AK/PL compatibility parameter; no axiom or closed witness; source 3.1 conclusions must be derived using proved 5.1 and 5.2"
+    },
+    {
+      "id": "standard-Bass-Serre-free-product-object",
+      "reference": "J.-P. Serre, Trees (1980), Chapter I, §4.1, Theorems 6–7, pp.32–35; publisher primary entry and original SMF edition.",
+      "primary_urls": [
+        "https://doi.org/10.1007/978-3-642-61856-7",
+        "https://smf.emath.fr/publications/arbres-amalgames-sl2-3e-edition"
+      ],
+      "lean_input": "Paper28.BassSerreStructureInput",
+      "input_scope": "For actual subgroups A,B of G satisfying the exact categorical free-product universal property, the actual coset graph on (G/A) disjoint union (G/B), edge g joining gA and gB, is a tree; its edges are bijectively labeled by G, and incident neighbors are labeled by A or B using the explicit chosen coset representative.",
+      "excluded_own_claims": "No branch shadow, contraction, finite transfer, lift/presentation independence, boundary formula, joint mass or additivity. All are separate native proofs.",
+      "state": "precise explicit unformalized standard structure parameter; actual coset graph and universal property defined natively; no axiom or closed witness"
+    },
+    {
+      "id": "generic-geodesic-current-presentation-gluing",
+      "reference": "Rourke–Sanderson §2, 2.8–2.12, finite common subdivision; AK canonical integration locality and pushforward; Lang Proposition 2.6 and Lemma 3.7 (Euclidean integration/change of variables), finite simplex test-form separation. This is a combined standard geodesic-current presentation corollary, not a separately numbered published transfer theorem.",
+      "primary_urls": [
+        "https://webhomes.maths.ed.ac.uk/~v1ranick/papers/rsplx.pdf",
+        "https://people.math.ethz.ch/~lang/Lang_LocalCurrents.pdf",
+        "https://doi.org/10.1007/BF02392711"
+      ],
+      "lean_input": "Paper28.SphericalCurrentGluingInput; Paper28.LiftedSphericalSimplexIntegrationInput",
+      "input_scope": "For the canonical integrations of arbitrary proper finite-coordinate spherical simplex charts, the projection of actual lifted integration is actual quotient integration; its finite formal integer presentation kernel is generated by lifted-current zero relations and group-translation relations. Ordinary simplex Stokes admits finite proper-chart common refinement of faces. The actual source hypotheses are carried by LiftableSphericalSimplex (unit/independent/hemisphere/finite coordinates/closed injection/interior local isometry), the native exact finite-overlap theorem and proper regular action. These inputs apply to every countable group and contain no Bass–Serre tree or shadow.",
+      "excluded_own_claims": "No transfer, lift/presentation independence of any shadow sum, transfer boundary identity, joint mass, approximation, filling or additivity. Native sphericalLiftRelations_killed and surjective additive descent prove the concrete independence; native finite integer Stokes assembly and raw boundary theorem prove equation (10).",
+      "state": "precise explicit unformalized standard PL/canonical-current compatibility corollary; no axiom or closed witness; not counted as a native reconstruction of the general gluing theorem"
+    },
+    {
+      "id": "AK-finite-coordinate-individual-area",
+      "reference": "Ambrosio–Kirchheim, Currents in metric spaces (2000), rectifiable representation and area formula; Lang, Local currents in metric spaces, Lemma 4.6 (individual pushforward mass), Lemma 4.7 (Borel restriction/mass locality), §8 (rectifiable representation). Finite orthogonal coordinate inclusion/partition compatibility is the ordinary isometric coordinate-change corollary. Not a separately numbered joint estimate.",
+      "primary_urls": [
+        "https://doi.org/10.1007/BF02392711",
+        "https://people.math.ethz.ch/~lang/Lang_LocalCurrents.pdf"
+      ],
+      "lean_input": "Paper28.FiniteCoordinateCurrentAreaInput",
+      "input_scope": "A current on the native regular sphere supported in a chosen finite coordinate set has its canonical finite-Euclidean rectifiable-current representation, with total mass exactly equal to the actual source current mass and integrable actual Gram Jacobians. For any single coordinate-partition norm map followed by a contracting round orbit projection, its individual pushed mass is at most the integral of the actual finite-partition Jacobian, provided the exact coordinate routing identity is supplied. The actual Bass–Serre routing identities and finite edge inclusion are native proofs.",
+      "excluded_own_claims": "No tree, sum of Jacobians, Jacobian upper bound, transfer or joint mass inequality. Native lemma_2_3 and finite integration yield bassSerre_hull_joint_area; native sum extension/triangle inequality yields the raw joint bound.",
+      "state": "precise explicit unformalized generic individual AK area/coordinate-compatibility foundation; exact actual finite hull/routing hypotheses checked natively; no axiom or closed witness"
+    },
+    {
+      "id": "standard-geodesic-polychain-mass-presentation",
+      "reference": "Rourke–Sanderson §2, finite common subdivision 2.8–2.12; AK canonical integration and injective locally isometric area/mass locality; Lang Lemmas 3.7, 4.6–4.7. Standard finite geodesic polychain normal-presentation corollary, not a transfer theorem.",
+      "primary_urls": [
+        "https://webhomes.maths.ed.ac.uk/~v1ranick/papers/rsplx.pdf",
+        "https://doi.org/10.1007/BF02392711",
+        "https://people.math.ethz.ch/~lang/Lang_LocalCurrents.pdf"
+      ],
+      "lean_input": "Paper28.GeodesicPolyhedralMassInput",
+      "input_scope": "Every actual finite integer geodesic polyhedral current admits a finite common-refined presentation with disjoint projected relative interiors. Its actual mass is the sum of absolute integer coefficients times the actual lifted simplex integration masses, using only injective/interior-local-round chart compatibility. All geometries are actual LiftableSphericalSimplex objects; finite relevant overlap translates are natively proved.",
+      "excluded_own_claims": "No shadow, transfer, area bound for a family, approximation, homology, filling or additivity. The native joint simplex transfer inequality and native integer triangle/sum assembly prove (11).",
+      "state": "precise explicit unformalized standard PL/canonical-AK mass-compatibility corollary under renewed user authorization; no axiom or closed witness"
+    },
+    {
+      "id": "standard-Hilbert-coordinate-regrouping",
+      "reference": "Ordinary orthogonal l2 direct-sum/Fubini regrouping; the norm-folding construction of Song §3.4.1, formula (23). These two elementary algebraic identities are a standard coordinate-sum corollary, not a separately numbered paper theorem.",
+      "primary_urls": [
+        "https://arxiv.org/pdf/2202.10636v6"
+      ],
+      "lean_input": "Paper28.HilbertGroupingInput",
+      "input_scope": "For arbitrary coordinate partitions, composition of the actual native lp fiber-norm maps equals regrouping by the composite partition; a constant partition gives the actual single coordinate vector with coefficient equal to the original norm. Exact identities only.",
+      "excluded_own_claims": "No group, tree, current, transfer, homology, mass inequality or volume conclusion. Native actual branch restrictions and pushforward algebra derive factor recovery.",
+      "state": "precise explicit unformalized elementary standard Hilbert regrouping parameter under renewed foundation authorization; no axiom/closed witness"
+    },
+    {
+      "id": "standard-injective-coordinate-geodesic-pushforward",
+      "reference": "Song §3.4.1 formula (23), specialized to an injective group homomorphism (coordinate absolute value followed by zero extension); Rourke–Sanderson §2, 2.8–2.12 common geodesic/sign-plane subdivision; canonical AK simplex pushforward/change of variables. Combined standard compatibility corollary, not a separately numbered transfer or approximation theorem.",
+      "primary_urls": [
+        "https://arxiv.org/pdf/2202.10636v6",
+        "https://webhomes.maths.ed.ac.uk/~v1ranick/papers/rsplx.pdf",
+        "https://doi.org/10.1007/BF02392711"
+      ],
+      "lean_input": "Paper28.InjectiveGeodesicFoldingInput",
+      "input_scope": "For each single actual proper finite-coordinate spherical simplex and an injective group homomorphism, its actual sphere-current pushforward under the canonical norm fold has an exact finite integer proper-geodesic simplex integration presentation in the target. Coordinate sign cuts turn the operation into isometric coordinate inclusions on finitely many pieces, followed by ordinary proper-chart common refinement. Integer chain assembly, quotient-square compatibility and quotient polyhedral preservation are native proofs.",
+      "excluded_own_claims": "No transfer, factor current/class recovery, approximation, filling, joint mass or free-product additivity.",
+      "state": "precise explicit unformalized standard PL/AK coordinate-monomorphism compatibility corollary; no axiom or closed witness"
+    },
+    {
+      "id": "standard-oriented-connected-sum-topology",
+      "reference": "A. Hatcher, Algebraic Topology, Theorem 1.20 (van Kampen), printed pp.43–45; Theorem 3.26 and §3.3 (oriented fundamental classes/excision), printed pp.236–239; connected-sum construction discussed in §3.3 Exercise 6, printed p.257. The free-product and pinch-class identities are the standard n>=3 connected-sum/excision corollary, not a separately numbered spherical-volume theorem.",
+      "primary_urls": [
+        "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf"
+      ],
+      "lean_input": "Paper28.ManifoldTopologyObjectsInput; Paper28.ConnectedSumTopologyInput",
+      "input_scope": "Standard topological orientation objects (coherent integral local-homology generators), oriented connected-sum construction, and canonical classifying image of the fundamental class. The underlying closed connected Hausdorff second-countable n-manifolds have native ChartedSpace R^n structures and actual native FundamentalGroup objects. For n>=3, standard topology supplies a countable fundamental-group model with actual subgroups A,B, explicit isomorphisms to the actual three manifold fundamental groups, the exact free-product universal property, and the pinch-map identity of their canonical classifying fundamental classes.",
+      "excluded_own_claims": "No metric current, mass, spherical volume, transfer, free-product additivity or connected-sum volume identity. Corollary1.2 must apply the native Theorem1.1 to these purely topological data.",
+      "state": "precise explicit unformalized standard topology object/theorem parameters under renewed user authorization; the n>=3 hypothesis is checked natively from dimension k+4; no closed orientation/topology witness or native reconstruction of van Kampen/fundamental-class theory is claimed"
+    }
+  ],
+  "paper_owned_results_not_externalized": [
+    "Theorem 1.1 free-product additivity",
+    "Corollary 1.2 connected-sum additivity",
+    "Lemma 2.1 complete a.e. n-Jacobian inequality",
+    "Lemma 2.3 tree Jacobian induction",
+    "Lemma 3.1 full quotient approximation and fillings",
+    "Proposition 3.2 integral transfers and joint mass inequality",
+    "Lemma 5.1 relative carrier deformation",
+    "Lemma 5.2 sharp spherical-polyhedron approximation and filling comparison"
+  ]
+}

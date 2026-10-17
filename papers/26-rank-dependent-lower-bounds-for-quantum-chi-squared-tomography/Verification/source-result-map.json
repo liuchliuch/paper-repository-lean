@@ -1,0 +1,644 @@
+{
+  "paper_id": "26",
+  "source_inventory": {
+    "paper_id": "26",
+    "source_url": "https://liuchliuch.github.io/repository/rank-dependent-lower-bounds-for-quantum-chi-squared-tomography/",
+    "html_sha256": "82fbb919e1ff2bca072fd218b1c07f95527d5d5b50088e5a7452eb6d9b95273b",
+    "note": "Independent source inventory; generated proofs have not been accepted. Unnumbered substantive claims require additional review.",
+    "block_count": 21,
+    "proof_result_count": 20,
+    "results": [
+      {
+        "anchor": "S1.Thmtheorem1",
+        "kind": "definition",
+        "label": "Definition 1.1 (Learning model).",
+        "statement": "[S1.Thmtheorem1] Definition 1.1 (Learning model).\n [S1.Thmtheorem1.p1] \nA learner receives  $n$  independent copies of an unknown  $\\rho\\in\\mathcal{D}_{d,r}$  and returns an arbitrary density matrix  $\\widehat{\\sigma}\\in\\mathcal{D}_{d}$ . Its output need not have rank at most  $r$ . For a loss  $L$ , the constant-confidence requirement is\n [S1.E6] \n $\\inf_{\\rho\\in\\mathcal{D}_{d,r}}\\mathbb{P}_{\\rho}\\{L(\\rho,\\widehat{\\sigma})\\leq\\varepsilon\\}\\geq\\frac{2}{3}.$ (6)\n\nCollective measurements permit any positive operator-valued measure (POVM) on  $\\rho^{\\otimes n}$ . Adaptive one-copy measurements permit a POVM on each next copy chosen from previous classical outcomes and internal randomness, but no quantum memory coupling different copies. All consumed copies, including rejected projection outcomes, count toward  $n$ . Measurements and estimators are measurable.",
+        "fragment_sha256": "401597cd449d95a61a5ecec7c6abb5e9949c6d4f51ccf536cc35d79487854c8a"
+      },
+      {
+        "anchor": "S1.Thmtheorem2",
+        "kind": "theorem",
+        "label": "Theorem 1.2 (Main lower bounds).",
+        "statement": "[S1.Thmtheorem2] Theorem 1.2 (Main lower bounds).\n [S1.Thmtheorem2.p1] \nThere are universal constants  $c,\\varepsilon_{0}>0$  such that, for all integers  $d\\geq 2$ ,  $1\\leq r\\leq d$ , and  $0<\\varepsilon\\leq\\varepsilon_{0}$ ,\n [S1.EGx3] \n $\\displaystyle N_{\\rm coll}(\\mathcal{D}_{d,r},\\chi^{2}_{\\mathrm{B}},\\varepsilon)$  $\\displaystyle\\geq c\\frac{\\sqrt{r}\\,d^{3/2}}{\\varepsilon},$  $\\displaystyle N_{\\rm one}(\\mathcal{D}_{d,r},\\chi^{2}_{\\mathrm{B}},\\varepsilon)$  $\\displaystyle\\geq c\\frac{r^{3/2}d^{3/2}}{\\varepsilon},$ (7)\n\n $\\displaystyle N_{\\rm coll}(\\mathcal{D}_{d,r},\\chi^{2}_{\\mathrm{R}},\\varepsilon)$  $\\displaystyle\\geq c\\frac{d^{2}}{\\varepsilon^{2}},$  $\\displaystyle N_{\\rm one}(\\mathcal{D}_{d,r},\\chi^{2}_{\\mathrm{R}},\\varepsilon)$  $\\displaystyle\\geq c\\frac{rd^{2}}{\\varepsilon^{2}}.$ (8)\n\nFor  $1\\leq r\\leq d/2$ , the same bounds hold on the smaller family  $\\rho=P/r$ , where  $P$  ranges over rank- $r$  orthogonal projectors.",
+        "fragment_sha256": "80537a45757ecd147a16ddca1cb47f004372dc181a45e4c72e076fdb9b4fe135"
+      },
+      {
+        "anchor": "S1.Thmtheorem3",
+        "kind": "theorem",
+        "label": "Theorem 1.3 (Upper bounds).",
+        "statement": "[S1.Thmtheorem3] Theorem 1.3 (Upper bounds).\n [S1.Thmtheorem3.p1] \nFor  $0<\\varepsilon\\leq 1$  and  $0<\\delta<1/2$ , let  $L_{0}=\\lceil\\log_{2}(16d/\\varepsilon)\\rceil$ . There are learners that succeed with probability at least  $1-\\delta$  uniformly on  $\\mathcal{D}_{d,r}$ , with the following copy bounds:\n [S1.EGx4] \nBures, collective: $\\displaystyle O\\!\\left(\\frac{\\sqrt{r}\\,d^{3/2}}{\\varepsilon}L_{0}^{2}\\log\\frac{L_{0}}{\\delta}\\right),$ (9)\n\nBures, adaptive one-copy: $\\displaystyle O\\!\\left(\\frac{r^{3/2}d^{3/2}}{\\varepsilon}L_{0}^{2}\\log\\frac{2dL_{0}}{\\delta}\\right),$ (10)\n\nRight-inverse, collective: $\\displaystyle O\\!\\left(\\frac{d^{2}}{\\varepsilon^{2}}\\log\\frac{1}{\\delta}\\right),$ (11)\n\nRight-inverse, adaptive one-copy: $\\displaystyle O\\!\\left(\\frac{rd^{2}}{\\varepsilon^{2}}\\log\\frac{2d}{\\delta}\\right).$ (12)\n\nFor pure inputs, collective measurements achieve  $O(d^{3/2}/\\varepsilon)$  for  $\\chi^{2}_{\\mathrm{B}}$  and  $O(d^{2}/\\varepsilon^{2})$  for  $\\chi^{2}_{\\mathrm{R}}$  at constant confidence, without logarithmic factors.",
+        "fragment_sha256": "a073aea7d6fe9820317248901e170cabe6bfda6dc22ca14b7f8dfad65dee8750"
+      },
+      {
+        "anchor": "S1.Thmtheorem4",
+        "kind": "lemma",
+        "label": "Lemma 1.4 (Two comparison inequalities).",
+        "statement": "[S1.Thmtheorem4] Lemma 1.4 (Two comparison inequalities).\n [S1.Thmtheorem4.p1] \nFor density matrices,\n [S1.E13] \n $\\mathsf{b}(\\rho,\\sigma)^{2}\\leq\\chi^{2}_{\\mathrm{B}}(\\rho\\,\\|\\,\\sigma),\\qquad\\left\\lVert\\rho-\\sigma\\right\\rVert_{1}^{2}\\leq\\chi^{2}_{\\mathrm{B}}(\\rho\\,\\|\\,\\sigma).$ (13)\n\nMoreover  $\\chi^{2}_{\\mathrm{B}}$  is the largest classical chi-squared divergence obtainable by measuring the pair of states with the same POVM.",
+        "fragment_sha256": "3546c5229182efd06dd8eced0b59c2dacb5eb9ec27c902828bb4c5651f367b25"
+      },
+      {
+        "anchor": "S2.Thmtheorem1",
+        "kind": "lemma",
+        "label": "Lemma 2.1 (Grassmann coordinates and a matrix ball).",
+        "statement": "[S2.Thmtheorem1] Lemma 2.1 (Grassmann coordinates and a matrix ball).\n [S2.Thmtheorem1.p1] \nLet\n [S2.Ex8] \n $V_{s,r}=\\operatorname{vol}\\{Z\\in\\mathbb{C}^{s\\times r}:Z^{*}Z<\\mathrm{I}_{r}\\}.$ \n\nThen\n [S2.E14] \n $V_{s,r}=\\pi^{q}\\prod_{j=1}^{r}\\frac{(j-1)!}{(s+j-1)!},\\qquad\\left(\\frac{\\pi}{2s}\\right)^{q}\\leq V_{s,r}\\leq\\left(\\frac{\\pi e}{s}\\right)^{q}.$ (14)\n\nIn the graph chart\n [S2.E15] \n $U_{X}=\\begin{pmatrix}\\mathrm{I}_{r}\\\\ X\\end{pmatrix}(\\mathrm{I}_{r}+X^{*}X)^{-1/2},\\qquad P_{X}=U_{X}U_{X}^{*},$ (15)\n\nHaar measure has density\n [S2.E16] \n $\\frac{d\\mu}{dX}=V_{s,r}^{-1}\\det(\\mathrm{I}_{r}+X^{*}X)^{-d}.$ (16)\n\nIf  $U$  is a Haar orthonormal  $r$ -frame in  $\\mathbb{C}^{r+s}$  and  $Z$  denotes its last  $s$  rows, then  $Z$  is uniform on the matrix ball in Equation 14.",
+        "fragment_sha256": "b67c397f4e7c5521f96c96d7d1b12e7725659fca389b89faa1f8ea284aedbb44"
+      },
+      {
+        "anchor": "S2.Thmtheorem2",
+        "kind": "lemma",
+        "label": "Lemma 2.2 (Tail mass and subspace distance).",
+        "statement": "[S2.Thmtheorem2] Lemma 2.2 (Tail mass and subspace distance).\n [S2.Thmtheorem2.p1] \nIf  $0<\\varepsilon\\leq 1/4$  and  $\\chi^{2}_{\\mathrm{B}}(P/r\\,\\|\\,\\sigma)\\leq\\varepsilon$ , then\n [S2.E17] \n $a\\leq\\varepsilon,\\qquad t:=\\frac{\\operatorname{Tr}(P(\\mathrm{I}-Q))}{r}\\leq 4\\varepsilon.$ (17)\n\nThe same holds under a  $\\chi^{2}_{\\mathrm{R}}\\leq\\varepsilon$  guarantee.",
+        "fragment_sha256": "c2cbbd3b485d3ccc91d4128798c4bbb4add6c5c103f2fba4702cc3eb33ad84fa"
+      },
+      {
+        "anchor": "S2.Thmtheorem3",
+        "kind": "lemma",
+        "label": "Lemma 2.3 (Uniform tail eigenvalues maximize a volume).",
+        "statement": "[S2.Thmtheorem3] Lemma 2.3 (Uniform tail eigenvalues maximize a volume).\n [S2.Thmtheorem3.p1] \nFor fixed  $K>0$  and  $\\operatorname{Tr}A=a$ , the Lebesgue volume of  $\\{Z\\in\\mathbb{C}^{s\\times r}:H_{A}(Z)\\leq K\\}$  is at most its value at  $A=(a/s)\\mathrm{I}_{s}$ .",
+        "fragment_sha256": "cc7c4e461c9e7228f98cba9dd719a33b11c90535875b95d688c7d5c399fa9d9b"
+      },
+      {
+        "anchor": "S2.Thmtheorem4",
+        "kind": "theorem",
+        "label": "Theorem 2.4 (Haar volumes of loss balls).",
+        "statement": "[S2.Thmtheorem4] Theorem 2.4 (Haar volumes of loss balls).\n [S2.Thmtheorem4.p1] \nFor  $0<\\varepsilon\\leq 1/4$  and any density matrix  $\\sigma$ ,\n [S2.EGx5] \n $\\displaystyle\\mu\\{P:\\chi^{2}_{\\mathrm{B}}(P/r\\,\\|\\,\\sigma)\\leq\\varepsilon\\}$  $\\displaystyle\\leq\\left(6e\\,\\varepsilon\\sqrt{r/s}\\right)^{q},$ (19)\n\n $\\displaystyle\\mu\\{P:\\chi^{2}_{\\mathrm{R}}(P/r\\,\\|\\,\\sigma)\\leq\\varepsilon\\}$  $\\displaystyle\\leq\\left(18e\\,r\\varepsilon^{2}/s\\right)^{q}.$ (20)",
+        "fragment_sha256": "b4e46d27edb3358a396267ca5369924d2249c53cc1c391387473f202558807e6"
+      },
+      {
+        "anchor": "S2.Thmtheorem5",
+        "kind": "corollary",
+        "label": "Corollary 2.5 (Euclidean volumes in a fixed local chart).",
+        "statement": "[S2.Thmtheorem5] Corollary 2.5 (Euclidean volumes in a fixed local chart).\n [S2.Thmtheorem5.p1] \nLet  $0<\\varepsilon\\leq 1/4$  and restrict  $X$  in Equation 15 to  $\\left\\lVert X\\right\\rVert_{\\mathrm{op}}\\leq 1/2$ . For every fixed estimate  $\\sigma$ , let  $v_{\\rm B}$  and  $v_{\\rm R}$  be the Lebesgue volumes of the two successful parameter sets in this chart. Then\n [S2.E22] \n $v_{\\rm B}^{1/q}\\leq C\\frac{\\varepsilon\\sqrt{r/s}}{s},\\qquad v_{\\rm R}^{1/q}\\leq C\\frac{r\\varepsilon^{2}}{s^{2}}.$ (22)",
+        "fragment_sha256": "660d2ba7528e996d58000ca5ce923a30980c4b814b5049dca6a7e5ce5eec6028"
+      },
+      {
+        "anchor": "S3.Thmtheorem1",
+        "kind": "lemma",
+        "label": "Lemma 3.1 (Fisher information and volume).",
+        "statement": "[S3.Thmtheorem1] Lemma 3.1 (Fisher information and volume).\n [S3.Thmtheorem1.p1] \nLet  $p\\geq 3$ , let  $\\sqrt{f}\\in H^{1}(\\mathbb{R}^{p})$  vanish outside a compact set, and let  $S$  have Lebesgue volume  $v$ . Then\n [S3.E23] \n $\\int_{S}f\\leq\\frac{v^{2/p}}{p}\\,\\mathcal{I}(f).$ (23)\n\nAn absolute constant in place of  $1$  would give the same conclusions below.",
+        "fragment_sha256": "6166906c7188d48c3f4ba2da86f1f1ac5b74da2a8f420fda923fb0471a1c5760"
+      },
+      {
+        "anchor": "S3.Thmtheorem2",
+        "kind": "lemma",
+        "label": "Lemma 3.2 (Posterior information identity).",
+        "statement": "[S3.Thmtheorem2] Lemma 3.2 (Posterior information identity).\n [S3.Thmtheorem2.p1] \nUnder the preceding conditions, assume  $\\mathbb{E}_{\\pi}\\operatorname{Tr}F_{\\theta}<\\infty$ . Then\n [S3.E24] \n $\\mathbb{E}_{Y}\\mathcal{I}(\\pi(\\cdot\\mid Y))=\\mathcal{I}(\\pi)+\\mathbb{E}_{\\theta\\sim\\pi}\\operatorname{Tr}F_{\\theta}.$ (24)\n\nIn particular, almost every posterior has a compactly supported  $H^{1}$  square root whenever the right-hand side is finite.",
+        "fragment_sha256": "f3e52726a03457a85c13de52a258a286025d70d4bec946b4b98d23147d1fc7f6"
+      },
+      {
+        "anchor": "S3.Thmtheorem3",
+        "kind": "corollary",
+        "label": "Corollary 3.3 (Bayesian success bound).",
+        "statement": "[S3.Thmtheorem3] Corollary 3.3 (Bayesian success bound).\n [S3.Thmtheorem3.p1] \nUnder the preceding conditions, let  $p\\geq 3$ . Suppose that every estimate’s successful parameter set within the prior support has Lebesgue volume at most  $v$ . Then\n [S3.E25] \n $\\mathbb{P}\\{\\text{success}\\}\\leq\\frac{v^{2/p}}{p}\\left(\\mathcal{I}(\\pi)+\\mathbb{E}_{\\pi}\\operatorname{Tr}F_{\\theta}\\right).$ (25)",
+        "fragment_sha256": "0db1ac3bf836354aba1813df50a8ce587aca8412d9558cd441a9b94145e963dd"
+      },
+      {
+        "anchor": "S3.Thmtheorem4",
+        "kind": "lemma",
+        "label": "Lemma 3.4 (Local prior).",
+        "statement": "[S3.Thmtheorem4] Lemma 3.4 (Local prior).\n [S3.Thmtheorem4.p1] \nOn  $\\mathbb{C}^{s\\times r}\\cong\\mathbb{R}^{2rs}$ ,  $r\\leq s$ , there is a prior supported on  $\\left\\lVert X\\right\\rVert_{\\mathrm{op}}\\leq 1/2$  such that\n [S3.E26] \n $\\mathcal{I}(\\pi)\\leq C_{0}rs^{2}.$ (26)\n\nIts square root is compactly supported and belongs to  $H^{1}$ .",
+        "fragment_sha256": "709aba6d066aa8a6c72065ad2d40e2e1a3c60aa97a1ef0f01a3041bd9d94cd64"
+      },
+      {
+        "anchor": "S3.Thmtheorem5",
+        "kind": "lemma",
+        "label": "Lemma 3.5 (Collective and adaptive information budgets).",
+        "statement": "[S3.Thmtheorem5] Lemma 3.5 (Collective and adaptive information budgets).\n [S3.Thmtheorem5.p1] \nFor the  $p=2rs$  real coordinates of  $X$ :\n [S3.EGx7] \n $\\displaystyle\\operatorname{Tr}F_{X}$  $\\displaystyle\\leq\\frac{4np}{r}=8ns$  $\\displaystyle\\text{for any collective measurement on $n$ copies},$ (28)\n\n $\\displaystyle\\operatorname{Tr}F_{X}$  $\\displaystyle\\leq\\frac{4ns}{r}$  $\\displaystyle\\text{for any adaptive one-copy protocol}.$ (29)",
+        "fragment_sha256": "4dda596f12f37c3137d4746901d401717f010eea6277457f5ff7f68456e3437f"
+      },
+      {
+        "anchor": "S5.Thmtheorem1",
+        "kind": "lemma",
+        "label": "Lemma 5.1 (Shell accounting).",
+        "statement": "[S5.Thmtheorem1] Lemma 5.1 (Shell accounting).\n [S5.Thmtheorem1.p1] \nFor each stage  $j$ , assign to it all matrix entries with one index in the newly frozen shell and both indices in the active subspace at that stage. The sum of  $|\\rho_{uv}-A_{uv}|^{2}$  over these ordered entries is at most  $\\eta_{j}$ . Their contribution to\n [S5.Ex45] \n $E_{\\rm B}(\\rho,A):=\\operatorname{Tr}\\bigl[(\\rho-A)\\mathcal{J}_{A}^{-1}(\\rho-A)\\bigr]$ \n\nis therefore at most  $2\\eta_{j}/\\lambda_{j}$ . Every entry outside the final active block is assigned exactly once.",
+        "fragment_sha256": "fe694caaba18fce55eaedcdc742d5e8a34a64051ec0d898d812de6cdb85a75e7"
+      },
+      {
+        "anchor": "S5.Thmtheorem2",
+        "kind": "lemma",
+        "label": "Lemma 5.2 (Exact normalization formula).",
+        "statement": "[S5.Thmtheorem2] Lemma 5.2 (Exact normalization formula).\n [S5.Thmtheorem2.p1] \nLet  $\\rho$  have trace one, let  $A>0$ , and set  $t=\\operatorname{Tr}A$ . For either  $E_{\\rm B}(\\rho,A)$  as above or  $E_{\\rm R}(\\rho,A)=\\operatorname{Tr}[(\\rho-A)^{2}A^{-1}]$ ,\n [S5.E40] \n $\\chi^{2}(\\rho\\,\\|\\,A/t)=tE(\\rho,A)-(t-1)^{2},\\qquad(t-1)^{2}\\leq tE(\\rho,A).$ (40)\n\nIn particular,  $E\\leq 1/2$  implies  $t\\leq 2$  and  $\\chi^{2}(\\rho\\,\\|\\,A/t)\\leq 2E$ .",
+        "fragment_sha256": "2aafc8e4043fed101c34865bf2078744b593c81a0a9032bf81bf309cceddb17a"
+      },
+      {
+        "anchor": "S5.Thmtheorem3",
+        "kind": "lemma",
+        "label": "Lemma 5.3 (One-copy submatrix routine).",
+        "statement": "[S5.Thmtheorem3] Lemma 5.3 (One-copy submatrix routine).\n [S5.Thmtheorem3.p1] \nLet  $0<\\beta<1/2$  and  $\\eta>0$ . If  $W^{2}\\leq\\eta$ , the zero estimate suffices. Otherwise the construction above outputs a positive semidefinite estimate with squared Frobenius error at most  $\\eta$ , with probability at least  $1-\\beta$ , using\n [S5.E44] \n $O\\!\\left[\\left(\\frac{rkW}{\\eta}+k\\sqrt{\\frac{r}{\\eta}}\\right)\\log\\frac{2k}{\\beta}\\right]$ (44)\n\ncopies. The rank bound can be replaced by  $\\min\\{r,k\\}$ . In the nontrivial case  $W^{2}>\\eta$ , the displayed bound is at least a positive constant, so rounding the copy count to an integer does not change its order.",
+        "fragment_sha256": "4ba379d902e21243a7f885f338fb6bc85377e64fa734b0adfc54e5a13d2b119a"
+      },
+      {
+        "anchor": "S5.Thmtheorem4",
+        "kind": "lemma",
+        "label": "Lemma 5.4 (Frobenius error to right-inverse chi-squared).",
+        "statement": "[S5.Thmtheorem4] Lemma 5.4 (Frobenius error to right-inverse chi-squared).\n [S5.Thmtheorem4.p1] \nLet  $\\widehat{\\rho}$  be a density matrix and  $\\sigma=(1-\\alpha)\\widehat{\\rho}+\\alpha\\mathrm{I}_{d}/d$ ,  $0<\\alpha<1$ . Then\n [S5.E47] \n $\\chi^{2}_{\\mathrm{R}}(\\rho\\,\\|\\,\\sigma)\\leq\\frac{2d}{\\alpha}\\left\\lVert\\rho-\\widehat{\\rho}\\right\\rVert_{\\mathrm{F}}^{2}+\\frac{2\\alpha}{1-\\alpha}.$ (47)\n\nIn particular,  $\\alpha=\\varepsilon/8$  and  $\\left\\lVert\\rho-\\widehat{\\rho}\\right\\rVert_{\\mathrm{F}}^{2}\\leq\\varepsilon^{2}/(64d)$  imply  $\\chi^{2}_{\\mathrm{R}}\\leq\\varepsilon$  for  $0<\\varepsilon\\leq 1$ .",
+        "fragment_sha256": "b88014a8ae45589aba38d58ee1d2f31c6bb04ec449a96cdcc82e519dd3770355"
+      },
+      {
+        "anchor": "S5.Thmtheorem5",
+        "kind": "proposition",
+        "label": "Proposition 5.5 (Collective submatrix routine).",
+        "statement": "[S5.Thmtheorem5] Proposition 5.5 (Collective submatrix routine).\n [S5.Thmtheorem5.p1] \nLet  $R$  be a positive semidefinite block of dimension  $k$  and mass  $w\\leq W\\leq 1$ . For  $\\eta>0$  and  $0<\\beta<1/2$ , a collective routine returns a positive semidefinite estimate with squared Frobenius error at most  $\\eta$ , with probability at least  $1-\\beta$ , using\n [S5.E49] \n $O\\!\\left(\\frac{kW}{\\eta}\\log\\frac{1}{\\beta}\\right)$ (49)\n\nfull copies. If  $W^{2}\\leq\\eta$ , no copies are required.",
+        "fragment_sha256": "c297e87dd8174620aa43c1583adc27d92b1f262d44a7e67ff2d96a9575f0a793"
+      },
+      {
+        "anchor": "A1.Thmtheorem1",
+        "kind": "theorem",
+        "label": "Theorem A.1 (Minimax expected right-inverse loss for pure states).",
+        "statement": "[A1.Thmtheorem1] Theorem A.1 (Minimax expected right-inverse loss for pure states).\n [A1.Thmtheorem1.p1] \nFor  $n\\geq 0$  copies of an unknown pure state in dimension  $d$  and arbitrary collective measurements,\n [A1.E50] \n $\\inf_{\\text{learners}}\\sup_{\\psi}\\mathbb{E}_{\\psi}\\chi^{2}_{\\mathrm{R}}(|\\psi\\rangle\\!\\langle\\psi|\\,\\|\\,\\widehat{\\sigma})=\\frac{(\\sqrt{n+1}+d-1)^{2}}{n+d}-1.$ (50)",
+        "fragment_sha256": "431da72c2afcfaef6a02b94b316e3412ec96ddc567fc94d1185c62dc5d280e81"
+      },
+      {
+        "anchor": "A2.Thmtheorem1",
+        "kind": "proposition",
+        "label": "Proposition B.1 (Common center of two flat states).",
+        "statement": "[A2.Thmtheorem1] Proposition B.1 (Common center of two flat states).\n [A2.Thmtheorem1.p1] \nLet  $P,Q$  be rank- $r$  projectors with principal angles  $\\theta_{1},\\ldots,\\theta_{r}$ , in dimension at least  $2r$ . Then\n [A2.EGx10] \n $\\displaystyle\\inf_{\\sigma}\\max\\{\\chi^{2}_{\\mathrm{R}}(P/r\\,\\|\\,\\sigma),\\chi^{2}_{\\mathrm{R}}(Q/r\\,\\|\\,\\sigma)\\}$ \n\n $\\displaystyle\\qquad=\\left(\\frac{1}{r}\\sum_{i=1}^{r}\\sqrt{1+\\sin\\theta_{i}}\\right)^{2}-1\\ \\geq\\ (\\sqrt{2}-1)\\frac{\\left\\lVert P-Q\\right\\rVert_{1}}{r}.$ (52)\n\nThe same minimum is obtained if the maximum is replaced by the arithmetic mean. A minimizing state is proportional to  $\\sqrt{P+Q}$  on its support.",
+        "fragment_sha256": "0bdee0b59511e10379401b9d40456c852bfbbf130a3f28fbf84b9437a1623f8c"
+      }
+    ]
+  },
+  "results": [
+    {
+      "anchor": "S1.Thmtheorem1",
+      "kind": "definition",
+      "label": "Definition 1.1 (Learning model).",
+      "fragment_sha256": "401597cd449d95a61a5ecec7c6abb5e9949c6d4f51ccf536cc35d79487854c8a",
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/QuantumModel.lean",
+        "Paper26/TensorCopies.lean",
+        "Paper26/ContinuousPOVM.lean",
+        "Paper26/CollectiveModel.lean",
+        "Paper26/AdaptiveModel.lean",
+        "Paper26/AdaptiveCollectiveEmbedding.lean",
+        "Paper26/OperatorPOVMTransport.lean",
+        "Paper26/LossMeasurability.lean",
+        "Paper26/JordanLossMeasurability.lean",
+        "Paper26/CopyComplexity.lean",
+        "Paper26/OperatorMeasureConstruction.lean",
+        "Paper26/AdaptiveOperatorModelTransport.lean",
+        "Paper26/SourceCopyComplexity.lean"
+      ],
+      "scope_and_remaining_gap": "Complete actual collective and raw operator-adaptive models on arbitrary measurable outcomes/histories, unrestricted density estimators and exactly counted consumed copies. The native fixed-history-measure construction transports every raw adaptive protocol to the joint dominated model, using only ordinary fixed-space operator RN inputs. SourceCopyComplexity defines the original raw one-copy minimum, proves witness-choice independence and the Equation6 infimum formulation; collective minima and least-achievable-natural-copy statements are native. No family RN or outcome countability assumption is imposed."
+    },
+    {
+      "anchor": "S1.Thmtheorem2",
+      "kind": "theorem",
+      "label": "Theorem 1.2 (Main lower bounds).",
+      "fragment_sha256": "80537a45757ecd147a16ddca1cb47f004372dc181a45e4c72e076fdb9b4fe135",
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/HaarLossBalls.lean",
+        "Paper26/H1PosteriorBound.lean",
+        "Paper26/InformationRateBounds.lean",
+        "Paper26/SampleLowerBounds.lean",
+        "Paper26/RankReduction.lean",
+        "Paper26/GraphExperiment.lean",
+        "Paper26/CollectiveGraphBudget.lean",
+        "Paper26/CollectiveLowerBounds.lean",
+        "Paper26/PureCollectiveLowerBounds.lean",
+        "Paper26/CollectiveMainLowerBounds.lean",
+        "Paper26/OperatorPOVMTransport.lean",
+        "Paper26/AdaptiveGraphBudget.lean",
+        "Paper26/AdaptiveLowerBounds.lean",
+        "Paper26/CoordinateTransport.lean",
+        "Paper26/AdaptiveCoordinateTransport.lean",
+        "Paper26/MainLowerBounds.lean",
+        "Paper26/MainCopyLowerBounds.lean",
+        "Paper26/AdaptiveOperatorModelTransport.lean",
+        "Paper26/FlatLowerBounds.lean",
+        "Paper26/SourceCopyComplexity.lean",
+        "Paper26/FlatCopyComplexity.lean"
+      ],
+      "scope_and_remaining_gap": "All four original minimum-copy lower rates are proved for arbitrary finite ambient indices of cardinal d>=2 and every1<=r<=d, with shared positive c(C),epsilon0(C), actual pure/qubit endpoints and rank reduction. SourceCopyComplexity.theorem_1_2 uses actual collective operator POVMs and original raw operator-adaptive protocols. FlatCopyComplexity.theorem_1_2_flat gives the four actual flat-family minimum bounds, and FlatLowerBounds separately proves all four source final-sentence learner bounds assuming success only on rank-r flat projector states, for2r<=d; it derives prior success directly from that weaker promise. All analysis/geometry/ordinary fixed operator RN inputs remain precisely disclosed known facts. Final unified verification is deferred by the user, not a mathematical scope gap."
+    },
+    {
+      "anchor": "S1.Thmtheorem3",
+      "kind": "theorem",
+      "label": "Theorem 1.3 (Upper bounds).",
+      "fragment_sha256": "a073aea7d6fe9820317248901e170cabe6bfda6dc22ca14b7f8dfad65dee8750",
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/Normalization.lean",
+        "Paper26/ShellAccounting.lean",
+        "Paper26/SpectralLoss.lean",
+        "Paper26/PureState.lean",
+        "Paper26/PureCovariant.lean",
+        "Paper26/PureUpperBounds.lean",
+        "Paper26/FrobeniusLearning.lean",
+        "Paper26/ProductCollectiveMeasurement.lean",
+        "Paper26/FrobeniusAmplification.lean",
+        "Paper26/CollectiveRightUpper.lean",
+        "Paper26/CollectiveRightCopyBound.lean",
+        "Paper26/OneCopyRightUpper.lean",
+        "Paper26/DensityProjection.lean",
+        "Paper26/OneCopyMeanVariance.lean",
+        "Paper26/OneCopyFullRank.lean",
+        "Paper26/MultiscaleRefinement.lean",
+        "Paper26/CollectiveSubmatrixRoutine.lean",
+        "Paper26/CollectiveBlockProtocol.lean",
+        "Paper26/CollectivePadding.lean",
+        "Paper26/StagePolicy.lean",
+        "Paper26/OneCopyStageComposition.lean",
+        "Paper26/MultiscaleUpdate.lean",
+        "Paper26/MultiscaleExecutionFacts.lean",
+        "Paper26/AtomicBatchPolicy.lean",
+        "Paper26/MultiscaleMatrixBridge.lean",
+        "Paper26/MultiscaleEstimator.lean",
+        "Paper26/MultiscaleRoutineBridge.lean",
+        "Paper26/MultiscalePolicy.lean",
+        "Paper26/DyadicSchedule.lean",
+        "Paper26/MultiscaleOneCopyCost.lean",
+        "Paper26/MultiscaleCollectiveCost.lean",
+        "Paper26/CollectiveStageRoutine.lean",
+        "Paper26/CollectiveStageFamily.lean",
+        "Paper26/ProductOutcomeStep.lean",
+        "Paper26/OneCopyBuresUpper.lean",
+        "Paper26/CollectiveBuresUpper.lean",
+        "Paper26/UpperBoundWitnesses.lean",
+        "Paper26/RightUpperWitnesses.lean",
+        "Paper26/PureUpperWitnesses.lean",
+        "Paper26/MainUpperBounds.lean"
+      ],
+      "scope_and_remaining_gap": "All four Equation9-12 uniform actual raw-operator learner witnesses, exact source L0=ceil(log2(16d/epsilon)), confidence1-delta, integer consumed copies and the four correct logarithms are proved in MainUpperBounds.theorem_1_3. The two Bures algorithms construct real moving-basis measurements, use native actual Born laws, derive current mass only from good past histories, and apply native first-failure accounting. StageData is derived from actual execution, never an assumed certificate. MainUpperBounds.theorem_1_3_minima gives all four original2/3 minima; pure_collective/pure_minima give49*d*sqrt(d)/epsilon and25*d^2/epsilon^2 with no logarithms, concrete ceil budgets, and separate input-free d1 zero-copy endpoints. OneCopyFullRank also proves rawNonecopy<=513*d^3/epsilon^2. Relative inputs are only the precisely registered known generic OW, Haar, Bernstein, Weyl, Borel-selection and fixed RN facts. Necessary individual leaf compilations passed and final Bures/unified/pure assemblers have independent read-only semantic reviews; full root/kernel/Comparator verification is separately deferred by the user."
+    },
+    {
+      "anchor": "S1.Thmtheorem4",
+      "kind": "lemma",
+      "label": "Lemma 1.4 (Two comparison inequalities).",
+      "fragment_sha256": "3546c5229182efd06dd8eced0b59c2dacb5eb9ec27c902828bb4c5651f367b25",
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/Classical.lean",
+        "Paper26/ComparisonInequalities.lean",
+        "Paper26/MeasuredChiSquaredAttainment.lean"
+      ],
+      "scope_and_remaining_gap": "Complete native traceNorm(rho-sigma)^2<=chiB, arbitrary dominated measurement classicalchi2<=chiB, and an actual finite projective measurement attaining equality, including supported singular outputs and unsupported infinite-loss branches. MeasuredChiSquaredAttainment.attainingPOVM chooses a real SLD eigenbasis or output-kernel detector; its same measurement attains chiB and dominates every measurable-outcome DPOVM. Also native chiB<=chiG<=chiR. The generic standard Bures metric distance<=chiB and amplitude/metric facts remain precisely disclosed supporting inputs. No new attainment/comparison external field. Necessary leaf checks passed; final unified verification remains deferred."
+    },
+    {
+      "anchor": "S2.Thmtheorem1",
+      "kind": "lemma",
+      "label": "Lemma 2.1 (Grassmann coordinates and a matrix ball).",
+      "fragment_sha256": "b67c397f4e7c5521f96c96d7d1b12e7725659fca389b89faa1f8ea284aedbb44",
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/HaarFrames.lean",
+        "Paper26/HaarTruncation.lean",
+        "Paper26/VolumeRates.lean",
+        "Paper26/VolumeNormalizerUpper.lean",
+        "Paper26/GraphFamily.lean",
+        "Paper26/ChartVolume.lean"
+      ],
+      "scope_and_remaining_gap": "Actual graph projection/density and Haar frame objects are constructed. Exact matrix-ball law/normalizer and exact graph-chart density are disclosed generic known inputs. Matrix-ball volume is derived from the truncation law and both factorial-product normalizer bounds are internally proved; graph image density retains the exact determinant power. No external witness is claimed locally constructed."
+    },
+    {
+      "anchor": "S2.Thmtheorem2",
+      "kind": "lemma",
+      "label": "Lemma 2.2 (Tail mass and subspace distance).",
+      "fragment_sha256": "c2cbbd3b485d3ccc91d4128798c4bbb4add6c5c103f2fba4702cc3eb33ad84fa",
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/TailMassBridges.lean",
+        "Paper26/TailMass.lean"
+      ],
+      "scope_and_remaining_gap": "Final entrypoints TailMassBridges.lemma_2_2_bures/right use actual matrices, rank projectors and root fidelity, relative only to BuresMetricInput and RawCompressionInput. Fidelity/compression trace and square-root formulas and the subspace scalar comparison are internally proved; the older, broader CompressionInput/PrincipalAngleInput are not used by the final entrypoints."
+    },
+    {
+      "anchor": "S2.Thmtheorem3",
+      "kind": "lemma",
+      "label": "Lemma 2.3 (Uniform tail eigenvalues maximize a volume).",
+      "fragment_sha256": "cc7c4e461c9e7228f98cba9dd719a33b11c90535875b95d688c7d5c399fa9d9b",
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/TailConvexity.lean",
+        "Paper26/TailGeometry.lean",
+        "Paper26/SpectralAveraging.lean",
+        "Paper26/VolumeSymmetry.lean",
+        "Paper26/TailVolume.lean"
+      ],
+      "scope_and_remaining_gap": "Actual H_A sublevel Lebesgue-volume maximization is proved from generic Lyapunov positivity, Brunn-Minkowski and unitary Lebesgue invariance inputs. Variational identity, joint convexity, PSD monotonicity, compactness/coercivity and cyclic-permutation averaging are internally proved. Finite AddCommGroup row labels cover every positive integer dimension via Fin s with NeZero s."
+    },
+    {
+      "anchor": "S2.Thmtheorem4",
+      "kind": "theorem",
+      "label": "Theorem 2.4 (Haar volumes of loss balls).",
+      "fragment_sha256": "b4e46d27edb3358a396267ca5369924d2249c53cc1c391387473f202558807e6",
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/HaarLossBalls.lean",
+        "Paper26/DiagonalHaarLossBalls.lean",
+        "Paper26/FrameTailConstraints.lean",
+        "Paper26/BuresTailVolume.lean",
+        "Paper26/RightTailVolume.lean",
+        "Paper26/PositiveOutputDecomposition.lean",
+        "Paper26/SingularHaarLoss.lean",
+        "Paper26/HaarTruncation.lean",
+        "Paper26/VolumeRates.lean"
+      ],
+      "scope_and_remaining_gap": "Final theorem_2_4_bures/right quantify over every actual density output including singular outputs, all 0<r≤s, and 0<epsilon≤1/4; prove the exact 6e and 18e rates for the actual flat-frame state. Relative inputs are individually generic fidelity/compression, Lyapunov/BM/Lebesgue/Jacobian/ball-volume and Haar truncation/subspace-nullity facts. No loss-ball or final rate is an external field. Actual input rank, eigenbasis transfer, support-null event and all numerator/constants are internally proved. Official whole-production audit and fixed Comparator validation are still pending."
+    },
+    {
+      "anchor": "S2.Thmtheorem5",
+      "kind": "corollary",
+      "label": "Corollary 2.5 (Euclidean volumes in a fixed local chart).",
+      "fragment_sha256": "660d2ba7528e996d58000ca5ce923a30980c4b814b5049dca6a7e5ce5eec6028",
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/ChartVolume.lean",
+        "Paper26/HaarLossBalls.lean",
+        "Paper26/GraphFamily.lean",
+        "Paper26/MatrixCoordinates.lean"
+      ],
+      "scope_and_remaining_gap": "Actual graph-family local chart with rectangular operator norm at most 1/2; all fixed density outputs including singular. Native determinant lower-density comparison, actual loss-event measurability and projection/frame image identity connect Theorem2.4 to Lebesgue volume. Full power and qth-root inequalities are proved with explicit Bures constant (75/8)pi*e^2 and right constant (225/8)pi*e^2, relative to the exact generic graph-chart law plus prior named inputs."
+    },
+    {
+      "anchor": "S3.Thmtheorem1",
+      "kind": "lemma",
+      "label": "Lemma 3.1 (Fisher information and volume).",
+      "fragment_sha256": "6166906c7188d48c3f4ba2da86f1f1ac5b74da2a8f420fda923fb0471a1c5760",
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/H1PosteriorBound.lean",
+        "Paper26/FisherVolume.lean"
+      ],
+      "scope_and_remaining_gap": "Actual WeakH1Root uses L2 weak derivatives and integrable test-function IBP. Full dimension>=3 Fisher-volume implication is proved from sharp Talenti-H1 and separately disclosed scalar coarse-constant inputs; Holder/concentration is internal. External witnesses are not asserted."
+    },
+    {
+      "anchor": "S3.Thmtheorem2",
+      "kind": "lemma",
+      "label": "Lemma 3.2 (Posterior information identity).",
+      "fragment_sha256": "f3e52726a03457a85c13de52a258a286025d70d4bec946b4b98d23147d1fc7f6",
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/WeakPosteriorIdentity.lean",
+        "Paper26/PosteriorIdentity.lean",
+        "Paper26/GraphExperiment.lean",
+        "Paper26/LikelihoodSupport.lean",
+        "Paper26/GeneralPosteriorIdentity.lean",
+        "Paper26/GeneralBayesNormalization.lean"
+      ],
+      "scope_and_remaining_gap": "The exact weak-root posterior information identity, including zero marginals, is now proved for arbitrary original reference measures. Native continuity plus normalized likelihoods constructs a common measurable SFinite support; all likelihoods/derivatives vanish outside it, and the weak identity and its integrals transfer back to the original measure. Only the existing generic weak product/derivative-uniqueness inputs and explicit source regularity/energy/differentiation hypotheses remain. Actual collective experiment hypotheses are internally discharged in GraphExperiment. GeneralBayesNormalization.lemma_3_2_probability also proves the literal normalized-prior, finite-data-information probability specialization: actual outcome probability, a.e. normalized weak H1 Bayes posterior, ordinary integrable posterior Fisher and exact real expectation identity."
+    },
+    {
+      "anchor": "S3.Thmtheorem3",
+      "kind": "corollary",
+      "label": "Corollary 3.3 (Bayesian success bound).",
+      "fragment_sha256": "0db1ac3bf836354aba1813df50a8ce587aca8412d9558cd441a9b94145e963dd",
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/H1PosteriorBound.lean",
+        "Paper26/GraphExperiment.lean",
+        "Paper26/WeakPosteriorIdentity.lean",
+        "Paper26/CollectiveLowerBounds.lean",
+        "Paper26/GeneralPosteriorIdentity.lean"
+      ],
+      "scope_and_remaining_gap": "The actual Born experiment is connected to the weak posterior identity and Corollary3.3, with native posterior/average success inequality, LearnsRank-to-prior-success bridge and both loss-event measurability proofs. The arbitrary non-SFinite reference extension of Lemma3.2 is now proved natively in GeneralPosteriorIdentity. The only remaining inputs are precisely named classical Sobolev/weak-analysis facts, not posterior or success conclusions."
+    },
+    {
+      "anchor": "S3.Thmtheorem4",
+      "kind": "lemma",
+      "label": "Lemma 3.4 (Local prior).",
+      "fragment_sha256": "709aba6d066aa8a6c72065ad2d40e2e1a3c60aa97a1ef0f01a3041bd9d94cd64",
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/GraphPrior.lean",
+        "Paper26/MatrixCoordinates.lean",
+        "Paper26/GraphFamily.lean",
+        "Paper26/GaussianRootCalculus.lean",
+        "Paper26/NumericPriorArithmetic.lean",
+        "Paper26/NumericGraphPrior.lean"
+      ],
+      "scope_and_remaining_gap": "Full existential universal-C0 prior is proved from the precisely known raw NZ prior theorem with original C*p*d/a^2 quantifiers; native smooth-to-weak-H1, coordinates, normalization and half-chart specialization give C0=16*C. Separately NumericGraphPrior completes the source illustrative coefficient65536 by constructing an actual Gaussian cutoff weak-H1 root, proving sameZ>=1/2, mass1, compact support in the closed operator-norm half-chart, actual squared-root probability measure, and actual ENNReal Fisher as well as ordinary4*integral||Droot||^2<=65536*r*s^2 for every0<r<=s. Only generic Gaussian normalization/moment/tail and compact-Lipschitz-H1/weak-product facts are explicit known supporting inputs; no prior/Fisher target is a field, and no C<=4096 is inferred from NZ. This numeric root is correctly weakH1/closed support, not a smooth strict-interior witness. No numerical or other own mathematical gap remains identified; final unified verification is deferred by the user."
+    },
+    {
+      "anchor": "S3.Thmtheorem5",
+      "kind": "lemma",
+      "label": "Lemma 3.5 (Collective and adaptive information budgets).",
+      "fragment_sha256": "4dda596f12f37c3137d4746901d401717f010eea6277457f5ff7f68456e3437f",
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/AlignedFisherBudget.lean",
+        "Paper26/FisherPullback.lean",
+        "Paper26/GraphFisherBudget.lean",
+        "Paper26/WeightedTraceCS.lean",
+        "Paper26/FlatSLD.lean",
+        "Paper26/TensorSLD.lean",
+        "Paper26/CollectiveGraphBudget.lean",
+        "Paper26/AdaptiveFisherChain.lean",
+        "Paper26/AdaptiveGraphBudget.lean",
+        "Paper26/AdaptiveCoordinateTransport.lean",
+        "Paper26/AdaptiveOperatorModelTransport.lean"
+      ],
+      "scope_and_remaining_gap": "The actual all-n collective budget<=8ns and actual adaptive budget<=4ns/r are fully proved, including genuine tensor SLD, conditional scores, mean-zero/L2, score sum, zero-likelihood branches and root-gradient integrability. The native raw operator-adaptive transport closes the original arbitrary measurable protocol scope using only ordinary fixed-space RN; no family RN assumption is used. Only the already disclosed raw graph tangent-coordinate identity is external."
+    },
+    {
+      "anchor": "S5.Thmtheorem1",
+      "kind": "lemma",
+      "label": "Lemma 5.1 (Shell accounting).",
+      "fragment_sha256": "fe694caaba18fce55eaedcdc742d5e8a34a64051ec0d898d812de6cdb85a75e7",
+      "status": "proved",
+      "evidence": [
+        "Paper26/ShellAccounting.lean",
+        "Paper26/MultiscaleRefinement.lean"
+      ],
+      "scope_and_remaining_gap": "Complete actual-matrix shell lemma: exact ordered-entry partition, later active-only unitary invariance, true frozen-shell Frobenius error<=eta and actual inverse-Jordan contribution<=2eta/lambda. MultiscaleRefinement derives these directly from genuine stage matrices/unitaries, actual threshold cuts and actual block error, without assuming shell invariants or conclusions. It also proves mass, floor, tail, normalization and deterministic dyadic cost arithmetic. The measurable statistical policy and actual learner assembly are now proved separately in MultiscalePolicy, OneCopyBuresUpper and CollectiveBuresUpper."
+    },
+    {
+      "anchor": "S5.Thmtheorem2",
+      "kind": "lemma",
+      "label": "Lemma 5.2 (Exact normalization formula).",
+      "fragment_sha256": "2aafc8e4043fed101c34865bf2078744b593c81a0a9032bf81bf309cceddb17a",
+      "status": "proved",
+      "evidence": [
+        "Paper26/Normalization.lean:lemma_5_2_bures",
+        "Paper26/Normalization.lean:lemma_5_2_right",
+        "Paper26/EnergyReality.lean"
+      ],
+      "scope_and_remaining_gap": "Full arbitrary positive-definite complex-matrix trace formulation, Hermitian trace-one rho; actual inverse-Jordan characterized by its unique equation and actual matrix inverse for R. Equality, trace discrepancy and both small-energy conclusions are proved. The hypotheses are at least as general as density inputs; no diagonal restriction remains."
+    },
+    {
+      "anchor": "S5.Thmtheorem3",
+      "kind": "lemma",
+      "label": "Lemma 5.3 (One-copy submatrix routine).",
+      "fragment_sha256": "4ba379d902e21243a7f885f338fb6bc85377e64fa734b0adfc54e5a13d2b119a",
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/OneCopyObservation.lean",
+        "Paper26/OneCopySubmatrix.lean",
+        "Paper26/MeasurableSpectralSelection.lean",
+        "Paper26/OneCopyNormalized.lean",
+        "Paper26/OneCopyProductProtocol.lean"
+      ],
+      "scope_and_remaining_gap": "Complete actual PSD Lemma5.3 and the following trace-one extension. Native observation/variance, generic Tropp/Weyl application, measurable spectral truncation, zero branch, min(r,k), integer72 cost and genuine projection POVM count every failure as a copy. OneCopyNormalized constructs actual Borel water-filling, exact trace1/PSD/rank and the same error rate with a uniform same-estimator-before-all-inputs quantifier. OneCopyProductProtocol proves the actual fixed-measurement N-round adaptive/raw-operator law equals the statistical product, including N0. Relative only to the precisely registered raw Haar moments, generic Tropp, generic Weyl and generic compact-fiber Borel selection; no P26 routine or risk field."
+    },
+    {
+      "anchor": "S5.Thmtheorem4",
+      "kind": "lemma",
+      "label": "Lemma 5.4 (Frobenius error to right-inverse chi-squared).",
+      "fragment_sha256": "b88014a8ae45589aba38d58ee1d2f31c6bb04ec449a96cdcc82e519dd3770355",
+      "status": "proved",
+      "evidence": [
+        "Paper26/Regularization.lean:regularization_bound",
+        "Paper26/Regularization.lean:regularization_epsilon"
+      ],
+      "scope_and_remaining_gap": "Complete original-basis matrix-trace inequality for arbitrary PSD trace-one estimate, actual nonsingular sigma inverse, automatic positive-definiteness/normalization and epsilon specialization. rho only needs Hermitian, a stronger result than the original density hypothesis. No caller-supplied spectral basis."
+    },
+    {
+      "anchor": "S5.Thmtheorem5",
+      "kind": "proposition",
+      "label": "Proposition 5.5 (Collective submatrix routine).",
+      "fragment_sha256": "c297e87dd8174620aa43c1583adc27d92b1f262d44a7e67ff2d96a9575f0a793",
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/CollectiveSubmatrix.lean",
+        "Paper26/MetricAmplification.lean",
+        "Paper26/IndependentAmplification.lean",
+        "Paper26/BinomialMoments.lean",
+        "Paper26/CollectiveFiltering.lean",
+        "Paper26/CollectiveFilterComposition.lean",
+        "Paper26/ContinuousSubmatrixLearning.lean",
+        "Paper26/MatrixAmplification.lean",
+        "Paper26/CollectiveSubmatrixRoutine.lean"
+      ],
+      "scope_and_remaining_gap": "Complete uniform physical continuous-outcome Proposition5.5, including zero mass, off-block input coherence, zero-copy branch and all rejection costs. Native filtering gives the actual binomial/conditional mixture; raw uniform OW normalized Frobenius bound gives actual risk<=2(4k+1)w/N. MatrixAmplification constructs actual independent n*l quantum batches, Borel Frobenius center selection and native Hoeffding. CollectiveSubmatrixRoutine.proposition_5_5 chooses one actual POVM/PSD estimator before all true inputs and proves confidence>=ofReal(1-beta) with integer N<=361*(8+1/log2)*(kW/eta)*log(1/beta). Only original OW uniform experiment is a supporting external fact; binomial moments/filter law/risk/amplification/copy cost are internally proved. The moving-basis stage family and final actual collective Bures learner are now proved in CollectiveStageFamily and CollectiveBuresUpper."
+    },
+    {
+      "anchor": "A1.Thmtheorem1",
+      "kind": "theorem",
+      "label": "Theorem A.1 (Minimax expected right-inverse loss for pure states).",
+      "fragment_sha256": "431da72c2afcfaef6a02b94b316e3412ec96ddc567fc94d1185c62dc5d280e81",
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/Variational.lean",
+        "Paper26/PureMinimax.lean",
+        "Paper26/PureCovariant.lean",
+        "Paper26/PurePosterior.lean",
+        "Paper26/A1LowerRisk.lean",
+        "Paper26/PureCovariantRisk.lean",
+        "Paper26/OperatorMeasureConstruction.lean",
+        "Paper26/A1MinimaxValue.lean"
+      ],
+      "scope_and_remaining_gap": "TheoremA.1 is complete on the same actual OperatorLearner model: exact iInf over all measurable outcome spaces and learners of actual worst ENNReal expected chiR over all rank-at-most-one density inputs equals((sqrt(n+1)+d-1)^2/(n+d))-1. Native full posterior, singular infinite-risk branch, conditional optimum, arbitrary-POVM Bayes/worst lower, reverse dominated-to-operator construction and matching covariant operator learner prove both directions without minimax interchange. Includes n=0,d=1. Relative only to existing raw symmetric/Haar moment and ordinary operator RN facts; final unified verification remains deferred."
+    },
+    {
+      "anchor": "A2.Thmtheorem1",
+      "kind": "proposition",
+      "label": "Proposition B.1 (Common center of two flat states).",
+      "fragment_sha256": "0bdee0b59511e10379401b9d40456c852bfbbf130a3f28fbf84b9437a1623f8c",
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/CommonCenter.lean",
+        "Paper26/SupportCompression.lean"
+      ],
+      "scope_and_remaining_gap": "Complete PropositionB.1 for positive equal rank and d>=2r: actual all-Density minimax/mean, singular support and infinity branches, zero/right principal angles, larger ambient complement, actual normalized CFC.sqrt(P+Q) center, and trace-norm chord lower bound are internally proved. Sole raw input is PrincipalAngleDecompositionInput with actual rectangular isometry and canonical block identities, precisely sourced in the local registry. Independent semantic review work/prop-b1-semantic-review.md found no remaining own-math gap. Final unified kernel/Comparator verification remains deferred by the user."
+    }
+  ],
+  "additional_claims": [
+    {
+      "anchors": [
+        "S1.EGx1",
+        "S1.EGx2",
+        "S1.E5"
+      ],
+      "evidence": [
+        "Paper26/SpectralLoss.lean",
+        "Paper26/QuantumModel.lean",
+        "Paper26/IntermediateLossLowerBounds.lean"
+      ],
+      "status": "proved_relative_to_external_inputs",
+      "scope": "Actual extended quantum definitions, positive-spectrum exact Jordan/right trace formulas, native B<=G<=R including support/infinity, and classical diagonal reduction. IntermediateLossLowerBounds proves actual raw operator promise transfer, original minima N(chiB)<=N(chiG), and both chiG main lower rates with the same constants/ranges as the Bures rates. Event measurability and measure monotonicity are native; no new external input."
+    },
+    {
+      "anchors": [
+        "A3.E54",
+        "A3.Ex65",
+        "A3.p2"
+      ],
+      "evidence": [
+        "Paper26/BlockReplacement.lean"
+      ],
+      "status": "proved",
+      "scope": "Actual block replacement Frobenius identity, trace change, PSD trace-one Fin4 counterexample with exact rational errors, Fin2 trace=11/10 example."
+    },
+    {
+      "anchors": [
+        "A3.E55"
+      ],
+      "evidence": [
+        "Paper26/Classical.lean",
+        "Paper26/PositiveLossBridge.lean",
+        "Paper26/DiagonalCounterexample.lean"
+      ],
+      "status": "proved",
+      "scope": "Actual positive-definite complex densities for every fixed0<b<1 and0<q<1-b. Exact same-pair Frobenius=2b^2 and intrinsic chiB=chiR=ofReal[b^2(1/q+1/(1-q))], arbitrary common unitary conjugation, and quantitative arbitrarily small-q unboundedness are native. In particular actual positive-definite densities have fixed Frobenius1/8 while both losses exceed every proposed finite bound. No new external input."
+    },
+    {
+      "anchors": [
+        "S4.E38",
+        "S4.E39",
+        "S4.Ex42",
+        "S4.Ex43"
+      ],
+      "evidence": [
+        "Paper26/PureState.lean",
+        "Paper26/PureMinimax.lean",
+        "Paper26/PureCovariant.lean",
+        "Paper26/PureUpperBounds.lean",
+        "Paper26/PureUpperWitnesses.lean"
+      ],
+      "status": "proved_relative_to_external_inputs",
+      "scope": "PureMinimax proves exact Eq38/39 and deterministic epsilon bounds for every actual pure density and every rank-one measured direction, including arbitrary basis transport. PureCovariant constructs the actual full tensor POVM and Born law from raw Haar moments/symmetric projectors, derives the exact mean tail, and PureUpperBounds/PureUpperWitnesses prove uniform constant-confidence actual raw-operator learner bounds and integer costs. The separate printed exact Beta-law claim is tracked explicitly below."
+    },
+    {
+      "anchors": [
+        "S4.E36"
+      ],
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/PureCovariant.lean",
+        "Paper26/PureBetaLaw.lean"
+      ],
+      "scope": "PureBetaLaw.equation_36 identifies the actual covariant POVM Born pushforward tail with mathlib betaMeasure(m,n+1), for m>0 and card=m+1, includingn0, and proves exact mean m/(n+card). Native Born moments D_n/D_n+k and dimension recurrence connect to Beta moments; support/probability and Beta reflection are native. Only generic Hausdorff compact probability moment uniqueness and allpositive-parameter ordinary Beta moment recurrence are new known supporting facts, precisely source-reviewed; no covariant distribution or P26 statistical conclusion is assumed. The mean itself uses no new generic inputs."
+    },
+    {
+      "anchors": [
+        "A1.p5"
+      ],
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/A1MinimaxValue.lean",
+        "Paper26/PureRiskAsymptotics.lean"
+      ],
+      "scope": "Native exact algebra, uniform relative error<=2d/sqrt(n+1), and sqrt(n) times the actual operator minimax risk tending to2(d-1), including coefficient zero atd1. The varying-d regime d^2/n tending to zero is made quantitative by the relative-error estimate; no new external input."
+    },
+    {
+      "anchors": [
+        "A2.Ex62",
+        "A2.E53",
+        "A2.Ex63"
+      ],
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/ConfidenceLowerBounds.lean",
+        "Paper26/CommonCenter.lean",
+        "Paper26/SupportCompression.lean",
+        "Paper26/AdaptiveCollectiveEmbedding.lean",
+        "Paper26/AdaptiveOperatorModelTransport.lean"
+      ],
+      "scope": "Original delivery evidence (historical; not included in this release)."
+    },
+    {
+      "anchors": [
+        "S3.Ex33"
+      ],
+      "status": "proved_relative_to_external_inputs",
+      "evidence": [
+        "Paper26/GaussianRootCalculus.lean",
+        "Paper26/NumericPriorArithmetic.lean",
+        "Paper26/NumericGraphPrior.lean"
+      ],
+      "scope": "The explicit illustrative coefficient65536 is proved for an actual normalized compact weak-H1 Gaussian cutoff prior on the real coordinates of the genuine rectangular complex matrix. The same actual Gaussian tail yields Z>=1/2; native gradient/product/scaling calculation gives Fisher<=8/Z*(p/(4v)+16)<=65536*r*s^2 with p=2rs,v=1/(4096s), includingr=s1. The actual prior measure is withDensity of that same normalized root squared. Inputs contain only generic Gaussian mass/moments/matrix tail, compact-Lipschitz weak-H1 representation and the existing generic weak-product theorem, not a P26 prior or Fisher conclusion. Necessary final leaf exited0,emptylog,no warning; independent read-only helper and assembly reviews found no blocker."
+    }
+  ],
+  "status": "Delivered relative to explicit external inputs; final root and generated contracts remain unverified."
+}

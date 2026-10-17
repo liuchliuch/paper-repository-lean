@@ -1,0 +1,115 @@
+{
+  "paper_id": "30",
+  "title": "Minimax Calibration Distance under Simultaneous Play",
+  "source_url": "https://liuchliuch.github.io/repository/deterministic-adversarial-calibration-distance/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "CalibrationDistance"
+  ],
+  "build_targets": [
+    "CalibrationDistance"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "55 literal independently stated mathematical contracts covering both actual minimax protocols, exact grid optimizer, horizon-free predictor, witness bounds and exact word-RAM tree implementation."
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Adds a natural-number domain premise to deterministic_minimax_one."
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Proves deterministic_minimax_one using an unauthorized False axiom."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 2.1 (Square-root minimax rate).",
+      "declaration": "CalibrationDistance.square_root_minimax_rate",
+      "scope": "For T ≥ 2, the randomized simultaneous and deterministic oblivious minimax values have lower bounds sqrt(T)/4320 and sqrt(T)/1200, and share the optimized positive-grid upper bound strictly below sqrt(T)."
+    },
+    {
+      "source_result": "Corollary 2.2 (Horizon-free guarantee).",
+      "declaration": "CalibrationDistance.horizon_free_guarantee",
+      "scope": "One causal infinite forecaster achieves calibration distance below (2+sqrt(2))sqrt(T) for every binary outcome path and positive prefix."
+    },
+    {
+      "source_result": "Remark 2.3 (The remaining quantifier order).",
+      "declaration": "CalibrationDistance.randObliviousMinimax",
+      "scope": "The actual fixed-string randomized minimax value; the quantifier-order counterexample does not establish its open square-root lower bound."
+    },
+    {
+      "source_result": "Lemma 4.1 (Witness comparison).",
+      "declaration": "CalibrationDistance.witness_comparison_interval",
+      "scope": "The interval-domain Lipschitz witness comparison uses genuine least constants and supremum norm."
+    },
+    {
+      "source_result": "Theorem 5.1 (Randomized simultaneous lower bound).",
+      "declaration": "CalibrationDistance.Protocol.randomized_auxiliary_lower",
+      "scope": "The mean-reverting auxiliary Bernoulli trajectory gives the randomized lower estimate for arbitrary Borel behavioral kernels; a separate uniform-tape argument extracts a deterministic past-only adversary."
+    },
+    {
+      "source_result": "Theorem 5.2 (Deterministic oblivious lower bound).",
+      "declaration": "CalibrationDistance.Protocol.deterministic_auxiliary_lower",
+      "scope": "The deterministic forecaster has zero forecast innovation and satisfies the auxiliary lower estimate with constant 1/1200; a separate averaging argument selects one fixed binary string."
+    },
+    {
+      "source_result": "Lemma 6.1 (Shifted-bias invariant).",
+      "declaration": "CalibrationDistance.gridRun_bias_sum",
+      "scope": "The stored grid bias equals the actual cumulative proxy residual, linking the single-coordinate recursion to the shifted-bias invariant."
+    },
+    {
+      "source_result": "Lemma 6.2 (Proxy comparison).",
+      "declaration": "CalibrationDistance.proxy_comparison",
+      "scope": "The grid trajectory satisfies its shifted-bias invariant and comparison with a perfectly calibrated bin-mean proxy."
+    },
+    {
+      "source_result": "Proposition 6.3 (Finite-horizon pathwise bound).",
+      "declaration": "CalibrationDistance.fixed_grid_pathwise_bound",
+      "scope": "For every binary path, the causal midpoint grid has loss at most T/(2m)+(m−1)/2."
+    },
+    {
+      "source_result": "Corollary 6.4 (Exact grid optimization).",
+      "declaration": "CalibrationDistance.optimalGrid_minimizes",
+      "scope": "The explicit positive-integer grid optimizer minimizes the source objective; the rounding identity gives the strict square-root bound."
+    },
+    {
+      "source_result": "Proposition 6.5 (Efficient exact implementation).",
+      "declaration": "CalibrationDistance.boundedIntegerRun_correct",
+      "scope": "The bounded integer execution reproduces the mathematical grid trajectory; exact cached-tree record, word-width and initialization bounds are separate implementation theorems in the same model."
+    },
+    {
+      "source_result": "Lemma 7.1 (Block subadditivity).",
+      "declaration": "CalibrationDistance.calDist_partition_le",
+      "scope": "Calibration distance is subadditive under arbitrary finite partitions, including consecutive blocks."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "dependency_pins": {
+    "mathlib": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "plausible": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+    "LeanSearchClient": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+    "importGraph": "d768126816be17600904726ca7976b185786e6b9",
+    "proofwidgets": "556caed0eadb7901e068131d1be208dd907d07a2",
+    "aesop": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+    "Qq": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+    "batteries": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+    "Cli": "91c18fa62838ad0ab7384c03c9684d99d306e1da"
+  },
+  "external_unformalized_math_inputs": [],
+  "model_boundaries": {
+    "finite_horizon_encoding": "Behavioral strategies are encoded on all n; each T law reads only its first T transitions. A finite-horizon family may extend by an arbitrary constant probability kernel after T, without restricting any source strategy. Strategies at each T can depend on T.",
+    "word_ram": "Source unit-cost word arithmetic/record access and continuation/root-handle model. Formal exact quantities are record visits, word widths, actual suspended-job work/deadline and arena footprints. No compiler/GC wall-clock theorem is asserted.",
+    "implementation_variant": "Cached complete binary trees implement the same grid choices and forecasts; no unformalized balanced-tree complexity theorem is assumed.",
+    "randomized_oblivious": "No square-root randomized-oblivious lower bound is claimed."
+  },
+  "primary_comparator": "main"
+}

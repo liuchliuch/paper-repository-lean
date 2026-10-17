@@ -1,0 +1,127 @@
+import Paper20.HilbertJobsProof
+
+set_option maxHeartbeats 0
+set_option maxRecDepth 200000
+namespace Paper20.Cert.HilbertParts.Tree
+open Paper20.HilbertJobs
+
+def j_18_18 : Job := ⟨[18, 18], 18, 7, 42⟩
+
+def v_18_18 : List ℕ := List.replicate 904 0
+
+theorem correct_18_18 : value j_18_18 = v_18_18 := by decide
+
+def j_18_17 : Job := ⟨[18, 17], 17, 8, 42⟩
+
+def v_18_17 : List ℕ := List.replicate 904 0
+
+theorem correct_18_17 : value j_18_17 = v_18_17 := by decide
+
+def j_18_16 : Job := ⟨[18, 16], 16, 9, 42⟩
+
+def v_18_16 : List ℕ := List.replicate 904 0
+
+theorem correct_18_16 : value j_18_16 = v_18_16 := by decide
+
+def j_18_15 : Job := ⟨[18, 15], 15, 10, 42⟩
+
+def v_18_15 : List ℕ := List.replicate 904 0
+
+theorem correct_18_15 : value j_18_15 = v_18_15 := by decide
+
+def j_18_14 : Job := ⟨[18, 14], 14, 11, 42⟩
+
+def v_18_14 : List ℕ := List.replicate 904 0
+
+theorem correct_18_14 : value j_18_14 = v_18_14 := by decide
+
+def j_18_13 : Job := ⟨[18, 13], 13, 12, 42⟩
+
+def v_18_13 : List ℕ := List.replicate 904 0
+
+theorem correct_18_13 : value j_18_13 = v_18_13 := by decide
+
+def j_18_12 : Job := ⟨[18, 12], 12, 13, 42⟩
+
+def v_18_12 : List ℕ := List.replicate 904 0
+
+theorem correct_18_12 : value j_18_12 = v_18_12 := by decide
+
+def j_18_11 : Job := ⟨[18, 11], 11, 14, 42⟩
+
+def v_18_11 : List ℕ := List.replicate 904 0
+
+theorem correct_18_11 : value j_18_11 = v_18_11 := by decide
+
+def j_18_10 : Job := ⟨[18, 10], 10, 15, 42⟩
+
+def v_18_10 : List ℕ := List.replicate 904 0
+
+theorem correct_18_10 : value j_18_10 = v_18_10 := by decide
+
+def j_18_9 : Job := ⟨[18, 9], 9, 16, 42⟩
+
+def v_18_9 : List ℕ := List.replicate 904 0
+
+theorem correct_18_9 : value j_18_9 = v_18_9 := by decide
+
+def j_18_8 : Job := ⟨[18, 8], 8, 17, 42⟩
+
+def v_18_8 : List ℕ := List.replicate 904 0
+
+theorem correct_18_8 : value j_18_8 = v_18_8 := by decide
+
+def j_18_7 : Job := ⟨[18, 7], 7, 18, 42⟩
+
+def v_18_7 : List ℕ := List.replicate 904 0
+
+theorem correct_18_7 : value j_18_7 = v_18_7 := by decide
+
+def j_18_6 : Job := ⟨[18, 6], 6, 19, 42⟩
+
+def v_18_6 : List ℕ := List.replicate 904 0
+
+theorem correct_18_6 : value j_18_6 = v_18_6 := by decide
+
+def j_18_5 : Job := ⟨[18, 5], 5, 20, 42⟩
+
+def v_18_5 : List ℕ := List.replicate 904 0
+
+theorem correct_18_5 : value j_18_5 = v_18_5 := by decide
+
+def j_18_4 : Job := ⟨[18, 4], 4, 21, 42⟩
+
+def v_18_4 : List ℕ := List.replicate 904 0
+
+theorem correct_18_4 : value j_18_4 = v_18_4 := by decide
+
+def j_18_3 : Job := ⟨[18, 3], 3, 22, 42⟩
+
+def v_18_3 : List ℕ := List.replicate 904 0
+
+theorem correct_18_3 : value j_18_3 = v_18_3 := by decide
+
+def j_18_2 : Job := ⟨[18, 2], 2, 23, 42⟩
+
+def v_18_2 : List ℕ := List.replicate 904 0
+
+theorem correct_18_2 : value j_18_2 = v_18_2 := by decide
+
+def j_18_1 : Job := ⟨[18, 1], 1, 24, 42⟩
+
+def v_18_1 : List ℕ := @@GENERATED_RHS:v_18_1@@
+
+theorem correct_18_1 : value j_18_1 = v_18_1 := by decide
+
+def j_18 : Job := ⟨[18], 18, 25, 43⟩
+
+def v_18 : List ℕ := @@GENERATED_RHS:v_18@@
+
+theorem correct_18 : value j_18 = v_18 := by
+  rw [value_children j_18 (by decide) (by decide)]
+  have hc : children j_18 = [j_18_18, j_18_17, j_18_16, j_18_15, j_18_14, j_18_13, j_18_12, j_18_11, j_18_10, j_18_9, j_18_8, j_18_7, j_18_6, j_18_5, j_18_4, j_18_3, j_18_2, j_18_1] := by decide
+  rw [hc]
+  simp only [List.map_cons, List.map_nil, correct_18_18, correct_18_17, correct_18_16, correct_18_15, correct_18_14, correct_18_13, correct_18_12, correct_18_11, correct_18_10, correct_18_9, correct_18_8, correct_18_7, correct_18_6, correct_18_5, correct_18_4, correct_18_3, correct_18_2, correct_18_1]
+  all_goals decide
+
+end Paper20.Cert.HilbertParts.Tree

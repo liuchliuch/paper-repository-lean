@@ -1,0 +1,57 @@
+import Paper20.RContent36
+set_option maxHeartbeats 0
+set_option maxRecDepth 200000
+namespace Paper20.Cert.RContent36.Tree
+open Paper20.RContent36
+open Paper20.HilbertJobs (Job parts children)
+
+def j_30_6 : Job := ⟨[30, 6], 6, 0, 35⟩
+
+def v_30_6 : State := @@GENERATED_RHS:v_30_6@@
+
+theorem correct_30_6 : Correct j_30_6 v_30_6 := correct_leaf j_30_6 v_30_6 (by decide +kernel)
+
+def j_30_5 : Job := ⟨[30, 5], 5, 1, 35⟩
+
+def v_30_5 : State := @@GENERATED_RHS:v_30_5@@
+
+theorem correct_30_5 : Correct j_30_5 v_30_5 := correct_leaf j_30_5 v_30_5 (by decide +kernel)
+
+def j_30_4 : Job := ⟨[30, 4], 4, 2, 35⟩
+
+def v_30_4 : State := @@GENERATED_RHS:v_30_4@@
+
+theorem correct_30_4 : Correct j_30_4 v_30_4 := correct_leaf j_30_4 v_30_4 (by decide +kernel)
+
+def j_30_3 : Job := ⟨[30, 3], 3, 3, 35⟩
+
+def v_30_3 : State := @@GENERATED_RHS:v_30_3@@
+
+theorem correct_30_3 : Correct j_30_3 v_30_3 := correct_leaf j_30_3 v_30_3 (by decide +kernel)
+
+def j_30_2 : Job := ⟨[30, 2], 2, 4, 35⟩
+
+def v_30_2 : State := @@GENERATED_RHS:v_30_2@@
+
+theorem correct_30_2 : Correct j_30_2 v_30_2 := correct_leaf j_30_2 v_30_2 (by decide +kernel)
+
+def j_30_1 : Job := ⟨[30, 1], 1, 5, 35⟩
+
+def v_30_1 : State := @@GENERATED_RHS:v_30_1@@
+
+theorem correct_30_1 : Correct j_30_1 v_30_1 := correct_leaf j_30_1 v_30_1 (by decide +kernel)
+
+def j_30 : Job := ⟨[30], 30, 6, 36⟩
+
+def v_30 : State := @@GENERATED_RHS:v_30@@
+
+theorem correct_30 : Correct j_30 v_30 := by
+  have hc : children j_30 = [j_30_6, j_30_5, j_30_4, j_30_3, j_30_2, j_30_1] := by decide +kernel
+  have hv : List.Forall₂ Correct (children j_30) [v_30_6, v_30_5, v_30_4, v_30_3, v_30_2, v_30_1] := by
+    rw [hc]
+    exact (List.Forall₂.cons correct_30_6 (List.Forall₂.cons correct_30_5 (List.Forall₂.cons correct_30_4 (List.Forall₂.cons correct_30_3 (List.Forall₂.cons correct_30_2 (List.Forall₂.cons correct_30_1 List.Forall₂.nil))))))
+  have hp := correct_children j_30 (by decide) (by decide) [v_30_6, v_30_5, v_30_4, v_30_3, v_30_2, v_30_1] hv
+  have he : combine [v_30_6, v_30_5, v_30_4, v_30_3, v_30_2, v_30_1] = v_30 := by decide +kernel
+  rwa [he] at hp
+
+end Paper20.Cert.RContent36.Tree

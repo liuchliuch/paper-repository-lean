@@ -1,0 +1,121 @@
+{
+  "paper_id": "08",
+  "title": "A deterministic FPTAS for weakly interacting continuous factor models",
+  "source_url": "https://liuchliuch.github.io/repository/a-deterministic-fptas-for-weakly-interacting-continuous-factor-models/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper08"
+  ],
+  "build_targets": [
+    "Paper08",
+    "Verification.ComponentsSolution",
+    "Verification.ComponentsChallenge",
+    "Verification.Solution",
+    "Verification.Challenge",
+    "Verification.Audit",
+    "Verification.Coverage"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/components-config.json",
+      "expected_rejection": null,
+      "scope": "Thirty-four fixed explicit targets including uniform actual complete algorithm, original common closed disk, original all-dimension accuracy and original primal-degree corollary. Older conditional helper targets remain explicitly conditional inside the suite."
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/components-negative-type.json",
+      "expected_rejection": "type",
+      "scope": "Complete 34-target component suite with extra False hypotheses. Rejection detail: extra False premise on all component targets."
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/components-negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Same 34 explicit component statements intentionally proved through an unauthorized False axiom. Rejection detail: unauthorized_component axiom."
+    },
+    {
+      "id": "supporting",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "Twelve legacy supporting-only arithmetic and estimate interfaces. The accurate_exp target assumes Accurate and only converts its error form; this suite alone does not establish the main FPTAS."
+    },
+    {
+      "id": "supporting-negative-premise",
+      "config": "Verification/negative-type.json",
+      "expected_rejection": "type",
+      "scope": "Legacy supporting contracts with actual added-premise type mismatches. Rejection detail: extra False premises on the 12 supporting targets."
+    },
+    {
+      "id": "supporting-negative-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Legacy supporting contract with an illegal numeric axiom dependency. Rejection detail: unauthorized_numeric axiom in lemma_2_2_kappa."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Assumption 1.1",
+      "declaration": "Paper08.EffectiveAccess.Oracle",
+      "scope": "Effective value-access promise for cube points and precision b ≥ 1, with binary rational answers, polynomial oracle time, and answer-length bounds."
+    },
+    {
+      "source_result": "Theorem 1.2",
+      "declaration": "Paper08.OriginalTheorems.theorem_1_2",
+      "scope": "Rational partition-integral approximation with e±epsilon error, polynomial binary/query/oracle costs, and logarithmic precision under fixed model and effective-access promises; the exponent is chosen before oracle degrees and model inputs, and common nonvanishing is proved internally."
+    },
+    {
+      "source_result": "Corollary 1.3",
+      "declaration": "Paper08.OriginalTheorems.corollary_1_3_ge_two",
+      "scope": "Primal-degree guarantee for eta ≥ 2 preserving the factor family, integral, and oracle handles; the independent low-degree algorithm covers eta = 1."
+    },
+    {
+      "source_result": "Lemma 2.1",
+      "declaration": "Paper08.CubeZeroFreeMain.original_closed_disk",
+      "scope": "Common closed zero-free disk for every factor subcollection under the original occurrence, range, and Lipschitz conditions."
+    },
+    {
+      "source_result": "Lemma 2.2",
+      "declaration": "Paper08.OriginalTheorems.lemma_2_2",
+      "scope": "Normalized analytic logarithm, coefficient and Taylor-remainder bounds, and half-disk bounds from the original model promises."
+    },
+    {
+      "source_result": "Lemma 2.3",
+      "declaration": "Paper08.ModelSupport.connected_support_identity",
+      "scope": "Product-integral factorization, formal logarithm, Möbius support extraction, disconnected-support cancellation, and connected-support enumeration."
+    },
+    {
+      "source_result": "Lemma 3.1",
+      "declaration": "Paper08.Quadrature.dyadic_quadrature_error",
+      "scope": "Total-level quadrature for overlapping scopes with precision/query bounds and an operation count for arbitrary-real sampled functions."
+    },
+    {
+      "source_result": "Lemma 3.2",
+      "declaration": "Paper08.Quadrature.dyadic_stored_sample_perturbation",
+      "scope": "Both sample-perturbation bounds for finite total-level rules and reused stored sample tables."
+    },
+    {
+      "source_result": "Lemma 3.3",
+      "declaration": "Paper08.PrimitiveAlgorithm.lemma33",
+      "scope": "Rational primitive moments and multinomial assembly with error, precision, denominator/height, binary execution, and effective oracle-time bounds."
+    },
+    {
+      "source_result": "Lemma 4.1",
+      "declaration": "Paper08.OriginalTheorems.lemma_4_1",
+      "scope": "Stability of the integral Taylor/logarithmic coefficients and executable local moment recurrence under the source perturbation conditions."
+    },
+    {
+      "source_result": "Lemma A.1",
+      "declaration": "Paper08.LowDegreeGuarantee.lemma_A1_full_guarantee",
+      "scope": "Component-grid algorithm for primal degree at most one with logarithmic accuracy in every dimension, including n = 0, and complete graph/grid/control and binary costs."
+    },
+    {
+      "source_result": "Proposition B.1",
+      "declaration": "Paper08.LowerBound.prop_B1_finite_precision",
+      "scope": "Adaptive deterministic finite-precision query lower bound, explicit Omega(n^(2r+1)) sampling scale, and the matching surrogate query upper scale."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "primary_comparator": "main"
+}

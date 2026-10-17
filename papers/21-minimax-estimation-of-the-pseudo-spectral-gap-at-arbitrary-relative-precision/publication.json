@@ -1,0 +1,77 @@
+{
+  "paper_id": "21",
+  "title": "Minimax estimation of the pseudo-spectral gap at arbitrary relative precision",
+  "source_url": "https://liuchliuch.github.io/repository/minimax-estimation-of-the-pseudo-spectral-gap-at-arbitrary-relative-precision/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper21",
+    "PsgEst",
+    "Verification"
+  ],
+  "build_targets": [
+    "Paper21",
+    "Verification"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "Forty-four fixed targets covering all five numbered source results, exact estimator/model/constants, concentration theorems and own unnumbered consequences."
+    },
+    {
+      "id": "core",
+      "config": "Verification/comparator-proved-core.json",
+      "expected_rejection": null,
+      "scope": "Thirty-eight supporting/core contracts; this overlapping subset is not an additional whole-paper coverage claim."
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Real extra premise in the main contracts."
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Real unauthorized axiom in the main contracts."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1",
+      "declaration": "P21Contract.theorem_1",
+      "scope": "Uniform relative-error estimation for finite irreducible aperiodic chains from an arbitrary initial law, using gammaHat, 0 < ε < 1/2, 0 < δ < 1 and the sample bound with C ≥ 73728."
+    },
+    {
+      "source_result": "Theorem 2",
+      "declaration": "P21Contract.theorem_2",
+      "scope": "Minimax bounds for the exact source model class with d ≥ 2, 0 < p ≤ 1/d, 0 < g ≤ 1/8 and 0 < ε < 1/2, using constants 1/2048 and 73729; the known-stationary reversible lower bound is included."
+    },
+    {
+      "source_result": "Lemma 1",
+      "declaration": "P21Contract.lemma_1",
+      "scope": "Gap-of-powers bounds for every positive integer k and the source stationary vector, together with the associated contraction consequence."
+    },
+    {
+      "source_result": "Proposition 1",
+      "declaration": "PsgEst.Paper.proposition_1",
+      "scope": "Concentration of the actual empirical relative Laplacian with the source probability bound and constants, without an external concentration premise."
+    },
+    {
+      "source_result": "Lemma 2",
+      "declaration": "PsgEst.Paper.lemma_2_paper",
+      "scope": "Both Appendix visit-count bounds for arbitrary initial distributions and the explicitly defined blocking parameter."
+    },
+    {
+      "source_result": "Concentration inputs",
+      "declaration": "P21Contract.concentration_inputs_proved",
+      "scope": "Paulin concentration and scalar/matrix Freedman yield the concentration properties used by the principal upper bounds."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "source_html_sha256": "0ff79c6a00bdc0ce161fa95d36ea1313fef03648a6eadeeb0a753b4b5296a8b1",
+  "primary_comparator": "main"
+}

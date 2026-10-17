@@ -1,0 +1,332 @@
+import Paper23.CertificateCocycle.Level2_02
+import Paper23.CertificateCocycle.Level2_03
+set_option maxRecDepth 100000
+set_option maxHeartbeats 0
+namespace Paper23.CertificateChecks
+open Cubical CertificateData
+attribute [local irreducible] codeChain
+noncomputable def cocycleNode3_16Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_16Part0@@
+noncomputable def cocycleNode3_16Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_16Part1@@
+noncomputable def cocycleNode3_16Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_16Part2@@
+noncomputable def cocycleNode3_16Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_16Part3@@
+noncomputable def cocycleNode3_16Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_16Part4@@
+noncomputable def cocycleNode3_16Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_16Part5@@
+noncomputable def cocycleNode3_16Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_16Part6@@
+noncomputable def cocycleNode3_16Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_16Part7@@
+noncomputable def cocycleNode3_16Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_16Part8@@
+noncomputable def cocycleNode3_16Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_16Part9@@
+noncomputable def cocycleNode3_16Part10 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_16Part10@@
+noncomputable def cocycleNode3_16Part11 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_16Part11@@
+noncomputable def cocycleNode3_16Part12 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_16Part12@@
+noncomputable def cocycleNode3_16Part13 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_16Part13@@
+noncomputable def cocycleNode3_16 : List (ℕ × ℤ) := cocycleNode3_16Part0 ++ cocycleNode3_16Part1 ++ cocycleNode3_16Part2 ++ cocycleNode3_16Part3 ++ cocycleNode3_16Part4 ++ cocycleNode3_16Part5 ++ cocycleNode3_16Part6 ++ cocycleNode3_16Part7 ++ cocycleNode3_16Part8 ++ cocycleNode3_16Part9 ++ cocycleNode3_16Part10 ++ cocycleNode3_16Part11 ++ cocycleNode3_16Part12 ++ cocycleNode3_16Part13
+noncomputable def cocycleSource3_16 : RawChain := cocycleSource2_32 + cocycleSource2_33
+theorem cocycleNode3_16_check : modularMerge cocycleNode2_32 cocycleNode2_33 = cocycleNode3_16 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode3_16_chain : reduceChain (codeChain cocycleNode3_16) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource3_16)) := by
+  rw [← cocycleNode3_16_check, modularMerge_sound, cocycleNode2_32_chain, cocycleNode2_33_chain]
+  simp only [cocycleSource3_16,map_add]
+noncomputable def cocycleNode3_17Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_17Part0@@
+noncomputable def cocycleNode3_17Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_17Part1@@
+noncomputable def cocycleNode3_17Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_17Part2@@
+noncomputable def cocycleNode3_17Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_17Part3@@
+noncomputable def cocycleNode3_17Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_17Part4@@
+noncomputable def cocycleNode3_17Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_17Part5@@
+noncomputable def cocycleNode3_17Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_17Part6@@
+noncomputable def cocycleNode3_17Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_17Part7@@
+noncomputable def cocycleNode3_17Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_17Part8@@
+noncomputable def cocycleNode3_17Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_17Part9@@
+noncomputable def cocycleNode3_17Part10 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_17Part10@@
+noncomputable def cocycleNode3_17Part11 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_17Part11@@
+noncomputable def cocycleNode3_17 : List (ℕ × ℤ) := cocycleNode3_17Part0 ++ cocycleNode3_17Part1 ++ cocycleNode3_17Part2 ++ cocycleNode3_17Part3 ++ cocycleNode3_17Part4 ++ cocycleNode3_17Part5 ++ cocycleNode3_17Part6 ++ cocycleNode3_17Part7 ++ cocycleNode3_17Part8 ++ cocycleNode3_17Part9 ++ cocycleNode3_17Part10 ++ cocycleNode3_17Part11
+noncomputable def cocycleSource3_17 : RawChain := cocycleSource2_34 + cocycleSource2_35
+theorem cocycleNode3_17_check : modularMerge cocycleNode2_34 cocycleNode2_35 = cocycleNode3_17 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode3_17_chain : reduceChain (codeChain cocycleNode3_17) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource3_17)) := by
+  rw [← cocycleNode3_17_check, modularMerge_sound, cocycleNode2_34_chain, cocycleNode2_35_chain]
+  simp only [cocycleSource3_17,map_add]
+noncomputable def cocycleNode3_18Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_18Part0@@
+noncomputable def cocycleNode3_18Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_18Part1@@
+noncomputable def cocycleNode3_18Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_18Part2@@
+noncomputable def cocycleNode3_18Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_18Part3@@
+noncomputable def cocycleNode3_18Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_18Part4@@
+noncomputable def cocycleNode3_18Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_18Part5@@
+noncomputable def cocycleNode3_18Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_18Part6@@
+noncomputable def cocycleNode3_18Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_18Part7@@
+noncomputable def cocycleNode3_18Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_18Part8@@
+noncomputable def cocycleNode3_18Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_18Part9@@
+noncomputable def cocycleNode3_18Part10 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_18Part10@@
+noncomputable def cocycleNode3_18 : List (ℕ × ℤ) := cocycleNode3_18Part0 ++ cocycleNode3_18Part1 ++ cocycleNode3_18Part2 ++ cocycleNode3_18Part3 ++ cocycleNode3_18Part4 ++ cocycleNode3_18Part5 ++ cocycleNode3_18Part6 ++ cocycleNode3_18Part7 ++ cocycleNode3_18Part8 ++ cocycleNode3_18Part9 ++ cocycleNode3_18Part10
+noncomputable def cocycleSource3_18 : RawChain := cocycleSource2_36 + cocycleSource2_37
+theorem cocycleNode3_18_check : modularMerge cocycleNode2_36 cocycleNode2_37 = cocycleNode3_18 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode3_18_chain : reduceChain (codeChain cocycleNode3_18) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource3_18)) := by
+  rw [← cocycleNode3_18_check, modularMerge_sound, cocycleNode2_36_chain, cocycleNode2_37_chain]
+  simp only [cocycleSource3_18,map_add]
+noncomputable def cocycleNode3_19Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_19Part0@@
+noncomputable def cocycleNode3_19Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_19Part1@@
+noncomputable def cocycleNode3_19Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_19Part2@@
+noncomputable def cocycleNode3_19Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_19Part3@@
+noncomputable def cocycleNode3_19Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_19Part4@@
+noncomputable def cocycleNode3_19Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_19Part5@@
+noncomputable def cocycleNode3_19Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_19Part6@@
+noncomputable def cocycleNode3_19Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_19Part7@@
+noncomputable def cocycleNode3_19Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_19Part8@@
+noncomputable def cocycleNode3_19Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_19Part9@@
+noncomputable def cocycleNode3_19Part10 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_19Part10@@
+noncomputable def cocycleNode3_19Part11 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_19Part11@@
+noncomputable def cocycleNode3_19Part12 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_19Part12@@
+noncomputable def cocycleNode3_19Part13 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_19Part13@@
+noncomputable def cocycleNode3_19Part14 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_19Part14@@
+noncomputable def cocycleNode3_19 : List (ℕ × ℤ) := cocycleNode3_19Part0 ++ cocycleNode3_19Part1 ++ cocycleNode3_19Part2 ++ cocycleNode3_19Part3 ++ cocycleNode3_19Part4 ++ cocycleNode3_19Part5 ++ cocycleNode3_19Part6 ++ cocycleNode3_19Part7 ++ cocycleNode3_19Part8 ++ cocycleNode3_19Part9 ++ cocycleNode3_19Part10 ++ cocycleNode3_19Part11 ++ cocycleNode3_19Part12 ++ cocycleNode3_19Part13 ++ cocycleNode3_19Part14
+noncomputable def cocycleSource3_19 : RawChain := cocycleSource2_38 + cocycleSource2_39
+theorem cocycleNode3_19_check : modularMerge cocycleNode2_38 cocycleNode2_39 = cocycleNode3_19 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode3_19_chain : reduceChain (codeChain cocycleNode3_19) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource3_19)) := by
+  rw [← cocycleNode3_19_check, modularMerge_sound, cocycleNode2_38_chain, cocycleNode2_39_chain]
+  simp only [cocycleSource3_19,map_add]
+noncomputable def cocycleNode3_20Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_20Part0@@
+noncomputable def cocycleNode3_20Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_20Part1@@
+noncomputable def cocycleNode3_20Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_20Part2@@
+noncomputable def cocycleNode3_20Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_20Part3@@
+noncomputable def cocycleNode3_20Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_20Part4@@
+noncomputable def cocycleNode3_20Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_20Part5@@
+noncomputable def cocycleNode3_20Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_20Part6@@
+noncomputable def cocycleNode3_20Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_20Part7@@
+noncomputable def cocycleNode3_20Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_20Part8@@
+noncomputable def cocycleNode3_20Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_20Part9@@
+noncomputable def cocycleNode3_20Part10 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_20Part10@@
+noncomputable def cocycleNode3_20Part11 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_20Part11@@
+noncomputable def cocycleNode3_20Part12 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_20Part12@@
+noncomputable def cocycleNode3_20Part13 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_20Part13@@
+noncomputable def cocycleNode3_20Part14 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_20Part14@@
+noncomputable def cocycleNode3_20 : List (ℕ × ℤ) := cocycleNode3_20Part0 ++ cocycleNode3_20Part1 ++ cocycleNode3_20Part2 ++ cocycleNode3_20Part3 ++ cocycleNode3_20Part4 ++ cocycleNode3_20Part5 ++ cocycleNode3_20Part6 ++ cocycleNode3_20Part7 ++ cocycleNode3_20Part8 ++ cocycleNode3_20Part9 ++ cocycleNode3_20Part10 ++ cocycleNode3_20Part11 ++ cocycleNode3_20Part12 ++ cocycleNode3_20Part13 ++ cocycleNode3_20Part14
+noncomputable def cocycleSource3_20 : RawChain := cocycleSource2_40 + cocycleSource2_41
+theorem cocycleNode3_20_check : modularMerge cocycleNode2_40 cocycleNode2_41 = cocycleNode3_20 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode3_20_chain : reduceChain (codeChain cocycleNode3_20) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource3_20)) := by
+  rw [← cocycleNode3_20_check, modularMerge_sound, cocycleNode2_40_chain, cocycleNode2_41_chain]
+  simp only [cocycleSource3_20,map_add]
+noncomputable def cocycleNode3_21Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_21Part0@@
+noncomputable def cocycleNode3_21Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_21Part1@@
+noncomputable def cocycleNode3_21Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_21Part2@@
+noncomputable def cocycleNode3_21Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_21Part3@@
+noncomputable def cocycleNode3_21Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_21Part4@@
+noncomputable def cocycleNode3_21Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_21Part5@@
+noncomputable def cocycleNode3_21Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_21Part6@@
+noncomputable def cocycleNode3_21Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_21Part7@@
+noncomputable def cocycleNode3_21Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_21Part8@@
+noncomputable def cocycleNode3_21Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_21Part9@@
+noncomputable def cocycleNode3_21Part10 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_21Part10@@
+noncomputable def cocycleNode3_21 : List (ℕ × ℤ) := cocycleNode3_21Part0 ++ cocycleNode3_21Part1 ++ cocycleNode3_21Part2 ++ cocycleNode3_21Part3 ++ cocycleNode3_21Part4 ++ cocycleNode3_21Part5 ++ cocycleNode3_21Part6 ++ cocycleNode3_21Part7 ++ cocycleNode3_21Part8 ++ cocycleNode3_21Part9 ++ cocycleNode3_21Part10
+noncomputable def cocycleSource3_21 : RawChain := cocycleSource2_42 + cocycleSource2_43
+theorem cocycleNode3_21_check : modularMerge cocycleNode2_42 cocycleNode2_43 = cocycleNode3_21 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode3_21_chain : reduceChain (codeChain cocycleNode3_21) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource3_21)) := by
+  rw [← cocycleNode3_21_check, modularMerge_sound, cocycleNode2_42_chain, cocycleNode2_43_chain]
+  simp only [cocycleSource3_21,map_add]
+noncomputable def cocycleNode3_22Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_22Part0@@
+noncomputable def cocycleNode3_22Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_22Part1@@
+noncomputable def cocycleNode3_22Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_22Part2@@
+noncomputable def cocycleNode3_22Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_22Part3@@
+noncomputable def cocycleNode3_22Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_22Part4@@
+noncomputable def cocycleNode3_22Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_22Part5@@
+noncomputable def cocycleNode3_22Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_22Part6@@
+noncomputable def cocycleNode3_22Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_22Part7@@
+noncomputable def cocycleNode3_22Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_22Part8@@
+noncomputable def cocycleNode3_22Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_22Part9@@
+noncomputable def cocycleNode3_22Part10 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_22Part10@@
+noncomputable def cocycleNode3_22Part11 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_22Part11@@
+noncomputable def cocycleNode3_22Part12 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_22Part12@@
+noncomputable def cocycleNode3_22 : List (ℕ × ℤ) := cocycleNode3_22Part0 ++ cocycleNode3_22Part1 ++ cocycleNode3_22Part2 ++ cocycleNode3_22Part3 ++ cocycleNode3_22Part4 ++ cocycleNode3_22Part5 ++ cocycleNode3_22Part6 ++ cocycleNode3_22Part7 ++ cocycleNode3_22Part8 ++ cocycleNode3_22Part9 ++ cocycleNode3_22Part10 ++ cocycleNode3_22Part11 ++ cocycleNode3_22Part12
+noncomputable def cocycleSource3_22 : RawChain := cocycleSource2_44 + cocycleSource2_45
+theorem cocycleNode3_22_check : modularMerge cocycleNode2_44 cocycleNode2_45 = cocycleNode3_22 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode3_22_chain : reduceChain (codeChain cocycleNode3_22) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource3_22)) := by
+  rw [← cocycleNode3_22_check, modularMerge_sound, cocycleNode2_44_chain, cocycleNode2_45_chain]
+  simp only [cocycleSource3_22,map_add]
+noncomputable def cocycleNode3_23Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_23Part0@@
+noncomputable def cocycleNode3_23Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_23Part1@@
+noncomputable def cocycleNode3_23Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_23Part2@@
+noncomputable def cocycleNode3_23Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_23Part3@@
+noncomputable def cocycleNode3_23Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_23Part4@@
+noncomputable def cocycleNode3_23Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_23Part5@@
+noncomputable def cocycleNode3_23Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_23Part6@@
+noncomputable def cocycleNode3_23Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_23Part7@@
+noncomputable def cocycleNode3_23Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_23Part8@@
+noncomputable def cocycleNode3_23Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_23Part9@@
+noncomputable def cocycleNode3_23Part10 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_23Part10@@
+noncomputable def cocycleNode3_23Part11 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_23Part11@@
+noncomputable def cocycleNode3_23Part12 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_23Part12@@
+noncomputable def cocycleNode3_23Part13 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_23Part13@@
+noncomputable def cocycleNode3_23 : List (ℕ × ℤ) := cocycleNode3_23Part0 ++ cocycleNode3_23Part1 ++ cocycleNode3_23Part2 ++ cocycleNode3_23Part3 ++ cocycleNode3_23Part4 ++ cocycleNode3_23Part5 ++ cocycleNode3_23Part6 ++ cocycleNode3_23Part7 ++ cocycleNode3_23Part8 ++ cocycleNode3_23Part9 ++ cocycleNode3_23Part10 ++ cocycleNode3_23Part11 ++ cocycleNode3_23Part12 ++ cocycleNode3_23Part13
+noncomputable def cocycleSource3_23 : RawChain := cocycleSource2_46 + cocycleSource2_47
+theorem cocycleNode3_23_check : modularMerge cocycleNode2_46 cocycleNode2_47 = cocycleNode3_23 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode3_23_chain : reduceChain (codeChain cocycleNode3_23) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource3_23)) := by
+  rw [← cocycleNode3_23_check, modularMerge_sound, cocycleNode2_46_chain, cocycleNode2_47_chain]
+  simp only [cocycleSource3_23,map_add]
+noncomputable def cocycleNode3_24Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_24Part0@@
+noncomputable def cocycleNode3_24Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_24Part1@@
+noncomputable def cocycleNode3_24Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_24Part2@@
+noncomputable def cocycleNode3_24Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_24Part3@@
+noncomputable def cocycleNode3_24Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_24Part4@@
+noncomputable def cocycleNode3_24Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_24Part5@@
+noncomputable def cocycleNode3_24Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_24Part6@@
+noncomputable def cocycleNode3_24Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_24Part7@@
+noncomputable def cocycleNode3_24Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_24Part8@@
+noncomputable def cocycleNode3_24Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_24Part9@@
+noncomputable def cocycleNode3_24Part10 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_24Part10@@
+noncomputable def cocycleNode3_24Part11 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_24Part11@@
+noncomputable def cocycleNode3_24 : List (ℕ × ℤ) := cocycleNode3_24Part0 ++ cocycleNode3_24Part1 ++ cocycleNode3_24Part2 ++ cocycleNode3_24Part3 ++ cocycleNode3_24Part4 ++ cocycleNode3_24Part5 ++ cocycleNode3_24Part6 ++ cocycleNode3_24Part7 ++ cocycleNode3_24Part8 ++ cocycleNode3_24Part9 ++ cocycleNode3_24Part10 ++ cocycleNode3_24Part11
+noncomputable def cocycleSource3_24 : RawChain := cocycleSource2_48 + cocycleSource2_49
+theorem cocycleNode3_24_check : modularMerge cocycleNode2_48 cocycleNode2_49 = cocycleNode3_24 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode3_24_chain : reduceChain (codeChain cocycleNode3_24) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource3_24)) := by
+  rw [← cocycleNode3_24_check, modularMerge_sound, cocycleNode2_48_chain, cocycleNode2_49_chain]
+  simp only [cocycleSource3_24,map_add]
+noncomputable def cocycleNode3_25Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_25Part0@@
+noncomputable def cocycleNode3_25Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_25Part1@@
+noncomputable def cocycleNode3_25Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_25Part2@@
+noncomputable def cocycleNode3_25Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_25Part3@@
+noncomputable def cocycleNode3_25Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_25Part4@@
+noncomputable def cocycleNode3_25Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_25Part5@@
+noncomputable def cocycleNode3_25Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_25Part6@@
+noncomputable def cocycleNode3_25Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_25Part7@@
+noncomputable def cocycleNode3_25Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_25Part8@@
+noncomputable def cocycleNode3_25Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_25Part9@@
+noncomputable def cocycleNode3_25Part10 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_25Part10@@
+noncomputable def cocycleNode3_25 : List (ℕ × ℤ) := cocycleNode3_25Part0 ++ cocycleNode3_25Part1 ++ cocycleNode3_25Part2 ++ cocycleNode3_25Part3 ++ cocycleNode3_25Part4 ++ cocycleNode3_25Part5 ++ cocycleNode3_25Part6 ++ cocycleNode3_25Part7 ++ cocycleNode3_25Part8 ++ cocycleNode3_25Part9 ++ cocycleNode3_25Part10
+noncomputable def cocycleSource3_25 : RawChain := cocycleSource2_50 + cocycleSource2_51
+theorem cocycleNode3_25_check : modularMerge cocycleNode2_50 cocycleNode2_51 = cocycleNode3_25 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode3_25_chain : reduceChain (codeChain cocycleNode3_25) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource3_25)) := by
+  rw [← cocycleNode3_25_check, modularMerge_sound, cocycleNode2_50_chain, cocycleNode2_51_chain]
+  simp only [cocycleSource3_25,map_add]
+noncomputable def cocycleNode3_26Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_26Part0@@
+noncomputable def cocycleNode3_26Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_26Part1@@
+noncomputable def cocycleNode3_26Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_26Part2@@
+noncomputable def cocycleNode3_26Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_26Part3@@
+noncomputable def cocycleNode3_26Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_26Part4@@
+noncomputable def cocycleNode3_26Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_26Part5@@
+noncomputable def cocycleNode3_26Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_26Part6@@
+noncomputable def cocycleNode3_26Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_26Part7@@
+noncomputable def cocycleNode3_26Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_26Part8@@
+noncomputable def cocycleNode3_26Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_26Part9@@
+noncomputable def cocycleNode3_26Part10 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_26Part10@@
+noncomputable def cocycleNode3_26 : List (ℕ × ℤ) := cocycleNode3_26Part0 ++ cocycleNode3_26Part1 ++ cocycleNode3_26Part2 ++ cocycleNode3_26Part3 ++ cocycleNode3_26Part4 ++ cocycleNode3_26Part5 ++ cocycleNode3_26Part6 ++ cocycleNode3_26Part7 ++ cocycleNode3_26Part8 ++ cocycleNode3_26Part9 ++ cocycleNode3_26Part10
+noncomputable def cocycleSource3_26 : RawChain := cocycleSource2_52 + cocycleSource2_53
+theorem cocycleNode3_26_check : modularMerge cocycleNode2_52 cocycleNode2_53 = cocycleNode3_26 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode3_26_chain : reduceChain (codeChain cocycleNode3_26) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource3_26)) := by
+  rw [← cocycleNode3_26_check, modularMerge_sound, cocycleNode2_52_chain, cocycleNode2_53_chain]
+  simp only [cocycleSource3_26,map_add]
+noncomputable def cocycleNode3_27Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_27Part0@@
+noncomputable def cocycleNode3_27Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_27Part1@@
+noncomputable def cocycleNode3_27Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_27Part2@@
+noncomputable def cocycleNode3_27Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_27Part3@@
+noncomputable def cocycleNode3_27Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_27Part4@@
+noncomputable def cocycleNode3_27Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_27Part5@@
+noncomputable def cocycleNode3_27Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_27Part6@@
+noncomputable def cocycleNode3_27Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_27Part7@@
+noncomputable def cocycleNode3_27Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_27Part8@@
+noncomputable def cocycleNode3_27Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_27Part9@@
+noncomputable def cocycleNode3_27Part10 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_27Part10@@
+noncomputable def cocycleNode3_27Part11 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_27Part11@@
+noncomputable def cocycleNode3_27Part12 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_27Part12@@
+noncomputable def cocycleNode3_27 : List (ℕ × ℤ) := cocycleNode3_27Part0 ++ cocycleNode3_27Part1 ++ cocycleNode3_27Part2 ++ cocycleNode3_27Part3 ++ cocycleNode3_27Part4 ++ cocycleNode3_27Part5 ++ cocycleNode3_27Part6 ++ cocycleNode3_27Part7 ++ cocycleNode3_27Part8 ++ cocycleNode3_27Part9 ++ cocycleNode3_27Part10 ++ cocycleNode3_27Part11 ++ cocycleNode3_27Part12
+noncomputable def cocycleSource3_27 : RawChain := cocycleSource2_54 + cocycleSource2_55
+theorem cocycleNode3_27_check : modularMerge cocycleNode2_54 cocycleNode2_55 = cocycleNode3_27 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode3_27_chain : reduceChain (codeChain cocycleNode3_27) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource3_27)) := by
+  rw [← cocycleNode3_27_check, modularMerge_sound, cocycleNode2_54_chain, cocycleNode2_55_chain]
+  simp only [cocycleSource3_27,map_add]
+noncomputable def cocycleNode3_28Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_28Part0@@
+noncomputable def cocycleNode3_28Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_28Part1@@
+noncomputable def cocycleNode3_28Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_28Part2@@
+noncomputable def cocycleNode3_28Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_28Part3@@
+noncomputable def cocycleNode3_28Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_28Part4@@
+noncomputable def cocycleNode3_28Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_28Part5@@
+noncomputable def cocycleNode3_28Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_28Part6@@
+noncomputable def cocycleNode3_28Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_28Part7@@
+noncomputable def cocycleNode3_28Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_28Part8@@
+noncomputable def cocycleNode3_28Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_28Part9@@
+noncomputable def cocycleNode3_28Part10 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_28Part10@@
+noncomputable def cocycleNode3_28Part11 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_28Part11@@
+noncomputable def cocycleNode3_28Part12 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_28Part12@@
+noncomputable def cocycleNode3_28 : List (ℕ × ℤ) := cocycleNode3_28Part0 ++ cocycleNode3_28Part1 ++ cocycleNode3_28Part2 ++ cocycleNode3_28Part3 ++ cocycleNode3_28Part4 ++ cocycleNode3_28Part5 ++ cocycleNode3_28Part6 ++ cocycleNode3_28Part7 ++ cocycleNode3_28Part8 ++ cocycleNode3_28Part9 ++ cocycleNode3_28Part10 ++ cocycleNode3_28Part11 ++ cocycleNode3_28Part12
+noncomputable def cocycleSource3_28 : RawChain := cocycleSource2_56 + cocycleSource2_57
+theorem cocycleNode3_28_check : modularMerge cocycleNode2_56 cocycleNode2_57 = cocycleNode3_28 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode3_28_chain : reduceChain (codeChain cocycleNode3_28) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource3_28)) := by
+  rw [← cocycleNode3_28_check, modularMerge_sound, cocycleNode2_56_chain, cocycleNode2_57_chain]
+  simp only [cocycleSource3_28,map_add]
+noncomputable def cocycleNode3_29Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_29Part0@@
+noncomputable def cocycleNode3_29Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_29Part1@@
+noncomputable def cocycleNode3_29Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_29Part2@@
+noncomputable def cocycleNode3_29Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_29Part3@@
+noncomputable def cocycleNode3_29Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_29Part4@@
+noncomputable def cocycleNode3_29Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_29Part5@@
+noncomputable def cocycleNode3_29Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_29Part6@@
+noncomputable def cocycleNode3_29Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_29Part7@@
+noncomputable def cocycleNode3_29Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_29Part8@@
+noncomputable def cocycleNode3_29Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_29Part9@@
+noncomputable def cocycleNode3_29 : List (ℕ × ℤ) := cocycleNode3_29Part0 ++ cocycleNode3_29Part1 ++ cocycleNode3_29Part2 ++ cocycleNode3_29Part3 ++ cocycleNode3_29Part4 ++ cocycleNode3_29Part5 ++ cocycleNode3_29Part6 ++ cocycleNode3_29Part7 ++ cocycleNode3_29Part8 ++ cocycleNode3_29Part9
+noncomputable def cocycleSource3_29 : RawChain := cocycleSource2_58 + cocycleSource2_59
+theorem cocycleNode3_29_check : modularMerge cocycleNode2_58 cocycleNode2_59 = cocycleNode3_29 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode3_29_chain : reduceChain (codeChain cocycleNode3_29) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource3_29)) := by
+  rw [← cocycleNode3_29_check, modularMerge_sound, cocycleNode2_58_chain, cocycleNode2_59_chain]
+  simp only [cocycleSource3_29,map_add]
+noncomputable def cocycleNode3_30Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_30Part0@@
+noncomputable def cocycleNode3_30Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_30Part1@@
+noncomputable def cocycleNode3_30Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_30Part2@@
+noncomputable def cocycleNode3_30Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_30Part3@@
+noncomputable def cocycleNode3_30Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_30Part4@@
+noncomputable def cocycleNode3_30Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_30Part5@@
+noncomputable def cocycleNode3_30Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_30Part6@@
+noncomputable def cocycleNode3_30Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_30Part7@@
+noncomputable def cocycleNode3_30Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_30Part8@@
+noncomputable def cocycleNode3_30Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_30Part9@@
+noncomputable def cocycleNode3_30 : List (ℕ × ℤ) := cocycleNode3_30Part0 ++ cocycleNode3_30Part1 ++ cocycleNode3_30Part2 ++ cocycleNode3_30Part3 ++ cocycleNode3_30Part4 ++ cocycleNode3_30Part5 ++ cocycleNode3_30Part6 ++ cocycleNode3_30Part7 ++ cocycleNode3_30Part8 ++ cocycleNode3_30Part9
+noncomputable def cocycleSource3_30 : RawChain := cocycleSource2_60 + cocycleSource2_61
+theorem cocycleNode3_30_check : modularMerge cocycleNode2_60 cocycleNode2_61 = cocycleNode3_30 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode3_30_chain : reduceChain (codeChain cocycleNode3_30) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource3_30)) := by
+  rw [← cocycleNode3_30_check, modularMerge_sound, cocycleNode2_60_chain, cocycleNode2_61_chain]
+  simp only [cocycleSource3_30,map_add]
+noncomputable def cocycleNode3_31Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_31Part0@@
+noncomputable def cocycleNode3_31Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_31Part1@@
+noncomputable def cocycleNode3_31Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_31Part2@@
+noncomputable def cocycleNode3_31Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_31Part3@@
+noncomputable def cocycleNode3_31Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_31Part4@@
+noncomputable def cocycleNode3_31Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_31Part5@@
+noncomputable def cocycleNode3_31Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_31Part6@@
+noncomputable def cocycleNode3_31Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_31Part7@@
+noncomputable def cocycleNode3_31Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_31Part8@@
+noncomputable def cocycleNode3_31Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_31Part9@@
+noncomputable def cocycleNode3_31Part10 : List (ℕ × ℤ) := @@GENERATED_RHS:cocycleNode3_31Part10@@
+noncomputable def cocycleNode3_31 : List (ℕ × ℤ) := cocycleNode3_31Part0 ++ cocycleNode3_31Part1 ++ cocycleNode3_31Part2 ++ cocycleNode3_31Part3 ++ cocycleNode3_31Part4 ++ cocycleNode3_31Part5 ++ cocycleNode3_31Part6 ++ cocycleNode3_31Part7 ++ cocycleNode3_31Part8 ++ cocycleNode3_31Part9 ++ cocycleNode3_31Part10
+noncomputable def cocycleSource3_31 : RawChain := cocycleSource2_62 + cocycleSource2_63
+theorem cocycleNode3_31_check : modularMerge cocycleNode2_62 cocycleNode2_63 = cocycleNode3_31 := by
+  exact eq_of_beq (by decide +kernel)
+theorem cocycleNode3_31_chain : reduceChain (codeChain cocycleNode3_31) =
+    reduceChain (restrictCubes 3 (coBoundary cocycleSource3_31)) := by
+  rw [← cocycleNode3_31_check, modularMerge_sound, cocycleNode2_62_chain, cocycleNode2_63_chain]
+  simp only [cocycleSource3_31,map_add]
+end Paper23.CertificateChecks

@@ -1,0 +1,69 @@
+import Paper20.RContent36
+set_option maxHeartbeats 0
+set_option maxRecDepth 200000
+namespace Paper20.Cert.RContent36.Tree
+open Paper20.RContent36
+open Paper20.HilbertJobs (Job parts children)
+
+def j_28_8 : Job := ⟨[28, 8], 8, 0, 35⟩
+
+def v_28_8 : State := @@GENERATED_RHS:v_28_8@@
+
+theorem correct_28_8 : Correct j_28_8 v_28_8 := correct_leaf j_28_8 v_28_8 (by decide +kernel)
+
+def j_28_7 : Job := ⟨[28, 7], 7, 1, 35⟩
+
+def v_28_7 : State := @@GENERATED_RHS:v_28_7@@
+
+theorem correct_28_7 : Correct j_28_7 v_28_7 := correct_leaf j_28_7 v_28_7 (by decide +kernel)
+
+def j_28_6 : Job := ⟨[28, 6], 6, 2, 35⟩
+
+def v_28_6 : State := @@GENERATED_RHS:v_28_6@@
+
+theorem correct_28_6 : Correct j_28_6 v_28_6 := correct_leaf j_28_6 v_28_6 (by decide +kernel)
+
+def j_28_5 : Job := ⟨[28, 5], 5, 3, 35⟩
+
+def v_28_5 : State := @@GENERATED_RHS:v_28_5@@
+
+theorem correct_28_5 : Correct j_28_5 v_28_5 := correct_leaf j_28_5 v_28_5 (by decide +kernel)
+
+def j_28_4 : Job := ⟨[28, 4], 4, 4, 35⟩
+
+def v_28_4 : State := @@GENERATED_RHS:v_28_4@@
+
+theorem correct_28_4 : Correct j_28_4 v_28_4 := correct_leaf j_28_4 v_28_4 (by decide +kernel)
+
+def j_28_3 : Job := ⟨[28, 3], 3, 5, 35⟩
+
+def v_28_3 : State := @@GENERATED_RHS:v_28_3@@
+
+theorem correct_28_3 : Correct j_28_3 v_28_3 := correct_leaf j_28_3 v_28_3 (by decide +kernel)
+
+def j_28_2 : Job := ⟨[28, 2], 2, 6, 35⟩
+
+def v_28_2 : State := @@GENERATED_RHS:v_28_2@@
+
+theorem correct_28_2 : Correct j_28_2 v_28_2 := correct_leaf j_28_2 v_28_2 (by decide +kernel)
+
+def j_28_1 : Job := ⟨[28, 1], 1, 7, 35⟩
+
+def v_28_1 : State := @@GENERATED_RHS:v_28_1@@
+
+theorem correct_28_1 : Correct j_28_1 v_28_1 := correct_leaf j_28_1 v_28_1 (by decide +kernel)
+
+def j_28 : Job := ⟨[28], 28, 8, 36⟩
+
+def v_28 : State := @@GENERATED_RHS:v_28@@
+
+theorem correct_28 : Correct j_28 v_28 := by
+  have hc : children j_28 = [j_28_8, j_28_7, j_28_6, j_28_5, j_28_4, j_28_3, j_28_2, j_28_1] := by decide +kernel
+  have hv : List.Forall₂ Correct (children j_28) [v_28_8, v_28_7, v_28_6, v_28_5, v_28_4, v_28_3, v_28_2, v_28_1] := by
+    rw [hc]
+    exact (List.Forall₂.cons correct_28_8 (List.Forall₂.cons correct_28_7 (List.Forall₂.cons correct_28_6 (List.Forall₂.cons correct_28_5 (List.Forall₂.cons correct_28_4 (List.Forall₂.cons correct_28_3 (List.Forall₂.cons correct_28_2 (List.Forall₂.cons correct_28_1 List.Forall₂.nil))))))))
+  have hp := correct_children j_28 (by decide) (by decide) [v_28_8, v_28_7, v_28_6, v_28_5, v_28_4, v_28_3, v_28_2, v_28_1] hv
+  have he : combine [v_28_8, v_28_7, v_28_6, v_28_5, v_28_4, v_28_3, v_28_2, v_28_1] = v_28 := by decide +kernel
+  rwa [he] at hp
+
+end Paper20.Cert.RContent36.Tree

@@ -1,0 +1,179 @@
+{
+  "paper_id": "26",
+  "title": "Rank-dependent lower bounds for quantum chi-squared tomography",
+  "source_url": "https://liuchliuch.github.io/repository/rank-dependent-lower-bounds-for-quantum-chi-squared-tomography/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper26"
+  ],
+  "build_targets": [
+    "Paper26"
+  ],
+  "comparators": [
+    {
+      "id": "supporting",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "706 explicit component types frozen for an earlier production snapshot; does not cover the final whole paper."
+    },
+    {
+      "id": "supporting-negative-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Genuine extra-premise control for the earlier component snapshot."
+    },
+    {
+      "id": "supporting-negative-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Genuine illegal-axiom control for the earlier component snapshot."
+    },
+    {
+      "id": "final",
+      "availability": "pending_materialization",
+      "available": false,
+      "expected_rejection": null,
+      "scope": "Final explicit contracts, unavailable until manual extraction and exact-hash source-statement correspondence review. No whole-paper verification claim.",
+      "planned_config": "Verification/final-comparator.json",
+      "preparation": "final-contracts",
+      "reviewed_manifest": "Verification/final-contract-review.json",
+      "review_gate": {
+        "types_sha256": "must_equal_extracted_bytes",
+        "source_tree_sha256": "must_equal_current_production_tree",
+        "statement_correspondence_reviewed": true,
+        "reviewer": "required_nonempty",
+        "review_notes": "required_nonempty",
+        "generated_files_sha256": "must_match_materialized_contracts_and_configs"
+      },
+      "review_command": [
+        "python3",
+        "scripts/prepare-contracts.py",
+        "check-reviewed",
+        "{reviewed_sha256}"
+      ]
+    },
+    {
+      "id": "final-negative-premise",
+      "availability": "pending_materialization",
+      "available": false,
+      "expected_rejection": "type",
+      "scope": "Final explicit contracts, unavailable until manual extraction and exact-hash source-statement correspondence review. No whole-paper verification claim.",
+      "planned_config": "Verification/final-negative-premise.json",
+      "preparation": "final-contracts",
+      "reviewed_manifest": "Verification/final-contract-review.json",
+      "review_gate": {
+        "types_sha256": "must_equal_extracted_bytes",
+        "source_tree_sha256": "must_equal_current_production_tree",
+        "statement_correspondence_reviewed": true,
+        "reviewer": "required_nonempty",
+        "review_notes": "required_nonempty",
+        "generated_files_sha256": "must_match_materialized_contracts_and_configs"
+      },
+      "review_command": [
+        "python3",
+        "scripts/prepare-contracts.py",
+        "check-reviewed",
+        "{reviewed_sha256}"
+      ]
+    },
+    {
+      "id": "final-negative-axiom",
+      "availability": "pending_materialization",
+      "available": false,
+      "expected_rejection": "axiom",
+      "scope": "Final explicit contracts, unavailable until manual extraction and exact-hash source-statement correspondence review. No whole-paper verification claim.",
+      "planned_config": "Verification/final-negative-axiom.json",
+      "preparation": "final-contracts",
+      "reviewed_manifest": "Verification/final-contract-review.json",
+      "review_gate": {
+        "types_sha256": "must_equal_extracted_bytes",
+        "source_tree_sha256": "must_equal_current_production_tree",
+        "statement_correspondence_reviewed": true,
+        "reviewer": "required_nonempty",
+        "review_notes": "required_nonempty",
+        "generated_files_sha256": "must_match_materialized_contracts_and_configs"
+      },
+      "review_command": [
+        "python3",
+        "scripts/prepare-contracts.py",
+        "check-reviewed",
+        "{reviewed_sha256}"
+      ]
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1.2",
+      "declaration": "Paper26.SourceCopyComplexity.theorem_1_2",
+      "scope": "All four minimum-copy lower bounds for arbitrary measurable collective operator POVMs and raw adaptive one-copy protocols, for every d ≥ 2 and 1 ≤ r ≤ d."
+    },
+    {
+      "source_result": "Theorem 1.3",
+      "declaration": "Paper26.MainUpperBounds.theorem_1_3",
+      "scope": "Four uniform learner constructions with the source logarithmic factors, confidence guarantees, Born laws and integer consumed-copy budgets."
+    },
+    {
+      "source_result": "Theorem 1.3 minima",
+      "declaration": "Paper26.MainUpperBounds.theorem_1_3_minima",
+      "scope": "Four minimum-copy upper bounds in the collective and adaptive one-copy models, with Bures and right-inverse chi-squared losses; generic geometric, concentration and operator-representation inputs are explicit."
+    },
+    {
+      "source_result": "Appendix A equation 50",
+      "declaration": "Paper26.A1MinimaxValue.equation_50",
+      "scope": "Exact pure-state minimax risk over actual operator learners, including n = 0, d = 1 and singular outputs."
+    },
+    {
+      "source_result": "Measured chi-squared attainment",
+      "declaration": "Paper26.MeasuredChiSquaredAttainment.attainingPOVM_eq",
+      "scope": "A finite projective measurement attains Bures chi-squared loss, including singular and infinite-loss cases, and dominates arbitrary measurable-outcome measurements."
+    },
+    {
+      "source_result": "Equation 36",
+      "declaration": "Paper26.PureBetaLaw.equation_36",
+      "scope": "The exact Beta law of the actual covariant pure-state experiment."
+    },
+    {
+      "source_result": "Appendix B",
+      "declaration": "Paper26.ConfidenceLowerBounds.all_source_confidence_lower_bounds",
+      "scope": "Four confidence-dependent lower bounds with the adaptive rank factor and the original source minimum-copy definitions."
+    },
+    {
+      "source_result": "Lemma 3.4 numeric prior",
+      "declaration": "Paper26.NumericGraphPrior.lemma_3_4_numeric",
+      "scope": "A compact weak-H1 Gaussian-cutoff prior on the closed half-chart, with Fisher coefficient 65536."
+    }
+  ],
+  "preparation": [
+    {
+      "id": "final-contracts",
+      "status": "not_materialized_not_reviewed",
+      "commands": [
+        "python3 ../../scripts/verify.py --paper 26 --check build",
+        "python3 scripts/prepare-contracts.py extract",
+        "python3 scripts/prepare-contracts.py materialize --review-record .lake/contract-review/approved.json"
+      ],
+      "required_review": "A substantive source-statement correspondence review must bind the exact types_sha256 and source_tree_sha256 from .lake/contract-review/extraction.json. The script rejects changed types or production sources. No review approval has been supplied.",
+      "outputs": [
+        "Verification/final-comparator.json",
+        "Verification/final-negative-premise.json",
+        "Verification/final-negative-axiom.json",
+        "Verification/final-contract-review.json"
+      ]
+    }
+  ],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "dependency_pins": {
+    "mathlib": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "plausible": "dfd06ebfe8d0e8fa7faba9cb5e5a2e74e7bd2805",
+    "LeanSearchClient": "99657ad92e23804e279f77ea6dbdeebaa1317b98",
+    "importGraph": "d768126816be17600904726ca7976b185786e6b9",
+    "proofwidgets": "556caed0eadb7901e068131d1be208dd907d07a2",
+    "aesop": "725ac8cd67acd70a7beaf47c3725e23484c1ef50",
+    "Qq": "dea6a3361fa36d5a13f87333dc506ada582e025c",
+    "batteries": "8da40b72fece29b7d3fe3d768bac4c8910ce9bee",
+    "Cli": "91c18fa62838ad0ab7384c03c9684d99d306e1da"
+  },
+  "source_paper_sha256": "82fbb919e1ff2bca072fd218b1c07f95527d5d5b50088e5a7452eb6d9b95273b",
+  "generated_artifacts": "generated-artifacts.json",
+  "primary_comparator": "final"
+}

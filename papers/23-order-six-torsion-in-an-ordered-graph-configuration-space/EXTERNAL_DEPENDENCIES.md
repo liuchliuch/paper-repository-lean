@@ -1,0 +1,16 @@
+# External dependencies and scope
+
+Mathlib is pinned to `f897ebcf72cd16f89ab4577d0c826cd14afaafc7`; Lean is 4.24.0. Production permits only `propext`, `Classical.choice`, and `Quot.sound`. Two explicit inputs remain unproved:
+
+1. `Paper23.ExternalTopology.PrueScrimshawH2Input`: bijectivity of the actual inclusion-induced singular H 2 map from the discretized ordered subspace to the configuration space of the subdivided graph, under graph conditions proved internally. This specializes Prue–Scrimshaw, Abrams’s stable equivalence for graph braid groups, Topology Appl 178(2014), Theorem 3.2 (arXiv:0909.5511v2), with singular-homology homotopy invariance (Hatcher Theorem 2.10/Corollary 2.11). The standard reduction of essential edge loops to the proved conventional girth condition is explicitly part of this specialization.
+2. `Paper23.ExternalTopology.OrderedCubicalComparisonInput`: an additive equivalence from the actual ordered-cube cycles/boundaries quotient to integral singular H 2 of the actual discretized topological subspace. This includes the concrete regular cubical CW structure, characteristic/attaching maps and orientation-sign chain adapter, as well as cellular/singular comparison (Hatcher Theorem 2.35). The combinatorial boundary definitions alone do not constitute a Lean construction of that adapter.
+
+Neither input provides a cycle, bounding chain, detector, certificate identity or torsion conclusion. The exact core multigraph, 32-vertex 39-edge subdivision, actual quotient realizations, graph conditions and subdivision homeomorphism are internal. Their detailed published quantifiers and specialization are retained in `external-dependencies.json`. No unconditional original singular-homology proof is claimed.
+
+The alternative witness has 1998 canonical/26356 labelled cycle terms, 308403 bounding input terms and 94741 nonzero detector entries; the source reports 409/9816,236992 and 214457 respectively. Its witness is not alternating; residual dimensions 3739/50 differ from 3361/61. These source-specific construction counts are not the existential theorem’s hypotheses. Concrete pivot-program termination/refinement and rank-one integer witnesses are not instantiated and are not used by the independent unreduced certificate. A formal nonplanarity predicate/theorem is not supplied; the explicit K 3,3 incidence embedding is proved.
+
+The shared release tooling installs the pinned official Comparator. Comparator challenge modules may contain specification placeholders; these are isolated from production proofs. Negative controls intentionally contain an added premise or an illegal axiom and are verification fixtures. No new axioms or proof placeholders were introduced by release curation.
+
+## Local generated artifacts
+
+The generation recipe supplies untrusted numeric candidates surrounded by the retained current proof-check scaffolding. Its exact-output manifest is a source integrity boundary, not an external mathematical assumption. Recreating the source does not discharge the kernel computations, complete the deferred whole-graph audit, or change the declared external dependencies. No new axiom, admission or finite-certificate premise is introduced.

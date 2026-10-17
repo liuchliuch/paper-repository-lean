@@ -1,0 +1,93 @@
+{
+  "paper_id": "17",
+  "title": "The space of Delzant polytopes is an absolute retract",
+  "source_url": "https://liuchliuch.github.io/repository/the-space-of-delzant-polytopes-is-an-absolute-retract/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper17",
+    "Verification"
+  ],
+  "build_targets": [
+    "Paper17",
+    "Verification"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "Sixteen original required contracts: AE/AR, extension, refinement, metric equivalence, example, approximation and homotopy density."
+    },
+    {
+      "id": "source",
+      "config": "Verification/comparator-full-source.json",
+      "expected_rejection": null,
+      "scope": "Forty-three additional exact source contracts, including both literal source metrics, full Example 2.4 and quantitative Appendix A."
+    },
+    {
+      "id": "core",
+      "config": "Verification/comparator-proved-core.json",
+      "expected_rejection": null,
+      "scope": "Nine overlapping proved core contracts; this suite does not add independent coverage."
+    },
+    {
+      "id": "example24",
+      "config": "Verification/comparator-example24.json",
+      "expected_rejection": null,
+      "scope": "The actual planar Minkowski counterexample and determinant obstruction."
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Added-premise control for Lemma 2.3."
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Illegal-axiom control for Lemma 2.3."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1.2",
+      "declaration": "P17Contract.theorem_1_2_euclidean",
+      "scope": "Absolute extensor and retract properties for Delzant polytopes in the exact Euclidean Hausdorff metric, including open convex support restrictions and controlled extensions."
+    },
+    {
+      "source_result": "Theorem 1.2, volume metric",
+      "declaration": "P17Contract.theorem_1_2_volume",
+      "scope": "The corresponding result in the Lebesgue symmetric-difference metric, with a proved identity homeomorphism between the two metric topologies."
+    },
+    {
+      "source_result": "Lemma 2.2",
+      "declaration": "Paper17.exists_delzant_refinement_of_rational_normal",
+      "scope": "Smooth projective refinement of rational polytopal normal fans."
+    },
+    {
+      "source_result": "Example 2.4",
+      "declaration": "Paper17.Example24.source_example_2_4",
+      "scope": "The concrete triangle counterexample, five-ray sum, hexagonal refinement and prism perturbation with exact Euclidean Hausdorff error 3t."
+    },
+    {
+      "source_result": "Proposition 4.3",
+      "declaration": "P17Contract.proposition_4_3_euclidean",
+      "scope": "Continuous approximation with arbitrary continuous positive error and locally finite normal fans."
+    },
+    {
+      "source_result": "Theorem 4.4",
+      "declaration": "P17Contract.theorem_4_4_euclidean",
+      "scope": "A jointly continuous deformation equal to the identity at time zero, with Delzant values and Hausdorff error less than t for 0 < t ≤ 1."
+    },
+    {
+      "source_result": "Appendix A",
+      "declaration": "P17Contract.QuantitativeDisk.quantitative_disk_filling",
+      "scope": "Quantitative filling of actual loops in the closed complex disk, using compatible covers; the particular annular triangulation is not constructed."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "source_html_sha256": "a7200097ac81aab106ae914c501ef104b159f1df585f59bb64d8c90a0eb63458",
+  "primary_comparator": "main"
+}

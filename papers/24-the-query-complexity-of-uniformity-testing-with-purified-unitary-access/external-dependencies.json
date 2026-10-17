@@ -1,0 +1,58 @@
+{
+  "policy": "Published standard results are explicit proposition inputs. No external result is installed as a Lean axiom; no paper-specific missing proof is exempted.",
+  "dependencies": [
+    {
+      "name": "PUT.External.DirichletJointMomentLaw",
+      "module": "PUT/ExternalMoments.lean",
+      "kind": "explicit proposition parameter",
+      "statement": "For d >= 2 and a > 0, the actual normalized-independent-Gamma Dirichlet measure has integrable integer monomials and integral equal to the quotient of rising factorials.",
+      "references": [
+        {"title": "NIST DLMF 5.14.2, multivariate beta simplex integral", "url": "https://dlmf.nist.gov/5.14.E2"},
+        {"title": "Anirban DasGupta, Graduate Probability, Section 1.23, Theorem 1.68, printed pp. 138-139", "url": "https://www.stat.purdue.edu/~dasgupta/gradprob.pdf"}
+      ],
+      "specialization": "The normalized-Gamma identification and shifted multivariate beta integrals give the stated symmetric joint moments.",
+      "used_by": ["Lemma 1", "Lemma 2", "Theorem 1"]
+    },
+    {
+      "name": "PUT.External.NinefoldAmplificationLaw",
+      "module": "PUT/ExternalAlgorithms.lean",
+      "kind": "explicit proposition parameter",
+      "statement": "Nine independent coherent repetitions and majority voting transform every finite-workspace tester family into one using exactly 9Q calls, with each promised error at most 2^9*(1/100)^5.",
+      "references": [
+        {"title": "John Watrous, Quantum Computational Complexity, Sections III.3 and IV.2, Proposition 3 and following discussion", "url": "https://cs.uwaterloo.ca/~watrous/Papers/QuantumComputationalComplexity.pdf"}
+      ],
+      "specialization": "This is the nine-run specialization of the standard repetition construction, not a claim that Proposition 3 literally states 9Q. The elementary numerical error bound is proved in TestingLowerBound.",
+      "used_by": ["Theorem 1"]
+    },
+    {
+      "name": "PUT.External.KutinCollisionLaw",
+      "module": "PUT/CollisionTester.lean",
+      "kind": "explicit proposition parameter",
+      "statement": "There is a positive absolute kappa such that every standard additive-function-query algorithm distinguishing injections from four-to-one functions [D] -> [D], for positive D divisible by 4, with error at most 1/3 uses at least kappa*(D/4)^(1/3) queries.",
+      "references": [
+        {"title": "Samuel Kutin, Quantum lower bound for the collision problem with small range, Theory of Computing 1 (2005), Theorem 1.1, p.30; additive query model Section 2.1", "url": "https://theoryofcomputing.org/articles/v001a002/v001a002.pdf"}
+      ],
+      "specialization": "r=4. The actual P24 reduction, complete unknown unitaries, inverse/control access, arbitrary finite workspace, 4Q standard-query cost and exact Born-output equality are proved internally.",
+      "used_by": ["Theorem 1 constant-accuracy range"]
+    },
+    {
+      "name": "PUT.External.AdaptiveNormalizationLaw",
+      "module": "PUT/AdaptiveModel.lean",
+      "kind": "explicit proposition parameter",
+      "statement": "Every finite adaptive projective-query tree with at most Q queries on each branch admits a unitary tester family using exactly 2Q fixed-direction controlled calls and preserving every valid full oracle's rejection probability, including outside the promise.",
+      "references": [
+        {"title": "John Watrous, Quantum Computational Complexity, Section III.3 and Figure 5, unitary purification", "url": "https://cs.uwaterloo.ca/~watrous/Papers/QuantumComputationalComplexity.pdf"}
+      ],
+      "specialization": "Deferred measurement with finite history registers and two slots (forward/inverse) per adaptive query depth, plus controlled padding for inactive and halted histories. The factor two is explicitly absorbed into the lower-bound constant. The finite adaptive syntax, its Born semantics and transfer of the lower bound are proved internally.",
+      "used_by": ["Theorem 1 adaptive-protocol corollary"]
+    }
+  ],
+  "never_externalized": [
+    "P24 full Fourier-Dirichlet query-norm estimate and its constant 20",
+    "P24 principal/radial decomposition on whole radial L2 sectors",
+    "P24 Holder, TV moment and Paley-Zygmund argument",
+    "Actual prior averaged rejection, adversary commutation and progress decrease",
+    "P24 collision preparation and complete controlled/inverse unitary simulation",
+    "Legal parameter cutoffs, actual Q inequality, small dimensions and finite qubit embeddings"
+  ]
+}

@@ -1,0 +1,213 @@
+import Paper23.Bounding.Level1Part010
+import Paper23.Bounding.Level1Part011
+import Paper23.BoundingSupport
+import Paper23.CertificateChecks
+set_option maxRecDepth 1000000
+set_option maxHeartbeats 0
+namespace Paper23.Bounding
+open Cubical CertificateData CertificateChecks
+attribute [local irreducible] codeChain
+noncomputable def boundingNode2_80Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_80Part0@@
+noncomputable def boundingNode2_80Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_80Part1@@
+noncomputable def boundingNode2_80Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_80Part2@@
+noncomputable def boundingNode2_80Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_80Part3@@
+noncomputable def boundingNode2_80Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_80Part4@@
+noncomputable def boundingNode2_80Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_80Part5@@
+noncomputable def boundingNode2_80 : List (ℕ × ℤ) := boundingNode2_80Part0 ++ boundingNode2_80Part1 ++ boundingNode2_80Part2 ++ boundingNode2_80Part3 ++ boundingNode2_80Part4 ++ boundingNode2_80Part5
+noncomputable def boundingSource2_80 : RawChain := boundingSource1_160 + boundingSource1_161
+noncomputable def boundingTarget2_80 : RawChain := boundingTarget1_160 + boundingTarget1_161
+theorem boundingNode2_80_check : merge boundingNode1_160 boundingNode1_161 = boundingNode2_80 := by decide +kernel
+ theorem boundingNode2_80_chain : codeChain boundingNode2_80 = boundary boundingSource2_80 + (-6 : ℤ) • boundingTarget2_80 := by
+  simpa only [add_zero] using (node_sound boundingNode1_160 boundingNode1_161 boundingNode2_80 boundingSource1_160 boundingSource1_161 boundingTarget1_160 boundingTarget1_161 boundingNode1_160_chain boundingNode1_161_chain boundingNode2_80_check)
+ theorem boundingNode2_80_mem : boundingSource2_80 ∈ Chains 3 := (Chains 3).add_mem boundingNode1_160_mem boundingNode1_161_mem
+noncomputable def boundingNode2_81Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_81Part0@@
+noncomputable def boundingNode2_81Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_81Part1@@
+noncomputable def boundingNode2_81Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_81Part2@@
+noncomputable def boundingNode2_81Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_81Part3@@
+noncomputable def boundingNode2_81Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_81Part4@@
+noncomputable def boundingNode2_81Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_81Part5@@
+noncomputable def boundingNode2_81 : List (ℕ × ℤ) := boundingNode2_81Part0 ++ boundingNode2_81Part1 ++ boundingNode2_81Part2 ++ boundingNode2_81Part3 ++ boundingNode2_81Part4 ++ boundingNode2_81Part5
+noncomputable def boundingSource2_81 : RawChain := boundingSource1_162 + boundingSource1_163
+noncomputable def boundingTarget2_81 : RawChain := boundingTarget1_162 + boundingTarget1_163
+theorem boundingNode2_81_check : merge boundingNode1_162 boundingNode1_163 = boundingNode2_81 := by decide +kernel
+ theorem boundingNode2_81_chain : codeChain boundingNode2_81 = boundary boundingSource2_81 + (-6 : ℤ) • boundingTarget2_81 := by
+  simpa only [add_zero] using (node_sound boundingNode1_162 boundingNode1_163 boundingNode2_81 boundingSource1_162 boundingSource1_163 boundingTarget1_162 boundingTarget1_163 boundingNode1_162_chain boundingNode1_163_chain boundingNode2_81_check)
+ theorem boundingNode2_81_mem : boundingSource2_81 ∈ Chains 3 := (Chains 3).add_mem boundingNode1_162_mem boundingNode1_163_mem
+noncomputable def boundingNode2_82Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_82Part0@@
+noncomputable def boundingNode2_82Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_82Part1@@
+noncomputable def boundingNode2_82Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_82Part2@@
+noncomputable def boundingNode2_82Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_82Part3@@
+noncomputable def boundingNode2_82Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_82Part4@@
+noncomputable def boundingNode2_82Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_82Part5@@
+noncomputable def boundingNode2_82 : List (ℕ × ℤ) := boundingNode2_82Part0 ++ boundingNode2_82Part1 ++ boundingNode2_82Part2 ++ boundingNode2_82Part3 ++ boundingNode2_82Part4 ++ boundingNode2_82Part5
+noncomputable def boundingSource2_82 : RawChain := boundingSource1_164 + boundingSource1_165
+noncomputable def boundingTarget2_82 : RawChain := boundingTarget1_164 + boundingTarget1_165
+theorem boundingNode2_82_check : merge boundingNode1_164 boundingNode1_165 = boundingNode2_82 := by decide +kernel
+ theorem boundingNode2_82_chain : codeChain boundingNode2_82 = boundary boundingSource2_82 + (-6 : ℤ) • boundingTarget2_82 := by
+  simpa only [add_zero] using (node_sound boundingNode1_164 boundingNode1_165 boundingNode2_82 boundingSource1_164 boundingSource1_165 boundingTarget1_164 boundingTarget1_165 boundingNode1_164_chain boundingNode1_165_chain boundingNode2_82_check)
+ theorem boundingNode2_82_mem : boundingSource2_82 ∈ Chains 3 := (Chains 3).add_mem boundingNode1_164_mem boundingNode1_165_mem
+noncomputable def boundingNode2_83Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_83Part0@@
+noncomputable def boundingNode2_83Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_83Part1@@
+noncomputable def boundingNode2_83Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_83Part2@@
+noncomputable def boundingNode2_83Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_83Part3@@
+noncomputable def boundingNode2_83Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_83Part4@@
+noncomputable def boundingNode2_83Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_83Part5@@
+noncomputable def boundingNode2_83 : List (ℕ × ℤ) := boundingNode2_83Part0 ++ boundingNode2_83Part1 ++ boundingNode2_83Part2 ++ boundingNode2_83Part3 ++ boundingNode2_83Part4 ++ boundingNode2_83Part5
+noncomputable def boundingSource2_83 : RawChain := boundingSource1_166 + boundingSource1_167
+noncomputable def boundingTarget2_83 : RawChain := boundingTarget1_166 + boundingTarget1_167
+theorem boundingNode2_83_check : merge boundingNode1_166 boundingNode1_167 = boundingNode2_83 := by decide +kernel
+ theorem boundingNode2_83_chain : codeChain boundingNode2_83 = boundary boundingSource2_83 + (-6 : ℤ) • boundingTarget2_83 := by
+  simpa only [add_zero] using (node_sound boundingNode1_166 boundingNode1_167 boundingNode2_83 boundingSource1_166 boundingSource1_167 boundingTarget1_166 boundingTarget1_167 boundingNode1_166_chain boundingNode1_167_chain boundingNode2_83_check)
+ theorem boundingNode2_83_mem : boundingSource2_83 ∈ Chains 3 := (Chains 3).add_mem boundingNode1_166_mem boundingNode1_167_mem
+noncomputable def boundingNode2_84Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_84Part0@@
+noncomputable def boundingNode2_84Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_84Part1@@
+noncomputable def boundingNode2_84Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_84Part2@@
+noncomputable def boundingNode2_84Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_84Part3@@
+noncomputable def boundingNode2_84Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_84Part4@@
+noncomputable def boundingNode2_84Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_84Part5@@
+noncomputable def boundingNode2_84 : List (ℕ × ℤ) := boundingNode2_84Part0 ++ boundingNode2_84Part1 ++ boundingNode2_84Part2 ++ boundingNode2_84Part3 ++ boundingNode2_84Part4 ++ boundingNode2_84Part5
+noncomputable def boundingSource2_84 : RawChain := boundingSource1_168 + boundingSource1_169
+noncomputable def boundingTarget2_84 : RawChain := boundingTarget1_168 + boundingTarget1_169
+theorem boundingNode2_84_check : merge boundingNode1_168 boundingNode1_169 = boundingNode2_84 := by decide +kernel
+ theorem boundingNode2_84_chain : codeChain boundingNode2_84 = boundary boundingSource2_84 + (-6 : ℤ) • boundingTarget2_84 := by
+  simpa only [add_zero] using (node_sound boundingNode1_168 boundingNode1_169 boundingNode2_84 boundingSource1_168 boundingSource1_169 boundingTarget1_168 boundingTarget1_169 boundingNode1_168_chain boundingNode1_169_chain boundingNode2_84_check)
+ theorem boundingNode2_84_mem : boundingSource2_84 ∈ Chains 3 := (Chains 3).add_mem boundingNode1_168_mem boundingNode1_169_mem
+noncomputable def boundingNode2_85Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_85Part0@@
+noncomputable def boundingNode2_85Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_85Part1@@
+noncomputable def boundingNode2_85Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_85Part2@@
+noncomputable def boundingNode2_85Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_85Part3@@
+noncomputable def boundingNode2_85Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_85Part4@@
+noncomputable def boundingNode2_85Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_85Part5@@
+noncomputable def boundingNode2_85 : List (ℕ × ℤ) := boundingNode2_85Part0 ++ boundingNode2_85Part1 ++ boundingNode2_85Part2 ++ boundingNode2_85Part3 ++ boundingNode2_85Part4 ++ boundingNode2_85Part5
+noncomputable def boundingSource2_85 : RawChain := boundingSource1_170 + boundingSource1_171
+noncomputable def boundingTarget2_85 : RawChain := boundingTarget1_170 + boundingTarget1_171
+theorem boundingNode2_85_check : merge boundingNode1_170 boundingNode1_171 = boundingNode2_85 := by decide +kernel
+ theorem boundingNode2_85_chain : codeChain boundingNode2_85 = boundary boundingSource2_85 + (-6 : ℤ) • boundingTarget2_85 := by
+  simpa only [add_zero] using (node_sound boundingNode1_170 boundingNode1_171 boundingNode2_85 boundingSource1_170 boundingSource1_171 boundingTarget1_170 boundingTarget1_171 boundingNode1_170_chain boundingNode1_171_chain boundingNode2_85_check)
+ theorem boundingNode2_85_mem : boundingSource2_85 ∈ Chains 3 := (Chains 3).add_mem boundingNode1_170_mem boundingNode1_171_mem
+noncomputable def boundingNode2_86Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_86Part0@@
+noncomputable def boundingNode2_86Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_86Part1@@
+noncomputable def boundingNode2_86Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_86Part2@@
+noncomputable def boundingNode2_86Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_86Part3@@
+noncomputable def boundingNode2_86Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_86Part4@@
+noncomputable def boundingNode2_86Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_86Part5@@
+noncomputable def boundingNode2_86 : List (ℕ × ℤ) := boundingNode2_86Part0 ++ boundingNode2_86Part1 ++ boundingNode2_86Part2 ++ boundingNode2_86Part3 ++ boundingNode2_86Part4 ++ boundingNode2_86Part5
+noncomputable def boundingSource2_86 : RawChain := boundingSource1_172 + boundingSource1_173
+noncomputable def boundingTarget2_86 : RawChain := boundingTarget1_172 + boundingTarget1_173
+theorem boundingNode2_86_check : merge boundingNode1_172 boundingNode1_173 = boundingNode2_86 := by decide +kernel
+ theorem boundingNode2_86_chain : codeChain boundingNode2_86 = boundary boundingSource2_86 + (-6 : ℤ) • boundingTarget2_86 := by
+  simpa only [add_zero] using (node_sound boundingNode1_172 boundingNode1_173 boundingNode2_86 boundingSource1_172 boundingSource1_173 boundingTarget1_172 boundingTarget1_173 boundingNode1_172_chain boundingNode1_173_chain boundingNode2_86_check)
+ theorem boundingNode2_86_mem : boundingSource2_86 ∈ Chains 3 := (Chains 3).add_mem boundingNode1_172_mem boundingNode1_173_mem
+noncomputable def boundingNode2_87Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_87Part0@@
+noncomputable def boundingNode2_87Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_87Part1@@
+noncomputable def boundingNode2_87Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_87Part2@@
+noncomputable def boundingNode2_87Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_87Part3@@
+noncomputable def boundingNode2_87Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_87Part4@@
+noncomputable def boundingNode2_87Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_87Part5@@
+noncomputable def boundingNode2_87 : List (ℕ × ℤ) := boundingNode2_87Part0 ++ boundingNode2_87Part1 ++ boundingNode2_87Part2 ++ boundingNode2_87Part3 ++ boundingNode2_87Part4 ++ boundingNode2_87Part5
+noncomputable def boundingSource2_87 : RawChain := boundingSource1_174 + boundingSource1_175
+noncomputable def boundingTarget2_87 : RawChain := boundingTarget1_174 + boundingTarget1_175
+theorem boundingNode2_87_check : merge boundingNode1_174 boundingNode1_175 = boundingNode2_87 := by decide +kernel
+ theorem boundingNode2_87_chain : codeChain boundingNode2_87 = boundary boundingSource2_87 + (-6 : ℤ) • boundingTarget2_87 := by
+  simpa only [add_zero] using (node_sound boundingNode1_174 boundingNode1_175 boundingNode2_87 boundingSource1_174 boundingSource1_175 boundingTarget1_174 boundingTarget1_175 boundingNode1_174_chain boundingNode1_175_chain boundingNode2_87_check)
+ theorem boundingNode2_87_mem : boundingSource2_87 ∈ Chains 3 := (Chains 3).add_mem boundingNode1_174_mem boundingNode1_175_mem
+noncomputable def boundingNode2_88Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_88Part0@@
+noncomputable def boundingNode2_88Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_88Part1@@
+noncomputable def boundingNode2_88Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_88Part2@@
+noncomputable def boundingNode2_88Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_88Part3@@
+noncomputable def boundingNode2_88Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_88Part4@@
+noncomputable def boundingNode2_88 : List (ℕ × ℤ) := boundingNode2_88Part0 ++ boundingNode2_88Part1 ++ boundingNode2_88Part2 ++ boundingNode2_88Part3 ++ boundingNode2_88Part4
+noncomputable def boundingSource2_88 : RawChain := boundingSource1_176 + boundingSource1_177
+noncomputable def boundingTarget2_88 : RawChain := boundingTarget1_176 + boundingTarget1_177
+theorem boundingNode2_88_check : merge boundingNode1_176 boundingNode1_177 = boundingNode2_88 := by decide +kernel
+ theorem boundingNode2_88_chain : codeChain boundingNode2_88 = boundary boundingSource2_88 + (-6 : ℤ) • boundingTarget2_88 := by
+  simpa only [add_zero] using (node_sound boundingNode1_176 boundingNode1_177 boundingNode2_88 boundingSource1_176 boundingSource1_177 boundingTarget1_176 boundingTarget1_177 boundingNode1_176_chain boundingNode1_177_chain boundingNode2_88_check)
+ theorem boundingNode2_88_mem : boundingSource2_88 ∈ Chains 3 := (Chains 3).add_mem boundingNode1_176_mem boundingNode1_177_mem
+noncomputable def boundingNode2_89Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_89Part0@@
+noncomputable def boundingNode2_89Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_89Part1@@
+noncomputable def boundingNode2_89Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_89Part2@@
+noncomputable def boundingNode2_89Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_89Part3@@
+noncomputable def boundingNode2_89Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_89Part4@@
+noncomputable def boundingNode2_89 : List (ℕ × ℤ) := boundingNode2_89Part0 ++ boundingNode2_89Part1 ++ boundingNode2_89Part2 ++ boundingNode2_89Part3 ++ boundingNode2_89Part4
+noncomputable def boundingSource2_89 : RawChain := boundingSource1_178 + boundingSource1_179
+noncomputable def boundingTarget2_89 : RawChain := boundingTarget1_178 + boundingTarget1_179
+theorem boundingNode2_89_check : merge boundingNode1_178 boundingNode1_179 = boundingNode2_89 := by decide +kernel
+ theorem boundingNode2_89_chain : codeChain boundingNode2_89 = boundary boundingSource2_89 + (-6 : ℤ) • boundingTarget2_89 := by
+  simpa only [add_zero] using (node_sound boundingNode1_178 boundingNode1_179 boundingNode2_89 boundingSource1_178 boundingSource1_179 boundingTarget1_178 boundingTarget1_179 boundingNode1_178_chain boundingNode1_179_chain boundingNode2_89_check)
+ theorem boundingNode2_89_mem : boundingSource2_89 ∈ Chains 3 := (Chains 3).add_mem boundingNode1_178_mem boundingNode1_179_mem
+noncomputable def boundingNode2_90Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_90Part0@@
+noncomputable def boundingNode2_90Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_90Part1@@
+noncomputable def boundingNode2_90Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_90Part2@@
+noncomputable def boundingNode2_90Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_90Part3@@
+noncomputable def boundingNode2_90Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_90Part4@@
+noncomputable def boundingNode2_90Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_90Part5@@
+noncomputable def boundingNode2_90 : List (ℕ × ℤ) := boundingNode2_90Part0 ++ boundingNode2_90Part1 ++ boundingNode2_90Part2 ++ boundingNode2_90Part3 ++ boundingNode2_90Part4 ++ boundingNode2_90Part5
+noncomputable def boundingSource2_90 : RawChain := boundingSource1_180 + boundingSource1_181
+noncomputable def boundingTarget2_90 : RawChain := boundingTarget1_180 + boundingTarget1_181
+theorem boundingNode2_90_check : merge boundingNode1_180 boundingNode1_181 = boundingNode2_90 := by decide +kernel
+ theorem boundingNode2_90_chain : codeChain boundingNode2_90 = boundary boundingSource2_90 + (-6 : ℤ) • boundingTarget2_90 := by
+  simpa only [add_zero] using (node_sound boundingNode1_180 boundingNode1_181 boundingNode2_90 boundingSource1_180 boundingSource1_181 boundingTarget1_180 boundingTarget1_181 boundingNode1_180_chain boundingNode1_181_chain boundingNode2_90_check)
+ theorem boundingNode2_90_mem : boundingSource2_90 ∈ Chains 3 := (Chains 3).add_mem boundingNode1_180_mem boundingNode1_181_mem
+noncomputable def boundingNode2_91Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_91Part0@@
+noncomputable def boundingNode2_91Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_91Part1@@
+noncomputable def boundingNode2_91Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_91Part2@@
+noncomputable def boundingNode2_91Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_91Part3@@
+noncomputable def boundingNode2_91Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_91Part4@@
+noncomputable def boundingNode2_91Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_91Part5@@
+noncomputable def boundingNode2_91 : List (ℕ × ℤ) := boundingNode2_91Part0 ++ boundingNode2_91Part1 ++ boundingNode2_91Part2 ++ boundingNode2_91Part3 ++ boundingNode2_91Part4 ++ boundingNode2_91Part5
+noncomputable def boundingSource2_91 : RawChain := boundingSource1_182 + boundingSource1_183
+noncomputable def boundingTarget2_91 : RawChain := boundingTarget1_182 + boundingTarget1_183
+theorem boundingNode2_91_check : merge boundingNode1_182 boundingNode1_183 = boundingNode2_91 := by decide +kernel
+ theorem boundingNode2_91_chain : codeChain boundingNode2_91 = boundary boundingSource2_91 + (-6 : ℤ) • boundingTarget2_91 := by
+  simpa only [add_zero] using (node_sound boundingNode1_182 boundingNode1_183 boundingNode2_91 boundingSource1_182 boundingSource1_183 boundingTarget1_182 boundingTarget1_183 boundingNode1_182_chain boundingNode1_183_chain boundingNode2_91_check)
+ theorem boundingNode2_91_mem : boundingSource2_91 ∈ Chains 3 := (Chains 3).add_mem boundingNode1_182_mem boundingNode1_183_mem
+noncomputable def boundingNode2_92Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_92Part0@@
+noncomputable def boundingNode2_92Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_92Part1@@
+noncomputable def boundingNode2_92Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_92Part2@@
+noncomputable def boundingNode2_92Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_92Part3@@
+noncomputable def boundingNode2_92Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_92Part4@@
+noncomputable def boundingNode2_92 : List (ℕ × ℤ) := boundingNode2_92Part0 ++ boundingNode2_92Part1 ++ boundingNode2_92Part2 ++ boundingNode2_92Part3 ++ boundingNode2_92Part4
+noncomputable def boundingSource2_92 : RawChain := boundingSource1_184 + boundingSource1_185
+noncomputable def boundingTarget2_92 : RawChain := boundingTarget1_184 + boundingTarget1_185
+theorem boundingNode2_92_check : merge boundingNode1_184 boundingNode1_185 = boundingNode2_92 := by decide +kernel
+ theorem boundingNode2_92_chain : codeChain boundingNode2_92 = boundary boundingSource2_92 + (-6 : ℤ) • boundingTarget2_92 := by
+  simpa only [add_zero] using (node_sound boundingNode1_184 boundingNode1_185 boundingNode2_92 boundingSource1_184 boundingSource1_185 boundingTarget1_184 boundingTarget1_185 boundingNode1_184_chain boundingNode1_185_chain boundingNode2_92_check)
+ theorem boundingNode2_92_mem : boundingSource2_92 ∈ Chains 3 := (Chains 3).add_mem boundingNode1_184_mem boundingNode1_185_mem
+noncomputable def boundingNode2_93Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_93Part0@@
+noncomputable def boundingNode2_93Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_93Part1@@
+noncomputable def boundingNode2_93Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_93Part2@@
+noncomputable def boundingNode2_93Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_93Part3@@
+noncomputable def boundingNode2_93Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_93Part4@@
+noncomputable def boundingNode2_93 : List (ℕ × ℤ) := boundingNode2_93Part0 ++ boundingNode2_93Part1 ++ boundingNode2_93Part2 ++ boundingNode2_93Part3 ++ boundingNode2_93Part4
+noncomputable def boundingSource2_93 : RawChain := boundingSource1_186 + boundingSource1_187
+noncomputable def boundingTarget2_93 : RawChain := boundingTarget1_186 + boundingTarget1_187
+theorem boundingNode2_93_check : merge boundingNode1_186 boundingNode1_187 = boundingNode2_93 := by decide +kernel
+ theorem boundingNode2_93_chain : codeChain boundingNode2_93 = boundary boundingSource2_93 + (-6 : ℤ) • boundingTarget2_93 := by
+  simpa only [add_zero] using (node_sound boundingNode1_186 boundingNode1_187 boundingNode2_93 boundingSource1_186 boundingSource1_187 boundingTarget1_186 boundingTarget1_187 boundingNode1_186_chain boundingNode1_187_chain boundingNode2_93_check)
+ theorem boundingNode2_93_mem : boundingSource2_93 ∈ Chains 3 := (Chains 3).add_mem boundingNode1_186_mem boundingNode1_187_mem
+noncomputable def boundingNode2_94Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_94Part0@@
+noncomputable def boundingNode2_94Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_94Part1@@
+noncomputable def boundingNode2_94Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_94Part2@@
+noncomputable def boundingNode2_94Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_94Part3@@
+noncomputable def boundingNode2_94Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_94Part4@@
+noncomputable def boundingNode2_94 : List (ℕ × ℤ) := boundingNode2_94Part0 ++ boundingNode2_94Part1 ++ boundingNode2_94Part2 ++ boundingNode2_94Part3 ++ boundingNode2_94Part4
+noncomputable def boundingSource2_94 : RawChain := boundingSource1_188 + boundingSource1_189
+noncomputable def boundingTarget2_94 : RawChain := boundingTarget1_188 + boundingTarget1_189
+theorem boundingNode2_94_check : merge boundingNode1_188 boundingNode1_189 = boundingNode2_94 := by decide +kernel
+ theorem boundingNode2_94_chain : codeChain boundingNode2_94 = boundary boundingSource2_94 + (-6 : ℤ) • boundingTarget2_94 := by
+  simpa only [add_zero] using (node_sound boundingNode1_188 boundingNode1_189 boundingNode2_94 boundingSource1_188 boundingSource1_189 boundingTarget1_188 boundingTarget1_189 boundingNode1_188_chain boundingNode1_189_chain boundingNode2_94_check)
+ theorem boundingNode2_94_mem : boundingSource2_94 ∈ Chains 3 := (Chains 3).add_mem boundingNode1_188_mem boundingNode1_189_mem
+noncomputable def boundingNode2_95Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_95Part0@@
+noncomputable def boundingNode2_95Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_95Part1@@
+noncomputable def boundingNode2_95Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_95Part2@@
+noncomputable def boundingNode2_95Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_95Part3@@
+noncomputable def boundingNode2_95Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_95Part4@@
+noncomputable def boundingNode2_95Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:boundingNode2_95Part5@@
+noncomputable def boundingNode2_95 : List (ℕ × ℤ) := boundingNode2_95Part0 ++ boundingNode2_95Part1 ++ boundingNode2_95Part2 ++ boundingNode2_95Part3 ++ boundingNode2_95Part4 ++ boundingNode2_95Part5
+noncomputable def boundingSource2_95 : RawChain := boundingSource1_190 + boundingSource1_191
+noncomputable def boundingTarget2_95 : RawChain := boundingTarget1_190 + boundingTarget1_191
+theorem boundingNode2_95_check : merge boundingNode1_190 boundingNode1_191 = boundingNode2_95 := by decide +kernel
+ theorem boundingNode2_95_chain : codeChain boundingNode2_95 = boundary boundingSource2_95 + (-6 : ℤ) • boundingTarget2_95 := by
+  simpa only [add_zero] using (node_sound boundingNode1_190 boundingNode1_191 boundingNode2_95 boundingSource1_190 boundingSource1_191 boundingTarget1_190 boundingTarget1_191 boundingNode1_190_chain boundingNode1_191_chain boundingNode2_95_check)
+ theorem boundingNode2_95_mem : boundingSource2_95 ∈ Chains 3 := (Chains 3).add_mem boundingNode1_190_mem boundingNode1_191_mem
+end Paper23.Bounding

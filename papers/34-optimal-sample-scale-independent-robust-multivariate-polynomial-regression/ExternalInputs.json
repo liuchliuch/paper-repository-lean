@@ -1,0 +1,100 @@
+{
+  "paper_id": "34",
+  "authorization": "Latest user resume permits precise published external theorems as explicit theorem parameters, never new Lean axioms.",
+  "input_count": 1,
+  "inputs": [
+    {
+      "id": "EXT-BERNSTEIN",
+      "kind": "explicit_theorem_parameter",
+      "lean_name": "Paper34.TrigBernstein.ClassicalTrigBernstein",
+      "lean_definition": "def ClassicalTrigBernstein : Prop :=\n  ∀ (d : ℕ), 1 ≤ d → ∀ (T : ℝ → ℂ), T ∈ trigPolynomialSpace d →\n    ∀ (M : ℝ), 0 ≤ M → (∀ t : ℝ, ‖T t‖ ≤ M) →\n      ∀ t : ℝ, ‖deriv T t‖ ≤ (d : ℝ) * M",
+      "source": {
+        "authors": "H. Queffelec and R. Zarouf",
+        "title": "On Bernstein’s inequality for polynomials",
+        "reference": "Theorem 1.1, Section 1.1",
+        "url": "https://arxiv.org/html/1903.10801#S1.SS1",
+        "publication": "Classical Bernstein theorem; cited survey statement"
+      },
+      "meaning": "For every d>=1 and every genuine complex trigonometric polynomial with frequencies of absolute value at most d, any nonnegative global magnitude upper bound M bounds the magnitude of the derivative at every real point by d*M.",
+      "source_alignment": "Native polynomial to cosine-lift membership, coordinate paths, all cell estimates and tensor norming are proved internally. Only the classical univariate supremum Bernstein inequality is parameterized.",
+      "uses": [
+        "Paper34/CellOscillation.lean:angularDerivativeBound_of_classicalTrigBernstein",
+        "Paper34/CellOscillation.lean:lemma_5_1",
+        "Paper34/Anisotropic.lean:partial_norm_le_of_classicalBernstein",
+        "Paper34/SourceTheorem.lean:theorem_1_1_chebyshev",
+        "Paper34/SourceTheorem.lean:theorem_1_1_uniform"
+      ],
+      "lean_availability": "No matching ready theorem was established in the pinned mathlib environment during this task; the published theorem is left as the user-authorized explicit input."
+    }
+  ],
+  "internally_discharged_standard_contracts": [
+    {
+      "id": "EXT-CHERNOFF",
+      "kind": "internally_derived_from_pinned_mathlib",
+      "lean_name": "Paper34.BernoulliLowerHalfInput",
+      "lean_definition": "def BernoulliLowerHalfInput {Ω : Type*} [MeasurableSpace Ω]\n    (P : Measure Ω) (M : ℕ) : Prop :=\n  ∀ (Y : Fin M → Ω → Bool), (∀ i, Measurable (Y i)) → iIndepFun Y P →\n    ∀ p : ℝ, (∀ i, P.real {ω | Y i ω = true} = p) →\n      P.real {ω | boolCount (fun i => Y i ω) Finset.univ < (M : ℝ) * p / 2} ≤\n        Real.exp (-(M : ℝ) * p / 8)",
+      "source": {
+        "authors": "D. P. Dubhashi and A. Panconesi",
+        "title": "Concentration of Measure for the Analysis of Randomized Algorithms",
+        "publication": "Cambridge University Press, 2009",
+        "reference": "Theorem 1.1, equation (1.7), lower tail, epsilon=1/2, pages 6–7",
+        "url": "https://beckassets.blob.core.windows.net/product/readingsample/143671/9780521884273_excerpt_001.pdf"
+      },
+      "meaning": "Independent measurable Bool variables of a common success probability p satisfy Pr[count < M*p/2] <= exp(-M*p/8). The calling probability space has IsProbabilityMeasure P; equality of the probabilities to p implies its valid probability range.",
+      "source_alignment": "This is only the fixed single-cell occupancy concentration inequality. Random membership patterns, independence of the two entire blocks, random-subset transfer, all grid constants, and the m^n finite union are proved internally.",
+      "uses": [
+        "Paper34/GoodGrid.lean:grid_occupancy_lower_tail",
+        "Paper34/GoodGrid.lean:lemma_6_1_good_product_grid",
+        "Paper34/OtherDesigns.lean:occupancy_lower_tail",
+        "Paper34/SourceTheorem.lean:theorem_1_1_chebyshev",
+        "Paper34/SourceTheorem.lean:theorem_1_1_uniform"
+      ],
+      "lean_availability": "Both interfaces are now proved in Paper34/StandardConcentration.lean from pinned mathlib; all final source main/appendix wrappers automatically instantiate them.",
+      "producer": "Paper34.StandardConcentration.bernoulliLowerHalfInput",
+      "mandatory_external_input": false
+    },
+    {
+      "id": "EXT-HOEFFDING",
+      "kind": "internally_derived_from_pinned_mathlib",
+      "lean_name": "Paper34.BernoulliSubsetHoeffdingInput",
+      "lean_definition": "def BernoulliSubsetHoeffdingInput {Ω : Type*} [MeasurableSpace Ω]\n    (P : Measure Ω) (M : ℕ) : Prop :=\n  ∀ (Y : Fin M → Ω → Bool), (∀ i, Measurable (Y i)) → iIndepFun Y P →\n    ∀ rho a : ℝ, 0 ≤ rho → rho < a →\n      (∀ i, P.real {ω | Y i ω = true} ≤ rho) →\n      ∀ S : Finset (Fin M),\n        P.real {ω | a * (S.card : ℝ) < boolCount (fun i => Y i ω) S} ≤\n          Real.exp (-2 * (a - rho) ^ 2 * (S.card : ℝ))",
+      "source": {
+        "authors": "D. P. Dubhashi and A. Panconesi",
+        "title": "Concentration of Measure for the Analysis of Randomized Algorithms",
+        "publication": "Cambridge University Press, 2009",
+        "reference": "Theorem 1.1, equation (1.6), pages 6–7; deterministic subset and t=(a-rho)*card",
+        "url": "https://beckassets.blob.core.windows.net/product/readingsample/143671/9780521884273_excerpt_001.pdf"
+      },
+      "meaning": "Every fixed finite subset of mutually independent measurable Bool variables with individually bounded success probabilities <=rho, where 0<=rho<a, satisfies Pr[a*card(S)<count(S)]<=exp(-2*(a-rho)^2*card(S)). Nonidentical rates and the empty subset are included.",
+      "source_alignment": "The formal input does not assert concentration after random selection. The proof of random_subset_hoeffding_transfer establishes that own-paper step from independence of the entire location and outlier vectors.",
+      "uses": [
+        "Paper34/GoodGrid.lean:random_subset_hoeffding_transfer",
+        "Paper34/GoodGrid.lean:lemma_6_1_good_product_grid",
+        "Paper34/OtherDesigns.lean:outlier_tail_above_half_occupancy",
+        "Paper34/ConstantSampling.lean:majority_failure_tail",
+        "Paper34/SourceTheorem.lean:theorem_1_1_chebyshev",
+        "Paper34/SourceTheorem.lean:theorem_1_1_uniform"
+      ],
+      "lean_availability": "Both interfaces are now proved in Paper34/StandardConcentration.lean from pinned mathlib; all final source main/appendix wrappers automatically instantiate them.",
+      "producer": "Paper34.StandardConcentration.bernoulliSubsetHoeffdingInput",
+      "mandatory_external_input": false
+    }
+  ],
+  "not_external_inputs": [
+    "Bernoulli lower-half Chernoff",
+    "Bernoulli fixed-subset Hoeffding",
+    "Lemma 3.1–3.4",
+    "Proposition 4.1",
+    "Lemma 5.2",
+    "Proposition 5.3",
+    "the random-subset concentration transfer",
+    "good-grid union/counting argument",
+    "the main estimator or recovery theorem",
+    "polynomial-space dimension including total-degree stars and bars",
+    "sample/grid/budget asymptotics",
+    "LP encoding and outside work"
+  ],
+  "oracle_model": "ExactRegressionLPOracle and RestrictedLPOracle specify exactly the source-authorized exact real LP optimization primitive. Minimum existence is proved before every query; these structures are not additional mathematical theorem exemptions.",
+  "secondary_comparisons": "ExternalComparisons.json separately inventories published comparison results and contextual citations. They are not axioms in the production main theorem; central exemption registry has not been changed.",
+  "verification_status": "verification_deferred_by_user"
+}

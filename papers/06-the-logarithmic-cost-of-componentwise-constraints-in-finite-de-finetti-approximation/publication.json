@@ -1,0 +1,90 @@
+{
+  "paper_id": "06",
+  "title": "The logarithmic cost of componentwise constraints in finite de Finetti approximation",
+  "source_url": "https://liuchliuch.github.io/repository/the-logarithmic-cost-of-componentwise-constraints-in-finite-de-finetti-approximation/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "Paper06"
+  ],
+  "build_targets": [
+    "Paper06",
+    "Verification.Solution",
+    "Verification.Challenge",
+    "Verification.Audit"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "Twelve fixed explicit targets covering the eight nonexempt numbered results and all three required supplemental connections. Excludes the full Corollary 3.6."
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "The arbitrary-Borel nonidentical-product logarithmic lower bound with an added premise. Rejection detail: extra premise on Paper06.Challenge.noniid_logarithmic."
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "The same nonidentical-product contract with an intentionally unauthorized proof dependency. Rejection detail: unauthorized_noniid axiom."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Lemma 2.1",
+      "declaration": "Paper06.Posterior.lemma_2_1_posterior_preservation",
+      "scope": "Normalized posterior preserves the linear constraints at every positive-mass observation, for any unobserved site and observed subset on finite coordinates."
+    },
+    {
+      "source_result": "Proposition 2.2",
+      "declaration": "Paper06.proposition_2_2",
+      "scope": "A Borel probability measure on the affine slice satisfies the extended-KL entropy bound, including singular laws and null observations."
+    },
+    {
+      "source_result": "Theorem 3.1",
+      "declaration": "Paper06.theorem_3_1_prime",
+      "scope": "One admissible matching law, chosen before k and the mixing measure, satisfies both logarithmic lower bounds for 2 ≤ k, k² ≤ n, and the stated prime/parameter conditions."
+    },
+    {
+      "source_result": "Proposition 3.2",
+      "declaration": "Paper06.Matching.exists_admissible_matching_law",
+      "scope": "Normalized edge law and uniform endpoint-permutation mixture satisfy exchangeability and lifted fixed-input componentwise constraints."
+    },
+    {
+      "source_result": "Lemma 3.3",
+      "declaration": "Paper06.lemma_3_3_full",
+      "scope": "Unique-slope incidence count over every finite field, stochastic-channel decomposition, and the product-event/classical-maximum/beta bounds."
+    },
+    {
+      "source_result": "Proposition 3.4",
+      "declaration": "Paper06.proposition_3_4",
+      "scope": "Matching factorial moments and arbitrary Borel-mixture union bound imply the stated KL lower bound under the beta hypothesis, including p = 1 and singular q = 0."
+    },
+    {
+      "source_result": "Corollary 3.5",
+      "declaration": "Paper06.corollary_3_5",
+      "scope": "No uniform bound of the stated sublogarithmic form exists, using admissible matching laws along divergent primes."
+    },
+    {
+      "source_result": "Proposition 4.1",
+      "declaration": "Paper06.proposition_4_1_dependent",
+      "scope": "One Borel measure works for every allowed k, with finite nonempty input-dependent output fibers, zero input masses, componentwise constraints, exchangeability, and exact sampling cost including k = M."
+    },
+    {
+      "source_result": "Required supplements",
+      "declaration": "Paper06.matching_noniid_logarithmic_lower_bound",
+      "scope": "Logarithmic lower bounds for arbitrary Borel mixtures of nonidentical feasible product factors; exact two-point matching law and convergence of the optimal error to zero."
+    },
+    {
+      "source_result": "Corollary 3.6: external boundary",
+      "declaration": "Paper06.improved_polynomial_exponent",
+      "scope": "Elementary exponent and constant algebra only; the full corollary requires the external stronger finite-field CHSH incidence theorem and is not asserted."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "primary_comparator": "main"
+}

@@ -1,0 +1,66 @@
+{
+  "paper_id": "24",
+  "title": "The query complexity of uniformity testing with purified unitary access",
+  "source_url": "https://liuchliuch.github.io/repository/the-query-complexity-of-uniformity-testing-with-purified-unitary-access/",
+  "lean_toolchain": "leanprover/lean4:v4.24.0",
+  "production_roots": [
+    "PUT",
+    "Verification.Solution",
+    "Verification.Audit"
+  ],
+  "build_targets": [
+    "PUT",
+    "Verification"
+  ],
+  "comparators": [
+    {
+      "id": "main",
+      "config": "Verification/comparator.json",
+      "expected_rejection": null,
+      "scope": "Twelve fixed targets: promise-only adaptive, globally bounded adaptive and fixed-unitary lower bounds; actual Lemmas1/2; full adversary/query norms, progress, preparation and prior probability."
+    },
+    {
+      "id": "negative-premise",
+      "config": "Verification/negative-premise.json",
+      "expected_rejection": "type",
+      "scope": "Real added premise against all12 fixed source contracts."
+    },
+    {
+      "id": "negative-axiom",
+      "config": "Verification/negative-axiom.json",
+      "expected_rejection": "axiom",
+      "scope": "Real unauthorized axiom against all12 fixed source contracts."
+    }
+  ],
+  "main_results": [
+    {
+      "source_result": "Theorem 1, promise-only adaptive",
+      "declaration": "PUT.Paper.theorem1_promised",
+      "scope": "A positive universal c gives Q ≥ c·min(d^(1/3)/ε^(4/3), √d/ε) for d ≥ 2, 0 < ε < 1/2 and promise-only adaptive testers with success ≥ .99, relative to the four explicit standard inputs."
+    },
+    {
+      "source_result": "Theorem 1, adaptive/fixed unitary",
+      "declaration": "PUT.Paper.theorem1_adaptive",
+      "scope": "The adaptive theorem includes measurements, branch-dependent directions and early stopping via AdaptiveNormalizationLaw; the fixed-unitary variant uses the other three standard inputs."
+    },
+    {
+      "source_result": "Lemma 1",
+      "declaration": "Verification.Certificate.source_lemma1",
+      "scope": "The actual Fourier–Dirichlet adversary and complete reflection queries, including whole radial complements, satisfy the printed norm bound with constant 20, relative to DirichletJointMomentLaw."
+    },
+    {
+      "source_result": "Lemma 2",
+      "declaration": "Verification.Certificate.source_lemma2",
+      "scope": "The actual continuous Dirichlet event has probability at least 1/144 for d ≥ 2 and a ≥ 1, relative to DirichletJointMomentLaw."
+    },
+    {
+      "source_result": "Collision simulation",
+      "declaration": "PUT.Paper.theorem1",
+      "scope": "The fixed-unitary lower bound uses the exact 4Q collision-query reduction and explicit Dirichlet joint-moment, ninefold amplification and Kutin collision inputs."
+    }
+  ],
+  "preparation": [],
+  "external_dependencies": "EXTERNAL_DEPENDENCIES.md",
+  "source_html_sha256": "93cb26c4029e06121a363f815c05081f0296af00a60d38562711358561e84f8c",
+  "primary_comparator": "main"
+}

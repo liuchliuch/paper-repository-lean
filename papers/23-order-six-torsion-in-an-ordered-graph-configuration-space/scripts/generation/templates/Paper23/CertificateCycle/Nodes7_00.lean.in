@@ -1,0 +1,129 @@
+import Paper23.CertificateCycle.Level6
+import Paper23.CertificateSparse
+import Paper23.CertificateChecks
+set_option maxRecDepth 100000
+set_option maxHeartbeats 0
+namespace Paper23.CertificateChecks
+open Cubical CertificateData
+attribute [local irreducible] codeChain
+noncomputable def cycleNode7_0Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part0@@
+noncomputable def cycleNode7_0Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part1@@
+noncomputable def cycleNode7_0Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part2@@
+noncomputable def cycleNode7_0Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part3@@
+noncomputable def cycleNode7_0Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part4@@
+noncomputable def cycleNode7_0Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part5@@
+noncomputable def cycleNode7_0Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part6@@
+noncomputable def cycleNode7_0Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part7@@
+noncomputable def cycleNode7_0Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part8@@
+noncomputable def cycleNode7_0Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part9@@
+noncomputable def cycleNode7_0Part10 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part10@@
+noncomputable def cycleNode7_0Part11 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part11@@
+noncomputable def cycleNode7_0Part12 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part12@@
+noncomputable def cycleNode7_0Part13 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part13@@
+noncomputable def cycleNode7_0Part14 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part14@@
+noncomputable def cycleNode7_0Part15 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part15@@
+noncomputable def cycleNode7_0Part16 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part16@@
+noncomputable def cycleNode7_0Part17 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part17@@
+noncomputable def cycleNode7_0Part18 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part18@@
+noncomputable def cycleNode7_0Part19 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part19@@
+noncomputable def cycleNode7_0Part20 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part20@@
+noncomputable def cycleNode7_0Part21 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part21@@
+noncomputable def cycleNode7_0Part22 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part22@@
+noncomputable def cycleNode7_0Part23 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part23@@
+noncomputable def cycleNode7_0Part24 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part24@@
+noncomputable def cycleNode7_0Part25 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part25@@
+noncomputable def cycleNode7_0Part26 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part26@@
+noncomputable def cycleNode7_0Part27 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part27@@
+noncomputable def cycleNode7_0Part28 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_0Part28@@
+noncomputable def cycleNode7_0 : List (ℕ × ℤ) := cycleNode7_0Part0 ++ cycleNode7_0Part1 ++ cycleNode7_0Part2 ++ cycleNode7_0Part3 ++ cycleNode7_0Part4 ++ cycleNode7_0Part5 ++ cycleNode7_0Part6 ++ cycleNode7_0Part7 ++ cycleNode7_0Part8 ++ cycleNode7_0Part9 ++ cycleNode7_0Part10 ++ cycleNode7_0Part11 ++ cycleNode7_0Part12 ++ cycleNode7_0Part13 ++ cycleNode7_0Part14 ++ cycleNode7_0Part15 ++ cycleNode7_0Part16 ++ cycleNode7_0Part17 ++ cycleNode7_0Part18 ++ cycleNode7_0Part19 ++ cycleNode7_0Part20 ++ cycleNode7_0Part21 ++ cycleNode7_0Part22 ++ cycleNode7_0Part23 ++ cycleNode7_0Part24 ++ cycleNode7_0Part25 ++ cycleNode7_0Part26 ++ cycleNode7_0Part27 ++ cycleNode7_0Part28
+noncomputable def cycleSource7_0 : RawChain := cycleSource6_0 + cycleSource6_1
+theorem cycleNode7_0_check : merge cycleNode6_0 cycleNode6_1 = cycleNode7_0 := by
+  exact eq_of_beq (by decide +kernel)
+ theorem cycleNode7_0_chain : codeChain cycleNode7_0 = boundary cycleSource7_0 := by
+  rw [← cycleNode7_0_check, codeChain_merge, cycleNode6_0_chain, cycleNode6_1_chain]
+  exact (map_add boundary _ _).symm
+noncomputable def cycleNode7_1Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part0@@
+noncomputable def cycleNode7_1Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part1@@
+noncomputable def cycleNode7_1Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part2@@
+noncomputable def cycleNode7_1Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part3@@
+noncomputable def cycleNode7_1Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part4@@
+noncomputable def cycleNode7_1Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part5@@
+noncomputable def cycleNode7_1Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part6@@
+noncomputable def cycleNode7_1Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part7@@
+noncomputable def cycleNode7_1Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part8@@
+noncomputable def cycleNode7_1Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part9@@
+noncomputable def cycleNode7_1Part10 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part10@@
+noncomputable def cycleNode7_1Part11 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part11@@
+noncomputable def cycleNode7_1Part12 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part12@@
+noncomputable def cycleNode7_1Part13 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part13@@
+noncomputable def cycleNode7_1Part14 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part14@@
+noncomputable def cycleNode7_1Part15 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part15@@
+noncomputable def cycleNode7_1Part16 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part16@@
+noncomputable def cycleNode7_1Part17 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part17@@
+noncomputable def cycleNode7_1Part18 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part18@@
+noncomputable def cycleNode7_1Part19 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part19@@
+noncomputable def cycleNode7_1Part20 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part20@@
+noncomputable def cycleNode7_1Part21 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part21@@
+noncomputable def cycleNode7_1Part22 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part22@@
+noncomputable def cycleNode7_1Part23 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part23@@
+noncomputable def cycleNode7_1Part24 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part24@@
+noncomputable def cycleNode7_1Part25 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part25@@
+noncomputable def cycleNode7_1Part26 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part26@@
+noncomputable def cycleNode7_1Part27 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part27@@
+noncomputable def cycleNode7_1Part28 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part28@@
+noncomputable def cycleNode7_1Part29 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part29@@
+noncomputable def cycleNode7_1Part30 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part30@@
+noncomputable def cycleNode7_1Part31 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part31@@
+noncomputable def cycleNode7_1Part32 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part32@@
+noncomputable def cycleNode7_1Part33 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_1Part33@@
+noncomputable def cycleNode7_1 : List (ℕ × ℤ) := cycleNode7_1Part0 ++ cycleNode7_1Part1 ++ cycleNode7_1Part2 ++ cycleNode7_1Part3 ++ cycleNode7_1Part4 ++ cycleNode7_1Part5 ++ cycleNode7_1Part6 ++ cycleNode7_1Part7 ++ cycleNode7_1Part8 ++ cycleNode7_1Part9 ++ cycleNode7_1Part10 ++ cycleNode7_1Part11 ++ cycleNode7_1Part12 ++ cycleNode7_1Part13 ++ cycleNode7_1Part14 ++ cycleNode7_1Part15 ++ cycleNode7_1Part16 ++ cycleNode7_1Part17 ++ cycleNode7_1Part18 ++ cycleNode7_1Part19 ++ cycleNode7_1Part20 ++ cycleNode7_1Part21 ++ cycleNode7_1Part22 ++ cycleNode7_1Part23 ++ cycleNode7_1Part24 ++ cycleNode7_1Part25 ++ cycleNode7_1Part26 ++ cycleNode7_1Part27 ++ cycleNode7_1Part28 ++ cycleNode7_1Part29 ++ cycleNode7_1Part30 ++ cycleNode7_1Part31 ++ cycleNode7_1Part32 ++ cycleNode7_1Part33
+noncomputable def cycleSource7_1 : RawChain := cycleSource6_2 + cycleSource6_3
+theorem cycleNode7_1_check : merge cycleNode6_2 cycleNode6_3 = cycleNode7_1 := by
+  exact eq_of_beq (by decide +kernel)
+ theorem cycleNode7_1_chain : codeChain cycleNode7_1 = boundary cycleSource7_1 := by
+  rw [← cycleNode7_1_check, codeChain_merge, cycleNode6_2_chain, cycleNode6_3_chain]
+  exact (map_add boundary _ _).symm
+noncomputable def cycleNode7_2Part0 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part0@@
+noncomputable def cycleNode7_2Part1 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part1@@
+noncomputable def cycleNode7_2Part2 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part2@@
+noncomputable def cycleNode7_2Part3 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part3@@
+noncomputable def cycleNode7_2Part4 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part4@@
+noncomputable def cycleNode7_2Part5 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part5@@
+noncomputable def cycleNode7_2Part6 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part6@@
+noncomputable def cycleNode7_2Part7 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part7@@
+noncomputable def cycleNode7_2Part8 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part8@@
+noncomputable def cycleNode7_2Part9 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part9@@
+noncomputable def cycleNode7_2Part10 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part10@@
+noncomputable def cycleNode7_2Part11 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part11@@
+noncomputable def cycleNode7_2Part12 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part12@@
+noncomputable def cycleNode7_2Part13 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part13@@
+noncomputable def cycleNode7_2Part14 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part14@@
+noncomputable def cycleNode7_2Part15 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part15@@
+noncomputable def cycleNode7_2Part16 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part16@@
+noncomputable def cycleNode7_2Part17 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part17@@
+noncomputable def cycleNode7_2Part18 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part18@@
+noncomputable def cycleNode7_2Part19 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part19@@
+noncomputable def cycleNode7_2Part20 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part20@@
+noncomputable def cycleNode7_2Part21 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part21@@
+noncomputable def cycleNode7_2Part22 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part22@@
+noncomputable def cycleNode7_2Part23 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part23@@
+noncomputable def cycleNode7_2Part24 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part24@@
+noncomputable def cycleNode7_2Part25 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part25@@
+noncomputable def cycleNode7_2Part26 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part26@@
+noncomputable def cycleNode7_2Part27 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part27@@
+noncomputable def cycleNode7_2Part28 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part28@@
+noncomputable def cycleNode7_2Part29 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part29@@
+noncomputable def cycleNode7_2Part30 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part30@@
+noncomputable def cycleNode7_2Part31 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part31@@
+noncomputable def cycleNode7_2Part32 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part32@@
+noncomputable def cycleNode7_2Part33 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part33@@
+noncomputable def cycleNode7_2Part34 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part34@@
+noncomputable def cycleNode7_2Part35 : List (ℕ × ℤ) := @@GENERATED_RHS:cycleNode7_2Part35@@
+noncomputable def cycleNode7_2 : List (ℕ × ℤ) := cycleNode7_2Part0 ++ cycleNode7_2Part1 ++ cycleNode7_2Part2 ++ cycleNode7_2Part3 ++ cycleNode7_2Part4 ++ cycleNode7_2Part5 ++ cycleNode7_2Part6 ++ cycleNode7_2Part7 ++ cycleNode7_2Part8 ++ cycleNode7_2Part9 ++ cycleNode7_2Part10 ++ cycleNode7_2Part11 ++ cycleNode7_2Part12 ++ cycleNode7_2Part13 ++ cycleNode7_2Part14 ++ cycleNode7_2Part15 ++ cycleNode7_2Part16 ++ cycleNode7_2Part17 ++ cycleNode7_2Part18 ++ cycleNode7_2Part19 ++ cycleNode7_2Part20 ++ cycleNode7_2Part21 ++ cycleNode7_2Part22 ++ cycleNode7_2Part23 ++ cycleNode7_2Part24 ++ cycleNode7_2Part25 ++ cycleNode7_2Part26 ++ cycleNode7_2Part27 ++ cycleNode7_2Part28 ++ cycleNode7_2Part29 ++ cycleNode7_2Part30 ++ cycleNode7_2Part31 ++ cycleNode7_2Part32 ++ cycleNode7_2Part33 ++ cycleNode7_2Part34 ++ cycleNode7_2Part35
+noncomputable def cycleSource7_2 : RawChain := cycleSource6_4 + cycleSource6_5
+theorem cycleNode7_2_check : merge cycleNode6_4 cycleNode6_5 = cycleNode7_2 := by
+  exact eq_of_beq (by decide +kernel)
+ theorem cycleNode7_2_chain : codeChain cycleNode7_2 = boundary cycleSource7_2 := by
+  rw [← cycleNode7_2_check, codeChain_merge, cycleNode6_4_chain, cycleNode6_5_chain]
+  exact (map_add boundary _ _).symm
+end Paper23.CertificateChecks
